@@ -4,6 +4,6 @@
   folder: content/posts,
   create: true,
   fields: [
-    {{ partialCached "admin/collections/posts/fields.yml" . }}
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "posts") }}
   ]
 }

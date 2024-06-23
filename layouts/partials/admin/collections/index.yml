@@ -1,7 +1,7 @@
 
 collections: [
   {{ range site.Params.admin.collections }}
-    {{ $file := print "admin/collections/" . "/index.yml" }}
+    {{ $file := print "admin/collections/" . ".yml" }}
     {{ if templates.Exists ( printf "partials/%s" $file ) }}
       {{ partialCached $file . }},
     {{ end }}
