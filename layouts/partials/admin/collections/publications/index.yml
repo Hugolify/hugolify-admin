@@ -1,0 +1,9 @@
+{
+  name: publications,
+  label: {{ i18n "admin.collections.publications.label" }},
+  folder: content/publications,
+  create: true,
+  fields: [
+    {{ partialCached "admin/collections/publications/fields.yml" . }}
+  ]
+}

@@ -1,0 +1,16 @@
+outputFormats:
+  admin_config:
+    baseName: config
+    isPlainText: true
+    mediaType: application/yaml
+    notAlternative: false
+mediaTypes:
+  application/yaml:
+    suffixes:
+    - yml
+
+params:
+  admin:
+    collections:
+      - pages
+      - posts

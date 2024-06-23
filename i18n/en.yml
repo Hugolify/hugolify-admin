@@ -1,0 +1,15 @@
+admin:
+  collections:
+    posts:
+      label: News
+    publications:
+      label: Publications
+  fields:
+    body:
+      label: Body
+    hero:
+      label: Hero
+    text:
+      label: Text
+    title:
+      label: Title

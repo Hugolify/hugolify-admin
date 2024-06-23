@@ -1,0 +1,9 @@
+{
+  name: posts,
+  label: {{ i18n "admin.collections.posts.label" }},
+  folder: content/posts,
+  create: true,
+  fields: [
+    {{ partialCached "admin/collections/posts/fields.yml" . }}
+  ]
+}

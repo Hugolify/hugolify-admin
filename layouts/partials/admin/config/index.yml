@@ -1,0 +1,4 @@
+local_backend: true
+{{ partialCached "admin/config/backend.yml" . }}
+{{ partialCached "admin/config/slug.yml" . }}
+{{ partialCached "admin/config/media.yml" . }}

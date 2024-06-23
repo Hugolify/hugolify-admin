@@ -1,0 +1,17 @@
+{
+  "name": "hugolify-admin",
+  "version": "0.0.0",
+  "homepage": "https://www.hugolify.io",
+  "repository": "https://github.com/hugolify/hugolify-admin",
+  "bugs": {
+    "url": "https://github.com/hugolify/hugolify-admin/issues"
+  },
+  "author": {
+    "name": "Sébastien Moulène",
+    "url": "https://www.sebastienmoulene.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@hugolify/prettier-config": "^0.3.1"
+  }
+}

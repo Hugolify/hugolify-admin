@@ -1,0 +1,4 @@
+---
+outputs:
+  - admin_config
+---

@@ -1,0 +1,2 @@
+{{ partialCached "admin/fields/title.yml" . }},
+{{ partialCached "admin/fields/body.yml" . }}

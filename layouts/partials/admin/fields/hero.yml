@@ -1,0 +1,10 @@
+{
+  label: {{ i18n "admin.fields.hero.label" }},
+  name: hero,
+  widget: object,
+  required: false,
+  i18n: true,
+  fields: [
+    {{ partialCached "admin/fields/title.yml" . }}
+  ]
+}

@@ -1,0 +1,8 @@
+{{ range site.Params.admin.posts }}
+  {{ $file := print "admin/fields/" . ".yml" }}
+  {{ if templates.Exists ( printf "partials/%s" $file ) }}
+    {{ partialCached $file . }},
+  {{ end }}
+{{ else }}
+  {{ partialCached "admin/collections/posts/fields.default.yml" . }}
+{{ end }}

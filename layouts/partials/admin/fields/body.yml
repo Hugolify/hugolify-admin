@@ -1,0 +1,7 @@
+{
+  label: {{ i18n "admin.fields.body.label" }},
+  name: body,
+  widget: markdown,
+  required: false,
+  i18n: true 
+}
