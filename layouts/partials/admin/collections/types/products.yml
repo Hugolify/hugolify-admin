@@ -1,0 +1,17 @@
+{
+  name: products,
+  folder: content/products,
+  label: {{ i18n "admin.collections.products.label" 2 }},
+  label_singular: {{ i18n "admin.collections.products.label" 1 }},
+  create: true,
+  editor: { preview: false },
+  i18n: true,
+
+  slug: "{{`{{slug}}`}}",
+  path: "{{`{{year}}/{{slug}}`}}",
+  filter: { field: 'isIndex', value: false },
+
+  fields: [
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "products") }}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  name: publications,
+  folder: content/publications,
+  label: {{ i18n "admin.collections.publications.label" 2 }},
+  label_singular: {{ i18n "admin.collections.publications.label" 1 }},
+  create: true,
+  editor: { preview: false },
+  i18n: true,
+  
+  fields: [
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "publications") }}
+  ]
+}

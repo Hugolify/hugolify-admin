@@ -1,3 +1,14 @@
+module:
+  mounts:
+    - source: content
+      target: content
+    - source: i18n
+      target: i18n
+    - source: layouts
+      target: layouts
+    - source: static
+      target: static
+
 outputFormats:
   admin_config:
     baseName: config

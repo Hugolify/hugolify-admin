@@ -1,14 +1,14 @@
-{{ $collection := .collection | default "posts" }}
-{{ range site.Params.admin.posts }}
-  {{ $file := print "admin/fields/" $collection ".yml" }}
-  {{ if templates.Exists ( printf "partials/%s" $file ) }}
+{{- $collection := .collection | default "posts" -}}
+{{- range (index site.Params.admin $collection) }}
+  {{- $file := print "admin/fields/" . ".yml" -}}
+  {{- if templates.Exists ( printf "partials/%s" $file ) }}
     {{ partialCached $file . }},
-  {{ end }}
-{{ else }}
-  {{ $file := print "admin/collections/" $collection ".fields.default.yml" }}
-  {{ if templates.Exists ( printf "partials/%s" $file ) }}
-    {{ partialCached $file . }},
-  {{ else }}
+  {{ end -}}
+{{- else -}}
+  {{- $file := print "admin/collections/types/" $collection ".fields.default.yml" -}}
+  {{- if templates.Exists ( printf "partials/%s" $file ) }}
+    {{ partialCached $file . }}
+  {{- else -}}
     {{ partialCached (print "admin/collections/fields.default.yml") . }}
-  {{ end }}
-{{ end }}
+  {{ end -}}
+{{ end -}}

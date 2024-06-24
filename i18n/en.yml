@@ -1,9 +1,17 @@
 admin:
   collections:
     posts:
-      label: News
+      label: 
+        one: New
+        other: News
+    products:
+      label:
+        one: Product
+        other: Products
     publications:
-      label: Publications
+      label: 
+        one: Publication
+        other: Publications
   fields:
     body:
       label: Body

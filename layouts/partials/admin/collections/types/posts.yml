@@ -1,0 +1,20 @@
+{
+  name: posts,
+  folder: content/posts,
+  label: {{ i18n "admin.collections.posts.label" 2 }},
+  label_singular: {{ i18n "admin.collections.posts.label" 1 }},
+  create: true,
+  editor: { preview: false },
+  i18n: true,
+
+  path: '{{`{{year}}/{{month}}/{{slug}}`}}',
+  slug: '{{`{{year}}-{{month}}-{{day}}-{{slug}}`}}',
+  sortable_fields: ['date', 'title'],
+  summary: '{{`{{title}} — {{year}}/{{month}}/{{day}}`}}',
+
+  filter: { field: 'isIndex', value: false },
+
+  fields: [
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "posts") }}
+  ]
+}
