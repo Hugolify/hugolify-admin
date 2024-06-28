@@ -1,0 +1,9 @@
+{
+  label: '{{ i18n "admin.fields.image.compression.label" }}',
+  hint: '{{ i18n "admin.fields.image.compression.hint" }}',
+  name: 'linear',
+  widget: 'boolean',
+  default: false,
+  required: false,
+  i18n: true 
+}

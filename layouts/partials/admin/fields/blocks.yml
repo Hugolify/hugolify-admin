@@ -1,0 +1,10 @@
+# TODO 
+{
+  label: '{{ i18n "admin.fields.blocks.label" }}',
+  label_singular: '{{ i18n "admin.fields.blocks.label" 1 }}',
+  name: 'blocks',
+  widget: 'list',
+  collapsed: false,
+  # types: Object.values(availableBlocks),
+  i18n: true
+}

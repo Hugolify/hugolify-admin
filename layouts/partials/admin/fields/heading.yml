@@ -1,0 +1,13 @@
+{
+  label: '{{ i18n "admin.fields.heading.label" }}',
+  name: 'heading',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: true,
+  fields: [
+    {{ partialCached "admin/fields/surtitle.yml" . }},
+    {{ partialCached "admin/fields/title.yml" . }},
+    {{ partialCached "admin/fields/text_markdown.yml" . }}
+  ]
+};

@@ -1,0 +1,29 @@
+{
+  name: pages,
+  folder: content,
+  label: {{ i18n "admin.collections.pages.label" }},
+  label_singular: {{ i18n "admin.collections.pages.label" 1 }},
+  description: {{ i18n "admin.collections.pages._description" }},
+  
+  create: true,
+  editor: { preview: false },
+  i18n: true,
+
+  path: '{{`{{slug}}`}}',
+  slug: '{{`{{slug}}/_index`}}',
+
+  filter: { field: 'isPage', value: true },
+  nested: { depth: 5 },
+
+  fields: [
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "pages") }}
+  ],
+
+  meta: {
+    path: {
+      label: {{ i18n "admin.fields.parent.label" }},
+      widget: 'parent',
+      index_file: '_index'
+    }
+  }
+}

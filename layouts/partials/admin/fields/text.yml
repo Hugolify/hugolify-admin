@@ -1,6 +1,6 @@
 {
   label: '{{ i18n "admin.fields.text.label" }}',
-  name: 'title',
+  name: 'text',
   widget: 'string',
   required: false,
   i18n: true 

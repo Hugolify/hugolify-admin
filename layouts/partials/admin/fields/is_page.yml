@@ -1,0 +1,8 @@
+{
+  label: 'is page',
+  name: 'isPage',
+  widget: 'hidden',
+  default: true,
+  required: false,
+  i18n: 'duplicate'
+}

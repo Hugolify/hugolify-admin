@@ -1,0 +1,11 @@
+{
+  label: '{{ i18n "admin.fields.text.label" }}',
+  name: 'text',
+  widget: 'markdown',
+  minimal: true,
+  buttons: ['bold', 'italic', 'link', 'bulleted-list'],
+  editor_components: [],
+  modes: ['rich_text'],
+  required: false,
+  i18n: true 
+}

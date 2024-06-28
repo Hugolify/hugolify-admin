@@ -13,7 +13,6 @@
   slug: '{{`{{slug}}/_index`}}',
 
   filter: { field: 'isIndex', value: false },
-  nested: { depth: 2 },
 
   fields: [
     {{ partialCached "admin/collections/fields.terms.default.yml" . }}

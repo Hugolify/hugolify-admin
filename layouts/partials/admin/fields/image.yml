@@ -1,0 +1,13 @@
+{
+  label: '{{ i18n "admin.fields.image.label" }}',
+  name: 'image',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: true,
+  fields: [
+    {{ partialCached "admin/fields/image_src.yml" . }},
+    {{ partialCached "admin/fields/image_alt.yml" . }},
+    {{ partialCached "admin/fields/image_compression.yml" . }}
+  ]
+}
