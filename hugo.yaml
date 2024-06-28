@@ -22,6 +22,11 @@ mediaTypes:
 
 params:
   admin:
+    cms: decapcms
+    netlify:
+      identity: true
     collections:
       - pages
       - posts
+    media:
+      max_file_size: 700000

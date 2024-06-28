@@ -1,23 +1,109 @@
 admin:
   collections:
+    casestudies:
+      _description: All case studies
+      label: 
+        one: Case study
+        other: Case studies
+    docs:
+      _description: All docs
+      label: 
+        one: Doc
+        other: Docs
+    expertises:
+      _description: All expertises
+      label: 
+        one: Expertise
+        other: Expertises
+    persons:
+      _description: All persons
+      label: 
+        one: Person
+        other: Persons
+    places:
+      _description: All places
+      label: 
+        one: Place
+        other: Places
     posts:
+      _description: All news
       label: 
         one: New
         other: News
+    posts_categories:
+      _description: All categories of news
+      label: 
+        one: Category
+        other: Categories
+    posts_tags:
+      _description: All tags of news
+      label: 
+        one: Tag
+        other: Tags
     products:
+      _description: All products
       label:
         one: Product
         other: Products
+    projects:
+      _description: All projects
+      label: 
+        one: Project
+        other: Projects
     publications:
+      _description: All publications
       label: 
         one: Publication
         other: Publications
+    realestates:
+      _description: All real estates
+      label: 
+        one: Real estate
+        other: Real estates
+    services:
+      _description: All services
+      label: 
+        one: Service
+        other: Services
   fields:
     body:
       label: Body
+    credit:
+      label: Credit
+    description:
+      label: Description
+    draft:
+      label: Draft
     hero:
       label: Hero
+    image:
+      alt:
+        hint: 'For an image that conveys information (leave blank if decorative image)'
+        label: Alternative text
+      compression:
+        label: Screenshot or picture?
+      src:
+        hint: 'Resize and compress image before sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Image
+    is_blank:
+      label: Is blank?
+    legend:
+      label: Legend
     text:
       label: Text
     title:
       label: Title
+    url:
+      label: URL
+  shortcodes:
+    button:
+      label: Button
+    figure:
+      label: Figure
+    twitter:
+      _id: Twitter ID
+      label: Twitter / X
+      user: Twitter username
+    youtube:
+      _id: Youtube ID
+      label: Youtube

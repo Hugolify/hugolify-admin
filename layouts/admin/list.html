@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Hugolify - Content Manager</title>
+  </head>
+  <body>
+    {{- with site.Params.admin.cms }}
+      {{- $file := print "admin/cms/" . "/scripts.html" -}}
+      {{- if templates.Exists ( printf "partials/%s" $file ) }}
+        {{ partialCached $file . }}
+      {{ end -}}
+    {{- end -}}
+  </body>
+</html>
