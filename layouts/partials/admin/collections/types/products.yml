@@ -1,14 +1,17 @@
 {
   name: products,
   folder: content/products,
-  label: {{ i18n "admin.collections.products.label" 2 }},
+  label: {{ i18n "admin.collections.products.label" }},
   label_singular: {{ i18n "admin.collections.products.label" 1 }},
+  description: {{ i18n "admin.collections.products._description" }},
+  
   create: true,
   editor: { preview: false },
   i18n: true,
 
-  slug: "{{`{{slug}}`}}",
-  path: "{{`{{year}}/{{slug}}`}}",
+  path: '{{`{{year}}/{{slug}}`}}',
+  slug: '{{`{{slug}}`}}',
+
   filter: { field: 'isIndex', value: false },
 
   fields: [

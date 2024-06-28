@@ -1,4 +1,4 @@
+{{ partialCached "admin/fields/is_not_index.yml" . }},
 {{ partialCached "admin/fields/draft.yml" . }},
 {{ partialCached "admin/fields/title.yml" . }},
 {{ partialCached "admin/fields/description.yml" . }},
-{{ partialCached "admin/fields/body.yml" . }}

@@ -1,0 +1,20 @@
+{
+  name: projects,
+  folder: content/projects,
+  label: {{ i18n "admin.collections.projects.label" }},
+  label_singular: {{ i18n "admin.collections.projects.label" 1 }},
+  description: {{ i18n "admin.collections.projects._description" }},
+  
+  create: true,
+  editor: { preview: false },
+  i18n: true,
+
+  path: '{{`{{year}}/{{slug}}`}}',
+  slug: '{{`{{slug}}`}}',
+
+  filter: { field: 'isIndex', value: false },
+
+  fields: [
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "projects") }}
+  ]
+}

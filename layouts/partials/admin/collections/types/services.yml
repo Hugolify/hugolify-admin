@@ -1,0 +1,21 @@
+{
+  name: services,
+  folder: content/services,
+  label: {{ i18n "admin.collections.services.label" }},
+  label_singular: {{ i18n "admin.collections.services.label" 1 }},
+  description: {{ i18n "admin.collections.services._description" }},
+  
+  create: true,
+  editor: { preview: false },
+  i18n: true,
+
+  slug: '{{`{{slug}}`}}',
+  sortable_fields: ['title'],
+
+  filter: { field: 'isIndex', value: false },
+  nested: { depth: 2 },
+
+  fields: [
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "services") }}
+  ]
+}

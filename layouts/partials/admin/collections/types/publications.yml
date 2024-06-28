@@ -1,11 +1,20 @@
 {
   name: publications,
   folder: content/publications,
-  label: {{ i18n "admin.collections.publications.label" 2 }},
+  label: {{ i18n "admin.collections.publications.label" }},
   label_singular: {{ i18n "admin.collections.publications.label" 1 }},
+  description: {{ i18n "admin.collections.publications._description" }},
+  
   create: true,
   editor: { preview: false },
   i18n: true,
+
+  path: '{{`{{year}}/{{month}}/{{slug}}`}}',
+  slug: '{{`{{year}}-{{month}}-{{day}}-{{slug}}`}}',
+  sortable_fields: ['date', 'title'],
+  summary: '{{`{{title}} — {{year}}`}}',
+
+  filter: { field: 'isIndex', value: false },
   
   fields: [
     {{ partialCached "admin/collections/fields.yml" (dict "collection" "publications") }}
