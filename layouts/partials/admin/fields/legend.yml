@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.legend.label" }}',
+  name: 'legend',
+  widget: 'string',
+  required: false,
+  i18n: true 
+}

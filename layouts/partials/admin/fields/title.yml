@@ -1,7 +1,7 @@
 {
-  label: {{ i18n "admin.fields.title.label" }},
-  name: title,
-  widget: string,
+  label: '{{ i18n "admin.fields.title.label" }}',
+  name: 'title',
+  widget: 'string',
   required: true,
   i18n: true 
 }

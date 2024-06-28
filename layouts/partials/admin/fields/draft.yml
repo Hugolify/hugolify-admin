@@ -1,0 +1,8 @@
+{
+  label: '{{ i18n "admin.fields.draft.label" }}',
+  name: 'draft',
+  widget: 'boolean',
+  default: true,
+  required: false,
+  i18n: 'duplicate' 
+}

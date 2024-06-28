@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.image.alt.label" }}',
+  name: 'alt',
+  widget: 'string',
+  required: false,
+  i18n: true 
+}

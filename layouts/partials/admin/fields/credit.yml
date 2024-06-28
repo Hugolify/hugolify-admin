@@ -1,0 +1,11 @@
+{
+  label: '{{ i18n "admin.fields.credit.label" }}',
+  name: 'credit',
+  widget: 'markdown',
+  minimal: true,
+  buttons: ['link'],
+  editor_components: [],
+  modes: ['rich_text'],
+  required: false,
+  i18n: true 
+}

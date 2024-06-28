@@ -1,0 +1,16 @@
+{
+  label: '{{ i18n "admin.fields.image.src.label" }}',
+  hint: '{{ i18n "admin.fields.image.src.hint" }}',
+  name: 'src',
+  widget: 'image',
+  required: false,
+  i18n: 'duplicate',
+  choose_url: false,
+  media_library: {
+    config: {
+      max_file_size: {{site.Params.admin.media.max_file_size}}
+    }
+  },
+  media_folder: '/assets/images/uploads',
+  public_folder: '/images/uploads'
+}

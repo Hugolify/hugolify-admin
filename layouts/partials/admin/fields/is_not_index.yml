@@ -1,0 +1,8 @@
+{
+  label: 'is not index',
+  name: 'isIndex',
+  widget: 'hidden',
+  default: false,
+  required: false,
+  i18n: false 
+}
