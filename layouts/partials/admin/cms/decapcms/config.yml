@@ -1,0 +1,20 @@
+backend:
+  name: {{ site.Params.admin.git | default "git-gateway" }}
+  branch: {{ site.Params.admin.branch | default "master" }}
+display_url: "{{ site.BaseURL }}"
+i18n:
+  structure: multiple_files
+  locales: {{ site.Params.admin.locales }}
+  default_locale: {{ site.Params.admin.default_locale }}
+local_backend: true
+locale: {{ site.Language }}
+logo_url: "./logo.svg"
+media_folder: "static/uploads"
+public_folder: "/uploads"
+publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
+{{ partialCached "admin/collections/index.yml" . }}

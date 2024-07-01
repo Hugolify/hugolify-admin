@@ -1,0 +1,19 @@
+{
+  name: {{ . }},
+  folder: content/{{ . }},
+  label: {{ . | humanize }},
+  label_singular: {{ . | humanize | singularize }},
+  
+  create: true,
+  editor: { preview: {{ site.Params.admin.preview }} },
+  i18n: true,
+
+  slug: '{{`{{slug}}`}}',
+  sortable_fields: ['title'],
+
+  filter: { field: 'isIndex', value: false },
+
+  fields: [
+    {{ partialCached "admin/collections/fields.default.yml" . }}
+  ]
+}

@@ -23,10 +23,15 @@ mediaTypes:
 params:
   admin:
     cms: decapcms
+    default_locale: en
+    depth: 5
+    locales: "[en]"
+    media:
+      max_file_size: 700000
     netlify:
       identity: true
+    preview: false
+
     collections:
       - pages
       - posts
-    media:
-      max_file_size: 700000

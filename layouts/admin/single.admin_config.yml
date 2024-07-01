@@ -1,2 +1,2 @@
-{{ partial "admin/config/index.yml" . }}
-{{ partial "admin/collections/index.yml" . }}
+{{- $cms := site.Params.admin.cms | default "decapcms" -}}
+{{ partial (print "admin/cms/" $cms "/config.yml") . }}

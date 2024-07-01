@@ -15,6 +15,11 @@ admin:
       label: 
         one: Expertise
         other: Expertises
+    pages:
+      _description: All pages
+      label: 
+        one: Page
+        other: Pages
     persons:
       _description: All persons
       label: 
@@ -45,27 +50,68 @@ admin:
       label:
         one: Product
         other: Products
+    products_categories:
+      _description: All categories of products
+      label: 
+        one: Category
+        other: Categories
+    products_tags:
+      _description: All tags of products
+      label: 
+        one: Tag
+        other: Tags
     projects:
       _description: All projects
       label: 
         one: Project
         other: Projects
+    projects_categories:
+      _description: All categories of projects
+      label: 
+        one: Category
+        other: Categories
+    projects_tags:
+      _description: All tags of projects
+      label: 
+        one: Tag
+        other: Tags
     publications:
       _description: All publications
       label: 
         one: Publication
         other: Publications
+    publications_categories:
+      _description: All categories of publications
+      label: 
+        one: Category
+        other: Categories
     realestates:
       _description: All real estates
       label: 
         one: Real estate
         other: Real estates
+    realestates_categories:
+      _description: All categories of real estates
+      label: 
+        one: Category
+        other: Categories
     services:
       _description: All services
       label: 
         one: Service
         other: Services
+    services_categories:
+      _description: All categories of services
+      label: 
+        one: Category
+        other: Categories
   fields:
+    background:
+      label: Has background?
+    blocks:
+      label:
+        one: Block
+        other: Blocks
     body:
       label: Body
     credit:
@@ -74,6 +120,11 @@ admin:
       label: Description
     draft:
       label: Draft
+    featured_image:
+      hint: Displayed in search results, and in SMS/Messages/Social networks preview
+      label: Featured image
+    heading:
+      label: Heading
     hero:
       label: Hero
     image:
@@ -81,7 +132,8 @@ admin:
         hint: 'For an image that conveys information (leave blank if decorative image)'
         label: Alternative text
       compression:
-        label: Screenshot or picture?
+        label: Picture?
+        hint: Set a better compression if is not a photo
       src:
         hint: 'Resize and compress image before sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
@@ -89,6 +141,10 @@ admin:
       label: Is blank?
     legend:
       label: Legend
+    parent:
+      label: Parent page
+    surtitle:
+      label: Surtitle
     text:
       label: Text
     title:
