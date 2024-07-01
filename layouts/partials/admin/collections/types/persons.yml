@@ -1,0 +1,22 @@
+{
+  name: persons,
+  folder: content/persons,
+  label: {{ i18n "admin.collections.persons.label" }},
+  label_singular: {{ i18n "admin.collections.persons.label" 1 }},
+  description: {{ i18n "admin.collections.persons._description" }},
+  
+  create: true,
+  editor: { preview: {{ site.Params.admin.preview }} },
+  i18n: true,
+
+  path: '{{`{{slug}}`}}',
+  slug: '{{`{{slug}}`}}',
+  sortable_fields: ['title'],
+  summary: '{{`{{title}}`}}',
+
+  filter: { field: 'isIndex', value: false },
+
+  fields: [
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "pages") }}
+  ]
+}

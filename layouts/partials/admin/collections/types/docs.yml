@@ -1,23 +1,23 @@
 {
-  name: services,
-  folder: content/services,
-  label: {{ i18n "admin.collections.services.label" }},
-  label_singular: {{ i18n "admin.collections.services.label" 1 }},
-  description: {{ i18n "admin.collections.services._description" }},
+  name: docs,
+  folder: content/docs,
+  label: {{ i18n "admin.collections.docs.label" }},
+  label_singular: {{ i18n "admin.collections.docs.label" 1 }},
+  description: {{ i18n "admin.collections.docs._description" }},
   
   create: true,
   editor: { preview: {{ site.Params.admin.preview }} },
   i18n: true,
 
   path: '{{`{{slug}}`}}',
-  slug: '{{`{{slug}}`}}',
+  slug: '{{`{{slug}}/_index`}}',
   sortable_fields: ['title'],
 
   filter: { field: 'isIndex', value: false },
   nested: { depth: {{ site.Params.admin.depth }} },
 
   fields: [
-    {{ partialCached "admin/collections/fields.yml" (dict "collection" "services") }}
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "docs") }}
   ],
   
   meta: {

@@ -1,0 +1,21 @@
+{
+  name: places,
+  folder: content/places,
+  label: {{ i18n "admin.collections.places.label" }},
+  label_singular: {{ i18n "admin.collections.places.label" 1 }},
+  description: {{ i18n "admin.collections.places._description" }},
+  
+  create: true,
+  editor: { preview: {{ site.Params.admin.preview }} },
+  i18n: true,
+
+  path: '{{`{{slug}}`}}',
+  slug: '{{`{{slug}}`}}',
+  sortable_fields: ['title'],
+
+  filter: { field: 'isIndex', value: false },
+
+  fields: [
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "places") }}
+  ]
+}

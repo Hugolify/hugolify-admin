@@ -6,11 +6,12 @@
   description: {{ i18n "admin.collections.projects._description" }},
   
   create: true,
-  editor: { preview: false },
+  editor: { preview: {{ site.Params.admin.preview }} },
   i18n: true,
 
   path: '{{`{{year}}/{{slug}}`}}',
   slug: '{{`{{slug}}`}}',
+  sortable_fields: ['title'],
 
   filter: { field: 'isIndex', value: false },
 

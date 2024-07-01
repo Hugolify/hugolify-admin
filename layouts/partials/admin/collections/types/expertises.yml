@@ -1,9 +1,9 @@
 {
-  name: services,
-  folder: content/services,
-  label: {{ i18n "admin.collections.services.label" }},
-  label_singular: {{ i18n "admin.collections.services.label" 1 }},
-  description: {{ i18n "admin.collections.services._description" }},
+  name: expertises,
+  folder: content/expertises,
+  label: {{ i18n "admin.collections.expertises.label" }},
+  label_singular: {{ i18n "admin.collections.expertises.label" 1 }},
+  description: {{ i18n "admin.collections.expertises._description" }},
   
   create: true,
   editor: { preview: {{ site.Params.admin.preview }} },
@@ -17,9 +17,9 @@
   nested: { depth: {{ site.Params.admin.depth }} },
 
   fields: [
-    {{ partialCached "admin/collections/fields.yml" (dict "collection" "services") }}
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "expertises") }}
   ],
-  
+
   meta: {
     path: {
       label: {{ i18n "admin.fields.parent.label" }},

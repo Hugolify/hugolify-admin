@@ -6,19 +6,19 @@
   description: {{ i18n "admin.collections.pages._description" }},
   
   create: true,
-  editor: { preview: false },
+  editor: { preview: {{ site.Params.admin.preview }} },
   i18n: true,
 
   path: '{{`{{slug}}`}}',
   slug: '{{`{{slug}}/_index`}}',
 
   filter: { field: 'isPage', value: true },
-  nested: { depth: 5 },
+  nested: { depth: {{ site.Params.admin.depth }} },
 
   fields: [
     {{ partialCached "admin/collections/fields.yml" (dict "collection" "pages") }}
   ],
-
+  
   meta: {
     path: {
       label: {{ i18n "admin.fields.parent.label" }},

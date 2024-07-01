@@ -6,7 +6,7 @@
   description: {{ i18n "admin.collections.posts._description" }},
   
   create: true,
-  editor: { preview: false },
+  editor: { preview: {{ site.Params.admin.preview }} },
   i18n: true,
 
   path: '{{`{{year}}/{{month}}/{{slug}}`}}',

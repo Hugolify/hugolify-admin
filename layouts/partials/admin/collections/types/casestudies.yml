@@ -1,0 +1,21 @@
+{
+  name: casestudies,
+  folder: content/casestudies,
+  label: {{ i18n "admin.collections.casestudies.label" }},
+  label_singular: {{ i18n "admin.collections.casestudies.label" 1 }},
+  description: {{ i18n "admin.collections.casestudies._description" }},
+  
+  create: true,
+  editor: { preview: {{ site.Params.admin.preview }} },
+  i18n: true,
+
+  path: '{{`{{year}}/{{slug}}`}}',
+  slug: '{{`{{slug}}`}}',
+  sortable_fields: ['title'],
+
+  filter: { field: 'isIndex', value: false },
+
+  fields: [
+    {{ partialCached "admin/collections/fields.yml" (dict "collection" "casestudies") }}
+  ]
+}
