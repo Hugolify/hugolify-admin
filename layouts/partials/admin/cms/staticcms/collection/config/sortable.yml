@@ -1,0 +1,7 @@
+sortable_fields: {
+  fields: {{ .fields }},
+  default: {
+    field: commit_date,
+    direction: Descending
+  }
+},

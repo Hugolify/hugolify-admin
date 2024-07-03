@@ -1,0 +1,8 @@
+<!-- Static CMS -->
+<link rel="stylesheet" href="https://unpkg.com/@staticcms/app@^4.0.0/dist/main.css" />
+<script src="https://unpkg.com/@staticcms/app@^4.0.0/dist/static-cms-app.js"></script>
+<script>
+  window.CMS.init();
+</script>
+<!-- Custom widget/shortcodes/previews… -->
+{{ partialCached "admin/cms/staticcms/custom.html" . }}

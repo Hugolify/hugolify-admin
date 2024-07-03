@@ -9,6 +9,7 @@ module:
     - source: static
       target: static
 
+# Config YAML
 outputFormats:
   admin_config:
     baseName: config
@@ -20,18 +21,23 @@ mediaTypes:
     suffixes:
     - yml
 
+# Admin params 
 params:
   admin:
-    cms: decapcms
-    default_locale: en
-    depth: 5
-    locales: "[en]"
+    cms: sveltiacms
+    i18n:
+      default_locale: en
+      locales: false # "[en,fr]"
+    locale: en # Admin lang
     media:
-      max_file_size: 700000
+      max_file_size: 700000 # 700ko
+    nested:
+      depth: 5
     netlify:
       identity: true
     preview: false
 
+    # Default collections available
     collections:
       - pages
       - posts

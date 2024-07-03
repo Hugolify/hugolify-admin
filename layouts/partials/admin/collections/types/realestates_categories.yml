@@ -11,9 +11,10 @@
 
   path: '{{`{{slug}}`}}',
   slug: '{{`{{slug}}/_index`}}',
-  sortable_fields: ['title'],
-
-  filter: { field: 'isIndex', value: false },
+  
+  {{ partial "admin/collections/config/icon.yml" "bookmarks" }}
+  {{ partial "admin/collections/config/filter.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" }}
 
   fields: [
     {{ partialCached "admin/collections/fields.terms.default.yml" . }}

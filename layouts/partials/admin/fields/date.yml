@@ -1,0 +1,8 @@
+{
+  label: '{{ i18n "admin.fields.date.label" }}',
+  name: 'date',
+  widget: 'datetime',
+  format: "YYYY-MM-DDTHH:mm:ss.SSS[Z]",
+  required: true,
+  i18n: 'duplicate' 
+}

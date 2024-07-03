@@ -1,0 +1,7 @@
+<!-- Parent widget -->
+<script src="https://unpkg.com/@netlify/netlify-cms-widget-parent@^1.0.0/dist/netlify-cms-widget-parent.js"></script>
+<!-- Register -->
+<script>
+{{ partialCached "admin/cms/decapcms/shortcodes.html" . | safeJS }}
+{{ partialCached "admin/cms/netlifycms/widgets.html" . | safeJS }}
+</script>

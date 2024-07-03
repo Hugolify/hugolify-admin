@@ -1,5 +1,6 @@
 {
-  label: '{{ i18n "admin.fields.title.label" }}',
+  label: '{{ i18n "admin.fields.title_page.label" }}',
+  hint: '{{ i18n "admin.fields.title_page.hint" }}',
   name: 'title',
   widget: 'string',
   required: true,

@@ -1,0 +1,7 @@
+# TODO with pattern year default
+{{- $cms := site.Params.admin.cms | default "decapcms" -}}
+{{- $file := print "admin/cms/" $cms "/collection/config/group.yml" -}}
+{{- if templates.Exists ( printf "partials/%s" $file ) -}}
+  {{- $args := . -}}
+  {{ partial $file $args }}
+{{- end -}}

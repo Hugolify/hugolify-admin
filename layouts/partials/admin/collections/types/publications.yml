@@ -11,12 +11,12 @@
 
   path: '{{`{{year}}/{{month}}/{{slug}}`}}',
   slug: '{{`{{year}}-{{month}}-{{day}}-{{slug}}`}}',
-  sortable_fields: ['date', 'title'],
-  summary: '{{`{{title}} — {{year}}`}}',
-
-  filter: { field: 'isIndex', value: false },
+  
+  {{ partial "admin/collections/config/icon.yml" "newspaper" }}
+  {{ partial "admin/collections/config/filter.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" }}
   
   fields: [
-    {{ partialCached "admin/collections/fields.yml" (dict "collection" "publications") }}
+    {{ partial "admin/collections/fields.yml" (dict "collection" "publications") }}
   ]
 }

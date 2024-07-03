@@ -116,7 +116,10 @@ admin:
       label: Body
     credit:
       label: Credit
+    date:
+      label: Date
     description:
+      hint: Displayed in tabs, search results, and in SMS/Messages/Social networks preview
       label: Description
     draft:
       label: Draft
@@ -149,8 +152,13 @@ admin:
       label: Text
     title:
       label: Title
+    title_page:
+      hint: Displayed in tabs, search results, and in SMS/Messages/Social networks preview
+      label: Title of the page
     url:
       label: URL
+  group:
+    year: Year
   shortcodes:
     button:
       label: Button

@@ -1,0 +1,7 @@
+meta: {
+  path: {
+    label: {{ i18n "admin.fields.parent.label" }},
+    widget: parent,
+    index_file: _index
+  }
+}

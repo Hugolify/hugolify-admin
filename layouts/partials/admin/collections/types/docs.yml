@@ -9,22 +9,15 @@
   editor: { preview: {{ site.Params.admin.preview }} },
   i18n: true,
 
-  path: '{{`{{slug}}`}}',
-  slug: '{{`{{slug}}/_index`}}',
-  sortable_fields: ['title'],
-
-  filter: { field: 'isIndex', value: false },
-  nested: { depth: {{ site.Params.admin.depth }} },
+  path: "{{`{{slug}}`}}",
+  slug: "{{`{{slug}}/_index`}}",
+  
+  {{ partial "admin/collections/config/icon.yml" "dictionary" }}
+  {{ partial "admin/collections/config/filter.yml" }}
 
   fields: [
-    {{ partialCached "admin/collections/fields.yml" (dict "collection" "docs") }}
+    {{ partial "admin/collections/fields.yml" (dict "collection" "docs") }}
   ],
   
-  meta: {
-    path: {
-      label: {{ i18n "admin.fields.parent.label" }},
-      widget: 'parent',
-      index_file: '_index'
-    }
-  }
+  {{ partial "admin/collections/config/nested.yml" . }}
 }

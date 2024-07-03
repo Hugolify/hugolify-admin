@@ -1,0 +1,1 @@
+{{ partialCached "admin/cms/decapcms/config.yml" . }}

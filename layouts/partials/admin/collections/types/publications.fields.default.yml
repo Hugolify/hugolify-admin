@@ -1,4 +1,1 @@
-{{ partialCached "admin/fields/draft.yml" . }},
-{{ partialCached "admin/fields/title.yml" . }},
-{{ partialCached "admin/fields/description.yml" . }},
-{{ partialCached "admin/fields/body.yml" . }}
+{{ partialCached "admin/collections/fields.default.yml" . }}

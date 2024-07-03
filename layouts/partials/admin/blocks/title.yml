@@ -1,0 +1,13 @@
+{
+  label: t.blocks.title,
+  name: 'title',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  summary: '{{`{{heading.title}}`}}',
+  fields: [
+    {{ partialCached "admin/fields/heading.yml" . }},
+    {{ partialCached "admin/fields/background.yml" . }}
+  ]
+}

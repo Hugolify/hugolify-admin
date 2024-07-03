@@ -11,20 +11,12 @@
 
   path: '{{`{{slug}}`}}',
   slug: '{{`{{slug}}`}}',
-  sortable_fields: ['title'],
 
-  filter: { field: 'isIndex', value: false },
-  nested: { depth: {{ site.Params.admin.depth }} },
+  {{ partial "admin/collections/config/icon.yml" "school" }}
+  {{ partial "admin/collections/config/filter.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" }}
 
   fields: [
-    {{ partialCached "admin/collections/fields.yml" (dict "collection" "expertises") }}
-  ],
-
-  meta: {
-    path: {
-      label: {{ i18n "admin.fields.parent.label" }},
-      widget: 'parent',
-      index_file: '_index'
-    }
-  }
+    {{ partial "admin/collections/fields.yml" (dict "collection" "expertises") }}
+  ]
 }

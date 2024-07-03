@@ -1,0 +1,6 @@
+{
+  label: 'Id',
+  name: 'id',
+  widget: 'uuid',
+  i18n: 'duplicate' 
+}

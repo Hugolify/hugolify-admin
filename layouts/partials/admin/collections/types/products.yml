@@ -11,11 +11,12 @@
 
   path: '{{`{{year}}/{{slug}}`}}',
   slug: '{{`{{slug}}`}}',
-  sortable_fields: ['title'],
-
-  filter: { field: 'isIndex', value: false },
+  
+  {{ partial "admin/collections/config/icon.yml" "box" }}
+  {{ partial "admin/collections/config/filter.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" }}
 
   fields: [
-    {{ partialCached "admin/collections/fields.yml" (dict "collection" "products") }}
+    {{ partial "admin/collections/fields.yml" (dict "collection" "products") }}
   ]
 }

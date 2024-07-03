@@ -1,0 +1,5 @@
+{{- $cms := site.Params.admin.cms | default "decapcms" -}}
+{{- $file := print "admin/cms/" $cms "/widgets/parent.yml" -}}
+{{- if templates.Exists ( printf "partials/%s" $file ) -}}
+  {{ partialCached $file . }},
+{{- end -}}
