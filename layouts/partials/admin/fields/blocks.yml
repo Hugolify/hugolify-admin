@@ -5,6 +5,8 @@
   name: 'blocks',
   widget: 'list',
   collapsed: false,
-  # types: Object.values(availableBlocks),
+  types: [
+    {{ partialCached "admin/blocks/title.yml" . }}
+  ],
   i18n: true
 }

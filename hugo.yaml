@@ -24,7 +24,7 @@ mediaTypes:
 # Admin params 
 params:
   admin:
-    cms: sveltiacms
+    cms: decapcms
     i18n:
       default_locale: en
       locales: false # "[en,fr]"
@@ -40,4 +40,3 @@ params:
     # Default collections available
     collections:
       - pages
-      - posts

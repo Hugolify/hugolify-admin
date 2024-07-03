@@ -4,10 +4,11 @@
   widget: 'object',
   required: false,
   i18n: true,
-  collapsed: true,
+  collapsed: false,
+  summary: '{{`{{title}}`}}',
   fields: [
     {{ partialCached "admin/fields/surtitle.yml" . }},
     {{ partialCached "admin/fields/title.yml" . }},
     {{ partialCached "admin/fields/text_markdown.yml" . }}
   ]
-};
+}

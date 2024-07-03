@@ -1,4 +1,7 @@
 admin:
+  blocks:
+    title:
+      label: Title
   collections:
     casestudies:
       _description: All case studies
@@ -146,6 +149,9 @@ admin:
       label: Legend
     parent:
       label: Parent page
+    slug:
+      label: Slug
+      hint: Keep empty when you create your entry
     surtitle:
       label: Surtitle
     text:

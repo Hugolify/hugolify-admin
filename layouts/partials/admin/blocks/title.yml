@@ -1,5 +1,5 @@
 {
-  label: t.blocks.title,
+  label: '{{ i18n "admin.blocks.title.label" }}',
   name: 'title',
   widget: 'object',
   required: false,
