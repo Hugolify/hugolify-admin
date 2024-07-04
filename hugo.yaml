@@ -32,7 +32,7 @@ params:
     media:
       max_file_size: 700000 # 700ko
     nested:
-      depth: false # set an int for enable
+      depth: 2 # set minimum 2
     netlify:
       identity: true
     preview: false

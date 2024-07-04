@@ -1,3 +1,4 @@
+{{- $fields := slice "cta" -}}
 {
   label: '{{ i18n "admin.fields.cta.label" 2 }}',
   label_singular: '{{ i18n "admin.fields.cta.label" 1 }}',
@@ -9,5 +10,6 @@
   max: 2,
   allow_add: true,
   required: false,
-  field: {{ partial "admin/fields/cta.yml" }}
+  summary: '{{`{{cta.text}}`}}',
+  {{ partial "admin/fields/_fields.yml" $fields }}
 }

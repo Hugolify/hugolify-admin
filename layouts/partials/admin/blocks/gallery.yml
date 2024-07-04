@@ -1,0 +1,15 @@
+{{- $fields := slice 
+  "heading" 
+  "column" 
+  "gallery" 
+  "background" -}}
+{
+  label: '{{ i18n "admin.blocks.gallery.label" }}',
+  name: 'gallery',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  summary: '{{`{{heading.title}}`}}',
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

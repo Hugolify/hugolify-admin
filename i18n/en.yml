@@ -8,10 +8,18 @@ admin:
       label: Editorial
     figure:
       label: Figure
+    gallery:
+      label: Gallery
+    images:
+      label: Images
     informations:
       label: Informations
+    latest:
+      label: Latest
     paragraph:
       label: Paragraph
+    quote:
+      label: Quote
     title:
       label: Title
   collections:

@@ -1,0 +1,16 @@
+{{- $fields := slice 
+  "heading" 
+  "section" 
+  "count" 
+  "show_more" 
+  "background" -}}
+{
+  name: 'latest',
+  label: '{{ i18n "admin.blocks.latest.label" }}',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  summary: '{{`{{heading.title}}`}}',
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}
