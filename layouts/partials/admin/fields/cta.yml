@@ -1,13 +1,14 @@
 {{- $fields := slice 
-  "image_src" 
-  "image_alt" 
-  "image_compression"  -}}
+  "text" 
+  "url" 
+  "is_blank"  -}}
 {
-  label: '{{ i18n "admin.fields.image.label" }}',
-  name: 'image',
+  label: '{{ i18n "admin.fields.cta.label" 1 }}',
+  name: 'cta',
   widget: 'object',
   required: false,
   i18n: true,
   collapsed: true,
+  summary: '{{`{{text}}`}}',
   {{ partial "admin/fields/_fields.yml" $fields }}
 }

@@ -1,0 +1,8 @@
+fields: [
+  {{- range . -}}
+    {{- $file := print "admin/fields/" . ".yml" -}}
+    {{- if templates.Exists ( printf "partials/%s" $file ) -}}
+      {{ partial $file }},
+    {{- end -}}
+  {{- end -}}
+]

@@ -1,9 +1,11 @@
 {{- $fields := slice 
   "heading" 
+  "column" 
+  "items_informations" 
   "background" -}}
 {
-  label: '{{ i18n "admin.blocks.title.label" }}',
-  name: 'title',
+  label: '{{ i18n "admin.blocks.informations.label" }}',
+  name: 'informations',
   widget: 'object',
   required: false,
   i18n: true,

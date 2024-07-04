@@ -1,0 +1,20 @@
+{{- $fields := slice 
+  "surtitle" 
+  "title" 
+  "text_markdown" 
+  "notes" 
+  "ctas" 
+  "grid" 
+  "offset" 
+  "align" 
+  "background" -}}
+{
+  label: '{{ i18n "admin.blocks.paragraph.label" }}',
+  name: 'paragraph',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  summary: '{{`{{title}}`}}',
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

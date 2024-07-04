@@ -1,13 +1,14 @@
 {{- $fields := slice 
   "heading" 
+  "ctas" 
   "background" -}}
 {
-  label: '{{ i18n "admin.blocks.title.label" }}',
-  name: 'title',
+  label: '{{ i18n "admin.blocks.cta.label" 1 }}',
+  name: 'cta',
   widget: 'object',
   required: false,
   i18n: true,
   collapsed: false,
-  summary: '{{`{{heading.title}}`}}',
+  summary: '{{`{{cta.text}}`}}',
   {{ partial "admin/fields/_fields.yml" $fields }}
 }

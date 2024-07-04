@@ -1,11 +1,12 @@
+{{- $fields := slice 
+  "title" 
+  "text" 
+  "ctas" -}}
 {
   label: '{{ i18n "admin.fields.hero.label" }}',
   name: 'hero',
   widget: 'object',
   required: false,
   i18n: true,
-  fields: [
-    {{ partialCached "admin/fields/title.yml" . }},
-    {{ partialCached "admin/fields/text.yml" . }}
-  ]
+  {{ partial "admin/fields/_fields.yml" $fields }}
 }

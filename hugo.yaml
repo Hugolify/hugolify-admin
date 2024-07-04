@@ -24,19 +24,36 @@ mediaTypes:
 # Admin params 
 params:
   admin:
-    cms: decapcms
+    cms: decapcms # https://www.hugolify.io/docs/cms/
     i18n:
-      default_locale: en
-      locales: false # "[en,fr]"
-    locale: en # Admin lang
+      default_locale: en # master lang for an i18n website 
+      locales: false # "[en,fr]" for an i18n website
+    locale: en # CMS lang
     media:
       max_file_size: 700000 # 700ko
     nested:
-      depth: 5
+      depth: false # set an int for enable
     netlify:
       identity: true
     preview: false
 
+    # Default blocks available
+    blocks:
+      # All blocks available https://www.hugolify.io/docs/blocks/
+      - alert
+      - cta
+      - editorial
+      - faq
+      - figure
+      - information
+      - images
+      - latest
+      - paragraph
+      - quote
+      - selected
+      - title
+
     # Default collections available
     collections:
+      # All collections available https://www.hugolify.io/docs/sections/
       - pages

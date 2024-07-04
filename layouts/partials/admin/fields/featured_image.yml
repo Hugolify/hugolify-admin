@@ -1,3 +1,8 @@
+{{- $fields := slice 
+  "image_src" 
+  "image_alt" 
+  "image_compression" 
+  "credit"  -}}
 {
   label: '{{ i18n "admin.fields.featured_image.label" }}',
   hint: '{{ i18n "admin.fields.featured_image.hint" }}',
@@ -6,10 +11,5 @@
   required: false,
   i18n: true,
   collapsed: true,
-  fields: [
-    {{ partialCached "admin/fields/image_src.yml" . }},
-    {{ partialCached "admin/fields/image_alt.yml" . }},
-    {{ partialCached "admin/fields/image_compression.yml" . }},
-    {{ partialCached "admin/fields/credit.yml" . }}
- ]
+  {{ partial "admin/fields/_fields.yml" $fields }}
 }

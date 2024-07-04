@@ -1,13 +1,16 @@
 {{- $fields := slice 
   "heading" 
+  "figure" 
+  "grid" 
+  "offset" 
   "background" -}}
 {
-  label: '{{ i18n "admin.blocks.title.label" }}',
-  name: 'title',
+  label: '{{ i18n "admin.blocks.figure.label" }}',
+  name: 'figure',
   widget: 'object',
   required: false,
   i18n: true,
   collapsed: false,
-  summary: '{{`{{heading.title}}`}}',
+  summary: '{{`{{title}}`}}',
   {{ partial "admin/fields/_fields.yml" $fields }}
 }

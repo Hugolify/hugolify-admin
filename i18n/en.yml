@@ -1,5 +1,17 @@
 admin:
   blocks:
+    alert:
+      label: Alert
+    cta:
+      label: Call to action
+    editorial:
+      label: Editorial
+    figure:
+      label: Figure
+    informations:
+      label: Informations
+    paragraph:
+      label: Paragraph
     title:
       label: Title
   collections:
@@ -119,6 +131,10 @@ admin:
       label: Body
     credit:
       label: Credit
+    cta:
+      label:
+        one: CTA
+        other: CTAs
     date:
       label: Date
     description:
@@ -140,6 +156,7 @@ admin:
       compression:
         label: Picture?
         hint: Set a better compression if is not a photo
+      label: Image
       src:
         hint: 'Resize and compress image before sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
