@@ -2,6 +2,7 @@
   "quote" 
   "author" 
   "background" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.blocks.quote.label" }}',
   name: 'quote',

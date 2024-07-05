@@ -6,6 +6,8 @@ admin:
       label: Call to action
     editorial:
       label: Editorial
+    faq:
+      label: FAQ
     figure:
       label: Figure
     gallery:
@@ -129,6 +131,22 @@ admin:
         one: Category
         other: Categories
   fields:
+    address:
+      label: Address
+      city:
+        label: City
+      coordinates:
+        label: Coordinates
+      country:
+        label: Country
+      lat:
+        label: Latitude
+      lng:
+        label: Longitude
+      street:
+        label: Street
+      zipcode:
+        label: Zip code
     background:
       label: Has background?
     blocks:
@@ -137,6 +155,8 @@ admin:
         other: Blocks
     body:
       label: Body
+    code:
+      label: Code
     credit:
       label: Credit
     cta:
@@ -170,6 +190,10 @@ admin:
         label: Image
     is_blank:
       label: Is blank?
+    items:
+      label: 
+        one: Item
+        other: Items
     legend:
       label: Legend
     parent:
@@ -177,6 +201,16 @@ admin:
     slug:
       label: Slug
       hint: Keep empty when you create your entry
+    state:
+      danger: Danger
+      dark: Dark
+      info: Info
+      label: State
+      light: Light
+      primary: Primary
+      secondary: Secondary
+      success: Success
+      warning: Warning
     surtitle:
       label: Surtitle
     text:

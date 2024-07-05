@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.code.label" }}',
+  name: 'code',
+  widget: 'code',
+  required: false,
+  i18n: 'duplicate'
+}

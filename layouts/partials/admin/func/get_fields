@@ -1,0 +1,8 @@
+{{- $specificFields := .fields -}}
+{{- $specificBlock := index site.Params.admin.blocks .block -}}
+{{- with $specificBlock -}}
+  {{- with .fields -}}
+    {{- $specificFields = . -}}
+  {{- end -}}
+{{- end -}}
+{{- return $specificFields -}}

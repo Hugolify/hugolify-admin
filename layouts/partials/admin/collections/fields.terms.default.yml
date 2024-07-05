@@ -1,4 +1,11 @@
-{{ partialCached "admin/fields/is_not_index.yml" . }},
-{{ partialCached "admin/fields/draft.yml" . }},
-{{ partialCached "admin/fields/title.yml" . }},
-{{ partialCached "admin/fields/description.yml" . }},
+{{- $fields := slice 
+  "is_not_index" 
+  "draft" 
+  "title_page" 
+  "description" -}}
+{{- range $fields -}}
+  {{- $file := print "admin/fields/" . ".yml" -}}
+  {{- if templates.Exists ( printf "partials/%s" $file ) -}}
+    {{ partial $file }},
+  {{- end -}}
+{{- end -}}

@@ -9,9 +9,9 @@
   i18n: true,
 
   slug: '{{`{{slug}}`}}',
-  sortable_fields: ['title'],
 
-  filter: { field: 'isIndex', value: false },
+  {{ partial "admin/collections/config/filter.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" }}
 
   fields: [
     {{ partialCached "admin/collections/fields.default.yml" . }}

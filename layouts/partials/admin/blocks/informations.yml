@@ -1,8 +1,10 @@
+{{- $items := dict "items" (slice "icon" "image" "title" "text" "cta") -}} 
 {{- $fields := slice 
   "heading" 
   "column" 
-  "items_informations" 
+  $items 
   "background" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.blocks.informations.label" }}',
   name: 'informations',

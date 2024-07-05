@@ -1,0 +1,59 @@
+{
+  label: '{{ i18n "admin.fields.address.label" }}',
+  name: 'address',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: true,
+  summary: '{{`{{street}}`}}',
+  fields: [
+    {
+      label: '{{ i18n "admin.fields.address.street.label" }}',
+      name: 'street',
+      widget: 'string',
+      required: false
+    },
+    {
+      label: '{{ i18n "admin.fields.address.zipcode.label" }}',
+      name: 'zipcode',
+      widget: 'string',
+      required: false
+    },
+    {
+      label: '{{ i18n "admin.fields.address.city.label" }}',
+      name: 'city',
+      widget: 'string',
+      required: false
+    },
+    {
+      label: '{{ i18n "admin.fields.address.zipcode.label" }}',
+      name: 'country',
+      widget: 'string',
+      required: false
+    },
+    {
+      label: '{{ i18n "admin.fields.address.coordinates.label" }}',
+      hint: '{{ i18n "admin.fields.address.coordinates.hint" }}',
+      name: 'coordinates',
+      widget: 'object',
+      required: false,
+      collapsed: true,
+      fields: [
+        {
+          label: '{{ i18n "admin.fields.address.lat.label" }}',
+          name: 'lat',
+          widget: 'number',
+          value_type: 'float',
+          required: false
+        },
+        {
+          label: '{{ i18n "admin.fields.address.lng.label" }}',
+          name: 'lng',
+          widget: 'number',
+          value_type: 'float',
+          required: false
+        }
+      ]
+    }
+  ]
+}

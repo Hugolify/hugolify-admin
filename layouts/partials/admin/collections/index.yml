@@ -1,6 +1,6 @@
 
 collections: [
-  {{- range site.Params.admin.collections }}
+  {{- range site.Params.admin.collections.available }}
     {{- $file := print "admin/collections/types/" . ".yml" -}}
     {{- if templates.Exists ( printf "partials/%s" $file ) }}
       {{ partialCached $file . }},

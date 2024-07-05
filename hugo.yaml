@@ -37,23 +37,25 @@ params:
       identity: true
     preview: false
 
-    # Default blocks available
+    # Blocks
     blocks:
       # All blocks available https://www.hugolify.io/docs/blocks/
-      - alert
-      - cta
-      - editorial
-      - faq
-      - figure
-      - information
-      - images
-      - latest
-      - paragraph
-      - quote
-      - selected
-      - title
+      available:
+        # - alert
+        # - cta
+        # - editorial
+        - faq
+        # - figure
+        # - information
+        # - images
+        # - latest
+        # - paragraph
+        # - quote
+        # - selected
+        # - title
 
-    # Default collections available
+    # Collections
     collections:
       # All collections available https://www.hugolify.io/docs/sections/
-      - pages
+      available:
+        - pages

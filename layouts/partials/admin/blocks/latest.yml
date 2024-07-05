@@ -4,9 +4,10 @@
   "count" 
   "show_more" 
   "background" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
 {
-  name: 'latest',
   label: '{{ i18n "admin.blocks.latest.label" }}',
+  name: 'latest',
   widget: 'object',
   required: false,
   i18n: true,

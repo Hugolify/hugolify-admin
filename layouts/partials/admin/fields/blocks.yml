@@ -1,6 +1,6 @@
 {{- $collection := . | default "pages" -}}
-{{- $blocks := site.Params.admin.blocks -}}
-{{- with (index site.Params.admin $collection).blocks -}}
+{{- $blocks := site.Params.admin.blocks.available -}}
+{{- with (index site.Params.admin.collection $collection).blocks -}}
   {{- $blocks = . -}}
 {{- end -}}
 {
@@ -14,7 +14,7 @@
     {{- range $blocks -}}
       {{- $file := print "admin/blocks/" . ".yml" -}}
       {{- if templates.Exists ( printf "partials/%s" $file ) -}}
-        {{ partial $file }},
+        {{ partial $file . }},
       {{- end -}}
     {{- end -}}
   ]

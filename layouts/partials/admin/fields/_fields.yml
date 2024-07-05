@@ -1,8 +1,16 @@
 fields: [
   {{- range . -}}
-    {{- $file := print "admin/fields/" . ".yml" -}}
+    {{- $field := . -}}
+    {{- $values := . -}}
+    {{- if reflect.IsMap . -}}
+      {{- range $key, $value := . -}}
+        {{- $field = $key -}}
+        {{- $values = $value -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $file := print "admin/fields/" $field ".yml" -}}
     {{- if templates.Exists ( printf "partials/%s" $file ) -}}
-      {{ partial $file }},
+      {{ partial $file $values }},
     {{- end -}}
   {{- end -}}
 ]

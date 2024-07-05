@@ -1,0 +1,18 @@
+{
+  label: '{{ i18n "admin.fields.state.label" }}',
+  name: 'state',
+  widget: 'select',
+  options: [
+    { label: {{ i18n "admin.fields.state.danger" }}, value: 'danger' },
+    { label: {{ i18n "admin.fields.state.dark" }}, value: 'dark' },
+    { label: {{ i18n "admin.fields.state.info" }}, value: 'info' },
+    { label: {{ i18n "admin.fields.state.light" }}, value: 'light' },
+    { label: {{ i18n "admin.fields.state.primary" }}, value: 'primary' },
+    { label: {{ i18n "admin.fields.state.secondary" }}, value: 'secondary' },
+    { label: {{ i18n "admin.fields.state.success" }}, value: 'success' },
+    { label: {{ i18n "admin.fields.state.warning" }}, value: 'warning' }
+  ],
+  default: 'light',
+  required: true,
+  i18n: 'duplicate'
+}
