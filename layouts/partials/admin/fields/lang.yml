@@ -1,0 +1,8 @@
+{
+  label: '{{ i18n "admin.fields.lang.label" }}',
+  hint: '{{ i18n "admin.fields.lang.hint" }}',
+  name: 'lang',
+  widget: 'string',
+  required: false,
+  i18n: true
+}

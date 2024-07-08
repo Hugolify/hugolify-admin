@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.transcription.label" }}',
+  name: 'transcription',
+  widget: 'text',
+  required: false,
+  i18n: true
+}

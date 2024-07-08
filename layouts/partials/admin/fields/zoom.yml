@@ -1,0 +1,10 @@
+{
+  label: '{{ i18n "admin.fields.zoom.label" }}',
+  name: 'zoom',
+  widget: 'number',
+  min: 1,
+  default: 13,
+  max: 20,
+  required: true,
+  i18n: 'duplicate'
+}

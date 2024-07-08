@@ -1,0 +1,8 @@
+{
+  label: '{{ i18n "admin.fields.website.label" }}',
+  hint: '{{ i18n "admin.fields.website.hint" }}',
+  name: 'website',
+  widget: 'string',
+  required: false,
+  i18n: 'duplicate'
+}

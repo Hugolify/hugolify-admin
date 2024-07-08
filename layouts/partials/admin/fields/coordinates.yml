@@ -1,0 +1,24 @@
+{
+  label: '{{ i18n "admin.fields.coordinates.label" }}',
+  hint: '{{ i18n "admin.fields.coordinates.hint" }}',
+  name: 'coordinates',
+  widget: 'object',
+  required: false,
+  collapsed: true,
+  fields: [
+    {
+      label: '{{ i18n "admin.fields.coordinates.lat.label" }}',
+      name: 'lat',
+      widget: 'number',
+      value_type: 'float',
+      required: false
+    },
+    {
+      label: '{{ i18n "admin.fields.coordinates.lng.label" }}',
+      name: 'lng',
+      widget: 'number',
+      value_type: 'float',
+      required: false
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  label: '{{ i18n "admin.fields.screenshot.label" }}',
+  hint: '{{ i18n "admin.fields.screenshot.hint" }}',
+  name: 'screenshot',
+  widget: 'boolean',
+  default: false,
+  required: false,
+  i18n: 'duplicate'
+}

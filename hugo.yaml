@@ -31,6 +31,7 @@ params:
     locale: en # CMS lang
     media:
       max_file_size: 700000 # 700ko
+      video_max_file_size: 5000000 # 5Mo
     nested:
       depth: 2 # set minimum 2
     netlify:
@@ -41,18 +42,18 @@ params:
     blocks:
       # All blocks available https://www.hugolify.io/docs/blocks/
       available:
-        # - alert
-        # - cta
-        # - editorial
+        - alert
+        - cta
+        - editorial
         - faq
-        # - figure
-        # - information
-        # - images
-        # - latest
-        # - paragraph
-        # - quote
-        # - selected
-        # - title
+        - figure
+        - information
+        - images
+        - latest
+        - paragraph
+        - quote
+        - selected
+        - title
 
     # Collections
     collections:

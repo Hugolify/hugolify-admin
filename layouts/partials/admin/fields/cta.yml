@@ -1,7 +1,9 @@
 {{- $fields := slice 
   "text" 
   "url" 
+  "lang" 
   "is_blank"  -}}
+{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.cta.label" 1 }}',
   name: 'cta',

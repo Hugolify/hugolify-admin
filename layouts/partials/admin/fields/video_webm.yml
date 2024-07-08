@@ -1,0 +1,16 @@
+{
+  label: 'WEBM',
+  hint: '{{ i18n "admin.fields.video.webm.hint" }}',
+  name: 'webm',
+  widget: 'file',
+  required: false,
+  i18n: 'duplicate',
+  choose_url: false,
+  media_library: {
+    config: {
+      max_file_size: {{site.Params.admin.media.video_max_file_size}}
+    }
+  },
+  media_folder: '/static/assets/videos',
+  public_folder: '/assets/videos'
+}

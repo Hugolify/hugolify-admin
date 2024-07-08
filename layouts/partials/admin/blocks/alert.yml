@@ -4,7 +4,7 @@
   "background" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
 {
-  label: '{{ i18n " in.blocks.alert.label" }}',
+  label: '{{ i18n "admin.blocks.alert.label" }}',
   name: 'alert',
   widget: 'object',
   required: false,

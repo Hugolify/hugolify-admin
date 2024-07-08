@@ -1,6 +1,12 @@
 {{- $specificFields := .fields -}}
-{{- $specificBlock := index site.Params.admin.blocks .block -}}
-{{- with $specificBlock -}}
+{{- $specific := false -}}
+{{- with .block -}}
+  {{- $specific = index site.Params.admin.blocks . -}}
+{{- end -}}
+{{- with .field -}}
+  {{- $specific = index site.Params.admin.fields . -}}
+{{- end -}}
+{{- with $specific -}}
   {{- with .fields -}}
     {{- $specificFields = . -}}
   {{- end -}}

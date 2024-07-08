@@ -135,18 +135,23 @@ admin:
       label: Address
       city:
         label: City
-      coordinates:
-        label: Coordinates
       country:
         label: Country
-      lat:
-        label: Latitude
-      lng:
-        label: Longitude
       street:
         label: Street
       zipcode:
         label: Zip code
+    align:
+      label: Alignment
+      center: Center
+      end: End
+      start: Start
+    arguments:
+      label:
+        one: Argument
+        other: Arguments
+    autoplay:
+      label: Autoplay
     background:
       label: Has background?
     blocks:
@@ -157,6 +162,15 @@ admin:
       label: Body
     code:
       label: Code
+    controls:
+      label: Controls
+    coordinates:
+      label: Geographic coordinates
+      hint: 'To easily find your coordinates: https://www.latlong.net/convert-address-to-lat-long.html'
+      lat:
+        label: Latitude
+      lng:
+        label: Longitude
     credit:
       label: Credit
     cta:
@@ -194,10 +208,18 @@ admin:
       label: 
         one: Item
         other: Items
+    lang:
+      label: Language
+      hint: Enter code lang (e.g. fr) if different of the current page language
     legend:
       label: Legend
+    loop:
+      label: Loop
     parent:
       label: Parent page
+    screenshot:
+      label: Screenshot
+      hint: Add a browser skin around the picture
     slug:
       label: Slug
       hint: Keep empty when you create your entry
@@ -220,8 +242,21 @@ admin:
     title_page:
       hint: Displayed in tabs, search results, and in SMS/Messages/Social networks preview
       label: Title of the page
+    transcription:
+      label: Transcription
     url:
       label: URL
+    video:
+      label: Video
+      mp4:
+        hint: 'Video in MP4 format'
+      webm:
+        hint: 'Video in WEBM format'
+    website:
+      label: Website
+      hint: 'URL (https://…)'
+    zoom:
+      label: Zoom
   group:
     year: Year
   shortcodes:

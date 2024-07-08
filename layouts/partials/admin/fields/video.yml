@@ -1,16 +1,19 @@
 {{- $fields := slice 
-  "surtitle" 
-  "title" 
-  "text_markdown" 
-  "ctas" 
-  "image" 
-  "align" -}}
+  "video_mp4" 
+  "video_webm" 
+  "controls" 
+  "autoplay" 
+  "loop" 
+  "screenshot" 
+  "legend" 
+  "transcription"  -}}
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {
-  label: '{{ i18n "admin.fields.hero.label" }}',
-  name: 'hero',
+  label: '{{ i18n "admin.fields.video.label" }}',
+  name: 'video',
   widget: 'object',
   required: false,
   i18n: true,
+  collapsed: true,
   {{ partial "admin/fields/_fields.yml" $fields }}
 }
