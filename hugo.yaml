@@ -47,6 +47,7 @@ params:
         - editorial
         - faq
         - figure
+        - form
         - information
         - images
         - latest

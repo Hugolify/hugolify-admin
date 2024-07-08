@@ -1,0 +1,19 @@
+{{- $fields := slice 
+  "heading" 
+  "grid" 
+  "offset" 
+  "name" 
+  "submit" 
+  "form_items"
+  "background" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.blocks.form.label" }}',
+  name: 'form',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  summary: '{{`{{heading.title}}`}}',
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

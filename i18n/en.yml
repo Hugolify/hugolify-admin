@@ -2,20 +2,30 @@ admin:
   blocks:
     alert:
       label: Alert
+    chart:
+      label: Chart
     cta:
       label: Call to action
+    datas:
+      label: Datas
     editorial:
       label: Editorial
+    embed:
+      label: Embed
     faq:
       label: FAQ
     figure:
       label: Figure
+    form:
+      label: Form
     gallery:
       label: Gallery
     images:
       label: Images
     informations:
       label: Informations
+    instagram:
+      label: Instagram
     latest:
       label: Latest
     paragraph:
@@ -187,6 +197,38 @@ admin:
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Featured image
+    form:
+      label: Form
+      autocomplete:
+        label: Autocomplete
+        country_name: Country name
+        email: Email
+        family_name: Family name
+        given_name: Given name
+        name: Name
+        organization: Organization
+        postal_code: Postal code
+        street_address: Street address
+        tel: Tel
+        textarea: Textarea
+      options:
+        label:
+          one: Option
+          other: Options
+        hint: Only for select type
+      type:
+        label: Type
+        email: Email
+        select: Select
+        tel: Tel
+        text: Text
+        textarea: Textarea
+      full:
+        label: Full width field?
+      items:
+        label:
+          one: Field
+          other: Fields
     heading:
       label: Heading
     hero:
@@ -208,6 +250,8 @@ admin:
       label: 
         one: Item
         other: Items
+    label:
+      label: Label
     lang:
       label: Language
       hint: Enter code lang (e.g. fr) if different of the current page language
@@ -215,8 +259,14 @@ admin:
       label: Legend
     loop:
       label: Loop
+    name:
+      label: Name
     parent:
       label: Parent page
+    placeholder:
+      label: Placeholder
+    required:
+      label: Required
     screenshot:
       label: Screenshot
       hint: Add a browser skin around the picture
@@ -246,6 +296,8 @@ admin:
       label: Transcription
     url:
       label: URL
+    value:
+      label: Value
     video:
       label: Video
       mp4:

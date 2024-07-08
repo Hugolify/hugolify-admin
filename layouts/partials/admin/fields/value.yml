@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.value.label" }}',
+  name: 'value',
+  widget: 'string',
+  required: false,
+  i18n: true 
+}

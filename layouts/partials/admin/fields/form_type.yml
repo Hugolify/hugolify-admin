@@ -1,0 +1,29 @@
+{
+  label: '{{ i18n "admin.fields.form.type.label" }}',
+  name: 'type',
+  widget: 'select',
+  i18n: 'duplicate',
+  options: [
+    {
+      label: '{{ i18n "admin.fields.form.type.email" }}',
+      value: 'email'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.type.select" }}',
+      value: 'select'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.type.tel" }}',
+      value: 'tel'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.type.text" }}',
+      value: 'text'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.type.textarea" }}',
+      value: 'textarea'
+    }
+  ],
+  default: 'text'
+}

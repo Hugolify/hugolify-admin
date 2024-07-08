@@ -1,0 +1,49 @@
+{
+  label: '{{ i18n "admin.fields.form.autocomplete.label" }}',
+  name: 'autocomplete',
+  widget: 'select',
+  i18n: 'duplicate',
+  required: false,
+  options: [
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.postal_code" }}',
+      value: 'postal-code'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.email" }}',
+      value: 'email'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.name" }}',
+      value: 'name'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.family_name" }}',
+      value: 'family-name'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.street_address" }}',
+      value: 'street-address'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.country_name" }}',
+      value: 'country-name'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.given_name" }}',
+      value: 'given-name'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.organization" }}',
+      value: 'organization'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.tel" }}',
+      value: 'tel'
+    },
+    {
+      label: '{{ i18n "admin.fields.form.autocomplete.textarea" }}',
+      value: 'textarea'
+    }
+  ]
+}

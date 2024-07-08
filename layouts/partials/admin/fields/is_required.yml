@@ -1,0 +1,8 @@
+{
+  label: '{{ i18n "admin.fields.required.label" }}',
+  name: 'isIndex',
+  widget: 'boolean',
+  default: false,
+  required: false,
+  i18n: 'duplicate' 
+}

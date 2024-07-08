@@ -1,0 +1,14 @@
+{{- $fields := slice 
+  "title" 
+  "value" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.fields.form.options.label" 2 }}',
+  label_singular: '{{ i18n "admin.fields.form.options.label" 1 }}',
+  hint: '{{ i18n "admin.fields.form.options.hint" }}',
+  name: 'options',
+  widget: 'list',
+  required: false,
+  i18n: true,
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}
