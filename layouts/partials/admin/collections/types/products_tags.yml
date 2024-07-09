@@ -11,6 +11,7 @@
 
   path: '{{`{{slug}}`}}',
   slug: '{{`{{slug}}/_index`}}',
+  nested: { depth: 2 },
 
   {{ partial "admin/collections/config/icon.yml" "bookmarks" }}
   {{ partial "admin/collections/config/filter.yml" }}

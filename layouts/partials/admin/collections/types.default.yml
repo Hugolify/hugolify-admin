@@ -8,7 +8,7 @@
   editor: { preview: {{ site.Params.admin.preview }} },
   i18n: true,
 
-  slug: '{{`{{slug}}`}}',
+  slug: '{{`{{id}}`}}',
 
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}

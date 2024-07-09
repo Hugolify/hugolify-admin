@@ -160,18 +160,32 @@ admin:
       label:
         one: Argument
         other: Arguments
+    authors:
+      label:
+        one: Author
+        other: Authors
     autoplay:
       label: Autoplay
     background:
       label: Has background?
+    background_color:
+      label: Background color
     blocks:
       label:
         one: Block
         other: Blocks
     body:
       label: Body
+    categories:
+      label:
+        one: Category
+        other: Categories
     code:
       label: Code
+    color:
+      label: Color
+    column:
+      label: Column
     controls:
       label: Controls
     coordinates:
@@ -229,6 +243,13 @@ admin:
         label:
           one: Field
           other: Fields
+    grid:
+      label: Grid
+      container: Container
+      full: Full
+      large: Large
+      medium: Medium
+      small: Small
     heading:
       label: Heading
     hero:
@@ -263,6 +284,8 @@ admin:
       label: Name
     parent:
       label: Parent page
+    prefix:
+      label: Prefix
     placeholder:
       label: Placeholder
     required:
@@ -272,7 +295,8 @@ admin:
       hint: Add a browser skin around the picture
     slug:
       label: Slug
-      hint: Keep empty when you create your entry
+      hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
+      pattern: Contain only lowercase letters, numbers, and hyphens, with no spaces, accents, or special characters
     state:
       danger: Danger
       dark: Dark
@@ -283,8 +307,15 @@ admin:
       secondary: Secondary
       success: Success
       warning: Warning
+    suffix:
+      label: Suffix
+      hint: 'e.g.: %'
     surtitle:
       label: Surtitle
+    tags:
+      label:
+        one: Tag
+        other: Tags
     text:
       label: Text
     title:

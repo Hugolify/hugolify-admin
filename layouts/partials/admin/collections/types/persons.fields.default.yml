@@ -1,1 +1,1 @@
-{{ partialCached "admin/collections/fields.default.yml" }}
+{{ partialCached "admin/collections/fields.default.yml" . }}

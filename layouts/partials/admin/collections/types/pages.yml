@@ -10,7 +10,7 @@
   i18n: true,
 
   path: '{{`{{slug}}`}}',
-  slug: '{{`{{slug}}/_index`}}',
+  slug: '{{`{{id}}/_index`}}',
   
   {{ partial "admin/collections/config/filter.yml" (dict "field" "isPage" "value" true) }}
 

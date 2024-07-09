@@ -3,5 +3,11 @@
   hint: '{{ i18n "admin.fields.slug.hint" }}',
   name: 'slug',
   widget: 'string',
-  i18n: true
+  required: false,
+  i18n: true,
+  pattern:
+    [
+      "^(|[a-z0-9-]+)$",
+      "{{ i18n "admin.fields.slug.pattern" }}",
+    ]
 }

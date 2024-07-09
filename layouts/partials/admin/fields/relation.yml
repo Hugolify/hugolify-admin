@@ -1,0 +1,20 @@
+{{- $collection := .collection | default false -}}
+{{- $name := .name | default $collection -}}
+{{- $multiple := .multiple | default false -}}
+{{- $required := .required | default false -}}
+{
+  label: '{{ i18n (print "admin.fields." $name ".label") }}',
+  label_singular: '{{ i18n (print "admin.fields." $name ".label") 1 }}',
+  name: {{ $name }},
+  widget: 'relation',
+  collection: {{ $collection }},
+  search_fields: ['title'],
+  value_field: 'id',
+  display_fields: ['title'],
+  filters: [
+    { field: 'draft', values: [false] }
+  ],
+  required: {{ $required }},
+  multiple: {{ $multiple }},
+  i18n: 'duplicate'
+}

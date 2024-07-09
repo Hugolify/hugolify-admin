@@ -10,13 +10,13 @@
   i18n: true,
 
   path: '{{`{{slug}}`}}',
-  slug: '{{`{{slug}}`}}',
+  slug: '{{`{{id}}`}}',
 
   {{ partial "admin/collections/config/icon.yml" "person" }}
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
 
   fields: [
-    {{ partial "admin/collections/fields.yml" (dict "collection" "pages") }}
+    {{ partial "admin/collections/fields.yml" (dict "collection" "persons") }}
   ]
 }

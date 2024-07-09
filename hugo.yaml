@@ -61,3 +61,7 @@ params:
       # All collections available https://www.hugolify.io/docs/sections/
       available:
         - pages
+        - posts
+        - posts_categories
+        - posts_tags
+        - persons

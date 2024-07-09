@@ -1,3 +1,4 @@
+{{ partialCached "admin/fields/id.yml" . }},
 {{ partialCached "admin/fields/is_page.yml" . }},
 {{ partialCached "admin/fields/draft.yml" . }},
 {{ partialCached "admin/fields/title_page.yml" . }},
@@ -5,4 +6,5 @@
 {{ partialCached "admin/fields/featured_image.yml" . }},
 {{ partialCached "admin/fields/hero.yml" . }},
 {{ partialCached "admin/fields/body.yml" . }},
-{{ partialCached "admin/fields/blocks.yml" . }}
+{{ partialCached "admin/fields/blocks.yml" . }},
+{{ partialCached "admin/fields/slug.yml" . }}

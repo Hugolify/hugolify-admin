@@ -6,7 +6,7 @@ CMS.registerEditorComponent({
     {{ partialCached "admin/fields/url.yml" . }}, 
     {{ partialCached "admin/fields/is_blank.yml" . }}
   ],
-  pattern: '{{`/{{< button text="(.*)" url="(.*)" blank="(true|false)" >}}/`}}',
+  pattern: /{{`{{<`}} button text="(.*)" url="(.*)" blank="(true|false)" {{`>}}`}}/,
   fromBlock: function (match) {
     return {
       text: match[1],
@@ -15,7 +15,7 @@ CMS.registerEditorComponent({
     };
   },
   toBlock: function (obj) {
-    return '{{`{{< button text="${obj.text}" url="${obj.url}" blank="${obj.blank}" >}}`}}';
+    return '{{`{{<`}} button text="${obj.text}" url="${obj.url}" blank="${obj.blank}" {{`>}}`}}';
   },
   toPreview: function (obj) {
     return `<a class="btn" href="${obj.url}">${obj.text}</a>`;

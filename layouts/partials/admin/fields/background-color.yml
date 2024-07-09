@@ -1,0 +1,9 @@
+{
+  label: '{{ i18n "admin.fields.background_color.label" }}',
+  name: 'background_color',
+  widget: 'color',
+  allowInput: true,
+  enableAlpha: true,
+  required: false,
+  i18n: 'duplicate'
+}
