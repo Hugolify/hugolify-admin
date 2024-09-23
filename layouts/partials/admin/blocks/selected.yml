@@ -1,0 +1,32 @@
+{{- $block := . -}}
+{{- $index := 0 -}}
+{{- range $collection, $value := site.Params.admin.collections -}}
+{{- if $value -}}
+
+{{- $section := dict "section-hidden" $collection  -}} 
+{{- $relation := dict "relation" (dict "collection" $collection "name" "items" "multiple" true "required" true) -}} 
+{{- $fields := slice 
+  "heading"
+  $section 
+  $relation 
+  "show_more"
+  "background" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "block" $block "fields" $fields) -}}
+
+{{ if gt $index 0 }},{{ end }}
+
+{
+  label: '{{ i18n "admin.blocks.selected.label" (dict "section" (humanize $collection)) }}',
+  name: 'selected-{{ $collection }}',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  summary: '{{`{{heading.title}}`}}',
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}
+
+{{- $index = add $index 1 -}}
+
+{{- end -}}
+{{- end -}}
