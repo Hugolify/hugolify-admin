@@ -1,0 +1,15 @@
+{
+  label: '{{ i18n "admin.fields.section.label" }}',
+  hint: '{{ i18n "admin.fields.section.hint" }}',
+  name: 'section',
+  widget: 'select',
+  options: [
+    {{- range $collection, $value := site.Params.admin.collections }}
+      {{- if $value -}}
+      { label: {{ humanize $collection }}, value: {{ $collection }} },
+      {{- end -}}
+    {{- end }}
+  ],
+  required: false,
+  i18n: 'duplicate'
+}
