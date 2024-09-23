@@ -42,26 +42,21 @@ params:
     blocks:
       # All blocks available https://www.hugolify.io/docs/blocks/
       available:
-        - alert
-        - cta
-        - editorial
-        - faq
-        - figure
-        - form
-        - information
-        - images
+        # - alert
+        # - cta
+        # - editorial
+        # - faq
+        # - figure
+        # - form
+        # - information
+        # - images
         - latest
-        - paragraph
-        - quote
+        # - paragraph
+        # - quote
         - selected
-        - title
+        # - title
 
     # Collections
     collections:
-      # All collections available https://www.hugolify.io/docs/sections/
-      available:
-        - pages
-        - posts
-        - posts_categories
-        - posts_tags
-        - persons
+      indexes: true
+      pages: true

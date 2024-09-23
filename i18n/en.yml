@@ -32,14 +32,24 @@ admin:
       label: Paragraph
     quote:
       label: Quote
+    selected:
+      label: Selected {{ .section }}
     title:
       label: Title
   collections:
+    authors:
+      label:
+        one: Author
+        other: Authors
     casestudies:
       _description: All case studies
       label: 
         one: Case study
         other: Case studies
+    categories:
+      label:
+        one: Category
+        other: Categories
     docs:
       _description: All docs
       label: 
@@ -50,6 +60,11 @@ admin:
       label: 
         one: Expertise
         other: Expertises
+    indexes:
+      _description: All indexes
+      label: 
+        one: Index
+        other: Indexes
     pages:
       _description: All pages
       label: 
@@ -140,6 +155,10 @@ admin:
       label: 
         one: Category
         other: Categories
+    tags:
+      label:
+        one: Tag
+        other: Tags
   fields:
     address:
       label: Address
@@ -160,10 +179,6 @@ admin:
       label:
         one: Argument
         other: Arguments
-    authors:
-      label:
-        one: Author
-        other: Authors
     autoplay:
       label: Autoplay
     background:
@@ -176,10 +191,6 @@ admin:
         other: Blocks
     body:
       label: Body
-    categories:
-      label:
-        one: Category
-        other: Categories
     code:
       label: Code
     color:
@@ -293,6 +304,12 @@ admin:
     screenshot:
       label: Screenshot
       hint: Add a browser skin around the picture
+    section:
+      label: Section
+      hint: Select the section to display
+    show_more:
+      label: Show more?
+      hint: Display a button to show more elements
     slug:
       label: Slug
       hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
@@ -312,10 +329,6 @@ admin:
       hint: 'e.g.: %'
     surtitle:
       label: Surtitle
-    tags:
-      label:
-        one: Tag
-        other: Tags
     text:
       label: Text
     title:
