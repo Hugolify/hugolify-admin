@@ -1,10 +1,14 @@
 {{- $collection := .collection | default false -}}
 {{- $name := .name | default $collection -}}
+{{- $i18n := $collection -}}
+{{- if ne .name "items" -}}
+  {{- $i18n = $name -}}
+{{- end -}}
 {{- $multiple := .multiple | default false -}}
 {{- $required := .required | default false -}}
 {
-  label: '{{ i18n (print "admin.fields." $name ".label") }}',
-  label_singular: '{{ i18n (print "admin.fields." $name ".label") 1 }}',
+  label: '{{ i18n (print "admin.collections." $i18n ".label") }}',
+  label_singular: '{{ i18n (print "admin.collections." $i18n ".label") 1 }}',
   name: {{ $name }},
   widget: 'relation',
   collection: {{ $collection }},

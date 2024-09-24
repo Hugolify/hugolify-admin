@@ -1,12 +1,15 @@
-{{ partialCached "admin/fields/id.yml" . }},
-{{ partialCached "admin/fields/is_not_index.yml" . }},
-{{ partialCached "admin/fields/draft.yml" . }},
-{{ partialCached "admin/fields/date.yml" . }},
-{{ partialCached "admin/fields/title_page.yml" . }},
-{{ partialCached "admin/fields/description.yml" . }},
-{{ partialCached "admin/fields/featured_image.yml" . }},
-{{ partial "admin/fields/relation.yml" (dict "collection" "persons" "name" "authors" "multiple" true) }},
-{{ partial "admin/fields/relation.yml" (dict "collection" "categories") }},
-{{ partial "admin/fields/relation.yml" (dict "collection" "tags" "multiple" true) }},
-{{ partialCached "admin/fields/body.yml" . }},
-{{ partialCached "admin/fields/slug.yml" . }}
+{{- $author := dict "relation" (dict "collection" "persons" "name" "authors" "multiple" true) -}}
+{{- $categories := dict "relation" (dict "collection" "categories") -}}
+{{- $tags := dict "relation" (dict "collection" "tags" "multiple" true) -}}
+{{- return slice 
+  "id" 
+  "is_not_index" 
+  "draft" 
+  "title_page" 
+  "description"
+  "featured_image" 
+  $author
+  $categories
+  $tags
+  "body"
+  "slug" -}}

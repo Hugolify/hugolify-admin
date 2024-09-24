@@ -17,7 +17,5 @@
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
 
-  fields: [
-    {{ partialCached "admin/collections/fields.terms.default.yml" . }}
-  ]
+  {{ partialCached "admin/collections/fields.terms.default.yml" . }}
 }

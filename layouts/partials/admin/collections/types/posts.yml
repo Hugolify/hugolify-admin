@@ -17,7 +17,5 @@
   {{ partial "admin/collections/config/sortable.yml" (dict "fields" "[commit_date, title]") }}
   {{ partial "admin/collections/config/summary.yml" "{{title}} - {{date | date('YYYY-MM-DD')}}" }}
 
-  fields: [
-    {{ partial "admin/collections/fields.yml" (dict "collection" "posts") }}
-  ]
+  {{ partial "admin/collections/fields.yml" (dict "collection" "posts") }}
 }

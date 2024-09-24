@@ -1,16 +1,11 @@
-{{- $fields := slice 
+{{- return slice 
   "id" 
   "is_not_index" 
   "draft" 
+  "date" 
   "title_page" 
   "description"
   "featured_image" 
   "hero" 
   "body"
   "slug" -}}
-{{- range $fields -}}
-  {{- $file := print "admin/fields/" . ".yml" -}}
-  {{- if templates.Exists ( printf "partials/%s" $file ) -}}
-    {{ partial $file }},
-  {{- end -}}
-{{- end -}}

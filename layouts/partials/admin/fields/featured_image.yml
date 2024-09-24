@@ -1,8 +1,7 @@
 {{- $fields := slice 
   "image_src" 
-  "image_alt" 
-  "image_compression" 
-  "credit"  -}}
+  "image_filter" 
+  "image_alt" -}}
 {
   label: '{{ i18n "admin.fields.featured_image.label" }}',
   hint: '{{ i18n "admin.fields.featured_image.hint" }}',

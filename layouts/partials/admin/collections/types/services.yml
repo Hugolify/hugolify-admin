@@ -15,9 +15,7 @@
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
 
-  fields: [
-    {{ partial "admin/collections/fields.yml" (dict "collection" "services") }}
-  ],
+  {{ partial "admin/collections/fields.yml" (dict "collection" "services") }}
 
   {{ partial "admin/collections/config/nested.yml" . }}
 }

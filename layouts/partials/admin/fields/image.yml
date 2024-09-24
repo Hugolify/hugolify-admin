@@ -1,7 +1,8 @@
 {{- $fields := slice 
   "image_src" 
+  "image_filter"
   "image_alt" 
-  "image_compression"  -}}
+  "credit" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.image.label" }}',

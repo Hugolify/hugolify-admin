@@ -267,11 +267,15 @@ admin:
       label: Hero
     image:
       alt:
-        hint: 'For an image that conveys information (leave blank if decorative image)'
+        hint: For an image that conveys information (leave blank if decorative image)
         label: Alternative text
-      compression:
-        label: Picture?
-        hint: Set a better compression if is not a photo
+      filter:
+        label: Change filter quality?
+        hint: Set Linear for picture or screenshot, leave empty to keep default config
+        box: Simple and fast averaging filter appropriate for downscaling (default)
+        lanczos: High-quality resampling filter for photographic images yielding sharp results
+        catmullrom: Sharp cubic filter that is faster than the Lanczos filter while providing similar results
+        linear: Bilinear resampling filter, produces smooth output, faster than cubic filters
       label: Image
       src:
         hint: 'Resize and compress image before sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'

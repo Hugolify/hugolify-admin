@@ -15,9 +15,7 @@
   {{ partial "admin/collections/config/icon.yml" "newspaper" }}
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
-    {{ partial "admin/collections/config/summary.yml" "{{title}} - {{date | date('YYYY-MM-DD')}}" }}
+  {{ partial "admin/collections/config/summary.yml" "{{title}} - {{date | date('YYYY-MM-DD')}}" }}
 
-  fields: [
-    {{ partial "admin/collections/fields.yml" (dict "collection" "publications") }}
-  ]
+  {{ partial "admin/collections/fields.yml" (dict "collection" "publications") }}
 }

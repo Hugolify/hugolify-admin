@@ -13,7 +13,5 @@
   
   {{ partial "admin/collections/config/filter.yml" (dict "field" "isIndex" "value" true) }}
 
-  fields: [
-    {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
-  ]
+  {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
 }
