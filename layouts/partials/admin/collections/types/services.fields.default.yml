@@ -1,1 +1,16 @@
-{{ return partialCached "admin/collections/fields.default.yml" . }}
+{{- $services_categories := false -}}
+{{- if site.Params.admin.collections.services_categories -}}
+  {{- $services_categories = dict "relation" (dict "collection" "services_categories" "multiple" true) -}}
+{{- end -}}
+
+{{- return slice 
+  "id" 
+  "is_not_index" 
+  "draft" 
+  "date" 
+  "title_page" 
+  "description"
+  $services_categories 
+  "featured_image" 
+  "body"
+  "slug" -}}

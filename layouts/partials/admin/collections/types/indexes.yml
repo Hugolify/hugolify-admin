@@ -9,7 +9,7 @@
   editor: { preview: {{ site.Params.admin.preview }} },
   i18n: true,
 
-  nested: { depth: 2 },
+  nested: { depth: 2 }, 
   
   {{ partial "admin/collections/config/filter.yml" (dict "field" "isIndex" "value" true) }}
 

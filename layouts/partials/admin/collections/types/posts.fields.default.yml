@@ -1,6 +1,16 @@
-{{- $author := dict "relation" (dict "collection" "persons" "name" "authors" "multiple" true) -}}
-{{- $categories := dict "relation" (dict "collection" "categories") -}}
-{{- $tags := dict "relation" (dict "collection" "tags" "multiple" true) -}}
+{{- $author := false -}}
+{{- $categories := false -}}
+{{- $tags := false -}}
+{{- if site.Params.admin.collections.persons -}}
+  {{- $author = dict "relation" (dict "collection" "persons" "name" "authors" "multiple" true) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.posts_categories -}}
+  {{- $categories = dict "relation" (dict "collection" "categories" "multiple" true) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.posts_tags -}}
+  {{- $tags = dict "relation" (dict "collection" "tags" "multiple" true) -}}
+{{- end -}}
+
 {{- return slice 
   "id" 
   "is_not_index" 

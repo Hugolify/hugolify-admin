@@ -1,0 +1,12 @@
+{{- $fields := slice 
+  "title" 
+  "url" -}}
+{
+  label: '{{ i18n "admin.fields.press.label" }}',
+  name: 'press',
+  widget: 'object',
+  collapsed: false,
+  required: false,
+  i18n: true,
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

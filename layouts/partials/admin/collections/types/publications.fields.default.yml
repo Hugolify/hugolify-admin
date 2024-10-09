@@ -1,1 +1,23 @@
-{{ return partialCached "admin/collections/fields.default.yml" . }}
+{{- $publications_persons := false -}}
+{{- $publications_categories := false -}}
+{{- if site.Params.admin.collections.persons -}}
+  {{- $publications_persons = dict "relation" (dict "collection" "persons" "name" "publications_persons" "multiple" true) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.publications_categories -}}
+  {{- $publications_categories = dict "relation" (dict "collection" "publications_categories" "multiple" true) -}}
+{{- end -}}
+
+{{- return slice 
+  "id" 
+  "is_not_index" 
+  "draft" 
+  "date" 
+  "title_page" 
+  "description"
+  "press" 
+  $publications_categories 
+  $publications_persons 
+  "featured_image" 
+  "images"
+  "body"
+  "slug" -}}

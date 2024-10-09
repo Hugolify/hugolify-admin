@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.sold.label" }}',
+  name: 'sold',
+  widget: 'boolean',
+  required: false,
+  i18n: 'duplicate'
+}

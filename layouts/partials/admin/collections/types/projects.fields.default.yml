@@ -1,3 +1,12 @@
+{{- $projects_types := false -}}
+{{- $projects_tags := false -}}
+{{- if site.Params.admin.collections.projects_types -}}
+  {{- $projects_types = dict "relation" (dict "collection" "projects_types" "multiple" true) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.projects_tags -}}
+  {{- $projects_tags = dict "relation" (dict "collection" "projects_tags" "multiple" true) -}}
+{{- end -}}
+
 {{- return slice 
   "id" 
   "is_not_index" 
@@ -5,6 +14,8 @@
   "date" 
   "title_page" 
   "description"
+  $projects_types 
+  $projects_tags 
   "featured_image" 
   "hero" 
   "blocks"
