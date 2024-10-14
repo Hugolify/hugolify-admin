@@ -10,6 +10,7 @@
   widget: 'list',
   collapsed: false,
   i18n: true,
+  required: false,
   types: [
     {{- range $blocks -}}
       {{- $file := print "admin/blocks/" . ".yml" -}}
