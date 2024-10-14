@@ -1,0 +1,39 @@
+{
+  label: '{{ i18n "admin.fields.socials.label" 2 }}',
+  label_singular: '{{ i18n "admin.fields.socials.label" 1 }}',
+  name: 'socials',
+  widget: 'list',
+  required: false,
+  i18n: true,
+  collapsed: true,
+  fields: [
+    {
+      label: '{{ i18n "admin.fields.socials.plateform" }}',
+      name: 'grid',
+      widget: 'select',
+      options: [
+        { label: 'Facebook', value: 'facebook' },
+        { label: 'Github', value: 'github' },
+        { label: 'Google', value: 'google' },
+        { label: 'Instagram', value: 'instagram' },
+        { label: 'Linkedin', value: 'linkedin' },
+        { label: 'Pinterest', value: 'pinterest' },
+        { label: 'Threads', value: 'threads' },
+        { label: 'Twitch', value: 'twitch' },
+        { label: 'Twitter/X', value: 'twitter' },
+        { label: 'Vimeo', value: 'vimeo' },
+        { label: 'Youtube', value: 'youtube' }
+      ],
+      default: 'linkedin',
+      required: true,
+      i18n: 'duplicate'
+    },
+    {
+      label: '{{ i18n "admin.fields.url.label" }}',
+      name: 'url',
+      widget: 'string',
+      required: false,
+      i18n: true 
+    }
+  ]
+}
