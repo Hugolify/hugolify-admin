@@ -85,6 +85,11 @@ admin:
       label: 
         one: Place
         other: Places
+    persons_statutes:
+      _description: All statues
+      label: 
+        one: Statut
+        other: Statutes
     places:
       _description: All places
       label: 
