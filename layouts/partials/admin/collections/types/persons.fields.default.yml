@@ -1,1 +1,21 @@
-{{ return partialCached "admin/collections/fields.default.yml" . }}
+{{- $persons_expertises := false -}}
+{{- $persons_places := false -}}
+{{- if site.Params.admin.collections.expertises -}}
+  {{- $persons_expertises = dict "relation" (dict "collection" "expertises" "name" "persons_expertises" "multiple" true) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.places -}}
+  {{- $persons_places = dict "relation" (dict "collection" "places" "name" "persons_places" "multiple" true) -}}
+{{- end -}}
+
+{{- return slice 
+  "id" 
+  "is_not_index" 
+  "draft" 
+  "title_page" 
+  "description"
+  "featured_image" 
+  $persons_expertises
+  $persons_places
+  "contact"
+  "body"
+  "slug" -}}

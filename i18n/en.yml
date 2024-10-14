@@ -75,6 +75,16 @@ admin:
       label: 
         one: Person
         other: Persons
+    persons_expertises:
+      _description: All expertises
+      label: 
+        one: Expertise
+        other: Expertises
+    persons_places:
+      _description: All places
+      label: 
+        one: Place
+        other: Places
     places:
       _description: All places
       label: 
@@ -201,6 +211,10 @@ admin:
       label: Color
     column:
       label: Column
+    contact:
+      label:
+        one: Contact
+        other: Contacts
     controls:
       label: Controls
     coordinates:
@@ -227,6 +241,8 @@ admin:
       pattern: Only amound (without currency) or percent
     draft:
       label: Draft
+    email:
+      label: Phone
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Featured image
@@ -309,14 +325,16 @@ admin:
       label: Offer
     parent:
       label: Parent page
+    phone:
+      label: Phone
+    placeholder:
+      label: Placeholder
     prefix:
       label: Prefix
     price:
       hide: Hide price
       label: Price
       hint: 'e.g.: 300000 (for 300 000 €)'
-    placeholder:
-      label: Placeholder
     press:
       label: Press
     required:
@@ -334,6 +352,11 @@ admin:
       label: Slug
       hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
       pattern: Contain only lowercase letters, numbers, and hyphens, with no spaces, accents, or special characters
+    socials:
+      label: 
+        one: Social
+        other: Socials
+      plateform: Plateform
     sold:
       label: Sold?
     state:
