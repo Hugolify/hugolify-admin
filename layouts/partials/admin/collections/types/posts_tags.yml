@@ -9,8 +9,8 @@
   editor: { preview: {{ site.Params.admin.preview }} },
   i18n: true,
 
-  path: '{{`{{slug}}`}}',
-  slug: '{{`{{id}}/_index`}}',
+  path: '{{`{{slug}}/_index`}}',
+  slug: '{{`{{id}}`}}',
   nested: { depth: 2 },
 
   {{ partial "admin/collections/config/icon.yml" "bookmarks" }}
