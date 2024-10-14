@@ -12,6 +12,7 @@
   path: '{{`{{year}}/{{slug}}`}}',
   slug: '{{`{{id}}`}}',
   
+  {{ partial "admin/collections/config/icon.yml" "space_dashboard" }}
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
 

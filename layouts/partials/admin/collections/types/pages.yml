@@ -12,6 +12,7 @@
   path: '{{`{{slug}}/_index`}}',
   slug: '{{`{{id}}`}}',
   
+  {{ partial "admin/collections/config/icon.yml" "description" }}
   {{ partial "admin/collections/config/filter.yml" (dict "field" "isPage" "value" true) }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "pages") }}

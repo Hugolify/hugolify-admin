@@ -1,10 +1,14 @@
 {{- $realestates_persons := false -}}
 {{- $realestates_categories := false -}}
+{{- $realestates_sellers := false -}}
 {{- if site.Params.admin.collections.persons -}}
   {{- $realestates_persons = dict "relation" (dict "collection" "persons" "name" "realestates_persons" "multiple" true) -}}
 {{- end -}}
 {{- if site.Params.admin.collections.realestates_categories -}}
   {{- $realestates_categories = dict "relation" (dict "collection" "realestates_categories" "multiple" false) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.realestates_sellers -}}
+  {{- $realestates_sellers = dict "relation" (dict "collection" "realestates_sellers" "multiple" false) -}}
 {{- end -}}
 
 {{- return slice 
@@ -17,6 +21,7 @@
   "reference"
   $realestates_categories 
   $realestates_persons 
+  $realestates_sellers 
   "offer" 
   "realestates_informations" 
   "diagnostic" 
