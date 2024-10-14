@@ -4,7 +4,7 @@
   {{- $publications_persons = dict "relation" (dict "collection" "persons" "name" "publications_persons" "multiple" true) -}}
 {{- end -}}
 {{- if site.Params.admin.collections.publications_categories -}}
-  {{- $publications_categories = dict "relation" (dict "collection" "publications_categories" "multiple" true) -}}
+  {{- $publications_categories = dict "relation" (dict "collection" "publications_categories" "multiple" false) -}}
 {{- end -}}
 
 {{- return slice 

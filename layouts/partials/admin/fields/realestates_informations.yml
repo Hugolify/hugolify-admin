@@ -1,0 +1,92 @@
+{
+  label: '{{ i18n "admin.fields.realestates_informations.label" }}',
+  name: 'informations',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  fields: [
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.year.label" }}',
+      name: 'year',
+      widget: 'datetime',
+      required: false,
+      i18n: 'duplicate',
+      date_format: 'YYYY',
+      time_format: false,
+      format: 'YYYY'
+    },
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.district.label" }}',
+      name: 'district',
+      widget: 'string',
+      required: false,
+      i18n: true
+    },
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.area.label" }}',
+      hint: '{{ i18n "admin.fields.realestates_informations.area.hint" }}',
+      name: 'area',
+      widget: 'number',
+      required: false,
+      i18n: 'duplicate',
+      min: 0
+    },
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.field.label" }}',
+      hint: '{{ i18n "admin.fields.realestates_informations.field.hint" }}',
+      name: 'field',
+      widget: 'number',
+      required: false,
+      i18n: 'duplicate',
+      min: 0
+    },
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.levels.label" }}',
+      name: 'levels',
+      widget: 'number',
+      required: false,
+      i18n: 'duplicate',
+      min: 0
+    },
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.floor.label" }}',
+      name: 'floor',
+      widget: 'number',
+      required: false,
+      i18n: 'duplicate'
+    },
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.rooms.label" }}',
+      name: 'rooms',
+      widget: 'number',
+      required: false,
+      i18n: 'duplicate',
+      min: 0
+    },
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.bedrooms.label" }}',
+      name: 'bedrooms',
+      widget: 'number',
+      required: false,
+      i18n: 'duplicate',
+      min: 0
+    },
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.bathrooms.label" }}',
+      name: 'bathrooms',
+      widget: 'number',
+      required: false,
+      i18n: 'duplicate',
+      min: 0
+    },
+    {
+      label: '{{ i18n "admin.fields.realestates_informations.showerrooms.label" }}',
+      name: 'showerrooms',
+      widget: 'number',
+      required: false,
+      i18n: 'duplicate',
+      min: 0
+    }
+  ]
+}

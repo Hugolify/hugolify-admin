@@ -159,6 +159,16 @@ admin:
       label: 
         one: Category
         other: Categories
+    realestates_sellers:
+      _description: All sellers
+      label: 
+        one: Seller
+        other: Sellers
+    realestates_persons:
+      _description: All real estates agents
+      label: 
+        one: Real estates agent
+        other: Real estates agents
     services:
       _description: All services
       label: 
@@ -235,6 +245,10 @@ admin:
     description:
       hint: Displayed in tabs, search results, and in SMS/Messages/Social networks preview
       label: Description
+    diagnostic:
+      label: Diagnostic
+      dpe: DPE
+      ges: GES
     discount:
       label: Discount
       hint: 'Discount amount, e.g.: 30%'
@@ -242,7 +256,7 @@ admin:
     draft:
       label: Draft
     email:
-      label: Phone
+      label: Email
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Featured image
@@ -278,6 +292,8 @@ admin:
         label:
           one: Field
           other: Fields
+    gallery:
+      label: Gallery
     grid:
       label: Grid
       container: Container
@@ -289,6 +305,8 @@ admin:
       label: Heading
     hero:
       label: Hero
+    icon:
+      label: Icon
     image:
       alt:
         hint: For an image that conveys information (leave blank if decorative image)
@@ -304,12 +322,23 @@ admin:
       src:
         hint: 'Resize and compress image before sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
+    images:
+      label: Images
     is_blank:
       label: Is blank?
+    is_half:
+      label: Is half?
+    is_highlighted:
+      label: Is highlighted?
     items:
       label: 
         one: Item
         other: Items
+    keyfeatures:
+      label:
+        one: Key feature
+        other: Key features
+      hint: 'e.g.: Location, light…'
     label:
       label: Label
     lang:
@@ -337,6 +366,30 @@ admin:
       hint: 'e.g.: 300000 (for 300 000 €)'
     press:
       label: Press
+    realestates_informations:
+      label: Informations
+      area:
+        label: Interior area
+        hint: Expressed in m2
+      bathrooms:
+        label: Number of bathrooms
+      bedrooms:
+        label: Number of bedrooms
+      district: 
+        label: District
+      field: 
+        label: Exterior area
+        hint: Expressed in m2
+      floor:
+        label: Floor
+      levels:
+        label: Number of levels
+      rooms:
+        label: Number of rooms
+      showerrooms:
+        label: Number of shower rooms
+      year: 
+        label: Year of construction
     required:
       label: Required
     screenshot:
@@ -369,6 +422,8 @@ admin:
       secondary: Secondary
       success: Success
       warning: Warning
+    status:
+      label: Status
     suffix:
       label: Suffix
       hint: 'e.g.: %'

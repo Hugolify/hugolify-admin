@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.address.zipcode.label" }}',
+  name: 'zipcode',
+  widget: 'string',
+  required: false,
+  i18n: true
+}

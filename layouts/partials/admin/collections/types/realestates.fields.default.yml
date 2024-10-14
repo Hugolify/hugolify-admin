@@ -1,1 +1,28 @@
-{{ return partialCached "admin/collections/fields.default.yml" . }}
+{{- $realestates_persons := false -}}
+{{- $realestates_categories := false -}}
+{{- if site.Params.admin.collections.persons -}}
+  {{- $realestates_persons = dict "relation" (dict "collection" "persons" "name" "realestates_persons" "multiple" true) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.realestates_categories -}}
+  {{- $realestates_categories = dict "relation" (dict "collection" "realestates_categories" "multiple" false) -}}
+{{- end -}}
+
+{{- return slice 
+  "id" 
+  "is_not_index" 
+  "draft" 
+  "date" 
+  "title_page" 
+  "description"
+  "reference"
+  $realestates_categories 
+  $realestates_persons 
+  "offer" 
+  "realestates_informations" 
+  "diagnostic" 
+  "keyfeatures" 
+  "address" 
+  "featured_image" 
+  "gallery"
+  "body"
+  "slug" -}}
