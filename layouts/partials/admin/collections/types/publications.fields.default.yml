@@ -1,10 +1,14 @@
 {{- $publications_persons := false -}}
 {{- $publications_categories := false -}}
+{{- $publications_expertises := false -}}
 {{- if site.Params.admin.collections.persons -}}
   {{- $publications_persons = dict "relation" (dict "collection" "persons" "name" "publications_persons" "multiple" true) -}}
 {{- end -}}
 {{- if site.Params.admin.collections.publications_categories -}}
   {{- $publications_categories = dict "relation" (dict "collection" "publications_categories" "multiple" false) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.expertises -}}
+  {{- $publications_expertises = dict "relation" (dict "collection" "expertises" "name" "publications_expertises" "multiple" true) -}}
 {{- end -}}
 
 {{- return slice 
@@ -16,6 +20,7 @@
   "description"
   "press" 
   $publications_categories 
+  $publications_expertises 
   $publications_persons 
   "featured_image" 
   "images"

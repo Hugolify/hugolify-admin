@@ -1,6 +1,7 @@
 {{- $author := false -}}
 {{- $categories := false -}}
 {{- $tags := false -}}
+{{- $posts_expertises := false -}}
 {{- if site.Params.admin.collections.persons -}}
   {{- $author = dict "relation" (dict "collection" "persons" "name" "authors" "multiple" true) -}}
 {{- end -}}
@@ -9,6 +10,9 @@
 {{- end -}}
 {{- if site.Params.admin.collections.posts_tags -}}
   {{- $tags = dict "relation" (dict "collection" "tags" "multiple" true) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.expertises -}}
+  {{- $posts_expertises = dict "relation" (dict "collection" "expertises" "name" "posts_expertises" "multiple" true) -}}
 {{- end -}}
 
 {{- return slice 
@@ -21,5 +25,6 @@
   $author
   $categories
   $tags
+  $posts_expertises
   "body"
   "slug" -}}
