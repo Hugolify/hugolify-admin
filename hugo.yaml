@@ -44,19 +44,32 @@ params:
     blocks:
       # All blocks available https://www.hugolify.io/docs/blocks/
       available:
-        # - alert
-        # - cta
-        # - editorial
-        # - faq
-        # - figure
-        # - form
-        # - information
-        # - images
+        - alert
+        - cta
+        # - chart
+        # - comparison
+        # - datas
+        - editorial
+        # - embed
+        - faq
+        - figure
+        - form
+        - gallery
+        - images
+        - informations
+        # - instagram
         - latest
-        # - paragraph
-        # - quote
+        # - logos
+        # - map
+        # - newsletter
+        - paragraph
+        # - pushes
+        - quote
         - selected
-        # - title
+        # - testimonials
+        # - timeline
+        - title
+        # - video
 
     # Collections
     collections:
