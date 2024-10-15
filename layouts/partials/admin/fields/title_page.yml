@@ -4,5 +4,8 @@
   name: 'title',
   widget: 'string',
   required: true,
-  i18n: true 
+  i18n: true, 
+  {{- if eq site.Params.admin.cms "tinacms" }}
+  isTitle: true
+  {{ end }}
 }

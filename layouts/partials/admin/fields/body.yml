@@ -3,5 +3,8 @@
   name: 'body',
   widget: 'markdown',
   required: false,
-  i18n: true 
+  i18n: true, 
+  {{- if eq site.Params.admin.cms "tinacms" }}
+  isBody: true
+  {{ end }}
 }

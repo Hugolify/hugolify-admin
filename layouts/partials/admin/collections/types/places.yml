@@ -10,7 +10,7 @@
   i18n: true,
 
   path: '{{`{{slug}}`}}',
-  slug: '{{`{{id}}`}}',
+  {{ partial "admin/collections/config/slug.yml" }}
 
   {{ partial "admin/collections/config/icon.yml" "location_on" }}
   {{ partial "admin/collections/config/filter.yml" }}

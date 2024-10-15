@@ -312,6 +312,7 @@ admin:
       label: Hero
     icon:
       label: Icon
+      hint: 'Name of icon from https://icons.getbootstrap.com/'
     image:
       alt:
         hint: For an image that conveys information (leave blank if decorative image)
