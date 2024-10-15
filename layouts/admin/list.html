@@ -7,7 +7,7 @@
     <title>Hugolify - Content Manager</title>
   </head>
   <body>
-    {{- partial "admin/widgets/identity.html" -}}
+    {{- partial "admin/identity/scripts.html" -}}
     {{- with site.Params.admin.cms }}
       {{- $file := print "admin/cms/" . "/scripts.html" -}}
       {{- if templates.Exists ( printf "partials/%s" $file ) }}

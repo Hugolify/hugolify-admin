@@ -1,3 +1,4 @@
+{{ if gt site.Params.admin.nested.depth 2 }}
 meta: {
   path: {
     label: {{ i18n "admin.fields.parent.label" }},
@@ -5,3 +6,4 @@ meta: {
     index_file: _index
   }
 }
+{{ end }}

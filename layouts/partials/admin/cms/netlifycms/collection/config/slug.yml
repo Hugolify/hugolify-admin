@@ -1,0 +1,2 @@
+{{ $slug := cond site.Params.admin.config.id `{{id}}` `{{slug}}` }}
+slug: "{{$slug}}",

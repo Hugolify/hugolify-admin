@@ -1,4 +1,5 @@
 nested: { 
   depth: {{ site.Params.admin.nested.depth }},
-  path: { widget: string, index_file: '_index' }
+  summary: '{{`{{title}}`}}'
 },
+{{ partialCached "admin/cms/staticcms/collection/config/parent.yml" . }}

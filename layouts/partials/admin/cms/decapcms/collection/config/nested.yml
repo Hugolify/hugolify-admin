@@ -1,3 +1,4 @@
 nested: {
   depth: {{ site.Params.admin.nested.depth }},
 },
+{{ partialCached "admin/cms/decapcms/collection/config/parent.yml" . }}
