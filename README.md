@@ -57,7 +57,7 @@ params:
 
     # Collections
     collections:
-      # All collections available https://www.hugolify.io/docs/sections/
+      # Collections are automatically added based on Hugo modules config, but you can hide a collection if needed.
       indexes: true
       pages: true
 ```
