@@ -1,10 +1,10 @@
 # hugolify-admin
 
 ## CMS available
-- Decap CMS
-- Netlify CMS
-- Static CMS
-- Sveltia CMS
+- Decap CMS: https://decapcms.org/docs/
+- Netlify CMS `deprecated`
+- Static CMS: https://staticjscms.netlify.app/ `deprecated`
+- Sveltia CMS: https://github.com/sveltia/sveltia-cms
 
 ## Install
 
@@ -22,20 +22,44 @@ Edit `config/_default/params.yaml` to customize this module:
 ```yml
 params:
   admin:
-    cms: decapcms
-    default_locale: en
-    locales: [en, fr]
+    cms: decapcms # All CMS available https://www.hugolify.io/docs/cms/
+    config:
+      id: true # use ID for dir/name files and relation 
+    i18n:
+      default_locale: en # master lang for an i18n website 
+      locales: false # "[en,fr]" for an i18n website
+    locale: en # CMS lang
     media:
       max_file_size: 700000
     nested:
-      depth: 5
+      depth: 5 # set minimum 2
     netlify:
       identity: true
     preview: false
 
+    # Blocks
+    blocks:
+      # All blocks available https://www.hugolify.io/docs/blocks/
+      available:
+        - alert
+        - cta
+        - editorial
+        - faq
+        - figure
+        - form
+        - information
+        - images
+        - latest
+        - paragraph
+        - quote
+        - selected
+        - title
+
+    # Collections
     collections:
-      - pages
-      - posts
+      # All collections available https://www.hugolify.io/docs/sections/
+      indexes: true
+      pages: true
 ```
 
 ## Documentation
