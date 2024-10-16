@@ -1,0 +1,10 @@
+{
+  label: '{{ i18n "admin.fields.column.label" }}',
+  name: 'column',
+  widget: 'number',
+  min: 1,
+  max: 2,
+  value_type: 'int',
+  default: 1,
+  i18n: 'duplicate'
+}

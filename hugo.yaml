@@ -45,31 +45,31 @@ params:
       # All blocks available https://www.hugolify.io/docs/blocks/
       available:
         - alert
+        - chart
+        - comparison
         - cta
-        # - chart
-        # - comparison
-        # - datas
+        - datas
         - editorial
-        # - embed
+        - embed
         - faq
         - figure
         - form
         - gallery
         - images
         - informations
-        # - instagram
+        - instagram
         - latest
         # - logos
-        # - map
-        # - newsletter
+        - map
+        - newsletter
         - paragraph
-        # - pushes
+        - pushes
         - quote
         - selected
-        # - testimonials
+        - testimonials
         # - timeline
         - title
-        # - video
+        - video
 
     # Collections
     collections:

@@ -1,9 +1,9 @@
 {
   name: pages,
   folder: content,
-  label: {{ i18n "admin.collections.pages.label" }},
-  label_singular: {{ i18n "admin.collections.pages.label" 1 }},
-  description: {{ i18n "admin.collections.pages._description" }},
+  label: '{{ i18n "admin.collections.pages.label" }}',
+  label_singular: '{{ i18n "admin.collections.pages.label" 1 }}',
+  description: '{{ i18n "admin.collections.pages._description" }}',
   
   create: true,
   editor: { preview: {{ site.Params.admin.preview }} },

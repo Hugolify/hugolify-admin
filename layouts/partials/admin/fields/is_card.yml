@@ -1,0 +1,9 @@
+{
+  label: '{{ i18n "admin.fields.is_card.label" }}',
+  hint: '{{ i18n "admin.fields.is_card.hint" }}',
+  name: 'card',
+  widget: 'boolean',
+  default: false,
+  required: false,
+  i18n: 'duplicate' 
+}

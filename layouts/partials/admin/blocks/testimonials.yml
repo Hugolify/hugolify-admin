@@ -1,0 +1,18 @@
+{{- $items := dict "items" (slice "quote" "author") -}} 
+{{- $fields := slice 
+  "heading" 
+  $items 
+  "layout" 
+  "carousel" 
+  "background" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.blocks.testimonials.label" }}',
+  name: 'testimonials',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  summary: '{{`{{heading.title}}`}}',
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

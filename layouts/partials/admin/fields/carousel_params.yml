@@ -1,0 +1,77 @@
+
+{
+  label: '{{ i18n "admin.fields.carousel.params.label" }}',
+  name: 'params',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  fields: [
+    {
+      label: '{{ i18n "admin.fields.carousel.focus.label" }}',
+      hint: '{{ i18n "admin.fields.carousel.focus.hint" }}',
+      name: 'focus',
+      widget: 'boolean',
+      options: ['slide', 'loop', 'fade'],
+      required: false,
+      i18n: 'duplicate'
+    },
+    {
+      label: '{{ i18n "admin.fields.carousel.autoplay.label" }}',
+      name: 'autoplay',
+      widget: 'boolean',
+      required: false,
+      i18n: 'duplicate'
+    },
+    {
+      label: '{{ i18n "admin.fields.carousel.arrows.label" }}',
+      name: 'arrows',
+      widget: 'boolean',
+      required: false,
+      i18n: 'duplicate'
+    },
+    {
+      label: '{{ i18n "admin.fields.carousel.pagination.label" }}',
+      name: 'pagination',
+      widget: 'boolean',
+      default: true,
+      required: false,
+      i18n: 'duplicate'
+    },
+    {
+      label: '{{ i18n "admin.fields.carousel.type.label" }}',
+      name: 'type',
+      widget: 'select',
+      options: ['slide', 'loop', 'fade'],
+      required: false,
+      i18n: 'duplicate'
+    },
+    {
+      label: '{{ i18n "admin.fields.carousel.perpage.label" }}',
+      hint: '{{ i18n "admin.fields.carousel.perpage.hint" }}',
+      name: 'perPage',
+      widget: 'number',
+      min: 1,
+      required: false,
+      i18n: 'duplicate'
+    },
+    {
+      label: '{{ i18n "admin.fields.carousel.padding.label" }}',
+      hint: '{{ i18n "admin.fields.carousel.padding.hint" }}',
+      name: 'padding',
+      widget: 'number',
+      min: 0,
+      required: false,
+      i18n: 'duplicate'
+    },
+    {
+      label: '{{ i18n "admin.fields.carousel.gap.label" }}',
+      hint: '{{ i18n "admin.fields.carousel.gap.hint" }}',
+      name: 'gap',
+      widget: 'number',
+      min: 0,
+      required: false,
+      i18n: 'duplicate'
+    }
+  ]
+}

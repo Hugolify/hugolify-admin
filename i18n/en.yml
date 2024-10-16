@@ -4,6 +4,8 @@ admin:
       label: Alert
     chart:
       label: Chart
+    comparison:
+      label: Comparison
     cta:
       label: Call to action
     datas:
@@ -28,14 +30,30 @@ admin:
       label: Instagram
     latest:
       label: Latest
+    location:
+      label: Location
+    logos:
+      label: Logos
+    map:
+      label: Map
+    newsletter:
+      label: Newsletter
     paragraph:
       label: Paragraph
+    pushes:
+      label: Pushes
     quote:
       label: Quote
     selected:
       label: Selected {{ .section }}
+    testimonials:
+      label: Testimonials
+    timeline:
+      label: Timeline
     title:
       label: Title
+    video:
+      label: Video
   collections:
     authors:
       label:
@@ -214,12 +232,52 @@ admin:
       label: Has background?
     background_color:
       label: Background color
+    badge:
+      label: Badge
+      hint: Display a text badge
     blocks:
       label:
         one: Block
         other: Blocks
     body:
       label: Body
+    breakpoints:
+      label:
+        one: Breakpoint
+        other: Breakpoints 
+      hint: Screen dimension (maximum
+      options:
+        desktop: Desktop
+        laptop: Laptop
+        mobile: Mobile
+        tablet: Tablet
+        wide_tablet: Wide tablet
+    carousel:
+      arrows:
+        label: Arrows
+      autoplay:
+        label: Autoplay
+      focus:
+        label: Focus
+        hint: Is the active slide in the center of the screen?
+      gap:
+        label: Gap
+        hint: The gap between slides. In rem value.
+      label: Carousel
+      padding:
+        label: Padding
+        hint: Padding left/right of the carousel. In rem value
+      pagination:
+        label: Pagination
+      params:
+        label: Params
+      perpage:
+        label: Per page
+        hint: Number of slides to display
+      responsive:
+        label: Responsive
+      type:
+        label: Carousel type
     code:
       label: Code
     color:
@@ -279,6 +337,10 @@ admin:
         street_address: Street address
         tel: Tel
         textarea: Textarea
+      hiddens:
+        label: 
+          one: Hiddens fields
+          other: Hidden field
       options:
         label:
           one: Option
@@ -332,6 +394,9 @@ admin:
       label: Images
     is_blank:
       label: Is blank?
+    is_card:
+      label: Is card?
+      hint: Add a background behind texts
     is_half:
       label: Is half?
     is_highlighted:
@@ -354,8 +419,13 @@ admin:
       label: Legend
     loop:
       label: Loop
+    Map:
+      label: Map
     name:
       label: Name
+    newsletter:
+      form:
+        label: Form
     offer:
       label: Offer
     parent:
@@ -407,6 +477,9 @@ admin:
     show_more:
       label: Show more?
       hint: Display a button to show more elements
+    show_places:
+      label: Show all registered places?
+      hint: Only if you have places already saved (this will disable the marker below)
     slug:
       label: Slug
       hint: Leave empty to automate with the title. **Be carefull to SEO impact.**

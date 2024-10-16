@@ -1,0 +1,9 @@
+{
+  label: '{{ i18n "admin.fields.show_places.label" }}',
+  hint: '{{ i18n "admin.fields.show_places.hint" }}',
+  name: 'show_places',
+  widget: 'boolean',
+  default: false,
+  required: false,
+  i18n: 'duplicate'
+}

@@ -1,0 +1,13 @@
+{{- $fields := slice 
+  "url" 
+  "form_hiddens" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.fields.newsletter.form.label" }}',
+  name: 'form',
+  widget: 'object',
+  required: true,
+  i18n: true,
+  collapsed: false,
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

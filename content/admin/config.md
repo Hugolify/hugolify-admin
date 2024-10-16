@@ -1,4 +1,4 @@
 ---
 outputs:
-  - admin_config
+- admin_config
 ---
