@@ -417,6 +417,8 @@ admin:
       hint: Enter code lang (e.g. fr) if different of the current page language
     legend:
       label: Legend
+    limit:
+      label: Limit
     loop:
       label: Loop
     Map:
