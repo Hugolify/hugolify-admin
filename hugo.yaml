@@ -45,7 +45,7 @@ params:
       # All blocks available https://www.hugolify.io/docs/blocks/
       available:
         - alert
-        - chart
+        # - chart
         - comparison
         - cta
         - datas
