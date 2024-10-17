@@ -4,4 +4,4 @@
   widget: 'map',
   required: false,
   i18n: 'duplicate'
-};
+}
