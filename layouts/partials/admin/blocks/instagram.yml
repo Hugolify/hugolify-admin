@@ -1,11 +1,12 @@
 {{- $fields := slice 
   "heading" 
   "count" 
-  "token" 
+  "limit_simple" 
+  "ctas" 
   "background" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
 {
-  label: '{{ i18n "admin.blocks.embed.label" }}',
+  label: '{{ i18n "admin.blocks.instagram.label" }}',
   name: 'instagram',
   widget: 'object',
   required: false,
