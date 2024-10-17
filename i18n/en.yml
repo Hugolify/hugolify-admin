@@ -73,6 +73,11 @@ admin:
       label: 
         one: Doc
         other: Docs
+    events:
+      _description: All events
+      label: 
+        one: Event
+        other: Events
     expertises:
       _description: All expertises
       label: 
