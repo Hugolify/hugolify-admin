@@ -4,6 +4,7 @@
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.carousel.label" }}',
+  hint: '{{ i18n "admin.fields.carousel.hint" }}',
   name: 'carousel',
   widget: 'object',
   required: false,

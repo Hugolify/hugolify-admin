@@ -1,0 +1,11 @@
+{
+  label: '{{ i18n "admin.fields.layout.label" }}',
+  name: 'layout',
+  widget: 'select',
+  options: [
+    { label: '{{ i18n "admin.fields.layout.options.carousel" }}', value: 'carousel' },
+    { label: '{{ i18n "admin.fields.layout.options.grid" }}', value: 'grid' }
+  ],
+  default: 'grid',
+  i18n: 'duplicate'
+}

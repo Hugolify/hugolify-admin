@@ -3,7 +3,7 @@
   "carousel_params" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {
-  label: '{{ i18n "admin.fields.carousel.responsive" }}',
+  label: '{{ i18n "admin.fields.carousel.responsive.label" }}',
   name: 'responsive',
   widget: 'list',
   required: false,

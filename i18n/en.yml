@@ -263,7 +263,8 @@ admin:
       gap:
         label: Gap
         hint: The gap between slides. In rem value.
-      label: Carousel
+      label: Carousel configuration
+      hint: Only, if your layout is "Carousel"
       padding:
         label: Padding
         hint: Padding left/right of the carousel. In rem value
@@ -415,6 +416,11 @@ admin:
     lang:
       label: Language
       hint: Enter code lang (e.g. fr) if different of the current page language
+    layout:
+      label: Layout
+      options:
+        carousel: Carousel
+        grid: Grid
     legend:
       label: Legend
     limit:

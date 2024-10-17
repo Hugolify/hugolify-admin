@@ -12,7 +12,6 @@
       hint: '{{ i18n "admin.fields.carousel.focus.hint" }}',
       name: 'focus',
       widget: 'boolean',
-      options: ['slide', 'loop', 'fade'],
       required: false,
       i18n: 'duplicate'
     },
@@ -20,6 +19,7 @@
       label: '{{ i18n "admin.fields.carousel.autoplay.label" }}',
       name: 'autoplay',
       widget: 'boolean',
+      default: true,
       required: false,
       i18n: 'duplicate'
     },
@@ -27,6 +27,7 @@
       label: '{{ i18n "admin.fields.carousel.arrows.label" }}',
       name: 'arrows',
       widget: 'boolean',
+      default: true,
       required: false,
       i18n: 'duplicate'
     },
@@ -34,7 +35,7 @@
       label: '{{ i18n "admin.fields.carousel.pagination.label" }}',
       name: 'pagination',
       widget: 'boolean',
-      default: true,
+      default: false,
       required: false,
       i18n: 'duplicate'
     },
