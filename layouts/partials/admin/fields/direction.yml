@@ -1,0 +1,11 @@
+{
+  label: '{{ i18n "admin.fields.direction.label" }}',
+  name: 'direction',
+  widget: 'select',
+  options: [
+    { label: '{{ i18n "admin.fields.direction.options.ltr" }}', value: 'ltr' },
+    { label: '{{ i18n "admin.fields.direction.options.rtl" }}', value: 'rtl' }
+  ],
+  default: 'ltr',
+  i18n: 'duplicate'
+}

@@ -313,6 +313,11 @@ admin:
       label: Diagnostic
       dpe: DPE
       ges: GES
+    direction:
+      label: Direction
+      options:
+        ltr: Text on left / image on right
+        rtl: Image on left / text on right
     discount:
       label: Discount
       hint: 'Discount amount, e.g.: 30%'
@@ -321,6 +326,8 @@ admin:
       label: Draft
     email:
       label: Email
+    embed:
+      label: Embed
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Featured image
