@@ -59,7 +59,7 @@ params:
         - informations
         - instagram
         - latest
-        # - logos
+        - logos
         - map
         - newsletter
         - paragraph
@@ -67,7 +67,7 @@ params:
         - quote
         - selected
         - testimonials
-        # - timeline
+        - timeline
         - title
         - video
 
