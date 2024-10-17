@@ -1,7 +1,7 @@
 {
   label: 'MP4',
   hint: '{{ i18n "admin.fields.video.mp4.hint" }}',
-  name: 'webm',
+  name: 'mp4',
   widget: 'file',
   required: false,
   i18n: 'duplicate',
