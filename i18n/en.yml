@@ -331,6 +331,8 @@ admin:
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Featured image
+    figure:
+      label: Figure
     form:
       label: Form
       autocomplete:
@@ -409,6 +411,9 @@ admin:
       label: Is half?
     is_highlighted:
       label: Is highlighted?
+    is_screenshot:
+      label: Is screenshot?
+      hint: Add a browser skin around the picture
     items:
       label: 
         one: Item
@@ -443,6 +448,12 @@ admin:
         label: Form
     offer:
       label: Offer
+    offset:
+      label: Offset
+      options:
+        center: Center
+        end: End
+        start: Start
     parent:
       label: Parent page
     phone:
@@ -483,9 +494,6 @@ admin:
         label: Year of construction
     required:
       label: Required
-    screenshot:
-      label: Screenshot
-      hint: Add a browser skin around the picture
     section:
       label: Section
       hint: Select the section to display
@@ -518,6 +526,8 @@ admin:
       warning: Warning
     status:
       label: Status
+    submit:
+      label: Submit button text
     suffix:
       label: Suffix
       hint: 'e.g.: %'
