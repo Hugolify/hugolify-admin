@@ -1,4 +1,4 @@
-{{- $items := dict "items" (slice "icon" "image" "title" "text" "cta") -}} 
+{{- $items := dict "items" (slice "icon" "image_simple" "title" "text" "cta") -}} 
 {{- $fields := slice 
   "heading" 
   "column" 

@@ -298,6 +298,9 @@ admin:
         label: Latitude
       lng:
         label: Longitude
+    count:
+      hint: Number of items to display
+      label: Count
     credit:
       label: Credit
     cta:
@@ -411,6 +414,9 @@ admin:
       label: Is half?
     is_highlighted:
       label: Is highlighted?
+    is_logo:
+      label: Is logo?
+      hint: Keep center and not cropped
     is_screenshot:
       label: Is screenshot?
       hint: Add a browser skin around the picture
