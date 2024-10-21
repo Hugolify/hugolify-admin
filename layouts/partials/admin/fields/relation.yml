@@ -13,7 +13,8 @@
   widget: 'relation',
   collection: {{ $collection }},
   search_fields: ['title'],
-  value_field: 'id',
+  {{- $slug := cond site.Params.admin.config.id `{{id}}` `{{slug}}` -}}
+  value_field: '{{$slug}}',
   display_fields: ['title'],
   filters: [
     { field: 'draft', values: [false] }

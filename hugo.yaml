@@ -22,6 +22,7 @@ mediaTypes:
     - yml
 
 # Admin params 
+# https://www.hugolify.io/docs/cms/admin/
 params:
   admin:
     cms: decapcms # https://www.hugolify.io/docs/cms/
@@ -39,9 +40,14 @@ params:
       identity: true
     preview: false
 
+    # Collections
+    collections:
+      indexes: true
+      pages: true
+
     # Blocks
     blocks:
-      # All blocks available https://www.hugolify.io/docs/blocks/
+      # Set blocks available, all blocks https://www.hugolify.io/docs/blocks/
       available:
         - alert
         # - chart
@@ -69,8 +75,3 @@ params:
         - timeline
         - title
         - video
-
-    # Collections
-    collections:
-      indexes: true
-      pages: true

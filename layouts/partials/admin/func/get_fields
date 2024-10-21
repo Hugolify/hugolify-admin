@@ -7,8 +7,6 @@
   {{- $specific = index site.Params.admin.fields . -}}
 {{- end -}}
 {{- with $specific -}}
-  {{- with .fields -}}
-    {{- $specificFields = . -}}
-  {{- end -}}
+  {{- $specificFields = . -}}
 {{- end -}}
 {{- return $specificFields -}}
