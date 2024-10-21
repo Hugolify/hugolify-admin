@@ -3,7 +3,10 @@
   hint: '{{ i18n "admin.fields.discount.hint" }}',
   name: 'discount',
   widget: 'string',
-  pattern: ['^[0-9]*(%?)$', {{ i18n "admin.fields.discount.pattern" }}],
+  pattern: [
+    '^[0-9]*(%?)$', 
+    '{{ i18n "admin.fields.discount.pattern" }}'
+  ],
   required: false,
   i18n: 'duplicate'
 }
