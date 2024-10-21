@@ -9,7 +9,7 @@ i18n:
   default_locale: {{ site.Params.admin.i18n.default_locale }}
 {{ end }}
 local_backend: true
-locale: {{ site.Params.admin.locale }}
+locale: {{ index site.Languages 0 | default "en" }}
 logo_url: "./logo.svg"
 media_folder: "static/uploads"
 public_folder: "/uploads"

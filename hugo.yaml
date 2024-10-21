@@ -30,7 +30,6 @@ params:
     i18n:
       default_locale: en # master lang for an i18n website 
       locales: false # "[en,fr]" for an i18n website
-    locale: en # CMS lang
     media:
       max_file_size: 700000 # 700ko
       video_max_file_size: 5000000 # 5Mo
