@@ -45,7 +45,7 @@ admin:
     quote:
       label: Citation
     selected:
-      label: Selected {{ .section }}
+      label: Sélection {{ .section }}
     testimonials:
       label: Témoignages
     timeline:
@@ -60,76 +60,76 @@ admin:
         one: Auteur
         other: Auteurs
     casestudies:
-      _description: All case studies
+      _description: Toutes les études de cas
       label:
-        one: Case study
-        other: Case studies
+        one: Étude de cas
+        other: Études de cas
     categories:
       label:
         one: Catégorie
         other: Catégories
     docs:
-      _description: All docs
+      _description: Tous les docs
       label:
         one: Doc
         other: Docs
     events:
-      _description: All events
+      _description: Tous les évènements
       label:
-        one: Event
-        other: Events
+        one: Évènement
+        other: Évènements
     expertises:
-      _description: All expertises
+      _description: Toutes les expertises
       label:
         one: Expertise
         other: Expertises
     indexes:
-      _description: All indexes
-      label:
+      _description: Toutes les pages index
+      label: 
         one: Index
-        other: Indexes
+        other: Index
     pages:
-      _description: All pages
+      _description: Toutes les pages
       label:
         one: Page
         other: Pages
     persons:
-      _description: All persons
+      _description: Toutes les personnes
       label:
-        one: Person
-        other: Persons
+        one: Personne
+        other: Personnes
     persons_expertises:
-      _description: All expertises
+      _description: Toutes les expertises
       label:
         one: Expertise
         other: Expertises
     persons_places:
-      _description: All places
+      _description: Tous les endroits
       label:
-        one: Place
-        other: Places
+        one: Endroit
+        other: Endroits
     persons_statutes:
-      _description: All statues
+      _description: Tous les statuts
       label:
         one: Statut
-        other: Statutes
+        other: Statuts
     places:
-      _description: All places
+      _description: Tous les endroits
       label:
-        one: Place
-        other: Places
+        one: Endroit
+        other: Endroits
     posts:
-      _description: All news
+      _description: Toutes les actualités
       label:
-        one: New
-        other: News
+        one: Actualité
+        other: Actualités
     posts_categories:
-      _description: All categories of news
+      _description: Toutes les categories d’actualité
       label:
         one: Catégorie
         other: Catégories
     posts_tags:
-      _description: All tags of news
+      _description: Tous les tags d’actualité
       label:
         one: Tag
         other: Tags
@@ -139,75 +139,76 @@ admin:
         one: Produit
         other: Produits
     products_categories:
-      _description: Toutes les catégories de products
+      _description: Toutes les catégories produits
       label:
         one: Catégorie
         other: Catégories
     products_tags:
-      _description: All tags of products
+      _description: Tous les tags produits
       label:
         one: Tag
         other: Tags
     projects:
-      _description: All projects
+      _description: Tous les projets
       label:
-        one: Project
-        other: Projects
+        one: Projet
+        other: Projets
     projects_tags:
-      _description: All tags of projects
+      _description: Tous les tags projets
       label:
         one: Tag
         other: Tags
     projects_types:
-      _description: All types of projects
+      _description: Tous les types de projets
       label:
         one: Type
         other: Types
     publications:
-      _description: All publications
+      _description: Toutes les parutions
       label:
-        one: Publication
-        other: Publications
+        one: Parution
+        other: Parutions
     publications_categories:
-      _description: All categories of publications
+      _description: Toutes les catégories de parutions
       label:
         one: Catégorie
         other: Catégories
     publications_persons:
       label:
-        one: Person concerned
-        other: Persons concerned
+        one: Personne concernée
+        other: Personnes concernées
     realestates:
-      _description: All real estates
+      _description: Toutes les annonces
       label:
-        one: Real estate
-        other: Real estates
+        one: Annonce immobilière
+        other: Annonces immobilières
     realestates_categories:
-      _description: All categories of real estates
+      _description: Toutes les catégories d’annonce immobilière
       label:
         one: Catégorie
         other: Catégories
     realestates_persons:
-      _description: All real estates agents
+      _description: Tous les agents
       label:
-        one: Real estates agent
-        other: Real estates agents
+        one: Agent
+        other: Agents
     realestates_sellers:
-      _description: All sellers
+      _description: Tous les vendeurs
       label:
-        one: Seller
-        other: Sellers
+        one: Vendeur
+        other: Vendeurs
     services:
-      _description: All services
+      _description: Tous les services
       label:
         one: Service
         other: Services
     services_categories:
-      _description: All categories of services
+      _description: Toutes les catégories de services
       label:
         one: Catégorie
         other: Catégories
     tags:
+      _description: Tous les tags
       label:
         one: Tag
         other: Tags
@@ -216,18 +217,18 @@ admin:
       label: Carte
     address:
       city:
-        label: City
+        label: Ville
       country:
-        label: Country
-      label: Address
+        label: Pays
+      label: Addresse
       street:
-        label: Street
+        label: Rue
       zipcode:
-        label: Zip code
+        label: Code postal
     align:
       center: Center
       end: End
-      label: Alignment
+      label: Alignement
       start: Start
     arguments:
       label:
@@ -236,20 +237,20 @@ admin:
     autoplay:
       label: Autoplay
     background:
-      label: Has background?
+      label: Avec un background ?
     background_color:
-      label: Background color
+      label: Couleur du fond
     badge:
-      hint: Display a text badge
+      hint: Afficher un badge
       label: Badge
     blocks:
       label:
-        one: Block
-        other: Blocks
+        one: Bloc
+        other: Blocs
     body:
       label: Body
     breakpoints:
-      hint: Screen dimension (maximum
+      hint: Dimension de l’écran
       label:
         one: Breakpoint
         other: Breakpoints
@@ -261,55 +262,55 @@ admin:
         wide_tablet: Wide tablet
     carousel:
       arrows:
-        label: Arrows
+        label: Flèches
       autoplay:
         label: Autoplay
       focus:
-        hint: Is the active slide in the center of the screen?
+        hint: Positionner le slide actif au centre ?
         label: Focus
       gap:
-        hint: The gap between slides. In rem value.
+        hint: L’écart entre les slides. Exprimé en rem.
         label: Gap
-      hint: Only, if your layout is "Carousel"
-      label: Carousel configuration
+      hint: Seulement pour un affichage en carrousel
+      label: Configuration carrousel 
       padding:
         hint: Padding left/right of the carousel. In rem value
         label: Padding
       pagination:
         label: Pagination
       params:
-        label: Params
+        label: Paramêtres
       perpage:
-        hint: Number of slides to display
-        label: Per page
+        hint: Nombre de slide à afficher
+        label: Par page
       responsive:
         label: Responsive
       type:
-        label: Carousel type
+        label: Type de carrousel
     code:
       label: Code
     color:
-      label: Color
+      label: Couleur
     column:
-      label: Column
+      label: Colonne
     contact:
       label:
         one: Contact
         other: Contacts
     controls:
-      label: Controls
+      label: Contrôles
     coordinates:
       hint: 'To easily find your coordinates: https://www.latlong.net/convert-address-to-lat-long.html'
-      label: Geographic coordinates
+      label: Coordonnées géographique 
       lat:
         label: Latitude
       lng:
         label: Longitude
     count:
-      hint: Number of items to display
+      hint: Numbre d’items à afficher
       label: Count
     credit:
-      label: Credit
+      label: Crédit
     cta:
       label:
         one: CTA
@@ -327,49 +328,48 @@ admin:
     direction:
       label: Direction
       options:
-        ltr: Text on left / image on right
-        rtl: Image on left / text on right
+        ltr: Texte à gauche / image à droite
+        rtl: Image à gauche / texte à droite
     discount:
-      hint: 'Discount amount, e.g.: 30%'
-      label: Discount
-      pattern: Only amound (without currency) or percent
+      hint: 'Montant de la réduction, exemple : 30%'
+      label: Réduction
+      pattern: La valeur seulement (sans la devise)
     draft:
-      label: Draft
+      label: Brouillon
     email:
       label: Email
     embed:
-      label: Intégrer
+      label: Embed
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
-      label: Featured image
+      label: Image principale
     figure:
       label: Figure
     form:
       autocomplete:
-        country_name: Country name
+        country_name: Nom du pays
         email: Email
-        family_name: Family name
-        given_name: Given name
+        family_name: Nom de famille
+        given_name: Prénom
         label: Autocomplete
-        name: Name
-        organization: Organization
-        postal_code: Postal code
-        street_address: Street address
+        name: Nom
+        organization: Entreprise
+        postal_code: Code postal
+        street_address: Rue
         tel: Tel
-        textarea: Textarea
       full:
-        label: Full width field?
+        label: Champ en pleine largeur ?
       hiddens:
         label:
-          one: Hiddens fields
-          other: Hidden field
+          one: Champ caché
+          other: Champs cachés
       items:
         label:
-          one: Field
-          other: Fields
+          one: Champ
+          other: Champs
       label: Formulaire
       options:
-        hint: Only for select type
+        hint: Seulement pour les champs select
         label:
           one: Option
           other: Options
@@ -377,9 +377,9 @@ admin:
         email: Email
         label: Type
         select: Select
-        tel: Tel
-        text: Text
-        textarea: Textarea
+        tel: Téléphone
+        text: Texte
+        textarea: Zone de texte
     gallery:
       label: Galerie
     grid:
@@ -390,12 +390,12 @@ admin:
       medium: Medium
       small: Small
     heading:
-      label: Heading
+      label: En-tête
     hero:
       label: Hero
     icon:
-      hint: Name of icon from https://icons.getbootstrap.com/
-      label: Icon
+      hint: Nom de l’icon provenant de https://icons.getbootstrap.com/
+      label: Icone
     image:
       alt:
         hint: For an image that conveys information (leave blank if decorative image)
@@ -419,45 +419,45 @@ admin:
     is_blank:
       label: Is blank?
     is_card:
-      hint: Add a background behind texts
+      hint: Ajoute un fond derrière les textes
       label: Is card?
     is_half:
-      label: Is half?
+      label: Moitié ?
     is_highlighted:
       label: Is highlighted?
     is_logo:
-      hint: Keep center and not cropped
+      hint: Positionne au centre et n’est pas recadré
       label: Is logo?
     is_screenshot:
-      hint: Add a browser skin around the picture
+      hint: Ajoute un faux navigateur autour de l’image
       label: Is screenshot?
     items:
       label:
         one: Item
         other: Items
     keyfeatures:
-      hint: 'e.g.: Location, light…'
+      hint: 'exemple : Localisation, exposition…'
       label:
-        one: Key feature
-        other: Key features
+        one: Point clé
+        other: Points clés
     label:
       label: Label
     lang:
       hint: Enter code lang (e.g. fr) if different of the current page language
-      label: Language
+      label: Langue
     layout:
-      label: Layout
+      label: Affichage
       options:
-        carousel: Carousel
-        grid: Grid
+        carousel: Carrousel
+        grid: Grille
     legend:
-      label: Legend
+      label: Légende
     limit:
-      label: Limit
+      label: Limite
     loop:
-      label: Loop
+      label: Boucle
     name:
-      label: Name
+      label: Nome
     newsletter:
       form:
         label: Formulaire
@@ -470,50 +470,50 @@ admin:
         end: End
         start: Start
     parent:
-      label: Parent page
+      label: Page parente
     phone:
-      label: Phone
+      label: Téléphone
     placeholder:
       label: Placeholder
     prefix:
       label: Prefix
     press:
-      label: Press
+      label: Presse
     price:
-      hide: Hide price
-      hint: 'e.g.: 300000 (for 300 000 €)'
-      label: Price
+      hide: Cacher le prix
+      hint: 'exemple : 300000 (pour 300 000 €)'
+      label: Prix
     realestates_informations:
       area:
-        hint: Expressed in m2
-        label: Interior area
+        hint: Exprimé en m2
+        label: Surface intérieur
       bathrooms:
-        label: Number of bathrooms
+        label: Nombre de salle de bain
       bedrooms:
-        label: Number of bedrooms
+        label: Nombre de chambre
       district:
-        label: District
+        label: Quartier
       field:
-        hint: Expressed in m2
-        label: Exterior area
+        hint: Exprimé en m2
+        label: Surface extérieur
       floor:
-        label: Floor
+        label: Étage
       label: Informations
       levels:
-        label: Number of levels
+        label: Nombre d’étage
       rooms:
-        label: Number of rooms
+        label: Nombre de pièce
       showerrooms:
-        label: Number of shower rooms
+        label: Nombre de salle d’eau
       year:
-        label: Year of construction
+        label: Année de construction
     required:
       label: Required
     section:
       hint: Select the section to display
       label: Section
     show_more:
-      hint: Display a button to show more elements
+      hint: Affiche un bouton pour voir plus d’éléments
       label: Show more?
     show_places:
       hint: Only if you have places already saved (this will disable the marker below)
@@ -527,14 +527,14 @@ admin:
       label:
         one: Social
         other: Socials
-      plateform: Plateform
+      plateform: Plateforme
     sold:
-      label: Sold?
+      label: Vendu ?
     state:
       danger: Danger
       dark: Dark
       info: Info
-      label: State
+      label: État
       light: Light
       primary: Primary
       secondary: Secondary
@@ -545,7 +545,7 @@ admin:
     submit:
       label: Submit button text
     suffix:
-      hint: 'e.g.: %'
+      hint: 'exemple : %'
       label: Suffix
     surtitle:
       label: Sur-titre
@@ -556,13 +556,13 @@ admin:
     title_page:
       hint: Displayed in tabs, search results, and in SMS/Messages/Social networks
         preview
-      label: Title of the page
+      label: Titre de la page
     transcription:
       label: Transcription
     url:
       label: URL
     value:
-      label: Value
+      label: Valeur
     video:
       label: Vidéo
       mp4:
@@ -571,14 +571,14 @@ admin:
         hint: Vidéo en format WEBM
     website:
       hint: URL (https://…)
-      label: Website
+      label: Site Web
     zoom:
       label: Zoom
   group:
-    year: Year
+    year: Année
   shortcodes:
     button:
-      label: Button
+      label: Bouton
     figure:
       label: Figure
     twitter:
