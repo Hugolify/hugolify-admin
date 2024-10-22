@@ -109,9 +109,9 @@ admin:
         one: Place
         other: Places
     persons_statutes:
-      _description: All statues
+      _description: All statutes
       label: 
-        one: Statut
+        one: Status
         other: Statutes
     places:
       _description: All places
@@ -208,6 +208,7 @@ admin:
         one: Category
         other: Categories
     tags:
+      _description: All tags
       label:
         one: Tag
         other: Tags
@@ -250,7 +251,7 @@ admin:
       label:
         one: Breakpoint
         other: Breakpoints 
-      hint: Screen dimension (maximum
+      hint: Screen dimension
       options:
         desktop: Desktop
         laptop: Laptop
@@ -269,7 +270,7 @@ admin:
         label: Gap
         hint: The gap between slides. In rem value.
       label: Carousel configuration
-      hint: Only, if your layout is "Carousel"
+      hint: Only if your layout is "Carousel"
       padding:
         label: Padding
         hint: Padding left/right of the carousel. In rem value
@@ -329,7 +330,7 @@ admin:
     discount:
       label: Discount
       hint: 'Discount amount, e.g.: 30%'
-      pattern: Only amound (without currency) or percent
+      pattern: Only amound (without currency)
     draft:
       label: Draft
     email:
@@ -354,11 +355,16 @@ admin:
         postal_code: Postal code
         street_address: Street address
         tel: Tel
-        textarea: Textarea
+      full:
+        label: Full width field?
       hiddens:
         label: 
-          one: Hiddens fields
-          other: Hidden field
+          one: Hidden field
+          other: Hiddens fields
+      items:
+        label:
+          one: Field
+          other: Fields
       options:
         label:
           one: Option
@@ -371,12 +377,6 @@ admin:
         tel: Tel
         text: Text
         textarea: Textarea
-      full:
-        label: Full width field?
-      items:
-        label:
-          one: Field
-          other: Fields
     gallery:
       label: Gallery
     grid:
