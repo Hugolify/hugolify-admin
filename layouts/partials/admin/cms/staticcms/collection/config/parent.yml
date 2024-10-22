@@ -1,4 +1,4 @@
-{{ if gt site.Params.admin.nested.depth 2 }}
+{{ if and (gt site.Params.admin.nested.depth 2) site.Params.admin.config.parent }}
 meta: {
   path: {
     label: '{{ i18n "admin.fields.parent.label" }}',
