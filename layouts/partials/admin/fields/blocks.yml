@@ -1,6 +1,6 @@
 {{- $collection := . | default "pages" -}}
-{{- $blocks := site.Params.admin.blocks.available -}}
-{{- with (index site.Params.admin.collection $collection).blocks -}}
+{{- $blocks := site.Params.admin.blocks.enable -}}
+{{- with (index site.Params.admin.collections $collection).blocks -}}
   {{- $blocks = . -}}
 {{- end -}}
 {
