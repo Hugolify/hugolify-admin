@@ -13,7 +13,13 @@
   widget: 'relation',
   collection: {{ $collection }},
   search_fields: ['title'],
-  {{- $slug := cond site.Params.admin.config.id `{{id}}` `{{slug}}` -}}
+  {{- $slug := `{{slug}}` -}}
+  {{- with index site.Params.admin.collections $collection -}}
+    {{- if and (isset . "branch") (eq .branch true) -}}
+      {{- $slug = `{{title}}` -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $slug = cond site.Params.admin.config.id `{{id}}` $slug -}}
   value_field: '{{$slug}}',
   display_fields: ['title'],
   filters: [

@@ -28,6 +28,7 @@ params:
     cms: decapcms # https://www.hugolify.io/docs/cms/
     config:
       id: true # use ID for dir/name files and relation 
+      parent: false # parent widget 
     i18n:
       default_locale: en # master lang for an i18n website 
       locales: false # "[en,fr]" for an i18n website
@@ -42,13 +43,17 @@ params:
 
     # Collections
     collections:
-      indexes: true
-      pages: true
+      indexes:
+        branch: true
+        enable: true
+      pages:
+        branch: true
+        enable: true
 
     # Blocks
     blocks:
       # Set blocks available, all blocks https://www.hugolify.io/docs/blocks/
-      available:
+      enable:
         - alert
         # - chart
         - comparison

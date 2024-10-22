@@ -40,7 +40,7 @@ params:
     # Blocks
     blocks:
       # All blocks available https://www.hugolify.io/docs/blocks/
-      available:
+      enable:
         - alert
         - cta
         - editorial
@@ -58,8 +58,11 @@ params:
     # Collections
     collections:
       # Collections are automatically added based on Hugo modules config, but you can hide a collection if needed.
-      indexes: true
-      pages: true
+      indexes:
+        enable: true
+      pages: 
+        branch: true
+        enable: true
 ```
 
 ## Documentation
