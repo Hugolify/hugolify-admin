@@ -5,7 +5,7 @@
   widget: 'select',
   options: [
     {{- range $collection, $value := site.Params.admin.collections }}
-      {{- if $value -}}
+      {{- if and .enable (ne $collection "indexes") -}}
       { label: {{ humanize $collection }}, value: {{ $collection }} },
       {{- end -}}
     {{- end }}

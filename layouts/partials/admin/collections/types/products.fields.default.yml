@@ -1,9 +1,9 @@
 {{- $products_categories := false -}}
 {{- $products_tags := false -}}
-{{- if site.Params.admin.collections.products_categories -}}
+{{- if site.Params.admin.collections.products_categories.enable -}}
   {{- $products_categories = dict "relation" (dict "collection" "products_categories" "multiple" true) -}}
 {{- end -}}
-{{- if site.Params.admin.collections.products_tags -}}
+{{- if site.Params.admin.collections.products_tags.enable -}}
   {{- $products_tags = dict "relation" (dict "collection" "products_tags" "multiple" true) -}}
 {{- end -}}
 

@@ -1,9 +1,9 @@
 {{- $projects_types := false -}}
 {{- $projects_tags := false -}}
-{{- if site.Params.admin.collections.projects_types -}}
+{{- if site.Params.admin.collections.projects_types.enable -}}
   {{- $projects_types = dict "relation" (dict "collection" "projects_types" "multiple" true) -}}
 {{- end -}}
-{{- if site.Params.admin.collections.projects_tags -}}
+{{- if site.Params.admin.collections.projects_tags.enable -}}
   {{- $projects_tags = dict "relation" (dict "collection" "projects_tags" "multiple" true) -}}
 {{- end -}}
 

@@ -1,5 +1,5 @@
 {{- $services_categories := false -}}
-{{- if site.Params.admin.collections.services_categories -}}
+{{- if site.Params.admin.collections.services_categories.enable -}}
   {{- $services_categories = dict "relation" (dict "collection" "services_categories" "multiple" true) -}}
 {{- end -}}
 

@@ -1,13 +1,13 @@
 {{- $persons_statutes := false -}}
 {{- $persons_expertises := false -}}
 {{- $persons_places := false -}}
-{{- if site.Params.admin.collections.persons_statutes -}}
+{{- if site.Params.admin.collections.persons_statutes.enable -}}
   {{- $persons_statutes = dict "relation" (dict "collection" "persons_statutes" "multiple" false) -}}
 {{- end -}}
-{{- if site.Params.admin.collections.expertises -}}
+{{- if site.Params.admin.collections.expertises.enable -}}
   {{- $persons_expertises = dict "relation" (dict "collection" "expertises" "name" "persons_expertises" "multiple" true) -}}
 {{- end -}}
-{{- if site.Params.admin.collections.places -}}
+{{- if site.Params.admin.collections.places.enable -}}
   {{- $persons_places = dict "relation" (dict "collection" "places" "name" "persons_places" "multiple" true) -}}
 {{- end -}}
 

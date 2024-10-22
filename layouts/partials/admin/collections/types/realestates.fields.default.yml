@@ -1,13 +1,13 @@
 {{- $realestates_persons := false -}}
 {{- $realestates_categories := false -}}
 {{- $realestates_sellers := false -}}
-{{- if site.Params.admin.collections.persons -}}
+{{- if site.Params.admin.collections.persons.enable -}}
   {{- $realestates_persons = dict "relation" (dict "collection" "persons" "name" "realestates_persons" "multiple" true) -}}
 {{- end -}}
-{{- if site.Params.admin.collections.realestates_categories -}}
+{{- if site.Params.admin.collections.realestates_categories.enable -}}
   {{- $realestates_categories = dict "relation" (dict "collection" "realestates_categories" "multiple" false) -}}
 {{- end -}}
-{{- if site.Params.admin.collections.realestates_sellers -}}
+{{- if site.Params.admin.collections.realestates_sellers.enable -}}
   {{- $realestates_sellers = dict "relation" (dict "collection" "realestates_sellers" "multiple" false) -}}
 {{- end -}}
 

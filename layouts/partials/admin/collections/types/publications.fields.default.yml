@@ -1,13 +1,13 @@
 {{- $publications_persons := false -}}
 {{- $publications_categories := false -}}
 {{- $publications_expertises := false -}}
-{{- if site.Params.admin.collections.persons -}}
+{{- if site.Params.admin.collections.persons.enable -}}
   {{- $publications_persons = dict "relation" (dict "collection" "persons" "name" "publications_persons" "multiple" true) -}}
 {{- end -}}
-{{- if site.Params.admin.collections.publications_categories -}}
+{{- if site.Params.admin.collections.publications_categories.enable -}}
   {{- $publications_categories = dict "relation" (dict "collection" "publications_categories" "multiple" false) -}}
 {{- end -}}
-{{- if site.Params.admin.collections.expertises -}}
+{{- if site.Params.admin.collections.expertises.enable -}}
   {{- $publications_expertises = dict "relation" (dict "collection" "expertises" "name" "publications_expertises" "multiple" true) -}}
 {{- end -}}
 

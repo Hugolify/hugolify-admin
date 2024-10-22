@@ -1,7 +1,7 @@
 {{- $block := . -}}
 {{- $index := 0 -}}
 {{- range $collection, $value := site.Params.admin.collections -}}
-{{- if $value -}}
+{{- if and .enable (ne $collection "indexes") -}}
 
 {{- $section := dict "section-hidden" $collection  -}} 
 {{- $relation := dict "relation" (dict "collection" $collection "name" "items" "multiple" true "required" true) -}} 
