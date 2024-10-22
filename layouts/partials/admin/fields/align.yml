@@ -7,7 +7,6 @@
     { label: '{{ i18n "admin.fields.align.center" }}', value: 'center' },
     { label: '{{ i18n "admin.fields.align.end" }}', value: 'end' }
   ],
-  default: 'start',
   required: false,
   i18n: 'duplicate'
 }

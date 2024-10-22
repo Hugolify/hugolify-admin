@@ -7,7 +7,6 @@
     { label: '{{ i18n "admin.fields.offset.options.center" }}', value: 'center' },
     { label: '{{ i18n "admin.fields.offset.options.end" }}', value: 'end' }
   ],
-  default: 'start',
   required: false,
   i18n: 'duplicate'
 }
