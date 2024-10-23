@@ -1,5 +1,9 @@
+{{- $collection := . -}} 
+{{- if or (strings.Contains $collection "posts_authors") (strings.Contains $collection "posts_categories") (strings.Contains $collection "posts_tags") -}}
+  {{- $collection = replace $collection "posts_" "" -}} 
+{{- end -}}
 {
   name: 'section',
   widget: 'hidden',
-  default: {{ . }}
+  default: {{ $collection }}
 }

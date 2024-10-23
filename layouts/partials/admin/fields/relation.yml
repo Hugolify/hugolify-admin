@@ -4,6 +4,9 @@
 {{- if ne .name "items" -}}
   {{- $i18n = $name -}}
 {{- end -}}
+{{- if or (strings.Contains $collection "posts_authors") (strings.Contains $collection "posts_categories") (strings.Contains $collection "posts_tags") -}}
+  {{- $collection = replace $collection "posts_" "" -}} 
+{{- end -}}
 {{- $multiple := .multiple | default false -}}
 {{- $required := .required | default false -}}
 {
@@ -13,7 +16,7 @@
   widget: 'relation',
   collection: {{ $collection }},
   search_fields: ['title'],
-  {{- $slug = cond site.Params.admin.config.id `{{id}}` `{{slug}}` -}}
+  {{- $slug := cond site.Params.admin.config.id `{{id}}` `{{slug}}` -}}
   value_field: '{{$slug}}',
   display_fields: ['title'],
   filters: [
