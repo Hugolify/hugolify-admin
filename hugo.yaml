@@ -44,10 +44,8 @@ params:
     # Collections
     collections:
       indexes:
-        branch: true
         enable: true
       pages:
-        branch: true
         enable: true
 
     # Blocks

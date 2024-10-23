@@ -61,7 +61,6 @@ params:
       indexes:
         enable: true
       pages: 
-        branch: true
         enable: true
 ```
 
