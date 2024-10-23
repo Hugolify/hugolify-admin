@@ -10,7 +10,7 @@
   i18n: true,
 
   path: '{{`{{slug}}/_index`}}',
-  slug: '{{`{{id}}`}}',
+  {{ partial "admin/collections/config/slug.yml" }}
   nested: { depth: 2 },
   
   {{ partial "admin/collections/config/icon.yml" "bookmarks" }}

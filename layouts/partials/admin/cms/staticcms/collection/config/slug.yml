@@ -1,2 +1,6 @@
-{{ $slug := cond site.Params.admin.config.id `{{id}}` `{{slug}}` }}
+{{- $custom_slug := `{{slug}}` -}}
+{{- if . -}}
+  {{- $custom_slug = . }}
+{{- end -}}
+{{- $slug := cond site.Params.admin.config.id `{{id}}` $custom_slug -}}
 slug: "{{$slug}}",

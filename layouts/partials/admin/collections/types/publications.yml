@@ -10,7 +10,8 @@
   i18n: true,
 
   path: '{{`{{year}}/{{month}}/{{slug}}`}}',
-  slug: '{{`{{year}}-{{month}}-{{day}}-{{slug}}`}}',
+  {{ $slug := "{{`{{year}}-{{month}}-{{day}}-{{slug}}`}}" }}
+  {{ partial "admin/collections/config/slug.yml" $slug }}
   
   {{ partial "admin/collections/config/icon.yml" "newspaper" }}
   {{ partial "admin/collections/config/filter.yml" }}
