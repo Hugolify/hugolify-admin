@@ -128,6 +128,11 @@ admin:
       label: 
         one: Category
         other: Categories
+    posts_expertises:
+      _description: All expertises
+      label: 
+        one: Expertise
+        other: Expertises
     posts_tags:
       _description: All tags of news
       label: 
@@ -173,6 +178,11 @@ admin:
       label: 
         one: Category
         other: Categories
+    publications_expertises:
+      _description: All expertises
+      label: 
+        one: Expertise
+        other: Expertises
     publications_persons:
       label: 
         one: Person concerned

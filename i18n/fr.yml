@@ -128,6 +128,11 @@ admin:
       label:
         one: Catégorie
         other: Catégories
+    posts_expertises:
+      _description: Toutes les expertises
+      label: 
+        one: Expertise
+        other: Expertises
     posts_tags:
       _description: Tous les tags d’actualité
       label:
@@ -173,6 +178,11 @@ admin:
       label:
         one: Catégorie
         other: Catégories
+    publications_expertises:
+      _description: Toutes les expertises
+      label: 
+        one: Expertise
+        other: Expertises
     publications_persons:
       label:
         one: Personne concernée
