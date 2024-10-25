@@ -1,0 +1,100 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css');
+
+/* ASIDE */
+aside ul [class*='-IconWrapper']::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+aside ul [class*='-IconWrapper'] svg,
+aside h2 {
+  display: none;
+}
+aside ul span::before {
+  content: '\F392';
+}
+
+aside [href='#/collections/indexes'] span::before {
+  content: '\F2EC';
+}
+aside [href='#/collections/config'] span::before {
+  content: '\F3E5';
+}
+
+aside [href='#/collections/casestudies'] span::before {
+  content: '\F194';
+}
+aside [href='#/collections/categories'] span::before {
+  content: '\F1A4';
+}
+aside [href='#/collections/docs'] span::before {
+  content: '\F744';
+}
+aside [href='#/collections/events'] span::before {
+  content: '\F1F6';
+}
+aside [href='#/collections/expertises'] span::before {
+  content: '\F585';
+}
+aside [href='#/collections/persons'] span::before {
+  content: '\F4D0';
+}
+aside [href='#/collections/persons_statutes'] span::before {
+  content: '\F8C9';
+}
+aside [href='#/collections/places'] span::before {
+  content: '\F543';
+}
+aside [href='#/collections/posts'] span::before {
+  content: '\F38B';
+}
+aside [href='#/collections/products'] span::before {
+  content: '\F1C7';
+}
+aside [href='#/collections/products_categories'] span::before {
+  content: '\F1A4';
+}
+aside [href='#/collections/products_tags'] span::before {
+  content: '\F5B2';
+}
+aside [href='#/collections/projects'] span::before {
+  content: '\F383';
+}
+aside [href='#/collections/projects_types'] span::before {
+  content: '\F1A4';
+}
+aside [href='#/collections/projects_tags'] span::before {
+  content: '\F5B2';
+}
+aside [href='#/collections/publications'] span::before {
+  content: '\F4A3';
+}
+aside [href='#/collections/publications_categories'] span::before {
+  content: '\F1A4';
+}
+aside [href='#/collections/realestates'] span::before {
+  content: '\F8C6';
+}
+aside [href='#/collections/realestates_categories'] span::before {
+  content: '\F1A4';
+}
+aside [href='#/collections/realestates_sellers'] span::before {
+  content: '\F3FF';
+}
+aside [href='#/collections/services'] span::before {
+  content: '\F4D6';
+}
+aside [href='#/collections/services_categories'] span::before {
+  content: '\F1A4';
+}
+aside [href='#/collections/tags'] span::before {
+  content: '\F5B2';
+}

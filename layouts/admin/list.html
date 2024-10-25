@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Hugolify - Content Manager</title>
+    {{- with site.Params.admin.cms }}
+      {{- $file := print "admin/cms/" . "/styles.html" -}}
+      {{- if templates.Exists ( printf "partials/%s" $file ) }}
+        {{ partialCached $file . }}
+      {{ end -}}
+    {{- end -}}
   </head>
   <body>
     {{- partial "admin/identity/scripts.html" -}}
