@@ -11,6 +11,7 @@
 
   nested: { depth: 2 }, 
   
+  {{ partial "admin/collections/config/icon.yml" "schema" }}
   {{ partial "admin/collections/config/filter.yml" (dict "field" "isIndex" "value" true) }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}

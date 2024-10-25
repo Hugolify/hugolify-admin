@@ -12,6 +12,7 @@
   path: '{{`{{year}}/{{slug}}`}}',
   {{ partial "admin/collections/config/slug.yml" }}
   
+  {{ partial "admin/collections/config/icon.yml" "amp_stories" }}
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
 
