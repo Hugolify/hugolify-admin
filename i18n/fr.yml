@@ -310,7 +310,7 @@ admin:
     controls:
       label: Contrôles
     coordinates:
-      hint: 'To easily find your coordinates: https://www.latlong.net/convert-address-to-lat-long.html'
+      hint: 'Trouvez facilement les coordonnées : https://www.latlong.net/convert-address-to-lat-long.html'
       label: Coordonnées géographique 
       lat:
         label: Latitude
@@ -326,7 +326,10 @@ admin:
         one: CTA
         other: CTAs
     date:
+      from: À partir du
       label: Date
+      sale: Date de vente
+      to: Jusqu’au
     description:
       hint: Displayed in tabs, search results, and in SMS/Messages/Social networks
         preview
@@ -493,6 +496,7 @@ admin:
       hide: Cacher le prix
       hint: 'exemple : 300000 (pour 300 000 €)'
       label: Prix
+      sold: Prix vendu
     realestates_informations:
       area:
         hint: Exprimé en m2
@@ -517,6 +521,8 @@ admin:
         label: Nombre de salle d’eau
       year:
         label: Année de construction
+    reference:
+      label: Reference
     required:
       label: Required
     section:

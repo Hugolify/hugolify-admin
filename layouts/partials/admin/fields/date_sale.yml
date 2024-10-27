@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.date.sale" }}',
+  name: 'date_sale',
+  widget: 'datetime',
+  required: false,
+  i18n: 'duplicate'
+}

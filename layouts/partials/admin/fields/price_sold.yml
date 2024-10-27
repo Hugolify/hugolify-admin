@@ -1,0 +1,8 @@
+{
+  label: '{{ i18n "admin.fields.price.sold" }}',
+  hint: '{{ i18n "admin.fields.price.hint" }}',
+  name: 'price_sold',
+  widget: 'number',
+  required: false,
+  i18n: 'duplicate'
+}

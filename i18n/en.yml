@@ -324,7 +324,10 @@ admin:
         one: CTA
         other: CTAs
     date:
+      from: From
       label: Date
+      sale: Sale date
+      to: To
     description:
       hint: Displayed in tabs, search results, and in SMS/Messages/Social networks preview
       label: Description
@@ -487,6 +490,7 @@ admin:
       hide: Hide price
       label: Price
       hint: 'e.g.: 300000 (for 300 000 €)'
+      sold: Price sold
     press:
       label: Press
     realestates_informations:
@@ -513,6 +517,8 @@ admin:
         label: Number of shower rooms
       year: 
         label: Year of construction
+    reference:
+      label: Reference
     required:
       label: Required
     section:

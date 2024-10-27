@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.date.to" }}',
+  name: 'date_to',
+  widget: 'datetime',
+  required: true,
+  i18n: 'duplicate'
+}
