@@ -3,6 +3,8 @@
   "heading" 
   "column_simple" 
   $items 
+  "layout" 
+  "carousel" 
   "background" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
 {
