@@ -1,0 +1,9 @@
+header nav::before {
+    background: url('./logo-picto.svg') no-repeat;
+    background-size: contain;
+    content: '';
+    float: left;
+    height: 40px;
+    margin-top: 8px;
+    width: 40px;
+}
