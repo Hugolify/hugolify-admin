@@ -12,7 +12,7 @@ i18n:
 {{ end }}
 local_backend: true
 locale: {{ site.Params.admin.locale }}
-logo_url: ./logo.svg
+logo_url: ./logo-picto.svg
 media_folder: static/uploads
 public_folder: /uploads
 publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
