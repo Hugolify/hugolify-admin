@@ -1,0 +1,14 @@
+{{- $fields := slice 
+  "date_from" 
+  "date_to" 
+  "url" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.fields.offer.label" }}',
+  name: 'event',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

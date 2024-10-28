@@ -2,8 +2,10 @@
   "id" 
   "is_not_index" 
   "draft" 
-  "title_page" 
+  "date" 
+  "title_page"
   "description"
   "featured_image" 
+  "event" 
   "body"
   "slug" -}}

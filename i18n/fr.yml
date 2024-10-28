@@ -470,7 +470,7 @@ admin:
     loop:
       label: Boucle
     name:
-      label: Nome
+      label: Nom
     newsletter:
       form:
         label: Formulaire
@@ -559,7 +559,7 @@ admin:
     status:
       label: Statut
     submit:
-      label: Submit button text
+      label: Texte du bouton d’envoie
     suffix:
       hint: 'exemple : %'
       label: Suffix

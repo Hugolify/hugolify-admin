@@ -1,4 +1,3 @@
-
 collections: [
   {{- range $collection, $value := site.Params.admin.collections }}
     {{- if .enable -}}
