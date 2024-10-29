@@ -1,3 +1,7 @@
+{{- $events_categories := false -}}
+{{- if site.Params.admin.collections.events_categories.enable -}}
+  {{- $events_categories = dict "relation" (dict "collection" "events_categories" "multiple" true) -}}
+{{- end -}}
 {{- return slice 
   "id" 
   "is_not_index" 
@@ -6,6 +10,7 @@
   "title_page"
   "description"
   "featured_image" 
+  $events_categories 
   "event" 
   "body"
   "slug" -}}
