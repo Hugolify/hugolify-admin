@@ -1,12 +1,12 @@
 {
   name: persons_statutes,
   folder: content/persons_statutes,
-  label: {{ i18n "admin.collections.persons_statutes.label" }},
-  label_singular: {{ i18n "admin.collections.persons_statutes.label" 1 }},
-  description: {{ i18n "admin.collections.persons_statutes._description" }},
+  label: '{{ i18n "admin.collections.persons_statutes.label" }}',
+  label_singular: '{{ i18n "admin.collections.persons_statutes.label" 1 }}',
+  description: '{{ i18n "admin.collections.persons_statutes._description" }}',
   
   create: true,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}/_index`}}',

@@ -1,12 +1,12 @@
 {
   name: expertises,
   folder: content/expertises,
-  label: {{ i18n "admin.collections.expertises.label" }},
-  label_singular: {{ i18n "admin.collections.expertises.label" 1 }},
-  description: {{ i18n "admin.collections.expertises._description" }},
+  label: '{{ i18n "admin.collections.expertises.label" }}',
+  label_singular: '{{ i18n "admin.collections.expertises.label" 1 }}',
+  description: '{{ i18n "admin.collections.expertises._description" }}',
   
   create: true,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}`}}',

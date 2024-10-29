@@ -6,7 +6,7 @@
   description: '{{ i18n "admin.collections.persons._description" }}',
   
   create: true,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}`}}',

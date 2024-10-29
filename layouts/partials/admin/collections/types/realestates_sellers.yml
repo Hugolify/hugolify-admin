@@ -1,12 +1,12 @@
 {
   name: realestates_sellers,
   folder: content/realestates_sellers,
-  label: {{ i18n "admin.collections.realestates_sellers.label" }},
-  label_singular: {{ i18n "admin.collections.realestates_sellers.label" 1 }},
-  description: {{ i18n "admin.collections.realestates_sellers._description" }},
+  label: '{{ i18n "admin.collections.realestates_sellers.label" }}',
+  label_singular: '{{ i18n "admin.collections.realestates_sellers.label" 1 }}',
+  description: '{{ i18n "admin.collections.realestates_sellers._description" }}',
   
   create: true,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}/_index`}}',

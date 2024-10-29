@@ -6,9 +6,10 @@
   description: '{{ i18n "admin.collections.indexes._description" }}',
   
   create: false,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
+  path: '{{`{{slug}}/_index`}}',
   nested: { depth: 2 }, 
   
   {{ partial "admin/collections/config/icon.yml" "schema" }}

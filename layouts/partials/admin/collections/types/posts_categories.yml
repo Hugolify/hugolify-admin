@@ -1,12 +1,12 @@
 {
   name: categories,
   folder: content/categories,
-  label: {{ i18n "admin.collections.posts_categories.label" }},
-  label_singular: {{ i18n "admin.collections.posts_categories.label" 1 }},
-  description: {{ i18n "admin.collections.posts_categories._description" }},
+  label: '{{ i18n "admin.collections.posts_categories.label" }}',
+  label_singular: '{{ i18n "admin.collections.posts_categories.label" 1 }}',
+  description: '{{ i18n "admin.collections.posts_categories._description" }}',
   
   create: true,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}/_index`}}',

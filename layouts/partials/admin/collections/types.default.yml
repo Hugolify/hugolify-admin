@@ -5,7 +5,7 @@
   label_singular: {{ . | humanize | singularize }},
   
   create: true,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}`}}',

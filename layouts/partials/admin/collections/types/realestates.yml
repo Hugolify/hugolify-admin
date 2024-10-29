@@ -1,12 +1,12 @@
 {
   name: realestates,
   folder: content/realestates,
-  label: {{ i18n "admin.collections.realestates.label" }},
-  label_singular: {{ i18n "admin.collections.realestates.label" 1 }},
-  description: {{ i18n "admin.collections.realestates._description" }},
+  label: '{{ i18n "admin.collections.realestates.label" }}',
+  label_singular: '{{ i18n "admin.collections.realestates.label" 1 }}',
+  description: '{{ i18n "admin.collections.realestates._description" }}',
   
   create: true,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{year}}/{{month}}/{{slug}}`}}',

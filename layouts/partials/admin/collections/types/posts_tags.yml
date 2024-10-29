@@ -1,12 +1,12 @@
 {
   name: tags,
   folder: content/tags,
-  label: {{ i18n "admin.collections.posts_tags.label" }},
-  label_singular: {{ i18n "admin.collections.posts_tags.label" 1 }},
-  description: {{ i18n "admin.collections.posts_tags._description" }},
+  label: '{{ i18n "admin.collections.posts_tags.label" }}',
+  label_singular: '{{ i18n "admin.collections.posts_tags.label" 1 }}',
+  description: '{{ i18n "admin.collections.posts_tags._description" }}',
   
   create: true,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}/_index`}}',

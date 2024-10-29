@@ -1,12 +1,12 @@
 {
   name: publications,
   folder: content/publications,
-  label: {{ i18n "admin.collections.publications.label" }},
-  label_singular: {{ i18n "admin.collections.publications.label" 1 }},
-  description: {{ i18n "admin.collections.publications._description" }},
+  label: '{{ i18n "admin.collections.publications.label" }}',
+  label_singular: '{{ i18n "admin.collections.publications.label" 1 }}',
+  description: '{{ i18n "admin.collections.publications._description" }}',
   
   create: true,
-  editor: { preview: {{ site.Params.admin.preview }} },
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{year}}/{{month}}/{{slug}}`}}',
