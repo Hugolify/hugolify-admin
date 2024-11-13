@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.subtitle.label" }}',
+  name: 'subtitle',
+  widget: 'string',
+  required: false,
+  i18n: true 
+}

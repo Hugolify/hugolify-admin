@@ -564,6 +564,8 @@ admin:
       label: Status
     submit:
       label: Submit button text
+    subtitle:
+      label: Subtitle
     suffix:
       label: Suffix
       hint: 'e.g.: %'
@@ -591,6 +593,7 @@ admin:
     website:
       label: Website
       hint: 'URL (https://…)'
+    year: Year
     zoom:
       label: Zoom
   group:
