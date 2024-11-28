@@ -1,6 +1,6 @@
 fields: [
   {{- $collection := .collection | default "posts" -}}
-  {{- range (index site.Params.admin $collection) }}
+  {{- range (index site.Params.admin.collections $collection).fields }}
     {{- $file := print "admin/fields/" . ".yml" -}}
     {{- if templates.Exists ( printf "partials/%s" $file ) }}
       {{ partialCached $file . }},
