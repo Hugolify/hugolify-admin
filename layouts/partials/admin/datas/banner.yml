@@ -1,0 +1,8 @@
+{{- $fields := slice "text_markdown" "state" -}}
+{
+  label: '{{ i18n "admin.files.banner" }}',
+  name: 'banner',
+  file: 'data/banner.yml',
+  i18n: true,
+  {{- partial "admin/fields/_fields.yml" $fields -}}
+}

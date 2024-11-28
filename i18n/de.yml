@@ -68,6 +68,11 @@ admin:
       label:
         one: Category
         other: Categories
+    config:
+      _description: All config
+      label: 
+        one: Config
+        other: Config
     docs:
       _description: All docs
       label: 
@@ -470,9 +475,13 @@ admin:
       label: Legend
     limit:
       label: Limit
+    links:
+      label:
+        one: Link
+        other: Links
     loop:
       label: Loop
-    Map:
+    map:
       label: Map
     name:
       label: Name
@@ -548,6 +557,9 @@ admin:
         one: Social
         other: Socials
       plateform: Plateform
+      twitter:
+        label: Twitter/X
+        hint: Username
     sold:
       label: Sold?
     state:
@@ -596,6 +608,18 @@ admin:
     year: Year
     zoom:
       label: Zoom
+  files:
+    banner: Information banner at the top of the site
+    footer: Information text at the bottom of the site
+    nav:
+      label: Navigation
+      legal: Legal navigation (notice, conditions…)
+      primary: Primary navigation
+      secondary: Secondary navigation
+      social: Social networks navigation
+    seo:
+      label: SEO global
+      title: Name of site
   group:
     year: Year
   shortcodes:

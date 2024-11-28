@@ -1,0 +1,8 @@
+{{- $fields := slice "title" "description" "image_src" "twitter" -}}
+{
+  label: '{{ i18n "admin.files.seo.label" }}',
+  name: 'seo',
+  file: 'data/seo.yml',
+  i18n: true,
+  {{- partial "admin/fields/_fields.yml" $fields -}}
+}

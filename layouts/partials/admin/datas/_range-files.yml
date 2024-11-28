@@ -1,0 +1,14 @@
+{{- range . -}}
+  {{- $file := . -}}
+  {{- $values := . -}}
+  {{- if reflect.IsMap . -}}
+    {{- range $key, $value := . -}}
+      {{- $file = $key -}}
+      {{- $values = $value -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $datafile := print "admin/datas/" $file ".yml" -}}
+  {{- if templates.Exists ( printf "partials/%s" $datafile ) -}}
+    {{ partial $datafile $values }},
+  {{- end -}}
+{{- end -}}

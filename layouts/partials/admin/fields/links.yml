@@ -1,0 +1,15 @@
+{{- $fields := slice 
+  "title" 
+  "url" 
+  "is_blank" 
+  "sublinks" -}}
+{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.fields.links.label" 2 }}',
+  label_singular: '{{ i18n "admin.fields.links.label" 1 }}',
+  name: 'links',
+  widget: 'list',
+  required: false,
+  i18n: true,
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

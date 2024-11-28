@@ -1,0 +1,8 @@
+{{- return slice 
+  "nav-primary" 
+  "nav-secondary" 
+  "nav-legal" 
+  "nav-social" 
+  "banner" 
+  "footer" 
+  "seo" -}}

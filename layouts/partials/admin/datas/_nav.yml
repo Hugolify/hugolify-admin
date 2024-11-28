@@ -1,0 +1,9 @@
+{{- $nav := .nav | default "primary" -}}
+{{- $fields := .fields | default (slice "links") -}}
+{
+  label: '{{ i18n (print "admin.files.nav." $nav) }}',
+  name: '{{ $nav }}',
+  file: 'data/menu/{{ $nav }}.yml',
+  i18n: true,
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

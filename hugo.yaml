@@ -42,6 +42,8 @@ params:
 
     # Collections
     collections:
+      config:
+        enable: true
       indexes:
         enable: true
       pages:

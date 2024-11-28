@@ -68,6 +68,11 @@ admin:
       label:
         one: Catégorie
         other: Catégories
+    config:
+      _description: Toutes les config
+      label: 
+        one: Config
+        other: Config
     docs:
       _description: Tous les docs
       label:
@@ -228,8 +233,6 @@ admin:
         one: Tag
         other: Tags
   fields:
-    Map:
-      label: Carte
     address:
       city:
         label: Ville
@@ -476,10 +479,16 @@ admin:
       label: Légende
     limit:
       label: Limite
+    links:
+      label:
+        one: Lien
+        other: Liens
     loop:
       label: Boucle
     name:
       label: Nom
+    map:
+      label: Carte
     newsletter:
       form:
         label: Formulaire
@@ -553,6 +562,9 @@ admin:
         one: Social
         other: Socials
       plateform: Plateforme
+      twitter:
+        label: Twitter/X
+        hint: Nom d’utilisateur
     sold:
       label: Vendu ?
     state:
@@ -602,6 +614,18 @@ admin:
     year: Année
     zoom:
       label: Zoom
+  files:
+    banner: Bannière d’information en haut du site
+    footer: Texte d’information en bas du site 
+    nav:
+      label: Navigation
+      legal: Navigation légales (mentions, politiques…)
+      primary: Navigation principale
+      secondary: Navigation secondaire
+      social: Navigation réseaux sociaux
+    seo:
+      label: Global SEO
+      title: Nom du site
   group:
     year: Année
   shortcodes:

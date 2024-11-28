@@ -1,0 +1,8 @@
+{{- $fields := slice "title" "text_area" "cta" -}}
+{
+  label: '{{ i18n "admin.files.footer" }}',
+  name: 'footer',
+  file: 'data/footer.yml',
+  i18n: true,
+  {{- partial "admin/fields/_fields.yml" $fields -}}
+}
