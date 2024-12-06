@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: owner/repo
-  branch: {{ site.Params.admin.branch | default "master" }}
+  branch: {{ site.Params.admin.branch | default "main" }}
   automatic_deployments: false
 display_url: {{ site.BaseURL }}
 {{ if site.Params.admin.i18n.locales }}
