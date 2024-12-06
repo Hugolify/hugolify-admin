@@ -1,0 +1,11 @@
+{
+  label: '{{ i18n "admin.fields.title.label" }}',
+  name: 'title',
+  widget: 'markdown',
+  minimal: true,
+  buttons: ['bold', 'italic'],
+  editor_components: [],
+  modes: ['rich_text'],
+  required: false,
+  i18n: true 
+}
