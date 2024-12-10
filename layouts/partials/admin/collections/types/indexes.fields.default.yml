@@ -1,4 +1,5 @@
 {{- return slice 
+  "id" 
   "is_index" 
   "draft" 
   "title_page" 
