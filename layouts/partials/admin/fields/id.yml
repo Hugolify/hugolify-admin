@@ -1,8 +1,6 @@
-{{- if site.Params.admin.config.id }}
 {
   label: 'Id',
   name: 'id',
   widget: 'uuid',
   i18n: 'duplicate' 
 }
-{{ end -}}

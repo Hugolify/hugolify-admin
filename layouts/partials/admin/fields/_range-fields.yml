@@ -9,6 +9,8 @@
   {{- end -}}
   {{- $file := print "admin/fields/" $field ".yml" -}}
   {{- if templates.Exists ( printf "partials/%s" $file ) -}}
-    {{ partial $file $values }},
+    {{- if or (ne $field "id") (and (eq site.Params.admin.config.id true) (eq $field "id")) }}
+      {{ partial $file $values }},
+    {{- end -}}
   {{- end -}}
 {{- end -}}
