@@ -475,6 +475,7 @@ admin:
       options:
         carousel: Carrousel
         grid: Grille
+        list: Liste
     legend:
       label: Légende
     limit:
@@ -611,6 +612,9 @@ admin:
     website:
       hint: URL (https://…)
       label: Site Web
+    weight:
+      label: Position (importance)
+      hint: Sachant que 1 est le plus important et 10 le moins important
     year: Année
     zoom:
       label: Zoom
