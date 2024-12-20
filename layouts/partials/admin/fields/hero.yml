@@ -11,6 +11,7 @@
   name: 'hero',
   widget: 'object',
   required: false,
+  collapsed: true,
   i18n: true,
   {{ partial "admin/fields/_fields.yml" $fields }}
 }
