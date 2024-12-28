@@ -2,7 +2,7 @@ backend:
   branch: {{ site.Params.admin.branch | default "main" }}
   name: {{ site.Params.admin.git | default "git-gateway" }}
   {{ with site.Params.admin.repo }}
-  repo: "{{ . }}"
+  repo: {{ . }}
   {{ end }}
 
 display_url: "{{ site.BaseURL }}"

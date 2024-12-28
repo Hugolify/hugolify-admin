@@ -1,21 +1,28 @@
 backend:
-  name: github
-  repo: owner/repo
   branch: {{ site.Params.admin.branch | default "main" }}
+  name: {{ site.Params.admin.git | default "github" }}
+  {{ with site.Params.admin.repo }}
+  repo: {{ . }}
+  {{ end }}
   automatic_deployments: false
+
 display_url: {{ site.BaseURL }}
+
 {{ if site.Params.admin.i18n.locales }}
 i18n:
   structure: multiple_files
   locales: {{ site.Params.admin.i18n.locales }}
   default_locale: {{ site.Params.admin.i18n.default_locale }}
 {{ end }}
+
 local_backend: true
 locale: {{ site.Params.admin.locale }}
 logo_url: ./logo-picto.svg
 media_folder: static/uploads
 public_folder: /uploads
+
 publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
+
 slug:
   encoding: ascii
   clean_accents: true
