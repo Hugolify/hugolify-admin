@@ -1,4 +1,4 @@
-{{- $collection := .collection | default false -}}
+{{- $collection := .collection | default "pages" -}}
 {{- $name := .name | default $collection -}}
 {{- $i18n := $collection -}}
 {{- if ne .name "items" -}}
@@ -9,14 +9,23 @@
 {{- end -}}
 {{- $multiple := .multiple | default false -}}
 {{- $required := .required | default false -}}
+{{- $slug := `{{slug}}` -}}
+{{/* Decap CMS bug with bundle page (add /_index), we use title for taxonomies */}}
+{{- if eq site.Params.admin.cms "decapcms" "netlifycms" "staticcms" -}}
+  {{- with site.GetPage $collection -}}
+    {{- if eq .Kind "taxonomy" -}}
+      {{- $slug = `{{title}}` -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $slug = cond site.Params.admin.config.id `{{id}}` $slug -}}
 {
   label: '{{ i18n (print "admin.collections." $i18n ".label") }}',
   label_singular: '{{ i18n (print "admin.collections." $i18n ".label") 1 }}',
-  name: {{ $name }},
+  name: '{{ $name }}',
   widget: 'relation',
   collection: {{ $collection }},
   search_fields: ['title'],
-  {{- $slug := cond site.Params.admin.config.id `{{id}}` `{{slug}}` -}}
   value_field: '{{$slug}}',
   display_fields: ['title'],
   filters: [
