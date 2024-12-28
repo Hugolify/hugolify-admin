@@ -1,3 +1,4 @@
+# Not supported in _index.md
 {
   label: '{{ i18n "admin.fields.slug.label" }}',
   hint: '{{ i18n "admin.fields.slug.hint" }}',
