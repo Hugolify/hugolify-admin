@@ -1,6 +1,7 @@
+{{ $image_filter := cond site.Params.admin.media.specific_filter "image_filter" false }}
 {{- $fields := slice 
   "image_src" 
-  "image_filter"
+  $image_filter
   "image_alt" 
   "credit" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}

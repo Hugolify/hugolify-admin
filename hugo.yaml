@@ -33,6 +33,7 @@ params:
       locales: false # "[en,fr]" for an i18n website
     media:
       max_file_size: 700000 # 700ko
+      specific_filter: false # set true to add a selected filter by image
       video_max_file_size: 5000000 # 5Mo
     nested:
       depth: 2 # set minimum 2 to display pages bundles
