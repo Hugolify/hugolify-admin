@@ -1,6 +1,8 @@
+{{- $layout := dict "layout" (slice "grid" "list") -}} 
 {{- $fields := slice 
   "heading" 
-  "section" 
+  "section"
+  $layout  
   "count" 
   "show_more" 
   "background" -}}

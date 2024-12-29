@@ -1,8 +1,9 @@
 {{- $items := dict "items" (slice "title" "url" "image_src") -}} 
+{{- $layout := dict "layout" (slice "grid" "carousel") -}} 
 {{- $fields := slice 
   "heading" 
   $items 
-  "layout" 
+  $layout 
   "carousel" 
   "background" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}

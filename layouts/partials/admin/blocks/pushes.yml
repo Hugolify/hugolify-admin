@@ -1,9 +1,10 @@
 {{- $items := dict "items" (slice "title" "text" "cta" "offset" "is_card" "background_color" "color" "image") -}} 
+{{- $layout := dict "layout" (slice "grid" "carousel") -}} 
 {{- $fields := slice 
   "heading" 
   "column_simple" 
   $items 
-  "layout" 
+  $layout 
   "carousel" 
   "background" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
