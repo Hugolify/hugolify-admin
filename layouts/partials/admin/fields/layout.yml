@@ -1,12 +1,15 @@
+{{ $layout := . }}
+{{- if not (reflect.IsSlice $layout) -}}
+  {{- $layout = slice "grid" -}}
+{{- end -}}
 {
   label: '{{ i18n "admin.fields.layout.label" }}',
   name: 'layout',
   widget: 'select',
   options: [
-    { label: '{{ i18n "admin.fields.layout.options.carousel" }}', value: 'carousel' },
-    { label: '{{ i18n "admin.fields.layout.options.grid" }}', value: 'grid' },
-    { label: '{{ i18n "admin.fields.layout.options.list" }}', value: 'list' }
+    {{ range $layout }}
+    { label: '{{ i18n (print "admin.fields.layout.options." .) }}', value: {{ . }} },
+    {{ end }}
   ],
-  default: 'grid',
   i18n: 'duplicate'
 }
