@@ -14,22 +14,25 @@ outputFormats:
   admin_config:
     baseName: config
     isPlainText: true
-    mediaType: application/yaml
+    mediaType: text/javascript
     notAlternative: false
 mediaTypes:
   application/yaml:
     suffixes:
-    - yml
+      - yml
+  text/javascript:
+    suffixes:
+      - js
 
-# Admin params 
+# Admin params
 # https://www.hugolify.io/docs/cms/admin/
 params:
   admin:
-    cms: decapcms # https://www.hugolify.io/docs/cms/
+    cms: tinacms # https://www.hugolify.io/docs/cms/
     config:
-      id: true # use ID for dir/name files and relation 
+      id: true # use ID for dir/name files and relation
     i18n:
-      default_locale: en # master lang for an i18n website 
+      default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
     media:
       max_file_size: 700000 # 700ko
@@ -38,7 +41,7 @@ params:
     nested:
       depth: 2 # set minimum 2 to display pages bundles
     netlify:
-      identity: true
+      identity: false
     preview: false
 
     # Collections

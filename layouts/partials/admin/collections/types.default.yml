@@ -1,8 +1,8 @@
 {
-  name: {{ . }},
-  folder: content/{{ . }},
-  label: {{ . | humanize }},
-  label_singular: {{ . | humanize | singularize }},
+  name: '{{ . }}',
+  folder: 'content/{{ . }}',
+  label: '{{ . | humanize }}',
+  label_singular: '{{ . | humanize | singularize }}',
   
   create: true,
   editor: { preview: {{ site.Params.admin.preview | default false }} },

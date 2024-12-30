@@ -1,5 +1,5 @@
 {{- $cms := site.Params.admin.cms | default "decapcms" -}}
-{{- $partial := print "admin/cms/" $cms "/config.yml" -}}
+{{- $partial := print "admin/cms/" $cms "/config.js" -}}
 {{- if templates.Exists ( printf "partials/%s" $partial ) }}
-{{- transform.Remarshal "yaml" (partial $partial .) -}}
+{{ partialCached $partial . }}
 {{ end -}}

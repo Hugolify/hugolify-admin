@@ -1,6 +1,6 @@
 {
-  label: {{ i18n "admin.fields.socials.twitter.label" }},
-  hint: {{ i18n "admin.fields.socials.twitter.hint" }},
+  label: '{{ i18n "admin.fields.socials.twitter.label" }}',
+  hint: '{{ i18n "admin.fields.socials.twitter.hint" }}',
   name: 'twitter',
   widget: 'string',
   required: false,
