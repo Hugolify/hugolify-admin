@@ -10,7 +10,7 @@
   i18n: true,
 
   path: '{{`{{year}}/{{slug}}`}}',
-  {{ $slug := "{{`{{year}}-{{month}}-{{day}}-{{slug}}`}}" }}
+  {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
   
   {{ partial "admin/collections/config/icon.yml" "space_dashboard" }}
