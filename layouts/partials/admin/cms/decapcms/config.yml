@@ -38,7 +38,7 @@ public_folder: "/uploads"
 publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
 slug:
   encoding: "ascii"
-  clean_accents: true
+  clean_accents: false
   sanitize_replacement: "-"
 
 {{ partialCached "admin/collections/index.yml" . }}
