@@ -354,6 +354,10 @@ admin:
       label: Discount
       hint: 'Discount amount, e.g.: 30%'
       pattern: Only amound (without currency)
+    document:
+      label:
+        one: Document
+        other: Documents
     draft:
       label: Draft
     email:
@@ -502,6 +506,9 @@ admin:
         start: Start
     parent:
       label: Parent page
+    pdf:
+      label: PDF
+      hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Phone
       hint: 'International format, e.g: +33 1 23 45 67 89'

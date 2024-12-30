@@ -356,6 +356,10 @@ admin:
       hint: 'Montant de la réduction, exemple : 30%'
       label: Réduction
       pattern: La valeur seulement (sans la devise)
+    document:
+      label:
+        one: Document
+        other: Documents
     draft:
       label: Brouillon
     email:
@@ -510,6 +514,9 @@ admin:
         start: Start
     parent:
       label: Page parente
+    pdf:
+      label: PDF
+      hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Téléphone
       hint: 'Format international, ex: +33 1 23 45 67 89'
