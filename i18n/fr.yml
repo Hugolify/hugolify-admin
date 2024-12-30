@@ -70,7 +70,7 @@ admin:
         other: Catégories
     config:
       _description: Toutes les config
-      label: 
+      label:
         one: Config
         other: Config
     docs:
@@ -85,7 +85,7 @@ admin:
         other: Évènements
     events_categories:
       _description: Toutes les catégories d’évènements
-      label: 
+      label:
         one: Catégorie
         other: Catégories
     expertises:
@@ -95,7 +95,7 @@ admin:
         other: Expertises
     indexes:
       _description: Toutes les pages index
-      label: 
+      label:
         one: Index
         other: Index
     pages:
@@ -140,7 +140,7 @@ admin:
         other: Catégories
     posts_expertises:
       _description: Toutes les expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     posts_tags:
@@ -190,7 +190,7 @@ admin:
         other: Catégories
     publications_expertises:
       _description: Toutes les expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     publications_persons:
@@ -290,7 +290,7 @@ admin:
         hint: L’écart entre les slides. Exprimé en rem.
         label: Gap
       hint: Seulement pour un affichage en carrousel
-      label: Configuration carrousel 
+      label: Configuration carrousel
       padding:
         hint: Padding left/right of the carousel. In rem value
         label: Padding
@@ -319,7 +319,7 @@ admin:
       label: Contrôles
     coordinates:
       hint: 'Trouvez facilement les coordonnées : https://www.latlong.net/convert-address-to-lat-long.html'
-      label: Coordonnées géographique 
+      label: Coordonnées géographique
       lat:
         label: Latitude
       lng:
@@ -339,7 +339,8 @@ admin:
       sale: Date de vente
       to: Jusqu’au
     description:
-      hint: Displayed in tabs, search results, and in SMS/Messages/Social networks
+      hint:
+        Displayed in tabs, search results, and in SMS/Messages/Social networks
         preview
       label: Description
     diagnostic:
@@ -362,9 +363,12 @@ admin:
     embed:
       label: Embed
     event:
-      label: 
+      label:
         one: Évènement
         other: Évènements
+    fax:
+      label: Fax
+      hint: 'Format international, ex: +33 1 23 45 67 89'
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Image principale
@@ -427,13 +431,16 @@ admin:
         label: Alternative text
       filter:
         box: Simple and fast averaging filter appropriate for downscaling (default)
-        catmullrom: Sharp cubic filter that is faster than the Lanczos filter while
+        catmullrom:
+          Sharp cubic filter that is faster than the Lanczos filter while
           providing similar results
         hint: Set Linear for picture or screenshot, leave empty to keep default config
         label: Change filter quality?
-        lanczos: High-quality resampling filter for photographic images yielding sharp
+        lanczos:
+          High-quality resampling filter for photographic images yielding sharp
           results
-        linear: Bilinear resampling filter, produces smooth output, faster than cubic
+        linear:
+          Bilinear resampling filter, produces smooth output, faster than cubic
           filters
       label: Image
       src:
@@ -505,6 +512,7 @@ admin:
       label: Page parente
     phone:
       label: Téléphone
+      hint: 'Format international, ex: +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     prefix:
@@ -556,7 +564,8 @@ admin:
     slug:
       hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
       label: Slug
-      pattern: Contain only lowercase letters, numbers, and hyphens, with no spaces,
+      pattern:
+        Contain only lowercase letters, numbers, and hyphens, with no spaces,
         accents, or special characters
     socials:
       label:
@@ -594,7 +603,8 @@ admin:
     title:
       label: Titre
     title_page:
-      hint: Displayed in tabs, search results, and in SMS/Messages/Social networks
+      hint:
+        Displayed in tabs, search results, and in SMS/Messages/Social networks
         preview
       label: Titre de la page
     transcription:
@@ -620,7 +630,7 @@ admin:
       label: Zoom
   files:
     banner: Bannière d’information en haut du site
-    footer: Texte d’information en bas du site 
+    footer: Texte d’information en bas du site
     nav:
       label: Navigation
       legal: Navigation légales (mentions, politiques…)

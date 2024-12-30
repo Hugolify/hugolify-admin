@@ -61,7 +61,7 @@ admin:
         other: Authors
     casestudies:
       _description: All case studies
-      label: 
+      label:
         one: Case study
         other: Case studies
     categories:
@@ -70,82 +70,82 @@ admin:
         other: Categories
     config:
       _description: All config
-      label: 
+      label:
         one: Config
         other: Config
     docs:
       _description: All docs
-      label: 
+      label:
         one: Doc
         other: Docs
     events:
       _description: All events
-      label: 
+      label:
         one: Event
         other: Events
     events_categories:
       _description: All categories of events
-      label: 
+      label:
         one: Category
         other: Categories
     expertises:
       _description: All expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     indexes:
       _description: All indexes
-      label: 
+      label:
         one: Index
         other: Indexes
     pages:
       _description: All pages
-      label: 
+      label:
         one: Page
         other: Pages
     persons:
       _description: All persons
-      label: 
+      label:
         one: Person
         other: Persons
     persons_expertises:
       _description: All expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     persons_places:
       _description: All places
-      label: 
+      label:
         one: Place
         other: Places
     persons_statutes:
       _description: All statutes
-      label: 
+      label:
         one: Status
         other: Statutes
     places:
       _description: All places
-      label: 
+      label:
         one: Place
         other: Places
     posts:
       _description: All news
-      label: 
+      label:
         one: New
         other: News
     posts_categories:
       _description: All categories of news
-      label: 
+      label:
         one: Category
         other: Categories
     posts_expertises:
       _description: All expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     posts_tags:
       _description: All tags of news
-      label: 
+      label:
         one: Tag
         other: Tags
     products:
@@ -155,76 +155,76 @@ admin:
         other: Products
     products_categories:
       _description: All categories of products
-      label: 
+      label:
         one: Category
         other: Categories
     products_tags:
       _description: All tags of products
-      label: 
+      label:
         one: Tag
         other: Tags
     projects:
       _description: All projects
-      label: 
+      label:
         one: Project
         other: Projects
     projects_tags:
       _description: All tags of projects
-      label: 
+      label:
         one: Tag
         other: Tags
     projects_types:
       _description: All types of projects
-      label: 
+      label:
         one: Type
         other: Types
     publications:
       _description: All publications
-      label: 
+      label:
         one: Publication
         other: Publications
     publications_categories:
       _description: All categories of publications
-      label: 
+      label:
         one: Category
         other: Categories
     publications_expertises:
       _description: All expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     publications_persons:
-      label: 
+      label:
         one: Person concerned
         other: Persons concerned
     realestates:
       _description: All real estates
-      label: 
+      label:
         one: Real estate
         other: Real estates
     realestates_categories:
       _description: All categories of real estates
-      label: 
+      label:
         one: Category
         other: Categories
     realestates_sellers:
       _description: All sellers
-      label: 
+      label:
         one: Seller
         other: Sellers
     realestates_persons:
       _description: All real estates agents
-      label: 
+      label:
         one: Real estates agent
         other: Real estates agents
     services:
       _description: All services
-      label: 
+      label:
         one: Service
         other: Services
     services_categories:
       _description: All categories of services
-      label: 
+      label:
         one: Category
         other: Categories
     tags:
@@ -270,7 +270,7 @@ admin:
     breakpoints:
       label:
         one: Breakpoint
-        other: Breakpoints 
+        other: Breakpoints
       hint: Screen dimension
       options:
         desktop: Desktop
@@ -361,9 +361,12 @@ admin:
     embed:
       label: Embed
     event:
-      label: 
+      label:
         one: Event
         other: Events
+    fax:
+      label: Fax
+      hint: 'International format, e.g: +33 1 23 45 67 89'
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Featured image
@@ -385,7 +388,7 @@ admin:
       full:
         label: Full width field?
       hiddens:
-        label: 
+        label:
           one: Hidden field
           other: Hiddens fields
       items:
@@ -453,7 +456,7 @@ admin:
       label: Is screenshot?
       hint: Add a browser skin around the picture
     items:
-      label: 
+      label:
         one: Item
         other: Items
     keyfeatures:
@@ -501,6 +504,7 @@ admin:
       label: Parent page
     phone:
       label: Phone
+      hint: 'International format, e.g: +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     prefix:
@@ -521,9 +525,9 @@ admin:
         label: Number of bathrooms
       bedrooms:
         label: Number of bedrooms
-      district: 
+      district:
         label: District
-      field: 
+      field:
         label: Exterior area
         hint: Expressed in m2
       floor:
@@ -534,7 +538,7 @@ admin:
         label: Number of rooms
       showerrooms:
         label: Number of shower rooms
-      year: 
+      year:
         label: Year of construction
     reference:
       label: Reference
@@ -554,7 +558,7 @@ admin:
       hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
       pattern: Contain only lowercase letters, numbers, and hyphens, with no spaces, accents, or special characters
     socials:
-      label: 
+      label:
         one: Social
         other: Socials
       plateform: Plateform

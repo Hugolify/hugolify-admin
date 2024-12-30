@@ -1,0 +1,8 @@
+{
+  label: '{{ i18n "admin.fields.fax.label" }}',
+  hint: '{{ i18n "admin.fields.fax.hint" }}',
+  name: 'fax',
+  widget: 'string',
+  required: false,
+  i18n: 'duplicate'
+}
