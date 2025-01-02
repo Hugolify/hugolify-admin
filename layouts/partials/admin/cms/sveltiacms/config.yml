@@ -24,7 +24,7 @@ public_folder: /uploads
 publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
 
 slug:
-  encoding: ascii
+  encoding: unicode
   clean_accents: false
   sanitize_replacement: "-"
 
