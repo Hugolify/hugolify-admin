@@ -1,7 +1,7 @@
 {{- $realestates_persons := false -}}
 {{- $realestates_categories := false -}}
 {{- $realestates_sellers := false -}}
-{{- if site.Params.admin.collections.persons.enable -}}
+{{- if and site.Params.admin.collections.persons.enable site.Params.admin.collections.realestates_persons.enable -}}
   {{- $realestates_persons = dict "relation" (dict "collection" "persons" "name" "realestates_persons" "multiple" true) -}}
 {{- end -}}
 {{- if site.Params.admin.collections.realestates_categories.enable -}}
@@ -30,4 +30,6 @@
   "featured_image" 
   "gallery"
   "body"
+  "fee"
+  "legal"
   "slug" -}}

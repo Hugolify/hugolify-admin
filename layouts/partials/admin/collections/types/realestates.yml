@@ -9,7 +9,7 @@
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
-  path: '{{`{{year}}/{{month}}/{{slug}}`}}',
+  path: '{{`{{year}}/{{slug}}`}}',
   {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
   

@@ -376,6 +376,9 @@ admin:
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Image principale
+    fee:
+      one: Honoraire
+      other: Honoraires
     figure:
       label: Figure
     form:
@@ -431,8 +434,8 @@ admin:
       label: Icone
     image:
       alt:
-        hint: For an image that conveys information (leave blank if decorative image)
-        label: Alternative text
+        hint: Pour une image qui transmet des informations (laisser vide si image décorative)
+        label: Texte alternatif
       filter:
         box: Simple and fast averaging filter appropriate for downscaling (default)
         catmullrom:
@@ -448,7 +451,7 @@ admin:
           filters
       label: Image
       src:
-        hint: 'Resize and compress image before sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        hint: 'Redimensionner et compresser l’image avant l’envoi : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
     images:
       label: Images
@@ -487,6 +490,8 @@ admin:
         carousel: Carrousel
         grid: Grille
         list: Liste
+    legal:
+      label: Légale
     legend:
       label: Légende
     limit:
@@ -546,6 +551,22 @@ admin:
         label: Surface extérieur
       floor:
         label: Étage
+      has_balcony:
+        label: Balcon ?
+      has_cave:
+        label: Cave ?
+      has_elevator:
+        label: Ascenseur ?
+      has_garage:
+        label: Garage ?
+      has_outbuilding:
+        label: Dépendance ?
+      has_parking:
+        label: Parking ?
+      has_swimmingpool:
+        label: Piscine ?
+      has_terrace:
+        label: Terrasse ?
       label: Informations
       levels:
         label: Nombre d’étage
@@ -553,6 +574,8 @@ admin:
         label: Nombre de pièce
       showerrooms:
         label: Nombre de salle d’eau
+      wc:
+        label: WC
       year:
         label: Année de construction
     reference:
