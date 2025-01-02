@@ -1,0 +1,8 @@
+{
+  label: '{{ i18n "admin.fields.gallery.label" }}',
+  name: 'gallery',
+  widget: 'image',
+  required: false,
+  i18n: true,
+  media_library: { config: { multiple: true } }
+}
