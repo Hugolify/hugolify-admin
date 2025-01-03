@@ -1,17 +1,17 @@
 admin:
   blocks:
     alert:
-      label: Alerte
+      label: Alert
     chart:
-      label: Graphique
+      label: Chart
     comparison:
-      label: Comparaison
+      label: Comparison
     cta:
-      label: Appel à l’action
+      label: Call to action
     datas:
-      label: Données
+      label: Datas
     editorial:
-      label: Éditorial
+      label: Editorial
     embed:
       label: Embed
     faq:
@@ -19,9 +19,9 @@ admin:
     figure:
       label: Figure
     form:
-      label: Formulaire
+      label: Form
     gallery:
-      label: Galerie
+      label: Gallery
     images:
       label: Images
     informations:
@@ -29,206 +29,206 @@ admin:
     instagram:
       label: Instagram
     latest:
-      label: Derniers items
+      label: Latest items
     location:
-      label: Lieu
+      label: Location
     logos:
       label: Logos
     map:
-      label: Carte
+      label: Map
     newsletter:
       label: Newsletter
     paragraph:
-      label: Paragraphe
+      label: Paragraph
     pushes:
-      label: Notifications
+      label: Pushes
     quote:
-      label: Citation
+      label: Quote
     selected:
-      label: Sélection {{ .section }}
+      label: Selection {{ .section }}
     testimonials:
-      label: Témoignages
+      label: Testimonials
     timeline:
-      label: Chronologie
+      label: Timeline
     title:
-      label: Titre
+      label: Title
     video:
-      label: Vidéo
+      label: Video
   collections:
     authors:
       label:
-        one: Auteur
-        other: Auteurs
+        one: Author
+        other: Authors
     casestudies:
-      _description: Toutes les études de cas
+      _description: All cases studies
       label:
-        one: Étude de cas
-        other: Études de cas
+        one: Case study
+        other: Cases studies
     categories:
       label:
-        one: Catégorie
-        other: Catégories
+        one: Category
+        other: Categories
     config:
-      _description: Toutes les config
+      _description: All config
       label:
         one: Config
         other: Config
     docs:
-      _description: Tous les docs
+      _description: All docs
       label:
         one: Doc
         other: Docs
     events:
-      _description: Tous les évènements
+      _description: All events
       label:
-        one: Évènement
-        other: Évènements
+        one: Event
+        other: Events
     events_categories:
-      _description: Toutes les catégories d’évènements
+      _description: All events categories
       label:
-        one: Catégorie
-        other: Catégories
+        one: Category
+        other: Categories
     expertises:
-      _description: Toutes les expertises
+      _description: All expertises
       label:
         one: Expertise
         other: Expertises
     indexes:
-      _description: Toutes les pages index
+      _description: All index pages
       label:
         one: Index
         other: Index
     pages:
-      _description: Toutes les pages
+      _description: All pages
       label:
         one: Page
         other: Pages
     persons:
-      _description: Toutes les personnes
+      _description: All persons
       label:
-        one: Personne
-        other: Personnes
+        one: Person
+        other: Persons
     persons_expertises:
-      _description: Toutes les expertises
+      _description: All expertises
       label:
         one: Expertise
         other: Expertises
     persons_places:
-      _description: Tous les endroits
+      _description: All places
       label:
-        one: Endroit
-        other: Endroits
+        one: Place
+        other: Places
     persons_statutes:
-      _description: Tous les statuts
+      _description: All statutes
       label:
-        one: Statut
-        other: Statuts
+        one: Status
+        other: Statutes
     places:
-      _description: Tous les endroits
+      _description: All places
       label:
-        one: Endroit
-        other: Endroits
+        one: Place
+        other: Places
     posts:
-      _description: Toutes les actualités
+      _description: All news
       label:
-        one: Actualité
-        other: Actualités
+        one: New
+        other: News
     posts_categories:
-      _description: Toutes les categories d’actualité
+      _description: All news categories
       label:
-        one: Catégorie
-        other: Catégories
+        one: Category
+        other: Categories
     posts_expertises:
-      _description: Toutes les expertises
+      _description: All expertises
       label:
         one: Expertise
         other: Expertises
     posts_tags:
-      _description: Tous les tags d’actualité
+      _description: All news tags
       label:
         one: Tag
         other: Tags
     products:
-      _description: Tous les produits
+      _description: All products
       label:
-        one: Produit
-        other: Produits
+        one: Product
+        other: Products
     products_categories:
-      _description: Toutes les catégories produits
+      _description: All products categories
       label:
-        one: Catégorie
-        other: Catégories
+        one: Category
+        other: Categories
     products_tags:
-      _description: Tous les tags produits
+      _description: All products tags
       label:
         one: Tag
         other: Tags
     projects:
-      _description: Tous les projets
+      _description: All projects
       label:
-        one: Projet
-        other: Projets
+        one: Project
+        other: Projects
     projects_tags:
-      _description: Tous les tags projets
+      _description: All projects tags
       label:
         one: Tag
         other: Tags
     projects_types:
-      _description: Tous les types de projets
+      _description: All projects types
       label:
         one: Type
         other: Types
     publications:
-      _description: Toutes les parutions
+      _description: All publications
       label:
-        one: Parution
-        other: Parutions
+        one: Publication
+        other: Publications
     publications_categories:
-      _description: Toutes les catégories de parutions
+      _description: All publications categories
       label:
-        one: Catégorie
-        other: Catégories
+        one: Category
+        other: Categories
     publications_expertises:
-      _description: Toutes les expertises
+      _description: All expertises
       label:
         one: Expertise
         other: Expertises
     publications_persons:
       label:
-        one: Personne concernée
-        other: Personnes concernées
+        one: Person
+        other: Persons
     realestates:
-      _description: Toutes les annonces
+      _description: All real estates
       label:
-        one: Annonce immobilière
-        other: Annonces immobilières
+        one: Real estate
+        other: Real estates
     realestates_categories:
-      _description: Toutes les catégories d’annonce immobilière
+      _description: All real estates categories
       label:
-        one: Catégorie
-        other: Catégories
+        one: Categorie
+        other: Categories
     realestates_persons:
-      _description: Tous les agents
+      _description: All agents
       label:
         one: Agent
         other: Agents
     realestates_sellers:
-      _description: Tous les vendeurs
+      _description: All sellers
       label:
-        one: Vendeur
-        other: Vendeurs
+        one: Seller
+        other: Sellers
     services:
-      _description: Tous les services
+      _description: All services
       label:
         one: Service
         other: Services
     services_categories:
-      _description: Toutes les catégories de services
+      _description: All services categories
       label:
-        one: Catégorie
-        other: Catégories
+        one: Category
+        other: Categories
     tags:
-      _description: Tous les tags
+      _description: All tags
       label:
         one: Tag
         other: Tags
@@ -578,8 +578,16 @@ admin:
         label: WC
       year:
         label: Année de construction
+    realestates_types:
+      label: Transaction Type
+      rent:
+        label: Rent
+      sale:
+        label: Sale
     reference:
       label: Reference
+    rent:
+      label: Rent?
     required:
       label: Required
     section:
@@ -601,17 +609,17 @@ admin:
       label:
         one: Social
         other: Socials
-      plateform: Plateforme
+      plateform: Plateform
       twitter:
         label: Twitter/X
-        hint: Nom d’utilisateur
+        hint: Username
     sold:
-      label: Vendu ?
+      label: Sold/rent ?
     state:
       danger: Danger
       dark: Dark
       info: Info
-      label: État
+      label: State
       light: Light
       primary: Primary
       secondary: Secondary

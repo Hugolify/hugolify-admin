@@ -578,8 +578,16 @@ admin:
         label: WC
       year:
         label: Année de construction
+    realestates_types:
+      label: Type de transaction
+      rent:
+        label: Location
+      sale:
+        label: Vente
     reference:
       label: Reference
+    rent:
+      label: Loué ?
     required:
       label: Required
     section:
@@ -606,7 +614,7 @@ admin:
         label: Twitter/X
         hint: Nom d’utilisateur
     sold:
-      label: Vendu ?
+      label: Vendu/loué ?
     state:
       danger: Danger
       dark: Dark
