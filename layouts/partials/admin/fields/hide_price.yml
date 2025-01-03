@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.price.hide" }}',
+  name: 'hide_price',
+  widget: 'boolean',
+  required: false,
+  i18n: 'duplicate'
+}
