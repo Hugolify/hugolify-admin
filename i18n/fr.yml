@@ -325,7 +325,7 @@ admin:
       lng:
         label: Longitude
     count:
-      hint: Numbre d’items à afficher
+      hint: Nombre d’items à afficher
       label: Count
     credit:
       label: Crédit
@@ -456,20 +456,20 @@ admin:
     images:
       label: Images
     is_blank:
-      label: Is blank?
+      label: Nouvelle fenêtre ?
     is_card:
       hint: Ajoute un fond derrière les textes
-      label: Is card?
+      label: Carte ?
     is_half:
       label: Moitié ?
     is_highlighted:
-      label: Is highlighted?
+      label: Mis en avant ?
     is_logo:
       hint: Positionne au centre et n’est pas recadré
-      label: Is logo?
+      label: Logo ?
     is_screenshot:
       hint: Ajoute un faux navigateur autour de l’image
-      label: Is screenshot?
+      label: Capture d’écran ?
     items:
       label:
         one: Item
@@ -589,16 +589,16 @@ admin:
     rent:
       label: Loué ?
     required:
-      label: Required
+      label: Requis
     section:
-      hint: Select the section to display
+      hint: Choix de la section à afficher
       label: Section
     show_more:
       hint: Affiche un bouton pour voir plus d’éléments
-      label: Show more?
+      label: Plus d’items ?
     show_places:
       hint: Only if you have places already saved (this will disable the marker below)
-      label: Show all registered places?
+      label: Affiche tous les endroits ?
     slug:
       hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
       label: Slug

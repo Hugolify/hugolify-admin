@@ -316,7 +316,7 @@ admin:
         one: Contact
         other: Contacts
     controls:
-      label: Contrôles
+      label: Controls
     coordinates:
       hint: 'Trouvez facilement les coordonnées : https://www.latlong.net/convert-address-to-lat-long.html'
       label: Coordonnées géographique
@@ -325,7 +325,7 @@ admin:
       lng:
         label: Longitude
     count:
-      hint: Numbre d’items à afficher
+      hint: Items to display
       label: Count
     credit:
       label: Crédit
@@ -334,10 +334,10 @@ admin:
         one: CTA
         other: CTAs
     date:
-      from: À partir du
+      from: From
       label: Date
-      sale: Date de vente
-      to: Jusqu’au
+      sale: Sale date
+      to: To
     description:
       hint:
         Displayed in tabs, search results, and in SMS/Messages/Social networks
@@ -354,22 +354,22 @@ admin:
         rtl: Image à gauche / texte à droite
     discount:
       hint: 'Montant de la réduction, exemple : 30%'
-      label: Réduction
+      label: Discount
       pattern: La valeur seulement (sans la devise)
     document:
       label:
         one: Document
         other: Documents
     draft:
-      label: Brouillon
+      label: Draft
     email:
       label: Email
     embed:
       label: Embed
     event:
       label:
-        one: Évènement
-        other: Évènements
+        one: Event
+        other: Events
     fax:
       label: Fax
       hint: 'Format international, ex: +33 1 23 45 67 89'
@@ -383,27 +383,27 @@ admin:
       label: Figure
     form:
       autocomplete:
-        country_name: Nom du pays
+        country_name: Country name
         email: Email
-        family_name: Nom de famille
-        given_name: Prénom
+        family_name: Lastname
+        given_name: Firstname
         label: Autocomplete
-        name: Nom
-        organization: Entreprise
-        postal_code: Code postal
-        street_address: Rue
+        name: Name
+        organization: Organization
+        postal_code: Postal code
+        street_address: Street
         tel: Tel
       full:
         label: Champ en pleine largeur ?
       hiddens:
         label:
-          one: Champ caché
-          other: Champs cachés
+          one: Hidden field
+          other: Hidden fields
       items:
         label:
-          one: Champ
-          other: Champs
-      label: Formulaire
+          one: Field
+          other: Fields
+      label: Form
       options:
         hint: Seulement pour les champs select
         label:
@@ -413,11 +413,11 @@ admin:
         email: Email
         label: Type
         select: Select
-        tel: Téléphone
-        text: Texte
-        textarea: Zone de texte
+        tel: Telephone
+        text: Text
+        textarea: Textarea
     gallery:
-      label: Galerie
+      label: Galerry
     grid:
       container: Container
       full: Full
@@ -426,12 +426,12 @@ admin:
       medium: Medium
       small: Small
     heading:
-      label: En-tête
+      label: Heading
     hero:
       label: Hero
     icon:
       hint: Nom de l’icon provenant de https://icons.getbootstrap.com/
-      label: Icone
+      label: Icon
     image:
       alt:
         hint: Pour une image qui transmet des informations (laisser vide si image décorative)
@@ -461,14 +461,14 @@ admin:
       hint: Ajoute un fond derrière les textes
       label: Is card?
     is_half:
-      label: Moitié ?
+      label: Half size?
     is_highlighted:
       label: Is highlighted?
     is_logo:
       hint: Positionne au centre et n’est pas recadré
       label: Is logo?
     is_screenshot:
-      hint: Ajoute un faux navigateur autour de l’image
+      hint: Add fake browser
       label: Is screenshot?
     items:
       label:
@@ -477,38 +477,38 @@ admin:
     keyfeatures:
       hint: 'exemple : Localisation, exposition…'
       label:
-        one: Point clé
-        other: Points clés
+        one: key feature
+        other: Key features
     label:
       label: Label
     lang:
       hint: Enter code lang (e.g. fr) if different of the current page language
-      label: Langue
+      label: Language
     layout:
-      label: Affichage
+      label: Layout
       options:
-        carousel: Carrousel
-        grid: Grille
-        list: Liste
+        carousel: Carousel
+        grid: Grid
+        list: List
     legal:
       label: Legal
     legend:
-      label: Légende
+      label: Legend
     limit:
-      label: Limite
+      label: Limit
     links:
       label:
-        one: Lien
-        other: Liens
+        one: Link
+        other: Links
     loop:
-      label: Boucle
+      label: Loop
     name:
-      label: Nom
+      label: Name
     map:
-      label: Carte
+      label: Map
     newsletter:
       form:
-        label: Formulaire
+        label: Form
     offer:
       label: Offer
     offset:
@@ -518,7 +518,7 @@ admin:
         end: End
         start: Start
     parent:
-      label: Page parente
+      label: Parent page
     pdf:
       label: PDF
       hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
@@ -532,10 +532,10 @@ admin:
     press:
       label: Presse
     price:
-      hide: Cacher le prix
-      hint: 'exemple : 300000 (pour 300 000 €)'
-      label: Prix
-      sold: Prix vendu
+      hide: Hide price
+      hint: 'e.g: 300000 (for 300 000 €)'
+      label: Price
+      sold: Sale price
     realestates_informations:
       area:
         hint: Exprimé en m2
@@ -545,12 +545,12 @@ admin:
       bedrooms:
         label: Nombre de chambre
       district:
-        label: Quartier
+        label: District
       field:
         hint: Exprimé en m2
         label: Surface extérieur
       floor:
-        label: Étage
+        label: Floor
       has_balcony:
         label: Balcon?
       has_cave:
@@ -560,13 +560,13 @@ admin:
       has_garage:
         label: Garage?
       has_outbuilding:
-        label: Dépendance?
+        label: Outbuilding?
       has_parking:
         label: Parking?
       has_swimmingpool:
-        label: Piscine?
+        label: Swimmingpool?
       has_terrace:
-        label: Terrasse?
+        label: Terrace?
       label: Informations
       levels:
         label: Nombre d’étage
