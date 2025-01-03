@@ -18,6 +18,7 @@
   "date" 
   "title_page" 
   "description"
+  "realestates_types" 
   "reference"
   $realestates_categories 
   $realestates_persons 

@@ -1,0 +1,19 @@
+{
+  label: '{{ i18n "admin.fields.realestates_types.label" }}',
+  name: 'realestates_types',
+  widget: 'select',
+  required: false,
+  i18n: true,
+  default: 'sale',
+  options:
+    [
+      {
+        label: '{{ i18n "admin.fields.realestates_types.rent.label" }}',
+        value: 'rent'
+      },
+      {
+        label: '{{ i18n "admin.fields.realestates_types.sale.label" }}',
+        value: 'sale'
+      }
+    ]
+}
