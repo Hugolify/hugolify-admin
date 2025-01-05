@@ -99,6 +99,13 @@
         min: 0
       },
       {
+        label: '{{ i18n "admin.fields.realestates_informations.exposure.label" }}',
+        name: 'exposure',
+        widget: 'string',
+        required: false,
+        i18n: true
+      },
+      {
         label: '{{ i18n "admin.fields.realestates_informations.has_balcony.label" }}',
         name: 'has_balcony',
         widget: 'boolean',

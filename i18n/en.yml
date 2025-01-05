@@ -377,8 +377,9 @@ admin:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Image principale
     fee:
-      one: Fee
-      other: Fees
+      label:
+        one: Fee
+        other: Fees
     figure:
       label: Figure
     form:
@@ -546,6 +547,8 @@ admin:
         label: Nombre de chambre
       district:
         label: District
+      exposure:
+        label: Exposure
       field:
         hint: Exprimé en m2
         label: Surface extérieur
