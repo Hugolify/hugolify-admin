@@ -1,4 +1,3 @@
-
 {
   label: '{{ i18n "admin.fields.diagnostic.label" }}',
   name: 'diagnostic',
@@ -6,24 +5,32 @@
   required: false,
   i18n: true,
   collapsed: true,
-  fields: [
-    {
-      label: '{{ i18n "admin.fields.diagnostic.dpe" }}',
-      name: 'dpe',
-      widget: 'number',
-      required: false,
-      i18n: 'duplicate',
-      value_type: 'float',
-      min: 0
-    },
-    {
-      label: '{{ i18n "admin.fields.diagnostic.ges" }}',
-      name: 'ges',
-      widget: 'number',
-      required: false,
-      i18n: 'duplicate',
-      value_type: 'float',
-      min: 0
-    }
-  ]
+  fields:
+    [
+      {
+        label: '{{ i18n "admin.fields.diagnostic.dpe" }}',
+        name: 'dpe',
+        widget: 'number',
+        required: false,
+        i18n: 'duplicate',
+        value_type: 'float',
+        min: 0
+      },
+      {
+        label: '{{ i18n "admin.fields.diagnostic.ges" }}',
+        name: 'ges',
+        widget: 'number',
+        required: false,
+        i18n: 'duplicate',
+        value_type: 'float',
+        min: 0
+      },
+      {
+        label: '{{ i18n "admin.fields.diagnostic.in_progress" }}',
+        name: 'in_progress',
+        widget: 'boolean',
+        required: false,
+        i18n: 'duplicate'
+      }
+    ]
 }
