@@ -235,18 +235,18 @@ admin:
   fields:
     address:
       city:
-        label: Ville
+        label: City
       country:
-        label: Pays
-      label: Addresse
+        label: Country
+      label: Address
       street:
-        label: Rue
+        label: Street
       zipcode:
-        label: Code postal
+        label: Postal code
     align:
       center: Center
       end: End
-      label: Alignement
+      label: Alignment
       start: Start
     arguments:
       label:
@@ -255,11 +255,11 @@ admin:
     autoplay:
       label: Autoplay
     background:
-      label: Avec un background ?
+      label: With a background?
     background_color:
-      label: Couleur du fond
+      label: Background color
     badge:
-      hint: Afficher un badge
+      hint: Show a badge
       label: Badge
     blocks:
       label:
@@ -268,7 +268,7 @@ admin:
     body:
       label: Body
     breakpoints:
-      hint: Dimension de l’écran
+      hint: Screen size
       label:
         one: Breakpoint
         other: Breakpoints
@@ -280,14 +280,14 @@ admin:
         wide_tablet: Wide tablet
     carousel:
       arrows:
-        label: Flèches
+        label: Arrows
       autoplay:
         label: Autoplay
       focus:
-        hint: Positionner le slide actif au centre ?
+        hint: Position active slide in center?
         label: Focus
       gap:
-        hint: L’écart entre les slides. Exprimé en rem.
+        hint: The gap between slides. Expressed in rem.
         label: Gap
       hint: Seulement pour un affichage en carrousel
       label: Configuration carrousel
@@ -297,20 +297,20 @@ admin:
       pagination:
         label: Pagination
       params:
-        label: Paramêtres
+        label: Params
       perpage:
-        hint: Nombre de slide à afficher
-        label: Par page
+        hint: Number of slides to display
+        label: Per page
       responsive:
         label: Responsive
       type:
-        label: Type de carrousel
+        label: Carousel type
     code:
       label: Code
     color:
-      label: Couleur
+      label: Color
     column:
-      label: Colonne
+      label: Column
     contact:
       label:
         one: Contact
@@ -318,8 +318,8 @@ admin:
     controls:
       label: Controls
     coordinates:
-      hint: 'Trouvez facilement les coordonnées : https://www.latlong.net/convert-address-to-lat-long.html'
-      label: Coordonnées géographique
+      hint: 'Easily find contact details: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Geographic coordinates
       lat:
         label: Latitude
       lng:
@@ -328,7 +328,7 @@ admin:
       hint: Items to display
       label: Count
     credit:
-      label: Crédit
+      label: Credit
     cta:
       label:
         one: CTA
@@ -347,6 +347,7 @@ admin:
       dpe: DPE
       ges: GES
       label: Diagnostic
+      in_progress: In progress?
     direction:
       label: Direction
       options:
@@ -537,25 +538,41 @@ admin:
       hint: 'e.g: 300000 (for 300 000 €)'
       label: Price
       sold: Sale price
+    realestates_energies:
+      label:
+        one: Energy
+        other: Energies
+      heating:
+        label: Heating
+        collective: Collective
+        individual: Individual
+      heating_type:
+        label: Heating type
+        reversible_ac: Reversible AC
+        electric: Electric
+        gas: Gas
+        solar: Solar
     realestates_informations:
       area:
-        hint: Exprimé en m2
-        label: Surface intérieur
+        hint: Expressed in m2
+        label: Interior surface
       bathrooms:
-        label: Nombre de salle de bain
+        label: Number of bathrooms
       bedrooms:
-        label: Nombre de chambre
+        label: Number of rooms
       district:
         label: District
       exposure:
         label: Exposure
       field:
-        hint: Exprimé en m2
-        label: Surface extérieur
+        hint: Expressed in m2
+        label: Exterior surface
       floor:
         label: Floor
       has_balcony:
         label: Balcon?
+      has_box:
+        label: Box?
       has_cave:
         label: Cave?
       has_elevator:
@@ -572,15 +589,15 @@ admin:
         label: Terrace?
       label: Informations
       levels:
-        label: Nombre d’étage
+        label: Number of floors
       rooms:
-        label: Nombre de pièce
+        label: Number of rooms
       showerrooms:
-        label: Nombre de salle d’eau
+        label: Number of showerrooms
       wc:
         label: WC
       year:
-        label: Année de construction
+        label: Year of construction
     realestates_types:
       label: Transaction Type
       rent:
@@ -597,7 +614,7 @@ admin:
       hint: Select the section to display
       label: Section
     show_more:
-      hint: Affiche un bouton pour voir plus d’éléments
+      hint: Shows a button to see more items
       label: Show more?
     show_places:
       hint: Only if you have places already saved (this will disable the marker below)
@@ -629,63 +646,63 @@ admin:
       success: Success
       warning: Warning
     status:
-      label: Statut
+      label: Status
     submit:
-      label: Texte du bouton d’envoie
+      label: Send button text
     subtitle:
-      label: Sous-titre
+      label: Subtitle
     suffix:
-      hint: 'exemple : %'
+      hint: 'e.g: %'
       label: Suffix
     surtitle:
-      label: Sur-titre
+      label: Surtitle
     text:
-      label: Texte
+      label: Text
     title:
-      label: Titre
+      label: Title
     title_page:
       hint:
         Displayed in tabs, search results, and in SMS/Messages/Social networks
         preview
-      label: Titre de la page
+      label: Page title
     transcription:
       label: Transcription
     url:
       label: URL
     value:
-      label: Valeur
+      label: Value
     video:
-      label: Vidéo
+      label: Video
       mp4:
-        hint: Vidéo en format MP4
+        hint: Vidéo (MP4)
       webm:
-        hint: Vidéo en format WEBM
+        hint: Video (WEBM)
     website:
       hint: URL (https://…)
-      label: Site Web
+      label: Website
     weight:
       label: Position (importance)
-      hint: Sachant que 1 est le plus important et 10 le moins important
-    year: Année
+      hint: Knowing that 1 is the most important and 10 the least important
+    year: Year
     zoom:
       label: Zoom
   files:
-    banner: Bannière d’information en haut du site
-    footer: Texte d’information en bas du site
+    banner: Information banner at the top of the site
+    footer: Information text at the bottom of the site
     nav:
       label: Navigation
-      legal: Navigation légales (mentions, politiques…)
-      primary: Navigation principale
-      secondary: Navigation secondaire
-      social: Navigation réseaux sociaux
+      legal: Legals navigation (mentions, polity…)
+      primary: Primary navigation
+      secondary: Secondary navigation
+      social: Socials navigation
     seo:
       label: Global SEO
-      title: Nom du site
+      title: Website name
   group:
-    year: Année
+    year: Year
   shortcodes:
     button:
-      label: Bouton
+      label: Button
     figure:
       label: Figure
     twitter:

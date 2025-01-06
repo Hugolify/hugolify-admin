@@ -347,6 +347,7 @@ admin:
       dpe: DPE
       ges: GES
       label: Diagnostic
+      in_progress: En cours ?
     direction:
       label: Direction
       options:
@@ -511,7 +512,7 @@ admin:
       form:
         label: Formulaire
     offer:
-      label: Offer
+      label: Offre
     offset:
       label: Offset
       options:
@@ -537,6 +538,20 @@ admin:
       hint: 'exemple : 300000 (pour 300 000 €)'
       label: Prix
       sold: Prix vendu
+    realestates_energies:
+      label:
+        one: Energie
+        other: Energies
+      heating:
+        label: Chauffage
+        collective: Collectif
+        individual: Individuel
+      heating_type:
+        label: Type de chauffage
+        reversible_ac: Climatisation réversible
+        electric: Electrique
+        gas: Gaz
+        solar: Solaire
     realestates_informations:
       area:
         hint: Exprimé en m2
@@ -556,6 +571,8 @@ admin:
         label: Étage
       has_balcony:
         label: Balcon ?
+      has_box:
+        label: Box ?
       has_cave:
         label: Cave ?
       has_elevator:
