@@ -15,7 +15,7 @@
   
   {{ partial "admin/collections/config/icon.yml" "real_estate_agent" }}
   {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" (dict "fields" "[date, title]") }}
   {{ partial "admin/collections/config/summary.yml" "{{title}} - {{date | date('YYYY-MM-DD')}}" }}
   
   {{ partial "admin/collections/fields.yml" (dict "collection" "realestates") }}
