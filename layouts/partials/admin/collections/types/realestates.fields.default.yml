@@ -23,7 +23,7 @@
   $realestates_categories 
   $realestates_persons 
   $realestates_sellers 
-  "offer" 
+  "realestates_offer" 
   "realestates_informations" 
   "diagnostic" 
   "keyfeatures" 

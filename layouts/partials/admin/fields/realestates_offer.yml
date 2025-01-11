@@ -1,8 +1,8 @@
 {{- $fields := slice 
   "price" 
-  "discount" 
-  "hide_price" 
-  "text" -}}
+  "is_sold" 
+  "is_exlusive" 
+  "hide_price" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.offer.label" }}',

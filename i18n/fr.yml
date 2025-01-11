@@ -462,6 +462,8 @@ admin:
     is_card:
       hint: Ajoute un fond derrière les textes
       label: Carte ?
+    is_exclusive:
+      label: Exclusif ?
     is_half:
       label: Moitié ?
     is_highlighted:
