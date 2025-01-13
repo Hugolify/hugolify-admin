@@ -1,0 +1,12 @@
+{{ $view_filters := (index site.Params.admin.collections .).view_filters }}
+{{ if $view_filters }}
+view_filters: [
+  {{ range $view_filters }}
+    {
+      label: "{{ .label }}",
+      field: "{{ .field }}",
+      pattern: "{{ .pattern }}"
+    },
+  {{ end }}
+],
+{{ end }}

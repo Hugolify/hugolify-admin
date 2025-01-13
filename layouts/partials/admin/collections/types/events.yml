@@ -16,6 +16,7 @@
   {{ partial "admin/collections/config/icon.yml" "event" }}
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" (dict "fields" "[commit_date, title]") }}
+  {{ partial "admin/collections/config/view_filters.yml" "events" }}
   {{ partial "admin/collections/config/summary.yml" "{{title}} - {{date | date('YYYY-MM-DD')}}" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "events") }}

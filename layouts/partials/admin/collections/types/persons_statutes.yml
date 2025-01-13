@@ -16,6 +16,7 @@
   {{ partial "admin/collections/config/icon.yml" "info" }}
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/view_filters.yml" "persons_statutes" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "persons_statutes") }}
 }

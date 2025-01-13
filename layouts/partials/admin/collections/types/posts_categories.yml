@@ -16,6 +16,7 @@
   {{ partial "admin/collections/config/icon.yml" "bookmarks" }}
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/view_filters.yml" "posts_categories" }}
 
   {{ partialCached "admin/collections/fields.terms.default.yml" . }}
 }
