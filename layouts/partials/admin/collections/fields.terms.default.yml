@@ -1,10 +1,7 @@
-{{- $fields := slice 
+{{- return slice 
   "id" 
   "is_not_index" 
   "draft" 
   "title_page" 
   "description"
   "slug" -}}
-fields: [
-  {{ partial "admin/fields/_range-fields.yml" $fields }}
-]

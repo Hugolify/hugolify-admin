@@ -18,5 +18,5 @@
   {{ partial "admin/collections/config/sortable.yml" }}
   {{ partial "admin/collections/config/view_filters.yml" "publications_categories" }}
 
-  {{ partialCached "admin/collections/fields.terms.default.yml" . }}
+  {{ partial "admin/collections/fields.yml" (dict "collection" "publications_categories") }}
 }
