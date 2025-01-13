@@ -8,8 +8,9 @@
   fields:
     [
       {
-        label: '{{ i18n "admin.fields.diagnostic.dpe" }}',
-        name: 'dpe',
+        label: '{{ i18n "admin.fields.diagnostic.epd.label" }}',
+        hint: '{{ i18n "admin.fields.diagnostic.epd.hint" }}',
+        name: 'kwh',
         widget: 'number',
         required: false,
         i18n: 'duplicate',
@@ -17,8 +18,9 @@
         min: 0
       },
       {
-        label: '{{ i18n "admin.fields.diagnostic.ges" }}',
-        name: 'ges',
+        label: '{{ i18n "admin.fields.diagnostic.ghg.label" }}',
+        hint: '{{ i18n "admin.fields.diagnostic.ghg.hint" }}',
+        name: 'co2',
         widget: 'number',
         required: false,
         i18n: 'duplicate',

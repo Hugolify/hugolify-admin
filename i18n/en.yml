@@ -344,8 +344,12 @@ admin:
         preview
       label: Description
     diagnostic:
-      dpe: DPE
-      ges: GES
+      epd:
+        label: Kwh
+        hint: Energy performance diagnostics (DPE)
+      ghg:
+        label: Co2
+        hint: Greenhouse gas (GHG)
       label: Diagnostic
       in_progress: In progress?
     direction:
