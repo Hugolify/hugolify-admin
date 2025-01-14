@@ -114,20 +114,20 @@ admin:
         one: Expertise
         other: Expertises
     persons_places:
-      _description: Tous les endroits
+      _description: Tous les lieux
       label:
-        one: Endroit
-        other: Endroits
+        one: Lieu
+        other: Lieux
     persons_statutes:
       _description: Tous les statuts
       label:
         one: Statut
         other: Statuts
     places:
-      _description: Tous les endroits
+      _description: Tous les lieux
       label:
-        one: Endroit
-        other: Endroits
+        one: Lieu
+        other: Lieux
     posts:
       _description: Toutes les actualités
       label:
@@ -624,7 +624,7 @@ admin:
       label: Plus d’items ?
     show_places:
       hint: Only if you have places already saved (this will disable the marker below)
-      label: Affiche tous les endroits ?
+      label: Affiche tous les lieux ?
     slug:
       hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
       label: Slug
