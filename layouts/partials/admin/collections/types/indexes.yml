@@ -10,7 +10,6 @@
   i18n: true,
 
   path: '{{`{{slug}}/_index`}}',
-  nested: { depth: 2 }, 
   
   {{ partial "admin/collections/config/icon.yml" "schema" }}
   {{ partial "admin/collections/config/filter.yml" (dict "field" "isIndex" "value" true) }}
@@ -18,4 +17,6 @@
   {{ partial "admin/collections/config/view_filters.yml" "indexes" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
+
+  {{ partial "admin/collections/config/nested.yml" . }}
 }
