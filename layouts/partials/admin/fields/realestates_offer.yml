@@ -1,7 +1,8 @@
 {{- $fields := slice 
   "price" 
   "is_sold" 
-  "is_exlusive" 
+  "is_exclusive" 
+  "status" 
   "hide_price" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {
