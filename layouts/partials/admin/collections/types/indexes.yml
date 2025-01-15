@@ -9,8 +9,6 @@
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
-  path: '{{`{{slug}}/_index`}}',
-  
   {{ partial "admin/collections/config/icon.yml" "schema" }}
   {{ partial "admin/collections/config/filter.yml" (dict "field" "isIndex" "value" true) }}
   {{ partial "admin/collections/config/sortable.yml" }}
