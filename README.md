@@ -3,6 +3,7 @@
 `[BETA]`
 
 ## CMS available
+
 - Decap CMS: https://decapcms.org/docs/
 - Netlify CMS `deprecated`
 - Static CMS: https://staticjscms.netlify.app/ `deprecated`
@@ -36,9 +37,9 @@ params:
   admin:
     cms: decapcms # All CMS available https://www.hugolify.io/docs/cms/admin/cms/
     config:
-      id: false # set true to use ID for dir/name files and relation 
+      id: false # set true to use ID for dir/name files and relation
     i18n:
-      default_locale: en # master lang for an i18n website 
+      default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
     media:
       max_file_size: 700000
@@ -81,14 +82,17 @@ params:
 
     # Collections
     collections:
-      # Collections (except indexes and pages) are automatically added based on Hugo modules config, but you can hide a collection if needed.
+      # Collections (except config, indexes and pages) are automatically added based on Hugo modules config, but you can hide a collection if needed.
+      config:
+        enable: true
       indexes:
         enable: true
-      pages: 
+      pages:
         enable: true
 
         # Override fields of collection fields
         fields:
+          - is_page
           - draft
           - title_page
           - description
