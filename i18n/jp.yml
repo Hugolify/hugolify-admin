@@ -508,6 +508,8 @@ admin:
       label:
         one: Link
         other: Links
+    location:
+      label: Location
     loop:
       label: Loop
     name:

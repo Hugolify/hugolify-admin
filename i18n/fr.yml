@@ -508,6 +508,8 @@ admin:
       label:
         one: Lien
         other: Liens
+    location:
+      label: Lieu
     loop:
       label: Boucle
     name:
