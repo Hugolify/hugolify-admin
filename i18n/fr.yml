@@ -98,6 +98,11 @@ admin:
       label:
         one: Index
         other: Index
+    jobs:
+      _description: Toutes les offres d’emploi
+      label:
+        one: Offre d’emploi
+        other: Offres d’emploi
     pages:
       _description: Toutes les pages
       label:
@@ -266,7 +271,7 @@ admin:
         one: Bloc
         other: Blocs
     body:
-      label: Body
+      label: Corps du texte
     breakpoints:
       hint: Dimension de l’écran
       label:

@@ -1,1 +1,2 @@
 **/*.html
+layouts/partials/admin/**/*.yml

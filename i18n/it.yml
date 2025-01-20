@@ -98,6 +98,11 @@ admin:
       label:
         one: Index
         other: Index
+    jobs:
+      _description: All jobs
+      label:
+        one: Job
+        other: Jobs
     pages:
       _description: All pages
       label:
