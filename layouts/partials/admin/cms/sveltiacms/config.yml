@@ -4,7 +4,7 @@ backend:
   {{ with site.Params.admin.repo }}
   repo: {{ . }}
   {{ end }}
-  automatic_deployments: false
+  automatic_deployments: {{ site.Params.admin.automatic_deployments | default false }}
 
 display_url: {{ site.BaseURL }}
 
