@@ -26,5 +26,6 @@
   $jobs_expertises 
   $jobs_places 
   $jobs_tags 
+  "keyfeatures"
   "body"
   "slug" -}}
