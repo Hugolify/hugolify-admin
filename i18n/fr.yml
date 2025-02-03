@@ -103,6 +103,26 @@ admin:
       label:
         one: Offre d’emploi
         other: Offres d’emploi
+    jobs_categories:
+      _description: Toutes les catégories produits
+      label:
+        one: Catégorie
+        other: Catégories
+    jobs_expertises:
+      _description: Toutes les expertises
+      label:
+        one: Expertise
+        other: Expertises
+    jobs_places:
+      _description: Tous les lieux
+      label:
+        one: Lieu
+        other: Lieux
+    jobs_tags:
+      _description: Tous les tags produits
+      label:
+        one: Tag
+        other: Tags
     pages:
       _description: Toutes les pages
       label:

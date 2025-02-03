@@ -103,6 +103,26 @@ admin:
       label:
         one: Job
         other: Jobs
+    jobs_categories:
+      _description: All news categories
+      label:
+        one: Category
+        other: Categories
+    jobs_expertises:
+      _description: All expertises
+      label:
+        one: Expertise
+        other: Expertises
+    jobs_places:
+      _description: All places
+      label:
+        one: Place
+        other: Places
+    jobs_tags:
+      _description: All products tags
+      label:
+        one: Tag
+        other: Tags
     pages:
       _description: All pages
       label:
@@ -294,8 +314,8 @@ admin:
       gap:
         hint: The gap between slides. Expressed in rem.
         label: Gap
-      hint: Seulement pour un affichage en carrousel
-      label: Configuration carrousel
+      hint: Only for carousel display
+      label: Carousel configuration
       padding:
         hint: Padding left/right of the carousel. In rem value
         label: Padding
@@ -360,12 +380,12 @@ admin:
     direction:
       label: Direction
       options:
-        ltr: Texte à gauche / image à droite
-        rtl: Image à gauche / texte à droite
+        ltr: Text on the left / image on the right
+        rtl: Image on the left / text on the right
     discount:
-      hint: 'Montant de la réduction, exemple : 30%'
+      hint: 'Amount of the reduction, e.g: 30%'
       label: Discount
-      pattern: La valeur seulement (sans la devise)
+      pattern: Value only (without currency)
     document:
       label:
         one: Document
@@ -382,7 +402,7 @@ admin:
         other: Events
     fax:
       label: Fax
-      hint: 'Format international, ex: +33 1 23 45 67 89'
+      hint: 'International format, e.g: +33 1 23 45 67 89'
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Image principale
@@ -405,7 +425,7 @@ admin:
         street_address: Street
         tel: Tel
       full:
-        label: Champ en pleine largeur ?
+        label: Full width field?
       hiddens:
         label:
           one: Hidden field
@@ -416,7 +436,7 @@ admin:
           other: Fields
       label: Form
       options:
-        hint: Seulement pour les champs select
+        hint: Only for select fields
         label:
           one: Option
           other: Options
