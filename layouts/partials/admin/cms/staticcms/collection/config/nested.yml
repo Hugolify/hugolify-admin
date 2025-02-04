@@ -1,5 +1,8 @@
-nested: { 
-  depth: {{ site.Params.admin.nested.depth }},
+{{ $nested := (index site.Params.admin.collections .).nested | default site.Params.admin.nested.depth }}
+{{ if gt $nested 1 }}
+nested: {
+  depth: {{ $nested }},
   summary: '{{`{{title}}`}}'
 },
 {{ partialCached "admin/cms/staticcms/collection/config/parent.yml" . }}
+{{ end }}

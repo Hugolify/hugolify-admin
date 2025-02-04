@@ -16,5 +16,5 @@
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
 
-  {{ partial "admin/collections/config/nested.yml" . }}
+  {{ partial "admin/collections/config/nested.yml" "indexes" }}
 }

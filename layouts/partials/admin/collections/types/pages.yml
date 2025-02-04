@@ -19,5 +19,5 @@
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "pages") }}
   
-  {{ partial "admin/collections/config/nested.yml" . }}
+  {{ partial "admin/collections/config/nested.yml" "pages" }}
 }
