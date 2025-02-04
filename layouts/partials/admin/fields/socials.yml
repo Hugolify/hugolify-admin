@@ -24,7 +24,6 @@
         { label: 'Vimeo', value: 'vimeo' },
         { label: 'Youtube', value: 'youtube' }
       ],
-      default: 'linkedin',
       required: true,
       i18n: 'duplicate'
     },
