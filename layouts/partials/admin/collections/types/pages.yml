@@ -14,8 +14,10 @@
   
   {{ partial "admin/collections/config/icon.yml" "description" }}
   {{ partial "admin/collections/config/filter.yml" (dict "field" "isPage" "value" true) }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" "pages" }}
+  {{ partial "admin/collections/config/summary.yml" "pages" }}
   {{ partial "admin/collections/config/view_filters.yml" "pages" }}
+  {{ partial "admin/collections/config/view_groups.yml" "pages" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "pages") }}
   

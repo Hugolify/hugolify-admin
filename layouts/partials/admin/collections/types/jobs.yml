@@ -16,7 +16,10 @@
   
   {{ partial "admin/collections/config/icon.yml" "work" }}
   {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" "jobs" }}
+  {{ partial "admin/collections/config/summary.yml" "jobs" }}
+  {{ partial "admin/collections/config/view_filters.yml" "jobs" }}
+  {{ partial "admin/collections/config/view_groups.yml" "jobs" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "jobs") }}
 }

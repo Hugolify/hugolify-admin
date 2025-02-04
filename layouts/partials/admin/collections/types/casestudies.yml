@@ -14,8 +14,10 @@
   
   {{ partial "admin/collections/config/icon.yml" "amp_stories" }}
   {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" "casestudies" }}
+  {{ partial "admin/collections/config/summary.yml" "casestudies" }}
   {{ partial "admin/collections/config/view_filters.yml" "casestudies" }}
+  {{ partial "admin/collections/config/view_groups.yml" "casestudies" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "casestudies") }}
 }

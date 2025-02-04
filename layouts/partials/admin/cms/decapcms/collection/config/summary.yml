@@ -1,1 +1,3 @@
+{{- with (index site.Params.admin.collections .).summary -}}
 summary: "{{ . }}",
+{{- end -}}

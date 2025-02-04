@@ -15,8 +15,10 @@
   
   {{ partial "admin/collections/config/icon.yml" "space_dashboard" }}
   {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" "projects" }}
+  {{ partial "admin/collections/config/summary.yml" "projects" }}
   {{ partial "admin/collections/config/view_filters.yml" "projects" }}
+  {{ partial "admin/collections/config/view_groups.yml" "projects" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "projects") }}
 }

@@ -11,8 +11,10 @@
 
   {{ partial "admin/collections/config/icon.yml" "schema" }}
   {{ partial "admin/collections/config/filter.yml" (dict "field" "isIndex" "value" true) }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" "indexes" }}
+  {{ partial "admin/collections/config/summary.yml" "indexes" }}
   {{ partial "admin/collections/config/view_filters.yml" "indexes" }}
+  {{ partial "admin/collections/config/view_groups.yml" "indexes" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
 

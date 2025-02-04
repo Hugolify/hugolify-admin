@@ -14,8 +14,10 @@
 
   {{ partial "admin/collections/config/icon.yml" "location_on" }}
   {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" "places" }}
+  {{ partial "admin/collections/config/summary.yml" "places" }}
   {{ partial "admin/collections/config/view_filters.yml" "places" }}
+  {{ partial "admin/collections/config/view_groups.yml" "places" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "places") }}
 }
