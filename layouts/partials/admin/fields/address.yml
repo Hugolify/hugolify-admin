@@ -1,9 +1,10 @@
+{{- $pin := cond (eq site.Params.admin.cms "decapcms") "location" "coordinates" -}}
 {{- $fields := slice 
   "street" 
   "zipcode" 
   "city" 
   "country"
-  "coordinates" -}}
+  $pin -}}
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.address.label" }}',
