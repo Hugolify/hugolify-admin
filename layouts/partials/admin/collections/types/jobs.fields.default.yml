@@ -3,12 +3,12 @@
   {{- $jobs_categories = dict "relation" (dict "collection" "jobs_categories" "multiple" true) -}}
 {{- end -}}
 {{- $jobs_expertises := false -}}
-{{- if site.Params.admin.collections.jobs_expertises.enable -}}
-  {{- $jobs_expertises = dict "relation" (dict "collection" "jobs_expertises" "multiple" true) -}}
+{{- if site.Params.admin.collections.expertises.enable -}}
+  {{- $jobs_expertises = dict "relation" (dict "collection" "expertises" "name" "jobs_expertises" "multiple" true) -}}
 {{- end -}}
 {{- $jobs_places := false -}}
-{{- if site.Params.admin.collections.jobs_places.enable -}}
-  {{- $jobs_places = dict "relation" (dict "collection" "jobs_places" "multiple" true) -}}
+{{- if site.Params.admin.collections.places.enable -}}
+  {{- $jobs_places = dict "relation" (dict "collection" "places" "name" "jobs_places" "multiple" true) -}}
 {{- end -}}
 {{- $jobs_tags := false -}}
 {{- if site.Params.admin.collections.jobs_tags.enable -}}
