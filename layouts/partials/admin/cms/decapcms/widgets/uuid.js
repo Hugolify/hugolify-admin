@@ -1,1 +1,0 @@
-CMS.registerWidget('uuid', uuidWidget.UuidControl, uuidWidget.UuidPreview)
