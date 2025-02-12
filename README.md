@@ -1,7 +1,5 @@
 # hugolify-admin
 
-`[BETA]`
-
 ## CMS available
 
 - Decap CMS: https://decapcms.org/docs/
