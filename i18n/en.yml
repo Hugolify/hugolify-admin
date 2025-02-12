@@ -448,7 +448,7 @@ admin:
         text: Text
         textarea: Textarea
     gallery:
-      label: Galerry
+      label: Gallery
     grid:
       container: Container
       full: Full
@@ -461,12 +461,12 @@ admin:
     hero:
       label: Hero
     icon:
-      hint: Nom de l’icon provenant de https://icons.getbootstrap.com/
+      hint: Icon name from https://icons.getbootstrap.com/
       label: Icon
     image:
       alt:
-        hint: Pour une image qui transmet des informations (laisser vide si image décorative)
-        label: Texte alternatif
+        hint: For an image that conveys information (leave blank if decorative image)
+        label: Text alternative
       filter:
         box: Simple and fast averaging filter appropriate for downscaling (default)
         catmullrom:
@@ -482,14 +482,14 @@ admin:
           filters
       label: Image
       src:
-        hint: 'Redimensionner et compresser l’image avant l’envoi : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        hint: 'Resize and compress image before sending : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
     images:
       label: Images
     is_blank:
       label: Is blank?
     is_card:
-      hint: Ajoute un fond derrière les textes
+      hint: Adds a background behind the text
       label: Is card?
     is_exclusive:
       label: Exclusive?
@@ -498,7 +498,7 @@ admin:
     is_highlighted:
       label: Is highlighted?
     is_logo:
-      hint: Positionne au centre et n’est pas recadré
+      hint: Positioned in the center and not cropped
       label: Is logo?
     is_screenshot:
       hint: Add fake browser
@@ -508,7 +508,7 @@ admin:
         one: Item
         other: Items
     keyfeatures:
-      hint: 'exemple : Localisation, exposition…'
+      hint: 'example : Localisation, exposition…'
       label:
         one: key feature
         other: Key features
@@ -558,14 +558,14 @@ admin:
       label: PDF
       hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
-      label: Téléphone
+      label: Telephone Number
       hint: 'Format international, ex: +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     prefix:
       label: Prefix
     press:
-      label: Presse
+      label: Press
     price:
       hide: Hide price
       hint: 'e.g: 300000 (for 300 000 €)'
@@ -617,7 +617,7 @@ admin:
       has_parking:
         label: Parking?
       has_swimmingpool:
-        label: Swimmingpool?
+        label: Swimming pool?
       has_terrace:
         label: Terrace?
       label: Informations
@@ -653,7 +653,7 @@ admin:
       hint: Only if you have places already saved (this will disable the marker below)
       label: Show all registered places?
     slug:
-      hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
+      hint: Leave empty to automate with the title. **Be careful to SEO impact.**
       label: Slug
       pattern:
         Contain only lowercase letters, numbers, and hyphens, with no spaces,
@@ -662,7 +662,7 @@ admin:
       label:
         one: Social
         other: Socials
-      plateform: Plateform
+      plateform: Platform
       twitter:
         label: Twitter/X
         hint: Username
