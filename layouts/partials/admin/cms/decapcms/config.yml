@@ -15,7 +15,7 @@ i18n:
 {{ end }}
 
 local_backend: true
-locale: {{ index site.Languages 0 | default "en" }}
+locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
 logo_url: "./logo.svg"
 media_folder: "static/uploads"
 
