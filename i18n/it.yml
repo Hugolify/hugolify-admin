@@ -510,7 +510,7 @@ admin:
         one: Item
         other: Items
     keyfeatures:
-      hint: 'example : Localisation, exposition…'
+      hint: 'e.g: Location, exposure…'
       label:
         one: key feature
         other: Key features
