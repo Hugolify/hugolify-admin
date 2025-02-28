@@ -500,6 +500,8 @@ admin:
     is_logo:
       hint: Positioned in the center and not cropped
       label: Is logo?
+    is_pinned:
+      label: Pinned?
     is_screenshot:
       hint: Add fake browser
       label: Is screenshot?

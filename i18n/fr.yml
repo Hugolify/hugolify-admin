@@ -500,6 +500,8 @@ admin:
     is_logo:
       hint: Positionne au centre et n’est pas recadré
       label: Logo ?
+    is_pinned:
+      label: Épinglé ?
     is_screenshot:
       hint: Ajoute un faux navigateur autour de l’image
       label: Capture d’écran ?
