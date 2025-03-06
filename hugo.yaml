@@ -34,6 +34,7 @@ params:
     locale: en # Language of the CMS interface. On the other hand, the Hugolify Admin fields are in the main locale of the project
     media:
       max_file_size: 700000 # 700ko
+      pdf_max_file_size: 5000000 # 5Mo
       specific_filter: false # set true to add a selected filter by image
       video_max_file_size: 5000000 # 5Mo
     nested:
