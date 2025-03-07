@@ -54,9 +54,9 @@ params:
     nested:
       depth: 5 # set minimum 2
 
-    # Add Netlify identity
-    netlify:
-      identity: true
+    # Auth
+    auth:
+      netlify_identity: true # Add Netlify identity
 
     preview: false
 

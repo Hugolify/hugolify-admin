@@ -39,8 +39,8 @@ params:
       video_max_file_size: 5000000 # 5Mo
     nested:
       depth: 2 # set minimum 2 to display pages bundles
-    netlify:
-      identity: true
+    auth:
+      netlify_identity: true
     preview: false
 
     # Collections
