@@ -277,6 +277,8 @@ admin:
       label:
         one: Argument
         other: Arguments
+    author:
+      label: Auteur
     autoplay:
       label: Autoplay
     background:
@@ -573,6 +575,8 @@ admin:
       hint: 'exemple : 300000 (pour 300 000 €)'
       label: Prix
       sold: Prix vendu
+    quote:
+      label: Citation
     realestates_energies:
       label:
         one: Energie
