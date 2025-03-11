@@ -730,7 +730,7 @@ admin:
     footer: Information text at the bottom of the site
     nav:
       label: Navigation
-      legal: Legals navigation (mentions, polity…)
+      legal: Legals navigation (mentions, policy…)
       primary: Primary navigation
       secondary: Secondary navigation
       social: Socials navigation
