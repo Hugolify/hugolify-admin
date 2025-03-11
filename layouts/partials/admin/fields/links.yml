@@ -2,6 +2,7 @@
   "title" 
   "url" 
   "is_blank" 
+  "is_highlighted" 
   "sublinks" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {
