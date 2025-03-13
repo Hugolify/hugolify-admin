@@ -1,0 +1,5 @@
+media:
+  input: "static/images/uploads"
+  output: "/images/uploads"
+
+{{ partialCached "admin/collections/index.yml" . }}
