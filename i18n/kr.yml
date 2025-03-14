@@ -416,14 +416,17 @@ admin:
       label: Figure
     form:
       autocomplete:
+        city: City
         country_name: Country name
         email: Email
         family_name: Lastname
         given_name: Firstname
+        honorific_prefix: Title
         label: Autocomplete
         name: Name
         organization: Organization
         postal_code: Postal code
+        state: State
         street_address: Street
         tel: Tel
       full:
