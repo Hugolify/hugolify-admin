@@ -6,5 +6,6 @@
   required: false,
   i18n: true,
   collapsed: true,
+  summary: '{{`{{title}}`}}',
   {{ partial "admin/fields/_fields.yml" . }}
 }
