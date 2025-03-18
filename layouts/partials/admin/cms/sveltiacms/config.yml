@@ -18,8 +18,8 @@ i18n:
 local_backend: true
 locale: {{ site.Params.admin.locale }}
 logo_url: ./logo-picto.svg
-media_folder: static/uploads
-public_folder: /uploads
+media_folder: {{ site.Params.admin.media.media_folder }}
+public_folder: {{ site.Params.admin.media.public_folder }}
 
 publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
 

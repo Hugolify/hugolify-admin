@@ -17,7 +17,7 @@ i18n:
 local_backend: true
 locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
 logo_url: "./logo.svg"
-media_folder: "static/uploads"
+media_folder: {{ site.Params.admin.media.media_folder | default "static/images/uploads" }}
 
 {{ with site.Params.admin.media.cloud }}
 media_library:
@@ -37,8 +37,8 @@ media_library:
     {{ end }}
 {{ end }}
 
-public_folder: "/uploads"
-publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
+public_folder: {{ site.Params.admin.media.public_folder }}
+publish_mode: {{ site.Params.admin.publish_mode }}
 slug:
   encoding: "unicode"
   clean_accents: false
