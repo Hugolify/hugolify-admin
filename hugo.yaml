@@ -9,8 +9,14 @@ module:
     - source: static
       target: static
 
-# Config YAML
 outputFormats:
+  # For DecapCMS, SveltiaCMS, NetlifyCMS and StaticCMS
+  admin_config:
+    baseName: config
+    isPlainText: true
+    mediaType: application/yaml
+    notAlternative: false
+  # For TinaCMS
   admin_config:
     baseName: config
     isPlainText: true
@@ -59,27 +65,27 @@ params:
       enable:
         - alert
         # - chart
-        - comparison
-        - cta
-        - datas
-        - editorial
-        - embed
-        - faq
-        - figure
-        - form
-        - gallery
-        - images
-        - informations
-        - instagram
-        - latest
-        - logos
-        - map
-        - newsletter
-        - paragraph
-        - pushes
-        - quote
-        - selected
-        - testimonials
-        - timeline
-        - title
-        - video
+        # - comparison
+        # - cta
+        # - datas
+        # - editorial
+        # - embed
+        # - faq
+        # - figure
+        # - form
+        # - gallery
+        # - images
+        # - informations
+        # - instagram
+        # - latest
+        # - logos
+        # - map
+        # - newsletter
+        # - paragraph
+        # - pushes
+        # - quote
+        # - selected
+        # - testimonials
+        # - timeline
+        # - title
+        # - video
