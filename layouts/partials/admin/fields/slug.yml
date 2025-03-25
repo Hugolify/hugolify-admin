@@ -1,4 +1,4 @@
-# Not supported in _index.md
+{{/* Not supported in _index.md */}}
 {{ $regex := "^(|[a-z0-9-]+)$" }}
 {{ $message := i18n "admin.fields.slug.pattern" }}
 {{ $pattern := dict "regex" $regex "message" $message }}
