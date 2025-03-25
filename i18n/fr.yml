@@ -70,7 +70,7 @@ admin:
         other: Catégories
     config:
       _description: Toutes les config
-      label: 
+      label:
         one: Config
         other: Config
     docs:
@@ -85,7 +85,7 @@ admin:
         other: Évènements
     events_categories:
       _description: Toutes les catégories d’évènements
-      label: 
+      label:
         one: Catégorie
         other: Catégories
     expertises:
@@ -95,9 +95,34 @@ admin:
         other: Expertises
     indexes:
       _description: Toutes les pages index
-      label: 
+      label:
         one: Index
         other: Index
+    jobs:
+      _description: Toutes les offres d’emploi
+      label:
+        one: Offre d’emploi
+        other: Offres d’emploi
+    jobs_categories:
+      _description: Toutes les catégories produits
+      label:
+        one: Catégorie
+        other: Catégories
+    jobs_expertises:
+      _description: Toutes les expertises
+      label:
+        one: Expertise
+        other: Expertises
+    jobs_places:
+      _description: Tous les lieux
+      label:
+        one: Lieu
+        other: Lieux
+    jobs_tags:
+      _description: Tous les tags produits
+      label:
+        one: Tag
+        other: Tags
     pages:
       _description: Toutes les pages
       label:
@@ -114,20 +139,20 @@ admin:
         one: Expertise
         other: Expertises
     persons_places:
-      _description: Tous les endroits
+      _description: Tous les lieux
       label:
-        one: Endroit
-        other: Endroits
+        one: Lieu
+        other: Lieux
     persons_statutes:
       _description: Tous les statuts
       label:
         one: Statut
         other: Statuts
     places:
-      _description: Tous les endroits
+      _description: Tous les lieux
       label:
-        one: Endroit
-        other: Endroits
+        one: Lieu
+        other: Lieux
     posts:
       _description: Toutes les actualités
       label:
@@ -140,7 +165,7 @@ admin:
         other: Catégories
     posts_expertises:
       _description: Toutes les expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     posts_tags:
@@ -190,7 +215,7 @@ admin:
         other: Catégories
     publications_expertises:
       _description: Toutes les expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     publications_persons:
@@ -252,6 +277,8 @@ admin:
       label:
         one: Argument
         other: Arguments
+    author:
+      label: Auteur
     autoplay:
       label: Autoplay
     background:
@@ -266,7 +293,7 @@ admin:
         one: Bloc
         other: Blocs
     body:
-      label: Body
+      label: Corps du texte
     breakpoints:
       hint: Dimension de l’écran
       label:
@@ -290,7 +317,7 @@ admin:
         hint: L’écart entre les slides. Exprimé en rem.
         label: Gap
       hint: Seulement pour un affichage en carrousel
-      label: Configuration carrousel 
+      label: Configuration carrousel
       padding:
         hint: Padding left/right of the carousel. In rem value
         label: Padding
@@ -319,13 +346,13 @@ admin:
       label: Contrôles
     coordinates:
       hint: 'Trouvez facilement les coordonnées : https://www.latlong.net/convert-address-to-lat-long.html'
-      label: Coordonnées géographique 
+      label: Coordonnées géographique
       lat:
         label: Latitude
       lng:
         label: Longitude
     count:
-      hint: Numbre d’items à afficher
+      hint: Nombre d’items à afficher
       label: Count
     credit:
       label: Crédit
@@ -339,13 +366,19 @@ admin:
       sale: Date de vente
       to: Jusqu’au
     description:
-      hint: Displayed in tabs, search results, and in SMS/Messages/Social networks
+      hint:
+        Displayed in tabs, search results, and in SMS/Messages/Social networks
         preview
       label: Description
     diagnostic:
-      dpe: DPE
-      ges: GES
+      epd:
+        label: Kwh
+        hint: Diagnostic de performance énergétique (DPE)
+      ghg:
+        label: Co2
+        hint: Gaz à effet de serre (GHG)
       label: Diagnostic
+      in_progress: En cours ?
     direction:
       label: Direction
       options:
@@ -355,6 +388,10 @@ admin:
       hint: 'Montant de la réduction, exemple : 30%'
       label: Réduction
       pattern: La valeur seulement (sans la devise)
+    document:
+      label:
+        one: Document
+        other: Documents
     draft:
       label: Brouillon
     email:
@@ -362,24 +399,34 @@ admin:
     embed:
       label: Embed
     event:
-      label: 
+      label:
         one: Évènement
         other: Évènements
+    fax:
+      label: Fax
+      hint: 'Format international, ex: +33 1 23 45 67 89'
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Image principale
+    fee:
+      label:
+        one: Honoraire
+        other: Honoraires
     figure:
       label: Figure
     form:
       autocomplete:
+        city: Ville
         country_name: Nom du pays
         email: Email
         family_name: Nom de famille
         given_name: Prénom
+        honorific_prefix: Titre
         label: Autocomplete
         name: Nom
         organization: Entreprise
         postal_code: Code postal
+        state: État
         street_address: Rue
         tel: Tel
       full:
@@ -423,39 +470,46 @@ admin:
       label: Icone
     image:
       alt:
-        hint: For an image that conveys information (leave blank if decorative image)
-        label: Alternative text
+        hint: Pour une image qui transmet des informations (laisser vide si image décorative)
+        label: Texte alternatif
       filter:
         box: Simple and fast averaging filter appropriate for downscaling (default)
-        catmullrom: Sharp cubic filter that is faster than the Lanczos filter while
+        catmullrom:
+          Sharp cubic filter that is faster than the Lanczos filter while
           providing similar results
         hint: Set Linear for picture or screenshot, leave empty to keep default config
         label: Change filter quality?
-        lanczos: High-quality resampling filter for photographic images yielding sharp
+        lanczos:
+          High-quality resampling filter for photographic images yielding sharp
           results
-        linear: Bilinear resampling filter, produces smooth output, faster than cubic
+        linear:
+          Bilinear resampling filter, produces smooth output, faster than cubic
           filters
       label: Image
       src:
-        hint: 'Resize and compress image before sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        hint: 'Redimensionner et compresser l’image avant l’envoi : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
     images:
       label: Images
     is_blank:
-      label: Is blank?
+      label: Nouvelle fenêtre ?
     is_card:
       hint: Ajoute un fond derrière les textes
-      label: Is card?
+      label: Carte ?
+    is_exclusive:
+      label: Exclusif ?
     is_half:
       label: Moitié ?
     is_highlighted:
-      label: Is highlighted?
+      label: Mis en avant ?
     is_logo:
       hint: Positionne au centre et n’est pas recadré
-      label: Is logo?
+      label: Logo ?
+    is_pinned:
+      label: Épinglé ?
     is_screenshot:
       hint: Ajoute un faux navigateur autour de l’image
-      label: Is screenshot?
+      label: Capture d’écran ?
     items:
       label:
         one: Item
@@ -476,6 +530,8 @@ admin:
         carousel: Carrousel
         grid: Grille
         list: Liste
+    legal:
+      label: Légale
     legend:
       label: Légende
     limit:
@@ -484,6 +540,8 @@ admin:
       label:
         one: Lien
         other: Liens
+    location:
+      label: Lieu
     loop:
       label: Boucle
     name:
@@ -494,7 +552,7 @@ admin:
       form:
         label: Formulaire
     offer:
-      label: Offer
+      label: Offre
     offset:
       label: Offset
       options:
@@ -503,8 +561,12 @@ admin:
         start: Start
     parent:
       label: Page parente
+    pdf:
+      label: PDF
+      hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Téléphone
+      hint: 'Format international, ex: +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     prefix:
@@ -516,6 +578,22 @@ admin:
       hint: 'exemple : 300000 (pour 300 000 €)'
       label: Prix
       sold: Prix vendu
+    quote:
+      label: Citation
+    realestates_energies:
+      label:
+        one: Energie
+        other: Energies
+      heating:
+        label: Chauffage
+        collective: Collectif
+        individual: Individuel
+      heating_type:
+        label: Type de chauffage
+        reversible_ac: Climatisation réversible
+        electric: Electrique
+        gas: Gaz
+        solar: Solaire
     realestates_informations:
       area:
         hint: Exprimé en m2
@@ -526,11 +604,31 @@ admin:
         label: Nombre de chambre
       district:
         label: Quartier
+      exposure:
+        label: Exposition
       field:
         hint: Exprimé en m2
         label: Surface extérieur
       floor:
         label: Étage
+      has_balcony:
+        label: Balcon ?
+      has_box:
+        label: Box ?
+      has_cave:
+        label: Cave ?
+      has_elevator:
+        label: Ascenseur ?
+      has_garage:
+        label: Garage ?
+      has_outbuilding:
+        label: Dépendance ?
+      has_parking:
+        label: Parking ?
+      has_swimmingpool:
+        label: Piscine ?
+      has_terrace:
+        label: Terrasse ?
       label: Informations
       levels:
         label: Nombre d’étage
@@ -538,25 +636,36 @@ admin:
         label: Nombre de pièce
       showerrooms:
         label: Nombre de salle d’eau
+      wc:
+        label: WC
       year:
         label: Année de construction
+    realestates_types:
+      label: Type de transaction
+      rent:
+        label: Location
+      sale:
+        label: Vente
     reference:
       label: Reference
+    rent:
+      label: Loué ?
     required:
-      label: Required
+      label: Requis
     section:
-      hint: Select the section to display
+      hint: Choix de la section à afficher
       label: Section
     show_more:
       hint: Affiche un bouton pour voir plus d’éléments
-      label: Show more?
+      label: Plus d’items ?
     show_places:
       hint: Only if you have places already saved (this will disable the marker below)
-      label: Show all registered places?
+      label: Affiche tous les lieux ?
     slug:
       hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
       label: Slug
-      pattern: Contain only lowercase letters, numbers, and hyphens, with no spaces,
+      pattern:
+        Contain only lowercase letters, numbers, and hyphens, with no spaces,
         accents, or special characters
     socials:
       label:
@@ -567,7 +676,7 @@ admin:
         label: Twitter/X
         hint: Nom d’utilisateur
     sold:
-      label: Vendu ?
+      label: Vendu/loué ?
     state:
       danger: Danger
       dark: Dark
@@ -594,7 +703,8 @@ admin:
     title:
       label: Titre
     title_page:
-      hint: Displayed in tabs, search results, and in SMS/Messages/Social networks
+      hint:
+        Displayed in tabs, search results, and in SMS/Messages/Social networks
         preview
       label: Titre de la page
     transcription:
@@ -620,7 +730,7 @@ admin:
       label: Zoom
   files:
     banner: Bannière d’information en haut du site
-    footer: Texte d’information en bas du site 
+    footer: Texte d’information en bas du site
     nav:
       label: Navigation
       legal: Navigation légales (mentions, politiques…)

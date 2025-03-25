@@ -1,0 +1,16 @@
+{
+  label: '{{ i18n "admin.fields.pdf.label" }}',
+  hint: '{{ i18n "admin.fields.pdf.hint" }}',
+  name: 'file',
+  widget: 'file',
+  required: false,
+  i18n: true,
+  choose_url: false,
+  media_library: {
+    config: { 
+      max_file_size: {{ site.Params.admin.media.pdf_max_file_size }}
+    }
+  },
+  media_folder: '/static/pdf',
+  public_folder: '/pdf'
+}

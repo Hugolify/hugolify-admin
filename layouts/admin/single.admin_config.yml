@@ -1,7 +1,0 @@
-{{- $cms := site.Params.admin.cms | default "decapcms" -}}
-{{- if and (ne $cms "tinacms") (ne $cms "pagescms") }}
-  {{- $partial := print "admin/cms/" $cms "/config.yml" -}}
-  {{- if templates.Exists ( printf "partials/%s" $partial ) }}
-    {{- transform.Remarshal "yaml" (partial $partial .) -}}
-  {{ end -}}
-{{ end -}}

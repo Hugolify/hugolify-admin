@@ -1,0 +1,41 @@
+{{- $jobs_categories := false -}}
+{{- if site.Params.admin.collections.jobs_categories.enable -}}
+  {{- $jobs_categories = dict "relation" (dict "collection" "jobs_categories" "multiple" true) -}}
+{{- else -}}
+  {{- $partial := "admin/fields/jobs_categories.yml" -}}
+  {{- if templates.Exists (printf "partials/%s" $partial) }}
+    {{- $jobs_categories = "jobs_categories" -}}
+  {{- end -}}
+{{- end -}}
+{{- $jobs_expertises := false -}}
+{{- if site.Params.admin.collections.expertises.enable -}}
+  {{- $jobs_expertises = dict "relation" (dict "collection" "expertises" "name" "jobs_expertises" "multiple" true) -}}
+{{- end -}}
+{{- $jobs_places := false -}}
+{{- if site.Params.admin.collections.places.enable -}}
+  {{- $jobs_places = dict "relation" (dict "collection" "places" "name" "jobs_places" "multiple" true) -}}
+{{- end -}}
+{{- $jobs_statutes := false -}}
+{{- if site.Params.admin.collections.persons_statutes.enable -}}
+  {{- $jobs_statutes = dict "relation" (dict "collection" "persons_statutes" "name" "jobs_statutes" "multiple" true) -}}
+{{- end -}}
+{{- $jobs_tags := false -}}
+{{- if site.Params.admin.collections.jobs_tags.enable -}}
+  {{- $jobs_tags = dict "relation" (dict "collection" "jobs_tags" "multiple" true) -}}
+{{- end -}}
+{{- return slice 
+  "id" 
+  "is_not_index" 
+  "draft" 
+  "date" 
+  "title_page"
+  "reference" 
+  $jobs_categories 
+  $jobs_expertises 
+  $jobs_places 
+  $jobs_statutes
+  $jobs_tags 
+  "description"
+  "keyfeatures"
+  "body"
+  "slug" -}}

@@ -1,7 +1,8 @@
+{{- $pin := cond (eq site.Params.admin.cms "decapcms") "location" "coordinates" -}}
 {{- $fields := slice 
   "heading" 
   "show_places" 
-  "location" 
+  $pin 
   "zoom" 
   "grid" 
   "background" -}}

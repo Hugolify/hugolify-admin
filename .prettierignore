@@ -1,2 +1,2 @@
 **/*.html
-**/*.yml
+layouts/partials/admin/**/*.yml

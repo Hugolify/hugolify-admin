@@ -10,13 +10,15 @@
   i18n: true,
 
   path: '{{`{{year}}/{{month}}/{{slug}}`}}',
-  {{ $slug := "{{`{{year}}-{{month}}-{{day}}-{{slug}}`}}" }}
+  {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
 
   {{ partial "admin/collections/config/icon.yml" "news" }}
   {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" (dict "fields" "[commit_date, title]") }}
-  {{ partial "admin/collections/config/summary.yml" "{{title}} - {{date | date('YYYY-MM-DD')}}" }}
+  {{ partial "admin/collections/config/sortable.yml" "posts" }}
+  {{ partial "admin/collections/config/summary.yml" "posts" }}
+  {{ partial "admin/collections/config/view_filters.yml" "posts" }}
+  {{ partial "admin/collections/config/view_groups.yml" "posts" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "posts") }}
 }

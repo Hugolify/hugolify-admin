@@ -1,7 +1,7 @@
 {{- $fields := slice 
   "price" 
   "discount" 
-  "is_sold" 
+  "hide_price" 
   "text" -}}
 {{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
 {

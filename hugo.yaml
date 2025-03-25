@@ -9,15 +9,14 @@ module:
     - source: static
       target: static
 
+# Config file
 outputFormats:
-  # For DecapCMS, SveltiaCMS, NetlifyCMS and StaticCMS
-  admin_config:
+  admin_config_yml:
     baseName: config
     isPlainText: true
     mediaType: application/yaml
     notAlternative: false
-  # For TinaCMS
-  admin_config:
+  admin_config_js:
     baseName: config
     isPlainText: true
     mediaType: text/javascript
@@ -26,9 +25,6 @@ mediaTypes:
   application/yaml:
     suffixes:
       - yml
-  text/javascript:
-    suffixes:
-      - js
 
 # Admin params
 # https://www.hugolify.io/docs/cms/admin/
@@ -36,18 +32,22 @@ params:
   admin:
     cms: tinacms # https://www.hugolify.io/docs/cms/
     config:
-      id: true # use ID for dir/name files and relation
+      id: false # set true to use ID for dir/name files and relation
     i18n:
       default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
+    locale: en # Language of the CMS interface. On the other hand, the Hugolify Admin fields are in the main locale of the project
     media:
+      media_folder: 'static/images/uploads'
+      public_folder: '/images/uploads'
       max_file_size: 700000 # 700ko
+      pdf_max_file_size: 5000000 # 5Mo
       specific_filter: false # set true to add a selected filter by image
       video_max_file_size: 5000000 # 5Mo
     nested:
       depth: 2 # set minimum 2 to display pages bundles
-    netlify:
-      identity: false
+    auth:
+      netlify_identity: true
     preview: false
 
     # Collections

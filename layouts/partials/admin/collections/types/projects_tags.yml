@@ -17,5 +17,5 @@
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
 
-  {{ partialCached "admin/collections/fields.terms.default.yml" . }}
+  {{ partial "admin/collections/fields.yml" (dict "collection" "projects_tags") }}
 }

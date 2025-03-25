@@ -1,0 +1,8 @@
+{{- return slice 
+  "id" 
+  "is_not_index" 
+  "draft" 
+  "title_page" 
+  "description"
+  "address"
+  "slug" -}}

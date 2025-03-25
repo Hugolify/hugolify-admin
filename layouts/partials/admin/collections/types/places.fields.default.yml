@@ -1,1 +1,11 @@
-{{ return partialCached "admin/collections/fields.default.yml" . }}
+{{- return slice 
+  "id" 
+  "is_not_index" 
+  "draft" 
+  "title_page"
+  "description"
+  "address"
+  "contact"
+  "featured_image" 
+  "body"
+  "slug" -}}

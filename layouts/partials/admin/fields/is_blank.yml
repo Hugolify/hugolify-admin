@@ -3,5 +3,5 @@
   name: 'blank',
   widget: 'boolean',
   required: false,
-  i18n: 'duplicate' 
+  i18n: true
 }

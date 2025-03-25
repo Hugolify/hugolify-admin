@@ -4,7 +4,7 @@ backend:
   {{ with site.Params.admin.repo }}
   repo: {{ . }}
   {{ end }}
-  automatic_deployments: false
+  automatic_deployments: {{ site.Params.admin.automatic_deployments | default false }}
 
 display_url: {{ site.BaseURL }}
 
@@ -18,14 +18,14 @@ i18n:
 local_backend: true
 locale: {{ site.Params.admin.locale }}
 logo_url: ./logo-picto.svg
-media_folder: static/uploads
-public_folder: /uploads
+media_folder: {{ site.Params.admin.media.media_folder }}
+public_folder: {{ site.Params.admin.media.public_folder }}
 
 publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
 
 slug:
-  encoding: ascii
-  clean_accents: true
+  encoding: unicode
+  clean_accents: false
   sanitize_replacement: "-"
 
 {{ partialCached "admin/collections/index.yml" . }}

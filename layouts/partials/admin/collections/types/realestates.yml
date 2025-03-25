@@ -9,14 +9,16 @@
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
-  path: '{{`{{year}}/{{month}}/{{slug}}`}}',
-  {{ $slug := "{{`{{year}}-{{month}}-{{day}}-{{slug}}`}}" }}
+  path: '{{`{{year}}/{{slug}}`}}',
+  {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
   
   {{ partial "admin/collections/config/icon.yml" "real_estate_agent" }}
   {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
-  {{ partial "admin/collections/config/summary.yml" "{{title}} - {{date | date('YYYY-MM-DD')}}" }}
+  {{ partial "admin/collections/config/sortable.yml" "realestates" }}
+  {{ partial "admin/collections/config/summary.yml" "realestates" }}
+  {{ partial "admin/collections/config/view_filters.yml" "realestates" }}
+  {{ partial "admin/collections/config/view_groups.yml" "realestates" }}
   
   {{ partial "admin/collections/fields.yml" (dict "collection" "realestates") }}
 }

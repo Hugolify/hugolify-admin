@@ -29,7 +29,7 @@ admin:
     instagram:
       label: Instagram
     latest:
-      label: Latest
+      label: Latest items
     location:
       label: Location
     logos:
@@ -45,7 +45,7 @@ admin:
     quote:
       label: Quote
     selected:
-      label: Selected {{ .section }}
+      label: Selection {{ .section }}
     testimonials:
       label: Testimonials
     timeline:
@@ -60,92 +60,117 @@ admin:
         one: Author
         other: Authors
     casestudies:
-      _description: All case studies
-      label: 
+      _description: All cases studies
+      label:
         one: Case study
-        other: Case studies
+        other: Cases studies
     categories:
       label:
         one: Category
         other: Categories
     config:
       _description: All config
-      label: 
+      label:
         one: Config
         other: Config
     docs:
       _description: All docs
-      label: 
+      label:
         one: Doc
         other: Docs
     events:
       _description: All events
-      label: 
+      label:
         one: Event
         other: Events
     events_categories:
-      _description: All categories of events
-      label: 
+      _description: All events categories
+      label:
         one: Category
         other: Categories
     expertises:
       _description: All expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     indexes:
-      _description: All indexes
-      label: 
+      _description: All index pages
+      label:
         one: Index
-        other: Indexes
+        other: Index
+    jobs:
+      _description: All jobs
+      label:
+        one: Job
+        other: Jobs
+    jobs_categories:
+      _description: All news categories
+      label:
+        one: Category
+        other: Categories
+    jobs_expertises:
+      _description: All expertises
+      label:
+        one: Expertise
+        other: Expertises
+    jobs_places:
+      _description: All places
+      label:
+        one: Place
+        other: Places
+    jobs_tags:
+      _description: All products tags
+      label:
+        one: Tag
+        other: Tags
     pages:
       _description: All pages
-      label: 
+      label:
         one: Page
         other: Pages
     persons:
       _description: All persons
-      label: 
+      label:
         one: Person
         other: Persons
     persons_expertises:
       _description: All expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     persons_places:
       _description: All places
-      label: 
+      label:
         one: Place
         other: Places
     persons_statutes:
       _description: All statutes
-      label: 
+      label:
         one: Status
         other: Statutes
     places:
       _description: All places
-      label: 
+      label:
         one: Place
         other: Places
     posts:
       _description: All news
-      label: 
+      label:
         one: New
         other: News
     posts_categories:
-      _description: All categories of news
-      label: 
+      _description: All news categories
+      label:
         one: Category
         other: Categories
     posts_expertises:
       _description: All expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     posts_tags:
-      _description: All tags of news
-      label: 
+      _description: All news tags
+      label:
         one: Tag
         other: Tags
     products:
@@ -154,77 +179,77 @@ admin:
         one: Product
         other: Products
     products_categories:
-      _description: All categories of products
-      label: 
+      _description: All products categories
+      label:
         one: Category
         other: Categories
     products_tags:
-      _description: All tags of products
-      label: 
+      _description: All products tags
+      label:
         one: Tag
         other: Tags
     projects:
       _description: All projects
-      label: 
+      label:
         one: Project
         other: Projects
     projects_tags:
-      _description: All tags of projects
-      label: 
+      _description: All projects tags
+      label:
         one: Tag
         other: Tags
     projects_types:
-      _description: All types of projects
-      label: 
+      _description: All projects types
+      label:
         one: Type
         other: Types
     publications:
       _description: All publications
-      label: 
+      label:
         one: Publication
         other: Publications
     publications_categories:
-      _description: All categories of publications
-      label: 
+      _description: All publications categories
+      label:
         one: Category
         other: Categories
     publications_expertises:
       _description: All expertises
-      label: 
+      label:
         one: Expertise
         other: Expertises
     publications_persons:
-      label: 
-        one: Person concerned
-        other: Persons concerned
+      label:
+        one: Person
+        other: Persons
     realestates:
       _description: All real estates
-      label: 
+      label:
         one: Real estate
         other: Real estates
     realestates_categories:
-      _description: All categories of real estates
-      label: 
-        one: Category
+      _description: All real estates categories
+      label:
+        one: Categorie
         other: Categories
+    realestates_persons:
+      _description: All agents
+      label:
+        one: Agent
+        other: Agents
     realestates_sellers:
       _description: All sellers
-      label: 
+      label:
         one: Seller
         other: Sellers
-    realestates_persons:
-      _description: All real estates agents
-      label: 
-        one: Real estates agent
-        other: Real estates agents
     services:
       _description: All services
-      label: 
+      label:
         one: Service
         other: Services
     services_categories:
-      _description: All categories of services
-      label: 
+      _description: All services categories
+      label:
         one: Category
         other: Categories
     tags:
@@ -234,44 +259,46 @@ admin:
         other: Tags
   fields:
     address:
-      label: Address
       city:
         label: City
       country:
         label: Country
+      label: Address
       street:
         label: Street
       zipcode:
-        label: Zip code
+        label: Postal code
     align:
-      label: Alignment
       center: Center
       end: End
+      label: Alignment
       start: Start
     arguments:
       label:
         one: Argument
         other: Arguments
+    author:
+      label: Author
     autoplay:
       label: Autoplay
     background:
-      label: Has background?
+      label: With a background?
     background_color:
       label: Background color
     badge:
+      hint: Show a badge
       label: Badge
-      hint: Display a text badge
     blocks:
       label:
-        one: Block
-        other: Blocks
+        one: Bloc
+        other: Blocs
     body:
       label: Body
     breakpoints:
+      hint: Screen size
       label:
         one: Breakpoint
-        other: Breakpoints 
-      hint: Screen dimension
+        other: Breakpoints
       options:
         desktop: Desktop
         laptop: Laptop
@@ -284,23 +311,23 @@ admin:
       autoplay:
         label: Autoplay
       focus:
+        hint: Position active slide in center?
         label: Focus
-        hint: Is the active slide in the center of the screen?
       gap:
+        hint: The gap between slides. Expressed in rem.
         label: Gap
-        hint: The gap between slides. In rem value.
+      hint: Only for carousel display
       label: Carousel configuration
-      hint: Only if your layout is "Carousel"
       padding:
-        label: Padding
         hint: Padding left/right of the carousel. In rem value
+        label: Padding
       pagination:
         label: Pagination
       params:
         label: Params
       perpage:
-        label: Per page
         hint: Number of slides to display
+        label: Per page
       responsive:
         label: Responsive
       type:
@@ -318,14 +345,14 @@ admin:
     controls:
       label: Controls
     coordinates:
+      hint: 'Easily find contact details: https://www.latlong.net/convert-address-to-lat-long.html'
       label: Geographic coordinates
-      hint: 'To easily find your coordinates: https://www.latlong.net/convert-address-to-lat-long.html'
       lat:
         label: Latitude
       lng:
         label: Longitude
     count:
-      hint: Number of items to display
+      hint: Items to display
       label: Count
     credit:
       label: Credit
@@ -339,21 +366,32 @@ admin:
       sale: Sale date
       to: To
     description:
-      hint: Displayed in tabs, search results, and in SMS/Messages/Social networks preview
+      hint:
+        Displayed in tabs, search results, and in SMS/Messages/Social networks
+        preview
       label: Description
     diagnostic:
+      epd:
+        label: Kwh
+        hint: Energy performance diagnostics (DPE)
+      ghg:
+        label: Co2
+        hint: Greenhouse gas (GHG)
       label: Diagnostic
-      dpe: DPE
-      ges: GES
+      in_progress: In progress?
     direction:
       label: Direction
       options:
-        ltr: Text on left / image on right
-        rtl: Image on left / text on right
+        ltr: Text on the left / image on the right
+        rtl: Image on the left / text on the right
     discount:
+      hint: 'Amount of the reduction, e.g: 30%'
       label: Discount
-      hint: 'Discount amount, e.g.: 30%'
-      pattern: Only amound (without currency)
+      pattern: Value only (without currency)
+    document:
+      label:
+        one: Document
+        other: Documents
     draft:
       label: Draft
     email:
@@ -361,55 +399,65 @@ admin:
     embed:
       label: Embed
     event:
-      label: 
+      label:
         one: Event
         other: Events
+    fax:
+      label: Fax
+      hint: 'International format, e.g: +33 1 23 45 67 89'
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
-      label: Featured image
+      label: Image principale
+    fee:
+      label:
+        one: Fee
+        other: Fees
     figure:
       label: Figure
     form:
-      label: Form
       autocomplete:
-        label: Autocomplete
+        city: City
         country_name: Country name
         email: Email
-        family_name: Family name
-        given_name: Given name
+        family_name: Lastname
+        given_name: Firstname
+        honorific_prefix: Title
+        label: Autocomplete
         name: Name
         organization: Organization
         postal_code: Postal code
-        street_address: Street address
+        state: State
+        street_address: Street
         tel: Tel
       full:
         label: Full width field?
       hiddens:
-        label: 
+        label:
           one: Hidden field
-          other: Hiddens fields
+          other: Hidden fields
       items:
         label:
           one: Field
           other: Fields
+      label: Form
       options:
+        hint: Only for select fields
         label:
           one: Option
           other: Options
-        hint: Only for select type
       type:
-        label: Type
         email: Email
+        label: Type
         select: Select
-        tel: Tel
+        tel: Telephone
         text: Text
         textarea: Textarea
     gallery:
       label: Gallery
     grid:
-      label: Grid
       container: Container
       full: Full
+      label: Grid
       large: Large
       medium: Medium
       small: Small
@@ -418,60 +466,72 @@ admin:
     hero:
       label: Hero
     icon:
+      hint: Icon name from https://icons.getbootstrap.com/
       label: Icon
-      hint: 'Name of icon from https://icons.getbootstrap.com/'
     image:
       alt:
         hint: For an image that conveys information (leave blank if decorative image)
-        label: Alternative text
+        label: Text alternative
       filter:
-        label: Change filter quality?
-        hint: Set Linear for picture or screenshot, leave empty to keep default config
         box: Simple and fast averaging filter appropriate for downscaling (default)
-        lanczos: High-quality resampling filter for photographic images yielding sharp results
-        catmullrom: Sharp cubic filter that is faster than the Lanczos filter while providing similar results
-        linear: Bilinear resampling filter, produces smooth output, faster than cubic filters
+        catmullrom:
+          Sharp cubic filter that is faster than the Lanczos filter while
+          providing similar results
+        hint: Set Linear for picture or screenshot, leave empty to keep default config
+        label: Change filter quality?
+        lanczos:
+          High-quality resampling filter for photographic images yielding sharp
+          results
+        linear:
+          Bilinear resampling filter, produces smooth output, faster than cubic
+          filters
       label: Image
       src:
-        hint: 'Resize and compress image before sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        hint: 'Resize and compress image before sending : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
     images:
       label: Images
     is_blank:
       label: Is blank?
     is_card:
+      hint: Adds a background behind the text
       label: Is card?
-      hint: Add a background behind texts
+    is_exclusive:
+      label: Exclusive?
     is_half:
-      label: Is half?
+      label: Half size?
     is_highlighted:
       label: Is highlighted?
     is_logo:
+      hint: Positioned in the center and not cropped
       label: Is logo?
-      hint: Keep center and not cropped
+    is_pinned:
+      label: Pinned?
     is_screenshot:
+      hint: Add fake browser
       label: Is screenshot?
-      hint: Add a browser skin around the picture
     items:
-      label: 
+      label:
         one: Item
         other: Items
     keyfeatures:
+      hint: 'e.g: Location, exposure…'
       label:
-        one: Key feature
+        one: key feature
         other: Key features
-      hint: 'e.g.: Location, light…'
     label:
       label: Label
     lang:
-      label: Language
       hint: Enter code lang (e.g. fr) if different of the current page language
+      label: Language
     layout:
       label: Layout
       options:
         carousel: Carousel
         grid: Grid
         list: List
+    legal:
+      label: Legal
     legend:
       label: Legend
     limit:
@@ -480,12 +540,14 @@ admin:
       label:
         one: Link
         other: Links
+    location:
+      label: Location
     loop:
       label: Loop
-    map:
-      label: Map
     name:
       label: Name
+    map:
+      label: Map
     newsletter:
       form:
         label: Form
@@ -499,70 +561,122 @@ admin:
         start: Start
     parent:
       label: Parent page
+    pdf:
+      label: PDF
+      hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
-      label: Phone
+      label: Telephone Number
+      hint: 'Format international, ex: +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     prefix:
       label: Prefix
-    price:
-      hide: Hide price
-      label: Price
-      hint: 'e.g.: 300000 (for 300 000 €)'
-      sold: Price sold
     press:
       label: Press
+    price:
+      hide: Hide price
+      hint: 'e.g: 300000 (for 300 000 €)'
+      label: Price
+      sold: Sale price
+    quote:
+      label: Quote
+    realestates_energies:
+      label:
+        one: Energy
+        other: Energies
+      heating:
+        label: Heating
+        collective: Collective
+        individual: Individual
+      heating_type:
+        label: Heating type
+        reversible_ac: Reversible AC
+        electric: Electric
+        gas: Gas
+        solar: Solar
     realestates_informations:
-      label: Informations
       area:
-        label: Interior area
         hint: Expressed in m2
+        label: Interior surface
       bathrooms:
         label: Number of bathrooms
       bedrooms:
-        label: Number of bedrooms
-      district: 
+        label: Number of rooms
+      district:
         label: District
-      field: 
-        label: Exterior area
+      exposure:
+        label: Exposure
+      field:
         hint: Expressed in m2
+        label: Exterior surface
       floor:
         label: Floor
+      has_balcony:
+        label: Balcon?
+      has_box:
+        label: Box?
+      has_cave:
+        label: Cave?
+      has_elevator:
+        label: Elevator?
+      has_garage:
+        label: Garage?
+      has_outbuilding:
+        label: Outbuilding?
+      has_parking:
+        label: Parking?
+      has_swimmingpool:
+        label: Swimming pool?
+      has_terrace:
+        label: Terrace?
+      label: Informations
       levels:
-        label: Number of levels
+        label: Number of floors
       rooms:
         label: Number of rooms
       showerrooms:
-        label: Number of shower rooms
-      year: 
+        label: Number of showerrooms
+      wc:
+        label: WC
+      year:
         label: Year of construction
+    realestates_types:
+      label: Transaction Type
+      rent:
+        label: Rent
+      sale:
+        label: Sale
     reference:
       label: Reference
+    rent:
+      label: Rent?
     required:
       label: Required
     section:
-      label: Section
       hint: Select the section to display
+      label: Section
     show_more:
+      hint: Shows a button to see more items
       label: Show more?
-      hint: Display a button to show more elements
     show_places:
-      label: Show all registered places?
       hint: Only if you have places already saved (this will disable the marker below)
+      label: Show all registered places?
     slug:
+      hint: Leave empty to automate with the title. **Be careful to SEO impact.**
       label: Slug
-      hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
-      pattern: Contain only lowercase letters, numbers, and hyphens, with no spaces, accents, or special characters
+      pattern:
+        Contain only lowercase letters, numbers, and hyphens, with no spaces,
+        accents, or special characters
     socials:
-      label: 
+      label:
         one: Social
         other: Socials
-      plateform: Plateform
+      plateform: Platform
       twitter:
         label: Twitter/X
         hint: Username
     sold:
-      label: Sold?
+      label: Sold/rent ?
     state:
       danger: Danger
       dark: Dark
@@ -576,12 +690,12 @@ admin:
     status:
       label: Status
     submit:
-      label: Submit button text
+      label: Send button text
     subtitle:
       label: Subtitle
     suffix:
+      hint: 'e.g: %'
       label: Suffix
-      hint: 'e.g.: %'
     surtitle:
       label: Surtitle
     text:
@@ -589,8 +703,10 @@ admin:
     title:
       label: Title
     title_page:
-      hint: Displayed in tabs, search results, and in SMS/Messages/Social networks preview
-      label: Title of the page
+      hint:
+        Displayed in tabs, search results, and in SMS/Messages/Social networks
+        preview
+      label: Page title
     transcription:
       label: Transcription
     url:
@@ -600,14 +716,14 @@ admin:
     video:
       label: Video
       mp4:
-        hint: 'Video in MP4 format'
+        hint: Vidéo (MP4)
       webm:
-        hint: 'Video in WEBM format'
+        hint: Video (WEBM)
     website:
+      hint: URL (https://…)
       label: Website
-      hint: 'URL (https://…)'
     weight:
-      label: Position
+      label: Position (importance)
       hint: Knowing that 1 is the most important and 10 the least important
     year: Year
     zoom:
@@ -617,13 +733,13 @@ admin:
     footer: Information text at the bottom of the site
     nav:
       label: Navigation
-      legal: Legal navigation (notice, conditions…)
+      legal: Legals navigation (mentions, policy…)
       primary: Primary navigation
       secondary: Secondary navigation
-      social: Social networks navigation
+      social: Socials navigation
     seo:
-      label: SEO global
-      title: Name of site
+      label: Global SEO
+      title: Website name
   group:
     year: Year
   shortcodes:

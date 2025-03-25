@@ -11,7 +11,13 @@ fields: [
     {{- if templates.Exists ( printf "partials/%s" $file ) }}
       {{- $fields = partialCached $file . -}}
     {{- else -}}
-      {{- $fields = partialCached "admin/collections/fields.default.yml" . -}}
+      {{- with site.GetPage $collection -}}
+        {{- if eq .Kind "taxonomy" -}}
+          {{- $fields = partialCached "admin/collections/fields.terms.default.yml" . -}}
+        {{- else -}}
+          {{- $fields = partialCached "admin/collections/fields.default.yml" . -}}
+        {{- end -}}
+      {{- end -}}
     {{- end -}}
     {{ partial "admin/fields/_range-fields.yml" $fields }}
   {{ end -}}

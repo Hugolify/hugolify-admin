@@ -1,0 +1,14 @@
+{{ $view_groups := (index site.Params.admin.collections .).view_groups }}
+{{ if $view_groups }}
+view_groups: [
+  {{ range $view_groups }}
+    {
+      label: "{{ .label }}",
+      field: "{{ .field }}",
+      {{ with .pattern }}
+      pattern: "{{ . }}"
+      {{ end }}
+    },
+  {{ end }}
+],
+{{ end }}

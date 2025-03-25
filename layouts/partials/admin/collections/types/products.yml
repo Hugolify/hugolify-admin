@@ -14,7 +14,10 @@
   
   {{ partial "admin/collections/config/icon.yml" "box" }}
   {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" "products" }}
+  {{ partial "admin/collections/config/summary.yml" "products" }}
+  {{ partial "admin/collections/config/view_filters.yml" "products" }}
+  {{ partial "admin/collections/config/view_groups.yml" "products" }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" "products") }}
 }

@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.legal.label" }}',
+  name: 'legal',
+  widget: 'text',
+  required: false,
+  i18n: true
+}
