@@ -2,5 +2,5 @@
 sitemap:
   disable: true
 outputs:
-- admin_config
+  - admin_config_yml
 ---

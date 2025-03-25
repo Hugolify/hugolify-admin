@@ -1,3 +1,0 @@
-{{- $cms := site.Params.admin.cms | default "decapcms" -}}
-{{- $partial := print "admin/cms/" $cms "/config.yml" -}}
-{{ transform.Remarshal "yaml" (partial $partial .) }}

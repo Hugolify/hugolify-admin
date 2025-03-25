@@ -9,20 +9,13 @@ module:
     - source: static
       target: static
 
-# Config YAML
+# Config file
 outputFormats:
-  # For DecapCMS, SveltiaCMS, NetlifyCMS and StaticCMS
-  admin_config:
+  admin_config_yml:
     baseName: config
     isPlainText: true
     mediaType: application/yaml
     notAlternative: false
-  # For PagesCMS
-  pagescms_config:
-    baseName: .pages
-    isPlainText: true
-    mediaType: application/yaml
-    notAlternative: true
 mediaTypes:
   application/yaml:
     suffixes:
