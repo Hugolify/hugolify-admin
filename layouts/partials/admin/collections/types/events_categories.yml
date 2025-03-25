@@ -1,6 +1,6 @@
 {
-  name: events_categories,
-  folder: content/events_categories,
+  name: 'events_categories',
+  folder: 'content/events_categories',
   label: '{{ i18n "admin.collections.events_categories.label" }}',
   label_singular: '{{ i18n "admin.collections.events_categories.label" 1 }}',
   description: '{{ i18n "admin.collections.events_categories._description" }}',

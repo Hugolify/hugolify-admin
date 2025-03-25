@@ -1,6 +1,7 @@
 ---
 sitemap:
   disable: true
+url: /tina
 outputs:
-  - admin_config_yml
+  - admin_config_js
 ---

@@ -1,6 +1,6 @@
 {
-  name: publications,
-  folder: content/publications,
+  name: 'publications',
+  folder: 'content/publications',
   label: '{{ i18n "admin.collections.publications.label" }}',
   label_singular: '{{ i18n "admin.collections.publications.label" 1 }}',
   description: '{{ i18n "admin.collections.publications._description" }}',

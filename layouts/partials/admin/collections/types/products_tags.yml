@@ -1,6 +1,6 @@
 {
-  name: products_tags,
-  folder: content/products_tags,
+  name: 'products_tags',
+  folder: 'content/products_tags',
   label: '{{ i18n "admin.collections.products_tags.label" }}',
   label_singular: '{{ i18n "admin.collections.products_tags.label" 1 }}',
   description: '{{ i18n "admin.collections.products_tags._description" }}',

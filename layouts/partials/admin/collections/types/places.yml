@@ -1,6 +1,6 @@
 {
-  name: places,
-  folder: content/places,
+  name: 'places',
+  folder: 'content/places',
   label: '{{ i18n "admin.collections.places.label" }}',
   label_singular: '{{ i18n "admin.collections.places.label" 1 }}',
   description: '{{ i18n "admin.collections.places._description" }}',

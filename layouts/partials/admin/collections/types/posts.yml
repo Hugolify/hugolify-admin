@@ -1,6 +1,6 @@
 {
-  name: posts,
-  folder: content/posts,
+  name: 'posts',
+  folder: 'content/posts',
   label: '{{ i18n "admin.collections.posts.label" }}',
   label_singular: '{{ i18n "admin.collections.posts.label" 1 }}',
   description: '{{ i18n "admin.collections.posts._description" }}',

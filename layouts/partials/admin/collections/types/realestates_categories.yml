@@ -1,6 +1,6 @@
 {
-  name: realestates_categories,
-  folder: content/realestates_categories,
+  name: 'realestates_categories',
+  folder: 'content/realestates_categories',
   label: '{{ i18n "admin.collections.realestates_categories.label" }}',
   label_singular: '{{ i18n "admin.collections.realestates_categories.label" 1 }}',
   description: '{{ i18n "admin.collections.realestates_categories._description" }}',

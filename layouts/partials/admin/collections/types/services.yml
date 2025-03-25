@@ -1,6 +1,6 @@
 {
-  name: services,
-  folder: content/services,
+  name: 'services',
+  folder: 'content/services',
   label: '{{ i18n "admin.collections.services.label" }}',
   label_singular: '{{ i18n "admin.collections.services.label" 1 }}',
   description: '{{ i18n "admin.collections.services._description" }}',

@@ -1,6 +1,6 @@
 {
-  name: persons,
-  folder: content/persons,
+  name: 'persons',
+  folder: 'content/persons',
   label: '{{ i18n "admin.collections.persons.label" }}',
   label_singular: '{{ i18n "admin.collections.persons.label" 1 }}',
   description: '{{ i18n "admin.collections.persons._description" }}',

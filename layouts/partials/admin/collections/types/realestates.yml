@@ -1,6 +1,6 @@
 {
-  name: realestates,
-  folder: content/realestates,
+  name: 'realestates',
+  folder: 'content/realestates',
   label: '{{ i18n "admin.collections.realestates.label" }}',
   label_singular: '{{ i18n "admin.collections.realestates.label" 1 }}',
   description: '{{ i18n "admin.collections.realestates._description" }}',

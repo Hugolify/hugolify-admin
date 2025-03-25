@@ -1,6 +1,6 @@
 {
-  name: projects_tags,
-  folder: content/projects_tags,
+  name: 'projects_tags',
+  folder: 'content/projects_tags',
   label: '{{ i18n "admin.collections.projects_tags.label" }}',
   label_singular: '{{ i18n "admin.collections.projects_tags.label" 1 }}',
   description: '{{ i18n "admin.collections.projects_tags._description" }}',

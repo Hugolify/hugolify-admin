@@ -2,7 +2,7 @@ media:
   input: "static/images/uploads"
   output: "/images/uploads"
 
-{{- $partial := partialCached "admin/collections/index.yml" . -}}
+{{- $collections := partialCached "admin/collections/index.yml" . -}}
 
 {{- $sliceCompatibity := slice 
   (dict "{{slug}}/_index" "{fields.title}/_index.md")
@@ -22,8 +22,8 @@ media:
 
 {{- range $sliceCompatibity }}
   {{- range $key, $value := . }}
-    {{- $partial = replace $partial $key $value -}}
+    {{- $collections = replace $collections $key $value -}}
   {{- end -}}
 {{- end }}
 
-{{ transform.Remarshal "yaml" $partial }}
+{{ transform.Remarshal "yaml" $collections }}
