@@ -9,9 +9,9 @@ module:
     - source: static
       target: static
 
-# Config YAML
+# Config file
 outputFormats:
-  admin_config:
+  admin_config_yml:
     baseName: config
     isPlainText: true
     mediaType: application/yaml

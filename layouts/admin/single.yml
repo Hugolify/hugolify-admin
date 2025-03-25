@@ -1,0 +1,2 @@
+{{- $cms := site.Params.admin.cms | default "decapcms" -}}
+{{- partial (printf "admin/cms/%s/config.yml" $cms) -}}

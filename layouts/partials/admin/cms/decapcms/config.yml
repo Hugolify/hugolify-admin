@@ -1,25 +1,25 @@
 backend:
   branch: {{ site.Params.admin.branch | default "main" }}
   name: {{ site.Params.admin.git | default "git-gateway" }}
-  {{ with site.Params.admin.repo }}
+  {{- with site.Params.admin.repo }}
   repo: {{ . }}
-  {{ end }}
+  {{- end }}
 
 display_url: "{{ site.BaseURL }}"
 
-{{ if site.Params.admin.i18n.locales }}
+{{- if site.Params.admin.i18n.locales }}
 i18n:
   structure: multiple_files
   locales: {{ site.Params.admin.i18n.locales }}
   default_locale: {{ site.Params.admin.i18n.default_locale }}
-{{ end }}
+{{- end }}
 
 local_backend: true
 locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
 logo_url: "./logo.svg"
 media_folder: {{ site.Params.admin.media.media_folder | default "static/images/uploads" }}
 
-{{ with site.Params.admin.media.cloud }}
+{{- with site.Params.admin.media.cloud }}
 media_library:
   name: "{{ .name }}"
   config:
@@ -35,7 +35,7 @@ media_library:
     {{ with .tabs }}
     tabs: {{ . }}
     {{ end }}
-{{ end }}
+{{- end }}
 
 public_folder: {{ site.Params.admin.media.public_folder }}
 publish_mode: {{ site.Params.admin.publish_mode }}
@@ -44,4 +44,4 @@ slug:
   clean_accents: false
   sanitize_replacement: "-"
 
-{{ partialCached "admin/collections/index.yml" . }}
+{{ transform.Remarshal "yaml" (partialCached "admin/collections/index.yml" .) }}

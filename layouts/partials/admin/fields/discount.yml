@@ -1,12 +1,12 @@
+{{ $regex := "^[0-9]*(%?)$" }}
+{{ $message := i18n "admin.fields.discount.pattern" }}
+{{ $pattern := dict "regex" $regex "message" $message }}
 {
   label: '{{ i18n "admin.fields.discount.label" }}',
   hint: '{{ i18n "admin.fields.discount.hint" }}',
   name: 'discount',
   widget: 'string',
-  pattern: [
-    '^[0-9]*(%?)$', 
-    '{{ i18n "admin.fields.discount.pattern" }}'
-  ],
   required: false,
-  i18n: 'duplicate'
+  i18n: 'duplicate',
+  {{ partial "admin/func/get_pattern" $pattern }}
 }

@@ -1,0 +1,13 @@
+{{ $regex := .regex }}
+{{ $message := .message  }}
+{{ if eq site.Params.admin.cms "pagescms" }}
+  pattern: {
+    "regex": "{{ $regex }}",
+    "message": "{{ $message }}"
+  }
+{{ else }}
+  pattern: [
+    "{{ $regex }}",
+    "{{ $message }}"
+  ]
+{{ end }}
