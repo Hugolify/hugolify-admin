@@ -5,5 +5,5 @@
 {
   name: 'section',
   widget: 'hidden',
-  default: {{ $collection }}
+  default: '{{ $collection }}'
 }

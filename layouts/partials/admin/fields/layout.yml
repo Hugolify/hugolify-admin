@@ -8,7 +8,7 @@
   widget: 'select',
   options: [
     {{ range $layout }}
-    { label: '{{ i18n (print "admin.fields.layout.options." .) }}', value: {{ . }} },
+    { label: '{{ i18n (print "admin.fields.layout.options." .) }}', value: '{{ . }}' },
     {{ end }}
   ],
   i18n: 'duplicate'

@@ -64,28 +64,28 @@ params:
       # Set blocks available, all blocks https://www.hugolify.io/docs/blocks/
       enable:
         - alert
-        # - chart
-        # - comparison
-        # - cta
-        # - datas
-        # - editorial
-        # - embed
-        # - faq
-        # - figure
-        # - form
-        # - gallery
-        # - images
-        # - informations
-        # - instagram
-        # - latest
-        # - logos
-        # - map
-        # - newsletter
-        # - paragraph
-        # - pushes
-        # - quote
+        - chart
+        - comparison
+        - cta
+        - datas
+        - editorial
+        - embed
+        - faq
+        - figure
+        - form
+        - gallery
+        - images
+        - informations
+        - instagram
+        - latest
+        - logos
+        - map
+        - newsletter
+        - paragraph
+        - pushes
+        - quote
         # - selected
-        # - testimonials
-        # - timeline
-        # - title
-        # - video
+        - testimonials
+        - timeline
+        - title
+        - video
