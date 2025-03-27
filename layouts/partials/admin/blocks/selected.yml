@@ -22,6 +22,7 @@
 {
   label: '{{ i18n "admin.blocks.selected.label" (dict "section" $name) }}',
   name: 'selected-{{ $collection }}',
+  nameOverride: 'selected_{{ $collection }}',
   widget: 'object',
   required: false,
   i18n: true,
