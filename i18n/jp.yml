@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Alert
+    audio:
+      label: Audio
     chart:
       label: Chart
     comparison:
@@ -277,6 +279,12 @@ admin:
       label:
         one: Argument
         other: Arguments
+    audio:
+      label: Audio
+      mp3:
+        hint: Audio (MP3)
+      ogg:
+        hint: Audio (OGG)
     author:
       label: Author
     autoplay:
@@ -716,7 +724,7 @@ admin:
     video:
       label: Video
       mp4:
-        hint: Vidéo (MP4)
+        hint: Video (MP4)
       webm:
         hint: Video (WEBM)
     website:

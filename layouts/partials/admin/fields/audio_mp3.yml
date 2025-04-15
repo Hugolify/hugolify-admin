@@ -1,0 +1,16 @@
+{
+  label: 'MP3',
+  hint: '{{ i18n "admin.fields.audio.mp3.hint" }}',
+  name: 'mp3',
+  widget: 'file',
+  required: false,
+  i18n: 'duplicate',
+  choose_url: false,
+  media_library: {
+    config: {
+      max_file_size: {{site.Params.admin.media.audio_max_file_size}}
+    }
+  },
+  media_folder: '/static/assets/audios',
+  public_folder: '/assets/audios'
+}
