@@ -1,0 +1,14 @@
+{
+  label: '{{ i18n "admin.fields.chart.type.label" }}',
+  name: 'type',
+  widget: 'select',
+  multiple: false,
+  options: [
+    { label: '{{ i18n "admin.fields.chart.type.options.bar" | default "bar" }}', value: 'bar' },
+    { label: '{{ i18n "admin.fields.chart.type.options.pie" | default "pie" }}', value: 'pie' },
+    { label: '{{ i18n "admin.fields.chart.type.options.line" | default "line" }}', value: 'line' },
+    { label: '{{ i18n "admin.fields.chart.type.options.polarArea" | default "polarArea" }}', value: 'polarArea'},
+    { label: '{{ i18n "admin.fields.chart.type.options.radar" | default "radar" }}', value: 'radar' }
+  ],
+  default: ['bar']
+}

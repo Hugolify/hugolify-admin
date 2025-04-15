@@ -340,6 +340,19 @@ admin:
         label: Responsive
       type:
         label: Type de carrousel
+    chart:
+      label: Chart
+      data:
+        label: Data (code)
+        hint: 'Documentation: https://www.chartjs.org/docs/'
+      type:
+        label: Type de graphique
+        options:
+          bar: Barre
+          line: Ligne
+          pie: Tarte
+          polarArea: Polaire
+          radar: Radar
     code:
       label: Code
     color:

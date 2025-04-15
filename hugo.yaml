@@ -35,6 +35,7 @@ params:
     media:
       media_folder: 'static/images/uploads'
       public_folder: '/images/uploads'
+      audio_max_file_size: 700000 # 700ko
       max_file_size: 700000 # 700ko
       pdf_max_file_size: 5000000 # 5Mo
       specific_filter: false # set true to add a selected filter by image
@@ -58,8 +59,9 @@ params:
     blocks:
       # Set blocks available, all blocks https://www.hugolify.io/docs/blocks/
       enable:
+        - audio
         - alert
-        # - chart
+        - chart
         - comparison
         - cta
         - datas
