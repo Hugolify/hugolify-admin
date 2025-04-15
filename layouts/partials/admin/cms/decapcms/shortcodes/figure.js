@@ -2,10 +2,10 @@ CMS.registerEditorComponent({
   id: 'figure',
   label: '{{ i18n "admin.shortcodes.figure.label" }}',
   fields: [
-    {{ partialCached "admin/fields/image_src.yml" . }}, 
-    {{ partialCached "admin/fields/image_alt.yml" . }}, 
-    {{ partialCached "admin/fields/legend.yml" . }}, 
-    {{ partialCached "admin/fields/credit.yml" . }}
+    {{ partialCached "admin/fields/image_src.yml" . | safeHTML }}, 
+    {{ partialCached "admin/fields/image_alt.yml" . | safeHTML }}, 
+    {{ partialCached "admin/fields/legend.yml" . | safeHTML }}, 
+    {{ partialCached "admin/fields/credit.yml" . | safeHTML }}
   ],
   pattern: '{{`/{{< figure src="(.*?)" alt="(.*?)" legend="(.*?)" credit="(.*?)" >}}/`}}',
   fromBlock: function (match) {

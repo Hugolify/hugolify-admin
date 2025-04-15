@@ -3,13 +3,13 @@ CMS.registerEditorComponent({
   label: '{{ i18n "admin.shortcodes.twitter.label" }}',
   fields: [
     {
-      name: 'user',
       label: '{{ i18n "admin.shortcodes.twitter.user" }}',
+      name: 'user',
       widget: 'string'
     },
     {
-      name: 'id',
       label: '{{ i18n "admin.shortcodes.twitter._id" }}',
+      name: 'id',
       widget: 'string'
     }
   ],

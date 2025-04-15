@@ -1,7 +1,7 @@
 {{- $fields := slice 
   "url" 
   "form_hiddens" -}}
-{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.newsletter.form.label" }}',
   name: 'form',

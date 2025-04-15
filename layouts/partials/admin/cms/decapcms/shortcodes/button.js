@@ -2,9 +2,9 @@ CMS.registerEditorComponent({
   id: 'button',
   label: '{{ i18n "admin.shortcodes.button.label" }}',
   fields: [
-    {{ partialCached "admin/fields/text.yml" . }}, 
-    {{ partialCached "admin/fields/url.yml" . }}, 
-    {{ partialCached "admin/fields/is_blank.yml" . }}
+    {{ partialCached "admin/fields/text.yml" . | safeHTML }}, 
+    {{ partialCached "admin/fields/url.yml" . | safeHTML }}, 
+    {{ partialCached "admin/fields/is_blank.yml" . | safeHTML }}
   ],
   pattern: /{{`{{<`}} button text="(.*)" url="(.*)" blank="(true|false)" {{`>}}`}}/,
   fromBlock: function (match) {

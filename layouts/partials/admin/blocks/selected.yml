@@ -13,7 +13,7 @@
   $layout
   "show_more"
   "background" -}}
-{{- $fields = partial "admin/func/get_fields" (dict "block" $block "fields" $fields) -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "block" $block "fields" $fields) -}}
 
 {{ if gt $index 0 }},{{ end }}
 

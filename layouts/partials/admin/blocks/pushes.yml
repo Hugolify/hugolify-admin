@@ -7,7 +7,7 @@
   $layout 
   "carousel" 
   "background" -}}
-{{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "block" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.blocks.pushes.label" }}',
   name: 'pushes',

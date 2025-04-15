@@ -8,5 +8,5 @@
   widget: 'string',
   required: false,
   i18n: 'duplicate',
-  {{ partial "admin/func/get_pattern" $pattern }}
+  {{ partial "admin/func/get_pattern.html" $pattern }}
 }

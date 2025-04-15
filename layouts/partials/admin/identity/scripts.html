@@ -1,3 +1,3 @@
 {{- with or site.Params.admin.netlify.identity site.Params.admin.auth.netlify_identity }}
-  {{ partialCached "admin/identity/netlify" . }}
+  {{ partialCached "admin/identity/netlify.html" . }}
 {{- end }}

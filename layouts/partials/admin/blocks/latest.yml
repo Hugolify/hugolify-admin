@@ -6,7 +6,7 @@
   "count" 
   "show_more" 
   "background" -}}
-{{- $fields = partial "admin/func/get_fields" (dict "block" . "fields" $fields) -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "block" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.blocks.latest.label" }}',
   name: 'latest',

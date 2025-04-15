@@ -6,12 +6,12 @@ files: [
       {{ partialCached $file . }},
     {{ end -}}
   {{- else -}}
-    {{- $file := print "admin/collections/types/" $collection ".files.default.yml" -}}
+    {{- $file := print "admin/collections/types/" $collection ".files.default.html" -}}
     {{- $files := false -}}
     {{- if templates.Exists ( printf "partials/%s" $file ) }}
       {{- $files = partialCached $file . -}}
     {{- else -}}
-      {{- $files = partialCached "admin/collections/files.default.yml" . -}}
+      {{- $files = partialCached "admin/collections/files.default.html" . -}}
     {{- end -}}
     {{ partial "admin/datas/_range-files.yml" $files }}
   {{ end -}}

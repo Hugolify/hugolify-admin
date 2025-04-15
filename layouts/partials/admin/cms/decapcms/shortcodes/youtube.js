@@ -7,7 +7,7 @@ CMS.registerEditorComponent({
       label: '{{ i18n "admin.shortcodes.youtube._id" }}',
       widget: 'string'
     },
-    {{ partialCached "admin/fields/title.yml" . }}
+    {{ partialCached "admin/fields/title.yml" . | safeHTML }}
   ],
   pattern: '{{`/{{< youtube id="(.*)" title="(.*)" class="youtube" >}}/`}}',
   fromBlock: function (match) {

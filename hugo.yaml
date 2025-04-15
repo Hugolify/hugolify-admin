@@ -28,6 +28,7 @@ params:
     cms: decapcms # https://www.hugolify.io/docs/cms/
     config:
       id: false # set true to use ID for dir/name files and relation
+    publish_mode: simple # simple or editorial_workflow
     i18n:
       default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
