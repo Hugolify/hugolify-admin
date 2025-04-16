@@ -1,0 +1,21 @@
+{
+  label: '{{ i18n "admin.fields.socials.plateform" }}',
+  name: 'plateform',
+  widget: 'select',
+  options: [
+    { label: 'Facebook', value: 'facebook' },
+    { label: 'Github', value: 'github' },
+    { label: 'Google', value: 'google' },
+    { label: 'Instagram', value: 'instagram' },
+    { label: 'Linkedin', value: 'linkedin' },
+    { label: 'Pinterest', value: 'pinterest' },
+    { label: 'Threads', value: 'threads' },
+    { label: 'Tiktok', value: 'tiktok' },
+    { label: 'Twitch', value: 'twitch' },
+    { label: 'Twitter/X', value: 'twitter' },
+    { label: 'Vimeo', value: 'vimeo' },
+    { label: 'Youtube', value: 'youtube' }
+  ],
+  required: true,
+  i18n: 'duplicate'
+}
