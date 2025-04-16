@@ -19,7 +19,6 @@ fields: [
         {{- end -}}
       {{- end -}}
     {{- end -}}
-    {{- warnidf "collections-fields" "FIELDS: %s" $fields -}}
     {{ partial "admin/fields/_range-fields.yml" $fields }}
   {{ end -}}
 ],
