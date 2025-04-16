@@ -6,6 +6,8 @@
   required: false,
   i18n: true,
   collapsed: true,
+  {{- if in . "title" }}
   summary: '{{`{{title}}`}}',
+  {{ end -}}
   {{ partial "admin/fields/_fields.yml" . }}
 }
