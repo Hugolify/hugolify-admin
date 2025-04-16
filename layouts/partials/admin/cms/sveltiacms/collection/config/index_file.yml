@@ -1,0 +1,5 @@
+index_file: {
+  name: _index,
+  editor: { preview: {{ site.Params.admin.preview | default false }} },
+  {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
+},
