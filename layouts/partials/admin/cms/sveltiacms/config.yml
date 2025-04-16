@@ -28,4 +28,4 @@ slug:
   clean_accents: false
   sanitize_replacement: "-"
 
-{{ partialCached "admin/collections/index.yml" . }}
+{{ transform.Remarshal "yaml" (partial "admin/collections/index.yml" .) }}
