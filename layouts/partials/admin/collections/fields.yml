@@ -6,16 +6,16 @@ fields: [
       {{ partialCached $file . }},
     {{ end -}}
   {{- else -}}
-    {{- $file := print "admin/collections/types/" $collection ".fields.default.html" -}}
+    {{- $file := print "admin/collections/fields/" $collection ".fields.default.html" -}}
     {{- $fields := false -}}
     {{- if templates.Exists ( printf "partials/%s" $file ) }}
       {{- $fields = partial $file . -}} 
     {{- else -}}
       {{- with site.GetPage $collection -}}
         {{- if eq .Kind "taxonomy" -}}
-          {{- $fields = partialCached "admin/collections/fields.terms.default.html" . -}}
+          {{- $fields = partialCached "admin/collections/fields/_terms.default.html" . -}}
         {{- else -}}
-          {{- $fields = partialCached "admin/collections/fields.default.html" . -}}
+          {{- $fields = partialCached "admin/collections/fields/_default.html" . -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}

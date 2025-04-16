@@ -14,6 +14,7 @@
   nested: { depth: 2 },
   
   {{ partial "admin/collections/config/icon.yml" "gavel" }}
+  {{ partial "admin/collections/config/index_file.yml" }}
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" }}
   {{ partial "admin/collections/config/view_filters.yml" "realestates_sellers" }}

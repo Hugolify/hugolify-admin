@@ -15,6 +15,7 @@
   {{ partial "admin/collections/config/slug.yml" $slug }}
   
   {{ partial "admin/collections/config/icon.yml" "work" }}
+  {{ partial "admin/collections/config/index_file.yml" }}
   {{ partial "admin/collections/config/filter.yml" }}
   {{ partial "admin/collections/config/sortable.yml" "jobs" }}
   {{ partial "admin/collections/config/summary.yml" "jobs" }}
