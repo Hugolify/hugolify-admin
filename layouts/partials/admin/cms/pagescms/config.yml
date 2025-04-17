@@ -1,6 +1,6 @@
 media:
-  input: "static/images/uploads"
-  output: "/images/uploads"
+  input: {{ site.Params.admin.media.media_folder | default "assets/images/uploads" }}
+  output: {{ site.Params.admin.media.public_folder | default "/images/uploads" }}
 
 {{- $partial := partialCached "admin/collections/index.yml" . -}}
 
@@ -17,6 +17,7 @@ media:
   (dict "widget: 'datetime'" "widget: 'date'") 
   (dict "widget: 'markdown'" "widget: 'rich-text'") 
   (dict "widget:" "type:") 
+  (dict "types:" "type: 'block', blockKey: 'type', blocks:") 
   (dict "collections:" "content:") 
   -}}
 
@@ -25,5 +26,8 @@ media:
     {{- $partial = replace $partial $key $value -}}
   {{- end -}}
 {{- end }}
+
+{{- $regex := "options: \\[([\\s\\S]*?)\\]" -}}
+{{ $partial = replaceRE $regex "options: { values: [${1}] }" $partial }}
 
 {{ transform.Remarshal "yaml" $partial }}
