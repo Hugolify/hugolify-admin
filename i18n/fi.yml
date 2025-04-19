@@ -1,0 +1,776 @@
+admin:
+  blocks:
+    alert:
+      label: Hälytys
+    audio:
+      label: Ääni
+    chart:
+      label: Kaavio
+    comparison:
+      label: Vertailu
+    cta:
+      label: Toimintakehotus
+    datas:
+      label: Tiedot
+    editorial:
+      label: Pääkirjoitus
+    embed:
+      label: Upotus
+    faq:
+      label: UKK
+    figure:
+      label: Kuvio
+    form:
+      label: Lomake
+    gallery:
+      label: Galleria
+    images:
+      label: Kuvat
+    informations:
+      label: Tiedot
+    instagram:
+      label: Instagram
+    latest:
+      label: Viimeisimmät kohteet
+    location:
+      label: Sijainti
+    logos:
+      label: Logot
+    map:
+      label: Kartta
+    newsletter:
+      label: Uutiskirje
+    paragraph:
+      label: Kappale
+    pushes:
+      label: Push-viestit
+    quote:
+      label: Lainaus
+    selected:
+      label: Valinta {{ .section }}
+    testimonials:
+      label: Asiakaspalautteet
+    timeline:
+      label: Aikajana
+    title:
+      label: Otsikko
+    video:
+      label: Video
+  collections:
+    authors:
+      label:
+        one: Tekijä
+        other: Tekijät
+    casestudies:
+      _description: Kaikki esimerkkitapaukset
+      label:
+        one: Esimerkkitapaus
+        other: Esimerkkitapaukset
+    categories:
+      label:
+        one: Kategoria
+        other: Kategoriat
+    config:
+      _description: Kaikki asetukset
+      label:
+        one: Asetus
+        other: Asetus
+    docs:
+      _description: Kaikki tiedostot
+      label:
+        one: Tiedosto
+        other: Tiedostot
+    events:
+      _description: Kaikki tapahtumat
+      label:
+        one: Tapahtuma
+        other: Tapahtumat
+    events_categories:
+      _description: Kaikki tapahtumaluokat
+      label:
+        one: Kategoria
+        other: Kategoriat
+    expertises:
+      _description: Kaikki erikoisalat
+      label:
+        one: Asiantuntemus
+        other: Asiantuntemukset
+    indexes:
+      _description: Kaikki hakemistosivut
+      label:
+        one: Hakemistot
+        other: Hakemistot
+    jobs:
+      _description: Kaikki työtehtävät
+      label:
+        one: Työpaikka
+        other: Työpaikat
+    jobs_categories:
+      _description: Kaikki uutisluokat
+      label:
+        one: Kategoria
+        other: Kategoriat
+    jobs_expertises:
+      _description: Kaikki erikoisalat
+      label:
+        one: Asiantuntemus
+        other: Asiantuntemukset
+    jobs_places:
+      _description: Kaikki sijainnit
+      label:
+        one: Paikka
+        other: Paikat
+    jobs_tags:
+      _description: Kaikki tuotetunnisteet
+      label:
+        one: Tunniste
+        other: Tunnisteet
+    pages:
+      _description: Kaikki sivut
+      label:
+        one: Sivu
+        other: Sivut
+    persons:
+      _description: Kaikki henkilöt
+      label:
+        one: Henkilö
+        other: Henkilöt
+    persons_expertises:
+      _description: Kaikki erikoisalat
+      label:
+        one: Asiantuntemus
+        other: Asiantuntemukset
+    persons_places:
+      _description: Kaikki sijainnit
+      label:
+        one: Paikka
+        other: Paikat
+    persons_statutes:
+      _description: Kaikki säännöt
+      label:
+        one: Tila
+        other: Säännökset
+    places:
+      _description: Kaikki sijainnit
+      label:
+        one: Paikka
+        other: Paikat
+    posts:
+      _description: Kaikki uutiset
+      label:
+        one: Uutinen
+        other: Uutiset
+    posts_categories:
+      _description: Kaikki uutisluokat
+      label:
+        one: Kategoria
+        other: Kategoriat
+    posts_expertises:
+      _description: Kaikki erikoisalat
+      label:
+        one: Asiantuntemus
+        other: Asiantuntemukset
+    posts_tags:
+      _description: Kaikki uutistunnisteet
+      label:
+        one: Tunniste
+        other: Tunnisteet
+    products:
+      _description: Kaikki tuotteet
+      label:
+        one: Tuote
+        other: Tuotteet
+    products_categories:
+      _description: Kaikki tuoteluokat
+      label:
+        one: Kategoria
+        other: Kategoriat
+    products_tags:
+      _description: Kaikki tuotetunnisteet
+      label:
+        one: Tunniste
+        other: Tunnisteet
+    projects:
+      _description: Kaikki projektit
+      label:
+        one: Projekti
+        other: Projektit
+    projects_tags:
+      _description: Kaikki projektitunnisteet
+      label:
+        one: Tunniste
+        other: Tunnisteet
+    projects_types:
+      _description: Kaikki projektityypit
+      label:
+        one: Tyyppi
+        other: Tyypit
+    publications:
+      _description: Kaikki julkaisut
+      label:
+        one: Julkaisu
+        other: Julkaisut
+    publications_categories:
+      _description: Kaikki julkaisuluokat
+      label:
+        one: Kategoria
+        other: Kategoriat
+    publications_expertises:
+      _description: Kaikki erikoisalat
+      label:
+        one: Asiantuntemus
+        other: Asiantuntemukset
+    publications_persons:
+      label:
+        one: Henkilö
+        other: Henkilöt
+    realestates:
+      _description: Kaikki kiinteistöt
+      label:
+        one: Kiinteistö
+        other: Kiinteistöt
+    realestates_categories:
+      _description: Kaikki kiinteistöluokat
+      label:
+        one: Luokka
+        other: Kategoriat
+    realestates_persons:
+      _description: Kaikki edustajat
+      label:
+        one: Välittäjä
+        other: Välittäjät
+    realestates_sellers:
+      _description: Kaikki myyjät
+      label:
+        one: Myyjä
+        other: Myyjät
+    services:
+      _description: Kaikki palvelut
+      label:
+        one: Palvelu
+        other: Palvelut
+    services_categories:
+      _description: Kaikki palveluluokat
+      label:
+        one: Kategoria
+        other: Kategoriat
+    tags:
+      _description: Kaikki tunnisteet
+      label:
+        one: Tunniste
+        other: Tunnisteet
+  fields:
+    address:
+      city:
+        label: Kaupunki
+      country:
+        label: Maa
+      label: Osoite
+      street:
+        label: Katuosoite
+      zipcode:
+        label: Postinumero
+    align:
+      center: Keski
+      end: Loppu
+      label: Tasaus
+      start: Alku
+    arguments:
+      label:
+        one: Perustelu
+        other: Perustelut
+    audio:
+      label: Ääni
+      mp3:
+        hint: Ääni (MP3)
+      ogg:
+        hint: Ääni (OGG)
+    author:
+      label: Tekijä
+    autoplay:
+      label: Automaattinen käynnistys
+    background:
+      label: Taustan kanssa?
+    background_color:
+      label: Taustaväri
+    badge:
+      hint: Näytä merkki
+      label: Merkki
+    blocks:
+      label:
+        one: Lohko
+        other: Lohkot
+    body:
+      label: Runko
+    breakpoints:
+      hint: Näytön koko
+      label:
+        one: Breakpoint
+        other: Breakpointit
+      options:
+        desktop: Työpöytä
+        laptop: Kannettava
+        mobile: Mobiili
+        tablet: Tabletti
+        wide_tablet: Leveä tabletti
+    carousel:
+      arrows:
+        label: Nuolet
+      autoplay:
+        label: Automaattinen käynnistys
+      focus:
+        hint: Keskitä aktiivinen kuva
+        label: Fokus
+      gap:
+        hint: Kuvien väli. Ilmoita rem-yksikössä
+        label: Väli
+      hint: Vain kuvakarusellille
+      label: Kuvakarusellin asetukset
+      padding:
+        hint: Kuvakarusellin vasen/oikea sisennys. Ilmoita rem-yksikössä
+        label: Sisennys
+      pagination:
+        label: Sivutus
+      params:
+        label: Parametrit
+      perpage:
+        hint: Näytettävien kuvien lukumäärä
+        label: Per sivu
+      responsive:
+        label: Responsiivinen
+      type:
+        label: Kuvakarusellin tyyppi
+    chart:
+      data:
+        hint: 'Documentaatio: https://www.chartjs.org/docs/'
+        label: Data (koodi)
+      label: Kaavio
+      type:
+        label: Kaavion tyyppi
+        options:
+          bar: Palkki
+          line: Viiva
+          pie: Piirakka
+          polarArea: Polar-alue
+          radar: Tutka
+    code:
+      label: Koodi
+    color:
+      label: Väri
+    column:
+      label: Sarake
+    contact:
+      label:
+        one: Yhteystieto
+        other: Yhteystiedot
+    controls:
+      label: Kontrollit
+    coordinates:
+      hint: 'Löydä helposti tarkemmat tiedot: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Maantieteelliset koordinaatit
+      lat:
+        label: Leveysaste
+      lng:
+        label: Pituusaste
+    count:
+      hint: Näytettävien kenttien määrä
+      label: Lukumäärä
+    credit:
+      label: Credit
+    cta:
+      label:
+        one: CTA
+        other: CTA:t
+    date:
+      from: Alkaen
+      label: Päivämäärä
+      sale: Myynnin pvm
+      to: Päättyen
+    description:
+      hint: Näytetään välilehdissä, hakutuloksissa ja tekstiviestien/viestien/sosiaalisten
+        verkostojen esikatselussa.
+      label: Kuvaus
+    diagnostic:
+      epd:
+        hint: Energiatehokkuuden diagnostiikka (DPE)
+        label: Kwh
+      ghg:
+        hint: Kasvihuonekaasut (CHG)
+        label: Co2
+      in_progress: Käynnissä?
+      label: Diagnostiikka
+    direction:
+      label: Suunta
+      options:
+        ltr: Teksti vasemmalla / kuva oikealla
+        rtl: Kuva vasemmalla / teksti oikealla
+    discount:
+      hint: Vähennyksen määrä, esim. 30 %.
+      label: Alennus
+      pattern: Vain arvo (ilman valuuttaa)
+    document:
+      label:
+        one: Asiakirja
+        other: Asiakirjat
+    draft:
+      label: Luonnos
+    email:
+      label: Sähköposti
+    embed:
+      label: Upotus
+    event:
+      label:
+        one: Tapahtuma
+        other: Tapahtumat
+    fax:
+      hint: 'Kansainvälinen muoto, esim: +358 40 123 4567'
+      label: Faksi
+    featured_image:
+      hint: Näytetään hakutuloksissa ja tekstiviestien/viestien/sosiaalisten verkostojen
+        esikatselussa
+      label: Pääkuva
+    fee:
+      label:
+        one: Maksu
+        other: Maksut
+    figure:
+      label: Kuvio
+    form:
+      autocomplete:
+        city: Kaupunki
+        country_name: Maan nimi
+        email: Sähköposti
+        family_name: Sukunimi
+        given_name: Etunimi
+        honorific_prefix: Otsikko
+        label: Automaattinen täydennys
+        name: Nimi
+        organization: Organisaatio
+        postal_code: Postinumero
+        state: Tila
+        street_address: Katuosoite
+        tel: Puh.
+      full:
+        label: Täyden leveyden kenttä
+      hiddens:
+        label:
+          one: Piilotettu kenttä
+          other: Piilotetut kentät
+      items:
+        label:
+          one: Kenttä
+          other: Kentät
+      label: Lomake
+      options:
+        hint: Vain valituille kentille
+        label:
+          one: Vaihtoehto
+          other: Vaihtoehdot
+      type:
+        email: Sähköposti
+        label: Tyyppi
+        select: Valittu
+        tel: Puhelin
+        text: Teksti
+        textarea: Tekstialue
+    gallery:
+      label: Galleria
+    grid:
+      container: Säilö
+      full: Täysi
+      label: Ruudukko
+      large: Suuri
+      medium: Keskikokoinen
+      small: Pieni
+    heading:
+      label: Otsikko
+    hero:
+      label: Hero
+    icon:
+      hint: Kuvakkeen nimi osoitteesta https://icons.getbootstrap.com/
+      label: Kuvake
+    image:
+      alt:
+        hint: Tietoa välittävän kuvan osalta (jätä tyhjäksi, jos kyseessä on koristeellinen
+          kuva).
+        label: Tekstin vaihtoehto
+      filter:
+        box: Yksinkertainen ja nopea keskiarvosuodatin, joka soveltuu pienentämiseen
+          (oletusarvo)
+        catmullrom: Terävä kuutiosuodatin, joka on nopeampi kuin Lanczos-suodatin
+          ja antaa samanlaisia tuloksia
+        hint: Aseta Linear kuvalle tai kuvakaappaukselle, jätä tyhjäksi, jos haluat
+          säilyttää oletusasetukset.
+        label: Vaihda suodattimen laatu?
+        lanczos: Laadukas resampling-suodatin valokuville, joka tuottaa teräviä tuloksia
+        linear: Bilineaarinen uudelleen näytteenottosuodatin, tuottaa tasaisen tulosteen,
+          nopeampi kuin kuutiosuodattimet
+      label: Kuva
+      src:
+        hint: 'Koon muuttaminen ja kuvan pakkaaminen ennen lähettämistä : https://bulkresizephotos.com/fi?quality=90&type=width&width=1600'
+        label: Kuva
+    images:
+      label: Kuvat
+    is_blank:
+      label: Tyhjä?
+    is_card:
+      hint: Lisää taustan tekstin taakse
+      label: Kortti?
+    is_exclusive:
+      label: Ekslusiivinen
+    is_half:
+      label: Puolikas?
+    is_highlighted:
+      label: Korostettu?
+    is_logo:
+      hint: Sijoitettu keskelle eikä rajattu
+      label: Logo?
+    is_pinned:
+      label: Kiinnitetty?
+    is_screenshot:
+      hint: Lisää valeselain
+      label: Näyttökuva
+    items:
+      label:
+        one: Kohde
+        other: Kohteet
+    keyfeatures:
+      hint: 'Esim: Sijainti...'
+      label:
+        one: Pääominaisuus
+        other: Pääominaisuudet
+    label:
+      label: Selite
+    lang:
+      hint: Syötä koodin kieli (esim. fr), jos se on eri kuin nykyisen sivun kieli
+      label: Kieli
+    layout:
+      label: Asettelu
+      options:
+        carousel: Kuvakaruselli
+        grid: Ruudukko
+        list: Lista
+    legal:
+      label: Lakisääteinen
+    legend:
+      label: Selite
+    limit:
+      label: Raja
+    links:
+      label:
+        one: Linkki
+        other: Linkit
+    location:
+      label: Sijainti
+    loop:
+      label: Silmukka
+    map:
+      label: Kartta
+    name:
+      label: Nimi
+    newsletter:
+      form:
+        label: Lomake
+    offer:
+      label: Tarjous
+    offset:
+      label: Offset
+      options:
+        center: Keski
+        end: Loppu
+        start: Alku
+    parent:
+      label: Ylätason sivu
+    pdf:
+      hint: 'Pakkaa PDF-tiedosto ennen lähettämistä: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+      label: PDF
+    phone:
+      hint: 'Kansainvälinen muoto, esim: +358 40 123 4567'
+      label: Puhelinnumero
+    placeholder:
+      label: Paikkamerkki
+    prefix:
+      label: Etuliite
+    press:
+      label: Paina
+    price:
+      hide: Piilota hinta
+      hint: 'Esim: 300000 (300 000 €)'
+      label: Hinta
+      sold: Myyntihinta
+    quote:
+      label: Lainaus
+    realestates_energies:
+      heating:
+        collective: Yhteinen
+        individual: Yksittäinen
+        label: Lämmitys
+      heating_type:
+        electric: Sähkö
+        gas: Kaasu
+        label: Lämmitystyyppi
+        reversible_ac: Käännettävä ilmastointi
+        solar: Aurinko
+      label:
+        one: Energia
+        other: Energiat
+    realestates_informations:
+      area:
+        hint: Neliömetreinä
+        label: Sisäpinta-ala
+      bathrooms:
+        label: Kylpyhuoneiden lukumäärä
+      bedrooms:
+        label: Huoneiden lukumäärä
+      district:
+        label: Alue
+      exposure:
+        label: Altistus
+      field:
+        hint: Neliömetreinä
+        label: Ulkopinta-ala
+      floor:
+        label: Kerrosta
+      has_balcony:
+        label: Parveke?
+      has_box:
+        label: Laatikko?
+      has_cave:
+        label: Kellari?
+      has_elevator:
+        label: Hissi?
+      has_garage:
+        label: Autotalli?
+      has_outbuilding:
+        label: Ulkorakennus?
+      has_parking:
+        label: Pysäköinti?
+      has_swimmingpool:
+        label: Uima-allas?
+      has_terrace:
+        label: Terassi?
+      label: Tiedot
+      levels:
+        label: Kerrosten lukumäärä
+      rooms:
+        label: Huoneiden lukumäärä
+      showerrooms:
+        label: Suihkuhuoneiden lukumäärä
+      wc:
+        label: WC
+      year:
+        label: Rakennusvuosi
+    realestates_types:
+      label: Tapahtuman tyyppi
+      rent:
+        label: Vuokra
+      sale:
+        label: Myynti
+    reference:
+      label: Viite
+    rent:
+      label: Vuokra?
+    required:
+      label: Vaadittu
+    section:
+      hint: Valitse näytettävä osa
+      label: Osa
+    show_more:
+      hint: Näyttää painikkeen nähdäksesi lisää kohteita
+      label: Näytä lisää?
+    show_places:
+      hint: Vain jos sinulla on jo tallennettuja paikkoja (tämä poistaa alla olevan
+        merkin käytöstä)
+      label: Näytä kaikki rekisteröidyt paikat?
+    slug:
+      hint: Jätä tyhjäksi, jos haluat automatisoida otsikon kanssa. **Ole varovainen
+        SEO-vaikutusten suhteen.**
+      label: Osoitepolku
+      pattern: Sisältää vain pieniä kirjaimia, numeroita ja väliviivoja, ei välilyöntejä,
+        aksentteja tai erikoismerkkejä.
+    socials:
+      label:
+        one: Sosiaalinen media
+        other: Sosiaaliset mediat
+      plateform: Alusta
+      twitter:
+        hint: Käyttäjänimi
+        label: Twitter/X
+    sold:
+      label: Myyty/vuokrattu?
+    state:
+      danger: Vaara
+      dark: Tumma
+      info: Info
+      label: Tila
+      light: Vaalea
+      primary: Ensisijainen
+      secondary: Toissijainen
+      success: Onnistuminen
+      warning: Varoitus
+    status:
+      label: Tila
+    submit:
+      label: Lähetä-painikkeen teksti
+    subtitle:
+      label: Alaotsikko
+    suffix:
+      hint: Esim. %
+      label: Jälkiliite
+    surtitle:
+      label: Alaotsikko
+    text:
+      label: Teksti
+    title:
+      label: Otsikko
+    title_page:
+      hint: Näytetään välilehdissä, hakutuloksissa ja tekstiviestien/viestien/sosiaalisten
+        verkostojen esikatselussa.
+      label: Sivun otsikko
+    transcription:
+      label: Transkriptio
+    url:
+      label: Verkko-osoite
+    value:
+      label: Arvo
+    video:
+      label: Video
+      mp4:
+        hint: Video (MP4)
+      webm:
+        hint: Video (WEBM)
+    website:
+      hint: URL (https://…)
+      label: Verkkosivu
+    weight:
+      hint: Tietäen, että 1 on tärkein ja 10 vähiten tärkeä.
+      label: Asema (merkitys)
+    year: Vuosi
+    zoom:
+      label: Lähennä
+  files:
+    banner: Tietopalkki sivuston yläosassa
+    footer: Tietopalkki sivuston alaosassa
+    nav:
+      label: Navigaatio
+      legal: Lainsäädännöllinen navigointi (maininnat, politiikka...)
+      primary: Ensisijainen navigaatio
+      secondary: Toissijainen navigaatio
+      social: Sosiaalisen median navigaatio
+    seo:
+      label: Yleinen SEO
+      title: Verkkosivun nimi
+  group:
+    year: Vuosi
+  shortcodes:
+    button:
+      label: Painike
+    figure:
+      label: Kuvio
+    twitter:
+      _id: Twitter ID
+      label: Twitter / X
+      user: Twitter-käyttäjänimi
+    youtube:
+      _id: Youtube ID
+      label: Youtube
