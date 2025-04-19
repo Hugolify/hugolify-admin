@@ -8,11 +8,15 @@
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
-  path: '{{`{{slug}}`}}',
-  slug: '{{`{{id}}`}}',
+  path: '{{`{{slug}}/_index`}}',
+  {{ partial "admin/collections/config/slug.yml" }}
 
-  {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/sortable.yml" "pages" }}
+  {{ partial "admin/collections/config/summary.yml" "pages" }}
+  {{ partial "admin/collections/config/view_filters.yml" "pages" }}
+  {{ partial "admin/collections/config/view_groups.yml" "pages" }}
 
-  {{ partial "admin/collections/fields.yml" (dict "collection" false) }}
+  {{ partial "admin/collections/fields.yml" (dict "collection" .) }}
+
+  {{ partial "admin/collections/config/nested.yml" "pages" }}
 }
