@@ -381,13 +381,16 @@ admin:
       label:
         one: CTA
         other: CTA:t
+    datas:
+      label: Tiedot
     date:
       from: Alkaen
       label: Päivämäärä
       sale: Myynnin pvm
       to: Päättyen
     description:
-      hint: Näytetään välilehdissä, hakutuloksissa ja tekstiviestien/viestien/sosiaalisten
+      hint:
+        Näytetään välilehdissä, hakutuloksissa ja tekstiviestien/viestien/sosiaalisten
         verkostojen esikatselussa.
       label: Kuvaus
     diagnostic:
@@ -426,7 +429,8 @@ admin:
       hint: 'Kansainvälinen muoto, esim: +358 40 123 4567'
       label: Faksi
     featured_image:
-      hint: Näytetään hakutuloksissa ja tekstiviestien/viestien/sosiaalisten verkostojen
+      hint:
+        Näytetään hakutuloksissa ja tekstiviestien/viestien/sosiaalisten verkostojen
         esikatselussa
       label: Pääkuva
     fee:
@@ -491,19 +495,24 @@ admin:
       label: Kuvake
     image:
       alt:
-        hint: Tietoa välittävän kuvan osalta (jätä tyhjäksi, jos kyseessä on koristeellinen
+        hint:
+          Tietoa välittävän kuvan osalta (jätä tyhjäksi, jos kyseessä on koristeellinen
           kuva).
         label: Tekstin vaihtoehto
       filter:
-        box: Yksinkertainen ja nopea keskiarvosuodatin, joka soveltuu pienentämiseen
+        box:
+          Yksinkertainen ja nopea keskiarvosuodatin, joka soveltuu pienentämiseen
           (oletusarvo)
-        catmullrom: Terävä kuutiosuodatin, joka on nopeampi kuin Lanczos-suodatin
+        catmullrom:
+          Terävä kuutiosuodatin, joka on nopeampi kuin Lanczos-suodatin
           ja antaa samanlaisia tuloksia
-        hint: Aseta Linear kuvalle tai kuvakaappaukselle, jätä tyhjäksi, jos haluat
+        hint:
+          Aseta Linear kuvalle tai kuvakaappaukselle, jätä tyhjäksi, jos haluat
           säilyttää oletusasetukset.
         label: Vaihda suodattimen laatu?
         lanczos: Laadukas resampling-suodatin valokuville, joka tuottaa teräviä tuloksia
-        linear: Bilineaarinen uudelleen näytteenottosuodatin, tuottaa tasaisen tulosteen,
+        linear:
+          Bilineaarinen uudelleen näytteenottosuodatin, tuottaa tasaisen tulosteen,
           nopeampi kuin kuutiosuodattimet
       label: Kuva
       src:
@@ -679,14 +688,17 @@ admin:
       hint: Näyttää painikkeen nähdäksesi lisää kohteita
       label: Näytä lisää?
     show_places:
-      hint: Vain jos sinulla on jo tallennettuja paikkoja (tämä poistaa alla olevan
+      hint:
+        Vain jos sinulla on jo tallennettuja paikkoja (tämä poistaa alla olevan
         merkin käytöstä)
       label: Näytä kaikki rekisteröidyt paikat?
     slug:
-      hint: Jätä tyhjäksi, jos haluat automatisoida otsikon kanssa. **Ole varovainen
+      hint:
+        Jätä tyhjäksi, jos haluat automatisoida otsikon kanssa. **Ole varovainen
         SEO-vaikutusten suhteen.**
       label: Osoitepolku
-      pattern: Sisältää vain pieniä kirjaimia, numeroita ja väliviivoja, ei välilyöntejä,
+      pattern:
+        Sisältää vain pieniä kirjaimia, numeroita ja väliviivoja, ei välilyöntejä,
         aksentteja tai erikoismerkkejä.
     socials:
       label:
@@ -724,7 +736,8 @@ admin:
     title:
       label: Otsikko
     title_page:
-      hint: Näytetään välilehdissä, hakutuloksissa ja tekstiviestien/viestien/sosiaalisten
+      hint:
+        Näytetään välilehdissä, hakutuloksissa ja tekstiviestien/viestien/sosiaalisten
         verkostojen esikatselussa.
       label: Sivun otsikko
     transcription:

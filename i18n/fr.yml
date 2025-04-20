@@ -381,6 +381,10 @@ admin:
       label:
         one: CTA
         other: CTAs
+    datas:
+      label:
+        one: Donnée
+        other: Données
     date:
       from: À partir du
       label: Date
