@@ -776,10 +776,22 @@ admin:
   group:
     year: Vuosi
   shortcodes:
+    alert:
+      label: Hälytys
+    badge:
+      label: Badge
+    blank_link:
+      label: Blank link
+    blockquote:
+      label: Blockquote
     button:
       label: Painike
+    details:
+      label: Details
     figure:
       label: Kuvio
+    map:
+      label: Kartta
     twitter:
       _id: Twitter ID
       label: Twitter / X

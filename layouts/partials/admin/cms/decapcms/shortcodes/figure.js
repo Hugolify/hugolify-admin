@@ -7,19 +7,33 @@ CMS.registerEditorComponent({
     {{ partialCached "admin/fields/legend.yml" . | safeHTML }}, 
     {{ partialCached "admin/fields/credit.yml" . | safeHTML }}
   ],
-  pattern: '{{`/{{< figure src="(.*?)" alt="(.*?)" legend="(.*?)" credit="(.*?)" >}}/`}}',
+  pattern: /{{`{{< figure src="(.*)" alt="(.*?)" legend="(.*?)" credit="(.*?)" >}}` | safeHTML }}/,
   fromBlock: function (match) {
     return {
-      src: match[1] ?? '',
-      alt: match[2] ?? '',
-      legend: match[3] ?? '',
-      credit: match[4] ?? ''
+      src: match[1],
+      alt: match[2],
+      legend: match[3],
+      credit: match[4]
     };
   },
   toBlock: function (obj) {
-    return '{{`{{< figure src="${obj.src ?? ''}" alt="${obj.alt ?? ''}" legend="${obj.legend ?? ''}" credit="${obj.credit ?? ''}" >}}`}}';
+    const src = obj.src || '';
+    const alt = obj.alt || '';
+    const legend = obj.legend || '';
+    const credit = obj.credit || '';
+    return '{{`{{<` | safeHTML}} figure src="' + src + '" alt="' + alt + '" legend="' + legend + '" credit="' + credit + '" {{`>` | safeHTML}}}}';
   },
   toPreview: function (obj) {
-    return '{{`{{< figure src="${obj.src ?? ''}" alt="${obj.alt ?? ''}" legend="${obj.legend ?? ''}" credit="${obj.credit ?? ''}" >}}`}}';
+    return `
+      <figure>
+        <picture>
+          <img src="${obj.src}" alt="${obj.alt}" />
+        </picture>
+        <figcaption>
+          <p>${obj.legend}</p>
+          <p class="credit">${obj.credit}</p>
+        </figcaption>
+      </figure>
+    `;
   }
 });

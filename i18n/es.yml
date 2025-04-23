@@ -768,10 +768,22 @@ admin:
   group:
     year: Year
   shortcodes:
+    alert:
+      label: Alert
+    badge:
+      label: Badge
+    blank_link:
+      label: Blank link
+    blockquote:
+      label: Blockquote
     button:
       label: Button
+    details:
+      label: Details
     figure:
       label: Figure
+    map:
+      label: Map
     twitter:
       _id: Twitter ID
       label: Twitter / X
