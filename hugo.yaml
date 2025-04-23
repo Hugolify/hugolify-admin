@@ -32,7 +32,7 @@ params:
     i18n:
       default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
-    locale: en # Language of the CMS interface. On the other hand, the Hugolify Admin fields are in the main locale of the project
+    # locale: en # Language of the CMS interface. On the other hand, the Hugolify Admin fields are in the main locale of the project
     media:
       media_folder: 'assets/images/uploads'
       public_folder: '/images/uploads'
