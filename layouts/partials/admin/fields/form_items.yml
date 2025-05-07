@@ -1,5 +1,6 @@
 {{- $fields := slice 
   "label" 
+  "name" 
   "form_type" 
   "form_options" 
   "is_required" 
