@@ -2,6 +2,7 @@
   label: '{{ i18n "admin.fields.date.from" }}',
   name: 'date_from',
   widget: 'datetime',
+  picker_utc: true,
   required: false,
   i18n: 'duplicate'
 }
