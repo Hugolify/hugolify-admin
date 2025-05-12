@@ -1,16 +1,2 @@
-{
-  label: '{{ i18n "admin.fields.breakpoints.label" 2 }}',
-  label_singular: '{{ i18n "admin.fields.breakpoints.label" 1 }}',
-  name: 'breakpoints',
-  widget: 'select',
-  options: [
-    { label: '{{ i18n "admin.fields.breakpoints.options.mobile" }}', value: 640 },
-    { label: '{{ i18n "admin.fields.breakpoints.options.tablet" }}', value: 768 },
-    { label: '{{ i18n "admin.fields.breakpoints.options.wide_tablet" }}', value: 1024 },
-    { label: '{{ i18n "admin.fields.breakpoints.options.laptop" }}', value: 1280 },
-    { label: '{{ i18n "admin.fields.breakpoints.options.desktop" }}', value: 1440 }
-  ],
-  default: 640,
-  required: false,
-  i18n: 'duplicate'
-}
+{{- partial "admin/fields/select.yml" (dict "field" "breakpoints" "options" (dict "mobile" 640 "tablet" 768 "wide_tablet" 1024 "laptop" 1280 "desktop" 1440) "default" 640) }}
+

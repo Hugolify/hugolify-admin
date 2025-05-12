@@ -27,7 +27,5 @@ media:
   {{- end -}}
 {{- end }}
 
-{{- $regex := "options: \\[([\\s\\S]*?)\\]" -}}
-{{ $partial = replaceRE $regex "options: { values: [${1}] }" $partial }}
 
 {{ transform.Remarshal "yaml" $partial }}

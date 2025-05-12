@@ -27,15 +27,31 @@
   label_singular: '{{ i18n (print "admin.collections." $i18n ".label") 1 }}',
   hint: '{{ i18n (print "admin.collections." $i18n ".hint") }}',
   name: '{{ $name }}',
+  {{- if eq site.Params.admin.cms "pagescms" }}
+  widget: 'reference',
+  options: {
+    collection: {{ $collection }},
+    {{- $label := slice }}
+    {{- range $display_fields }}
+    {{- $label = $label | append (printf `{%s}` .) }}
+    {{- end }}
+    label: "{{ delimit $label `,` }}",
+    image: "{image.src}",
+    multiple: {{ $multiple }},
+    search: {{ delimit $search_fields "," }},
+    value: '{{ substr $slug 1 -1 }}'
+  },
+  {{- else }}
   widget: 'relation',
   collection: {{ $collection }},
+  display_fields: {{ $display_fields }},
   search_fields: {{ $search_fields }},
   value_field: '{{$slug}}',
-  display_fields: {{ $display_fields }},
-  {{ with $filters }}
+  {{- with $filters }}
   filters: {{ . }},
-  {{ end }}
-  required: {{ $required }},
+  {{- end }}
   multiple: {{ $multiple }},
+  {{- end }}
+  required: {{ $required }},
   i18n: 'duplicate'
 }

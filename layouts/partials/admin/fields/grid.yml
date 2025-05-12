@@ -1,15 +1,1 @@
-{
-  label: '{{ i18n "admin.fields.grid.label" }}',
-  name: 'grid',
-  widget: 'select',
-  options: [
-    { label: '{{ i18n "admin.fields.grid.small" }}', value: 'small' },
-    { label: '{{ i18n "admin.fields.grid.medium" }}', value: 'medium' },
-    { label: '{{ i18n "admin.fields.grid.large" }}', value: 'large' },
-    { label: '{{ i18n "admin.fields.grid.container" }}', value: 'container' },
-    { label: '{{ i18n "admin.fields.grid.full" }}', value: 'full' }
-  ],
-  default: 'large',
-  required: true,
-  i18n: 'duplicate'
-}
+{{- partial "admin/fields/select.yml" (dict "field" "grid" "options" (slice "small" "medium" "large" "container" "full") "default" "large" "required" true) }}

@@ -271,10 +271,11 @@ admin:
       zipcode:
         label: Postal code
     align:
-      center: Center
-      end: End
       label: Alignment
-      start: Start
+      options:
+        center: Center
+        end: End
+        start: Start
     arguments:
       label:
         one: Argument
@@ -480,12 +481,13 @@ admin:
     gallery:
       label: Gallery
     grid:
-      container: Container
-      full: Full
       label: Grid
-      large: Large
-      medium: Medium
-      small: Small
+      options:
+        container: Container
+        full: Full
+        large: Large
+        medium: Medium
+        small: Small
     heading:
       label: Heading
     hero:
@@ -494,23 +496,18 @@ admin:
       hint: Icon name from https://icons.getbootstrap.com/
       label: Icon
     image:
+      label: Image
       alt:
         hint: For an image that conveys information (leave blank if decorative image)
         label: Text alternative
       filter:
-        box: Simple and fast averaging filter appropriate for downscaling (default)
-        catmullrom:
-          Sharp cubic filter that is faster than the Lanczos filter while
-          providing similar results
         hint: Set Linear for picture or screenshot, leave empty to keep default config
         label: Change filter quality?
-        lanczos:
-          High-quality resampling filter for photographic images yielding sharp
-          results
-        linear:
-          Bilinear resampling filter, produces smooth output, faster than cubic
-          filters
-      label: Image
+        options:
+          box: Simple and fast averaging filter appropriate for downscaling (default)
+          catmullrom: Sharp cubic filter that is faster than the Lanczos filter while providing similar results
+          lanczos: High-quality resampling filter for photographic images yielding sharp results
+          linear: Bilinear resampling filter, produces smooth output, faster than cubic filters
       src:
         hint: 'Resize and compress image before sending : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
@@ -611,14 +608,16 @@ admin:
         other: Energies
       heating:
         label: Heating
-        collective: Collective
-        individual: Individual
+        options:
+          collective: Collective
+          individual: Individual
       heating_type:
         label: Heating type
-        reversible_ac: Reversible AC
-        electric: Electric
-        gas: Gas
-        solar: Solar
+        options:
+          reversible_ac: Reversible AC
+          electric: Electric
+          gas: Gas
+          solar: Solar
     realestates_informations:
       area:
         hint: Expressed in m2
@@ -667,10 +666,9 @@ admin:
         label: Year of construction
     realestates_types:
       label: Transaction Type
-      rent:
-        label: Rent
-      sale:
-        label: Sale
+      options:
+        rent: Rent
+        sale: Sale
     reference:
       label: Reference
     rent:
@@ -703,15 +701,16 @@ admin:
     sold:
       label: Sold/rent ?
     state:
-      danger: Danger
-      dark: Dark
-      info: Info
       label: State
-      light: Light
-      primary: Primary
-      secondary: Secondary
-      success: Success
-      warning: Warning
+      options:
+        danger: Danger
+        dark: Dark
+        info: Info
+        light: Light
+        primary: Primary
+        secondary: Secondary
+        success: Success
+        warning: Warning
     status:
       label: Status
     submit:

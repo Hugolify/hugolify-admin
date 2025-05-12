@@ -1,15 +1,5 @@
-{{ $layout := . }}
+{{- $layout := . -}}
 {{- if not (reflect.IsSlice $layout) -}}
   {{- $layout = slice "grid" -}}
 {{- end -}}
-{
-  label: '{{ i18n "admin.fields.layout.label" }}',
-  name: 'layout',
-  widget: 'select',
-  options: [
-    {{ range $layout }}
-    { label: '{{ i18n (print "admin.fields.layout.options." .) }}', value: {{ . }} },
-    {{ end }}
-  ],
-  i18n: 'duplicate'
-}
+{{- partial "admin/fields/select.yml" (dict "field" "layout" "options" $layout) }}

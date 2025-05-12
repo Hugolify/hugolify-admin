@@ -271,10 +271,11 @@ admin:
       zipcode:
         label: Postinumero
     align:
-      center: Keski
-      end: Loppu
       label: Tasaus
-      start: Alku
+      options:
+        center: Keski
+        end: Loppu
+        start: Alku
     arguments:
       label:
         one: Perustelu
@@ -480,12 +481,13 @@ admin:
     gallery:
       label: Galleria
     grid:
-      container: Säilö
-      full: Täysi
       label: Ruudukko
-      large: Suuri
-      medium: Keskikokoinen
-      small: Pieni
+      options:
+        container: Säilö
+        full: Täysi
+        large: Suuri
+        medium: Keskikokoinen
+        small: Pieni
     heading:
       label: Otsikko
     hero:
@@ -495,25 +497,16 @@ admin:
       label: Kuvake
     image:
       alt:
-        hint:
-          Tietoa välittävän kuvan osalta (jätä tyhjäksi, jos kyseessä on koristeellinen
-          kuva).
+        hint: Tietoa välittävän kuvan osalta (jätä tyhjäksi, jos kyseessä on koristeellinen kuva).
         label: Tekstin vaihtoehto
       filter:
-        box:
-          Yksinkertainen ja nopea keskiarvosuodatin, joka soveltuu pienentämiseen
-          (oletusarvo)
-        catmullrom:
-          Terävä kuutiosuodatin, joka on nopeampi kuin Lanczos-suodatin
-          ja antaa samanlaisia tuloksia
-        hint:
-          Aseta Linear kuvalle tai kuvakaappaukselle, jätä tyhjäksi, jos haluat
-          säilyttää oletusasetukset.
         label: Vaihda suodattimen laatu?
-        lanczos: Laadukas resampling-suodatin valokuville, joka tuottaa teräviä tuloksia
-        linear:
-          Bilineaarinen uudelleen näytteenottosuodatin, tuottaa tasaisen tulosteen,
-          nopeampi kuin kuutiosuodattimet
+        options:
+          box: Yksinkertainen ja nopea keskiarvosuodatin, joka soveltuu pienentämiseen (oletusarvo)
+          catmullrom: Terävä kuutiosuodatin, joka on nopeampi kuin Lanczos-suodatin ja antaa samanlaisia tuloksia
+          hint: Aseta Linear kuvalle tai kuvakaappaukselle, jätä tyhjäksi, jos haluat säilyttää oletusasetukset.
+          lanczos: Laadukas resampling-suodatin valokuville, joka tuottaa teräviä tuloksia
+          linear: Bilineaarinen uudelleen näytteenottosuodatin, tuottaa tasaisen tulosteen, nopeampi kuin kuutiosuodattimet
       label: Kuva
       src:
         hint: 'Koon muuttaminen ja kuvan pakkaaminen ennen lähettämistä : https://bulkresizephotos.com/fi?quality=90&type=width&width=1600'
@@ -611,15 +604,17 @@ admin:
       label: Lainaus
     realestates_energies:
       heating:
-        collective: Yhteinen
-        individual: Yksittäinen
         label: Lämmitys
+        options:
+          collective: Yhteinen
+          individual: Yksittäinen
       heating_type:
-        electric: Sähkö
-        gas: Kaasu
         label: Lämmitystyyppi
-        reversible_ac: Käännettävä ilmastointi
-        solar: Aurinko
+        options:
+          electric: Sähkö
+          gas: Kaasu
+          reversible_ac: Käännettävä ilmastointi
+          solar: Aurinko
       label:
         one: Energia
         other: Energiat
@@ -671,10 +666,9 @@ admin:
         label: Rakennusvuosi
     realestates_types:
       label: Tapahtuman tyyppi
-      rent:
-        label: Vuokra
-      sale:
-        label: Myynti
+      options:
+        rent: Vuokra
+        sale: Myynti
     reference:
       label: Viite
     rent:
@@ -711,15 +705,16 @@ admin:
     sold:
       label: Myyty/vuokrattu?
     state:
-      danger: Vaara
-      dark: Tumma
-      info: Info
       label: Tila
-      light: Vaalea
-      primary: Ensisijainen
-      secondary: Toissijainen
-      success: Onnistuminen
-      warning: Varoitus
+      options:
+        danger: Vaara
+        dark: Tumma
+        info: Info
+        light: Vaalea
+        primary: Ensisijainen
+        secondary: Toissijainen
+        success: Onnistuminen
+        warning: Varoitus
     status:
       label: Tila
     submit:

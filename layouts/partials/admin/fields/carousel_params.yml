@@ -39,14 +39,7 @@
       required: false,
       i18n: 'duplicate'
     },
-    {
-      label: '{{ i18n "admin.fields.carousel.type.label" }}',
-      name: 'type',
-      widget: 'select',
-      options: ['slide', 'loop', 'fade'],
-      required: false,
-      i18n: 'duplicate'
-    },
+    {{- partial "admin/fields/select.yml" (dict "field" "type" "i18n" "carousel.type" "options" (slice "slide" "loop" "fade")) }},
     {
       label: '{{ i18n "admin.fields.carousel.perpage.label" }}',
       hint: '{{ i18n "admin.fields.carousel.perpage.hint" }}',
