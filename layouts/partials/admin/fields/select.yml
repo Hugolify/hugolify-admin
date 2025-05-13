@@ -34,9 +34,7 @@
     default: '{{ . }}',
     {{- end }}
   {{- end }}
-  {{- with $required }}
-  required: true,
-  {{- end }}
+  required: {{ $required }},
   i18n: 'duplicate'
 }
 {{- end }}
