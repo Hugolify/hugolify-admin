@@ -442,19 +442,20 @@ admin:
       label: Figure
     form:
       autocomplete:
-        city: Ville
-        country_name: Nom du pays
-        email: Email
-        family_name: Nom de famille
-        given_name: Prénom
-        honorific_prefix: Titre
         label: Autocomplete
-        name: Nom
-        organization: Entreprise
-        postal_code: Code postal
-        state: État
-        street_address: Rue
-        tel: Tel
+        options:
+          city: Ville
+          country_name: Nom du pays
+          email: Email
+          family_name: Nom de famille
+          given_name: Prénom
+          honorific_prefix: Titre
+          name: Nom
+          organization: Entreprise
+          postal_code: Code postal
+          state: État
+          street_address: Rue
+          tel: Tel
       full:
         label: Champ en pleine largeur ?
       hiddens:

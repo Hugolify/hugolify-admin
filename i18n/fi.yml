@@ -442,19 +442,20 @@ admin:
       label: Kuvio
     form:
       autocomplete:
-        city: Kaupunki
-        country_name: Maan nimi
-        email: Sähköposti
-        family_name: Sukunimi
-        given_name: Etunimi
-        honorific_prefix: Otsikko
         label: Automaattinen täydennys
-        name: Nimi
-        organization: Organisaatio
-        postal_code: Postinumero
-        state: Tila
-        street_address: Katuosoite
-        tel: Puh.
+        options:
+          city: Kaupunki
+          country_name: Maan nimi
+          email: Sähköposti
+          family_name: Sukunimi
+          given_name: Etunimi
+          honorific_prefix: Otsikko
+          name: Nimi
+          organization: Organisaatio
+          postal_code: Postinumero
+          state: Tila
+          street_address: Katuosoite
+          tel: Puh.
       full:
         label: Täyden leveyden kenttä
       hiddens:
