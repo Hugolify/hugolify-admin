@@ -5,22 +5,20 @@
   label_singular: '{{ i18n "admin.collections.docs.label" 1 }}',
   description: '{{ i18n "admin.collections.docs._description" }}',
   
-  create: true,
+  create: {{ site.Params.admin.collections.docs.create | default true }},
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: "{{`{{slug}}/_index`}}",
   {{ partial "admin/collections/config/slug.yml" }}
   
-  {{ partial "admin/collections/config/icon.yml" "dictionary" }}
+  {{ partial "admin/collections/config/icon.yml" "docs" }}
   {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" }}
+  {{ partial "admin/collections/config/filter.yml" "docs" }}
   {{ partial "admin/collections/config/sortable.yml" "docs" }}
   {{ partial "admin/collections/config/summary.yml" "docs" }}
   {{ partial "admin/collections/config/view_filters.yml" "docs" }}
   {{ partial "admin/collections/config/view_groups.yml" "docs" }}
-
   {{ partial "admin/collections/fields.yml" (dict "collection" "docs") }}
-  
   {{ partial "admin/collections/config/nested.yml" "docs" }}
 }

@@ -25,7 +25,8 @@ mediaTypes:
 # https://www.hugolify.io/docs/cms/admin/
 params:
   admin:
-    cms: decapcms # https://www.hugolify.io/docs/cms/
+    cms: staticcms # https://www.hugolify.io/docs/cms/admin/cms/
+    repo: hugolify/hugolify-template
     config:
       id: false # set true to use ID for dir/name files and relation
     publish_mode: simple # simple or editorial_workflow
@@ -42,7 +43,7 @@ params:
       specific_filter: false # set true to add a selected filter by image
       video_max_file_size: 5000000 # 5Mo
     nested:
-      depth: 2 # set minimum 2 to display pages bundles
+      depth: 1
     auth:
       netlify_identity: true
     preview: false
@@ -51,10 +52,24 @@ params:
     collections:
       config:
         enable: true
+        icon:
+          sveltiacms: settings
       indexes:
         enable: true
+        filter:
+          - field: isIndex
+            value: true
+        icon:
+          sveltiacms: schema
       pages:
         enable: true
+        icon:
+          sveltiacms: description
+        filter:
+          - field: isPage
+            value: true
+        nested:
+          depth: 5
 
     # Blocks
     blocks:

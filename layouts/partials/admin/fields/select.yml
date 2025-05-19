@@ -17,14 +17,16 @@
       {{- end }}
       values: [
         {{- range $options }}
-        { label: '{{ i18n (print "admin.fields." $i18n ".options." (replace . "-" "_")) | default (humanize .) }}', value: {{ . }} },
+        {{- $value := cond (eq (printf "%T" .) "string") (print "'" . "'") . -}}
+        { label: '{{ i18n (print "admin.fields." $i18n ".options." (replace . "-" "_")) | default (humanize .) }}', value: {{ $value }} },
         {{- end }}
       ]
     },
   {{- else }}
     options: [
       {{- range $options }}
-      { label: '{{ i18n (print "admin.fields." $i18n ".options." (replace . "-" "_")) | default (humanize .) }}', value: {{ . }} },
+      {{- $value := cond (eq (printf "%T" .) "string") (print "'" . "'") . -}}
+      { label: '{{ i18n (print "admin.fields." $i18n ".options." (replace . "-" "_")) | default (humanize .) }}', value: {{ $value }} },
       {{- end }}
     ],
     {{- with $multiple }}

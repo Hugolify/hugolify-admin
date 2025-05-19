@@ -5,19 +5,17 @@
   label_singular: '{{ i18n "admin.collections.posts_categories.label" 1 }}',
   description: '{{ i18n "admin.collections.posts_categories._description" }}',
   
-  create: true,
+  create: {{ site.Params.admin.collections.posts_categories.create | default true }},
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}/_index`}}',
   {{ partial "admin/collections/config/slug.yml" }}
-  nested: { depth: 2 },
 
-  {{ partial "admin/collections/config/icon.yml" "bookmarks" }}
+  {{ partial "admin/collections/config/icon.yml" "posts_categories" }}
   {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
+  {{ partial "admin/collections/config/filter.yml" "posts_categories" }}
+  {{ partial "admin/collections/config/sortable.yml" "posts_categories" }}
   {{ partial "admin/collections/config/view_filters.yml" "posts_categories" }}
-
   {{ partial "admin/collections/fields.yml" (dict "collection" "posts_categories") }}
 }

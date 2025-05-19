@@ -5,7 +5,7 @@
   label_singular: '{{ i18n "admin.collections.publications.label" 1 }}',
   description: '{{ i18n "admin.collections.publications._description" }}',
   
-  create: true,
+  create: {{ site.Params.admin.collections.publications.create | default true }},
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
@@ -13,13 +13,12 @@
   {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
   
-  {{ partial "admin/collections/config/icon.yml" "newspaper" }}
+  {{ partial "admin/collections/config/icon.yml" "publications" }}
   {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" }}
+  {{ partial "admin/collections/config/filter.yml" "publications" }}
   {{ partial "admin/collections/config/sortable.yml" "publications" }}
   {{ partial "admin/collections/config/summary.yml" "publications" }}
   {{ partial "admin/collections/config/view_filters.yml" "publications" }}
   {{ partial "admin/collections/config/view_groups.yml" "publications" }}
-
   {{ partial "admin/collections/fields.yml" (dict "collection" "publications") }}
 }

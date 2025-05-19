@@ -5,20 +5,19 @@
   label_singular: '{{ i18n "admin.collections.places.label" 1 }}',
   description: '{{ i18n "admin.collections.places._description" }}',
   
-  create: true,
+  create: {{ site.Params.admin.collections.places.create | default true }},
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}`}}',
   {{ partial "admin/collections/config/slug.yml" }}
 
-  {{ partial "admin/collections/config/icon.yml" "location_on" }}
+  {{ partial "admin/collections/config/icon.yml" "places" }}
   {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" }}
+  {{ partial "admin/collections/config/filter.yml" "places" }}
   {{ partial "admin/collections/config/sortable.yml" "places" }}
   {{ partial "admin/collections/config/summary.yml" "places" }}
   {{ partial "admin/collections/config/view_filters.yml" "places" }}
   {{ partial "admin/collections/config/view_groups.yml" "places" }}
-
   {{ partial "admin/collections/fields.yml" (dict "collection" "places") }}
 }

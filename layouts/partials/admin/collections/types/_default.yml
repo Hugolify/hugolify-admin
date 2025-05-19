@@ -11,6 +11,7 @@
   path: '{{`{{slug}}/_index`}}',
   {{ partial "admin/collections/config/slug.yml" }}
 
+  {{ partial "admin/collections/config/icon.yml" "pages" }}
   {{ partial "admin/collections/config/sortable.yml" "pages" }}
   {{ partial "admin/collections/config/summary.yml" "pages" }}
   {{ partial "admin/collections/config/view_filters.yml" "pages" }}

@@ -1,11 +1,13 @@
 {
   name: 'config',
   label: '{{ i18n "admin.collections.config.label" }}',
+  description: '{{ i18n "admin.collections.config._description" }}',
 
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: {
     structure: 'single_file'
   },
 
+  {{ partial "admin/collections/config/icon.yml" "config" }}
   {{ partial "admin/collections/files.yml" (dict "collection" "config") }}
 }
