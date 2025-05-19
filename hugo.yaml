@@ -25,8 +25,7 @@ mediaTypes:
 # https://www.hugolify.io/docs/cms/admin/
 params:
   admin:
-    cms: staticcms # https://www.hugolify.io/docs/cms/admin/cms/
-    repo: hugolify/hugolify-template
+    cms: decapcms # https://www.hugolify.io/docs/cms/admin/cms/
     config:
       id: false # set true to use ID for dir/name files and relation
     publish_mode: simple # simple or editorial_workflow
