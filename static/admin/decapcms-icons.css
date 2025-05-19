@@ -41,6 +41,9 @@ aside [href='#/collections/docs'] span::before {
 aside [href='#/collections/events'] span::before {
   content: '\F1F6';
 }
+aside [href='#/collections/events_categories'] span::before {
+  content: '\F1A4';
+}
 aside [href='#/collections/expertises'] span::before {
   content: '\F585';
 }
