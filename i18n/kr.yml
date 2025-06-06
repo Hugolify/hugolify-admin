@@ -723,6 +723,8 @@ admin:
     suffix:
       hint: 'e.g: %'
       label: Suffix
+    summary:
+      label: Summary
     surtitle:
       label: Surtitle
     text:

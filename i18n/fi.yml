@@ -530,6 +530,8 @@ admin:
     is_logo:
       hint: Sijoitettu keskelle eikä rajattu
       label: Logo?
+    is_open:
+      label: Open?
     is_pinned:
       label: Kiinnitetty?
     is_screenshot:
@@ -727,6 +729,8 @@ admin:
     suffix:
       hint: Esim. %
       label: Jälkiliite
+    summary:
+      label: Summary
     surtitle:
       label: Alaotsikko
     text:

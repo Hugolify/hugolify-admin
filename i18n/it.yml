@@ -530,6 +530,8 @@ admin:
     is_logo:
       hint: Positioned in the center and not cropped
       label: Is logo?
+    is_open:
+      label: Open?
     is_pinned:
       label: Pinned?
     is_screenshot:
@@ -723,6 +725,8 @@ admin:
     suffix:
       hint: 'e.g: %'
       label: Suffix
+    summary:
+      label: Summary
     surtitle:
       label: Surtitle
     text:

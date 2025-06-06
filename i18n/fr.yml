@@ -530,6 +530,8 @@ admin:
     is_logo:
       hint: Positionne au centre et n’est pas recadré
       label: Logo ?
+    is_open:
+      label: Ouvert ?
     is_pinned:
       label: Épinglé ?
     is_screenshot:
@@ -703,6 +705,8 @@ admin:
         hint: Nom d’utilisateur
     sold:
       label: Vendu/loué ?
+    summary:
+      label: Résumé
     state:
       label: État
       options:
