@@ -98,6 +98,7 @@ params:
         - paragraph
         - pushes
         - quote
+        - search
         - selected
         - testimonials
         - timeline

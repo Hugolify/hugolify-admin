@@ -46,6 +46,8 @@ admin:
       label: Notifications
     quote:
       label: Citation
+    search:
+      label: Recherche
     selected:
       label: Sélection {{ .section }}
     testimonials:

@@ -46,6 +46,8 @@ admin:
       label: Pushes
     quote:
       label: Quote
+    search:
+      label: Search
     selected:
       label: Selection {{ .section }}
     testimonials:

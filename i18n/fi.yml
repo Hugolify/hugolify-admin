@@ -46,6 +46,8 @@ admin:
       label: Push-viestit
     quote:
       label: Lainaus
+    search:
+      label: Search
     selected:
       label: Valinta {{ .section }}
     testimonials:
