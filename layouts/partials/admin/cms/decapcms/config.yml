@@ -4,6 +4,12 @@ backend:
   {{- with site.Params.admin.repo }}
   repo: {{ . }}
   {{- end }}
+  {{- with site.Params.admin.base_url }}
+  base_url: {{ . }}
+  {{- end }}
+  {{- with site.Params.admin.auth_endpoint }}
+  auth_endpoint: {{ . }}
+  {{- end }}
 
 display_url: "{{ site.BaseURL }}"
 
