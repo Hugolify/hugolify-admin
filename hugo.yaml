@@ -104,3 +104,8 @@ params:
         - timeline
         - title
         - video
+
+    # Widgets
+    widgets:
+      map:
+        default: '{"type": "Point", "coordinates": [2.3482818864606827, 48.85400956974931]}'
