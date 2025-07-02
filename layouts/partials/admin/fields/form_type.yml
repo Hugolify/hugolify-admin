@@ -1,1 +1,1 @@
-{{- partial "admin/fields/select.yml" (dict "field" "type" "i18n" "form.type" "options" (slice "email" "select" "tel" "text" "textarea") "default" "text") }}
+{{- partial "admin/fields/select.yml" (dict "field" "type" "i18n" "form.type" "options" (slice "email" "radio" "select" "tel" "text" "textarea") "default" "text") }}

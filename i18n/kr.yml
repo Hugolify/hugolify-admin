@@ -477,6 +477,7 @@ admin:
       type:
         email: Email
         label: Type
+        radio: Radio
         select: Select
         tel: Telephone
         text: Text
@@ -530,6 +531,8 @@ admin:
     is_logo:
       hint: Positioned in the center and not cropped
       label: Is logo?
+    is_open:
+      label: Open?
     is_pinned:
       label: Pinned?
     is_screenshot:

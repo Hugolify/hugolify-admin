@@ -477,6 +477,7 @@ admin:
       type:
         email: Sähköposti
         label: Tyyppi
+        radio: Radio
         select: Valittu
         tel: Puhelin
         text: Teksti
