@@ -475,6 +475,7 @@ admin:
           one: Option
           other: Options
       type:
+        hint: Choix du type de champ
         email: Email
         label: Type
         radio: Radio
@@ -482,6 +483,9 @@ admin:
         tel: Téléphone
         text: Texte
         textarea: Zone de texte
+      value:
+        hint: Seulement pour les champs checkbox et radio
+        label: Valeur
     gallery:
       label: Galerie
     grid:

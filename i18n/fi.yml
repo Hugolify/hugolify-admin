@@ -475,6 +475,7 @@ admin:
           one: Vaihtoehto
           other: Vaihtoehdot
       type:
+        hint: Choose type field
         email: Sähköposti
         label: Tyyppi
         radio: Radio
@@ -482,6 +483,9 @@ admin:
         tel: Puhelin
         text: Teksti
         textarea: Tekstialue
+      value:
+        hint: Only for checkbox and radio fields
+        label: Value
     gallery:
       label: Galleria
     grid:

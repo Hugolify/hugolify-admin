@@ -3,6 +3,7 @@
   "name" 
   "form_type" 
   "form_options" 
+  "form_value" 
   "is_required" 
   "is_form_full" 
   "placeholder" 
