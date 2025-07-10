@@ -753,8 +753,14 @@ admin:
       label: Vidéo
       mp4:
         hint: Vidéo en format MP4
+        mobile:
+          label: Mobile MP4
+          hint: Vidéo en format MP4
       webm:
         hint: Vidéo en format WEBM
+        mobile:
+          label: Mobile WEBM
+          hint: Vidéo en format WEBM
     website:
       hint: URL (https://…)
       label: Site Web
