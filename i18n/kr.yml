@@ -283,7 +283,9 @@ admin:
         one: Argument
         other: Arguments
     audio:
-      label: Audio
+      label:
+        one: Audio
+        other: Audios
       mp3:
         hint: Audio (MP3)
       ogg:
@@ -504,7 +506,9 @@ admin:
       hint: Icon name from https://icons.getbootstrap.com/
       label: Icon
     image:
-      label: Image
+      label: 
+        one: Image
+        other: Images
       alt:
         hint: For an image that conveys information (leave blank if decorative image)
         label: Text alternative
@@ -750,7 +754,9 @@ admin:
     value:
       label: Value
     video:
-      label: Video
+      label: 
+        one: Video
+        other: Videos
       mp4:
         hint: Video (MP4)
         mobile:

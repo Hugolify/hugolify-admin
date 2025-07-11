@@ -754,7 +754,9 @@ admin:
     value:
       label: Arvo
     video:
-      label: Video
+      label:
+        one: Video
+        other: Videos
       mp4:
         hint: Video (MP4)
         mobile:

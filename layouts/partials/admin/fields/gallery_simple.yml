@@ -4,5 +4,17 @@
   widget: 'image',
   required: false,
   i18n: true,
-  media_library: { config: { multiple: true } }
+  {{- if eq site.Params.admin.cms "pagescms" }}
+  options: {
+    media: images
+  }
+  {{- else }}
+  choose_url: false,
+  media_library: {
+    config: {
+      max_file_size: {{site.Params.admin.media.max_file_size}},
+      multiple: true
+    }
+  }
+  {{- end }}
 }
