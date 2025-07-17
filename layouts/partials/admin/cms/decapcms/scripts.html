@@ -1,4 +1,5 @@
 <!-- Decap CMS -->
-<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+{{- $version := site.Params.admin.version | default "^3.0.0" -}}
+<script src="https://unpkg.com/decap-cms@{{ $version }}/dist/decap-cms.js"></script>
 <!-- Custom widget/shortcodes/previews… -->
 {{ partial "admin/cms/decapcms/custom.html" }}

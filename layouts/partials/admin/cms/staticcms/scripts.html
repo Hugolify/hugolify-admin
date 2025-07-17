@@ -1,6 +1,7 @@
 <!-- Static CMS -->
-<link rel="stylesheet" href="https://unpkg.com/@staticcms/app@^4.0.0/dist/main.css" />
-<script src="https://unpkg.com/@staticcms/app@^4.0.0/dist/static-cms-app.js"></script>
+{{- $version := site.Params.admin.version | default "^4.0.0" -}}
+<link rel="stylesheet" href="https://unpkg.com/@staticcms/app@{{ $version }}/dist/main.css" />
+<script src="https://unpkg.com/@staticcms/app@{{ $version }}/dist/static-cms-app.js"></script>
 <script>
   window.CMS.init();
 </script>
