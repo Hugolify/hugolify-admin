@@ -1,5 +1,7 @@
+{{- if site.Params.admin.config.id }}
 <!-- uuid widget -->
 <script src="https://unpkg.com/netlify-cms-widget-uuid-v4@^1.0.12/dist/index.js"></script>
+{{- end }}
 <!-- Register -->
 <script>
 {{ partial "admin/cms/decapcms/shortcodes.js" | safeJS  }}
