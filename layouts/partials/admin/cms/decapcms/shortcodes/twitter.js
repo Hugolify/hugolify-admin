@@ -13,7 +13,7 @@ CMS.registerEditorComponent({
       widget: 'string'
     }
   ],
-  pattern: '{{`/{{< tweet (.*?) >}}/`}}',
+  pattern: /{{`{{< tweet user="(.*?)" id="(.*)" >}}` | safeHTML }}/,
   fromBlock: function (match) {
     return {
       user: match[1],
@@ -21,7 +21,9 @@ CMS.registerEditorComponent({
     };
   },
   toBlock: function (obj) {
-    return '{{`{{< tweet user="${obj.user}" id="${obj.id}" >}}`}}';
+    const user = obj.user || '';
+    const id = obj.id || '';
+    return '{{ `{{<` | safeHTML }} tweet user="' + user + '" id="' + id + '" {{ `>}}` | safeHTML }}';
   },
   toPreview: function (obj) {
     return '{{`{{< tweet user="${obj.user}" id="${obj.id}" >}}`}}';
