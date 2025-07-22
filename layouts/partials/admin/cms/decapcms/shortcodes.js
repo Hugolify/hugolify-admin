@@ -1,9 +1,9 @@
-{{ partial "admin/cms/decapcms/shortcodes/alert.js" }}
-{{ partial "admin/cms/decapcms/shortcodes/badge.js" }}
-{{ partial "admin/cms/decapcms/shortcodes/blank_link.js" }}
-{{ partial "admin/cms/decapcms/shortcodes/blockquote.js" }}
-{{ partial "admin/cms/decapcms/shortcodes/button.js" }}
-{{ partial "admin/cms/decapcms/shortcodes/details.js" }}
-{{ partial "admin/cms/decapcms/shortcodes/map.js" }}
-{{ partial "admin/cms/decapcms/shortcodes/twitter.js" }}
-{{ partial "admin/cms/decapcms/shortcodes/youtube.js" }}
+{{- $shortcodes := site.Params.admin.shortcodes.enable | default false -}}
+{{- if ne $shortcodes false -}}
+  {{- range $shortcodes -}}
+    {{- $partial := print "admin/cms/decapcms/shortcodes/" . ".js" -}}
+    {{- if templates.Exists ( printf "partials/%s" $partial ) -}}
+      {{ partial $partial }}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

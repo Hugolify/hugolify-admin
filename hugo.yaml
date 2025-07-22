@@ -114,6 +114,20 @@ params:
         - title
         - video
 
+    # Shortcodes
+    shortcodes:
+      # Set shortcodes available to markdown editor, all shortcodes https://www.hugolify.io/docs/shortcodes/
+      enable:
+        - alert
+        - badge
+        - blank_link
+        - blockquote
+        - button
+        - details
+        - map
+        - twitter
+        - youtube
+
     # Widgets
     widgets:
       map:
