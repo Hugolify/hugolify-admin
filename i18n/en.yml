@@ -772,7 +772,7 @@ admin:
       label: Website
     weight:
       label: Position (importance)
-      hint: Knowing that 1 is the most important and 10 the least important
+      hint: Knowing that 10 is the most important and 100 the least important
     year: Year
     zoom:
       label: Zoom

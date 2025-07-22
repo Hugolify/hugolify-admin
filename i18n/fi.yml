@@ -771,7 +771,7 @@ admin:
       hint: URL (https://…)
       label: Verkkosivu
     weight:
-      hint: Tietäen, että 1 on tärkein ja 10 vähiten tärkeä.
+      hint: Tietäen, että 10 on tärkein ja 100 vähiten tärkeä.
       label: Asema (merkitys)
     year: Vuosi
     zoom:
