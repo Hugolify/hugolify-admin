@@ -12,12 +12,14 @@
   {{ partial "admin/collections/config/slug.yml" }}
 
   {{ partial "admin/collections/config/icon.yml" "pages" }}
-  {{ partial "admin/collections/config/sortable.yml" "pages" }}
-  {{ partial "admin/collections/config/summary.yml" "pages" }}
-  {{ partial "admin/collections/config/view_filters.yml" "pages" }}
-  {{ partial "admin/collections/config/view_groups.yml" "pages" }}
+  {{ partial "admin/collections/config/index_file.yml" }}
+  {{ partial "admin/collections/config/filter.yml" . }}
+  {{ partial "admin/collections/config/sortable.yml" . }}
+  {{ partial "admin/collections/config/summary.yml" . }}
+  {{ partial "admin/collections/config/view_filters.yml" . }}
+  {{ partial "admin/collections/config/view_groups.yml" . }}
 
   {{ partial "admin/collections/fields.yml" (dict "collection" .) }}
 
-  {{ partial "admin/collections/config/nested.yml" "pages" }}
+  {{ partial "admin/collections/config/nested.yml" . }}
 }
