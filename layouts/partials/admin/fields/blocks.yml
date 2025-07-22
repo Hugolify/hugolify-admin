@@ -16,6 +16,10 @@
       {{- $file := print "admin/blocks/" . ".yml" -}}
       {{- if templates.Exists ( printf "partials/%s" $file ) -}}
         {{ partial $file . }},
+      {{- else -}}
+        {{- if isset site.Params.admin.blocks . -}}
+          {{ partial "admin/blocks/_default.yml" . }},
+        {{- end -}}
       {{- end -}}
     {{- end -}}
   ]
