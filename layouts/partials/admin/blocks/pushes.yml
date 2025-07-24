@@ -1,4 +1,4 @@
-{{- $items := dict "items" (slice "title" "text" "cta" "offset" "is_darken" "is_card" "background_color" "color" "image" -}} 
+{{- $items := dict "items" (slice "title" "text" "cta" "offset" "is_darken" "is_card" "background_color" "color" "image") -}} 
 {{- $layout := dict "layout" (slice "grid" "carousel") -}} 
 {{- $fields := slice 
   "heading" 
