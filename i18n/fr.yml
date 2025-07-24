@@ -525,11 +525,15 @@ admin:
         label: Image
     images:
       label: Images
+    is_background:
+      label: En fond ?
     is_blank:
       label: Nouvelle fenêtre ?
     is_card:
       hint: Ajoute un fond derrière les textes
       label: Carte ?
+    is_darken:
+      label: Assombrir?
     is_exclusive:
       label: Exclusif ?
     is_half:

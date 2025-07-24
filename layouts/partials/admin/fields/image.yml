@@ -1,12 +1,38 @@
-{{ $image_filter := cond site.Params.admin.media.specific_filter "image_filter" false }}
+{{- $image_filter := cond site.Params.admin.media.specific_filter "image_filter" false -}}
+{{- $is_background := false -}}
+{{- $is_darken := false -}}
+{{- $is_screenshot := false -}}
+{{- if reflect.IsMap . -}}
+  {{- with .is_background -}}
+    {{- $is_background = true -}}
+  {{- end -}}
+  {{- with .is_darken -}}
+    {{- $is_darken = true -}}
+  {{- end -}}
+  {{- with .is_screenshot -}}
+    {{- $is_screenshot = true -}}
+  {{- end -}}
+{{- end -}}
+
 {{- $fields := slice 
   "image_src" 
   $image_filter
   "image_alt" 
   "credit" -}}
+
+{{- with $is_screenshot -}}
+  {{- $fields = $fields | append "is_screenshot" -}}
+{{- end -}}
+{{- with $is_background -}}
+  {{- $fields = $fields | append "is_background" -}}
+{{- end -}}
+{{- with $is_darken -}}
+  {{- $fields = $fields | append "is_darken" -}}
+{{- end -}}
+
 {{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
-  label: '{{ i18n "admin.fields.image.label" }}',
+  label: '{{ i18n "admin.fields.image.label" 1 }}',
   name: 'image',
   widget: 'object',
   required: false,

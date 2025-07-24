@@ -525,11 +525,15 @@ admin:
         label: Image
     images:
       label: Images
+    is_background:
+      label: Is background?
     is_blank:
       label: Is blank?
     is_card:
       hint: Adds a background behind the text
       label: Is card?
+    is_darken:
+      label: Darken?
     is_exclusive:
       label: Exclusive?
     is_half:

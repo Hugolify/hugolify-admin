@@ -521,11 +521,15 @@ admin:
         label: Kuva
     images:
       label: Kuvat
+    is_background:
+      label: Is background?
     is_blank:
       label: Tyhjä?
     is_card:
       hint: Lisää taustan tekstin taakse
       label: Kortti?
+    is_darken:
+      label: Darken?
     is_exclusive:
       label: Ekslusiivinen
     is_half:
