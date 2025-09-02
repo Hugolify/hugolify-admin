@@ -4,7 +4,7 @@
 
 - Decap CMS: https://decapcms.org/docs/
 - Netlify CMS `deprecated`
-- Pages CMS: https://github.com/pages-cms/pages-cms `beta`
+- Pages CMS: https://github.com/pages-cms/pages-cms
 - Static CMS: https://staticjscms.netlify.app/ `deprecated`
 - Sveltia CMS: https://github.com/sveltia/sveltia-cms
 
