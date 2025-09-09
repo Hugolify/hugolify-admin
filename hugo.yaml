@@ -34,21 +34,21 @@ params:
       locales: false # "[en,fr]" for an i18n website
     # locale: en # Language of the CMS interface. On the other hand, the Hugolify Admin fields are in the main locale of the project
     media:
-      media_folder: 'assets/images/uploads'
+      media_folder: '/assets/images/uploads'
       public_folder: '/images/uploads'
       audio_max_file_size: 700000 # 700ko
       audio_folders: true
-      audio_media_folder: 'static/assets/audios'
+      audio_media_folder: '/static/assets/audios'
       audio_public_folder: '/assets/audios'
       max_file_size: 700000 # 700ko
       pdf_max_file_size: 5000000 # 5Mo
       pdf_folders: true
-      pdf_media_folder: 'static/pdf'
+      pdf_media_folder: '/static/pdf'
       pdf_public_folder: '/pdf'
       specific_filter: false # set true to add a selected filter by image
       video_max_file_size: 5000000 # 5Mo
       video_folders: true
-      video_media_folder: 'static/assets/videos'
+      video_media_folder: '/static/assets/videos'
       video_public_folder: '/assets/videos'
     nested:
       depth: 1

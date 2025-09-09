@@ -13,8 +13,10 @@
   choose_url: false,
   media_library: {
     config: {
-      max_file_size: {{site.Params.admin.media.max_file_size}}
+      max_file_size: {{ site.Params.admin.media.max_file_size }}
     }
-  }
+  },
+  media_folder: {{ site.Params.admin.media.media_folder | default "/assets/images/uploads" }},
+  public_folder: {{ site.Params.admin.media.public_folder | default "/images/uploads" }}
   {{- end }}
 }
