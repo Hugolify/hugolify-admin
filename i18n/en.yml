@@ -358,6 +358,9 @@ admin:
           pie: Pie
           polarArea: Polar area
           radar: Radar
+    class:
+      label: Class
+      hint: Add CSS class to this component
     code:
       label: Code
     color:

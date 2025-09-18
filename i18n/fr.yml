@@ -358,6 +358,9 @@ admin:
           pie: Tarte
           polarArea: Polaire
           radar: Radar
+    class:
+      label: Class
+      hint: Ajoute une class CSS au composant
     code:
       label: Code
     color:

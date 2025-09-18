@@ -356,6 +356,9 @@ admin:
           pie: Piirakka
           polarArea: Polar-alue
           radar: Tutka
+    class:
+      label: Class
+      hint: Add CSS class to this component
     code:
       label: Koodi
     color:
