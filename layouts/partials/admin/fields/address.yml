@@ -1,4 +1,4 @@
-{{- $pin := cond (eq site.Params.admin.cms "decapcms") "location" "coordinates" -}}
+{{- $pin := cond (or (eq site.Params.admin.cms "decapcms") (eq site.Params.admin.cms "sveltiacms")) "location" "coordinates" -}}
 {{- $fields := slice 
   "street" 
   "zipcode" 
