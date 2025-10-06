@@ -11,7 +11,7 @@
     media: videos
   },
   {{- else }}
-  choose_url: false,
+  choose_url: true,
   media_library: {
     config: {
       max_file_size: {{site.Params.admin.media.video_max_file_size}}
