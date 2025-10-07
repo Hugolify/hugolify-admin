@@ -42,6 +42,8 @@
   {{- $fields = $fields | append "is_darken" -}}
 {{- end -}}
 
+{{- $fields = $fields | append "poster" -}}
+
 {{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.video.label" 1 }}',

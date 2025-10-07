@@ -608,6 +608,9 @@ admin:
       label: Puhelinnumero
     placeholder:
       label: Paikkamerkki
+    poster:
+      label: Poster
+      hint: Placehoster image for video
     prefix:
       label: Etuliite
     press:

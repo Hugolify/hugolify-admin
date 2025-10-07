@@ -612,6 +612,9 @@ admin:
       hint: 'Format international, ex: +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
+    poster:
+      label: Poster
+      hint: Image de présentation pour la vidéo
     prefix:
       label: Prefix
     press:
