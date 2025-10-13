@@ -14,12 +14,5 @@
   {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
   
-  {{ partial "admin/collections/config/icon.yml" "jobs" }}
-  {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" "jobs" }}
-  {{ partial "admin/collections/config/sortable.yml" "jobs" }}
-  {{ partial "admin/collections/config/summary.yml" "jobs" }}
-  {{ partial "admin/collections/config/view_filters.yml" "jobs" }}
-  {{ partial "admin/collections/config/view_groups.yml" "jobs" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "jobs") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

@@ -12,12 +12,5 @@
   path: '{{`{{slug}}`}}',
   {{ partial "admin/collections/config/slug.yml" }}
 
-  {{ partial "admin/collections/config/icon.yml" "persons" }}
-  {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" "persons" }}
-  {{ partial "admin/collections/config/sortable.yml" "persons" }}
-  {{ partial "admin/collections/config/summary.yml" "persons" }}
-  {{ partial "admin/collections/config/view_filters.yml" "persons" }}
-  {{ partial "admin/collections/config/view_groups.yml" "persons" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "persons") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

@@ -12,12 +12,5 @@
   path: '{{`{{slug}}/_index`}}',
   {{ partial "admin/collections/config/slug.yml" }}
   
-  {{ partial "admin/collections/config/icon.yml" "pages" }}
-  {{ partial "admin/collections/config/filter.yml" "pages" }}
-  {{ partial "admin/collections/config/sortable.yml" "pages" }}
-  {{ partial "admin/collections/config/summary.yml" "pages" }}
-  {{ partial "admin/collections/config/view_filters.yml" "pages" }}
-  {{ partial "admin/collections/config/view_groups.yml" "pages" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "pages") }}
-  {{ partial "admin/collections/config/nested.yml" "pages" }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

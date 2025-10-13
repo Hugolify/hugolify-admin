@@ -1,0 +1,4 @@
+{{ $exclude := (index site.Params.admin.collections .).exclude }}
+{{ with $exclude }}
+exclude: [ {{ delimit . `, ` }} ],
+{{ end }}

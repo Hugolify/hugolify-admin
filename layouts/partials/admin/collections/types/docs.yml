@@ -12,13 +12,5 @@
   path: "{{`{{slug}}/_index`}}",
   {{ partial "admin/collections/config/slug.yml" }}
   
-  {{ partial "admin/collections/config/icon.yml" "docs" }}
-  {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" "docs" }}
-  {{ partial "admin/collections/config/sortable.yml" "docs" }}
-  {{ partial "admin/collections/config/summary.yml" "docs" }}
-  {{ partial "admin/collections/config/view_filters.yml" "docs" }}
-  {{ partial "admin/collections/config/view_groups.yml" "docs" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "docs") }}
-  {{ partial "admin/collections/config/nested.yml" "docs" }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

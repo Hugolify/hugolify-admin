@@ -12,12 +12,5 @@
   path: '{{`{{year}}/{{slug}}`}}',
   {{ partial "admin/collections/config/slug.yml" }}
   
-  {{ partial "admin/collections/config/icon.yml" "casestudies" }}
-  {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" "casestudies" }}
-  {{ partial "admin/collections/config/sortable.yml" "casestudies" }}
-  {{ partial "admin/collections/config/summary.yml" "casestudies" }}
-  {{ partial "admin/collections/config/view_filters.yml" "casestudies" }}
-  {{ partial "admin/collections/config/view_groups.yml" "casestudies" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "casestudies") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

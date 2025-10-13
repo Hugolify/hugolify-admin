@@ -12,10 +12,5 @@
   path: '{{`{{slug}}/_index`}}',
   {{ partial "admin/collections/config/slug.yml" }}
   
-  {{ partial "admin/collections/config/icon.yml" "services_categories" }}
-  {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" "services_categories" }}
-  {{ partial "admin/collections/config/sortable.yml" "services_categories" }}
-  {{ partial "admin/collections/config/view_filters.yml" "services_categories" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "services_categories") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

@@ -13,12 +13,5 @@
   {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
 
-  {{ partial "admin/collections/config/icon.yml" "posts" }}
-  {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" "posts" }}
-  {{ partial "admin/collections/config/sortable.yml" "posts" }}
-  {{ partial "admin/collections/config/summary.yml" "posts" }}
-  {{ partial "admin/collections/config/view_filters.yml" "posts" }}
-  {{ partial "admin/collections/config/view_groups.yml" "posts" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "posts") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

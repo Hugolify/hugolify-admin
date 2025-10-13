@@ -1,0 +1,24 @@
+{{ $view := (index site.Params.admin.collections .).view }}
+{{ with $view }}
+view: {
+{{ with .fields }}
+  fields: [ {{ delimit . `, ` }} ],
+{{ end }}
+{{ with .sort }}
+  sort: [ {{ delimit . `, ` }} ],
+{{ end }}
+{{ with .layout }}
+  layout: "{{ . }}",
+{{ end }}
+{{ with .node }}
+  node: {
+  {{ with .filename }}
+    filename: "{{ . }}",
+  {{ end }}
+  {{ with .hideDirs }}
+    hideDirs: "{{ . }}"
+  {{ end }}
+  }
+{{ end }}
+},
+{{ end }}

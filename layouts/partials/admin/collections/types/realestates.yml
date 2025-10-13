@@ -13,12 +13,5 @@
   {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
   
-  {{ partial "admin/collections/config/icon.yml" "realestates" }}
-  {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" "realestates" }}
-  {{ partial "admin/collections/config/sortable.yml" "realestates" }}
-  {{ partial "admin/collections/config/summary.yml" "realestates" }}
-  {{ partial "admin/collections/config/view_filters.yml" "realestates" }}
-  {{ partial "admin/collections/config/view_groups.yml" "realestates" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "realestates") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

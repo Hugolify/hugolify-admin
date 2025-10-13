@@ -13,12 +13,5 @@
   {{ $slug := "{{year}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
 
-  {{ partial "admin/collections/config/icon.yml" "events" }}
-  {{ partial "admin/collections/config/index_file.yml" }}
-  {{ partial "admin/collections/config/filter.yml" "events" }}
-  {{ partial "admin/collections/config/sortable.yml" "events" }}
-  {{ partial "admin/collections/config/summary.yml" "events" }}
-  {{ partial "admin/collections/config/view_filters.yml" "events" }}
-  {{ partial "admin/collections/config/view_groups.yml" "events" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "events") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

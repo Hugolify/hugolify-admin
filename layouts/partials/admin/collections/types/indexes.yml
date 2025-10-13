@@ -9,12 +9,5 @@
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
-  {{ partial "admin/collections/config/icon.yml" "indexes" }}
-  {{ partial "admin/collections/config/filter.yml" "indexes" }}
-  {{ partial "admin/collections/config/sortable.yml" "indexes" }}
-  {{ partial "admin/collections/config/summary.yml" "indexes" }}
-  {{ partial "admin/collections/config/view_filters.yml" "indexes" }}
-  {{ partial "admin/collections/config/view_groups.yml" "indexes" }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
-  {{ partial "admin/collections/config/nested.yml" "indexes" }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }
