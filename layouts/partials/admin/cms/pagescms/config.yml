@@ -1,3 +1,6 @@
+settings:
+  hide: {{ site.Params.admin.settings.hide | default true }}
+
 media:
   - name: images
     label: '{{ i18n "admin.fields.image.label" }}'
