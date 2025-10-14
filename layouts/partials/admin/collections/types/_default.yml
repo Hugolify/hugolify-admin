@@ -1,6 +1,6 @@
 {{ partial "admin/collections/config/icon.yml" . }}
 {{ if ne . "indexes" }}
-{{ partial "admin/collections/config/index_file.yml" }}
+{{ partial "admin/collections/config/index_file.yml" . }}
 {{ end }}
 {{ partial "admin/collections/config/exclude.yml" . }}
 {{ partial "admin/collections/config/filter.yml" . }}

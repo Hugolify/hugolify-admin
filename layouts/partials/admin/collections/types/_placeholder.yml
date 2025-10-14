@@ -12,7 +12,7 @@
   {{ partial "admin/collections/config/slug.yml" }}
 
   {{ partial "admin/collections/config/icon.yml" "pages" }}
-  {{ partial "admin/collections/config/index_file.yml" }}
+  {{ partial "admin/collections/config/index_file.yml" . }}
   {{ partial "admin/collections/config/exclude.yml" . }}
   {{ partial "admin/collections/config/filter.yml" . }}
   {{ partial "admin/collections/config/sortable.yml" . }}

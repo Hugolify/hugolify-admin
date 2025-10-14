@@ -1,5 +1,10 @@
 index_file: {
   name: _index,
   editor: { preview: {{ site.Params.admin.preview | default false }} },
+  {{ if eq . "pages" }}
+  label: {{ i18n "admin.collections.home" }},
+  {{ partial "admin/collections/fields.yml" (dict "collection" "pages") }}
+  {{ else }}
   {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
+  {{ end }}
 },

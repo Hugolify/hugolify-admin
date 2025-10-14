@@ -97,6 +97,7 @@ admin:
       label:
         one: Asiantuntemus
         other: Asiantuntemukset
+    home: Home
     indexes:
       _description: Kaikki hakemistosivut
       label:

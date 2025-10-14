@@ -97,6 +97,7 @@ admin:
       label:
         one: Expertise
         other: Expertises
+    home: Accueil
     indexes:
       _description: Toutes les pages index
       label:
