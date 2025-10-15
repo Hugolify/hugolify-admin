@@ -591,8 +591,15 @@ admin:
     newsletter:
       form:
         label: Lomake
+    notes:
+      hint: 'To link a word in the text to a note, suffix it with "[*]". Notes and "[\\*]" are linked by their order.'
+      label:
+        one: Note
+        other: Notes
     offer:
-      label: Tarjous
+      label:
+        one: Tarjous
+        other: Tarjoukset
     offset:
       label: Offset
       options:

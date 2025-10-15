@@ -595,8 +595,15 @@ admin:
     newsletter:
       form:
         label: Formulaire
+    notes:
+      hint: 'Pour lier un mot du texte à une note, suffixez le avec "[\\*]". Les notes et les "[\\*]" sont liés par leur ordre.'
+      label:
+        one: Note
+        other: Notes
     offer:
-      label: Offre
+      label:
+        one: Offre
+        other: Offres
     offset:
       label: Offset
       options:

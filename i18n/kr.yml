@@ -595,8 +595,15 @@ admin:
     newsletter:
       form:
         label: Form
+    notes:
+      hint: 'To link a word in the text to a note, suffix it with "[*]". Notes and "[\\*]" are linked by their order.'
+      label:
+        one: Note
+        other: Notes
     offer:
-      label: Offer
+      label:
+        one: Offer
+        other: Offers
     offset:
       label: Offset
       options:
