@@ -43,7 +43,7 @@
   },
   {{- else }}
   widget: 'relation',
-  collection: {{ $collection }},
+  collection: '{{ $collection }}',
   display_fields: {{ $display_fields }},
   search_fields: {{ $search_fields }},
   value_field: '{{$slug}}',

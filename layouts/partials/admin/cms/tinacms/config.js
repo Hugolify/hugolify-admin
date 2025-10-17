@@ -1,3 +1,5 @@
+// Code here will be linted with JSHint.
+/* jshint ignore:start */
 {{- $collections := partialCached "admin/collections/index.yml" . -}}
 
 {{- $sliceCompatibity := slice 
@@ -8,7 +10,7 @@
   (dict "widget: 'markdown'" "widget: 'rich-text'") 
   (dict "widget: 'text'" "widget: 'string', ui: { component: 'textarea' }") 
   (dict "widget: 'hidden'" "widget: 'boolean'") 
-  (dict "widget: 'select'" "widget: 'string', list: true, ui: { component: 'select' }") 
+  (dict "widget: 'select'" "widget: 'string', ui: { component: 'select' }") 
   (dict "name: 'pdf'" "name: 'pdf', media: { accept: 'application/pdf' }") 
   (dict "name: 'mp4'" "name: 'mp4', media: { accept: 'video/mp4' }") 
   (dict "name: 'webm'" "name: 'webm', media: { accept: 'video/webm' }") 
@@ -40,7 +42,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "assets/images/uploads",
+      mediaRoot: "{{ site.Params.admin.media.media_folder | default `assets/images/uploads` }}",
       publicFolder: "public",
     },
   },

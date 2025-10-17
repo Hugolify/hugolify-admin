@@ -21,8 +21,12 @@
 
 {
   label: '{{ i18n "admin.blocks.selected.label" (dict "section" $name) }}',
+  {{- if eq site.Params.admin.cms "tinacms" }}
+  name: 'selected_{{ $collection }}',
+  nameOverride: 'selected-{{ $collection }}',
+  {{- else }}
   name: 'selected-{{ $collection }}',
-  nameOverride: 'selected_{{ $collection }}',
+  {{- end }}
   widget: 'object',
   required: false,
   i18n: true,

@@ -1,6 +1,11 @@
 {
   label: '{{ i18n "admin.fields.text.label" }}',
-  name: 'text',
+  {{- if eq site.Params.admin.cms "tinacms" }}
+  name: 'text_markdown',
+  nameOverride: 'text',
+  {{- else }}
+  name: 'text }}',
+  {{- end }}
   widget: 'markdown',
   minimal: true,
   buttons: ['bold', 'italic', 'link', 'bulleted-list'],

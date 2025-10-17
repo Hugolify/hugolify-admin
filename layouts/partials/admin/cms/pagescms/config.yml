@@ -56,4 +56,4 @@ media:
   {{- end -}}
 {{- end }}
 
-{{ transform.Remarshal "yaml" $partial }}
+{{ transform.Remarshal "yaml" $collections }}

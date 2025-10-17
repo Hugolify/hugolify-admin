@@ -4,6 +4,14 @@
 {{- end -}}
 {
   name: 'section',
+  {{- if eq site.Params.admin.cms "tinacms" }}
+  widget: 'string',
+  ui: {
+    component: 'hidden',
+    defaultValue: '{{ $collection }}'
+  },
+  {{- else }}
   widget: 'hidden',
   default: '{{ $collection }}'
+  {{- end }}
 }

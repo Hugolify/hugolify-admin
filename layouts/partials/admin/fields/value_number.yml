@@ -1,6 +1,11 @@
 {
   label: '{{ i18n "admin.fields.value.label" }}',
-  name: 'value',
+  {{- if eq site.Params.admin.cms "tinacms" }}
+  name: 'value_number',
+  nameOverride: 'value',
+  {{- else }}
+  name: 'value }}',
+  {{- end }}
   widget: 'number',
   required: false,
   i18n: true 

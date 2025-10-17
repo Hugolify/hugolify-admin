@@ -1,2 +1,2 @@
-{{- partial "admin/fields/select.yml" (dict "field" "breakpoints" "options" (dict "mobile" 640 "tablet" 768 "wide_tablet" 1024 "laptop" 1280 "desktop" 1440) "default" 640) }}
+{{- partial "admin/fields/select.yml" (dict "field" "breakpoints" "options" (dict "mobile" "640" "tablet" "768" "wide_tablet" "1024" "laptop" "1280" "desktop" "1440") "default" "640") }}
 
