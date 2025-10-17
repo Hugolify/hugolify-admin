@@ -17,7 +17,7 @@
       max_file_size: {{site.Params.admin.media.video_max_file_size}}
     }
   },
-  media_folder: {{ site.Params.admin.media.video_media_folder | default "static/assets/videos" }},
-  public_folder: {{ site.Params.admin.media.video_public_folder | default "/assets/videos" }}
+  media_folder: '{{ site.Params.admin.media.video_media_folder | default "static/assets/videos" }}',
+  public_folder: '{{ site.Params.admin.media.video_public_folder | default "/assets/videos" }}'
   {{- end }}
 }
