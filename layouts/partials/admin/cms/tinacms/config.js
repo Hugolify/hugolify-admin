@@ -1,4 +1,5 @@
 {{- $collections := partialCached "admin/collections/index.yml" . -}}
+
 {{- $sliceCompatibity := slice 
   (dict "regex" true "path: '[^']*'," "") 
   (dict "folder:" "path:") 
