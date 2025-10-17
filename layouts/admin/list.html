@@ -17,7 +17,7 @@
     {{- with site.Params.admin.cms }}
       {{- $file := print "admin/cms/" . "/scripts.html" -}}
       {{- if templates.Exists ( printf "partials/%s" $file ) }}
-        {{ partialCached $file . }}
+        {{ partial $file }}
       {{ end -}}
     {{- end -}}
   </body>

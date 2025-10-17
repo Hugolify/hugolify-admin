@@ -5,7 +5,7 @@ collections: [
       {{- if templates.Exists ( printf "partials/%s" $file ) }}
         {{ partialCached $file $collection }},
       {{- else -}}
-        {{ partial "admin/collections/types.default.yml" $collection }},
+        {{ partial "admin/collections/types/_placeholder.yml" $collection }},
       {{ end -}}
     {{- end -}}
   {{- end }}

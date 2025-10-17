@@ -5,18 +5,12 @@
   label_singular: '{{ i18n "admin.collections.realestates_sellers.label" 1 }}',
   description: '{{ i18n "admin.collections.realestates_sellers._description" }}',
   
-  create: true,
+  create: {{ site.Params.admin.collections.realestates_sellers.create | default true }},
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}/_index`}}',
   {{ partial "admin/collections/config/slug.yml" }}
-  nested: { depth: 2 },
   
-  {{ partial "admin/collections/config/icon.yml" "gavel" }}
-  {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" }}
-  {{ partial "admin/collections/config/view_filters.yml" "realestates_sellers" }}
-
-  {{ partial "admin/collections/fields.yml" (dict "collection" "realestates_sellers") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

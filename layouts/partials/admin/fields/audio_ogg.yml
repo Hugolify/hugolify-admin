@@ -1,0 +1,16 @@
+{
+  label: 'OGG',
+  hint: '{{ i18n "admin.fields.audio.ogg.hint" }}',
+  name: 'ogg',
+  widget: 'file',
+  required: false,
+  i18n: 'duplicate',
+  choose_url: true,
+  media_library: {
+    config: {
+      max_file_size: {{site.Params.admin.media.audio_max_file_size}}
+    }
+  },
+  media_folder: '/static/assets/audios',
+  public_folder: '/assets/audios'
+}

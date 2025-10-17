@@ -1,7 +1,9 @@
+{{- with (index site.Params.admin.collections .).sortable -}}
 sortable_fields: {
-  fields: {{ .fields }},
+  fields: {{ . }},
   default: {
     field: commit_date,
     direction: Descending
   }
 },
+{{- end -}}

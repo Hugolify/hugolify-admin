@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.is_open.label" }}',
+  name: 'open',
+  widget: 'boolean',
+  required: false,
+  i18n: 'duplicate'
+}

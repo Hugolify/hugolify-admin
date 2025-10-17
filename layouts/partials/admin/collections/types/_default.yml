@@ -1,0 +1,13 @@
+{{ partial "admin/collections/config/icon.yml" . }}
+{{ if ne . "indexes" }}
+{{ partial "admin/collections/config/index_file.yml" . }}
+{{ end }}
+{{ partial "admin/collections/config/exclude.yml" . }}
+{{ partial "admin/collections/config/filter.yml" . }}
+{{ partial "admin/collections/config/sortable.yml" . }}
+{{ partial "admin/collections/config/summary.yml" . }}
+{{ partial "admin/collections/config/view.yml" . }}
+{{ partial "admin/collections/config/view_filters.yml" . }}
+{{ partial "admin/collections/config/view_groups.yml" . }}
+{{ partial "admin/collections/fields.yml" (dict "collection" .) }}
+{{ partial "admin/collections/config/nested.yml" . }}

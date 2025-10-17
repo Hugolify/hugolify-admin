@@ -3,7 +3,7 @@
   "url" 
   "lang" 
   "is_blank"  -}}
-{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.cta.label" 2 }}',
   label_singular: '{{ i18n "admin.fields.cta.label" 1 }}',

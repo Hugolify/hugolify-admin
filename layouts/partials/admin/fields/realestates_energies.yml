@@ -7,31 +7,7 @@
   collapsed: true,
   fields:
     [
-      {
-        label: '{{ i18n "admin.fields.realestates_energies.heating.label" }}',
-        name: 'heating',
-        widget: 'select',
-        options:
-          [
-            '{{ i18n "admin.fields.realestates_energies.heating.collective" }}',
-            '{{ i18n "admin.fields.realestates_energies.heating.individual" }}'
-          ],
-        required: false,
-        i18n: true
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_energies.heating_type.label" }}',
-        name: 'heating_type',
-        widget: 'select',
-        options:
-          [
-            '{{ i18n "admin.fields.realestates_energies.heating_type.reversible_ac" }}',
-            '{{ i18n "admin.fields.realestates_energies.heating_type.electric" }}',
-            '{{ i18n "admin.fields.realestates_energies.heating_type.gas" }}',
-            '{{ i18n "admin.fields.realestates_energies.heating_type.solar" }}'
-          ],
-        required: false,
-        i18n: true
-      }
+      {{- partial "admin/fields/select.yml" (dict "field" "realestates_energies.heating" "options" (slice "collective" "individual")) }},
+      {{- partial "admin/fields/select.yml" (dict "field" "realestates_energies.heating_type" "options" (slice "reversible_ac" "electric" "gas" "solar")) }}
     ]
 }

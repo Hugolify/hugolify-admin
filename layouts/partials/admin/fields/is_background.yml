@@ -1,0 +1,7 @@
+{
+  label: '{{ i18n "admin.fields.is_background.label" }}',
+  name: 'background',
+  widget: 'boolean',
+  required: false,
+  i18n: 'duplicate' 
+}

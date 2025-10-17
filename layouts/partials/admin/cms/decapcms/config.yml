@@ -4,6 +4,12 @@ backend:
   {{- with site.Params.admin.repo }}
   repo: {{ . }}
   {{- end }}
+  {{- with site.Params.admin.base_url }}
+  base_url: {{ . }}
+  {{- end }}
+  {{- with site.Params.admin.auth_endpoint }}
+  auth_endpoint: {{ . }}
+  {{- end }}
 
 display_url: "{{ site.BaseURL }}"
 
@@ -16,32 +22,34 @@ i18n:
 
 local_backend: true
 locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
-logo_url: "./logo.svg"
-media_folder: {{ site.Params.admin.media.media_folder | default "static/images/uploads" }}
+logo: 
+  src: "./logo.svg"
+  show_in_header: true
+media_folder: {{ site.Params.admin.media.media_folder | default "assets/images/uploads" }}
 
 {{- with site.Params.admin.media.cloud }}
 media_library:
   name: "{{ .name }}"
   config:
-    {{ with .cloud_name }}
+    {{- with .cloud_name }}
     cloud_name: "{{ . }}"
     {{ end }}
-    {{ with .api_key }}
+    {{- with .api_key }}
     api_key: {{ . }}
     {{ end }}
-    {{ with .public_key }}
+    {{- with .public_key }}
     publicKey: {{ . }}
     {{ end }}
-    {{ with .tabs }}
+    {{- with .tabs }}
     tabs: {{ . }}
     {{ end }}
 {{- end }}
 
-public_folder: {{ site.Params.admin.media.public_folder }}
-publish_mode: {{ site.Params.admin.publish_mode }}
+public_folder: {{ site.Params.admin.media.public_folder | default "/images/uploads" }}
+publish_mode: {{ site.Params.admin.publish_mode | default "simple" }}
 slug:
   encoding: "unicode"
   clean_accents: false
   sanitize_replacement: "-"
 
-{{ transform.Remarshal "yaml" (partialCached "admin/collections/index.yml" .) }}
+{{ transform.Remarshal "yaml" (partial "admin/collections/index.yml" .) }}

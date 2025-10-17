@@ -1,0 +1,14 @@
+{{- $fields := slice 
+  "text" -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.fields.notes.label" 2 }}',
+  label_singular: '{{ i18n "admin.fields.notes.label" 1 }}',
+  hint: '{{ i18n "admin.fields.notes.hint" }}',
+  name: 'notes',
+  widget: 'list',
+  required: false,
+  i18n: true,
+  collapsed: true,
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

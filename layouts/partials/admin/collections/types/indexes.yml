@@ -5,18 +5,9 @@
   label_singular: '{{ i18n "admin.collections.indexes.label" 1 }}',
   description: '{{ i18n "admin.collections.indexes._description" }}',
   
-  create: false,
+  create: {{ site.Params.admin.collections.indexes.create | default false }},
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
-  {{ partial "admin/collections/config/icon.yml" "schema" }}
-  {{ partial "admin/collections/config/filter.yml" (dict "field" "isIndex" "value" true) }}
-  {{ partial "admin/collections/config/sortable.yml" "indexes" }}
-  {{ partial "admin/collections/config/summary.yml" "indexes" }}
-  {{ partial "admin/collections/config/view_filters.yml" "indexes" }}
-  {{ partial "admin/collections/config/view_groups.yml" "indexes" }}
-
-  {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
-
-  {{ partial "admin/collections/config/nested.yml" "indexes" }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

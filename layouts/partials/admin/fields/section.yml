@@ -1,18 +1,10 @@
-{
-  label: '{{ i18n "admin.fields.section.label" }}',
-  hint: '{{ i18n "admin.fields.section.hint" }}',
-  name: 'section',
-  widget: 'select',
-  options: [
-    {{- range $collection, $value := site.Params.admin.collections }}
-      {{- if and .enable (ne $collection "indexes") -}}
-      {{- if or (strings.Contains $collection "posts_authors") (strings.Contains $collection "posts_categories") (strings.Contains $collection "posts_tags") -}}
-        {{- $collection = replace $collection "posts_" "" -}} 
-      {{- end -}}
-      { label: '{{ humanize $collection }}', value: '{{ $collection }}' },
-      {{- end -}}
-    {{- end }}
-  ],
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $collections := slice -}}
+{{- range $collection, $value := site.Params.admin.collections }}
+  {{- if and .enable (ne $collection "indexes") -}}
+    {{- if or (strings.Contains $collection "posts_authors") (strings.Contains $collection "posts_categories") (strings.Contains $collection "posts_tags") -}}
+      {{- $collection = replace $collection "posts_" "" -}} 
+    {{- end -}}
+    {{- $collections = $collections | append $collection -}}
+  {{- end -}}
+{{- end }}
+{{- partial "admin/fields/select.yml" (dict "field" "section" "options" $collections) -}}

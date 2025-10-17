@@ -1,8 +1,8 @@
 {{- $fields := slice 
   "title" 
   "text" 
-  "image"  -}}
-{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+  "image_simple"  -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.author.label" }}',
   name: 'author',

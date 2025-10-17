@@ -1,0 +1,5 @@
+{
+  label: '{{ i18n "admin.fields.url.label" }}',
+  name: 'link',
+  widget: 'string'
+}

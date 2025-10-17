@@ -2,14 +2,14 @@
   "surtitle" 
   "title" 
   "text_markdown"  -}}
-{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.heading.label" }}',
   name: 'heading',
   widget: 'object',
   required: false,
   i18n: true,
-  collapsed: false,
+  collapsed: true,
   summary: '{{`{{title}}`}}',
   {{ partial "admin/fields/_fields.yml" $fields }}
 }

@@ -4,6 +4,7 @@
 
 - Decap CMS: https://decapcms.org/docs/
 - Netlify CMS `deprecated`
+- Pages CMS: https://github.com/pages-cms/pages-cms
 - Static CMS: https://staticjscms.netlify.app/ `deprecated`
 - Sveltia CMS: https://github.com/sveltia/sveltia-cms
 
@@ -41,7 +42,13 @@ params:
       default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
     media:
-      max_file_size: 700000
+      media_folder: '/assets/images/uploads'
+      public_folder: '/images/uploads'
+      audio_max_file_size: 700000 # 700ko
+      max_file_size: 700000 # 700ko
+      pdf_max_file_size: 5000000 # 5Mo
+      specific_filter: false # set true to add a selected filter by image
+      video_max_file_size: 5000000 # 5Mo
 
     # Cloud asset config (optional)
     media_library:

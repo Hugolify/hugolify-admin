@@ -16,7 +16,7 @@ i18n:
 {{ end }}
 
 local_backend: true
-locale: {{ site.Params.admin.locale }}
+locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
 logo_url: ./logo-picto.svg
 media_folder: {{ site.Params.admin.media.media_folder }}
 public_folder: {{ site.Params.admin.media.public_folder }}
@@ -28,4 +28,4 @@ slug:
   clean_accents: false
   sanitize_replacement: "-"
 
-{{ partialCached "admin/collections/index.yml" . }}
+{{ transform.Remarshal "yaml" (partial "admin/collections/index.yml" .) }}

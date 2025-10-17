@@ -1,14 +1,1 @@
-{
-  label: '{{ i18n "admin.fields.image.filter.label" }}',
-  hint: '{{ i18n "admin.fields.image.filter.hint" }}',
-  name: 'filter',
-  widget: 'select',
-  options: [
-    { label: "{{ i18n `admin.fields.image.filter.box` }}", value: "Box" },
-    { label: "{{ i18n `admin.fields.image.filter.lanczos` }}", value: "Lanczos" },
-    { label: "{{ i18n `admin.fields.image.filter.catmullrom` }}", value: "CatmullRom" },
-    { label: "{{ i18n `admin.fields.image.filter.linear` }}", value: "Linear" }
-  ],
-  required: false,
-  i18n: true 
-}
+{{- partial "admin/fields/select.yml" (dict "field" "filter" "i18n" "image.filter" "options" (slice "Box" "Lanczos" "CatmullRom" "Linear")) }}

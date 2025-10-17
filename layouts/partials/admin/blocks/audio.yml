@@ -1,0 +1,15 @@
+{{- $fields := slice 
+  "heading" 
+  "audio" 
+  "background" -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "block" . "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.blocks.audio.label" }}',
+  name: 'audio',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: false,
+  summary: '{{`{{heading.title}}`}}',
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

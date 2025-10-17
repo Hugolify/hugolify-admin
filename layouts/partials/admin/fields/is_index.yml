@@ -1,3 +1,6 @@
+{{ if eq site.Params.admin.cms "sveltiacms" }}
+{{ partial "admin/fields/is_not_index.yml" . }} 
+{{ else }}
 {
   label: 'is index',
   name: 'isIndex',
@@ -6,3 +9,4 @@
   required: false,
   i18n: false 
 }
+{{ end }}

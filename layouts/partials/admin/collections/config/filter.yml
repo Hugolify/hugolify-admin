@@ -2,7 +2,8 @@
 {{- $file := print "admin/cms/" $cms "/collection/config/filter.yml" -}}
 {{- if templates.Exists ( printf "partials/%s" $file ) -}}
   {{- $args := . -}}
-  {{- if not $args -}}
+  {{- $index_file := print "admin/cms/" $cms "/collection/config/index_file.yml" -}}
+  {{- if and (not $args) (not (templates.Exists (printf "partials/%s" $index_file))) -}}
     {{- $args = dict "field" "isIndex" "value" false -}}
   {{- end -}}
   {{ partial $file $args }}

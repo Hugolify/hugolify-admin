@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Alert
+    audio:
+      label: Audio
     chart:
       label: Chart
     comparison:
@@ -44,6 +46,8 @@ admin:
       label: Pushes
     quote:
       label: Quote
+    search:
+      label: Search
     selected:
       label: Selection {{ .section }}
     testimonials:
@@ -93,6 +97,7 @@ admin:
       label:
         one: Expertise
         other: Expertises
+    home: Home
     indexes:
       _description: All index pages
       label:
@@ -269,14 +274,23 @@ admin:
       zipcode:
         label: Postal code
     align:
-      center: Center
-      end: End
       label: Alignment
-      start: Start
+      options:
+        center: Center
+        end: End
+        start: Start
     arguments:
       label:
         one: Argument
         other: Arguments
+    audio:
+      label:
+        one: Audio
+        other: Audios
+      mp3:
+        hint: Audio (MP3)
+      ogg:
+        hint: Audio (OGG)
     author:
       label: Author
     autoplay:
@@ -332,6 +346,22 @@ admin:
         label: Responsive
       type:
         label: Carousel type
+    chart:
+      label: Chart
+      data:
+        label: Data (code)
+        hint: 'Documentation: https://www.chartjs.org/docs/'
+      type:
+        label: Chart type
+        options:
+          bar: Bar
+          line: Line
+          pie: Pie
+          polarArea: Polar area
+          radar: Radar
+    class:
+      label: Class
+      hint: Add CSS class to this component
     code:
       label: Code
     color:
@@ -360,6 +390,10 @@ admin:
       label:
         one: CTA
         other: CTAs
+    datas:
+      label:
+        one: Data
+        other: Datas
     date:
       from: From
       label: Date
@@ -416,19 +450,20 @@ admin:
       label: Figure
     form:
       autocomplete:
-        city: City
-        country_name: Country name
-        email: Email
-        family_name: Lastname
-        given_name: Firstname
-        honorific_prefix: Title
         label: Autocomplete
-        name: Name
-        organization: Organization
-        postal_code: Postal code
-        state: State
-        street_address: Street
-        tel: Tel
+        options:
+          city: City
+          country_name: Country name
+          email: Email
+          family_name: Lastname
+          given_name: Firstname
+          honorific_prefix: Title
+          name: Name
+          organization: Organization
+          postal_code: Postal code
+          state: State
+          street_address: Street
+          tel: Tel
       full:
         label: Full width field?
       hiddens:
@@ -446,21 +481,27 @@ admin:
           one: Option
           other: Options
       type:
+        hint: Choose type field
         email: Email
         label: Type
+        radio: Radio
         select: Select
         tel: Telephone
         text: Text
         textarea: Textarea
+      value:
+        hint: Only for checkbox and radio fields
+        label: Value
     gallery:
       label: Gallery
     grid:
-      container: Container
-      full: Full
       label: Grid
-      large: Large
-      medium: Medium
-      small: Small
+      options:
+        container: Container
+        full: Full
+        large: Large
+        medium: Medium
+        small: Small
     heading:
       label: Heading
     hero:
@@ -469,33 +510,34 @@ admin:
       hint: Icon name from https://icons.getbootstrap.com/
       label: Icon
     image:
+      label: 
+        one: Image
+        other: Images
       alt:
         hint: For an image that conveys information (leave blank if decorative image)
         label: Text alternative
       filter:
-        box: Simple and fast averaging filter appropriate for downscaling (default)
-        catmullrom:
-          Sharp cubic filter that is faster than the Lanczos filter while
-          providing similar results
         hint: Set Linear for picture or screenshot, leave empty to keep default config
         label: Change filter quality?
-        lanczos:
-          High-quality resampling filter for photographic images yielding sharp
-          results
-        linear:
-          Bilinear resampling filter, produces smooth output, faster than cubic
-          filters
-      label: Image
+        options:
+          box: Simple and fast averaging filter appropriate for downscaling (default)
+          catmullrom: Sharp cubic filter that is faster than the Lanczos filter while providing similar results
+          lanczos: High-quality resampling filter for photographic images yielding sharp results
+          linear: Bilinear resampling filter, produces smooth output, faster than cubic filters
       src:
         hint: 'Resize and compress image before sending : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
     images:
       label: Images
+    is_background:
+      label: Is background?
     is_blank:
       label: Is blank?
     is_card:
       hint: Adds a background behind the text
       label: Is card?
+    is_darken:
+      label: Darken?
     is_exclusive:
       label: Exclusive?
     is_half:
@@ -505,6 +547,8 @@ admin:
     is_logo:
       hint: Positioned in the center and not cropped
       label: Is logo?
+    is_open:
+      label: Open?
     is_pinned:
       label: Pinned?
     is_screenshot:
@@ -551,8 +595,15 @@ admin:
     newsletter:
       form:
         label: Form
+    notes:
+      hint: 'To link a word in the text to a note, suffix it with "[*]". Notes and "[\\*]" are linked by their order.'
+      label:
+        one: Note
+        other: Notes
     offer:
-      label: Offer
+      label:
+        one: Offer
+        other: Offers
     offset:
       label: Offset
       options:
@@ -569,6 +620,9 @@ admin:
       hint: 'Format international, ex: +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
+    poster:
+      label: Poster
+      hint: Placehoster image for video
     prefix:
       label: Prefix
     press:
@@ -586,14 +640,16 @@ admin:
         other: Energies
       heating:
         label: Heating
-        collective: Collective
-        individual: Individual
+        options:
+          collective: Collective
+          individual: Individual
       heating_type:
         label: Heating type
-        reversible_ac: Reversible AC
-        electric: Electric
-        gas: Gas
-        solar: Solar
+        options:
+          reversible_ac: Reversible AC
+          electric: Electric
+          gas: Gas
+          solar: Solar
     realestates_informations:
       area:
         hint: Expressed in m2
@@ -642,10 +698,9 @@ admin:
         label: Year of construction
     realestates_types:
       label: Transaction Type
-      rent:
-        label: Rent
-      sale:
-        label: Sale
+      options:
+        rent: Rent
+        sale: Sale
     reference:
       label: Reference
     rent:
@@ -678,15 +733,16 @@ admin:
     sold:
       label: Sold/rent ?
     state:
-      danger: Danger
-      dark: Dark
-      info: Info
       label: State
-      light: Light
-      primary: Primary
-      secondary: Secondary
-      success: Success
-      warning: Warning
+      options:
+        danger: Danger
+        dark: Dark
+        info: Info
+        light: Light
+        primary: Primary
+        secondary: Secondary
+        success: Success
+        warning: Warning
     status:
       label: Status
     submit:
@@ -696,6 +752,8 @@ admin:
     suffix:
       hint: 'e.g: %'
       label: Suffix
+    summary:
+      label: Summary
     surtitle:
       label: Surtitle
     text:
@@ -714,17 +772,25 @@ admin:
     value:
       label: Value
     video:
-      label: Video
+      label: 
+        one: Video
+        other: Videos
       mp4:
-        hint: Vidéo (MP4)
+        hint: Video (MP4)
+        mobile:
+          label: Mobile MP4
+          hint: Video (MP4)
       webm:
         hint: Video (WEBM)
+        mobile:
+          label: Mobile WEBM
+          hint: Video (WEBM)
     website:
       hint: URL (https://…)
       label: Website
     weight:
       label: Position (importance)
-      hint: Knowing that 1 is the most important and 10 the least important
+      hint: Knowing that 10 is the most important and 100 the least important
     year: Year
     zoom:
       label: Zoom
@@ -743,10 +809,22 @@ admin:
   group:
     year: Year
   shortcodes:
+    alert:
+      label: Alert
+    badge:
+      label: Badge
+    blank_link:
+      label: Blank link
+    blockquote:
+      label: Blockquote
     button:
       label: Button
+    details:
+      label: Details
     figure:
       label: Figure
+    map:
+      label: Map
     twitter:
       _id: Twitter ID
       label: Twitter / X

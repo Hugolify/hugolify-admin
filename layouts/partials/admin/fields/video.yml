@@ -1,15 +1,52 @@
+{{- $is_background := false -}}
+{{- $is_darken := false -}}
+{{- $is_screenshot := false -}}
+{{- $has_mobile := false -}}
+{{- if reflect.IsMap . -}}
+  {{- with .is_background -}}
+    {{- $is_background = true -}}
+  {{- end -}}
+  {{- with .is_darken -}}
+    {{- $is_darken = true -}}
+  {{- end -}}
+  {{- with .is_screenshot -}}
+    {{- $is_screenshot = true -}}
+  {{- end -}}
+  {{- with .has_mobile -}}
+    {{- $has_mobile = true -}}
+  {{- end -}}
+{{- end -}}
+
 {{- $fields := slice 
   "video_mp4" 
-  "video_webm" 
-  "controls" 
-  "autoplay" 
-  "loop" 
-  "is_screenshot" 
-  "legend" 
-  "transcription"  -}}
-{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+  "video_webm" -}}
+
+{{- with $has_mobile -}}
+  {{- $fields = $fields | append "video_mp4_mobile" -}}
+  {{- $fields = $fields | append "video_webm_mobile" -}}
+{{- end -}}
+
+{{- $fields = $fields | append "controls" -}}
+{{- $fields = $fields | append "autoplay" -}}
+{{- $fields = $fields | append "loop" -}}
+{{- $fields = $fields | append "legend" -}}
+{{- $fields = $fields | append "transcription" -}}
+
+{{- with $is_screenshot -}}
+  {{- $fields = $fields | append "is_screenshot" -}}
+{{- end -}}
+{{- with $is_background -}}
+  {{- $fields = $fields | append "is_background" -}}
+{{- end -}}
+{{- with $is_darken -}}
+  {{- $fields = $fields | append "is_darken" -}}
+{{- end -}}
+
+{{- $fields = $fields | append "poster" -}}
+
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
-  label: '{{ i18n "admin.fields.video.label" }}',
+  label: '{{ i18n "admin.fields.video.label" 1 }}',
   name: 'video',
   widget: 'object',
   required: false,

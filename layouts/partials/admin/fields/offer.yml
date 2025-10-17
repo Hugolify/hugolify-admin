@@ -3,9 +3,9 @@
   "discount" 
   "hide_price" 
   "text" -}}
-{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
-  label: '{{ i18n "admin.fields.offer.label" }}',
+  label: '{{ i18n "admin.fields.offer.label" 1 }}',
   name: 'offer',
   widget: 'object',
   required: false,

@@ -4,6 +4,6 @@
 <script src="https://unpkg.com/netlify-cms-widget-uuid-v4@^1.0.12/dist/index.js"></script>
 <!-- Register -->
 <script>
-{{ partialCached "admin/cms/decapcms/shortcodes.html" . | safeJS }}
-{{ partialCached "admin/cms/netlifycms/widgets.html" . | safeJS }}
+{{ partial "admin/cms/netlifycms/shortcodes.js" | safeJS }}
+{{ partial "admin/cms/netlifycms/widgets.js" | safeJS }}
 </script>

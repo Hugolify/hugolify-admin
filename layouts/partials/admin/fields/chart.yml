@@ -1,0 +1,16 @@
+{{- $items := dict "items" (slice "label" "value" "color") -}} 
+{{- $fields := slice 
+  "title" 
+  "chart_type" 
+  $items
+  "chart_data"  -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.fields.chart.label" }}',
+  name: 'chart',
+  widget: 'object',
+  required: false,
+  i18n: true,
+  collapsed: true,
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}

@@ -5,7 +5,7 @@
   label_singular: '{{ i18n "admin.collections.jobs.label" 1 }}',
   description: '{{ i18n "admin.collections.jobs._description" }}',
   
-  create: true,
+  create: {{ site.Params.admin.collections.jobs.create | default true }},
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
@@ -14,12 +14,5 @@
   {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
   
-  {{ partial "admin/collections/config/icon.yml" "work" }}
-  {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" "jobs" }}
-  {{ partial "admin/collections/config/summary.yml" "jobs" }}
-  {{ partial "admin/collections/config/view_filters.yml" "jobs" }}
-  {{ partial "admin/collections/config/view_groups.yml" "jobs" }}
-
-  {{ partial "admin/collections/fields.yml" (dict "collection" "jobs") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

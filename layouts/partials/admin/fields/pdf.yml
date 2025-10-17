@@ -5,12 +5,19 @@
   widget: 'file',
   required: false,
   i18n: true,
+  {{- if eq site.Params.admin.cms "pagescms" }}
+  options: {
+    extensions: [pdf],
+    media: pdf
+  },
+  {{- else }}
   choose_url: false,
   media_library: {
     config: { 
       max_file_size: {{ site.Params.admin.media.pdf_max_file_size }}
     }
   },
-  media_folder: '/static/pdf',
-  public_folder: '/pdf'
+  media_folder: {{ site.Params.admin.media.pdf_media_folder | default "static/pdf" }},
+  public_folder: {{ site.Params.admin.media.pdf_public_folder | default "/pdf" }}
+  {{- end }}
 }

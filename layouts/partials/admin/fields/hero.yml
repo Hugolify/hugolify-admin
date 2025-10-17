@@ -1,11 +1,14 @@
+{{- $image := dict "image" (dict "is_background" true "is_darken" true) -}}
+{{- $video := dict "video" (dict "is_background" true "is_darken" true "has_mobile" true) -}}
 {{- $fields := slice 
   "surtitle" 
   "title" 
   "text_markdown" 
   "ctas" 
-  "image" 
+  $image 
+  $video 
   "align" -}}
-{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.hero.label" }}',
   name: 'hero',

@@ -1,16 +1,18 @@
-{{- range . -}}
-  {{- $field := . -}}
-  {{- $values := . -}}
-  {{- if reflect.IsMap . -}}
-    {{- range $key, $value := . -}}
-      {{- $field = $key -}}
-      {{- $values = $value -}}
+{{- if . -}}
+  {{- range . -}}
+    {{- $field := . -}}
+    {{- $values := . -}}
+    {{- if reflect.IsMap . -}}
+      {{- range $key, $value := . -}}
+        {{- $field = $key -}}
+        {{- $values = $value -}}
+      {{- end -}}
     {{- end -}}
-  {{- end -}}
-  {{- $file := print "admin/fields/" $field ".yml" -}}
-  {{- if templates.Exists ( printf "partials/%s" $file ) -}}
-    {{- if or (ne $field "id") (and (eq site.Params.admin.config.id true) (eq $field "id")) }}
-      {{ partial $file $values }},
+    {{- $file := print "admin/fields/" $field ".yml" -}}
+    {{- if templates.Exists ( printf "partials/%s" $file ) -}}
+      {{- if or (ne $field "id") (and (eq site.Params.admin.config.id true) (eq $field "id")) }}
+        {{ partial $file $values }},
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}

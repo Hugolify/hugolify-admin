@@ -1,11 +1,11 @@
-{{- $pin := cond (eq site.Params.admin.cms "decapcms") "location" "coordinates" -}}
+{{- $pin := cond (or (eq site.Params.admin.cms "decapcms") (eq site.Params.admin.cms "sveltiacms")) "location" "coordinates" -}}
 {{- $fields := slice 
   "street" 
   "zipcode" 
   "city" 
   "country"
   $pin -}}
-{{- $fields = partial "admin/func/get_fields" (dict "field" . "fields" $fields) -}}
+{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
 {
   label: '{{ i18n "admin.fields.address.label" }}',
   name: 'address',

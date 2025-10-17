@@ -30,22 +30,33 @@ mediaTypes:
 # https://www.hugolify.io/docs/cms/admin/
 params:
   admin:
-    cms: tinacms # https://www.hugolify.io/docs/cms/
+    cms: decapcms # https://www.hugolify.io/docs/cms/admin/cms/
     config:
       id: false # set true to use ID for dir/name files and relation
+    publish_mode: simple # simple or editorial_workflow
     i18n:
       default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
-    locale: en # Language of the CMS interface. On the other hand, the Hugolify Admin fields are in the main locale of the project
+    # locale: en # Language of the CMS interface. On the other hand, the Hugolify Admin fields are in the main locale of the project
     media:
-      media_folder: 'static/images/uploads'
+      media_folder: '/assets/images/uploads'
       public_folder: '/images/uploads'
+      audio_max_file_size: 700000 # 700ko
+      audio_folders: true
+      audio_media_folder: '/static/assets/audios'
+      audio_public_folder: '/assets/audios'
       max_file_size: 700000 # 700ko
       pdf_max_file_size: 5000000 # 5Mo
+      pdf_folders: true
+      pdf_media_folder: '/static/pdf'
+      pdf_public_folder: '/pdf'
       specific_filter: false # set true to add a selected filter by image
       video_max_file_size: 5000000 # 5Mo
+      video_folders: true
+      video_media_folder: '/static/assets/videos'
+      video_public_folder: '/assets/videos'
     nested:
-      depth: 2 # set minimum 2 to display pages bundles
+      depth: 1
     auth:
       netlify_identity: true
     preview: false
@@ -54,38 +65,75 @@ params:
     collections:
       config:
         enable: true
+        icon:
+          sveltiacms: settings
       indexes:
         enable: true
+        filter:
+          - field: isIndex
+            value: true
+        icon:
+          sveltiacms: schema
+        nested:
+          depth: 2
       pages:
         enable: true
+        icon:
+          sveltiacms: description
+        filter:
+          - field: isPage
+            value: true
+        nested:
+          depth: 5
 
     # Blocks
     blocks:
       # Set blocks available, all blocks https://www.hugolify.io/docs/blocks/
       enable:
+        - audio
         - alert
-        # - chart
-        # - comparison
-        # - cta
-        # - datas
-        # - editorial
-        # - embed
-        # - faq
-        # - figure
-        # - form
-        # - gallery
-        # - images
-        # - informations
-        # - instagram
-        # - latest
-        # - logos
-        # - map
-        # - newsletter
-        # - paragraph
-        # - pushes
-        # - quote
-        # - selected
-        # - testimonials
+        - chart
+        - comparison
+        - cta
+        - datas
+        - editorial
+        - embed
+        - faq
+        - figure
+        - form
+        - gallery
+        - images
+        - informations
+        - instagram
+        - latest
+        - logos
+        - map
+        - newsletter
+        - paragraph
+        - pushes
+        - quote
+        - search
+        - selected
+        - testimonials
         - timeline
         - title
         - video
+
+    # Shortcodes
+    shortcodes:
+      # Set shortcodes available to markdown editor, all shortcodes https://www.hugolify.io/docs/shortcodes/
+      enable:
+        - alert
+        - badge
+        - blank_link
+        - blockquote
+        - button
+        - details
+        - map
+        - twitter
+        - youtube
+
+    # Widgets
+    widgets:
+      map:
+        default: '{"type": "Point", "coordinates": [2.3482818864606827, 48.85400956974931]}'

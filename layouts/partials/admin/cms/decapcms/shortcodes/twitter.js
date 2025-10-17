@@ -3,17 +3,17 @@ CMS.registerEditorComponent({
   label: '{{ i18n "admin.shortcodes.twitter.label" }}',
   fields: [
     {
-      name: 'user',
       label: '{{ i18n "admin.shortcodes.twitter.user" }}',
+      name: 'user',
       widget: 'string'
     },
     {
-      name: 'id',
       label: '{{ i18n "admin.shortcodes.twitter._id" }}',
+      name: 'id',
       widget: 'string'
     }
   ],
-  pattern: '{{`/{{< tweet (.*?) >}}/`}}',
+  pattern: /{{`{{< tweet user="(.*?)" id="(.*)" >}}` | safeHTML }}/,
   fromBlock: function (match) {
     return {
       user: match[1],
@@ -21,7 +21,9 @@ CMS.registerEditorComponent({
     };
   },
   toBlock: function (obj) {
-    return '{{`{{< tweet user="${obj.user}" id="${obj.id}" >}}`}}';
+    const user = obj.user || '';
+    const id = obj.id || '';
+    return '{{ `{{<` | safeHTML }} tweet user="' + user + '" id="' + id + '" {{ `>}}` | safeHTML }}';
   },
   toPreview: function (obj) {
     return '{{`{{< tweet user="${obj.user}" id="${obj.id}" >}}`}}';

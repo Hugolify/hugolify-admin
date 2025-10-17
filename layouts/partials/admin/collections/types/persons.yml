@@ -5,19 +5,12 @@
   label_singular: '{{ i18n "admin.collections.persons.label" 1 }}',
   description: '{{ i18n "admin.collections.persons._description" }}',
   
-  create: true,
+  create: {{ site.Params.admin.collections.persons.create | default true }},
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
 
   path: '{{`{{slug}}`}}',
   {{ partial "admin/collections/config/slug.yml" }}
 
-  {{ partial "admin/collections/config/icon.yml" "person" }}
-  {{ partial "admin/collections/config/filter.yml" }}
-  {{ partial "admin/collections/config/sortable.yml" "persons" }}
-  {{ partial "admin/collections/config/summary.yml" "persons" }}
-  {{ partial "admin/collections/config/view_filters.yml" "persons" }}
-  {{ partial "admin/collections/config/view_groups.yml" "persons" }}
-
-  {{ partial "admin/collections/fields.yml" (dict "collection" "persons") }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }
