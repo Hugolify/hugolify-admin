@@ -26,7 +26,12 @@
   label: '{{ i18n (print "admin.collections." $i18n ".label") }}',
   label_singular: '{{ i18n (print "admin.collections." $i18n ".label") 1 }}',
   hint: '{{ i18n (print "admin.collections." $i18n ".hint") }}',
+  {{- if eq site.Params.admin.cms "tinacms" }}
+  name: 'items_{{ $collection }}',
+  nameOverride: '{{ $name }}',
+  {{- else }}
   name: '{{ $name }}',
+  {{- end }}
   {{- if eq site.Params.admin.cms "pagescms" }}
   widget: 'reference',
   options: {

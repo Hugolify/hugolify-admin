@@ -1,5 +1,3 @@
-// Code here will be linted with JSHint.
-/* jshint ignore:start */
 {{- $collections := partialCached "admin/collections/index.yml" . -}}
 
 {{- $sliceCompatibity := slice 
@@ -7,6 +5,7 @@
   (dict "folder:" "path:") 
   (dict "widget: 'color'" "widget: 'string'") 
   (dict "widget: 'relation'" "widget: 'reference'") 
+  (dict "regex" true "collection: '([^']*)'" "collections: ['${1}']")
   (dict "widget: 'markdown'" "widget: 'rich-text'") 
   (dict "widget: 'text'" "widget: 'string', ui: { component: 'textarea' }") 
   (dict "widget: 'hidden'" "widget: 'boolean'") 
