@@ -68,6 +68,7 @@ params:
         icon:
           sveltiacms: settings
       indexes:
+        create: false
         enable: true
         filter:
           - field: isIndex

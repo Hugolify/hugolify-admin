@@ -2,7 +2,6 @@
 {{ if ne . "indexes" }}
 {{ partial "admin/collections/config/index_file.yml" . }}
 {{ end }}
-{{ partial "admin/collections/config/exclude.yml" . }}
 {{ partial "admin/collections/config/filter.yml" . }}
 {{ partial "admin/collections/config/sortable.yml" . }}
 {{ partial "admin/collections/config/summary.yml" . }}

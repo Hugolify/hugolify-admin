@@ -1,0 +1,1 @@
+editor: { preview: {{ site.Params.admin.preview | default false }} },

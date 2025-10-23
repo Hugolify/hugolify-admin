@@ -1,0 +1,10 @@
+{{- $custom_path := `{{slug}}/_index` -}}
+{{- if (index site.Params.admin.collections .) -}}
+  {{- with (index site.Params.admin.collections .).path -}}
+    {{- $custom_path = . }}
+  {{- end -}}
+{{- else -}}
+  {{- $custom_path = . }}
+{{- end -}}
+
+path: "{{$custom_path}}",

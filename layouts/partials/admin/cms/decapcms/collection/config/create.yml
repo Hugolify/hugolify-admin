@@ -1,0 +1,1 @@
+create: {{ (index site.Params.admin.collections .).create | default true }},
