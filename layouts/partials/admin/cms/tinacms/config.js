@@ -1,20 +1,18 @@
 {{- $collections := partialCached "admin/collections/index.yml" . -}}
 
 {{- $sliceCompatibity := slice 
-  (dict "regex" true "path: '[^']*'," "") 
   (dict "folder:" "path:") 
   (dict "widget: 'color'" "widget: 'string'") 
   (dict "widget: 'relation'" "widget: 'reference'") 
-  (dict "regex" true "collection: '([^']*)'" "collections: ['${1}']")
   (dict "widget: 'markdown'" "widget: 'rich-text'") 
   (dict "widget: 'text'" "widget: 'string', ui: { component: 'textarea' }") 
-  (dict "widget: 'hidden'" "widget: 'boolean'") 
+  (dict "widget: 'hidden'" "widget: 'boolean', ui: { component: 'hidden' }") 
   (dict "widget: 'select'" "widget: 'string', ui: { component: 'select' }") 
   (dict "name: 'pdf'" "name: 'pdf', media: { accept: 'application/pdf' }") 
   (dict "name: 'mp4'" "name: 'mp4', media: { accept: 'video/mp4' }") 
   (dict "name: 'webm'" "name: 'webm', media: { accept: 'video/webm' }") 
   (dict "widget: 'file'" "widget: 'image'") 
-  (dict "types:" "templatesKey: 'template', templates:") 
+  (dict "types:" "templateKey: 'type', templates:") 
   (dict "widget: 'list'" "widget: 'object', list: true") 
   (dict "widget:" "type:") 
   -}}
