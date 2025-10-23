@@ -4,13 +4,11 @@
   label: '{{ i18n "admin.collections.pages.label" }}',
   label_singular: '{{ i18n "admin.collections.pages.label" 1 }}',
   description: '{{ i18n "admin.collections.pages._description" }}',
-  
-  create: {{ site.Params.admin.collections.pages.create | default true }},
-  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
-
-  path: '{{`{{slug}}/_index`}}',
-  {{ partial "admin/collections/config/slug.yml" }}
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
+  {{ partial "admin/collections/config/path.yml" . }}
+  {{ partial "admin/collections/config/slug.yml" . }}
   
   {{ partial "admin/collections/types/_default.yml" . }}
 }
