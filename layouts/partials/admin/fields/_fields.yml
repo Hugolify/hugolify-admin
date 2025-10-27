@@ -1,5 +1,6 @@
 {{- if eq site.Params.admin.cms "cloudcannon" }}
 options: {
+  "subtype": "object",
   {{ partial "admin/cms/cloudcannon/inputs.yml" . }}
 },
 {{- else }}

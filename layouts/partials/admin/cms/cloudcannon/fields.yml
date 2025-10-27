@@ -16,9 +16,14 @@
 {{- with $fields }}
 
   {{- $sliceCompatibity := slice 
+    (dict "name:" "widget_name:") 
+    (dict "label:" "name:") 
+    (dict "label_singular:" "singular_name:") 
+    (dict "hint:" "comment:") 
     (dict "widget:" "type:") 
     (dict "boolean" "switch") 
     (dict "string" "text") 
+    (dict "list" "array") 
     -}}
 
   {{ $fields = partial "admin/cms/cloudcannon/inputs.yml" $fields }}

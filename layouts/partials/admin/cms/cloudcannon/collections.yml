@@ -23,6 +23,8 @@ collections_config: {
       {{ $newDatas.DeleteInMap "datas" "label" }}
       {{ $newDatas.SetInMap "datas" "singular_name" $datas.label_singular }}
       {{ $newDatas.DeleteInMap "datas" "label_singular" }}
+      {{ $newDatas.SetInMap "datas" "comment" $datas.description }}
+      {{ $newDatas.DeleteInMap "datas" "description" }}
       {{ $datas = $newDatas.Values.datas }}
 
       {{/* Add arguments */}}
