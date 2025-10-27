@@ -1,0 +1,12 @@
+{{- $custom_path := `{title|slugify}/_index.md` -}}
+{{- if (index site.Params.admin.collections .) -}}
+  {{- with (index site.Params.admin.collections .).path -}}
+    {{- $custom_path = . }}
+  {{- end -}}
+{{- else -}}
+  {{- $custom_path = . }}
+{{- end -}}
+
+create: {
+  path: "[relative_base_path]/{{$custom_path}}"
+},

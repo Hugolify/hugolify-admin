@@ -1,3 +1,9 @@
+{{- if eq site.Params.admin.cms "cloudcannon" }}
+options: {
+  {{ partial "admin/cms/cloudcannon/inputs.yml" . }}
+},
+{{- else }}
 fields: [
   {{ partial "admin/fields/_range-fields.yml" . }}
 ]
+{{- end }}

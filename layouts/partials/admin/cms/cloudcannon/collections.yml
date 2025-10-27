@@ -1,0 +1,37 @@
+collections_config: {
+  {{- range $collection, $value := site.Params.admin.collections }}
+    {{- if .enable }}
+
+      {{/* Get arguments */}}
+      {{- $file := print "admin/collections/types/" $collection ".yml" }}
+      {{- if templates.Exists ( printf "partials/%s" $file ) }}
+        {{- $file = partialCached $file $collection }}
+      {{- else }}
+        {{- $file = partial "admin/collections/types/_placeholder.yml" $collection }}
+      {{- end }}
+
+      {{/* Convert to map */}}
+      {{ $datas := partial "func/ConvertJSToJson.html" $file }}
+
+      {{/* Modify arguments */}}
+      {{ $newDatas := newScratch }}
+      {{ $newDatas.Set "datas" $datas  }}
+      {{ $newDatas.DeleteInMap "datas" "name" }}
+      {{ $newDatas.SetInMap "datas" "path" $datas.folder }}
+      {{ $newDatas.DeleteInMap "datas" "folder" }}
+      {{ $newDatas.SetInMap "datas" "name" $datas.label }}
+      {{ $newDatas.DeleteInMap "datas" "label" }}
+      {{ $newDatas.SetInMap "datas" "singular_name" $datas.label_singular }}
+      {{ $newDatas.DeleteInMap "datas" "label_singular" }}
+      {{ $datas = $newDatas.Values.datas }}
+
+      {{/* Add arguments */}}
+      {{ $archetype := print "archetypes/" $collection ".md" }}
+      {{ $fields := partial "admin/cms/cloudcannon/fields.yml" $collection }}
+      {{ $datas = merge $datas (dict "schemas" (dict "default" (dict "path" $archetype))) }}
+
+      {{ $collection }}: {{ transform.Remarshal "json" $datas }},
+
+    {{- end }}
+  {{- end }}
+}

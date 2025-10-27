@@ -66,6 +66,7 @@ params:
       config:
         enable: true
         icon:
+          cloudcannon: settings
           sveltiacms: settings
       indexes:
         create: false
@@ -74,12 +75,14 @@ params:
           - field: isIndex
             value: true
         icon:
+          cloudcannon: schema
           sveltiacms: schema
         nested:
           depth: 2
       pages:
         enable: true
         icon:
+          cloudcannon: description
           sveltiacms: description
         filter:
           - field: isPage

@@ -1,0 +1,12 @@
+# Config
+collections_config_override: false
+paths:
+  static: static
+  uploads: {{ site.Params.admin.media.public_folder | default "static/images/uploads" }}
+
+# Snippets
+_snippets_imports:
+  hugo: true
+
+# Collections
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collections.yml" .) }}

@@ -1,0 +1,34 @@
+{{- $collection := . }}
+{{- $fields := false }}
+
+{{- with (index site.Params.admin.collections $collection).fields }}
+  {{- $fields = slice }}
+  {{- range . }}
+    {{- $fields = $fields | append . }}
+  {{- end }}
+{{- else }}
+  {{- $fields_file := print "admin/collections/fields/" $collection ".fields.default.html" }}
+  {{- if templates.Exists ( printf "partials/%s" $fields_file ) }}
+    {{- $fields = partialCached $fields_file . }}
+  {{- end }}
+{{- end }}
+
+{{- with $fields }}
+
+  {{- $sliceCompatibity := slice 
+    (dict "widget:" "type:") 
+    (dict "boolean" "switch") 
+    (dict "string" "text") 
+    -}}
+
+  {{ $fields = partial "admin/cms/cloudcannon/inputs.yml" $fields }}
+
+  {{- range $sliceCompatibity }}
+    {{- range $key, $value := . }}
+      {{- $fields = replaceRE $key $value $fields -}}
+    {{- end -}}
+  {{- end }}
+
+{{- end }}
+
+{{ return $fields }}

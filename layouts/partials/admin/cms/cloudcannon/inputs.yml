@@ -1,0 +1,14 @@
+{{- with . }}
+_inputs: {
+  {{- range . }}
+    {{- $file := print "admin/fields/" . ".yml" }}
+    {{- if templates.Exists ( printf "partials/%s" $file ) }}
+      {{- $field := partialCached $file . }}
+      {{- $datas := partial "func/ConvertJSToJson.html" $field }}
+      {{ if ne . "body" }}
+      "{{ $datas.name }}": {{ $field }},
+      {{ end }}
+    {{- end }}
+  {{- end }}
+},
+{{- end }}

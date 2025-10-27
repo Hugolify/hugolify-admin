@@ -1,3 +1,10 @@
+{{- $file := print "admin/cms/" site.Params.admin.cms "/fields.yml" }}
+{{- if templates.Exists ( printf "partials/%s" $file ) }}
+
+  {{ partial $file .collection -}}
+
+{{- else }}
+
 fields: [
   {{- $collection := .collection | default "posts" -}}
   {{- range (index site.Params.admin.collections $collection).fields }}
@@ -24,3 +31,4 @@ fields: [
     {{ partial "admin/fields/_range-fields.yml" $fields }}
   {{ end -}}
 ],
+{{- end }}
