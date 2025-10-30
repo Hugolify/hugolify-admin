@@ -507,6 +507,8 @@ admin:
     icon:
       hint: Kuvakkeen nimi osoitteesta https://icons.getbootstrap.com/
       label: Kuvake
+    id:
+      label: ID
     image:
       alt:
         hint: Tietoa välittävän kuvan osalta (jätä tyhjäksi, jos kyseessä on koristeellinen kuva).

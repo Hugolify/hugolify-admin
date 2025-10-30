@@ -509,6 +509,8 @@ admin:
     icon:
       hint: Icon name from https://icons.getbootstrap.com/
       label: Icon
+    id:
+      label: ID
     image:
       label: 
         one: Image
