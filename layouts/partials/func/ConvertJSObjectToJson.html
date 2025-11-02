@@ -1,0 +1,28 @@
+{{/* 
+  Trim and clean up a "map-like" text (e.g. Hugo map[...] syntax),
+  turning it into valid JSON so it can be unmarshaled into a real map.
+*/}}
+
+{{/* Remove any leading or trailing whitespace from the input string */}}
+{{ $file := . | strings.TrimSpace }}
+
+{{/* Replace single quotes with double quotes (JSON requires double quotes) */}}
+{{ $file = replace $file `'` `"` }}
+
+{{/* 
+  Use a regular expression to wrap all bare keys with double quotes.
+  Example:  name: value  →  "name": value
+  The pattern handles keys after commas or opening braces.
+*/}}
+{{ $file = replaceRE `(?m)(^|,|\{)\s*([A-Za-z_][A-Za-z0-9_]*)\s*:` `${1}"${2}":` $file }}
+
+{{/* Remove trailing commas before closing braces or brackets.
+     Example: {"a":1,} → {"a":1}
+*/}}
+{{ $file = replaceRE `,\s*([}\]])` `$1` $file }}
+
+{{/* Remove a final trailing comma at the end of the file, if any. */}}
+{{ $file = replaceRE `,\s*$` `` $file }}
+
+{{/* Convert the cleaned JSON string into a Hugo map/object using transform.Unmarshal */}}
+{{ return ($file | transform.Unmarshal) }}

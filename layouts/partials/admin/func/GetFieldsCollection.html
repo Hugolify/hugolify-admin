@@ -1,0 +1,16 @@
+{{ $collection := . }}
+{{ $fields := false }}
+
+{{ with (index site.Params.admin.collections $collection).fields }}
+  {{ $fields = slice }}
+  {{ range . }}
+    {{ $fields = $fields | append . }}
+  {{ end }}
+{{ else }}
+  {{ $fields_file := print "admin/collections/fields/" $collection ".fields.default.html" }}
+  {{ if templates.Exists ( printf "partials/%s" $fields_file ) }}
+    {{ $fields = partialCached $fields_file . }}
+  {{ end }}
+{{ end }}
+
+{{ return $fields }}

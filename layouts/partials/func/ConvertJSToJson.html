@@ -1,7 +1,0 @@
-{{ $file := . | strings.TrimSpace }}
-{{ $file = replace $file `'` `"` }}
-{{ $file = replaceRE `(?m)(^|,|\{)\s*([A-Za-z_][A-Za-z0-9_]*)\s*:` `${1}"${2}":` $file }}
-{{ $file = replaceRE `,\s*([}\]])` `$1` $file }}
-{{ $file = replaceRE `,\s*$` `` $file }}
-
-{{ return ($file | transform.Unmarshal) }}
