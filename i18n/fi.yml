@@ -25,7 +25,9 @@ admin:
     gallery:
       label: Galleria
     images:
-      label: Kuvat
+      label:
+        one: Kuva
+        other: Kuvat
     informations:
       label: Tiedot
     instagram:
