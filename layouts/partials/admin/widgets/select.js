@@ -4,7 +4,7 @@
   - label (string) required
   - hint (string)
   - name (string) required
-  - options (array) required
+  - options (array or object) required
   - multiple (boolean)
   - default (string)
   - required (boolean)
@@ -34,10 +34,14 @@
   options: {
     {{ with $options }}
     values: [
-      {{- range . }}
-      {{- $value := cond (eq (printf "%T" .) "string") (print "'" . "'") . -}}
+    {{- range $k, $v := . }}
+      {{- $name := $k -}}
+      {{- if eq (printf "%T" $k) "int" }}
+        {{- $name = $v -}}
+      {{- end }}
+      {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . -}}
       { 
-        name: '{{ i18n (print "admin.fields." $i18n ".options." (replace . "-" "_")) | default (humanize .) }}', 
+        name: '{{ i18n (print "admin.fields." $i18n ".options." (replace $name "-" "_")) | default (humanize $name) }}', 
         value: {{ $value }} 
       },
       {{- end }}
@@ -64,10 +68,14 @@
     {{ end }}
     {{ with $options }}
     values: [
-      {{- range . }}
-      {{- $value := cond (eq (printf "%T" .) "string") (print "'" . "'") . -}}
+    {{- range $k, $v := . }}
+      {{- $name := $k -}}
+      {{- if eq (printf "%T" $k) "int" }}
+        {{- $name = $v -}}
+      {{- end }}
+      {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . -}}
       { 
-        label: '{{ i18n (print "admin.fields." $i18n ".options." (replace . "-" "_")) | default (humanize .) }}', 
+        label: '{{ i18n (print "admin.fields." $i18n ".options." (replace $name "-" "_")) | default (humanize $name) }}', 
         value: {{ $value }} 
       },
       {{- end }}
@@ -92,13 +100,17 @@
   widget: 'select',
   {{ with $options }}
   options: [
-    {{ range . }}
-    {{- $value := cond (eq (printf "%T" .) "string") (print "'" . "'") . -}}
+  {{- range $k, $v := . }}
+    {{- $name := $k -}}
+    {{- if eq (printf "%T" $k) "int" }}
+      {{- $name = $v -}}
+    {{- end }}
+    {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . -}}
     { 
-      label: '{{ i18n (print "admin.fields." $i18n ".options." (replace . "-" "_")) | default (humanize .) }}', 
+      label: '{{ i18n (print "admin.fields." $i18n ".options." (replace $name "-" "_")) | default (humanize $name) }}', 
       value: {{ $value }} 
     },
-    {{ end }}
+  {{ end }}
   ],
   {{ end }}
   {{ with $multiple }}
