@@ -1,0 +1,12 @@
+{{- $pin := cond (or (eq site.Params.admin.cms "decapcms") (eq site.Params.admin.cms "sveltiacms")) "location" "coordinates" -}}
+{{- $fields := slice 
+  "heading" 
+  "show_places" 
+  $pin 
+  "zoom" 
+  "grid" 
+  "background" -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
+
+{{- return $fields -}}

@@ -1,0 +1,23 @@
+{{- $block := . -}}
+{{- $index := 0 -}}
+{{- range $collection, $value := site.Params.admin.collections -}}
+{{- if and .enable (ne $collection "config") (ne $collection "indexes") -}}
+
+{{- $fields := partial "admin/block/fields/selected.html" $collection -}}
+{{- $name := i18n (print "admin.collections." $collection ".label") | default (humanize $collection) -}} 
+
+{{ if gt $index 0 }},{{ end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.blocks.selected.label" (dict "section" $name))
+  "name" "selected-{{ $collection }}"
+  "collapsed" false
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}
+
+{{- $index = add $index 1 -}}
+
+{{- end -}}
+{{- end -}}

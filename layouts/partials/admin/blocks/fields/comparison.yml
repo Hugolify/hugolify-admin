@@ -1,0 +1,10 @@
+{{- $items := dict "items" (slice "title" "text" "badge" "offer" "arguments" "is_highlighted" "cta") -}} 
+{{- $fields := slice 
+  "heading" 
+  "column" 
+  $items 
+  "background" -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
+
+{{- return $fields -}}

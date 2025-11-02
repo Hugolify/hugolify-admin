@@ -1,0 +1,10 @@
+{{- $fields = partial "admin/block/fields/timeline.html" . -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.blocks.timeline.label")
+  "name" "timeline"
+  "collapsed" false
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

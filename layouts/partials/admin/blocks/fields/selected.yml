@@ -1,0 +1,17 @@
+{{- $collection := . -}}
+{{- $block := print "selected-" . -}}
+
+{{- $section := dict "section-hidden" $collection  -}} 
+{{- $relation := dict "relation" (dict "collection" $collection "name" "items" "multiple" true "required" true) -}} 
+{{- $layout := dict "layout" (slice "grid" "list") -}} 
+{{- $fields := slice 
+  "heading"
+  $section 
+  $relation 
+  $layout
+  "show_more"
+  "background" -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" $block "fields" $fields) -}}
+
+{{- return $fields -}}

@@ -1,0 +1,9 @@
+{{- $items := dict "items" (slice "summary" "text_markdown" "name" "title" "is_open") -}} 
+{{- $fields := slice 
+  "heading" 
+  $items
+  "background" -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
+
+{{- return $fields -}}

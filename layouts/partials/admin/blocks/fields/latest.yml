@@ -1,0 +1,12 @@
+{{- $layout := dict "layout" (slice "grid" "list") -}} 
+{{- $fields := slice 
+  "heading" 
+  "section"
+  $layout  
+  "count" 
+  "show_more" 
+  "background" -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
+
+{{- return $fields -}}

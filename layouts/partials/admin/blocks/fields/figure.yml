@@ -1,0 +1,10 @@
+{{- $fields := slice 
+  "heading" 
+  "figure" 
+  "grid" 
+  "offset" 
+  "background" -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
+
+{{- return $fields -}}
