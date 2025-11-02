@@ -3,15 +3,15 @@ collections_config: {
     {{- if .enable }}
 
       {{/* Get arguments */}}
-      {{- $file := print "admin/collections/types/" $collection ".yml" }}
-      {{- if templates.Exists ( printf "partials/%s" $file ) }}
-        {{- $file = partialCached $file $collection }}
-      {{- else }}
-        {{- $file = partial "admin/collections/types/_placeholder.yml" $collection }}
-      {{- end }}
+      {{ $file := print "admin/collections/types/" $collection ".yml" }}
+      {{ if templates.Exists ( printf "partials/%s" $file ) }}
+        {{ $file = partial $file $collection }}
+      {{ else }}
+        {{ $file = partial "admin/collections/types/_placeholder.yml" $collection }}
+      {{ end }}
 
       {{/* Convert to map */}}
-      {{ $datas := partial "func/ConvertJSToJson.html" $file }}
+      {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
 
       {{/* Modify arguments */}}
       {{ $newDatas := newScratch }}
@@ -29,10 +29,9 @@ collections_config: {
 
       {{/* Add arguments */}}
       {{ $archetype := print "archetypes/" $collection ".md" }}
-      {{ $fields := partial "admin/cms/cloudcannon/fields.yml" $collection }}
       {{ $datas = merge $datas (dict "schemas" (dict "default" (dict "path" $archetype))) }}
 
-      {{ $collection }}: {{ transform.Remarshal "json" $datas }},
+      {{ $collection }}: {{ $datas | jsonify }},
 
     {{- end }}
   {{- end }}

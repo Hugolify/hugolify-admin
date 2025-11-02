@@ -6,6 +6,8 @@
 {{- else -}}
   {{- $custom_path = . }}
 {{- end -}}
+{{- $custom_path = replace $custom_path "{{" "{" }}
+{{- $custom_path = replace $custom_path "}}" "}" }}
 
 create: {
   path: "[relative_base_path]/{{$custom_path}}"

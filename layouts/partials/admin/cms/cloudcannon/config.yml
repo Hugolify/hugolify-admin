@@ -9,4 +9,8 @@ _snippets_imports:
   hugo: true
 
 # Collections
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collections.yml" .) }}
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/index.html" .) }}
+
+# Blocks
+_structures:
+{{ partial "admin/cms/cloudcannon/fields/blocks.yml" . }}
