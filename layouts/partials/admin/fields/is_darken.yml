@@ -1,7 +1,6 @@
-{
-  label: '{{ i18n "admin.fields.is_darken.label" }}',
-  name: 'darken',
-  widget: 'boolean',
-  required: false,
-  i18n: 'duplicate' 
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_darken.label")
+  "name" "darken"
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

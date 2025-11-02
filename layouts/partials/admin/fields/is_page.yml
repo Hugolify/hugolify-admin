@@ -1,8 +1,8 @@
-{
-  label: 'is page',
-  name: 'isPage',
-  widget: 'hidden',
-  default: true,
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" "is page"
+  "name" "isPage"
+  "default" true
+  "hidden" true
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

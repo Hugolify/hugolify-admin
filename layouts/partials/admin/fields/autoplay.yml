@@ -1,8 +1,8 @@
-{
-  label: '{{ i18n "admin.fields.autoplay.label" }}',
-  name: 'autoplay',
-  widget: 'boolean',
-  default: false,
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.autoplay.label")
+  "name" "autoplay"
+  "default" false
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

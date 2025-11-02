@@ -1,0 +1,7 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_informations.exposure.label")
+  "name" "exposure"
+  -}}
+
+{{ partial "admin/widgets/string.yml" $args }}
+

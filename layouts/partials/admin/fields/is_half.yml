@@ -1,7 +1,6 @@
-{
-  label: '{{ i18n "admin.fields.is_half.label" }}',
-  name: 'half',
-  widget: 'boolean',
-  required: false,
-  i18n: 'duplicate' 
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_half.label")
+  "name" "half"
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

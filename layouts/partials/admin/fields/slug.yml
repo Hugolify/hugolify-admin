@@ -2,12 +2,12 @@
 {{ $regex := "^(|[a-z0-9-]+)$" }}
 {{ $message := i18n "admin.fields.slug.pattern" }}
 {{ $pattern := dict "regex" $regex "message" $message }}
-{
-  label: '{{ i18n "admin.fields.slug.label" }}',
-  hint: '{{ i18n "admin.fields.slug.hint" }}',
-  name: 'slug',
-  widget: 'string',
-  required: false,
-  i18n: true,
-  {{ partial "admin/func/get_pattern.html" $pattern }}
-}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.slug.label")
+  "hint" (i18n "admin.fields.slug.hint")
+  "name" "slug"
+  "pattern" $pattern
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

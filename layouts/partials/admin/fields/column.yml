@@ -1,10 +1,12 @@
-{
-  label: '{{ i18n "admin.fields.column.label" }}',
-  name: 'column',
-  widget: 'number',
-  min: 1,
-  max: 6,
-  value_type: 'int',
-  default: 3,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.column.label")
+  "name" "column"
+  "default" 3
+  "min" 1
+  "max" 6
+  "step" 1
+  "i18n" "duplicate"
+  "range" true
+  -}}
+
+{{ partial "admin/widgets/number.yml" $args }}

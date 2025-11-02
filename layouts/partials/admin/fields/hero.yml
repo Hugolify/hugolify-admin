@@ -8,13 +8,12 @@
   $image 
   $video 
   "align" -}}
-{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
-{
-  label: '{{ i18n "admin.fields.hero.label" }}',
-  name: 'hero',
-  widget: 'object',
-  required: false,
-  collapsed: true,
-  i18n: true,
-  {{ partial "admin/fields/_fields.yml" $fields }}
-}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.hero.label")
+  "name" "hero"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.yml" $args }}

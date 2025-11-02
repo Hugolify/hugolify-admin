@@ -1,11 +1,14 @@
-{
-  label: '{{ i18n "admin.fields.title_page.label" }}',
-  hint: '{{ i18n "admin.fields.title_page.hint" }}',
-  name: 'title',
-  widget: 'string',
-  required: true,
-  i18n: true, 
-  {{- if eq site.Params.admin.cms "tinacms" }}
-  isTitle: true
-  {{ end }}
-}
+{{- $name := dict "name" "title" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "title_page" "nameOverride" "title" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.title_page.label")
+  "hint" (i18n "admin.fields.title_page.hint")
+  "required" true
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/string.js" $args }}

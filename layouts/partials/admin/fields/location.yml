@@ -1,10 +1,10 @@
-{
-  label: '{{ i18n "admin.fields.location.label" }}',
-  name: 'location',
-  widget: 'map',
-  {{- with site.Params.admin.widgets.map.default }}
-  default: '{{ . }}',
-  {{- end }}
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.location.label")
+  "name" "location"
+  -}}
+
+{{- with site.Params.admin.widgets.map.default }}
+  {{ $args = $args | append (dict "default" .) }}
+{{- end }}
+
+{{ partial "admin/widgets/map.js" $args }}

@@ -1,1 +1,9 @@
-{{- partial "admin/fields/select.yml" (dict "field" "offset" "options" (slice "start" "center" "end")) }}
+{{- $options := slice "start" "center" "end" }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.offset.label")
+  "name" "offset"
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.yml" $args }}

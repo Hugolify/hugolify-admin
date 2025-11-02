@@ -1,0 +1,6 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.coordinates.lng.label")
+  "name" "lng"
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

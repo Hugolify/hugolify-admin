@@ -1,8 +1,7 @@
-{
-  label: '{{ i18n "admin.fields.socials.twitter.label" }}',
-  hint: '{{ i18n "admin.fields.socials.twitter.hint" }}',
-  name: 'twitter',
-  widget: 'string',
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.socials.twitter.label")
+  "hint" (i18n "admin.fields.socials.twitter.hint")
+  "name" "twitter"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

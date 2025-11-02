@@ -1,7 +1,7 @@
-{
-  label: '{{ i18n "admin.fields.reference.label" }}',
-  name: 'reference',
-  widget: 'string',
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.reference.label")
+  "name" "reference"
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

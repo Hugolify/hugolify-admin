@@ -1,12 +1,8 @@
-{
-  label: '{{ i18n "admin.fields.value.label" }}',
-  {{- if eq site.Params.admin.cms "tinacms" }}
-  name: 'value_number',
-  nameOverride: 'value',
-  {{- else }}
-  name: 'value }}',
-  {{- end }}
-  widget: 'number',
-  required: false,
-  i18n: true 
-}
+{{- $name := dict "name" "value" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "value_number" "nameOverride" "value" }}
+{{- end }}
+
+{{- $args := merge (dict "label" (i18n "admin.fields.value.label")) $name }}
+
+{{ partial "admin/widgets/number.js" $args }}

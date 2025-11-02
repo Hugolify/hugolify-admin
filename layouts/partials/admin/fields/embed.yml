@@ -1,7 +1,6 @@
-{
-  label: '{{ i18n "admin.fields.embed.label" }}',
-  name: 'embed',
-  widget: 'text',
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.embed.label")
+  "name" "embed"
+  -}}
+
+{{ partial "admin/widgets/text.js" $args }}

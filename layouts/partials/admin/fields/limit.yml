@@ -1,9 +1,9 @@
-{
-  label: '{{ i18n "admin.fields.limit.label" }}',
-  hint: '{{ i18n "admin.fields.limit.hint" }}',
-  name: 'limit',
-  widget: 'number',
-  required: true,
-  default: 100,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.limit.label")
+  "hint" (i18n "admin.fields.limit.hint")
+  "name" "limit"
+  "default" 100
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/number.yml" $args }}

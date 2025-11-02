@@ -1,9 +1,8 @@
-{
-  label: '{{ i18n "admin.fields.chart.data.label" }}',
-  hint: '{{ i18n "admin.fields.chart.data.hint" }}',
-  name: 'data',
-  widget: 'code',
-  default_language: 'JSON',
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.chart.data.label")
+  "hint" (i18n "admin.fields.chart.data.hint")
+  "name" "data"
+  "language" "JSON"
+  -}}
+
+{{ partial "admin/widgets/code.js" $args }}

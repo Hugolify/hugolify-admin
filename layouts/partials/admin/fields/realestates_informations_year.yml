@@ -1,0 +1,12 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_informations.year.label")
+  "hint" "1930"
+  "name" "year"
+  "i18n" "duplicate"
+  "min" 1800
+  "max" 2100
+  "step" 1
+  -}}
+
+{{ partial "admin/widgets/number.yml" $args }}
+

@@ -1,0 +1,7 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.carousel.pagination.label")
+  "name" "pagination"
+  "default" false
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

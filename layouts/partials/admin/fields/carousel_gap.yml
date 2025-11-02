@@ -1,0 +1,8 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.carousel.gap.label")
+  "hint" (i18n "admin.fields.carousel.gap.hint")
+  "name" "gap"
+  "min" 0
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

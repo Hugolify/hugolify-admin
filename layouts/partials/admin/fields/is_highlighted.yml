@@ -1,7 +1,6 @@
-{
-  label: '{{ i18n "admin.fields.is_highlighted.label" }}',
-  name: 'is_highlighted',
-  widget: 'boolean',
-  required: false,
-  i18n: true
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_highlighted.label")
+  "name" "is_highlighted"
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

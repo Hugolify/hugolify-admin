@@ -1,7 +1,7 @@
-{
-  label: '{{ i18n "admin.fields.date.to" }}',
-  name: 'date_to',
-  widget: 'datetime',
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.date.to")
+  "name" "date_to"
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/datetime.yml" $args }}

@@ -1,7 +1,6 @@
-{
-  label: '{{ i18n "admin.fields.subtitle.label" }}',
-  name: 'subtitle',
-  widget: 'string',
-  required: false,
-  i18n: true 
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.subtitle.label")
+  "name" "subtitle"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

@@ -1,7 +1,7 @@
-{
-  label: '{{ i18n "admin.fields.code.label" }}',
-  name: 'code',
-  widget: 'code',
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.code.label")
+  "name" "code"
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/code.js" $args }}

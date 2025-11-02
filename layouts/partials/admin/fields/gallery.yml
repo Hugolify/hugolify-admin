@@ -5,13 +5,12 @@
   "image_alt" 
   "credit" 
   "legend" -}}
-{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
-{
-  label: '{{ i18n "admin.fields.gallery.label" }}',
-  name: 'gallery',
-  widget: 'list',
-  required: false,
-  i18n: true,
-  collapsed: true,
-  {{ partial "admin/fields/_fields.yml" $fields }}
-}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.gallery.label")
+  "name" "gallery"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/list.js" $args }}

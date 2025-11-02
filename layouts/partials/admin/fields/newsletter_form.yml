@@ -1,13 +1,12 @@
 {{- $fields := slice 
   "url" 
   "form_hiddens" -}}
-{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
-{
-  label: '{{ i18n "admin.fields.newsletter.form.label" }}',
-  name: 'form',
-  widget: 'object',
-  required: true,
-  i18n: true,
-  collapsed: false,
-  {{ partial "admin/fields/_fields.yml" $fields }}
-}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.form.label")
+  "name" "form"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.yml" $args }}

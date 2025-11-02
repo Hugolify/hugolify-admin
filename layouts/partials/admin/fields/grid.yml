@@ -1,1 +1,11 @@
-{{- partial "admin/fields/select.yml" (dict "field" "grid" "options" (slice "small" "medium" "large" "container" "full") "default" "large" "required" true) }}
+{{- $options := slice "small" "medium" "large" "container" "full" }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.grid.label")
+  "name" "grid"
+  "default" "large"
+  "required" true
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

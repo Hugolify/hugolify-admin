@@ -1,12 +1,13 @@
 {{- $fields := slice 
   "title" 
   "pdf" -}}
-{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
-{
-  label: '{{ i18n "admin.fields.document.label" }}',
-  label_singular: '{{ i18n "admin.fields.document.label" 1 }}',
-  name: 'documents',
-  widget: 'list',
-  i18n: true,
-  {{ partial "admin/fields/_fields.yml" $fields }}
-}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.document.label" 2)
+  "label_singular" (i18n "admin.fields.document.label" 1)
+  "name" "documents"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/list.js" $args }}

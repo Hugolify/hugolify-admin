@@ -1,0 +1,7 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.carousel.arrows.label")
+  "name" "arrows"
+  "default" true
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

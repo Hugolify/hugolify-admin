@@ -1,0 +1,6 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_informations.has_balcony.label")
+  "name" "has_balcony"
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

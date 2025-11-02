@@ -1,0 +1,9 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.diagnostic.ghg.label")
+  "hint" (i18n "admin.fields.diagnostic.ghg.hint")
+  "name" "co2"
+  "i18n" "duplicate"
+  "min" 0
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

@@ -1,8 +1,7 @@
-{
-  label: '{{ i18n "admin.fields.phone.label" }}',
-  hint: '{{ i18n "admin.fields.phone.hint" }}',
-  name: 'phone',
-  widget: 'string',
-  required: false,
-  i18n: 'duplicate',
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.phone.label")
+  "hint" (i18n "admin.fields.phone.hint")
+  "name" "phone"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

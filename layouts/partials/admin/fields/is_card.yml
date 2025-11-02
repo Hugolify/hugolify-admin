@@ -1,8 +1,7 @@
-{
-  label: '{{ i18n "admin.fields.is_card.label" }}',
-  hint: '{{ i18n "admin.fields.is_card.hint" }}',
-  name: 'card',
-  widget: 'boolean',
-  required: false,
-  i18n: 'duplicate' 
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_card.label")
+  "hint" (i18n "admin.fields.is_card.hint")
+  "name" "card"
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

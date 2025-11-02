@@ -1,0 +1,6 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.diagnostic.in_progress")
+  "name" "in_progress"
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

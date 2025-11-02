@@ -1,13 +1,12 @@
-{
-  label: '{{ i18n "admin.fields.realestates_energies.label" }}',
-  name: 'energies',
-  widget: 'object',
-  required: false,
-  i18n: true,
-  collapsed: true,
-  fields:
-    [
-      {{- partial "admin/fields/select.yml" (dict "field" "realestates_energies.heating" "options" (slice "collective" "individual")) }},
-      {{- partial "admin/fields/select.yml" (dict "field" "realestates_energies.heating_type" "options" (slice "reversible_ac" "electric" "gas" "solar")) }}
-    ]
-}
+{{- $fields := slice 
+  "realestates_energies_heating_type" 
+  "realestates_energies_heating"  -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.energies.label")
+  "name" "energies"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.yml" $args }}

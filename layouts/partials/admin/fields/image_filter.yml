@@ -1,1 +1,10 @@
-{{- partial "admin/fields/select.yml" (dict "field" "filter" "i18n" "image.filter" "options" (slice "Box" "Lanczos" "CatmullRom" "Linear")) }}
+{{- $options := slice "Box" "Lanczos" "CatmullRom" "Linear" -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.image.filter.label")
+  "hint" (i18n "admin.fields.image.filter.hint")
+  "name" "filter"
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

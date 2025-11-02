@@ -1,0 +1,10 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_informations.rooms.label")
+  "name" "rooms"
+  "i18n" "duplicate"
+  "min" 0
+  "step" 1
+  -}}
+
+{{ partial "admin/widgets/number.yml" $args }}
+

@@ -1,5 +1,12 @@
-{{- $layout := . -}}
-{{- if not (reflect.IsSlice $layout) -}}
-  {{- $layout = slice "grid" -}}
+{{- $options := . -}}
+{{- if not (reflect.IsSlice $options) -}}
+  {{- $options = slice "grid" -}}
 {{- end -}}
-{{- partial "admin/fields/select.yml" (dict "field" "layout" "options" $layout) }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.layout.label")
+  "name" "layout"
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.yml" $args }}
