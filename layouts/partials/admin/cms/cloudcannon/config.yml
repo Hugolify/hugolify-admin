@@ -13,4 +13,4 @@ _snippets_imports:
 
 # Blocks
 _structures:
-{{ partial "admin/cms/cloudcannon/fields/blocks.yml" . }}
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/fields/blocks.js" .) }}

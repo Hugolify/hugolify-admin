@@ -1,11 +1,10 @@
-{
-  label: '{{ i18n "admin.fields.quote.label" }}',
-  name: 'quote',
-  widget: 'markdown',
-  minimal: true,
-  buttons: ['bold', 'italic', 'link'],
-  editor_components: [],
-  modes: ['rich_text'],
-  required: false,
-  i18n: true
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.quote.label")
+  "name" "quote"
+  "minimal" true
+  "buttons" "['bold', 'italic', 'link']"
+  "modes" "['rich_text']"
+  "editor_components" "[]"
+  -}}
+
+{{ partial "admin/widgets/markdown.js" $args }}

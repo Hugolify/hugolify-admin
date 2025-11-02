@@ -1,11 +1,16 @@
-{
-  label: '{{ i18n "admin.fields.title.label" }}',
-  name: 'title',
-  widget: 'markdown',
-  minimal: true,
-  buttons: ['bold', 'italic'],
-  editor_components: [],
-  modes: ['rich_text'],
-  required: false,
-  i18n: true 
-}
+{{- $name := dict "name" "title" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "title_markdown" "nameOverride" "title" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.title.label")
+  "minimal" true
+  "buttons" "['bold', 'italic']"
+  "modes" "['rich_text']"
+  "editor_components" "[]"
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/markdown.js" $args }}

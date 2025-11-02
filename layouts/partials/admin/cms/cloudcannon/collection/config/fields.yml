@@ -1,4 +1,4 @@
 {{ $fields := partial "admin/func/GetFieldsCollection.html" . }}
 {{ with $fields }}
-  {{ partial "admin/cms/cloudcannon/inputs.html" $fields }}
+  {{ partial "admin/cms/cloudcannon/inputs.js" $fields }}
 {{ end }}

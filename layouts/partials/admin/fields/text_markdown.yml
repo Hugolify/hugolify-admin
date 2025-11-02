@@ -1,16 +1,16 @@
-{
-  label: '{{ i18n "admin.fields.text.label" }}',
-  {{- if eq site.Params.admin.cms "tinacms" }}
-  name: 'text_markdown',
-  nameOverride: 'text',
-  {{- else }}
-  name: 'text }}',
-  {{- end }}
-  widget: 'markdown',
-  minimal: true,
-  buttons: ['bold', 'italic', 'link', 'bulleted-list'],
-  editor_components: [],
-  modes: ['rich_text'],
-  required: false,
-  i18n: true 
-}
+{{- $name := dict "name" "text" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "text_markdown" "nameOverride" "text" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.text.label")
+  "minimal" true
+  "buttons" "['bold', 'italic', 'link', 'bulleted-list']"
+  "modes" "['rich_text']"
+  "editor_components" "[]"
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/markdown.js" $args }}
