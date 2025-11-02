@@ -8,5 +8,5 @@
 {{ partial "admin/collections/config/view.yml" . }}
 {{ partial "admin/collections/config/view_filters.yml" . }}
 {{ partial "admin/collections/config/view_groups.yml" . }}
-{{ partial "admin/collections/fields.yml" (dict "collection" .) }}
+{{ partial "admin/collections/config/fields.yml" (dict "collection" .) }}
 {{ partial "admin/collections/config/nested.yml" . }}

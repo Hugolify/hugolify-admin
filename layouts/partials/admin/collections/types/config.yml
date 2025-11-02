@@ -1,4 +1,4 @@
-{{- $files := partial "admin/collections/files.yml" (dict "collection" "config") -}}
+{{- $files := partial "admin/collections/config/files.yml" (dict "collection" "config") -}}
 {{- if eq site.Params.admin.cms "pagescms" }}
   {{- $files = substr $files 0 -2 -}}
   {{- $files = replaceRE "]},\\s*$" "]}" $files -}}
