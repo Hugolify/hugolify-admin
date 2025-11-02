@@ -1,0 +1,9 @@
+{{- $options := slice "slide" "loop" "fade" }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.carousel.type.label")
+  "name" "type"
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

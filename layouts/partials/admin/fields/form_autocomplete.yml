@@ -1,7 +1,4 @@
-{{- partial "admin/fields/select.yml" (dict 
-  "field" "autocomplete" 
-  "i18n" "form.autocomplete" 
-  "options" (slice 
+{{- $options := slice 
     "email" 
     "tel" 
     "honorific-prefix" 
@@ -13,5 +10,12 @@
     "address-level2" 
     "postal-code" 
     "country-name" 
-    "organization")
-  "required" false) }}
+    "organization" -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.form.autocomplete.label")
+  "name" "autocomplete"
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

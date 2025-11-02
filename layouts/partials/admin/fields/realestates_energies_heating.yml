@@ -1,0 +1,9 @@
+{{- $options := slice "collective" "individual" }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_energies.heating.label")
+  "name" "heating"
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

@@ -1,5 +1,4 @@
-{{- partial "admin/fields/select.yml" (dict "field" "plateform" "i18n" "socials.plateform" "options" (slice 
-  "facebook" 
+{{- $options := slice "facebook" 
   "github" 
   "google" 
   "instagram" 
@@ -10,4 +9,13 @@
   "twitch" 
   "twitter" 
   "vimeo" 
-  "youtube") "required" true) }}
+  "youtube" }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.socials.plateform.label")
+  "name" "plateform"
+  "required" true
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

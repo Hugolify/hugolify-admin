@@ -1,14 +1,13 @@
 {{- $fields := slice 
   "socials_plateform" 
   "url" -}}
-{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
-{
-  label: '{{ i18n "admin.fields.socials.label" 2 }}',
-  label_singular: '{{ i18n "admin.fields.socials.label" 1 }}',
-  name: 'socials',
-  widget: 'list',
-  required: false,
-  i18n: true,
-  collapsed: true,
-  {{ partial "admin/fields/_fields.yml" $fields }}
-}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.socials.label" 2)
+  "label_singular" (i18n "admin.fields.socials.label" 1)
+  "name" "socials"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/list.js" $args }}

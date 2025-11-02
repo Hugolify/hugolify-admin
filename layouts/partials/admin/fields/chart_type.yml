@@ -1,1 +1,10 @@
-{{- partial "admin/fields/select.yml" (dict "field" "type" "i18n" "chart.type" "options" (slice "bar" "pie" "line" "polarArea" "radar") "default" "bar") }}
+{{- $options := slice "bar" "pie" "line" "polarArea" "radar" }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.chart.type.label")
+  "name" "type"
+  "default" "bar"
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

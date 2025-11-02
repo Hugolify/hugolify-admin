@@ -1,1 +1,10 @@
-{{- partial "admin/fields/select.yml" (dict "field" "weight" "options" (slice 10 20 30 40 50 60 70 80 90 100) "required" true) }}
+{{- $options := slice 10 20 30 40 50 60 70 80 90 100 -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.weight.label")
+  "name" "weight"
+  "required" true
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

@@ -7,4 +7,12 @@
     {{- $collections = $collections | append $collection -}}
   {{- end -}}
 {{- end }}
-{{- partial "admin/fields/select.yml" (dict "field" "section" "options" $collections) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.section.label")
+  "name" "section"
+  "options" $collections
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}
+
