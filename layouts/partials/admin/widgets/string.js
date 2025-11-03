@@ -8,6 +8,7 @@
   - required (boolean)
   - pattern (object)
   - i18n (boolean or string)
+  - hidden (boolean)
 */}}
 
 {{ $cms := site.Params.admin.cms }}
@@ -19,6 +20,7 @@
 {{ $required := .required | default false }}
 {{ $pattern := .pattern | default false }}
 {{ $i18n := .i18n | default true }}
+{{ $hidden := .hidden | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -27,6 +29,9 @@
   name: '{{ $label }}',
   {{ with $hint }}
   comment: '{{ . }}',
+  {{ end }}
+  {{ with $hidden }}
+  hidden: true,
   {{ end }}
   type: 'text',
   options: {
@@ -57,6 +62,9 @@
   {{ if ne $default "" }}
   default: {{ $default }},
   {{ end }}
+  {{ with $hidden }}
+  hidden: true,
+  {{ end }}
   {{ with $pattern }}
   pattern: {
     regex: '{{ .regex }}',
@@ -75,7 +83,7 @@
   hint: '{{ . }}',
   {{ end }}
   name: '{{ $name }}',
-  widget: 'string',
+  widget: '{{ cond $hidden "hidden" "boolean" }}',
   {{ if ne $default "" }}
   default: {{ $default }},
   {{ end }}

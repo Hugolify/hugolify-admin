@@ -50,6 +50,9 @@
   {{ if ne $default "" }}
   default: {{ $default }},
   {{ end }}
+  {{ with $hidden }}
+  hidden: true,
+  {{ end }}
   required: {{ $required }}
 }
 
@@ -62,7 +65,7 @@
   hint: '{{ . }}',
   {{ end }}
   name: '{{ $name }}',
-  widget: 'boolean',
+  widget: '{{ cond $hidden "hidden" "boolean" }}',
   {{ if ne $default "" }}
   default: {{ $default }},
   {{ end }}

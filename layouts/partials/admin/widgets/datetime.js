@@ -49,6 +49,7 @@
   name: '{{ $name }}',
   type: 'date',
   options: {
+    format: "yyyy-MM-dd'T'HH:mm:ssX",
     time: true
   },
   required: {{ $required }}
