@@ -122,6 +122,16 @@ params:
         - timeline
         - title
         - video
+      
+      editorial:
+        icon:
+          cloudcannon: vertical_split
+      paragraph:
+        icon:
+          cloudcannon: subject
+      title:
+        icon:
+          cloudcannon: format_h2
 
     # Shortcodes
     shortcodes:
