@@ -48,7 +48,7 @@
   type: 'image',
   options: {
     media: 'images'
-  }
+  },
   required: {{ $required }}
 }
 

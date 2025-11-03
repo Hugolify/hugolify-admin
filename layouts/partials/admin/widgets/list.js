@@ -48,10 +48,10 @@
       {{ end }}
     },
     {{ with $min }}
-    min_items:: {{ . }},
+    min_items: {{ . }},
     {{ end }}
     {{ with $max }}
-    max_items:: {{ . }},
+    max_items: {{ . }},
     {{ end }}
     required: {{ $required }}
   }

@@ -45,8 +45,6 @@ blocks: {
   description: '{{ . }}',
   {{ end }}
   name: '{{ $name }}',
-  type: 'block',
-  blockKey: 'type',
   {{ if or $min $max }}
   list: {
     {{ with $min }}
@@ -60,7 +58,11 @@ blocks: {
   list: true,
   {{ end }}
   required: {{ $required }},
-  {{ partial "admin/fields/_fields.yml" $blocks }}
+  type: 'block',
+  blockKey: 'type',
+  blocks: [
+    {{ partial "admin/blocks/_range.yml" $blocks }}
+  ]
 }
 
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
@@ -86,20 +88,9 @@ blocks: {
   required: {{ $required }},
   collapsed: {{ $collapsed }},
   i18n: {{ $i18n }},
-  {{ with $blocks }}
   types: [
-    {{ range . }}
-      {{ $file := print "admin/blocks/types/" . ".yml" }}
-      {{ if templates.Exists ( printf "partials/%s" $file ) }}
-        {{ partial $file . }},
-      {{ else }}
-        {{ if isset site.Params.admin.blocks . }}
-          {{ partial "admin/blocks/types/_placeholder.yml" . }},
-        {{ end }}
-      {{ end }}
-    {{ end }}
+    {{ partial "admin/blocks/_range.yml" $blocks }}
   ]
-  {{ end }}
 }
 
 {{ end }}
