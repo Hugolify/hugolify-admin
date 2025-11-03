@@ -27,7 +27,7 @@ fields: [
         {{- $fields = partialCached "admin/collections/fields/_default.html" . -}}
       {{- end -}}
     {{- end -}}
-    {{ partial "admin/fields/_range-fields.yml" $fields }}
+    {{ partial "admin/fields/_range.yml" $fields }}
   {{ end -}}
 ],
 

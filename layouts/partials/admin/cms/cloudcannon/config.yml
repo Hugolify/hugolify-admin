@@ -1,5 +1,4 @@
 # Config
-collections_config_override: false
 paths:
   static: static
   uploads: {{ site.Params.admin.media.public_folder | default "static/images/uploads" }}
@@ -11,6 +10,5 @@ _snippets_imports:
 # Collections
 {{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/index.html" .) }}
 
-# Blocks
-_structures:
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/fields/blocks.js" .) }}
+# Structures
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/structures.js" .) }}

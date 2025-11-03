@@ -13,6 +13,6 @@ files: [
     {{- else -}}
       {{- $files = partialCached "admin/collections/fields/_files.default.html" . -}}
     {{- end -}}
-    {{ partial "admin/datas/_range-files.yml" $files }}
+    {{ partial "admin/datas/_range.yml" $files }}
   {{ end -}}
 ],

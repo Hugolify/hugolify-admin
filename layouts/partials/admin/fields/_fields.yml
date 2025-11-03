@@ -5,6 +5,6 @@ options: {
 },
 {{- else }}
 fields: [
-  {{ partial "admin/fields/_range-fields.yml" . }}
+  {{ partial "admin/fields/_range.yml" . }}
 ]
 {{- end }}

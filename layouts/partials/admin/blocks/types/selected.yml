@@ -3,7 +3,7 @@
 {{- range $collection, $value := site.Params.admin.collections -}}
 {{- if and .enable (ne $collection "config") (ne $collection "indexes") -}}
 
-{{- $fields := partial "admin/block/fields/selected.html" $collection -}}
+{{- $fields := partial "admin/blocks/fields/selected.html" $collection -}}
 {{- $name := i18n (print "admin.collections." $collection ".label") | default (humanize $collection) -}} 
 
 {{ if gt $index 0 }},{{ end }}

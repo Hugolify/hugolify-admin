@@ -1,4 +1,4 @@
-{{- $fields = partial "admin/block/fields/timeline.html" . -}}
+{{- $fields := partial "admin/blocks/fields/timeline.html" . -}}
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.timeline.label")
