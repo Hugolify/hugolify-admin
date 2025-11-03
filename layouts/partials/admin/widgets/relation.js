@@ -1,0 +1,112 @@
+{{/* 
+  Partial to generate a relation widget
+  
+  - display_fields (array)
+  - filters (array)
+  - hint (string)
+  - i18n (boolean or string)
+  - label (string) required
+  - name (string) required
+  - multiple (boolean)
+  - required (boolean)
+  - search_fields (array)
+  - value_field (array) required
+*/}}
+
+{{ $cms := site.Params.admin.cms }}
+
+{{ $display_fields := .display_fields | default false }}
+{{ $filters := .filters | default false }}
+{{ $hint := .hint | default false }}
+{{ $i18n := .i18n | default true }}
+{{ $label := .label | default "nolabel" }}
+{{ $multiple := .multiple | default true }}
+{{ $name := .name | default "noname" }}
+{{ $required := .required | default false }}
+{{ $search_fields := .search_fields | default false }}
+{{ $value_field := .value_field | default false }}
+
+{{/* CloudCannon */}}
+{{ if eq $cms "cloudcannon" }}
+
+{{/* TODO */}}
+
+{{/* Pages CMS */}}
+{{ else if eq $cms "pagescms" }}
+
+{
+  label: '{{ $label }}',
+  {{ with $hint }}
+  description: '{{ . }}',
+  {{ end }}
+  name: '{{ $name }}',
+  type: 'reference',
+  options: {
+    collection: {{ $collection }},
+    {{ with $display_fields }}
+      {{ $label := slice }}
+      {{ range . }}
+        {{ $label = $label | append (printf `{%s}` .) }}
+      {{ end }}
+    label: "{{ delimit $label `,` }}",
+    {{ end }}
+    image: "{image.src}",
+    {{ with $multiple }}
+    multiple: true,
+    {{ end }}
+    {{ with $search_fields }}
+    search: {{ delimit . "," }},
+    {{ end }}
+    value: '{{ substr $slug 1 -1 }}'
+  },
+  required: {{ $required }}
+}
+
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{
+  label: '{{ $label }}',
+  {{ with $hint }}
+  description: '{{ . }}',
+  {{ end }}
+  name: '{{ $name }}_{{ $collection }}',
+  nameOverride: '{{ $name }}',
+  type: 'reference',
+  collections: [{{ $collection }}],
+  required: {{ $required }}
+}
+
+{{/* Decap, Netlify, Static, Sveltia CMS */}}
+{{ else }}
+
+{
+  label: '{{ $label }}',
+  {{ with $label_singular }}
+  label_singular: '{{ . }}',
+  {{ end }}
+  {{ with $hint }}
+  hint: '{{ . }}',
+  {{ end }}
+  name: '{{ $name }}',
+  widget: 'relation',
+  collection: '{{ $collection }}',
+  {{- with $display_fields }}
+  display_fields: {{ . }},
+  {{- end }}
+  {{- with $search_fields }}
+  search_fields: {{ . }},
+  {{- end }}
+  {{- with $value_field }}
+  value_field: '{{ . }}',
+  {{- end }}
+  {{- with $filters }}
+  filters: {{ . }},
+  {{- end }}
+  multiple: {{ $multiple }},
+  {{- end }}
+  required: {{ $required }},
+  i18n: {{ $i18n }}
+}
+
+{{ end }}
