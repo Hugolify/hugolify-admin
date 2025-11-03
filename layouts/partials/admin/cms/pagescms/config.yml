@@ -7,6 +7,7 @@ media:
     input: {{ site.Params.admin.media.media_folder | default "assets/images/uploads" }}
     output: {{ site.Params.admin.media.public_folder | default "/images/uploads" }}
     categories: [ image ]
+  
   {{- if eq site.Params.admin.media.audio_folders true }}
   - name: audios
     label: '{{ i18n "admin.fields.audio.label" }}'
@@ -14,13 +15,31 @@ media:
     output: {{ site.Params.admin.media.audio_public_folder | default "/assets/audios" }}
     categories: [ audio ]
   {{ end }}
+  
+  {{- if eq site.Params.admin.media.document_folders true }}
+  - name: documents
+    label: '{{ i18n "admin.fields.document.label" }}'
+    input: {{ site.Params.admin.media.document_media_folder | default "static/assets/documents" }}
+    output: {{ site.Params.admin.media.document_public_folder | default "/assets/documents" }}
+    categories: [ document ]
+  {{ end }}
+  
+  {{- if eq site.Params.admin.media.file_folders true }}
+  - name: files
+    label: '{{ i18n "admin.fields.file.label" }}'
+    input: {{ site.Params.admin.media.file_media_folder | default "static/assets/files" }}
+    output: {{ site.Params.admin.media.file_public_folder | default "/assets/files" }}
+    categories: [ file ]
+  {{ end }}
+
   {{- if eq site.Params.admin.media.pdf_folders true }}
   - name: pdf
-    label: '{{ i18n "admin.admin.fields.pdf.label" }}'
+    label: '{{ i18n "admin.fields.pdf.label" }}'
     input: {{ site.Params.admin.media.pdf_media_folder | default "static/pdf" }}
     output: {{ site.Params.admin.media.pdf_public_folder | default "/pdf" }}
     categories: [ document ]
   {{ end }}
+  
   {{- if eq site.Params.admin.media.video_folders true }}
   - name: videos
     label: '{{ i18n "admin.fields.video.label" }}'

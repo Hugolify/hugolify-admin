@@ -290,8 +290,10 @@ admin:
         one: Audio
         other: Audios
       mp3:
+        label: MP3
         hint: Audio en format MP3
       ogg:
+        label: OGG
         hint: Audio en format OGG
     author:
       label: Auteur
@@ -778,15 +780,17 @@ admin:
         one: Vidéo
         other: Vidéos
       mp4:
-        hint: Vidéo en format MP4
+        label: MP4
+        hint: Vidéo au format MP4
         mobile:
-          label: Mobile MP4
-          hint: Vidéo en format MP4
+          label: MP4 (Mobile)
+          hint: Vidéo au format MP4 pour mobile seulement
       webm:
-        hint: Vidéo en format WEBM
+        label: WEBM
+        hint: Vidéo au format WEBM
         mobile:
-          label: Mobile WEBM
-          hint: Vidéo en format WEBM
+          label: WEBM (Mobile)
+          hint: Vidéo au format WEBM pour mobile seulement
     website:
       hint: URL (https://…)
       label: Site Web

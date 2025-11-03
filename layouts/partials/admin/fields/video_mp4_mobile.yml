@@ -1,23 +1,9 @@
-{
-  label: '{{ i18n "admin.fields.video.mp4.mobile.label" }}',
-  hint: '{{ i18n "admin.fields.video.mp4.mobile.hint" }}',
-  name: 'mp4_mobile',
-  widget: 'file',
-  required: false,
-  i18n: 'duplicate',
-  {{- if eq site.Params.admin.cms "pagescms" }}
-  options: {
-    extensions: ['mp4'],
-    media: videos
-  },
-  {{- else }}
-  choose_url: true,
-  media_library: {
-    config: {
-      max_file_size: {{site.Params.admin.media.video_max_file_size}}
-    }
-  },
-  media_folder: '{{ site.Params.admin.media.video_media_folder | default "static/assets/videos" }}',
-  public_folder: '{{ site.Params.admin.media.video_public_folder | default "/assets/videos" }}'
-  {{- end }}
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.video.mp4.mobile.label")
+  "hint" (i18n "admin.fields.video.mp4.mobile.hint")
+  "name" "mp4_mobile"
+  "extensions" "mp4"
+  "type" "video"
+  -}}
+
+{{ partial "admin/widgets/file.js" $args }}
