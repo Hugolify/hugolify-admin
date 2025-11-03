@@ -65,6 +65,34 @@ blocks: {
   ]
 }
 
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{
+  label: '{{ $label }}',
+  {{ with $hint }}
+  description: '{{ . }}',
+  {{ end }}
+  name: '{{ $name }}',
+  list: true,
+  {{ if or $min $max }}
+  ul: {
+    {{ with $min }}
+    min: {{ . }},
+    {{ end }}
+    {{ with $max }}
+    max: {{ . }}
+    {{ end }}
+  },
+  {{ end }}
+  required: {{ $required }},
+  type: 'object',
+  templateKey: 'type',
+  templates: [
+    {{ partial "admin/blocks/_range.yml" $blocks }}
+  ]
+}
+
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
 {{ else }}
 

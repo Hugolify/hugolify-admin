@@ -1,30 +1,32 @@
 {{/* 
   Partial to generate a list widget
   
+  - collapsed (boolean)
+  - fields (array) required
+  - hint (string)
+  - i18n (boolean or string)
   - label (string) required
   - label_singular (string)
-  - hint (string)
-  - name (string) required
-  - fields (array) required
-  - required (boolean)
-  - min (number)
   - max (number)
-  - collapsed (boolean)
-  - i18n (boolean or string)
+  - min (number)
+  - multiple (boolean)
+  - name (string) required
+  - required (boolean)
 */}}
 
 {{ $cms := site.Params.admin.cms }}
 
+{{ $collapsed := .collapsed | default true }}
+{{ $fields := .fields | default slice }}
+{{ $hint := .hint | default false }}
+{{ $i18n := .i18n | default true }}
 {{ $label := .label | default "nolabel" }}
 {{ $label_singular := .label_singular | default false }}
-{{ $hint := .hint | default false }}
 {{ $name := .name | default "noname" }}
-{{ $fields := .fields | default slice }}
 {{ $max := .max | default false }}
 {{ $min := .min | default false }}
+{{ $multiple := .multiple | default true }}
 {{ $required := .required | default false }}
-{{ $collapsed := .collapsed | default true }}
-{{ $i18n := .i18n | default true }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -78,6 +80,31 @@
   },
   {{ else }}
   list: true,
+  {{ end }}
+  required: {{ $required }},
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}
+
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{
+  label: '{{ $label }}',
+  {{ with $hint }}
+  description: '{{ . }}',
+  {{ end }}
+  name: '{{ $name }}',
+  type: 'object',
+  list: true,
+  {{ if or $min $max }}
+  ui: {
+    {{ with $min }}
+    min: {{ . }},
+    {{ end }}
+    {{ with $max }}
+    max: {{ . }}
+    {{ end }}
+  },
   {{ end }}
   required: {{ $required }},
   {{ partial "admin/fields/_fields.yml" $fields }}

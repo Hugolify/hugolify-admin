@@ -26,6 +26,11 @@
 
 {{/* TODO */}}
 
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{{/* TODO */}}
+
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
 {{ else }}
 

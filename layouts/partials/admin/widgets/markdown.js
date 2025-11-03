@@ -70,6 +70,25 @@
   required: {{ $required }}
 }
 
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{
+  label: '{{ $label }}',
+  {{ with $hint }}
+  description: '{{ . }}',
+  {{ end }}
+  name: '{{ $name }}',
+  type: 'rich-text',
+  {{ if eq $name "body" }}
+  isBody: true,
+  {{ end }}
+  {{ if ne $default "" }}
+  default: {{ $default }},
+  {{ end }}
+  required: {{ $required }}
+}
+
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
 {{ else }}
 
