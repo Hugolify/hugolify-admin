@@ -1,4 +1,5 @@
-{{- $name := .field | default false -}}
+{{- $name := .name | default false -}}
+{{- $i18n := .i18n | default $name -}}
 {{- $options := .options | default false -}}
 {{- $default := .default | default false -}}
 {{- $multiple := .multiple | default false -}}

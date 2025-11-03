@@ -1,11 +1,13 @@
 {{/* 
   Partial to generate a relation widget
   
+  - collection (string)
   - display_fields (array)
   - filters (array)
   - hint (string)
   - i18n (boolean or string)
   - label (string) required
+  - label_singular (string)
   - name (string) required
   - multiple (boolean)
   - required (boolean)
@@ -15,11 +17,13 @@
 
 {{ $cms := site.Params.admin.cms }}
 
+{{ $collection := .collection | default false }}
 {{ $display_fields := .display_fields | default false }}
 {{ $filters := .filters | default false }}
 {{ $hint := .hint | default false }}
 {{ $i18n := .i18n | default true }}
 {{ $label := .label | default "nolabel" }}
+{{ $label_singular := .label_singular | default false }}
 {{ $multiple := .multiple | default true }}
 {{ $name := .name | default "noname" }}
 {{ $required := .required | default false }}
@@ -57,7 +61,7 @@
     {{ with $search_fields }}
     search: {{ delimit . "," }},
     {{ end }}
-    value: '{{ substr $slug 1 -1 }}'
+    value: '{{ substr $value_field 1 -1 }}'
   },
   required: {{ $required }}
 }
@@ -103,8 +107,9 @@
   {{- with $filters }}
   filters: {{ . }},
   {{- end }}
-  multiple: {{ $multiple }},
-  {{- end }}
+  {{ with $multiple }}
+  multiple: true,
+  {{ end }}
   required: {{ $required }},
   i18n: {{ $i18n }}
 }

@@ -66,7 +66,6 @@
   name: '{{ $name }}',
   widget: 'datetime',
   {{ if ne $default "" }}
-    {{ warnf $default }}
     {{ if eq $default "now" }}
       {{ $default = `"{{now}}"` }}
     {{ end }}

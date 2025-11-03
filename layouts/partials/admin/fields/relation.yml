@@ -21,7 +21,7 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- $value_field = cond site.Params.admin.config.id `{{id}}` $slug -}}
+{{- $value_field = cond site.Params.admin.config.id `{{id}}` $value_field -}}
 
 
 {{- $args := dict 
