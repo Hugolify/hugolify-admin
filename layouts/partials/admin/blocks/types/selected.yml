@@ -10,7 +10,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.selected.label" (dict "section" $name))
-  "name" "selected-{{ $collection }}"
+  "name" (print "selected-" $collection)
   "collapsed" false
   "fields" $fields
   -}}

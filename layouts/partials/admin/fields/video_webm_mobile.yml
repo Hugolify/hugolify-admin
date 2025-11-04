@@ -1,7 +1,7 @@
 {{- $args := dict 
-  "label" (i18n "admin.fields.video.webm.label")
-  "hint" (i18n "admin.fields.video.webm.hint")
-  "name" "webm"
+  "label" (i18n "admin.fields.video.webm.mobile.label")
+  "hint" (i18n "admin.fields.video.webm.mobile.hint")
+  "name" "webm_mobile"
   "extensions" "webm"
   "type" "video"
   -}}
