@@ -6,6 +6,9 @@
 {{/* Remove any leading or trailing whitespace from the input string */}}
 {{ $file := . | strings.TrimSpace }}
 
+{{/* Escape specific html */}}
+{{ $file = replace $file `"[\*]"` `` }}
+
 {{/* Replace single quotes with double quotes (JSON requires double quotes) */}}
 {{ $file = replace $file `'` `"` }}
 

@@ -40,15 +40,23 @@
   comment: '{{ . }}',
   {{ end }}
   type: 'array',
-  options: {
-    _inputs: {
-      {{ range $fields }}
-        {{ $file := print "admin/fields/" . ".yml" }}
-        {{ if templates.Exists ( printf "partials/%s" $file ) }}
-          {{ partialCached $file . }},
-        {{ end }}
+  fields: [
+    {{ range $fields }}
+      {{ $file := print "admin/fields/" . ".yml" }}
+      {{ if templates.Exists ( printf "partials/%s" $file ) }}
+        '{{ . }}',
       {{ end }}
-    },
+    {{ end }}
+  ],
+  real_fields: [
+    {{ range $fields }}
+      {{ with . }}
+        '{{ . }}',
+      {{ end }}
+    {{ end }}
+  ],
+  options: {
+    structures: '_structures.{{ $name }}',
     {{ with $min }}
     min_items: {{ . }},
     {{ end }}

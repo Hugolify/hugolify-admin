@@ -1,3 +1,5 @@
+{{- $fields := partial "admin/func/GetCloudcannonInputsAndStructures.html" . }}
+
 # Config
 paths:
   static: static
@@ -11,4 +13,4 @@ _snippets_imports:
 {{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/index.html" .) }}
 
 # Structures
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/structures.js" .) }}
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/structures.js" $fields.structures) }}

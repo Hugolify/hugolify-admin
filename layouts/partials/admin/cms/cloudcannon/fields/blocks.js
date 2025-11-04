@@ -21,7 +21,7 @@
         label: {{ $block_name }},
         value: {
           {{ range $fields }}
-          {{ . }}: ,
+          '{{ . }}': null,
           {{ end }}
         },
 

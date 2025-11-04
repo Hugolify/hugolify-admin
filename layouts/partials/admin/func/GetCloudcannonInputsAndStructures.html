@@ -1,0 +1,52 @@
+{{ $inputsFields := slice }}
+{{ $structuresFields := slice }}
+
+{{/* Get array fields from enable blocks */}}
+{{ $blocks := site.Params.admin.blocks.enable }}
+{{ with $blocks }}
+  {{ range . }}
+    {{/* Get fields from this block */}}
+    {{ $fields := print "admin/blocks/fields/" . ".html" }}
+    {{ if templates.Exists ( printf "partials/%s" $fields ) }}
+      {{ $fields = partialCached $fields . }}
+      {{/* Check all fields from this block */}}
+      {{ range $fields }}
+        {{ $field := print "admin/fields/" . ".yml" }}
+        {{ if templates.Exists (printf "partials/%s" $field) }}
+          {{ $file := partial $field }}
+          {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
+          {{/* Check if is an object or an array field */}}
+          {{ $type := (index $datas .).type }}
+          {{ warnf (printf "%s: %s" . $type) }}
+          {{ if or (eq $type "object") (eq $type "array") }}
+            {{/* Add field to structures */}}
+            {{ $structuresFields = $structuresFields | append . }}
+            {{/* Get all subFields from this field */}}
+            {{ $subFields := (index $datas .).fields }}
+            {{/* Check all subfields from this field */}}
+            {{ range $subFields }}
+              {{ $field := print "admin/fields/" . ".yml" }}
+              {{ if templates.Exists (printf "partials/%s" $field) }}
+                {{ $file := partial $field }}
+                {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
+                {{ $type := (index $datas .).type }}
+                {{ if or (eq $type "object") (eq $type "array") }}
+                  {{/* Add field to structures */}}
+                  {{ $structuresFields = $structuresFields | append . }}
+                {{ else }}
+                  {{/* Add field to inputs */}}
+                  {{ $inputsFields = $inputsFields | append . }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            {{/* Add field to inputs */}}
+            {{ $inputsFields = $inputsFields | append . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return (dict "inputs" $inputsFields "structures" $structuresFields)}}

@@ -17,7 +17,7 @@
 {{- $label_singular := .label_singular | default false }}
 {{- $hint := .hint | default false }}
 {{- $name := .name | default "noname" }}
-{{- $fields := .fields | default slice }}
+{{- $fields := partial "admin/func/GetFields.html" (dict "field" $name "fields" .fields) | default slice -}}
 {{- $required := .required | default false }}
 {{- $collapsed := .collapsed | default true }}
 {{- $i18n := .i18n | default true }}
@@ -34,15 +34,23 @@
   comment: '{{ . }}',
   {{ end }}
   type: 'object',
-  options: {
-    _inputs: {
-      {{ range $fields }}
-        {{ $file := print "admin/fields/" . ".yml" }}
-        {{ if templates.Exists ( printf "partials/%s" $file ) }}
-          {{ partialCached $file . }},
-        {{ end }}
+  fields: [
+    {{ range $fields }}
+      {{ $file := print "admin/fields/" . ".yml" }}
+      {{ if templates.Exists ( printf "partials/%s" $file ) }}
+        '{{ . }}',
       {{ end }}
-    },
+    {{ end }}
+  ],
+  real_fields: [
+    {{ range $fields }}
+      {{ with . }}
+        '{{ . }}',
+      {{ end }}
+    {{ end }}
+  ],
+  options: {
+    structures: '_structures.{{ $name }}',
     required: {{ $required }},
     subtype: 'object'
   }
