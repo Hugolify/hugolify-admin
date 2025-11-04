@@ -64,14 +64,13 @@
   {{ end }}
   type: '{{ cond (eq $type "document") "document" "file" }}',
   options: {
-    {{ with $accept }}
-    accepts_mime_types: [
-      {{ delimit . "," }}
-    ],
+    {{ with $max_file_size }}
     max_file_size: '{{ . }}',
     {{ end }}
-    {{ with $extensions }}
-    accepts_mime_types: '{{ .regex }}',
+    {{ with $accept }}
+    accepts_mime_types:  [
+      {{ delimit . "," }}
+    ],
     {{ end }}
     required: {{ $required }}
   }
