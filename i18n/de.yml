@@ -602,7 +602,7 @@ admin:
       form:
         label: Form
     notes:
-      hint: 'To link a word in the text to a note, suffix it with "[*]". Notes and "[\\*]" are linked by their order.'
+      hint: 'To link a word in the text to a note, suffix it with "[\*]". Notes and "[\*]" are linked by their order.'
       label:
         one: Note
         other: Notes
