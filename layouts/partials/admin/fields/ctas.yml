@@ -8,7 +8,7 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.cta.label" 2)
   "label_singular" (i18n "admin.fields.cta.label" 1)
-  "name" "cta"
+  "name" "ctas"
   "min" 0
   "max" 2
   "fields" $fields
