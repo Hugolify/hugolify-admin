@@ -1,8 +1,14 @@
+{{- $name := dict "name" "data" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "chart_data" "nameOverride" "data" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.chart.data.label")
   "hint" (i18n "admin.fields.chart.data.hint")
-  "name" "data"
   "language" "JSON"
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/code.js" $args }}

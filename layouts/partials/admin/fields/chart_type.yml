@@ -1,10 +1,16 @@
 {{- $options := slice "bar" "pie" "line" "polarArea" "radar" }}
 
+{{- $name := dict "name" "type" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "chart_type" "nameOverride" "type" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.chart.type.label")
-  "name" "type"
   "default" "bar"
   "options" $options
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/select.js" $args }}
