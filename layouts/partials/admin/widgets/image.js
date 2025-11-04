@@ -11,21 +11,21 @@
   - required (boolean)
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $hint := .hint | default false }}
-{{ $i18n := .i18n | default true }}
-{{ $label := .label | default "nolabel" }}
-{{ $max := .max | default false }}
-{{ $min := .min | default false }}
-{{ $multiple := .multiple | default true }}
-{{ $name := .name | default "noname" }}
-{{ $required := .required | default false }}
+{{- $hint := .hint | default false }}
+{{- $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $max := .max | default false }}
+{{- $min := .min | default false }}
+{{- $multiple := .multiple | default true }}
+{{- $name := .name | default "noname" }}
+{{- $required := .required | default false }}
 
-{{ $max_file_size := site.Params.admin.media.max_file_size | default false }}
-{{ $media_folder := site.Params.admin.media.media_folder | default "/assets/" }}
-{{ $public_folder := site.Params.admin.media.public_folder | default "/assets/" }}
-{{ $choose_url := site.Params.admin.media.choose_url | default false }}
+{{- $max_file_size := site.Params.admin.media.max_file_size | default false }}
+{{- $media_folder := site.Params.admin.media.media_folder | default "/assets/" }}
+{{- $public_folder := site.Params.admin.media.public_folder | default "/assets/" }}
+{{- $choose_url := site.Params.admin.media.choose_url | default false }}
 
 
 {{/* CloudCannon */}}
@@ -77,10 +77,10 @@
 
 {
   label: '{{ $label }}',
-  {{ with $hint }}
+  {{- with $hint }}
   description: '{{ . }}',
-  {{ end }}
-  name: '{{ $name }}',
+  {{- end }}
+  {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
   type: 'image',
   required: {{ $required }}
 }

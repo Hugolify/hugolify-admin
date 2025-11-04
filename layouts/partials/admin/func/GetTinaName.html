@@ -1,0 +1,18 @@
+{{ $nameOverride := .nameOverride | default false }}
+{{ $name := .name }}
+{{ $names := slice }}
+
+{{ if not $nameOverride }}
+  {{ if strings.Contains $name "-" }}
+    {{ $nameOverride = $name }}
+    {{ $name = replace $name "-" "_" }}
+    {{ $names = slice $name $nameOverride }}
+  {{ end }}
+{{ end }}
+
+{{ with $nameOverride }}
+{{ $names = $names | append (print "nameOverride: '" . "'") }}
+{{ end }}
+{{ $names = $names | append (print "name: '" $name "'") }}
+
+{{ return (delimit $names ",") }}

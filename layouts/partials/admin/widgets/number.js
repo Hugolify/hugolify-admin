@@ -12,18 +12,18 @@
   - i18n (boolean or string)
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $label := .label | default "nolabel" }}
-{{ $hint := .hint | default false }}
-{{ $name := .name | default "noname" }}
-{{ $default := .default | default "" }}
-{{ $required := .required | default false }}
-{{ $max := .max | default false }}
-{{ $min := .min | default false }}
-{{ $step := .step | default false }}
-{{ $range := .range | default false }}
-{{ $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $hint := .hint | default false }}
+{{- $name := .name | default "noname" }}
+{{- $default := .default | default "" }}
+{{- $required := .required | default false }}
+{{- $max := .max | default false }}
+{{- $min := .min | default false }}
+{{- $step := .step | default false }}
+{{- $range := .range | default false }}
+{{- $i18n := .i18n | default true }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -62,6 +62,30 @@
   default: {{ $default }},
   {{ end }}
   options: {
+    {{ with $min }}
+    min: {{ . }},
+    {{ end }}
+    {{ with $max }}
+    max: {{ . }},
+    {{ end }}
+    {{ with $step }}
+    step: {{ . }}
+    {{ end }}
+  },
+  required: {{ $required }}
+}
+
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{
+  label: '{{ $label }}',
+  {{ with $hint }}
+  description: '{{ . }}',
+  {{ end }}
+  {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
+  type: 'number',
+  ui: {
     {{ with $min }}
     min: {{ . }},
     {{ end }}

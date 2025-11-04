@@ -11,16 +11,16 @@
   - i18n (boolean or string)
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $label := .label | default "nolabel" }}
-{{ $label_singular := .label_singular | default false }}
-{{ $hint := .hint | default false }}
-{{ $name := .name | default "noname" }}
-{{ $fields := .fields | default slice }}
-{{ $required := .required | default false }}
-{{ $collapsed := .collapsed | default true }}
-{{ $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $label_singular := .label_singular | default false }}
+{{- $hint := .hint | default false }}
+{{- $name := .name | default "noname" }}
+{{- $fields := .fields | default slice }}
+{{- $required := .required | default false }}
+{{- $collapsed := .collapsed | default true }}
+{{- $i18n := .i18n | default true }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -57,6 +57,20 @@
   description: '{{ . }}',
   {{ end }}
   name: '{{ $name }}',
+  type: 'object',
+  required: {{ $required }},
+  {{ partial "admin/fields/_fields.yml" $fields }}
+}
+
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{
+  label: '{{ $label }}',
+  {{- with $hint }}
+  description: '{{ . }}',
+  {{- end }}
+  {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
   type: 'object',
   required: {{ $required }},
   {{ partial "admin/fields/_fields.yml" $fields }}

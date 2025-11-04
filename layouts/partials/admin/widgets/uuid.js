@@ -7,12 +7,12 @@
   - i18n (boolean or string)
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $label := .label | default "nolabel" }}
-{{ $hint := .hint | default false }}
-{{ $name := .name | default "noname" }}
-{{ $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $hint := .hint | default false }}
+{{- $name := .name | default "noname" }}
+{{- $i18n := .i18n | default true }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -41,6 +41,22 @@
     editable: false
   }
 }
+
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{
+  label: '{{ $label }}',
+  {{- with $hint }}
+  description: '{{ . }}',
+  {{- end }}
+  {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
+  type: 'uuid',
+  options: {
+    editable: false
+  }
+}
+
 
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
 {{ else }}

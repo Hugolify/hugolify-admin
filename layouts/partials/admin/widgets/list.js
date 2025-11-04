@@ -14,19 +14,19 @@
   - required (boolean)
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $collapsed := .collapsed | default true }}
-{{ $fields := .fields | default slice }}
-{{ $hint := .hint | default false }}
-{{ $i18n := .i18n | default true }}
-{{ $label := .label | default "nolabel" }}
-{{ $label_singular := .label_singular | default false }}
-{{ $name := .name | default "noname" }}
-{{ $max := .max | default false }}
-{{ $min := .min | default false }}
-{{ $multiple := .multiple | default true }}
-{{ $required := .required | default false }}
+{{- $collapsed := .collapsed | default true }}
+{{- $fields := .fields | default slice }}
+{{- $hint := .hint | default false }}
+{{- $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $label_singular := .label_singular | default false }}
+{{- $name := .name | default "noname" }}
+{{- $max := .max | default false }}
+{{- $min := .min | default false }}
+{{- $multiple := .multiple | default true }}
+{{- $required := .required | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -90,22 +90,22 @@
 
 {
   label: '{{ $label }}',
-  {{ with $hint }}
+  {{- with $hint }}
   description: '{{ . }}',
-  {{ end }}
-  name: '{{ $name }}',
+  {{- end }}
+  {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
   type: 'object',
   list: true,
-  {{ if or $min $max }}
+  {{- if or $min $max }}
   ui: {
-    {{ with $min }}
+    {{- with $min }}
     min: {{ . }},
-    {{ end }}
-    {{ with $max }}
+    {{- end }}
+    {{- with $max }}
     max: {{ . }}
-    {{ end }}
+    {{- end }}
   },
-  {{ end }}
+  {{- end }}
   required: {{ $required }},
   {{ partial "admin/fields/_fields.yml" $fields }}
 }

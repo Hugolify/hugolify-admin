@@ -13,18 +13,18 @@
   - i18n (boolean or string)
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $label := .label | default "nolabel" }}
-{{ $label_singular := .label_singular | default false }}
-{{ $hint := .hint | default false }}
-{{ $name := .name | default "noname" }}
-{{ $blocks := .blocks | default slice }}
-{{ $max := .max | default false }}
-{{ $min := .min | default false }}
-{{ $required := .required | default false }}
-{{ $collapsed := .collapsed | default true }}
-{{ $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $label_singular := .label_singular | default false }}
+{{- $hint := .hint | default false }}
+{{- $name := .name | default "noname" }}
+{{- $blocks := .blocks | default slice }}
+{{- $max := .max | default false }}
+{{- $min := .min | default false }}
+{{- $required := .required | default false }}
+{{- $collapsed := .collapsed | default true }}
+{{- $i18n := .i18n | default true }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -70,21 +70,21 @@ blocks: {
 
 {
   label: '{{ $label }}',
-  {{ with $hint }}
+  {{- with $hint }}
   description: '{{ . }}',
-  {{ end }}
-  name: '{{ $name }}',
+  {{- end }}
+  {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
   list: true,
-  {{ if or $min $max }}
-  ul: {
-    {{ with $min }}
+  {{- if or $min $max }}
+  ui: {
+    {{- with $min }}
     min: {{ . }},
-    {{ end }}
-    {{ with $max }}
+    {{- end }}
+    {{- with $max }}
     max: {{ . }}
-    {{ end }}
+    {{- end }}
   },
-  {{ end }}
+  {{- end }}
   required: {{ $required }},
   type: 'object',
   templateKey: 'type',

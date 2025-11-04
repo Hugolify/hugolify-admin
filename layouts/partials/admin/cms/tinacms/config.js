@@ -2,19 +2,6 @@
 
 {{- $sliceCompatibity := slice 
   (dict "folder:" "path:") 
-  (dict "widget: 'color'" "widget: 'string'") 
-  (dict "widget: 'relation'" "widget: 'reference'") 
-  (dict "widget: 'markdown'" "widget: 'rich-text'") 
-  (dict "widget: 'text'" "widget: 'string', ui: { component: 'textarea' }") 
-  (dict "widget: 'hidden'" "widget: 'boolean', ui: { component: 'hidden' }") 
-  (dict "widget: 'select'" "widget: 'string', ui: { component: 'select' }") 
-  (dict "name: 'pdf'" "name: 'pdf', media: { accept: 'application/pdf' }") 
-  (dict "name: 'mp4'" "name: 'mp4', media: { accept: 'video/mp4' }") 
-  (dict "name: 'webm'" "name: 'webm', media: { accept: 'video/webm' }") 
-  (dict "widget: 'file'" "widget: 'image'") 
-  (dict "types:" "templateKey: 'type', templates:") 
-  (dict "widget: 'list'" "widget: 'object', list: true") 
-  (dict "widget:" "type:") 
   -}}
 {{- range $sliceCompatibity }}
   {{- $regex := .regex | default false -}}

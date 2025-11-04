@@ -15,20 +15,20 @@
   - value_field (array) required
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $collection := .collection | default false }}
-{{ $display_fields := .display_fields | default false }}
-{{ $filters := .filters | default false }}
-{{ $hint := .hint | default false }}
-{{ $i18n := .i18n | default true }}
-{{ $label := .label | default "nolabel" }}
-{{ $label_singular := .label_singular | default false }}
-{{ $multiple := .multiple | default true }}
-{{ $name := .name | default "noname" }}
-{{ $required := .required | default false }}
-{{ $search_fields := .search_fields | default false }}
-{{ $value_field := .value_field | default false }}
+{{- $collection := .collection | default false }}
+{{- $display_fields := .display_fields | default false }}
+{{- $filters := .filters | default false }}
+{{- $hint := .hint | default false }}
+{{- $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $label_singular := .label_singular | default false }}
+{{- $multiple := .multiple | default true }}
+{{- $name := .name | default "noname" }}
+{{- $required := .required | default false }}
+{{- $search_fields := .search_fields | default false }}
+{{- $value_field := .value_field | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -71,13 +71,13 @@
 
 {
   label: '{{ $label }}',
-  {{ with $hint }}
+  {{- with $hint }}
   description: '{{ . }}',
-  {{ end }}
-  name: '{{ $name }}_{{ $collection }}',
+  {{- end }}
+  name: 'items_{{ $name }}',
   nameOverride: '{{ $name }}',
   type: 'reference',
-  collections: [{{ $collection }}],
+  collections: ['{{ $collection }}'],
   required: {{ $required }}
 }
 

@@ -10,15 +10,15 @@
   - i18n (boolean or string)
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $label := .label | default "nolabel" }}
-{{ $hint := .hint | default false }}
-{{ $name := .name | default "noname" }}
-{{ $default := .default | default "" }}
-{{ $required := .required | default false }}
-{{ $pattern := .pattern | default false }}
-{{ $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $hint := .hint | default false }}
+{{- $name := .name | default "noname" }}
+{{- $default := .default | default "" }}
+{{- $required := .required | default false }}
+{{- $pattern := .pattern | default false }}
+{{- $i18n := .i18n | default true }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -65,17 +65,17 @@
 
 {
   label: '{{ $label }}',
-  {{ with $hint }}
+  {{- with $hint }}
   description: '{{ . }}',
-  {{ end }}
-  name: '{{ $name }}',
+  {{- end }}
+  {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
   type: 'string',
   ui: {
     component: "textarea"
   },
-  {{ if ne $default "" }}
+  {{- if ne $default "" }}
   default: {{ $default }},
-  {{ end }}
+  {{- end }}
   required: {{ $required }}
 }
 

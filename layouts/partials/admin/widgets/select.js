@@ -11,16 +11,17 @@
   - i18n (boolean or string)
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $label := .label | default "nolabel" }}
-{{ $hint := .hint | default false }}
-{{ $name := .name | default "noname" }}
-{{ $options := .options | default false }}
-{{ $multiple := .multiple | default false }}
-{{ $default := .default | default "" }}
-{{ $required := .required | default false }}
-{{ $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $hint := .hint | default false }}
+{{- $name := .name | default "noname" }}
+{{- $options := .options | default false }}
+{{- $multiple := .multiple | default false }}
+{{- $default := .default | default "" }}
+{{- $required := .required | default false }}
+{{- $i18n := .i18n | default true }}
+{{- $i18n = cond (eq (printf "%T" $i18n) "boolean") $i18n (print "'" $i18n "'") }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -83,8 +84,37 @@
     {{ end }}
   },
   {{ if ne $default "" }}
-  default: {{ $default }},
+  default: '{{ $default }}',
   {{ end }}
+  required: {{ $required }}
+}
+
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{
+  label: '{{ $label }}',
+  {{- with $hint }}
+  description: '{{ . }}',
+  {{- end }}
+  {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
+  type: 'string',
+  component: 'select',
+  {{- with $options }}
+  options: [
+  {{- range $k, $v := . }}
+    {{- $name := $k -}}
+    {{- if eq (printf "%T" $k) "int" }}
+      {{- $name = $v -}}
+    {{- end }}
+    {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . -}}
+    { 
+      label: '{{ i18n (print "admin.fields." $i18n ".options." (replace $name "-" "_")) | default (humanize $name) }}', 
+      value: {{ $value }} 
+    },
+  {{- end }}
+  ],
+  {{- end }}
   required: {{ $required }}
 }
 
@@ -117,7 +147,7 @@
   multiple: true,
   {{ end }}
   {{ if ne $default "" }}
-  default: {{ $default }},
+  default: '{{ $default }}',
   {{ end }}
   required: {{ $required }},
   i18n: {{ $i18n }}

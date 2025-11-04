@@ -10,16 +10,16 @@
   - i18n (boolean or string)
 */}}
 
-{{ $cms := site.Params.admin.cms }}
+{{- $cms := site.Params.admin.cms }}
 
-{{ $label := .label | default "nolabel" }}
-{{ $hint := .hint | default false }}
-{{ $name := .name | default "noname" }}
-{{ $language := .language | default false }}
-{{ $default := .default | default "" }}
-{{ $required := .required | default false }}
-{{ $i18n := .i18n | default true }}
-{{ $hidden := .hidden | default false }}
+{{- $label := .label | default "nolabel" }}
+{{- $hint := .hint | default false }}
+{{- $name := .name | default "noname" }}
+{{- $language := .language | default false }}
+{{- $default := .default | default "" }}
+{{- $required := .required | default false }}
+{{- $i18n := .i18n | default true }}
+{{- $hidden := .hidden | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -56,6 +56,22 @@
   {{ if ne $default "" }}
   default: {{ $default }},
   {{ end }}
+  required: {{ $required }}
+}
+
+{{/* Tina CMS */}}
+{{ else if eq $cms "tinacms" }}
+
+{
+  label: '{{ $label }}',
+  {{ with $hint }}
+  description: '{{ . }}',
+  {{ end }}
+  {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
+  type: 'string',
+  ui: {
+    component: 'textarea'
+  },
   required: {{ $required }}
 }
 
