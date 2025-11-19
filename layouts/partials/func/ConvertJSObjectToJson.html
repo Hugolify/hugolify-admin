@@ -3,29 +3,26 @@
   turning it into valid JSON so it can be unmarshaled into a real map.
 */}}
 
-{{/* Remove any leading or trailing whitespace from the input string */}}
+{{/* 1. Remove leading/trailing whitespace */}}
 {{ $file := . | strings.TrimSpace }}
 
-{{/* Escape specific html */}}
+{{/* 2. Escape specific HTML characters */}}
 {{ $file = replace $file `"[\*]"` `` }}
 
-{{/* Replace single quotes with double quotes (JSON requires double quotes) */}}
+{{/* 3. Replace single quotes with double quotes (JSON requires double quotes) */}}
 {{ $file = replace $file `'` `"` }}
 
-{{/* 
-  Use a regular expression to wrap all bare keys with double quotes.
-  Example:  name: value  →  "name": value
-  The pattern handles keys after commas or opening braces.
-*/}}
+{{/* 4. Wrap bare keys with double quotes */}}
 {{ $file = replaceRE `(?m)(^|,|\{)\s*([A-Za-z_][A-Za-z0-9_]*)\s*:` `${1}"${2}":` $file }}
 
-{{/* Remove trailing commas before closing braces or brackets.
-     Example: {"a":1,} → {"a":1}
-*/}}
+{{/* 5. Wrap unquoted text values with double quotes */}}
+{{ $file = replaceRE `(?m):\s*([A-Za-z_][A-Za-z0-9_]*)\s*(,|$|\})` `:"${1}"$2` $file }}
+
+{/* 6. Remove trailing commas before closing braces/brackets */}}
 {{ $file = replaceRE `,\s*([}\]])` `$1` $file }}
 
-{{/* Remove a final trailing comma at the end of the file, if any. */}}
+{{/* 7. Remove a final trailing comma at the end of the file, if any */}}
 {{ $file = replaceRE `,\s*$` `` $file }}
 
-{{/* Convert the cleaned JSON string into a Hugo map/object using transform.Unmarshal */}}
+{{/* 8. Convert the cleaned JSON string into a Hugo map/object */}}
 {{ return ($file | transform.Unmarshal) }}
