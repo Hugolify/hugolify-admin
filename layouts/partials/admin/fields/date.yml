@@ -6,4 +6,4 @@
   "i18n" "duplicate"
   -}}
 
-{{ partial "admin/widgets/datetime.yml" $args }}
+{{ partial "admin/widgets/datetime.js" $args }}

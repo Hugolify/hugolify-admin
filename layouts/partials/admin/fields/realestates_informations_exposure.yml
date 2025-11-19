@@ -3,5 +3,5 @@
   "name" "exposure"
   -}}
 
-{{ partial "admin/widgets/string.yml" $args }}
+{{ partial "admin/widgets/string.js" $args }}
 

@@ -10,4 +10,4 @@
   "fields" $fields
   -}}
 
-{{ partial "admin/widgets/object.yml" $args }}
+{{ partial "admin/widgets/object.js" $args }}

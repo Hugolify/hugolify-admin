@@ -9,4 +9,4 @@
   "options" $options
   -}}
 
-{{ partial "admin/widgets/select.yml" $args }}
+{{ partial "admin/widgets/select.js" $args }}

@@ -9,4 +9,4 @@
   "range" true
   -}}
 
-{{ partial "admin/widgets/number.yml" $args }}
+{{ partial "admin/widgets/number.js" $args }}
