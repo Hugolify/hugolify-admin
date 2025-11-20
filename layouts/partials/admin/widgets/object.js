@@ -17,6 +17,7 @@
 {{- $label_singular := .label_singular | default false }}
 {{- $hint := .hint | default false }}
 {{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
 {{- $fields := partial "admin/func/GetFields.html" (dict "field" $name "fields" .fields) | default slice -}}
 {{- $required := .required | default false }}
 {{- $collapsed := .collapsed | default true }}
@@ -26,6 +27,9 @@
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
+  {{ with $nameOverride }}
+  key: '{{ . }}',
+  {{ end }}
   name: '{{ $label }}',
   {{ with $label_singular }}
   singular_name: '{{ . }}',

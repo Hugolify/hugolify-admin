@@ -1,16 +1,20 @@
 {{- $fields := partial "admin/func/GetCloudcannonInputsAndStructures.html" . }}
 
-# Config
+{{/* Config */}}
 paths:
   static: static
   uploads: {{ site.Params.admin.media.public_folder | default "static/images/uploads" }}
 
-# Snippets
+{{/* Snippets */}}
 _snippets_imports:
   hugo: true
 
-# Collections
+{{/* Collections */}}
 {{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/index.html" .) }}
 
-# Structures
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/structures.js" $fields.structures) }}
+{{/* Inputs */}}
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/inputs.js" $fields.inputs) }}
+
+{{/* Structures */}}
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/structures.js" (dict "context" . "structures" $fields.structures)) }}
+

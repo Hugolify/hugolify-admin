@@ -15,9 +15,12 @@
         {{ if templates.Exists (printf "partials/%s" $field) }}
           {{ $file := partial $field }}
           {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
-          {{/* Check if is an object or an array field */}}
-          {{ $type := (index $datas .).type }}
-          {{ warnf (printf "%s: %s" . $type) }}
+          {{/* Get type of field */}}
+          {{ $type := false }}
+          {{ range $key, $value := $datas }}
+            {{ $type = $value.type }}
+          {{ end }}
+          {{/* Conditional switch */}}
           {{ if or (eq $type "object") (eq $type "array") }}
             {{/* Add field to structures */}}
             {{ $structuresFields = $structuresFields | append . }}

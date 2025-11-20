@@ -16,8 +16,10 @@
     {{ $fields := .fields | default false -}}
 
     {{/* Display structure field */}}
-    ,
-    '{{ $nameField }}': {
+    {{ $nameField }}: {
+      {{ with .key }}
+      key: '{{ . }}',
+      {{ end }}
       values: [
         {
           value: {
@@ -26,18 +28,11 @@
             {{ end }}
           },
           options: {
-            _inputs: {
-              {{ range $fields }}
-                {{ $file := print "admin/fields/" . ".yml" }}
-                {{ if templates.Exists ( printf "partials/%s" $file ) }}
-                  {{ partialCached $file . }},
-                {{ end }}
-              {{ end }}
-            }
+            
           }
         }
       ]
-    }
+    },
 
   {{ end }}
 {{ end }}

@@ -23,6 +23,7 @@
 {{- $label := .label | default "nolabel" }}
 {{- $label_singular := .label_singular | default false }}
 {{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
 {{- $max := .max | default false }}
 {{- $min := .min | default false }}
 {{- $multiple := .multiple | default true }}
@@ -31,7 +32,12 @@
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
+{{ warnf $name }}
+
 {{ $name }}: {
+  {{ with $nameOverride }}
+  key: '{{ . }}',
+  {{ end }}
   name: '{{ $label }}',
   {{ with $label_singular }}
   singular_name: '{{ . }}',

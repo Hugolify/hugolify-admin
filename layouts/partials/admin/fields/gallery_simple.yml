@@ -1,5 +1,5 @@
 {{- $name := dict "name" "gallery" }}
-{{- if eq site.Params.admin.cms "tinacms" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
   {{- $name = dict "name" "gallery_simple" "nameOverride" "gallery" }}
 {{- end }}
 
@@ -8,6 +8,6 @@
   "multiple" true
   -}}
 
-{{- $args = merge $args (dict "name" $name) }} 
+{{- $args = merge $args $name }} 
 
 {{ partial "admin/widgets/image.js" $args }}

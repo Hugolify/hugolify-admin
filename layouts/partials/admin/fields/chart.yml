@@ -1,4 +1,5 @@
-{{- $items := dict "items" (slice "label" "value" "color") -}} 
+{{- $subfields := slice "label" "value" "color" -}} 
+{{- $items := dict "items" (dict "name" "chart" "fields" $subfields) -}}
 {{- $fields := slice 
   "title" 
   "chart_type" 

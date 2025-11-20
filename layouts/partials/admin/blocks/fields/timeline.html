@@ -1,4 +1,5 @@
-{{- $items := dict "items" (slice "surtitle" "title" "text_markdown") -}} 
+{{- $subfields := slice "surtitle" "title" "text_markdown" -}} 
+{{- $items := dict "items" (dict "name" "timeline" "fields" $subfields) -}}
 {{- $fields := slice 
   "heading" 
   $items 

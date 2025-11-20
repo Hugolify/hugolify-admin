@@ -1,4 +1,5 @@
-{{- $items := dict "items" (slice "summary" "text_markdown" "name" "title" "is_open") -}} 
+{{- $subfields := slice "summary" "text_markdown" "name" "title" "is_open" -}} 
+{{- $items := dict "items" (dict "name" "faq" "fields" $subfields) -}}
 {{- $fields := slice 
   "heading" 
   $items

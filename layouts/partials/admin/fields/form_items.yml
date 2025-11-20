@@ -1,3 +1,8 @@
+{{- $name := dict "name" "items" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "form_items" "nameOverride" "items" }}
+{{- end }}
+
 {{- $fields := slice 
   "label" 
   "name" 
@@ -13,8 +18,9 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.items.label" 2)
   "label_singular" (i18n "admin.fields.items.label" 1)
-  "name" "items"
   "fields" $fields
   -}}
+
+{{- $args = merge $args $name }} 
 
 {{ partial "admin/widgets/list.js" $args }}

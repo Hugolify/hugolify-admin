@@ -21,11 +21,17 @@
         label: {{ $block_name }},
         value: {
           {{ range $fields }}
+          {{ if reflect.IsMap . }}
+          {{ range $k, $v := . }}
+          '{{ $k }}': null,
+          {{ end }}
+          {{ else }}
           '{{ . }}': null,
+          {{ end }}
           {{ end }}
         },
 
-        {{ partial "admin/cms/cloudcannon/inputs.js" $fields }}
+        {{/* partial "admin/cms/cloudcannon/inputs.js" $fields */}}
 
         preview: {
           text: [
@@ -46,5 +52,5 @@
       
     {{ end }}
     ]
-  }
+  },
 {{ end }}

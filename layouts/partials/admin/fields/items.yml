@@ -1,8 +1,19 @@
+{{- $name := dict "name" "items" }}
+{{- $items_name := (printf `items_%s` .name ) -}}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" $items_name "nameOverride" "items" }}
+{{- end }}
+{{ warnf $name.name }}
+
+{{- $fields := .fields -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" $items_name "fields" $fields) -}}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.items.label" 2)
   "label_singular" (i18n "admin.fields.items.label" 1)
-  "name" "items"
-  "fields" .
+  "fields" .fields
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/list.js" $args }}

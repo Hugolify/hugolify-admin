@@ -1,4 +1,5 @@
-{{- $items := dict "items" (slice "title" "text" "badge" "offer" "arguments" "is_highlighted" "cta") -}} 
+{{- $subfields := slice "title" "text" "badge" "offer" "arguments" "is_highlighted" "cta" -}} 
+{{- $items := dict "items" (dict "name" "comparison" "fields" $subfields) -}}
 {{- $fields := slice 
   "heading" 
   "column" 

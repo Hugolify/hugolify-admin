@@ -1,3 +1,8 @@
+{{- $name := dict "name" "offer" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "realestates_offer" "nameOverride" "offer" }}
+{{- end }}
+
 {{- $fields := slice 
   "price" 
   "is_sold" 
@@ -5,11 +10,6 @@
   "status" 
   "hide_price" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
-
-{{- $name := dict "name" "offer" }}
-{{- if eq site.Params.admin.cms "tinacms" }}
-  {{- $name = dict "name" "realestates_offer" "nameOverride" "offer" }}
-{{- end }}
 
 {{- $args := dict 
   "label" (i18n "admin.fields.offer.label" 1)

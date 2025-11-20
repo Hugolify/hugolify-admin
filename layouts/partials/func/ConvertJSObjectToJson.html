@@ -18,6 +18,11 @@
 {{/* 5. Wrap unquoted text values with double quotes */}}
 {{ $file = replaceRE `(?m):\s*([A-Za-z_][A-Za-z0-9_]*)\s*(,|$|\})` `:"${1}"$2` $file }}
 
+{{/* 5.1 Fix : Remove quote for boolean and null */}}
+{{ $file = replace $file `"true"` `true` }}
+{{ $file = replace $file `"false"` `false` }}
+{{ $file = replace $file `"null"` `null` }}
+
 {/* 6. Remove trailing commas before closing braces/brackets */}}
 {{ $file = replaceRE `,\s*([}\]])` `$1` $file }}
 

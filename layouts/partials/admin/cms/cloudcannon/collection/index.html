@@ -26,6 +26,7 @@ collections_config: {
       {{ $newDatas.SetInMap "datas" "comment" $datas.description }}
       {{ $newDatas.DeleteInMap "datas" "description" }}
       {{ $newDatas.DeleteInMap "datas" "i18n" }}
+      {{ $newDatas.DeleteInMap "datas" "_inputs" }}
       {{ $datas = $newDatas.Values.datas }}
 
       {{/* Add arguments */}}
