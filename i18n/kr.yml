@@ -1,842 +1,842 @@
 admin:
   blocks:
     alert:
-      label: Alert
+      label: 알림
     audio:
-      label: Audio
+      label: 오디오
     chart:
-      label: Chart
+      label: 차트
     comparison:
-      label: Comparison
+      label: 비교
     cta:
-      label: Call to action
+      label: 행동 유도
     datas:
-      label: Datas
+      label: 데이터
     editorial:
-      label: Editorial
+      label: 편집
     embed:
-      label: Embed
+      label: 임베드
     faq:
-      label: FAQ
+      label: 자주 묻는 질문
     figure:
-      label: Figure
+      label: 그림
     form:
-      label: Form
+      label: 양식
     gallery:
-      label: Gallery
+      label: 갤러리
     images:
-      label: Images
+      label: 이미지
     informations:
-      label: Informations
+      label: 정보
     instagram:
       label: Instagram
     latest:
-      label: Latest items
+      label: 최신 항목
     location:
-      label: Location
+      label: 위치
     logos:
-      label: Logos
+      label: 로고
     map:
-      label: Map
+      label: 지도
     newsletter:
-      label: Newsletter
+      label: 뉴스레터
     paragraph:
-      label: Paragraph
+      label: 단락
     pushes:
-      label: Pushes
+      label: 알림
     quote:
-      label: Quote
+      label: 인용
     search:
-      label: Search
+      label: 검색
     selected:
-      label: Selection {{ .section }}
+      label: 선택 {{ .section }}
     testimonials:
-      label: Testimonials
+      label: 후기
     timeline:
-      label: Timeline
+      label: 타임라인
     title:
-      label: Title
+      label: 제목
     video:
-      label: Video
+      label: 동영상
   collections:
     authors:
       label:
-        one: Author
-        other: Authors
+        one: 저자
+        other: 저자
     casestudies:
-      _description: All cases studies
+      _description: 모든 사례 연구
       label:
-        one: Case study
-        other: Cases studies
+        one: 사례 연구
+        other: 사례 연구
     categories:
       label:
-        one: Category
-        other: Categories
+        one: 카테고리
+        other: 카테고리
     config:
-      _description: All config
+      _description: 모든 설정
       label:
-        one: Config
-        other: Config
+        one: 설정
+        other: 설정
     docs:
-      _description: All docs
+      _description: 모든 문서
       label:
-        one: Doc
-        other: Docs
+        one: 문서
+        other: 문서
     events:
-      _description: All events
+      _description: 모든 이벤트
       label:
-        one: Event
-        other: Events
+        one: 이벤트
+        other: 이벤트
     events_categories:
-      _description: All events categories
+      _description: 모든 이벤트 카테고리
       label:
-        one: Category
-        other: Categories
+        one: 카테고리
+        other: 카테고리
     expertises:
-      _description: All expertises
+      _description: 모든 전문 분야
       label:
-        one: Expertise
-        other: Expertises
-    home: Home
+        one: 전문 분야
+        other: 전문 분야
+    home: 홈
     indexes:
-      _description: All index pages
+      _description: 모든 인덱스 페이지
       label:
-        one: Index
-        other: Index
+        one: 인덱스
+        other: 인덱스
     jobs:
-      _description: All jobs
+      _description: 모든 채용 공고
       label:
-        one: Job
-        other: Jobs
+        one: 채용 공고
+        other: 채용 공고
     jobs_categories:
-      _description: All news categories
+      _description: 모든 채용 카테고리
       label:
-        one: Category
-        other: Categories
+        one: 카테고리
+        other: 카테고리
     jobs_expertises:
-      _description: All expertises
+      _description: 모든 전문 분야
       label:
-        one: Expertise
-        other: Expertises
+        one: 전문 분야
+        other: 전문 분야
     jobs_places:
-      _description: All places
+      _description: 모든 장소
       label:
-        one: Place
-        other: Places
+        one: 장소
+        other: 장소
     jobs_tags:
-      _description: All products tags
+      _description: 모든 제품 태그
       label:
-        one: Tag
-        other: Tags
+        one: 태그
+        other: 태그
     pages:
-      _description: All pages
+      _description: 모든 페이지
       label:
-        one: Page
-        other: Pages
+        one: 페이지
+        other: 페이지
     persons:
-      _description: All persons
+      _description: 모든 인물
       label:
-        one: Person
-        other: Persons
+        one: 인물
+        other: 인물
     persons_expertises:
-      _description: All expertises
+      _description: 모든 전문 분야
       label:
-        one: Expertise
-        other: Expertises
+        one: 전문 분야
+        other: 전문 분야
     persons_places:
-      _description: All places
+      _description: 모든 장소
       label:
-        one: Place
-        other: Places
+        one: 장소
+        other: 장소
     persons_statutes:
-      _description: All statutes
+      _description: 모든 상태
       label:
-        one: Status
-        other: Statutes
+        one: 상태
+        other: 상태
     places:
-      _description: All places
+      _description: 모든 장소
       label:
-        one: Place
-        other: Places
+        one: 장소
+        other: 장소
     posts:
-      _description: All news
+      _description: 모든 뉴스
       label:
-        one: New
-        other: News
+        one: 뉴스
+        other: 뉴스
     posts_categories:
-      _description: All news categories
+      _description: 모든 뉴스 카테고리
       label:
-        one: Category
-        other: Categories
+        one: 카테고리
+        other: 카테고리
     posts_expertises:
-      _description: All expertises
+      _description: 모든 전문 분야
       label:
-        one: Expertise
-        other: Expertises
+        one: 전문 분야
+        other: 전문 분야
     posts_tags:
-      _description: All news tags
+      _description: 모든 뉴스 태그
       label:
-        one: Tag
-        other: Tags
+        one: 태그
+        other: 태그
     products:
-      _description: All products
+      _description: 모든 제품
       label:
-        one: Product
-        other: Products
+        one: 제품
+        other: 제품
     products_categories:
-      _description: All products categories
+      _description: 모든 제품 카테고리
       label:
-        one: Category
-        other: Categories
+        one: 카테고리
+        other: 카테고리
     products_tags:
-      _description: All products tags
+      _description: 모든 제품 태그
       label:
-        one: Tag
-        other: Tags
+        one: 태그
+        other: 태그
     projects:
-      _description: All projects
+      _description: 모든 프로젝트
       label:
-        one: Project
-        other: Projects
+        one: 프로젝트
+        other: 프로젝트
     projects_tags:
-      _description: All projects tags
+      _description: 모든 프로젝트 태그
       label:
-        one: Tag
-        other: Tags
+        one: 태그
+        other: 태그
     projects_types:
-      _description: All projects types
+      _description: 모든 프로젝트 유형
       label:
-        one: Type
-        other: Types
+        one: 유형
+        other: 유형
     publications:
-      _description: All publications
+      _description: 모든 출판물
       label:
-        one: Publication
-        other: Publications
+        one: 출판물
+        other: 출판물
     publications_categories:
-      _description: All publications categories
+      _description: 모든 출판물 카테고리
       label:
-        one: Category
-        other: Categories
+        one: 카테고리
+        other: 카테고리
     publications_expertises:
-      _description: All expertises
+      _description: 모든 전문 분야
       label:
-        one: Expertise
-        other: Expertises
+        one: 전문 분야
+        other: 전문 분야
     publications_persons:
       label:
-        one: Person
-        other: Persons
+        one: 인물
+        other: 인물
     realestates:
-      _description: All real estates
+      _description: 모든 부동산
       label:
-        one: Real estate
-        other: Real estates
+        one: 부동산
+        other: 부동산
     realestates_categories:
-      _description: All real estates categories
+      _description: 모든 부동산 카테고리
       label:
-        one: Categorie
-        other: Categories
+        one: 카테고리
+        other: 카테고리
     realestates_persons:
-      _description: All agents
+      _description: 모든 중개인
       label:
-        one: Agent
-        other: Agents
+        one: 중개인
+        other: 중개인
     realestates_sellers:
-      _description: All sellers
+      _description: 모든 판매자
       label:
-        one: Seller
-        other: Sellers
+        one: 판매자
+        other: 판매자
     services:
-      _description: All services
+      _description: 모든 서비스
       label:
-        one: Service
-        other: Services
+        one: 서비스
+        other: 서비스
     services_categories:
-      _description: All services categories
+      _description: 모든 서비스 카테고리
       label:
-        one: Category
-        other: Categories
+        one: 카테고리
+        other: 카테고리
     tags:
-      _description: All tags
+      _description: 모든 태그
       label:
-        one: Tag
-        other: Tags
+        one: 태그
+        other: 태그
   fields:
     address:
       city:
-        label: City
+        label: 도시
       country:
-        label: Country
-      label: Address
+        label: 국가
+      label: 주소
       street:
-        label: Street
+        label: 거리
       zipcode:
-        label: Postal code
+        label: 우편번호
     align:
-      label: Alignment
+      label: 정렬
       options:
-        center: Center
-        end: End
-        start: Start
+        center: 가운데
+        end: 끝
+        start: 시작
     arguments:
       label:
-        one: Argument
-        other: Arguments
+        one: 인수
+        other: 인수
     audio:
       label:
-        one: Audio
-        other: Audios
+        one: 오디오
+        other: 오디오
       mp3:
         label: MP3
-        hint: MP3 audio file
+        hint: MP3 오디오 파일
       ogg:
         label: OGG
-        hint: OGG audio file
+        hint: OGG 오디오 파일
     author:
-      label: Author
+      label: 저자
     autoplay:
-      label: Autoplay
+      label: 자동 재생
     background:
-      label: With a background?
+      label: 배경 있음?
     background_color:
-      label: Background color
+      label: 배경색
     badge:
-      hint: Show a badge
-      label: Badge
+      hint: 배지 표시
+      label: 배지
     blocks:
       label:
-        one: Bloc
-        other: Blocs
+        one: 블록
+        other: 블록
     body:
-      label: Body
+      label: 본문
     breakpoints:
-      hint: Screen size
+      hint: 화면 크기
       label:
-        one: Breakpoint
-        other: Breakpoints
+        one: 중단점
+        other: 중단점
       options:
-        desktop: Desktop
-        laptop: Laptop
-        mobile: Mobile
-        tablet: Tablet
-        wide_tablet: Wide tablet
+        desktop: 데스크톱
+        laptop: 노트북
+        mobile: 모바일
+        tablet: 태블릿
+        wide_tablet: 와이드 태블릿
     carousel:
       arrows:
-        label: Arrows
+        label: 화살표
       autoplay:
-        label: Autoplay
+        label: 자동 재생
       focus:
-        hint: Position active slide in center?
-        label: Focus
+        hint: 활성 슬라이드를 중앙에 배치하시겠습니까?
+        label: 포커스
       gap:
-        hint: The gap between slides. Expressed in rem.
-        label: Gap
-      hint: Only for carousel display
-      label: Carousel configuration
+        hint: 슬라이드 간 간격. rem으로 표현됩니다.
+        label: 간격
+      hint: 캐러셀 표시 전용
+      label: 캐러셀 설정
       padding:
-        hint: Padding left/right of the carousel. In rem value
-        label: Padding
+        hint: 캐러셀의 왼쪽/오른쪽 패딩. rem 값
+        label: 패딩
       pagination:
-        label: Pagination
+        label: 페이지네이션
       params:
-        label: Params
+        label: 매개변수
       perpage:
-        hint: Number of slides to display
-        label: Per page
+        hint: 표시할 슬라이드 수
+        label: 페이지당
       responsive:
-        label: Responsive
+        label: 반응형
       type:
-        label: Carousel type
+        label: 캐러셀 유형
     chart:
-      label: Chart
+      label: 차트
       data:
-        label: Data (code)
-        hint: 'Documentation: https://www.chartjs.org/docs/'
+        label: 데이터 (코드)
+        hint: '문서: https://www.chartjs.org/docs/'
       type:
-        label: Chart type
+        label: 차트 유형
         options:
-          bar: Bar
-          line: Line
-          pie: Pie
-          polarArea: Polar area
-          radar: Radar
+          bar: 막대
+          line: 선
+          pie: 원형
+          polarArea: 극좌표 영역
+          radar: 레이더
     class:
-      label: Class
-      hint: Add CSS class to this component
+      label: 클래스
+      hint: 이 구성 요소에 CSS 클래스 추가
     code:
-      label: Code
+      label: 코드
     color:
-      label: Color
+      label: 색상
     column:
-      label: Column
+      label: 열
     contact:
       label:
-        one: Contact
-        other: Contacts
+        one: 연락처
+        other: 연락처
     controls:
-      label: Controls
+      label: 컨트롤
     coordinates:
-      hint: 'Easily find contact details: https://www.latlong.net/convert-address-to-lat-long.html'
-      label: Geographic coordinates
+      hint: '좌표를 쉽게 찾기: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: 지리 좌표
       lat:
-        label: Latitude
+        label: 위도
       lng:
-        label: Longitude
+        label: 경도
     count:
-      hint: Items to display
-      label: Count
+      hint: 표시할 항목
+      label: 개수
     credit:
-      label: Credit
+      label: 크레딧
     cta:
       label:
         one: CTA
-        other: CTAs
+        other: CTA
     datas:
       label:
-        one: Data
-        other: Datas
+        one: 데이터
+        other: 데이터
     date:
-      from: From
-      label: Date
-      sale: Sale date
-      to: To
+      from: 시작일
+      label: 날짜
+      sale: 판매일
+      to: 종료일
     description:
       hint:
-        Displayed in tabs, search results, and in SMS/Messages/Social networks
-        preview
-      label: Description
+        탭, 검색 결과 및 SMS/메시지/소셜 네트워크
+        미리보기에 표시됩니다
+      label: 설명
     diagnostic:
       epd:
         label: Kwh
-        hint: Energy performance diagnostics (DPE)
+        hint: 에너지 성능 진단 (DPE)
       ghg:
         label: Co2
-        hint: Greenhouse gas (GHG)
-      label: Diagnostic
-      in_progress: In progress?
+        hint: 온실가스 (GHG)
+      label: 진단
+      in_progress: 진행 중?
     direction:
-      label: Direction
+      label: 방향
       options:
-        ltr: Text on the left / image on the right
-        rtl: Image on the left / text on the right
+        ltr: 텍스트 왼쪽 / 이미지 오른쪽
+        rtl: 이미지 왼쪽 / 텍스트 오른쪽
     discount:
-      hint: 'Amount of the reduction, e.g: 30%'
-      label: Discount
-      pattern: Value only (without currency)
+      hint: '할인 금액, 예: 30%'
+      label: 할인
+      pattern: 값만 (통화 없이)
     document:
       label:
-        one: Document
-        other: Documents
+        one: 문서
+        other: 문서
     draft:
-      label: Draft
+      label: 초안
     email:
-      label: Email
+      label: 이메일
     embed:
-      label: Embed
+      label: 임베드
     event:
       label:
-        one: Event
-        other: Events
+        one: 이벤트
+        other: 이벤트
     fax:
-      label: Fax
-      hint: 'International format, e.g: +33 1 23 45 67 89'
+      label: 팩스
+      hint: '국제 형식, 예: +33 1 23 45 67 89'
     featured_image:
-      hint: Displayed in search results, and in SMS/Messages/Social networks preview
-      label: Image principale
+      hint: 검색 결과 및 SMS/메시지/소셜 네트워크 미리보기에 표시됩니다
+      label: 주요 이미지
     fee:
       label:
-        one: Fee
-        other: Fees
+        one: 수수료
+        other: 수수료
     figure:
-      label: Figure
+      label: 그림
     form:
       autocomplete:
-        label: Autocomplete
+        label: 자동 완성
         options:
-          city: City
-          country_name: Country name
-          email: Email
-          family_name: Lastname
-          given_name: Firstname
-          honorific_prefix: Title
-          name: Name
-          organization: Organization
-          postal_code: Postal code
-          state: State
-          street_address: Street
-          tel: Tel
+          city: 도시
+          country_name: 국가명
+          email: 이메일
+          family_name: 성
+          given_name: 이름
+          honorific_prefix: 경칭
+          name: 이름
+          organization: 조직
+          postal_code: 우편번호
+          state: 주
+          street_address: 거리
+          tel: 전화번호
       full:
-        label: Full width field?
+        label: 전체 너비 필드?
       hiddens:
         label:
-          one: Hidden field
-          other: Hidden fields
+          one: 숨김 필드
+          other: 숨김 필드
       items:
         label:
-          one: Field
-          other: Fields
-      label: Form
+          one: 필드
+          other: 필드
+      label: 양식
       options:
-        hint: Only for select fields
+        hint: 선택 필드만
         label:
-          one: Option
-          other: Options
+          one: 옵션
+          other: 옵션
       type:
-        hint: Choose type field
-        email: Email
-        label: Type
-        radio: Radio
-        select: Select
-        tel: Telephone
-        text: Text
-        textarea: Textarea
+        hint: 필드 유형 선택
+        email: 이메일
+        label: 유형
+        radio: 라디오
+        select: 선택
+        tel: 전화번호
+        text: 텍스트
+        textarea: 텍스트 영역
       value:
-        hint: Only for checkbox and radio fields
-        label: Value
+        hint: 체크박스 및 라디오 필드만
+        label: 값
     gallery:
-      label: Gallery
+      label: 갤러리
     grid:
-      label: Grid
+      label: 그리드
       options:
-        container: Container
-        full: Full
-        large: Large
-        medium: Medium
-        small: Small
+        container: 컨테이너
+        full: 전체
+        large: 큰
+        medium: 중간
+        small: 작은
     heading:
-      label: Heading
+      label: 제목
     hero:
-      label: Hero
+      label: 히어로
     icon:
-      hint: Icon name from https://icons.getbootstrap.com/
-      label: Icon
+      hint: https://icons.getbootstrap.com/ 의 아이콘 이름
+      label: 아이콘
     id:
       label: ID
     image:
       label: 
-        one: Image
-        other: Images
+        one: 이미지
+        other: 이미지
       alt:
-        hint: For an image that conveys information (leave blank if decorative image)
-        label: Text alternative
+        hint: 정보를 전달하는 이미지의 경우 (장식 이미지인 경우 비워 두기)
+        label: 대체 텍스트
       filter:
-        hint: Set Linear for picture or screenshot, leave empty to keep default config
-        label: Change filter quality?
+        hint: 사진이나 스크린샷의 경우 Linear로 설정, 기본 설정을 유지하려면 비워 두기
+        label: 필터 품질 변경?
         options:
-          box: Simple and fast averaging filter appropriate for downscaling (default)
-          catmullrom: Sharp cubic filter that is faster than the Lanczos filter while providing similar results
-          lanczos: High-quality resampling filter for photographic images yielding sharp results
-          linear: Bilinear resampling filter, produces smooth output, faster than cubic filters
+          box: 다운스케일링에 적합한 간단하고 빠른 평균화 필터 (기본값)
+          catmullrom: Lanczos 필터보다 빠르면서 유사한 결과를 생성하는 선명한 3차 필터
+          lanczos: 선명한 결과를 생성하는 사진 이미지용 고품질 리샘플링 필터
+          linear: 부드러운 출력을 생성하는 쌍선형 리샘플링 필터, 3차 필터보다 빠름
       src:
-        hint: 'Resize and compress image before sending : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
-        label: Image
+        hint: '전송 전에 이미지 크기 조정 및 압축: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: 이미지
     images:
       label: 
-        one: Image
-        other: Images
+        one: 이미지
+        other: 이미지
     is_background:
-      label: Is background?
+      label: 배경으로?
     is_blank:
-      label: Is blank?
+      label: 새 창?
     is_card:
-      hint: Adds a background behind the text
-      label: Is card?
+      hint: 텍스트 뒤에 배경 추가
+      label: 카드로?
     is_darken:
-      label: Darken?
+      label: 어둡게?
     is_exclusive:
-      label: Exclusive?
+      label: 독점?
     is_half:
-      label: Half size?
+      label: 절반 크기?
     is_highlighted:
-      label: Is highlighted?
+      label: 강조?
     is_logo:
-      hint: Positioned in the center and not cropped
-      label: Is logo?
+      hint: 중앙에 배치되고 자르지 않음
+      label: 로고로?
     is_open:
-      label: Open?
+      label: 열림?
     is_pinned:
-      label: Pinned?
+      label: 고정?
     is_screenshot:
-      hint: Add fake browser
-      label: Is screenshot?
+      hint: 가짜 브라우저 추가
+      label: 스크린샷으로?
     items:
       label:
-        one: Item
-        other: Items
+        one: 항목
+        other: 항목
     keyfeatures:
-      hint: 'e.g: Location, exposure…'
+      hint: '예: 위치, 방향…'
       label:
-        one: key feature
-        other: Key features
+        one: 주요 기능
+        other: 주요 기능
     label:
-      label: Label
+      label: 레이블
     lang:
-      hint: Enter code lang (e.g. fr) if different of the current page language
-      label: Language
+      hint: 현재 페이지 언어와 다른 경우 언어 코드 입력 (예: ko)
+      label: 언어
     layout:
-      label: Layout
+      label: 레이아웃
       options:
-        carousel: Carousel
-        grid: Grid
-        list: List
+        carousel: 캐러셀
+        grid: 그리드
+        list: 목록
     legal:
-      label: Legal
+      label: 법적
     legend:
-      label: Legend
+      label: 범례
     limit:
-      label: Limit
+      label: 제한
     links:
       label:
-        one: Link
-        other: Links
+        one: 링크
+        other: 링크
     location:
-      label: Location
+      label: 위치
     loop:
-      label: Loop
+      label: 루프
     name:
-      label: Name
+      label: 이름
     map:
-      label: Map
+      label: 지도
     newsletter:
       form:
-        label: Form
+        label: 양식
     notes:
-      hint: 'To link a word in the text to a note, suffix it with "[\*]". Notes and "[\*]" are linked by their order.'
+      hint: '텍스트의 단어를 노트에 연결하려면 "[\\*]"를 추가하세요. 노트와 "[\\*]"는 순서로 연결됩니다.'
       label:
-        one: Note
-        other: Notes
+        one: 노트
+        other: 노트
     offer:
       label:
-        one: Offer
-        other: Offers
+        one: 제안
+        other: 제안
     offset:
-      label: Offset
+      label: 오프셋
       options:
-        center: Center
-        end: End
-        start: Start
+        center: 가운데
+        end: 끝
+        start: 시작
     parent:
-      label: Parent page
+      label: 상위 페이지
     pdf:
       label: PDF
-      hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+      hint: '전송 전에 PDF 압축: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
-      label: Telephone Number
-      hint: 'Format international, ex: +33 1 23 45 67 89'
+      label: 전화번호
+      hint: '국제 형식, 예: +33 1 23 45 67 89'
     placeholder:
-      label: Placeholder
+      label: 플레이스홀더
     poster:
-      label: Poster
-      hint: Placehoster image for video
+      label: 포스터
+      hint: 동영상용 플레이스홀더 이미지
     prefix:
-      label: Prefix
+      label: 접두사
     press:
-      label: Press
+      label: 언론
     price:
-      hide: Hide price
-      hint: 'e.g: 300000 (for 300 000 €)'
-      label: Price
-      sold: Sale price
+      hide: 가격 숨기기
+      hint: '예: 300000 (300,000€의 경우)'
+      label: 가격
+      sold: 판매 가격
     quote:
-      label: Quote
+      label: 인용
     realestates_energies:
       label:
-        one: Energy
-        other: Energies
+        one: 에너지
+        other: 에너지
       heating:
-        label: Heating
+        label: 난방
         options:
-          collective: Collective
-          individual: Individual
+          collective: 집단
+          individual: 개별
       heating_type:
-        label: Heating type
+        label: 난방 유형
         options:
-          reversible_ac: Reversible AC
-          electric: Electric
-          gas: Gas
-          solar: Solar
+          reversible_ac: 리버서블 에어컨
+          electric: 전기
+          gas: 가스
+          solar: 태양열
     realestates_informations:
       area:
-        hint: Expressed in m2
-        label: Interior surface
+        hint: m2로 표현
+        label: 내부 면적
       bathrooms:
-        label: Number of bathrooms
+        label: 욕실 수
       bedrooms:
-        label: Number of rooms
+        label: 방 수
       district:
-        label: District
+        label: 지구
       exposure:
-        label: Exposure
+        label: 방향
       field:
-        hint: Expressed in m2
-        label: Exterior surface
+        hint: m2로 표현
+        label: 외부 면적
       floor:
-        label: Floor
+        label: 층
       has_balcony:
-        label: Balcon?
+        label: 발코니?
       has_box:
-        label: Box?
+        label: 박스?
       has_cave:
-        label: Cave?
+        label: 지하실?
       has_elevator:
-        label: Elevator?
+        label: 엘리베이터?
       has_garage:
-        label: Garage?
+        label: 차고?
       has_outbuilding:
-        label: Outbuilding?
+        label: 별채?
       has_parking:
-        label: Parking?
+        label: 주차장?
       has_swimmingpool:
-        label: Swimming pool?
+        label: 수영장?
       has_terrace:
-        label: Terrace?
-      label: Informations
+        label: 테라스?
+      label: 정보
       levels:
-        label: Number of floors
+        label: 층 수
       rooms:
-        label: Number of rooms
+        label: 방 수
       showerrooms:
-        label: Number of showerrooms
+        label: 샤워실 수
       wc:
-        label: WC
+        label: 화장실
       year:
-        label: Year of construction
+        label: 건축 연도
     realestates_types:
-      label: Transaction Type
+      label: 거래 유형
       options:
-        rent: Rent
-        sale: Sale
+        rent: 임대
+        sale: 판매
     reference:
-      label: Reference
+      label: 참조
     rent:
-      label: Rent?
+      label: 임대됨?
     required:
-      label: Required
+      label: 필수
     section:
-      hint: Select the section to display
-      label: Section
+      hint: 표시할 섹션 선택
+      label: 섹션
     show_more:
-      hint: Shows a button to see more items
-      label: Show more?
+      hint: 더 많은 항목을 보기 위한 버튼 표시
+      label: 더 보기?
     show_places:
-      hint: Only if you have places already saved (this will disable the marker below)
-      label: Show all registered places?
+      hint: 이미 저장된 장소가 있는 경우에만 (아래 마커가 비활성화됩니다)
+      label: 등록된 모든 장소 표시?
     slug:
-      hint: Leave empty to automate with the title. **Be careful to SEO impact.**
-      label: Slug
+      hint: 제목으로 자동화하려면 비워 두세요. **SEO 영향에 주의하세요.**
+      label: 슬러그
       pattern:
-        Contain only lowercase letters, numbers, and hyphens, with no spaces,
-        accents, or special characters
+        소문자, 숫자 및 하이픈만 포함하며 공백,
+        악센트 또는 특수 문자는 포함하지 않음
     socials:
       label:
-        one: Social
-        other: Socials
-      plateform: Platform
+        one: 소셜
+        other: 소셜
+      plateform: 플랫폼
       twitter:
         label: Twitter/X
-        hint: Username
+        hint: 사용자 이름
     sold:
-      label: Sold/rent ?
+      label: 판매됨/임대됨?
     state:
-      label: State
+      label: 상태
       options:
-        danger: Danger
-        dark: Dark
-        info: Info
-        light: Light
-        primary: Primary
-        secondary: Secondary
-        success: Success
-        warning: Warning
+        danger: 위험
+        dark: 어두움
+        info: 정보
+        light: 밝음
+        primary: 기본
+        secondary: 보조
+        success: 성공
+        warning: 경고
     status:
-      label: Status
+      label: 상태
     submit:
-      label: Send button text
+      label: 제출 버튼 텍스트
     subtitle:
-      label: Subtitle
+      label: 부제
     suffix:
-      hint: 'e.g: %'
-      label: Suffix
+      hint: '예: %'
+      label: 접미사
     summary:
-      label: Summary
+      label: 요약
     surtitle:
-      label: Surtitle
+      label: 상위 제목
     text:
-      label: Text
+      label: 텍스트
     title:
-      label: Title
+      label: 제목
     title_page:
       hint:
-        Displayed in tabs, search results, and in SMS/Messages/Social networks
-        preview
-      label: Page title
+        탭, 검색 결과 및 SMS/메시지/소셜 네트워크
+        미리보기에 표시됩니다
+      label: 페이지 제목
     transcription:
-      label: Transcription
+      label: 전사
     url:
       label: URL
     value:
-      label: Value
+      label: 값
     video:
       label: 
-        one: Video
-        other: Videos
+        one: 동영상
+        other: 동영상
       mp4:
         label: MP4
-        hint: MP4 video file
+        hint: MP4 동영상 파일
         mobile:
-          label: MP4 (Mobile)
-          hint: MP4 video file for mobile
+          label: MP4 (모바일)
+          hint: 모바일용 MP4 동영상 파일
       webm:
         label: WEBM
-        hint: WEBM video file
+        hint: WEBM 동영상 파일
         mobile:
-          label: WEBM (Mobile)
-          hint: WEBM video file for mobile
+          label: WEBM (모바일)
+          hint: 모바일용 WEBM 동영상 파일
     website:
       hint: URL (https://…)
-      label: Website
+      label: 웹사이트
     weight:
-      label: Position (importance)
-      hint: Knowing that 10 is the most important and 100 the least important
-    year: Year
+      label: 위치 (중요도)
+      hint: 10이 가장 중요하고 100이 가장 덜 중요함을 알아두세요
+    year: 년
     zoom:
-      label: Zoom
+      label: 줌
   files:
-    banner: Information banner at the top of the site
-    footer: Information text at the bottom of the site
+    banner: 사이트 상단의 정보 배너
+    footer: 사이트 하단의 정보 텍스트
     nav:
-      label: Navigation
-      legal: Legals navigation (mentions, policy…)
-      primary: Primary navigation
-      secondary: Secondary navigation
-      social: Socials navigation
+      label: 내비게이션
+      legal: 법적 내비게이션 (약관, 정책…)
+      primary: 기본 내비게이션
+      secondary: 보조 내비게이션
+      social: 소셜 내비게이션
     seo:
-      label: Global SEO
-      title: Website name
+      label: 글로벌 SEO
+      title: 웹사이트 이름
   group:
-    year: Year
+    year: 년
   shortcodes:
     alert:
-      label: Alert
+      label: 알림
     badge:
-      label: Badge
+      label: 배지
     blank_link:
-      label: Blank link
+      label: 빈 링크
     blockquote:
-      label: Blockquote
+      label: 블록 인용
     button:
-      label: Button
+      label: 버튼
     details:
-      label: Details
+      label: 세부 정보
     figure:
-      label: Figure
+      label: 그림
     map:
-      label: Map
+      label: 지도
     twitter:
       _id: Twitter ID
       label: Twitter / X
-      user: Twitter username
+      user: Twitter 사용자 이름
     youtube:
       _id: Youtube ID
       label: Youtube

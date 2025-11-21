@@ -1,842 +1,842 @@
 admin:
   blocks:
     alert:
-      label: Alert
+      label: Avviso
     audio:
       label: Audio
     chart:
-      label: Chart
+      label: Grafico
     comparison:
-      label: Comparison
+      label: Confronto
     cta:
-      label: Call to action
+      label: Invito all'azione
     datas:
-      label: Datas
+      label: Dati
     editorial:
-      label: Editorial
+      label: Editoriale
     embed:
-      label: Embed
+      label: Incorpora
     faq:
       label: FAQ
     figure:
-      label: Figure
+      label: Figura
     form:
-      label: Form
+      label: Modulo
     gallery:
-      label: Gallery
+      label: Galleria
     images:
-      label: Images
+      label: Immagini
     informations:
-      label: Informations
+      label: Informazioni
     instagram:
       label: Instagram
     latest:
-      label: Latest items
+      label: Ultimi elementi
     location:
-      label: Location
+      label: Posizione
     logos:
-      label: Logos
+      label: Loghi
     map:
-      label: Map
+      label: Mappa
     newsletter:
       label: Newsletter
     paragraph:
-      label: Paragraph
+      label: Paragrafo
     pushes:
-      label: Pushes
+      label: Notifiche
     quote:
-      label: Quote
+      label: Citazione
     search:
-      label: Search
+      label: Ricerca
     selected:
-      label: Selection {{ .section }}
+      label: Selezione {{ .section }}
     testimonials:
-      label: Testimonials
+      label: Testimonianze
     timeline:
-      label: Timeline
+      label: Cronologia
     title:
-      label: Title
+      label: Titolo
     video:
       label: Video
   collections:
     authors:
       label:
-        one: Author
-        other: Authors
+        one: Autore
+        other: Autori
     casestudies:
-      _description: All cases studies
+      _description: Tutti i casi studio
       label:
-        one: Case study
-        other: Cases studies
+        one: Caso studio
+        other: Casi studio
     categories:
       label:
-        one: Category
-        other: Categories
+        one: Categoria
+        other: Categorie
     config:
-      _description: All config
+      _description: Tutte le configurazioni
       label:
-        one: Config
-        other: Config
+        one: Configurazione
+        other: Configurazioni
     docs:
-      _description: All docs
+      _description: Tutti i documenti
       label:
-        one: Doc
-        other: Docs
+        one: Documento
+        other: Documenti
     events:
-      _description: All events
+      _description: Tutti gli eventi
       label:
-        one: Event
-        other: Events
+        one: Evento
+        other: Eventi
     events_categories:
-      _description: All events categories
+      _description: Tutte le categorie di eventi
       label:
-        one: Category
-        other: Categories
+        one: Categoria
+        other: Categorie
     expertises:
-      _description: All expertises
+      _description: Tutte le competenze
       label:
-        one: Expertise
-        other: Expertises
+        one: Competenza
+        other: Competenze
     home: Home
     indexes:
-      _description: All index pages
+      _description: Tutte le pagine indice
       label:
-        one: Index
-        other: Index
+        one: Indice
+        other: Indici
     jobs:
-      _description: All jobs
+      _description: Tutte le offerte di lavoro
       label:
-        one: Job
-        other: Jobs
+        one: Offerta di lavoro
+        other: Offerte di lavoro
     jobs_categories:
-      _description: All news categories
+      _description: Tutte le categorie di offerte
       label:
-        one: Category
-        other: Categories
+        one: Categoria
+        other: Categorie
     jobs_expertises:
-      _description: All expertises
+      _description: Tutte le competenze
       label:
-        one: Expertise
-        other: Expertises
+        one: Competenza
+        other: Competenze
     jobs_places:
-      _description: All places
+      _description: Tutti i luoghi
       label:
-        one: Place
-        other: Places
+        one: Luogo
+        other: Luoghi
     jobs_tags:
-      _description: All products tags
+      _description: Tutti i tag dei prodotti
       label:
         one: Tag
-        other: Tags
+        other: Tag
     pages:
-      _description: All pages
+      _description: Tutte le pagine
       label:
-        one: Page
-        other: Pages
+        one: Pagina
+        other: Pagine
     persons:
-      _description: All persons
+      _description: Tutte le persone
       label:
-        one: Person
-        other: Persons
+        one: Persona
+        other: Persone
     persons_expertises:
-      _description: All expertises
+      _description: Tutte le competenze
       label:
-        one: Expertise
-        other: Expertises
+        one: Competenza
+        other: Competenze
     persons_places:
-      _description: All places
+      _description: Tutti i luoghi
       label:
-        one: Place
-        other: Places
+        one: Luogo
+        other: Luoghi
     persons_statutes:
-      _description: All statutes
+      _description: Tutti gli statuti
       label:
-        one: Status
-        other: Statutes
+        one: Statuto
+        other: Statuti
     places:
-      _description: All places
+      _description: Tutti i luoghi
       label:
-        one: Place
-        other: Places
+        one: Luogo
+        other: Luoghi
     posts:
-      _description: All news
+      _description: Tutte le notizie
       label:
-        one: New
-        other: News
+        one: Notizia
+        other: Notizie
     posts_categories:
-      _description: All news categories
+      _description: Tutte le categorie di notizie
       label:
-        one: Category
-        other: Categories
+        one: Categoria
+        other: Categorie
     posts_expertises:
-      _description: All expertises
+      _description: Tutte le competenze
       label:
-        one: Expertise
-        other: Expertises
+        one: Competenza
+        other: Competenze
     posts_tags:
-      _description: All news tags
+      _description: Tutti i tag delle notizie
       label:
         one: Tag
-        other: Tags
+        other: Tag
     products:
-      _description: All products
+      _description: Tutti i prodotti
       label:
-        one: Product
-        other: Products
+        one: Prodotto
+        other: Prodotti
     products_categories:
-      _description: All products categories
+      _description: Tutte le categorie di prodotti
       label:
-        one: Category
-        other: Categories
+        one: Categoria
+        other: Categorie
     products_tags:
-      _description: All products tags
+      _description: Tutti i tag dei prodotti
       label:
         one: Tag
-        other: Tags
+        other: Tag
     projects:
-      _description: All projects
+      _description: Tutti i progetti
       label:
-        one: Project
-        other: Projects
+        one: Progetto
+        other: Progetti
     projects_tags:
-      _description: All projects tags
+      _description: Tutti i tag dei progetti
       label:
         one: Tag
-        other: Tags
+        other: Tag
     projects_types:
-      _description: All projects types
+      _description: Tutti i tipi di progetti
       label:
-        one: Type
-        other: Types
+        one: Tipo
+        other: Tipi
     publications:
-      _description: All publications
+      _description: Tutte le pubblicazioni
       label:
-        one: Publication
-        other: Publications
+        one: Pubblicazione
+        other: Pubblicazioni
     publications_categories:
-      _description: All publications categories
+      _description: Tutte le categorie di pubblicazioni
       label:
-        one: Category
-        other: Categories
+        one: Categoria
+        other: Categorie
     publications_expertises:
-      _description: All expertises
+      _description: Tutte le competenze
       label:
-        one: Expertise
-        other: Expertises
+        one: Competenza
+        other: Competenze
     publications_persons:
       label:
-        one: Person
-        other: Persons
+        one: Persona
+        other: Persone
     realestates:
-      _description: All real estates
+      _description: Tutti gli immobili
       label:
-        one: Real estate
-        other: Real estates
+        one: Immobile
+        other: Immobili
     realestates_categories:
-      _description: All real estates categories
+      _description: Tutte le categorie di immobili
       label:
-        one: Categorie
-        other: Categories
+        one: Categoria
+        other: Categorie
     realestates_persons:
-      _description: All agents
+      _description: Tutti gli agenti
       label:
-        one: Agent
-        other: Agents
+        one: Agente
+        other: Agenti
     realestates_sellers:
-      _description: All sellers
+      _description: Tutti i venditori
       label:
-        one: Seller
-        other: Sellers
+        one: Venditore
+        other: Venditori
     services:
-      _description: All services
+      _description: Tutti i servizi
       label:
-        one: Service
-        other: Services
+        one: Servizio
+        other: Servizi
     services_categories:
-      _description: All services categories
+      _description: Tutte le categorie di servizi
       label:
-        one: Category
-        other: Categories
+        one: Categoria
+        other: Categorie
     tags:
-      _description: All tags
+      _description: Tutti i tag
       label:
         one: Tag
-        other: Tags
+        other: Tag
   fields:
     address:
       city:
-        label: City
+        label: Città
       country:
-        label: Country
-      label: Address
+        label: Paese
+      label: Indirizzo
       street:
-        label: Street
+        label: Via
       zipcode:
-        label: Postal code
+        label: Codice postale
     align:
-      label: Alignment
+      label: Allineamento
       options:
-        center: Center
-        end: End
-        start: Start
+        center: Centro
+        end: Fine
+        start: Inizio
     arguments:
       label:
-        one: Argument
-        other: Arguments
+        one: Argomento
+        other: Argomenti
     audio:
       label:
         one: Audio
-        other: Audios
+        other: Audio
       mp3:
         label: MP3
-        hint: MP3 audio file
+        hint: File audio MP3
       ogg:
         label: OGG
-        hint: OGG audio file
+        hint: File audio OGG
     author:
-      label: Author
+      label: Autore
     autoplay:
-      label: Autoplay
+      label: Riproduzione automatica
     background:
-      label: With a background?
+      label: Con sfondo?
     background_color:
-      label: Background color
+      label: Colore di sfondo
     badge:
-      hint: Show a badge
+      hint: Mostra un badge
       label: Badge
     blocks:
       label:
-        one: Bloc
-        other: Blocs
+        one: Blocco
+        other: Blocchi
     body:
-      label: Body
+      label: Corpo del testo
     breakpoints:
-      hint: Screen size
+      hint: Dimensione dello schermo
       label:
         one: Breakpoint
-        other: Breakpoints
+        other: Breakpoint
       options:
         desktop: Desktop
         laptop: Laptop
         mobile: Mobile
         tablet: Tablet
-        wide_tablet: Wide tablet
+        wide_tablet: Tablet largo
     carousel:
       arrows:
-        label: Arrows
+        label: Frecce
       autoplay:
-        label: Autoplay
+        label: Riproduzione automatica
       focus:
-        hint: Position active slide in center?
+        hint: Posizionare la diapositiva attiva al centro?
         label: Focus
       gap:
-        hint: The gap between slides. Expressed in rem.
-        label: Gap
-      hint: Only for carousel display
-      label: Carousel configuration
+        hint: Lo spazio tra le diapositive. Espresso in rem.
+        label: Spazio
+      hint: Solo per visualizzazione a carosello
+      label: Configurazione carosello
       padding:
-        hint: Padding left/right of the carousel. In rem value
+        hint: Padding sinistro/destro del carosello. In valore rem
         label: Padding
       pagination:
-        label: Pagination
+        label: Paginazione
       params:
-        label: Params
+        label: Parametri
       perpage:
-        hint: Number of slides to display
-        label: Per page
+        hint: Numero di diapositive da visualizzare
+        label: Per pagina
       responsive:
         label: Responsive
       type:
-        label: Carousel type
+        label: Tipo di carosello
     chart:
-      label: Chart
+      label: Grafico
       data:
-        label: Data (code)
-        hint: 'Documentation: https://www.chartjs.org/docs/'
+        label: Dati (codice)
+        hint: 'Documentazione: https://www.chartjs.org/docs/'
       type:
-        label: Chart type
+        label: Tipo di grafico
         options:
-          bar: Bar
-          line: Line
-          pie: Pie
-          polarArea: Polar area
+          bar: Barre
+          line: Linea
+          pie: Torta
+          polarArea: Area polare
           radar: Radar
     class:
-      label: Class
-      hint: Add CSS class to this component
+      label: Classe
+      hint: Aggiungi classe CSS a questo componente
     code:
-      label: Code
+      label: Codice
     color:
-      label: Color
+      label: Colore
     column:
-      label: Column
+      label: Colonna
     contact:
       label:
-        one: Contact
-        other: Contacts
+        one: Contatto
+        other: Contatti
     controls:
-      label: Controls
+      label: Controlli
     coordinates:
-      hint: 'Easily find contact details: https://www.latlong.net/convert-address-to-lat-long.html'
-      label: Geographic coordinates
+      hint: 'Trova facilmente le coordinate: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Coordinate geografiche
       lat:
-        label: Latitude
+        label: Latitudine
       lng:
-        label: Longitude
+        label: Longitudine
     count:
-      hint: Items to display
-      label: Count
+      hint: Elementi da visualizzare
+      label: Conteggio
     credit:
-      label: Credit
+      label: Credito
     cta:
       label:
         one: CTA
-        other: CTAs
+        other: CTA
     datas:
       label:
-        one: Data
-        other: Datas
+        one: Dato
+        other: Dati
     date:
-      from: From
-      label: Date
-      sale: Sale date
-      to: To
+      from: Da
+      label: Data
+      sale: Data di vendita
+      to: A
     description:
       hint:
-        Displayed in tabs, search results, and in SMS/Messages/Social networks
-        preview
-      label: Description
+        Visualizzato nelle schede, nei risultati di ricerca e nell'anteprima di
+        SMS/Messaggi/Social network
+      label: Descrizione
     diagnostic:
       epd:
         label: Kwh
-        hint: Energy performance diagnostics (DPE)
+        hint: Diagnosi di prestazione energetica (DPE)
       ghg:
         label: Co2
-        hint: Greenhouse gas (GHG)
-      label: Diagnostic
-      in_progress: In progress?
+        hint: Gas serra (GHG)
+      label: Diagnosi
+      in_progress: In corso?
     direction:
-      label: Direction
+      label: Direzione
       options:
-        ltr: Text on the left / image on the right
-        rtl: Image on the left / text on the right
+        ltr: Testo a sinistra / immagine a destra
+        rtl: Immagine a sinistra / testo a destra
     discount:
-      hint: 'Amount of the reduction, e.g: 30%'
-      label: Discount
-      pattern: Value only (without currency)
+      hint: 'Importo della riduzione, es.: 30%'
+      label: Sconto
+      pattern: Solo valore (senza valuta)
     document:
       label:
-        one: Document
-        other: Documents
+        one: Documento
+        other: Documenti
     draft:
-      label: Draft
+      label: Bozza
     email:
       label: Email
     embed:
-      label: Embed
+      label: Incorpora
     event:
       label:
-        one: Event
-        other: Events
+        one: Evento
+        other: Eventi
     fax:
       label: Fax
-      hint: 'International format, e.g: +33 1 23 45 67 89'
+      hint: 'Formato internazionale, es.: +33 1 23 45 67 89'
     featured_image:
-      hint: Displayed in search results, and in SMS/Messages/Social networks preview
-      label: Image principale
+      hint: Visualizzato nei risultati di ricerca e nell'anteprima di SMS/Messaggi/Social network
+      label: Immagine principale
     fee:
       label:
-        one: Fee
-        other: Fees
+        one: Onorario
+        other: Onorari
     figure:
-      label: Figure
+      label: Figura
     form:
       autocomplete:
-        label: Autocomplete
+        label: Autocompletamento
         options:
-          city: City
-          country_name: Country name
+          city: Città
+          country_name: Nome del paese
           email: Email
-          family_name: Lastname
-          given_name: Firstname
-          honorific_prefix: Title
-          name: Name
-          organization: Organization
-          postal_code: Postal code
-          state: State
-          street_address: Street
-          tel: Tel
+          family_name: Cognome
+          given_name: Nome
+          honorific_prefix: Titolo
+          name: Nome
+          organization: Organizzazione
+          postal_code: Codice postale
+          state: Stato
+          street_address: Via
+          tel: Telefono
       full:
-        label: Full width field?
+        label: Campo a larghezza intera?
       hiddens:
         label:
-          one: Hidden field
-          other: Hidden fields
+          one: Campo nascosto
+          other: Campi nascosti
       items:
         label:
-          one: Field
-          other: Fields
-      label: Form
+          one: Campo
+          other: Campi
+      label: Modulo
       options:
-        hint: Only for select fields
+        hint: Solo per campi di selezione
         label:
-          one: Option
-          other: Options
+          one: Opzione
+          other: Opzioni
       type:
-        hint: Choose type field
+        hint: Scegli tipo di campo
         email: Email
-        label: Type
+        label: Tipo
         radio: Radio
-        select: Select
-        tel: Telephone
-        text: Text
-        textarea: Textarea
+        select: Selezione
+        tel: Telefono
+        text: Testo
+        textarea: Area di testo
       value:
-        hint: Only for checkbox and radio fields
-        label: Value
+        hint: Solo per campi checkbox e radio
+        label: Valore
     gallery:
-      label: Gallery
+      label: Galleria
     grid:
-      label: Grid
+      label: Griglia
       options:
-        container: Container
-        full: Full
-        large: Large
-        medium: Medium
-        small: Small
+        container: Contenitore
+        full: Completo
+        large: Grande
+        medium: Medio
+        small: Piccolo
     heading:
-      label: Heading
+      label: Intestazione
     hero:
       label: Hero
     icon:
-      hint: Icon name from https://icons.getbootstrap.com/
-      label: Icon
+      hint: Nome dell'icona da https://icons.getbootstrap.com/
+      label: Icona
     id:
       label: ID
     image:
       label: 
-        one: Image
-        other: Images
+        one: Immagine
+        other: Immagini
       alt:
-        hint: For an image that conveys information (leave blank if decorative image)
-        label: Text alternative
+        hint: Per un'immagine che trasmette informazioni (lasciare vuoto se decorativa)
+        label: Testo alternativo
       filter:
-        hint: Set Linear for picture or screenshot, leave empty to keep default config
-        label: Change filter quality?
+        hint: Imposta Linear per foto o screenshot, lascia vuoto per mantenere la configurazione predefinita
+        label: Cambiare qualità del filtro?
         options:
-          box: Simple and fast averaging filter appropriate for downscaling (default)
-          catmullrom: Sharp cubic filter that is faster than the Lanczos filter while providing similar results
-          lanczos: High-quality resampling filter for photographic images yielding sharp results
-          linear: Bilinear resampling filter, produces smooth output, faster than cubic filters
+          box: Filtro di media semplice e veloce appropriato per il ridimensionamento (predefinito)
+          catmullrom: Filtro cubico nitido più veloce di Lanczos con risultati simili
+          lanczos: Filtro di ricampionamento di alta qualità per immagini fotografiche con risultati nitidi
+          linear: Filtro di ricampionamento bilineare, produce output fluido, più veloce dei filtri cubici
       src:
-        hint: 'Resize and compress image before sending : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
-        label: Image
+        hint: 'Ridimensiona e comprimi l''immagine prima dell''invio: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Immagine
     images:
       label: 
-        one: Image
-        other: Images
+        one: Immagine
+        other: Immagini
     is_background:
-      label: Is background?
+      label: Come sfondo?
     is_blank:
-      label: Is blank?
+      label: Nuova finestra?
     is_card:
-      hint: Adds a background behind the text
-      label: Is card?
+      hint: Aggiunge uno sfondo dietro il testo
+      label: Come scheda?
     is_darken:
-      label: Darken?
+      label: Scurire?
     is_exclusive:
-      label: Exclusive?
+      label: Esclusivo?
     is_half:
-      label: Half size?
+      label: Mezza dimensione?
     is_highlighted:
-      label: Is highlighted?
+      label: Evidenziato?
     is_logo:
-      hint: Positioned in the center and not cropped
-      label: Is logo?
+      hint: Posizionato al centro e non ritagliato
+      label: Come logo?
     is_open:
-      label: Open?
+      label: Aperto?
     is_pinned:
-      label: Pinned?
+      label: Fissato?
     is_screenshot:
-      hint: Add fake browser
-      label: Is screenshot?
+      hint: Aggiungi browser finto
+      label: Come screenshot?
     items:
       label:
-        one: Item
-        other: Items
+        one: Elemento
+        other: Elementi
     keyfeatures:
-      hint: 'e.g: Location, exposure…'
+      hint: 'es.: Posizione, esposizione…'
       label:
-        one: key feature
-        other: Key features
+        one: Caratteristica chiave
+        other: Caratteristiche chiave
     label:
-      label: Label
+      label: Etichetta
     lang:
-      hint: Enter code lang (e.g. fr) if different of the current page language
-      label: Language
+      hint: Inserisci codice lingua (es. it) se diverso dalla lingua della pagina corrente
+      label: Lingua
     layout:
       label: Layout
       options:
-        carousel: Carousel
-        grid: Grid
-        list: List
+        carousel: Carosello
+        grid: Griglia
+        list: Lista
     legal:
-      label: Legal
+      label: Legale
     legend:
-      label: Legend
+      label: Legenda
     limit:
-      label: Limit
+      label: Limite
     links:
       label:
         one: Link
-        other: Links
+        other: Link
     location:
-      label: Location
+      label: Posizione
     loop:
       label: Loop
     name:
-      label: Name
+      label: Nome
     map:
-      label: Map
+      label: Mappa
     newsletter:
       form:
-        label: Form
+        label: Modulo
     notes:
-      hint: 'To link a word in the text to a note, suffix it with "[\*]". Notes and "[\*]" are linked by their order.'
+      hint: 'Per collegare una parola del testo a una nota, aggiungere "[\\*]". Le note e "[\\*]" sono collegati dal loro ordine.'
       label:
-        one: Note
-        other: Notes
+        one: Nota
+        other: Note
     offer:
       label:
-        one: Offer
-        other: Offers
+        one: Offerta
+        other: Offerte
     offset:
       label: Offset
       options:
-        center: Center
-        end: End
-        start: Start
+        center: Centro
+        end: Fine
+        start: Inizio
     parent:
-      label: Parent page
+      label: Pagina padre
     pdf:
       label: PDF
-      hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+      hint: 'Comprimi PDF prima dell''invio: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
-      label: Telephone Number
-      hint: 'Format international, ex: +33 1 23 45 67 89'
+      label: Numero di telefono
+      hint: 'Formato internazionale, es.: +33 1 23 45 67 89'
     placeholder:
-      label: Placeholder
+      label: Segnaposto
     poster:
       label: Poster
-      hint: Placehoster image for video
+      hint: Immagine segnaposto per video
     prefix:
-      label: Prefix
+      label: Prefisso
     press:
-      label: Press
+      label: Stampa
     price:
-      hide: Hide price
-      hint: 'e.g: 300000 (for 300 000 €)'
-      label: Price
-      sold: Sale price
+      hide: Nascondi prezzo
+      hint: 'es.: 300000 (per 300.000 €)'
+      label: Prezzo
+      sold: Prezzo di vendita
     quote:
-      label: Quote
+      label: Citazione
     realestates_energies:
       label:
-        one: Energy
-        other: Energies
+        one: Energia
+        other: Energie
       heating:
-        label: Heating
+        label: Riscaldamento
         options:
-          collective: Collective
-          individual: Individual
+          collective: Collettivo
+          individual: Individuale
       heating_type:
-        label: Heating type
+        label: Tipo di riscaldamento
         options:
-          reversible_ac: Reversible AC
-          electric: Electric
+          reversible_ac: Aria condizionata reversibile
+          electric: Elettrico
           gas: Gas
-          solar: Solar
+          solar: Solare
     realestates_informations:
       area:
-        hint: Expressed in m2
-        label: Interior surface
+        hint: Espresso in m2
+        label: Superficie interna
       bathrooms:
-        label: Number of bathrooms
+        label: Numero di bagni
       bedrooms:
-        label: Number of rooms
+        label: Numero di camere
       district:
-        label: District
+        label: Quartiere
       exposure:
-        label: Exposure
+        label: Esposizione
       field:
-        hint: Expressed in m2
-        label: Exterior surface
+        hint: Espresso in m2
+        label: Superficie esterna
       floor:
-        label: Floor
+        label: Piano
       has_balcony:
-        label: Balcon?
+        label: Balcone?
       has_box:
         label: Box?
       has_cave:
-        label: Cave?
+        label: Cantina?
       has_elevator:
-        label: Elevator?
+        label: Ascensore?
       has_garage:
         label: Garage?
       has_outbuilding:
-        label: Outbuilding?
+        label: Dependance?
       has_parking:
-        label: Parking?
+        label: Parcheggio?
       has_swimmingpool:
-        label: Swimming pool?
+        label: Piscina?
       has_terrace:
-        label: Terrace?
-      label: Informations
+        label: Terrazza?
+      label: Informazioni
       levels:
-        label: Number of floors
+        label: Numero di piani
       rooms:
-        label: Number of rooms
+        label: Numero di stanze
       showerrooms:
-        label: Number of showerrooms
+        label: Numero di bagni con doccia
       wc:
         label: WC
       year:
-        label: Year of construction
+        label: Anno di costruzione
     realestates_types:
-      label: Transaction Type
+      label: Tipo di transazione
       options:
-        rent: Rent
-        sale: Sale
+        rent: Affitto
+        sale: Vendita
     reference:
-      label: Reference
+      label: Riferimento
     rent:
-      label: Rent?
+      label: Affittato?
     required:
-      label: Required
+      label: Richiesto
     section:
-      hint: Select the section to display
-      label: Section
+      hint: Seleziona la sezione da visualizzare
+      label: Sezione
     show_more:
-      hint: Shows a button to see more items
-      label: Show more?
+      hint: Mostra un pulsante per vedere più elementi
+      label: Mostra di più?
     show_places:
-      hint: Only if you have places already saved (this will disable the marker below)
-      label: Show all registered places?
+      hint: Solo se hai già luoghi salvati (questo disabiliterà il marcatore sotto)
+      label: Mostra tutti i luoghi registrati?
     slug:
-      hint: Leave empty to automate with the title. **Be careful to SEO impact.**
+      hint: Lascia vuoto per automatizzare con il titolo. **Attenzione all'impatto SEO.**
       label: Slug
       pattern:
-        Contain only lowercase letters, numbers, and hyphens, with no spaces,
-        accents, or special characters
+        Contiene solo lettere minuscole, numeri e trattini, senza spazi,
+        accenti o caratteri speciali
     socials:
       label:
         one: Social
-        other: Socials
-      plateform: Platform
+        other: Social
+      plateform: Piattaforma
       twitter:
         label: Twitter/X
-        hint: Username
+        hint: Nome utente
     sold:
-      label: Sold/rent ?
+      label: Venduto/affittato?
     state:
-      label: State
+      label: Stato
       options:
-        danger: Danger
-        dark: Dark
+        danger: Pericolo
+        dark: Scuro
         info: Info
-        light: Light
-        primary: Primary
-        secondary: Secondary
-        success: Success
-        warning: Warning
+        light: Chiaro
+        primary: Primario
+        secondary: Secondario
+        success: Successo
+        warning: Avviso
     status:
-      label: Status
+      label: Stato
     submit:
-      label: Send button text
+      label: Testo del pulsante di invio
     subtitle:
-      label: Subtitle
+      label: Sottotitolo
     suffix:
-      hint: 'e.g: %'
-      label: Suffix
+      hint: 'es.: %'
+      label: Suffisso
     summary:
-      label: Summary
+      label: Riepilogo
     surtitle:
-      label: Surtitle
+      label: Sopratitolo
     text:
-      label: Text
+      label: Testo
     title:
-      label: Title
+      label: Titolo
     title_page:
       hint:
-        Displayed in tabs, search results, and in SMS/Messages/Social networks
-        preview
-      label: Page title
+        Visualizzato nelle schede, nei risultati di ricerca e nell'anteprima di
+        SMS/Messaggi/Social network
+      label: Titolo della pagina
     transcription:
-      label: Transcription
+      label: Trascrizione
     url:
       label: URL
     value:
-      label: Value
+      label: Valore
     video:
       label: 
         one: Video
-        other: Videos
+        other: Video
       mp4:
         label: MP4
-        hint: MP4 video file
+        hint: File video MP4
         mobile:
           label: MP4 (Mobile)
-          hint: MP4 video file for mobile
+          hint: File video MP4 per mobile
       webm:
         label: WEBM
-        hint: WEBM video file
+        hint: File video WEBM
         mobile:
           label: WEBM (Mobile)
-          hint: WEBM video file for mobile
+          hint: File video WEBM per mobile
     website:
       hint: URL (https://…)
-      label: Website
+      label: Sito web
     weight:
-      label: Position (importance)
-      hint: Knowing that 10 is the most important and 100 the least important
-    year: Year
+      label: Posizione (importanza)
+      hint: Sapendo che 10 è il più importante e 100 il meno importante
+    year: Anno
     zoom:
       label: Zoom
   files:
-    banner: Information banner at the top of the site
-    footer: Information text at the bottom of the site
+    banner: Banner informativo nella parte superiore del sito
+    footer: Testo informativo nella parte inferiore del sito
     nav:
-      label: Navigation
-      legal: Legals navigation (mentions, policy…)
-      primary: Primary navigation
-      secondary: Secondary navigation
-      social: Socials navigation
+      label: Navigazione
+      legal: Navigazione legale (note legali, privacy…)
+      primary: Navigazione primaria
+      secondary: Navigazione secondaria
+      social: Navigazione social
     seo:
-      label: Global SEO
-      title: Website name
+      label: SEO globale
+      title: Nome del sito web
   group:
-    year: Year
+    year: Anno
   shortcodes:
     alert:
-      label: Alert
+      label: Avviso
     badge:
       label: Badge
     blank_link:
-      label: Blank link
+      label: Link vuoto
     blockquote:
-      label: Blockquote
+      label: Citazione in blocco
     button:
-      label: Button
+      label: Pulsante
     details:
-      label: Details
+      label: Dettagli
     figure:
-      label: Figure
+      label: Figura
     map:
-      label: Map
+      label: Mappa
     twitter:
-      _id: Twitter ID
+      _id: ID Twitter
       label: Twitter / X
-      user: Twitter username
+      user: Nome utente Twitter
     youtube:
-      _id: Youtube ID
+      _id: ID Youtube
       label: Youtube

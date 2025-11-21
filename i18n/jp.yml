@@ -1,842 +1,842 @@
 admin:
   blocks:
     alert:
-      label: Alert
+      label: アラート
     audio:
-      label: Audio
+      label: オーディオ
     chart:
-      label: Chart
+      label: チャート
     comparison:
-      label: Comparison
+      label: 比較
     cta:
-      label: Call to action
+      label: 行動喚起
     datas:
-      label: Datas
+      label: データ
     editorial:
-      label: Editorial
+      label: 編集
     embed:
-      label: Embed
+      label: 埋め込み
     faq:
-      label: FAQ
+      label: よくある質問
     figure:
-      label: Figure
+      label: 図
     form:
-      label: Form
+      label: フォーム
     gallery:
-      label: Gallery
+      label: ギャラリー
     images:
-      label: Images
+      label: 画像
     informations:
-      label: Informations
+      label: 情報
     instagram:
       label: Instagram
     latest:
-      label: Latest items
+      label: 最新アイテム
     location:
-      label: Location
+      label: 場所
     logos:
-      label: Logos
+      label: ロゴ
     map:
-      label: Map
+      label: 地図
     newsletter:
-      label: Newsletter
+      label: ニュースレター
     paragraph:
-      label: Paragraph
+      label: 段落
     pushes:
-      label: Pushes
+      label: 通知
     quote:
-      label: Quote
+      label: 引用
     search:
-      label: Search
+      label: 検索
     selected:
-      label: Selection {{ .section }}
+      label: 選択 {{ .section }}
     testimonials:
-      label: Testimonials
+      label: お客様の声
     timeline:
-      label: Timeline
+      label: タイムライン
     title:
-      label: Title
+      label: タイトル
     video:
-      label: Video
+      label: 動画
   collections:
     authors:
       label:
-        one: Author
-        other: Authors
+        one: 著者
+        other: 著者
     casestudies:
-      _description: All cases studies
+      _description: すべてのケーススタディ
       label:
-        one: Case study
-        other: Cases studies
+        one: ケーススタディ
+        other: ケーススタディ
     categories:
       label:
-        one: Category
-        other: Categories
+        one: カテゴリー
+        other: カテゴリー
     config:
-      _description: All config
+      _description: すべての設定
       label:
-        one: Config
-        other: Config
+        one: 設定
+        other: 設定
     docs:
-      _description: All docs
+      _description: すべてのドキュメント
       label:
-        one: Doc
-        other: Docs
+        one: ドキュメント
+        other: ドキュメント
     events:
-      _description: All events
+      _description: すべてのイベント
       label:
-        one: Event
-        other: Events
+        one: イベント
+        other: イベント
     events_categories:
-      _description: All events categories
+      _description: すべてのイベントカテゴリー
       label:
-        one: Category
-        other: Categories
+        one: カテゴリー
+        other: カテゴリー
     expertises:
-      _description: All expertises
+      _description: すべての専門分野
       label:
-        one: Expertise
-        other: Expertises
-    home: Home
+        one: 専門分野
+        other: 専門分野
+    home: ホーム
     indexes:
-      _description: All index pages
+      _description: すべてのインデックスページ
       label:
-        one: Index
-        other: Index
+        one: インデックス
+        other: インデックス
     jobs:
-      _description: All jobs
+      _description: すべての求人
       label:
-        one: Job
-        other: Jobs
+        one: 求人
+        other: 求人
     jobs_categories:
-      _description: All news categories
+      _description: すべての求人カテゴリー
       label:
-        one: Category
-        other: Categories
+        one: カテゴリー
+        other: カテゴリー
     jobs_expertises:
-      _description: All expertises
+      _description: すべての専門分野
       label:
-        one: Expertise
-        other: Expertises
+        one: 専門分野
+        other: 専門分野
     jobs_places:
-      _description: All places
+      _description: すべての場所
       label:
-        one: Place
-        other: Places
+        one: 場所
+        other: 場所
     jobs_tags:
-      _description: All products tags
+      _description: すべての製品タグ
       label:
-        one: Tag
-        other: Tags
+        one: タグ
+        other: タグ
     pages:
-      _description: All pages
+      _description: すべてのページ
       label:
-        one: Page
-        other: Pages
+        one: ページ
+        other: ページ
     persons:
-      _description: All persons
+      _description: すべての人物
       label:
-        one: Person
-        other: Persons
+        one: 人物
+        other: 人物
     persons_expertises:
-      _description: All expertises
+      _description: すべての専門分野
       label:
-        one: Expertise
-        other: Expertises
+        one: 専門分野
+        other: 専門分野
     persons_places:
-      _description: All places
+      _description: すべての場所
       label:
-        one: Place
-        other: Places
+        one: 場所
+        other: 場所
     persons_statutes:
-      _description: All statutes
+      _description: すべてのステータス
       label:
-        one: Status
-        other: Statutes
+        one: ステータス
+        other: ステータス
     places:
-      _description: All places
+      _description: すべての場所
       label:
-        one: Place
-        other: Places
+        one: 場所
+        other: 場所
     posts:
-      _description: All news
+      _description: すべてのニュース
       label:
-        one: New
-        other: News
+        one: ニュース
+        other: ニュース
     posts_categories:
-      _description: All news categories
+      _description: すべてのニュースカテゴリー
       label:
-        one: Category
-        other: Categories
+        one: カテゴリー
+        other: カテゴリー
     posts_expertises:
-      _description: All expertises
+      _description: すべての専門分野
       label:
-        one: Expertise
-        other: Expertises
+        one: 専門分野
+        other: 専門分野
     posts_tags:
-      _description: All news tags
+      _description: すべてのニュースタグ
       label:
-        one: Tag
-        other: Tags
+        one: タグ
+        other: タグ
     products:
-      _description: All products
+      _description: すべての製品
       label:
-        one: Product
-        other: Products
+        one: 製品
+        other: 製品
     products_categories:
-      _description: All products categories
+      _description: すべての製品カテゴリー
       label:
-        one: Category
-        other: Categories
+        one: カテゴリー
+        other: カテゴリー
     products_tags:
-      _description: All products tags
+      _description: すべての製品タグ
       label:
-        one: Tag
-        other: Tags
+        one: タグ
+        other: タグ
     projects:
-      _description: All projects
+      _description: すべてのプロジェクト
       label:
-        one: Project
-        other: Projects
+        one: プロジェクト
+        other: プロジェクト
     projects_tags:
-      _description: All projects tags
+      _description: すべてのプロジェクトタグ
       label:
-        one: Tag
-        other: Tags
+        one: タグ
+        other: タグ
     projects_types:
-      _description: All projects types
+      _description: すべてのプロジェクトタイプ
       label:
-        one: Type
-        other: Types
+        one: タイプ
+        other: タイプ
     publications:
-      _description: All publications
+      _description: すべての出版物
       label:
-        one: Publication
-        other: Publications
+        one: 出版物
+        other: 出版物
     publications_categories:
-      _description: All publications categories
+      _description: すべての出版物カテゴリー
       label:
-        one: Category
-        other: Categories
+        one: カテゴリー
+        other: カテゴリー
     publications_expertises:
-      _description: All expertises
+      _description: すべての専門分野
       label:
-        one: Expertise
-        other: Expertises
+        one: 専門分野
+        other: 専門分野
     publications_persons:
       label:
-        one: Person
-        other: Persons
+        one: 人物
+        other: 人物
     realestates:
-      _description: All real estates
+      _description: すべての不動産
       label:
-        one: Real estate
-        other: Real estates
+        one: 不動産
+        other: 不動産
     realestates_categories:
-      _description: All real estates categories
+      _description: すべての不動産カテゴリー
       label:
-        one: Categorie
-        other: Categories
+        one: カテゴリー
+        other: カテゴリー
     realestates_persons:
-      _description: All agents
+      _description: すべてのエージェント
       label:
-        one: Agent
-        other: Agents
+        one: エージェント
+        other: エージェント
     realestates_sellers:
-      _description: All sellers
+      _description: すべての売主
       label:
-        one: Seller
-        other: Sellers
+        one: 売主
+        other: 売主
     services:
-      _description: All services
+      _description: すべてのサービス
       label:
-        one: Service
-        other: Services
+        one: サービス
+        other: サービス
     services_categories:
-      _description: All services categories
+      _description: すべてのサービスカテゴリー
       label:
-        one: Category
-        other: Categories
+        one: カテゴリー
+        other: カテゴリー
     tags:
-      _description: All tags
+      _description: すべてのタグ
       label:
-        one: Tag
-        other: Tags
+        one: タグ
+        other: タグ
   fields:
     address:
       city:
-        label: City
+        label: 市区町村
       country:
-        label: Country
-      label: Address
+        label: 国
+      label: 住所
       street:
-        label: Street
+        label: 番地
       zipcode:
-        label: Postal code
+        label: 郵便番号
     align:
-      label: Alignment
+      label: 配置
       options:
-        center: Center
-        end: End
-        start: Start
+        center: 中央
+        end: 終了
+        start: 開始
     arguments:
       label:
-        one: Argument
-        other: Arguments
+        one: 引数
+        other: 引数
     audio:
       label:
-        one: Audio
-        other: Audios
+        one: オーディオ
+        other: オーディオ
       mp3:
         label: MP3
-        hint: MP3 audio file
+        hint: MP3オーディオファイル
       ogg:
         label: OGG
-        hint: OGG audio file
+        hint: OGGオーディオファイル
     author:
-      label: Author
+      label: 著者
     autoplay:
-      label: Autoplay
+      label: 自動再生
     background:
-      label: With a background?
+      label: 背景あり?
     background_color:
-      label: Background color
+      label: 背景色
     badge:
-      hint: Show a badge
-      label: Badge
+      hint: バッジを表示
+      label: バッジ
     blocks:
       label:
-        one: Bloc
-        other: Blocs
+        one: ブロック
+        other: ブロック
     body:
-      label: Body
+      label: 本文
     breakpoints:
-      hint: Screen size
+      hint: 画面サイズ
       label:
-        one: Breakpoint
-        other: Breakpoints
+        one: ブレークポイント
+        other: ブレークポイント
       options:
-        desktop: Desktop
-        laptop: Laptop
-        mobile: Mobile
-        tablet: Tablet
-        wide_tablet: Wide tablet
+        desktop: デスクトップ
+        laptop: ラップトップ
+        mobile: モバイル
+        tablet: タブレット
+        wide_tablet: ワイドタブレット
     carousel:
       arrows:
-        label: Arrows
+        label: 矢印
       autoplay:
-        label: Autoplay
+        label: 自動再生
       focus:
-        hint: Position active slide in center?
-        label: Focus
+        hint: アクティブなスライドを中央に配置しますか?
+        label: フォーカス
       gap:
-        hint: The gap between slides. Expressed in rem.
-        label: Gap
-      hint: Only for carousel display
-      label: Carousel configuration
+        hint: スライド間の間隔。remで表現されます。
+        label: 間隔
+      hint: カルーセル表示のみ
+      label: カルーセル設定
       padding:
-        hint: Padding left/right of the carousel. In rem value
-        label: Padding
+        hint: カルーセルの左右のパディング。rem値
+        label: パディング
       pagination:
-        label: Pagination
+        label: ページネーション
       params:
-        label: Params
+        label: パラメータ
       perpage:
-        hint: Number of slides to display
-        label: Per page
+        hint: 表示するスライド数
+        label: ページあたり
       responsive:
-        label: Responsive
+        label: レスポンシブ
       type:
-        label: Carousel type
+        label: カルーセルタイプ
     chart:
-      label: Chart
+      label: チャート
       data:
-        label: Data (code)
-        hint: 'Documentation: https://www.chartjs.org/docs/'
+        label: データ（コード）
+        hint: 'ドキュメント: https://www.chartjs.org/docs/'
       type:
-        label: Chart type
+        label: チャートタイプ
         options:
-          bar: Bar
-          line: Line
-          pie: Pie
-          polarArea: Polar area
-          radar: Radar
+          bar: 棒グラフ
+          line: 折れ線グラフ
+          pie: 円グラフ
+          polarArea: 極座標エリア
+          radar: レーダー
     class:
-      label: Class
-      hint: Add CSS class to this component
+      label: クラス
+      hint: このコンポーネントにCSSクラスを追加
     code:
-      label: Code
+      label: コード
     color:
-      label: Color
+      label: 色
     column:
-      label: Column
+      label: 列
     contact:
       label:
-        one: Contact
-        other: Contacts
+        one: 連絡先
+        other: 連絡先
     controls:
-      label: Controls
+      label: コントロール
     coordinates:
-      hint: 'Easily find contact details: https://www.latlong.net/convert-address-to-lat-long.html'
-      label: Geographic coordinates
+      hint: '座標を簡単に見つける: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: 地理座標
       lat:
-        label: Latitude
+        label: 緯度
       lng:
-        label: Longitude
+        label: 経度
     count:
-      hint: Items to display
-      label: Count
+      hint: 表示するアイテム
+      label: カウント
     credit:
-      label: Credit
+      label: クレジット
     cta:
       label:
         one: CTA
-        other: CTAs
+        other: CTA
     datas:
       label:
-        one: Data
-        other: Datas
+        one: データ
+        other: データ
     date:
-      from: From
-      label: Date
-      sale: Sale date
-      to: To
+      from: 開始日
+      label: 日付
+      sale: 販売日
+      to: 終了日
     description:
       hint:
-        Displayed in tabs, search results, and in SMS/Messages/Social networks
-        preview
-      label: Description
+        タブ、検索結果、SMS/メッセージ/ソーシャルネットワークの
+        プレビューに表示されます
+      label: 説明
     diagnostic:
       epd:
         label: Kwh
-        hint: Energy performance diagnostics (DPE)
+        hint: エネルギー性能診断（DPE）
       ghg:
         label: Co2
-        hint: Greenhouse gas (GHG)
-      label: Diagnostic
-      in_progress: In progress?
+        hint: 温室効果ガス（GHG）
+      label: 診断
+      in_progress: 進行中?
     direction:
-      label: Direction
+      label: 方向
       options:
-        ltr: Text on the left / image on the right
-        rtl: Image on the left / text on the right
+        ltr: テキストが左/画像が右
+        rtl: 画像が左/テキストが右
     discount:
-      hint: 'Amount of the reduction, e.g: 30%'
-      label: Discount
-      pattern: Value only (without currency)
+      hint: '割引額、例: 30%'
+      label: 割引
+      pattern: 値のみ（通貨なし）
     document:
       label:
-        one: Document
-        other: Documents
+        one: ドキュメント
+        other: ドキュメント
     draft:
-      label: Draft
+      label: 下書き
     email:
-      label: Email
+      label: メールアドレス
     embed:
-      label: Embed
+      label: 埋め込み
     event:
       label:
-        one: Event
-        other: Events
+        one: イベント
+        other: イベント
     fax:
-      label: Fax
-      hint: 'International format, e.g: +33 1 23 45 67 89'
+      label: FAX
+      hint: '国際形式、例: +33 1 23 45 67 89'
     featured_image:
-      hint: Displayed in search results, and in SMS/Messages/Social networks preview
-      label: Image principale
+      hint: 検索結果とSMS/メッセージ/ソーシャルネットワークのプレビューに表示されます
+      label: メイン画像
     fee:
       label:
-        one: Fee
-        other: Fees
+        one: 手数料
+        other: 手数料
     figure:
-      label: Figure
+      label: 図
     form:
       autocomplete:
-        label: Autocomplete
+        label: オートコンプリート
         options:
-          city: City
-          country_name: Country name
-          email: Email
-          family_name: Lastname
-          given_name: Firstname
-          honorific_prefix: Title
-          name: Name
-          organization: Organization
-          postal_code: Postal code
-          state: State
-          street_address: Street
-          tel: Tel
+          city: 市区町村
+          country_name: 国名
+          email: メールアドレス
+          family_name: 姓
+          given_name: 名
+          honorific_prefix: 敬称
+          name: 名前
+          organization: 組織
+          postal_code: 郵便番号
+          state: 都道府県
+          street_address: 番地
+          tel: 電話番号
       full:
-        label: Full width field?
+        label: 全幅フィールド?
       hiddens:
         label:
-          one: Hidden field
-          other: Hidden fields
+          one: 非表示フィールド
+          other: 非表示フィールド
       items:
         label:
-          one: Field
-          other: Fields
-      label: Form
+          one: フィールド
+          other: フィールド
+      label: フォーム
       options:
-        hint: Only for select fields
+        hint: 選択フィールドのみ
         label:
-          one: Option
-          other: Options
+          one: オプション
+          other: オプション
       type:
-        hint: Choose type field
-        email: Email
-        label: Type
-        radio: Radio
-        select: Select
-        tel: Telephone
-        text: Text
-        textarea: Textarea
+        hint: フィールドタイプを選択
+        email: メールアドレス
+        label: タイプ
+        radio: ラジオ
+        select: 選択
+        tel: 電話番号
+        text: テキスト
+        textarea: テキストエリア
       value:
-        hint: Only for checkbox and radio fields
-        label: Value
+        hint: チェックボックスとラジオフィールドのみ
+        label: 値
     gallery:
-      label: Gallery
+      label: ギャラリー
     grid:
-      label: Grid
+      label: グリッド
       options:
-        container: Container
-        full: Full
-        large: Large
-        medium: Medium
-        small: Small
+        container: コンテナ
+        full: フル
+        large: 大
+        medium: 中
+        small: 小
     heading:
-      label: Heading
+      label: 見出し
     hero:
-      label: Hero
+      label: ヒーロー
     icon:
-      hint: Icon name from https://icons.getbootstrap.com/
-      label: Icon
+      hint: https://icons.getbootstrap.com/ のアイコン名
+      label: アイコン
     id:
       label: ID
     image:
       label: 
-        one: Image
-        other: Images
+        one: 画像
+        other: 画像
       alt:
-        hint: For an image that conveys information (leave blank if decorative image)
-        label: Text alternative
+        hint: 情報を伝える画像の場合（装飾画像の場合は空白のまま）
+        label: 代替テキスト
       filter:
-        hint: Set Linear for picture or screenshot, leave empty to keep default config
-        label: Change filter quality?
+        hint: 写真やスクリーンショットの場合はLinearに設定、デフォルト設定を維持する場合は空白のまま
+        label: フィルター品質を変更しますか?
         options:
-          box: Simple and fast averaging filter appropriate for downscaling (default)
-          catmullrom: Sharp cubic filter that is faster than the Lanczos filter while providing similar results
-          lanczos: High-quality resampling filter for photographic images yielding sharp results
-          linear: Bilinear resampling filter, produces smooth output, faster than cubic filters
+          box: ダウンスケーリングに適したシンプルで高速な平均化フィルター（デフォルト）
+          catmullrom: Lanczosフィルターより高速で同様の結果を生成するシャープな三次フィルター
+          lanczos: 鮮明な結果を生成する写真画像用の高品質リサンプリングフィルター
+          linear: 滑らかな出力を生成するバイリニアリサンプリングフィルター、三次フィルターより高速
       src:
-        hint: 'Resize and compress image before sending : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
-        label: Image
+        hint: '送信前に画像のサイズ変更と圧縮: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: 画像
     images:
       label: 
-        one: Image
-        other: Images
+        one: 画像
+        other: 画像
     is_background:
-      label: Is background?
+      label: 背景として?
     is_blank:
-      label: Is blank?
+      label: 新しいウィンドウ?
     is_card:
-      hint: Adds a background behind the text
-      label: Is card?
+      hint: テキストの背後に背景を追加
+      label: カードとして?
     is_darken:
-      label: Darken?
+      label: 暗くする?
     is_exclusive:
-      label: Exclusive?
+      label: 限定?
     is_half:
-      label: Half size?
+      label: 半分のサイズ?
     is_highlighted:
-      label: Is highlighted?
+      label: ハイライト?
     is_logo:
-      hint: Positioned in the center and not cropped
-      label: Is logo?
+      hint: 中央に配置され、トリミングされません
+      label: ロゴとして?
     is_open:
-      label: Open?
+      label: 開く?
     is_pinned:
-      label: Pinned?
+      label: ピン留め?
     is_screenshot:
-      hint: Add fake browser
-      label: Is screenshot?
+      hint: 偽のブラウザを追加
+      label: スクリーンショットとして?
     items:
       label:
-        one: Item
-        other: Items
+        one: アイテム
+        other: アイテム
     keyfeatures:
-      hint: 'e.g: Location, exposure…'
+      hint: '例: 場所、向き…'
       label:
-        one: key feature
-        other: Key features
+        one: 主要機能
+        other: 主要機能
     label:
-      label: Label
+      label: ラベル
     lang:
-      hint: Enter code lang (e.g. fr) if different of the current page language
-      label: Language
+      hint: 現在のページの言語と異なる場合は言語コードを入力（例：ja）
+      label: 言語
     layout:
-      label: Layout
+      label: レイアウト
       options:
-        carousel: Carousel
-        grid: Grid
-        list: List
+        carousel: カルーセル
+        grid: グリッド
+        list: リスト
     legal:
-      label: Legal
+      label: 法的
     legend:
-      label: Legend
+      label: 凡例
     limit:
-      label: Limit
+      label: 制限
     links:
       label:
-        one: Link
-        other: Links
+        one: リンク
+        other: リンク
     location:
-      label: Location
+      label: 場所
     loop:
-      label: Loop
+      label: ループ
     name:
-      label: Name
+      label: 名前
     map:
-      label: Map
+      label: 地図
     newsletter:
       form:
-        label: Form
+        label: フォーム
     notes:
-      hint: 'To link a word in the text to a note, suffix it with "[\*]". Notes and "[\*]" are linked by their order.'
+      hint: 'テキスト内の単語をノートにリンクするには、"[\\*]"を追加します。ノートと"[\\*]"は順序でリンクされます。'
       label:
-        one: Note
-        other: Notes
+        one: ノート
+        other: ノート
     offer:
       label:
-        one: Offer
-        other: Offers
+        one: オファー
+        other: オファー
     offset:
-      label: Offset
+      label: オフセット
       options:
-        center: Center
-        end: End
-        start: Start
+        center: 中央
+        end: 終了
+        start: 開始
     parent:
-      label: Parent page
+      label: 親ページ
     pdf:
       label: PDF
-      hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+      hint: '送信前にPDFを圧縮: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
-      label: Telephone Number
-      hint: 'Format international, ex: +33 1 23 45 67 89'
+      label: 電話番号
+      hint: '国際形式、例: +33 1 23 45 67 89'
     placeholder:
-      label: Placeholder
+      label: プレースホルダー
     poster:
-      label: Poster
-      hint: Placehoster image for video
+      label: ポスター
+      hint: 動画のプレースホルダー画像
     prefix:
-      label: Prefix
+      label: プレフィックス
     press:
-      label: Press
+      label: プレス
     price:
-      hide: Hide price
-      hint: 'e.g: 300000 (for 300 000 €)'
-      label: Price
-      sold: Sale price
+      hide: 価格を非表示
+      hint: '例: 300000（300,000€の場合）'
+      label: 価格
+      sold: 販売価格
     quote:
-      label: Quote
+      label: 引用
     realestates_energies:
       label:
-        one: Energy
-        other: Energies
+        one: エネルギー
+        other: エネルギー
       heating:
-        label: Heating
+        label: 暖房
         options:
-          collective: Collective
-          individual: Individual
+          collective: 集合
+          individual: 個別
       heating_type:
-        label: Heating type
+        label: 暖房タイプ
         options:
-          reversible_ac: Reversible AC
-          electric: Electric
-          gas: Gas
-          solar: Solar
+          reversible_ac: リバーシブルエアコン
+          electric: 電気
+          gas: ガス
+          solar: ソーラー
     realestates_informations:
       area:
-        hint: Expressed in m2
-        label: Interior surface
+        hint: m2で表現
+        label: 内部面積
       bathrooms:
-        label: Number of bathrooms
+        label: バスルーム数
       bedrooms:
-        label: Number of rooms
+        label: 部屋数
       district:
-        label: District
+        label: 地区
       exposure:
-        label: Exposure
+        label: 向き
       field:
-        hint: Expressed in m2
-        label: Exterior surface
+        hint: m2で表現
+        label: 外部面積
       floor:
-        label: Floor
+        label: 階
       has_balcony:
-        label: Balcon?
+        label: バルコニー?
       has_box:
-        label: Box?
+        label: ボックス?
       has_cave:
-        label: Cave?
+        label: 地下室?
       has_elevator:
-        label: Elevator?
+        label: エレベーター?
       has_garage:
-        label: Garage?
+        label: ガレージ?
       has_outbuilding:
-        label: Outbuilding?
+        label: 別棟?
       has_parking:
-        label: Parking?
+        label: 駐車場?
       has_swimmingpool:
-        label: Swimming pool?
+        label: プール?
       has_terrace:
-        label: Terrace?
-      label: Informations
+        label: テラス?
+      label: 情報
       levels:
-        label: Number of floors
+        label: 階数
       rooms:
-        label: Number of rooms
+        label: 部屋数
       showerrooms:
-        label: Number of showerrooms
+        label: シャワールーム数
       wc:
-        label: WC
+        label: トイレ
       year:
-        label: Year of construction
+        label: 建築年
     realestates_types:
-      label: Transaction Type
+      label: 取引タイプ
       options:
-        rent: Rent
-        sale: Sale
+        rent: 賃貸
+        sale: 売買
     reference:
-      label: Reference
+      label: 参照
     rent:
-      label: Rent?
+      label: 賃貸済み?
     required:
-      label: Required
+      label: 必須
     section:
-      hint: Select the section to display
-      label: Section
+      hint: 表示するセクションを選択
+      label: セクション
     show_more:
-      hint: Shows a button to see more items
-      label: Show more?
+      hint: より多くのアイテムを表示するボタンを表示
+      label: もっと見る?
     show_places:
-      hint: Only if you have places already saved (this will disable the marker below)
-      label: Show all registered places?
+      hint: すでに保存された場所がある場合のみ（これにより下のマーカーが無効になります）
+      label: すべての登録された場所を表示?
     slug:
-      hint: Leave empty to automate with the title. **Be careful to SEO impact.**
-      label: Slug
+      hint: タイトルから自動生成する場合は空白のまま。**SEOへの影響に注意してください。**
+      label: スラッグ
       pattern:
-        Contain only lowercase letters, numbers, and hyphens, with no spaces,
-        accents, or special characters
+        小文字、数字、ハイフンのみを含み、スペース、
+        アクセント、特殊文字は含まない
     socials:
       label:
-        one: Social
-        other: Socials
-      plateform: Platform
+        one: ソーシャル
+        other: ソーシャル
+      plateform: プラットフォーム
       twitter:
         label: Twitter/X
-        hint: Username
+        hint: ユーザー名
     sold:
-      label: Sold/rent ?
+      label: 売却済み/賃貸済み?
     state:
-      label: State
+      label: 状態
       options:
-        danger: Danger
-        dark: Dark
-        info: Info
-        light: Light
-        primary: Primary
-        secondary: Secondary
-        success: Success
-        warning: Warning
+        danger: 危険
+        dark: ダーク
+        info: 情報
+        light: ライト
+        primary: プライマリ
+        secondary: セカンダリ
+        success: 成功
+        warning: 警告
     status:
-      label: Status
+      label: ステータス
     submit:
-      label: Send button text
+      label: 送信ボタンのテキスト
     subtitle:
-      label: Subtitle
+      label: サブタイトル
     suffix:
-      hint: 'e.g: %'
-      label: Suffix
+      hint: '例: %'
+      label: サフィックス
     summary:
-      label: Summary
+      label: 概要
     surtitle:
-      label: Surtitle
+      label: 上位タイトル
     text:
-      label: Text
+      label: テキスト
     title:
-      label: Title
+      label: タイトル
     title_page:
       hint:
-        Displayed in tabs, search results, and in SMS/Messages/Social networks
-        preview
-      label: Page title
+        タブ、検索結果、SMS/メッセージ/ソーシャルネットワークの
+        プレビューに表示されます
+      label: ページタイトル
     transcription:
-      label: Transcription
+      label: 文字起こし
     url:
       label: URL
     value:
-      label: Value
+      label: 値
     video:
       label: 
-        one: Video
-        other: Videos
+        one: 動画
+        other: 動画
       mp4:
         label: MP4
-        hint: MP4 video file
+        hint: MP4動画ファイル
         mobile:
-          label: MP4 (Mobile)
-          hint: MP4 video file for mobile
+          label: MP4（モバイル）
+          hint: モバイル用MP4動画ファイル
       webm:
         label: WEBM
-        hint: WEBM video file
+        hint: WEBM動画ファイル
         mobile:
-          label: WEBM (Mobile)
-          hint: WEBM video file for mobile
+          label: WEBM（モバイル）
+          hint: モバイル用WEBM動画ファイル
     website:
       hint: URL (https://…)
-      label: Website
+      label: ウェブサイト
     weight:
-      label: Position (importance)
-      hint: Knowing that 10 is the most important and 100 the least important
-    year: Year
+      label: 位置（重要度）
+      hint: 10が最も重要で100が最も重要でないことを知っておく
+    year: 年
     zoom:
-      label: Zoom
+      label: ズーム
   files:
-    banner: Information banner at the top of the site
-    footer: Information text at the bottom of the site
+    banner: サイト上部の情報バナー
+    footer: サイト下部の情報テキスト
     nav:
-      label: Navigation
-      legal: Legals navigation (mentions, policy…)
-      primary: Primary navigation
-      secondary: Secondary navigation
-      social: Socials navigation
+      label: ナビゲーション
+      legal: 法的ナビゲーション（利用規約、プライバシー…）
+      primary: プライマリナビゲーション
+      secondary: セカンダリナビゲーション
+      social: ソーシャルナビゲーション
     seo:
-      label: Global SEO
-      title: Website name
+      label: グローバルSEO
+      title: ウェブサイト名
   group:
-    year: Year
+    year: 年
   shortcodes:
     alert:
-      label: Alert
+      label: アラート
     badge:
-      label: Badge
+      label: バッジ
     blank_link:
-      label: Blank link
+      label: ブランクリンク
     blockquote:
-      label: Blockquote
+      label: ブロック引用
     button:
-      label: Button
+      label: ボタン
     details:
-      label: Details
+      label: 詳細
     figure:
-      label: Figure
+      label: 図
     map:
-      label: Map
+      label: 地図
     twitter:
       _id: Twitter ID
       label: Twitter / X
-      user: Twitter username
+      user: Twitterユーザー名
     youtube:
       _id: Youtube ID
       label: Youtube
