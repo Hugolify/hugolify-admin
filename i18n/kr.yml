@@ -572,7 +572,7 @@ admin:
     label:
       label: 레이블
     lang:
-      hint: 현재 페이지 언어와 다른 경우 언어 코드 입력 (예: ko)
+      hint: '현재 페이지 언어와 다른 경우 언어 코드 입력 (예: ko)'
       label: 언어
     layout:
       label: 레이아웃
