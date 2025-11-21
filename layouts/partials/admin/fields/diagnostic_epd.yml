@@ -1,9 +1,15 @@
+{{- $name := dict "name" "kwh" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "diagnostic_epd" "nameOverride" "kwh" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.diagnostic.epd.label")
   "hint" (i18n "admin.fields.diagnostic.epd.hint")
-  "name" "kwh"
   "i18n" "duplicate"
   "min" 0
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/number.js" $args }}

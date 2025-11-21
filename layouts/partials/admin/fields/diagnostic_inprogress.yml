@@ -1,6 +1,12 @@
+{{- $name := dict "name" "in_progress" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "diagnostic_inprogress" "nameOverride" "in_progress" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.diagnostic.in_progress")
-  "name" "in_progress"
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/boolean.js" $args }}

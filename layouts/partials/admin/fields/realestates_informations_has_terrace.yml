@@ -1,6 +1,12 @@
+{{- $name := dict "name" "has_terrace" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "realestates_informations_has_terrace" "nameOverride" "has_terrace" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.realestates_informations.has_terrace.label")
-  "name" "has_terrace"
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/boolean.js" $args }}

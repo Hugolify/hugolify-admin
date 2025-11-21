@@ -1,11 +1,16 @@
+{{- $name := dict "name" "bathrooms" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "realestates_informations_bathrooms" "nameOverride" "bathrooms" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.realestates_informations.bathrooms.label")
   "hint" (i18n "admin.fields.realestates_informations.bathrooms.hint")
-  "name" "bathrooms"
   "i18n" "duplicate"
   "min" 0
   "step" 1
   -}}
 
-{{ partial "admin/widgets/number.js" $args }}
+{{- $args = merge $args $name }}
 
+{{ partial "admin/widgets/number.js" $args }}

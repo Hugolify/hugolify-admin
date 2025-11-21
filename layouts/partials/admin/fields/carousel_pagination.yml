@@ -1,7 +1,13 @@
+{{- $name := dict "name" "pagination" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "carousel_pagination" "nameOverride" "pagination" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.carousel.pagination.label")
-  "name" "pagination"
   "default" false
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/boolean.js" $args }}

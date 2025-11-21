@@ -1,8 +1,14 @@
+{{- $name := dict "name" "padding" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "carousel_padding" "nameOverride" "padding" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.carousel.padding.label")
   "hint" (i18n "admin.fields.carousel.padding.hint")
-  "name" "padding"
   "min" 0
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/number.js" $args }}

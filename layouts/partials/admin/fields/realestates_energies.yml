@@ -1,12 +1,18 @@
+{{- $name := dict "name" "energies" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "realestates_energies" "nameOverride" "energies" }}
+{{- end }}
+
 {{- $fields := slice 
   "realestates_energies_heating_type" 
   "realestates_energies_heating"  -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 
 {{- $args := dict 
-  "label" (i18n "admin.fields.energies.label")
-  "name" "energies"
+  "label" (i18n "admin.fields.realestates_energies.label")
   "fields" $fields
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/object.js" $args }}

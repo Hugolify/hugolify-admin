@@ -1,3 +1,8 @@
+{{- $name := dict "name" "responsive" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "carousel_responsive" "nameOverride" "responsive" }}
+{{- end }}
+
 {{- $fields := slice 
   "breakpoints" 
   "carousel_params" -}}
@@ -5,8 +10,9 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.carousel.responsive.label")
-  "name" "responsive"
   "fields" $fields
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/list.js" $args }}

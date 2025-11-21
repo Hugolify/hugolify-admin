@@ -1,6 +1,12 @@
+{{- $name := dict "name" "lng" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "coordinates_lng" "nameOverride" "lng" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.coordinates.lng.label")
-  "name" "lng"
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/number.js" $args }}

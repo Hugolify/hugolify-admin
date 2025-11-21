@@ -1,9 +1,15 @@
+{{- $name := dict "name" "mp4" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "video_mp4" "nameOverride" "mp4" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.video.mp4.label")
   "hint" (i18n "admin.fields.video.mp4.hint")
-  "name" "mp4"
   "extensions" "mp4"
   "type" "video"
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/file.js" $args }}

@@ -1,3 +1,8 @@
+{{- $name := dict "name" "image" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "featured_image" "nameOverride" "image" }}
+{{- end }}
+
 {{ $image_filter := cond site.Params.admin.media.specific_filter "image_filter" false }}
 {{- $fields := slice 
   "image_src" 
@@ -8,8 +13,9 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.featured_image.label")
   "hint" (i18n "admin.fields.featured_image.hint")
-  "name" "image"
   "fields" $fields
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/object.js" $args }}

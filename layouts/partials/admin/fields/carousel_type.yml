@@ -1,9 +1,15 @@
+{{- $name := dict "name" "type" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "carousel_type" "nameOverride" "type" }}
+{{- end }}
+
 {{- $options := slice "slide" "loop" "fade" }}
 
 {{- $args := dict 
   "label" (i18n "admin.fields.carousel.type.label")
-  "name" "type"
   "options" $options
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/select.js" $args }}

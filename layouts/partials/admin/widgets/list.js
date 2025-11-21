@@ -32,8 +32,6 @@
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
-{{ warnf $name }}
-
 {{ $name }}: {
   {{ with $nameOverride }}
   key: '{{ . }}',

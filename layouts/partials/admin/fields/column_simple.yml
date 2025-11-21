@@ -1,3 +1,8 @@
+{{- $name := dict "name" "column" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "column_simple" "nameOverride" "column" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.column.label")
   "name" "column"
@@ -8,5 +13,7 @@
   "i18n" "duplicate"
   "range" true
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/number.js" $args }}

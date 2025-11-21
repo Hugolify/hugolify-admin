@@ -1,10 +1,16 @@
+{{- $name := dict "name" "filter" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "image_filter" "nameOverride" "filter" }}
+{{- end }}
+
 {{- $options := slice "Box" "Lanczos" "CatmullRom" "Linear" -}}
 
 {{- $args := dict 
   "label" (i18n "admin.fields.image.filter.label")
   "hint" (i18n "admin.fields.image.filter.hint")
-  "name" "filter"
   "options" $options
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/select.js" $args }}

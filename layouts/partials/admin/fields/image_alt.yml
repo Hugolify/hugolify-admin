@@ -1,7 +1,13 @@
+{{- $name := dict "name" "alt" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "image_alt" "nameOverride" "alt" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.image.alt.label")
   "hint" (i18n "admin.fields.image.alt.hint")
-  "name" "alt"
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/string.js" $args }}
