@@ -1,3 +1,8 @@
+{{- $name := dict "name" "autocomplete" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "form_autocomplete" "nameOverride" "autocomplete" }}
+{{- end }}
+
 {{- $options := slice 
     "email" 
     "tel" 
@@ -14,8 +19,9 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.form.autocomplete.label")
-  "name" "autocomplete"
   "options" $options
   -}}
+
+{{- $args = merge $args $name -}}
 
 {{ partial "admin/widgets/select.js" $args }}

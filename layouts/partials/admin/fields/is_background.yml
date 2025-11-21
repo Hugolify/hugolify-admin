@@ -1,6 +1,12 @@
+{{- $name := dict "name" "background" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "is_background" "nameOverride" "background" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.is_background.label")
-  "name" "background"
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/boolean.js" $args }}

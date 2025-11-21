@@ -1,6 +1,12 @@
+{{- $name := dict "name" "blank" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "is_blank" "nameOverride" "blank" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.is_blank.label")
-  "name" "blank"
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/boolean.js" $args }}
