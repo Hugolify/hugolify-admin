@@ -1,7 +1,13 @@
+{{- $name := dict "name" "weight" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "is_pinned" "nameOverride" "weight" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.is_pinned.label")
   "hint" (i18n "admin.fields.is_pinned.hint")
-  "name" "isLweightogo"
   -}}
+
+{{- $args = merge $args $name -}}
 
 {{ partial "admin/widgets/boolean.js" $args }}
