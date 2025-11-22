@@ -1,12 +1,17 @@
+
 {{ if eq site.Params.admin.cms "sveltiacms" }}
 
 {{ partial "admin/fields/is_not_index.yml" . }} 
 
 {{ else }}
 
+{{- $name := dict "name" "isIndex" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "is_index" "nameOverride" "isIndex" }}
+{{- end }}
+
 {{- $args := dict 
   "label" "is index"
-  "name" "isIndex"
   "default" true
   "hidden" true
   -}}

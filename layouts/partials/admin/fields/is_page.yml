@@ -1,8 +1,15 @@
+
+{{- $name := dict "name" "isPage" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "is_page" "nameOverride" "isPage" }}
+{{- end }}
+
 {{- $args := dict 
   "label" "is page"
-  "name" "isPage"
   "default" true
   "hidden" true
   -}}
+
+{{- $args = merge $args $name -}}
 
 {{ partial "admin/widgets/boolean.js" $args }}

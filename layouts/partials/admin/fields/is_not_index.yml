@@ -1,8 +1,15 @@
+
+{{- $name := dict "name" "isIndex" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "is_not_index" "nameOverride" "isIndex" }}
+{{- end }}
+
 {{- $args := dict 
   "label" "is not index"
-  "name" "isIndex"
   "default" false
   "hidden" true
   -}}
+
+{{- $args = merge $args $name -}}
 
 {{ partial "admin/widgets/boolean.js" $args }}

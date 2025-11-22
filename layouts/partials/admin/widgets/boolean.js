@@ -15,6 +15,7 @@
 {{- $label := .label | default "nolabel" }}
 {{- $hint := .hint | default false }}
 {{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
 {{- $default := .default | default "" }}
 {{- $required := .required | default false }}
 {{- $i18n := .i18n | default true }}
@@ -24,6 +25,9 @@
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
+  {{ with $nameOverride }}
+  key: '{{ . }}',
+  {{ end }}
   name: '{{ $label }}',
   {{ with $hint }}
   comment: '{{ . }}',

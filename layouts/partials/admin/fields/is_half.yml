@@ -1,6 +1,12 @@
+{{- $name := dict "name" "half" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "is_half" "nameOverride" "half" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.is_half.label")
-  "name" "half"
   -}}
+
+{{- $args = merge $args $name -}}
 
 {{ partial "admin/widgets/boolean.js" $args }}

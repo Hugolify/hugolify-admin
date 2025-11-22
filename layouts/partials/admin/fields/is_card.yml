@@ -1,7 +1,13 @@
+{{- $name := dict "name" "card" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "is_card" "nameOverride" "card" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.is_card.label")
   "hint" (i18n "admin.fields.is_card.hint")
-  "name" "card"
   -}}
+
+{{- $args = merge $args $name -}}
 
 {{ partial "admin/widgets/boolean.js" $args }}
