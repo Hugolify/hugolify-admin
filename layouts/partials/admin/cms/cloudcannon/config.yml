@@ -12,6 +12,9 @@ _snippets_imports:
 {{/* Collections */}}
 {{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/index.html" .) }}
 
+{{/* Collections Group */}}
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/group.html" .) }}
+
 {{/* Inputs */}}
 {{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/inputs.js" $fields.inputs) }}
 
