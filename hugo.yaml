@@ -21,6 +21,11 @@ outputFormats:
     isPlainText: true
     mediaType: text/javascript
     notAlternative: false
+  admin_archetypes_json:
+    baseName: archetypes
+    isPlainText: true
+    mediaType: application/json
+    notAlternative: false
 mediaTypes:
   application/yaml:
     suffixes:

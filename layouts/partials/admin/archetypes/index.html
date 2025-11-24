@@ -1,0 +1,36 @@
+{{- $archetypes := dict -}}
+
+{{/* Get enabled collections */}}
+{{- range $collection, $value := site.Params.admin.collections -}}
+{{- if .enable -}}
+
+{{/* Get fields */}}
+{{- $fieldsList := slice -}}
+{{- $fields := partial "admin/func/GetFieldsCollection.html" $collection -}}
+
+{{/* Map fields */}}
+{{- range $fields -}}
+{{- if not (reflect.IsMap .) -}}
+
+{{- $key := . -}}
+
+{{/* Manual mapping for known divergences */}}
+{{- if eq $key "title_page" -}}{{- $key = "title" -}}{{- end -}}
+{{- if eq $key "featured_image" -}}{{- $key = "image" -}}{{- end -}}
+{{- if eq $key "is_index" -}}{{- $key = "isIndex" -}}{{- end -}}
+{{- if eq $key "is_not_index" -}}{{- $key = "isIndex" -}}{{- end -}}
+{{- if eq $key "is_page" -}}{{- $key = "isPage" -}}{{- end -}}
+
+{{/* Add field to list */}}
+{{- $fieldsList = $fieldsList | append $key -}}
+
+{{- end -}}
+{{- end -}}
+
+{{/* Add collection to list */}}
+{{- $archetypes = merge $archetypes (dict $collection $fieldsList) -}}
+
+{{- end -}}
+{{- end -}}
+
+{{- $archetypes | jsonify -}}
