@@ -137,15 +137,90 @@ params:
         - title
         - video
       
+      alert:
+        icon:
+          material_icons: warning_amber
+      audio:
+        icon:
+          material_icons: audiotrack
+      chart:
+        icon:
+          material_icons: chart
+      comparison:
+        icon:
+          material_icons: compare
+      cta:
+        icon:
+          material_icons: call_to_action
+      datas:
+        icon:
+          material_icons: data
       editorial:
         icon:
-          cloudcannon: vertical_split
+          material_icons: vertical_split
+      embed:
+        icon:
+          material_icons: code
+      faq:
+        icon:
+          material_icons: quiz
+      figure:
+        icon:
+          material_icons: image
+      form:
+        icon:
+          material_icons: form
+      gallery:
+        icon:
+          material_icons: view_module
+      images:
+        icon:
+          material_icons: collections
+      informations:
+        icon:
+          material_icons: dashboard
+      instagram:
+        icon:
+          material_icons: web_stories
+      latest:
+        icon:
+          material_icons: view_timeline
+      logos:
+        icon:
+          material_icons: grain
+      map:
+        icon:
+          material_icons: map
+      newsletter:
+        icon:
+          material_icons: attach_email
       paragraph:
         icon:
-          cloudcannon: subject
+          material_icons: subject
+      pushes:
+        icon:
+          material_icons: panorama_wide_angle
+      quote:
+        icon:
+          material_icons: format_quote
+      search:
+        icon:
+          material_icons: search
+      selected:
+        icon:
+          material_icons: check_box
+      testimonials:
+        icon:
+          material_icons: 3p
+      timeline:
+        icon:
+          material_icons: timeline
       title:
         icon:
-          cloudcannon: format_h2
+          material_icons: format_h2
+      video:
+        icon:
+          material_icons: videocam
 
     # Shortcodes
     shortcodes:
