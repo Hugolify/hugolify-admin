@@ -26,6 +26,7 @@
 {{- $label_singular := .label_singular | default false }}
 {{- $multiple := .multiple | default true }}
 {{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
 {{- $required := .required | default false }}
 {{- $search_fields := .search_fields | default false }}
 {{- $value_field := .value_field | default false }}
@@ -33,7 +34,16 @@
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
-{{/* TODO */}}
+{{ $name }}: {
+  {{ with $nameOverride }}
+  key: '{{ . }}',
+  {{ end }}
+  label: '{{ $label }}',
+  type: '{{ if $multiple }}multiselect{{ else }}select{{ end }}',
+  options: {
+    values: 'collections.{{ $collection }}'
+  }
+}
 
 {{/* Pages CMS */}}
 {{ else if eq $cms "pagescms" }}
@@ -48,11 +58,11 @@
   options: {
     collection: {{ $collection }},
     {{ with $display_fields }}
-      {{ $label := slice }}
+      {{ $labels := slice }}
       {{ range . }}
-        {{ $label = $label | append (printf `{%s}` .) }}
+        {{ $labels = $labels | append (printf `{%s}` .) }}
       {{ end }}
-    label: "{{ delimit $label `,` }}",
+    label: "{{ delimit $labels `,` }}",
     {{ end }}
     image: "{image.src}",
     {{ with $multiple }}
