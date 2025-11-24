@@ -23,7 +23,7 @@ i18n:
 local_backend: true
 locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
 logo: 
-  src: "./logo.svg"
+  src: "./assets/logo.svg"
   show_in_header: true
 media_folder: {{ site.Params.admin.media.media_folder | default "assets/images/uploads" }}
 
