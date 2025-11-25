@@ -2,6 +2,8 @@
 
 {{ with $blocks }}
   blocks: {
+    remove_empty_inputs: true,
+    reorder_inputs: false,
     style: modal,
     values: [
     {{ range . }}

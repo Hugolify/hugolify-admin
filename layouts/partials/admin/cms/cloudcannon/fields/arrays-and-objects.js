@@ -22,6 +22,8 @@
       {{ with .key }}
       key: '{{ . }}',
       {{ end }}
+      remove_empty_inputs: true,
+      reorder_inputs: false,
       values: [
         {
           {{ with $fields }}
