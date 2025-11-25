@@ -1,5 +1,5 @@
 {{ $collection := . }}
-{{ $fields := false }}
+{{ $fields := "" }}
 
 {{ with (index site.Params.admin.collections $collection).fields }}
   {{ $fields = slice }}
@@ -10,6 +10,16 @@
   {{ $fields_file := print "admin/collections/fields/" $collection ".fields.default.html" }}
   {{ if templates.Exists ( printf "partials/%s" $fields_file ) }}
     {{ $fields = partialCached $fields_file . }}
+  {{ else }}
+    {{ with site.GetPage $collection }}
+      {{ if eq .Kind "taxonomy" }}
+        {{ $fields = partialCached "admin/collections/fields/_terms.default.html" . }}
+      {{ else }}
+        {{ $fields = partialCached "admin/collections/fields/_default.html" . }}
+      {{ end }}
+    {{ else }}
+      {{ $fields = partialCached "admin/collections/fields/_default.html" . }}
+    {{ end }}
   {{ end }}
 {{ end }}
 

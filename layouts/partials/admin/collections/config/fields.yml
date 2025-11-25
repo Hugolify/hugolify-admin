@@ -1,34 +1,11 @@
-{{ $cms := site.Params.admin.cms | default "decapcms" }}
+{{- $cms := site.Params.admin.cms | default "decapcms" -}}
+{{- $fields := partial "admin/func/GetFieldsCollection.html" .collection -}}
 {{- $file := print "admin/cms/" $cms "/collection/config/fields.yml" -}}
+
 {{ if templates.Exists ( printf "partials/%s" $file ) }}
-  {{ partial $file .collection -}}
+  {{ partial $file $fields -}}
 {{ else }}
-
 fields: [
-  {{- $collection := .collection | default "posts" -}}
-  {{- range (index site.Params.admin.collections $collection).fields }}
-    {{- $file := print "admin/fields/" . ".yml" -}}
-    {{- if templates.Exists ( printf "partials/%s" $file ) }}
-      {{ partialCached $file . }},
-    {{ end -}}
-  {{- else -}}
-    {{- $file := print "admin/collections/fields/" $collection ".fields.default.html" -}}
-    {{- $fields := false -}}
-    {{- if templates.Exists ( printf "partials/%s" $file ) }}
-      {{- $fields = partial $file . -}} 
-    {{- else -}}
-      {{- with site.GetPage $collection -}}
-        {{- if eq .Kind "taxonomy" -}}
-          {{- $fields = partialCached "admin/collections/fields/_terms.default.html" . -}}
-        {{- else -}}
-          {{- $fields = partialCached "admin/collections/fields/_default.html" . -}}
-        {{- end -}}
-      {{- else -}}
-        {{- $fields = partialCached "admin/collections/fields/_default.html" . -}}
-      {{- end -}}
-    {{- end -}}
-    {{ partial "admin/fields/_range.yml" $fields }}
-  {{ end -}}
+  {{- partial "admin/fields/_range.yml" $fields -}}
 ],
-
 {{- end }}

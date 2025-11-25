@@ -3,7 +3,6 @@
 {{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
   {{- $name = dict "name" $items_name "nameOverride" "items" }}
 {{- end }}
-{{ warnf $name.name }}
 
 {{- $fields := .fields -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" $items_name "fields" $fields) -}}
