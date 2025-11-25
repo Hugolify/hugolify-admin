@@ -12,6 +12,7 @@ collections_config: {
 
       {{/* Convert to map */}}
       {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
+      {{ $fields := $datas._inputs }}
 
       {{/* Modify arguments */}}
       {{ $newDatas := newScratch }}
@@ -32,6 +33,13 @@ collections_config: {
       {{/* Add arguments */}}
       {{ $archetype := print "archetypes/" $collection ".md" }}
       {{ $datas = merge $datas (dict "schemas" (dict "default" (dict "path" $archetype))) }}
+
+      {{/* Set enabled editors */}}
+      {{ $enabled_editors := slice "data" }}
+      {{ if index $fields "body" }}
+        {{ $enabled_editors = $enabled_editors | append "content" }}
+      {{ end }}
+      {{ $datas = merge $datas (dict "_enabled_editors" $enabled_editors) }}
 
       {{ $collection }}: {{ $datas | jsonify }},
 
