@@ -3,10 +3,17 @@
   {{- $options = slice "grid" -}}
 {{- end -}}
 
+{{- $name := dict "name" "layout" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $nameOverride := printf "layout_%s" (delimit $options "_") }}
+  {{- $name = dict "name" $nameOverride "nameOverride" "layout" }}
+{{- end }}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.layout.label")
-  "name" "layout"
   "options" $options
   -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/select.js" $args }}
