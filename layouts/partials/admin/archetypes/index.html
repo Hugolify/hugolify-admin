@@ -2,35 +2,47 @@
 
 {{/* Get enabled collections */}}
 {{- range $collection, $value := site.Params.admin.collections -}}
-{{- if .enable -}}
+  {{- if .enable -}}
 
-{{/* Get fields */}}
-{{- $fieldsList := slice -}}
-{{- $fields := partial "admin/func/GetFieldsCollection.html" $collection -}}
+    {{/* Get fields */}}
+    {{- $fieldsList := slice -}}
+    {{- $fields := partial "admin/func/GetFieldsCollection.html" $collection -}}
 
-{{/* Map fields */}}
-{{- range $fields -}}
-{{- if not (reflect.IsMap .) -}}
+    {{/* Map fields */}}
+    {{- with $fields -}}
+      {{- range . -}}
 
-{{- $key := . -}}
+        {{/* Get field key */}}
+        {{- $key := . -}}
+        {{- $default := "" -}}
+        {{- if reflect.IsMap . -}}
+          {{ range $k, $v := . }}
+            {{- $key = $v.collection -}}
+          {{ end }}
+        {{- end -}}
 
-{{/* Manual mapping for known divergences */}}
-{{- if eq $key "title_page" -}}{{- $key = "title" -}}{{- end -}}
-{{- if eq $key "featured_image" -}}{{- $key = "image" -}}{{- end -}}
-{{- if eq $key "is_index" -}}{{- $key = "isIndex" -}}{{- end -}}
-{{- if eq $key "is_not_index" -}}{{- $key = "isIndex" -}}{{- end -}}
-{{- if eq $key "is_page" -}}{{- $key = "isPage" -}}{{- end -}}
+        {{/* Manual mapping for known divergences */}}
+        {{/*  
+		{{- if eq $key "title_page" -}}{{- $key = "title" -}}{{- end -}}
+        {{- if eq $key "featured_image" -}}{{- $key = "image" -}}{{- end -}}  
+        {{- if eq $key "is_index" -}}{{- $key = "isIndex" -}}{{- $default = true -}}{{- end -}}
+        {{- if eq $key "is_not_index" -}}{{- $key = "isIndex" -}}{{- $default = false -}}{{- end -}}
+        {{- if eq $key "is_page" -}}{{- $key = "isPage" -}}{{- $default = true -}}{{- end -}}
+		*/}}
 
-{{/* Add field to list */}}
-{{- $fieldsList = $fieldsList | append $key -}}
+        {{/* Add field to list */}}
+		{{- $id := or (ne $key "id") (and (eq $key "id") (eq site.Params.admin.config.id true)) }}
+        {{- if and (ne $key "body") (ne $key false) $id -}}
+        {{- $fieldsList = $fieldsList | append (dict "field" $key "default" $default) -}}
+        {{- end -}}
 
-{{- end -}}
-{{- end -}}
+      {{- end -}}
+    {{- end -}}
 
-{{/* Add collection to list */}}
-{{- $archetypes = merge $archetypes (dict $collection $fieldsList) -}}
+    {{/* Add collection to list */}}
+    {{- $archetypes = merge $archetypes (dict $collection $fieldsList) -}}
 
-{{- end -}}
+  {{- end -}}
 {{- end -}}
 
 {{- $archetypes | jsonify -}}
