@@ -31,11 +31,8 @@
             {{ range . }}
             '{{ . }}': null,
             {{ end }}
-          },
-          {{ end }}
-          options: {
-            
           }
+          {{ end }}
         }
       ]
     },
