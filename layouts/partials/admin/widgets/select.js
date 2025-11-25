@@ -1,32 +1,39 @@
 {{/* 
   Partial to generate a select widget
   
-  - label (string) required
-  - hint (string)
-  - name (string) required
-  - options (array or object) required
-  - multiple (boolean)
   - default (string)
-  - required (boolean)
+  - hidden (boolean)
+  - hint (string)
   - i18n (boolean or string)
+  - label (string) required
+  - multiple (boolean)
+  - name (string) required
+  - nameOverride (string)
+  - options (array or object) required
+  - required (boolean)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
-{{- $label := .label | default "nolabel" }}
-{{- $hint := .hint | default false }}
-{{- $name := .name | default "noname" }}
-{{- $options := .options | default false }}
-{{- $multiple := .multiple | default false }}
 {{- $default := .default | default "" }}
-{{- $required := .required | default false }}
+{{- $hidden := .hidden | default false }}
+{{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
 {{- $i18n = cond (eq (printf "%T" $i18n) "boolean") $i18n (print "'" $i18n "'") }}
+{{- $label := .label | default "nolabel" }}
+{{- $multiple := .multiple | default false }}
+{{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
+{{- $options := .options | default false }}
+{{- $required := .required | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
+  {{ with $nameOverride }}
+  key: '{{ . }}',
+  {{ end }}
   name: '{{ $label }}',
   {{ with $hint }}
   comment: '{{ . }}',

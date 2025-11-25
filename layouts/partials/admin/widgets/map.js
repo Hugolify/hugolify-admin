@@ -1,20 +1,20 @@
 {{/* 
   Partial to generate a map widget
   
-  - label (string) required
-  - hint (string)
-  - name (string) required
   - default (string)
+  - hint (string)
   - i18n (boolean or string)
+  - label (string) required
+  - name (string) required
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
-{{- $label := .label | default "nolabel" }}
-{{- $hint := .hint | default false }}
-{{- $name := .name | default "noname" }}
 {{- $default := .default | default "" }}
+{{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $name := .name | default "noname" }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -25,11 +25,13 @@
 {{ else if eq $cms "pagescms" }}
 
 {{/* TODO */}}
+{}
 
 {{/* Tina CMS */}}
 {{ else if eq $cms "tinacms" }}
 
 {{/* TODO */}}
+{}
 
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
 {{ else }}

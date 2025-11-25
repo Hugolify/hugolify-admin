@@ -1,27 +1,30 @@
 {{/* 
   Partial to generate a object widget
   
+  - collapsed (boolean)
+  - fields (array) required
+  - hidden (boolean)
+  - hint (string)
+  - i18n (boolean or string)
   - label (string) required
   - label_singular (string)
-  - hint (string)
   - name (string) required
-  - fields (array) required
+  - nameOverride (string)
   - required (boolean)
-  - collapsed (boolean)
-  - i18n (boolean or string)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
+{{- $fields := partial "admin/func/GetFields.html" (dict "field" .name "fields" .fields) | default slice -}}
+{{- $hidden := .hidden | default false }}
+{{- $hint := .hint | default false }}
+{{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
 {{- $label_singular := .label_singular | default false }}
-{{- $hint := .hint | default false }}
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
-{{- $fields := partial "admin/func/GetFields.html" (dict "field" $name "fields" .fields) | default slice -}}
 {{- $required := .required | default false }}
 {{- $collapsed := .collapsed | default true }}
-{{- $i18n := .i18n | default true }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}

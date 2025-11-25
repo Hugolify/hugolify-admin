@@ -1,23 +1,30 @@
 {{/* 
   Partial to generate a UUID widget
   
-  - label (string) required
-  - hint (string)
-  - name (string) required
+  - hidden (boolean)
   - i18n (boolean or string)
+  - hint (string)
+  - label (string) required
+  - name (string) required
+  - nameOverride (string)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
-{{- $label := .label | default "nolabel" }}
+{{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
-{{- $name := .name | default "noname" }}
 {{- $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
+  {{ with $nameOverride }}
+  key: '{{ . }}',
+  {{ end }}
   name: '{{ $label }}',
   {{ with $hint }}
   comment: '{{ . }}',

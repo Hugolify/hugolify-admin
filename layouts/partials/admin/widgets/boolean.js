@@ -1,25 +1,26 @@
 {{/* 
   Partial to generate a boolean widget
   
-  - label (string) required
-  - hint (string)
-  - name (string) required
   - default (boolean or string)
-  - required (boolean)
-  - i18n (boolean or string)
   - hidden (boolean)
+  - hint (string)
+  - i18n (boolean or string)
+  - label (string) required
+  - name (string) required
+  - nameOverride (string)
+  - required (boolean)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
-{{- $label := .label | default "nolabel" }}
+{{- $default := .default | default "" }}
+{{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
+{{- $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
-{{- $default := .default | default "" }}
 {{- $required := .required | default false }}
-{{- $i18n := .i18n | default true }}
-{{- $hidden := .hidden | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}

@@ -4,11 +4,13 @@
   - collection (string)
   - display_fields (array)
   - filters (array)
+  - hidden (boolean)
   - hint (string)
   - i18n (boolean or string)
   - label (string) required
   - label_singular (string)
   - name (string) required
+  - nameOverride (string)
   - multiple (boolean)
   - required (boolean)
   - search_fields (array)
@@ -20,6 +22,7 @@
 {{- $collection := .collection | default false }}
 {{- $display_fields := .display_fields | default false }}
 {{- $filters := .filters | default false }}
+{{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
@@ -39,7 +42,7 @@
   key: '{{ . }}',
   {{ end }}
   label: '{{ $label }}',
-  type: '{{ if $multiple }}multiselect{{ else }}select{{ end }}',
+  type: '{{ cond $multiple "multiselect" "select" }}',
   options: {
     values: 'collections.{{ $collection }}'
   }

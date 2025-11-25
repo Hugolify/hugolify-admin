@@ -1,30 +1,33 @@
 {{/* 
   Partial to generate a number widget
   
-  - label (string) required
-  - hint (string)
-  - name (string) required
   - default (string)
-  - required (boolean)
-  - min (number)
-  - max (number)
-  - step (number)
+  - hint (string)
   - i18n (boolean or string)
+  - label (string) required
+  - max (number)
+  - min (number)
+  - name (string) required
+  - nameOverride (string)
+  - range (boolean)
+  - required (boolean)
+  - step (number)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
-{{- $label := .label | default "nolabel" }}
-{{- $hint := .hint | default false }}
-{{- $name := .name | default "noname" }}
-{{- $nameOverride := .nameOverride | default false }}
 {{- $default := .default | default "" }}
-{{- $required := .required | default false }}
+{{- $hidden := .hidden | default false }}
+{{- $hint := .hint | default false }}
+{{- $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
 {{- $max := .max | default false }}
 {{- $min := .min | default false }}
-{{- $step := .step | default false }}
+{{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
 {{- $range := .range | default false }}
-{{- $i18n := .i18n | default true }}
+{{- $required := .required | default false }}
+{{- $step := .step | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}

@@ -1,30 +1,30 @@
 {{/* 
   Partial to generate a blocks widget
   
+  - blocks (array) required
+  - collapsed (boolean)
+  - hint (string)
+  - i18n (boolean or string)
   - label (string) required
   - label_singular (string)
-  - hint (string)
-  - name (string) required
-  - blocks (array) required
-  - required (boolean)
-  - min (number)
   - max (number)
-  - collapsed (boolean)
-  - i18n (boolean or string)
+  - min (number)
+  - name (string) required
+  - required (boolean)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
+{{- $blocks := .blocks | default slice }}
+{{- $collapsed := .collapsed | default true }}
+{{- $hint := .hint | default false }}
+{{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
 {{- $label_singular := .label_singular | default false }}
-{{- $hint := .hint | default false }}
-{{- $name := .name | default "noname" }}
-{{- $blocks := .blocks | default slice }}
 {{- $max := .max | default false }}
 {{- $min := .min | default false }}
+{{- $name := .name | default "noname" }}
 {{- $required := .required | default false }}
-{{- $collapsed := .collapsed | default true }}
-{{- $i18n := .i18n | default true }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}

@@ -3,6 +3,7 @@
   
   - collapsed (boolean)
   - fields (array) required
+  - hidden (boolean)
   - hint (string)
   - i18n (boolean or string)
   - label (string) required
@@ -11,6 +12,7 @@
   - min (number)
   - multiple (boolean)
   - name (string) required
+  - nameOverride (string)
   - required (boolean)
 */}}
 
@@ -18,6 +20,7 @@
 
 {{- $collapsed := .collapsed | default true }}
 {{- $fields := .fields | default slice }}
+{{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}

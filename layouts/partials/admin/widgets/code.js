@@ -1,30 +1,36 @@
 {{/* 
   Partial to generate a code widget
   
-  - label (string) required
-  - hint (string)
-  - name (string) required
-  - language (string)
   - default (boolean or string)
-  - required (boolean)
+  - hidden (boolean)
+  - hint (string)
   - i18n (boolean or string)
+  - label (string) required
+  - language (string)
+  - name (string) required
+  - nameOverride (string)
+  - required (boolean)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
-{{- $label := .label | default "nolabel" }}
-{{- $hint := .hint | default false }}
-{{- $name := .name | default "noname" }}
-{{- $language := .language | default false }}
 {{- $default := .default | default "" }}
-{{- $required := .required | default false }}
-{{- $i18n := .i18n | default true }}
 {{- $hidden := .hidden | default false }}
+{{- $hint := .hint | default false }}
+{{- $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $language := .language | default false }}
+{{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
+{{- $required := .required | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
+  {{ with $nameOverride }}
+  key: '{{ . }}',
+  {{ end }}
   name: '{{ $label }}',
   {{ with $hint }}
   comment: '{{ . }}',

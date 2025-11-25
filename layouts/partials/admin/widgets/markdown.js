@@ -1,32 +1,39 @@
 {{/* 
   Partial to generate a markdown widget
   
-  - label (string) required
-  - hint (string)
-  - name (string) required
   - default (string)
-  - minimal (boolean)
-  - required (boolean)
-  - pattern (object)
+  - hidden (boolean)
+  - hint (string)
   - i18n (boolean or string)
+  - label (string) required
+  - minimal (boolean)
+  - name (string) required
+  - nameOverride (string)
+  - pattern (object)
+  - required (boolean)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
-{{- $label := .label | default "nolabel" }}
-{{- $hint := .hint | default false }}
-{{- $name := .name | default "noname" }}
-{{- $default := .default | default "" }}
 {{- $buttons := .buttons | default false }}
-{{- $minimal := .minimal | default false }}
-{{- $required := .required | default false }}
-{{- $pattern := .pattern | default false }}
+{{- $default := .default | default "" }}
+{{- $hidden := .hidden | default false }}
+{{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
+{{- $label := .label | default "nolabel" }}
+{{- $minimal := .minimal | default false }}
+{{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
+{{- $pattern := .pattern | default false }}
+{{- $required := .required | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
+  {{ with $nameOverride }}
+  key: '{{ . }}',
+  {{ end }}
   name: '{{ $label }}',
   {{ with $hint }}
   comment: '{{ . }}',

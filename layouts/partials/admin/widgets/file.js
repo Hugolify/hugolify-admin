@@ -2,6 +2,7 @@
   Partial to generate a file widget
   
   - extensions (array)
+  - hidden (boolean)
   - hint (string)
   - i18n (boolean or string)
   - label (string) required
@@ -10,6 +11,7 @@
   - min (number)
   - multiple (boolean)
   - name (string) required
+  - nameOverride (string)
   - required (boolean)
   - type (string) required ["audio", "document", "file", "video"]
 */}}
@@ -17,6 +19,7 @@
 {{- $cms := site.Params.admin.cms }}
 
 {{- $extensions := .extensions | default false }}
+{{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
@@ -25,6 +28,7 @@
 {{- $min := .min | default false }}
 {{- $multiple := .multiple | default true }}
 {{- $name := .name | default "noname" }}
+{{- $nameOverride := .nameOverride | default false }}
 {{- $required := .required | default false }}
 {{- $type := .type | default "file" }}
 
@@ -55,6 +59,9 @@
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
+  {{ with $nameOverride }}
+  key: '{{ . }}',
+  {{ end }}
   name: '{{ $label }}',
   {{ with $label_singular }}
   singular_name: '{{ . }}',
