@@ -150,7 +150,7 @@ params:
           material_icons: audiotrack
       chart:
         icon:
-          material_icons: chart
+          material_icons: pie_chart
       comparison:
         icon:
           material_icons: compare
@@ -159,7 +159,7 @@ params:
           material_icons: call_to_action
       datas:
         icon:
-          material_icons: data
+          material_icons: data_usage
       editorial:
         icon:
           material_icons: vertical_split
@@ -174,7 +174,7 @@ params:
           material_icons: image
       form:
         icon:
-          material_icons: form
+          material_icons: send
       gallery:
         icon:
           material_icons: view_module
@@ -213,7 +213,7 @@ params:
           material_icons: search
       selected:
         icon:
-          material_icons: check_box
+          material_icons: checklist_rtl
       testimonials:
         icon:
           material_icons: 3p
