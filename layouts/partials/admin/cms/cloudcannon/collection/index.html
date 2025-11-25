@@ -32,7 +32,8 @@ collections_config: {
 
       {{/* Add arguments */}}
       {{ $archetype := print "archetypes/" $collection ".md" }}
-      {{ $datas = merge $datas (dict "schemas" (dict "default" (dict "path" $archetype))) }}
+      {{ $args := dict "path" $archetype "reorder_inputs" false "remove_empty_inputs" true }}
+      {{ $datas = merge $datas (dict "schemas" (dict "default" $args)) }}
 
       {{/* Set enabled editors */}}
       {{ $enabled_editors := slice "data" }}
