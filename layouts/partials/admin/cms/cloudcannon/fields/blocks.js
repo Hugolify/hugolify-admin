@@ -2,6 +2,7 @@
 
 {{ with $blocks }}
   blocks: {
+    id_key: type,
     remove_empty_inputs: true,
     reorder_inputs: false,
     style: modal,
@@ -23,6 +24,7 @@
       {
         label: {{ $block_name }},
         value: {
+          type: '{{ . }}',
           {{ range $fields }}
             {{ $field := partial "admin/func/GetRealFieldName.html" . }}
             '{{ $field }}': null,
