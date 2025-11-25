@@ -14,8 +14,8 @@
   {{ end }}
 {{ end }}
 
-{{/* Remove "blocks" from the list $fields */}}
-{{ $fields = $fields | complement (slice "blocks" false) }}
+{{/* Remove "blocks", "body" and false from the list $fields */}}
+{{ $fields = $fields | complement (slice "blocks" "body" false) }}
 
 {{/* Get fields from enable blocks */}}
 {{ $blocks := site.Params.admin.blocks.enable }}
@@ -51,7 +51,7 @@
   
     {{/* Conditional switch */}}
     {{ if or (eq $type "object") (eq $type "array") }}
-
+    
       {{/* Add field to structures */}}
       {{ $structuresFields = $structuresFields | append . }}
       
@@ -68,27 +68,26 @@
           {{/* Get type of field */}}
           {{ $subType := $subDatas.type }}
           
+          {{/* Conditional switch */}}
           {{ if or (eq $subType "object") (eq $subType "array") }}
 
             {{/* Add field to structures */}}
             {{ $structuresFields = $structuresFields | append . }}
 
-          {{ else }}
-          
-            {{/* Add field to inputs */}}
-            {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
-            {{ $inputsFields = $inputsFields | append (dict $f.field $f.values) }}
-          
           {{ end }}
+          
+          {{/* Add field to inputs */}}
+          {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+          {{ $inputsFields = $inputsFields | append (dict $f.field $f.values) }}
+          
         {{ end }}
       {{ end }}
-    {{ else }}
-
-      {{/* Add field to inputs */}}
-      {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
-      {{ $inputsFields = $inputsFields | append (dict $f.field $f.values) }}
-
     {{ end }}
+
+    {{/* Add field to inputs */}}
+    {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+    {{ $inputsFields = $inputsFields | append (dict $f.field $f.values) }}
+
   {{ end }}
 {{ end }}
 
