@@ -1,56 +1,93 @@
+{{ $fields := slice }}
 {{ $inputsFields := slice }}
 {{ $structuresFields := slice }}
 
-{{/* Get array fields from enable blocks */}}
+{{/* Get fields from enable collections */}}
+{{ $collections := site.Params.admin.collections }}
+{{- range $collection, $value := $collections -}}
+  {{- if .enable -}}
+    {{ $file := print "admin/collections/fields/" $collection ".fields.default.html" }}
+    {{ if templates.Exists (printf "partials/%s" $file) }}
+      {{ $collectionFields := partialCached $file . }}
+      {{ $fields = $fields | append $collectionFields }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Remove "blocks" from the list $fields */}}
+{{ $fields = $fields | complement (slice "blocks" false) }}
+
+{{/* Get fields from enable blocks */}}
 {{ $blocks := site.Params.admin.blocks.enable }}
 {{ range $blocks }}
-  {{ $fields := print "admin/blocks/fields/" . ".html" }}
-  {{ if templates.Exists (printf "partials/%s" $fields) }}
-    {{ $fields = partialCached $fields . }}
-    
-    {{/* Check all fields from this block */}}
-    {{ range $fields }}
-      {{ $field := print "admin/fields/" . ".yml" }}
-      {{ if templates.Exists (printf "partials/%s" $field) }}
-        {{ $file := partial $field }}
-        {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
-        {{ range $datas }}
-          {{ $datas = . }}
-        {{ end }}
+  {{ $file := print "admin/blocks/fields/" . ".html" }}
+  {{ if templates.Exists (printf "partials/%s" $file) }}
+    {{ $blockFields := partialCached $file . }}
+    {{ range $blockFields }}
+      {{ $fields = $fields | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 
-        {{/* Get type of field */}}
-        {{ $type := $datas.type }}
-        
-        {{/* Conditional switch */}}
-        {{ if or (eq $type "object") (eq $type "array") }}
-          {{/* Add field to structures */}}
-          {{ $structuresFields = $structuresFields | append . }}
-          
-          {{/* Process all subfields from this field */}}
-          {{ range $datas.fields }}
-            {{ $subField := print "admin/fields/" . ".yml" }}
-            {{ if templates.Exists (printf "partials/%s" $subField) }}
-              {{ $subFile := partial $subField }}
-              {{ $subDatas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $subFile) }}
-              {{ range $subDatas }}
-              {{ $subDatas = . }}
-              {{ end }}
-              
-              {{/* Get type of field */}}
-              {{ $subType := $subDatas.type }}
-              
-              {{ if or (eq $subType "object") (eq $subType "array") }}
-                {{ $structuresFields = $structuresFields | append . }}
-              {{ else }}
-                {{ $inputsFields = $inputsFields | append . }}
-              {{ end }}
-            {{ end }}
+{{/* Remove duplicates */}}
+{{ $fields = $fields | uniq }}
+
+{{/* Separate all fields in inputs and structures */}}
+{{ range $fields }}
+
+  {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+
+  {{ $fileField := print "admin/fields/" $f.field ".yml" }}
+  {{ if templates.Exists (printf "partials/%s" $fileField) }}
+    {{ $file := partial $fileField $f.values }}
+
+    {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
+    {{ range $datas }}
+      {{ $datas = . }}
+    {{ end }}
+
+    {{/* Get type of field */}}
+    {{ $type := $datas.type }}
+  
+    {{/* Conditional switch */}}
+    {{ if or (eq $type "object") (eq $type "array") }}
+
+      {{/* Add field to structures */}}
+      {{ $structuresFields = $structuresFields | append . }}
+      
+      {{/* Process all subfields from this field */}}
+      {{ range $datas.fields }}
+        {{ $subField := print "admin/fields/" . ".yml" }}
+        {{ if templates.Exists (printf "partials/%s" $subField) }}
+          {{ $subFile := partial $subField }}
+          {{ $subDatas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $subFile) }}
+          {{ range $subDatas }}
+            {{ $subDatas = . }}
           {{ end }}
-        {{ else }}
-          {{/* Add field to inputs */}}
-          {{ $inputsFields = $inputsFields | append . }}
+          
+          {{/* Get type of field */}}
+          {{ $subType := $subDatas.type }}
+          
+          {{ if or (eq $subType "object") (eq $subType "array") }}
+
+            {{/* Add field to structures */}}
+            {{ $structuresFields = $structuresFields | append . }}
+
+          {{ else }}
+          
+            {{/* Add field to inputs */}}
+            {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+            {{ $inputsFields = $inputsFields | append (dict $f.field $f.values) }}
+          
+          {{ end }}
         {{ end }}
       {{ end }}
+    {{ else }}
+
+      {{/* Add field to inputs */}}
+      {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+      {{ $inputsFields = $inputsFields | append (dict $f.field $f.values) }}
+
     {{ end }}
   {{ end }}
 {{ end }}
