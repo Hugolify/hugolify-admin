@@ -49,13 +49,6 @@
       {{ end }}
     {{ end }}
   ],
-  real_fields: [
-    {{ range $fields }}
-      {{ with . }}
-        '{{ . }}',
-      {{ end }}
-    {{ end }}
-  ],
   options: {
     structures: '_structures.{{ $name }}',
     required: {{ $required }},
