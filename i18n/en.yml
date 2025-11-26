@@ -623,7 +623,7 @@ admin:
       hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telephone Number
-      hint: 'Format international, ex: +33 1 23 45 67 89'
+      hint: 'International format, e.g: +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     poster:
