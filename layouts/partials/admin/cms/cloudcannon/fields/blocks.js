@@ -13,7 +13,8 @@
       {{ $block_key := . }}
       {{ $block_name := i18n (print "admin.blocks." . ".label") | default (. | humanize) }}
       {{ $block_hint := i18n (print "admin.blocks." . ".hint") | default false }}
-      {{ $block_icon := (index site.Params.admin.blocks .).icon.material_icons | default false }}
+      {{ $library := site.Params.admin.cloudcannon.icon }}
+      {{ $block_icon := index (index site.Params.admin.blocks .).icon $library }}
 
       {{/* Get block fields file */}}
       {{ $fields := print "admin/blocks/fields/" . ".html" }}

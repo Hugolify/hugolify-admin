@@ -1,3 +1,4 @@
-{{ with (index site.Params.admin.collections .).icon.sveltiacms }}
+{{ $library := site.Params.admin.sveltiacms.icon }}
+{{ with (index (index site.Params.admin.collections .).icon $library) }}
 icon: "{{ . }}",
 {{ end }}

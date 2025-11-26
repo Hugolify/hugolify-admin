@@ -80,13 +80,23 @@ params:
       netlify_identity: true
     preview: false
 
+    # CMS
+    cloudcannon:
+      icon: material_icons
+    sveltiacms:
+      icon: material_symbols
+
     # Collections
     collections:
       config:
         enable: true
         icon:
-          cloudcannon: settings
-          sveltiacms: settings
+          bootstrap_icons: gear
+          iconoir: settings
+          lucide: settings
+          material_icons: settings
+          material_symbols: settings
+          sveltiacms: settings # legacy
       indexes:
         create: false
         enable: true
@@ -94,15 +104,23 @@ params:
           - field: isIndex
             value: true
         icon:
-          cloudcannon: schema
-          sveltiacms: schema
+          bootstrap_icons: list-ul
+          iconoir: list
+          lucide: table-of-contents
+          material_icons: schema
+          material_symbols: schema
+          sveltiacms: schema # legacy
         nested:
           depth: 2
       pages:
         enable: true
         icon:
-          cloudcannon: description
-          sveltiacms: description
+          bootstrap_icons: file-earmark
+          iconoir: page
+          lucide: file
+          material_icons: description
+          material_symbols: description
+          sveltiacms: description # legacy
         filter:
           - field: isPage
             value: true
