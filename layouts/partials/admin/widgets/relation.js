@@ -38,9 +38,6 @@
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
-  {{ with $nameOverride }}
-  key: '{{ . }}',
-  {{ end }}
   label: '{{ $label }}',
   type: '{{ cond $multiple "multiselect" "select" }}',
   options: {

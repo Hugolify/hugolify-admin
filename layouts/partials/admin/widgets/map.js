@@ -20,6 +20,7 @@
 {{ if eq $cms "cloudcannon" }}
 
 {{/* TODO */}}
+{}
 
 {{/* Pages CMS */}}
 {{ else if eq $cms "pagescms" }}

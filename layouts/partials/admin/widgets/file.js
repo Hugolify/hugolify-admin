@@ -59,10 +59,7 @@
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
-  {{ with $nameOverride }}
-  key: '{{ . }}',
-  {{ end }}
-  name: '{{ $label }}',
+  label: '{{ $label }}',
   {{ with $label_singular }}
   singular_name: '{{ . }}',
   {{ end }}

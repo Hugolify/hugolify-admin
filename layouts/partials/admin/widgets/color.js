@@ -25,10 +25,7 @@
 {{ if eq $cms "cloudcannon" }}
 
 {{ $name }}: {
-  {{ with $nameOverride }}
-  key: '{{ . }}',
-  {{ end }}
-  name: '{{ $label }}',
+  label: '{{ $label }}',
   {{ with $hint }}
   comment: '{{ . }}',
   {{ end }}
