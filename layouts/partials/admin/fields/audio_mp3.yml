@@ -1,15 +1,9 @@
-{{- $name := dict "name" "mp3" }}
-{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
-  {{- $name = dict "name" "audio_mp3" "nameOverride" "mp3" }}
-{{- end }}
-
 {{- $args := dict 
   "label" (i18n "admin.fields.audio.mp3.label")
   "hint" (i18n "admin.fields.audio.mp3.hint")
   "extensions" "mp3"
+  "name" "mp3"
   "type" "audio"
   -}}
-
-{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/file.js" $args }}
