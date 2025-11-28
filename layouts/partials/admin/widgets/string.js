@@ -35,7 +35,13 @@
   {{ with $hidden }}
   hidden: true,
   {{ end }}
+  {{ if eq $name "url" }}
+  type: 'url',
+  {{ else if eq $name "email" }}
+  type: 'email',
+  {{ else }}
   type: 'text',
+  {{ end }}
   options: {
     {{ with $pattern }}
     pattern: '{{ .regex }}',
@@ -54,13 +60,7 @@
   description: '{{ . }}',
   {{ end }}
   name: '{{ $name }}',
-  {{ if eq $name "url" }}
-  type: 'url',
-  {{ else if eq $name "email" }}
-  type: 'email',
-  {{ else }}
   type: 'string',
-  {{ end }}
   {{ if ne $default "" }}
   default: {{ $default }},
   {{ end }}
