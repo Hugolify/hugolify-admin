@@ -1,5 +1,5 @@
-{{ with site.Params.admin.collections_group }}
-collections_group: [
+{{ with site.Params.admin.collection_groups }}
+collection_groups: [
   {{- range . }}
     {
       heading: '{{ .heading }}',
