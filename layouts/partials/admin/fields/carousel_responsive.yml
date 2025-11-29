@@ -15,4 +15,4 @@
 
 {{- $args = merge $args $name }}
 
-{{ partial "admin/widgets/list.html" $args }}
+{{ partial "admin/widgets/list.js" $args }}
