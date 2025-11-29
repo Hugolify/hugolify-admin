@@ -1,5 +1,5 @@
 {{- $name := dict "name" "blank" }}
-{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+{{- if eq site.Params.admin.cms "tinacms" }}
   {{- $name = dict "name" "is_blank" "nameOverride" "blank" }}
 {{- end }}
 

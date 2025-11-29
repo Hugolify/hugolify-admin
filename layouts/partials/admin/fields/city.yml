@@ -1,5 +1,5 @@
 {{- $args := dict 
-  "label" (i18n "admin.fields.city.label")
+  "label" (i18n "admin.fields.address.city.label")
   "name" "city"
   -}}
 

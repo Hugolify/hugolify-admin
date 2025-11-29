@@ -1,5 +1,5 @@
 {{- $name := dict "name" "responsive" }}
-{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+{{- if eq site.Params.admin.cms "tinacms" }}
   {{- $name = dict "name" "carousel_responsive" "nameOverride" "responsive" }}
 {{- end }}
 
@@ -15,4 +15,4 @@
 
 {{- $args = merge $args $name }}
 
-{{ partial "admin/widgets/list.js" $args }}
+{{ partial "admin/widgets/list.html" $args }}

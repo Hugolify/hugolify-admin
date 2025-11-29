@@ -1,5 +1,5 @@
 {{- $name := dict "name" "kwh" }}
-{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+{{- if eq site.Params.admin.cms "tinacms" }}
   {{- $name = dict "name" "diagnostic_epd" "nameOverride" "kwh" }}
 {{- end }}
 

@@ -1,11 +1,11 @@
 {{- $name := dict "name" "screenshot" }}
-{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+{{- if eq site.Params.admin.cms "tinacms" }}
   {{- $name = dict "name" "is_screenshot" "nameOverride" "screenshot" }}
 {{- end }}
 
 {{- $args := dict 
-  "label" (i18n "admin.fields.screenshot.label")
-  "hint" (i18n "admin.fields.screenshot.hint")
+  "label" (i18n "admin.fields.is_screenshot.label")
+  "hint" (i18n "admin.fields.is_screenshot.hint")
   -}}
 
 {{- $args = merge $args $name -}}

@@ -1,5 +1,5 @@
 {{- $name := dict "name" "heating_type" }}
-{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+{{- if eq site.Params.admin.cms "tinacms" }}
   {{- $name = dict "name" "realestates_energies_heating_type" "nameOverride" "heating_type" }}
 {{- end }}
 

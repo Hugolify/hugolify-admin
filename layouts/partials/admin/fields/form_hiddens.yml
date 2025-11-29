@@ -1,5 +1,5 @@
 {{- $name := dict "name" "hiddens" }}
-{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+{{- if eq site.Params.admin.cms "tinacms" }}
   {{- $name = dict "name" "form_hiddens" "nameOverride" "hiddens" }}
 {{- end }}
 
@@ -16,4 +16,4 @@
 
 {{- $args = merge $args $name }} 
 
-{{ partial "admin/widgets/list.js" $args }}
+{{ partial "admin/widgets/list.html" $args }}

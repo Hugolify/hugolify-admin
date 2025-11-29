@@ -1,6 +1,6 @@
 
 {{- $name := dict "name" "isIndex" }}
-{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+{{- if eq site.Params.admin.cms "tinacms" }}
   {{- $name = dict "name" "is_not_index" "nameOverride" "isIndex" }}
 {{- end }}
 

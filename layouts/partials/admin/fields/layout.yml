@@ -4,7 +4,7 @@
 {{- end -}}
 
 {{- $name := dict "name" "layout" }}
-{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+{{- if eq site.Params.admin.cms "tinacms" }}
   {{- $nameOverride := printf "layout_%s" (delimit $options "_") }}
   {{- $name = dict "name" $nameOverride "nameOverride" "layout" }}
 {{- end }}

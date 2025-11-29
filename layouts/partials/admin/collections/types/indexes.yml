@@ -8,5 +8,5 @@
   {{ partial "admin/collections/config/create.yml" . }}
   {{ partial "admin/collections/config/preview.yml" . }}
 
-  {{ partial "admin/collections/types/_default.yml" . }}
+  {{ partial "admin/collections/types/_default.html" . }}
 }
