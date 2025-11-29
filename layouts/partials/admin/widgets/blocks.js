@@ -61,7 +61,7 @@ blocks: {
   type: 'block',
   blockKey: 'type',
   blocks: [
-    {{ partial "admin/blocks/_range.yml" $blocks }}
+    {{ partial "admin/blocks/_range.html" $blocks }}
   ]
 }
 
@@ -89,7 +89,7 @@ blocks: {
   type: 'object',
   templateKey: 'type',
   templates: [
-    {{ partial "admin/blocks/_range.yml" $blocks }}
+    {{ partial "admin/blocks/_range.html" $blocks }}
   ]
 }
 
@@ -117,7 +117,7 @@ blocks: {
   collapsed: {{ $collapsed }},
   i18n: {{ $i18n }},
   types: [
-    {{ partial "admin/blocks/_range.yml" $blocks }}
+    {{ partial "admin/blocks/_range.html" $blocks }}
   ]
 }
 
