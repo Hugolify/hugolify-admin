@@ -40,10 +40,13 @@
   type: 'object',
   fields: [
     {{ range $fields }}
-      {{ $file := print "admin/fields/" . ".yml" }}
-      {{ if templates.Exists ( printf "partials/%s" $file ) }}
+      {{- if reflect.IsMap . }}
+        {{/* If it's a map, output it as JSON object without quotes */}}
+        {{ . | jsonify }},
+      {{- else }}
+        {{/* If it's a string, output it with quotes */}}
         '{{ . }}',
-      {{ end }}
+      {{- end }}
     {{ end }}
   ],
   options: {
