@@ -8,7 +8,7 @@
 {{- end -}}
 {{- $custom_path = replace $custom_path "{{" "{" }}
 {{- $custom_path = replace $custom_path "}}" "}" }}
-{{- $custom_path = replace $custom_path "{slug}" "{title_page|slugify}.md" }}
+{{- $custom_path = replace $custom_path "{slug}" "{title|slugify}.md" }}
 {{- $custom_path = replace $custom_path "{year}" "{date|year}" }}
 {{- $custom_path = replace $custom_path "{month}" "{date|month}" }}
 {{- $custom_path = replace $custom_path "{day}" "{date|day}" }}
