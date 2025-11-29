@@ -1,7 +1,7 @@
 settings:
   hide: {{ site.Params.admin.settings.hide | default true }}
 
-{{- partialCached "admin/cms/pagescms/media.html" . }}
+{{ partialCached "admin/cms/pagescms/media.html" . }}
 
 {{- $sliceCompatibity := slice 
   (dict "{{slug}}/_index" `{fields.title}/_index.md`)

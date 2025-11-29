@@ -60,7 +60,7 @@
     {{ with $display_fields }}
       {{ $labels := slice }}
       {{ range . }}
-        {{ $labels = $labels | append (printf `{%s}` .) }}
+        {{ $labels = $labels | append (replace (printf `{%s}` .) `"` ``) }}
       {{ end }}
     label: "{{ delimit $labels `,` }}",
     {{ end }}
