@@ -16,7 +16,7 @@ _snippets_imports:
 {{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/group.html" .) }}
 
 {{/* Inputs */}}
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/inputs.js" $fields.inputs) }}
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/inputs.js" $fields.selectedInputs) }}
 
 {{/* Structures */}}
 {{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/structures.js" (dict "context" . "structures" $fields.structures)) }}

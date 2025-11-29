@@ -16,7 +16,7 @@ collections_config: {
 
       {{/* Modify arguments */}}
       {{ $newDatas := newScratch }}
-      {{ $newDatas.Set "datas" $datas  }}
+      {{ $newDatas.Set "datas" $datas }}
       {{ $newDatas.DeleteInMap "datas" "name" }}
       {{ $newDatas.SetInMap "datas" "path" $datas.folder }}
       {{ $newDatas.DeleteInMap "datas" "folder" }}
