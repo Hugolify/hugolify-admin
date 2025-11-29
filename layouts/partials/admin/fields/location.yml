@@ -4,7 +4,7 @@
   -}}
 
 {{- with site.Params.admin.widgets.map.default }}
-  {{ $args = $args | append (dict "default" .) }}
+  {{ $args = merge $args (dict "default" .) }}
 {{- end }}
 
 {{ partial "admin/widgets/map.js" $args }}
