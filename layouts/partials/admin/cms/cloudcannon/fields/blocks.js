@@ -27,10 +27,21 @@
         value: {
           type: '{{ . }}',
           {{ range $fields }}
-            {{ $field := partial "admin/func/GetRealFieldName.html" . }}
-            '{{ $field }}': null,
+            {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+            {{ $field := $f.field }}
+            {{ $values := $f.values }}
+
+            {{- $file := print "admin/fields/" $field ".yml" }}
+            {{- if templates.Exists ( printf "partials/%s" $file ) }}
+              {{- $r := partial $file $values }}
+              {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $r) }}
+              {{- range $k, $v := $datas }}
+                "{{ $k }}": null,
+              {{- end }}
+            {{- end }}
           {{ end }}
         },
+        {{ partial "admin/cms/cloudcannon/inputs.js" $fields }},
 
         preview: {
           text: [

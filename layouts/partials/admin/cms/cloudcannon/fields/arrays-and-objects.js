@@ -6,7 +6,7 @@
   {{/* Get field file */}}
   {{ $file := print "admin/fields/" $f.field ".yml" }}
   {{ if templates.Exists (printf "partials/%s" $file) }}
-    {{ $file = partialCached $file $f.values }}
+    {{ $file = partial $file $f.values }}
   {{ end }}
 
   {{/* Get datas from file */}}
@@ -29,9 +29,17 @@
           {{ with $fields }}
           value: {
             {{ range . }}
-            '{{ . }}': null,
+              {{- $file := print "admin/fields/" . ".yml" }}
+              {{- if templates.Exists ( printf "partials/%s" $file ) }}
+                {{- $r := partial $file . }}
+                {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $r) }}
+                {{- range $k, $v := $datas }}
+                  "{{ $k }}": null,
+                {{- end }}
+              {{- end }}
             {{ end }}
-          }
+          },
+          {{ partial "admin/cms/cloudcannon/inputs.js" . }}
           {{ end }}
         }
       ]

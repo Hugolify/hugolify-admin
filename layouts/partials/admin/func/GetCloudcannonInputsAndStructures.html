@@ -1,5 +1,6 @@
 {{ $fields := slice }}
 {{ $inputsFields := slice }}
+{{ $inputsSelectedFields := slice }}
 {{ $structuresFields := slice }}
 
 {{/* Get fields from enable collections */}}
@@ -9,7 +10,9 @@
     {{ $file := print "admin/collections/fields/" $collection ".fields.default.html" }}
     {{ if templates.Exists (printf "partials/%s" $file) }}
       {{ $collectionFields := partialCached $file . }}
-      {{ $fields = $fields | append $collectionFields }}
+      {{ range $collectionFields }}
+        {{ $fields = $fields | append . }}
+      {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -17,15 +20,31 @@
 {{/* Remove "blocks", "body" and false from the list $fields */}}
 {{ $fields = $fields | complement (slice "blocks" "body" false) }}
 
+{{/* Get selectedField (only first level fields) */}}
+{{ $selectedFields := $fields | uniq }}
+{{ range $fields }}
+  {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+  {{ $inputsSelectedFields = $inputsSelectedFields | append (dict $f.field $f.values) }}
+{{ end }}
+
 {{/* Get fields from enable blocks */}}
 {{ $blocks := site.Params.admin.blocks.enable }}
 {{ range $blocks }}
-  {{ $file := print "admin/blocks/fields/" . ".html" }}
+  {{ $file := print "admin/blocks/types/" . ".html" }}
   {{ if templates.Exists (printf "partials/%s" $file) }}
-    {{ $blockFields := partialCached $file . }}
-    {{ range $blockFields }}
-      {{ $fields = $fields | append . }}
+    {{ $blockFile := partialCached $file . }}
+    
+    {{ if eq . "selected" }}
+      {{ $blockFile = $blockFile | replaceRE `(?m)^\s*,\s*$` `` }}
     {{ end }}
+
+    {{ $blockDatas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $blockFile) }}
+    {{ range $blockDatas }}
+      {{ range .fields }}
+        {{ $fields = $fields | append . }}
+      {{ end }}
+    {{ end }}
+
   {{ end }}
 {{ end }}
 
@@ -85,7 +104,6 @@
     {{ end }}
 
     {{/* Add field to inputs */}}
-    {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
     {{ $inputsFields = $inputsFields | append (dict $f.field $f.values) }}
 
   {{ end }}
@@ -93,6 +111,11 @@
 
 {{/* Remove duplicates */}}
 {{ $inputsFields = $inputsFields | uniq }}
+{{ $inputsSelectedFields = $inputsSelectedFields | uniq }}
 {{ $structuresFields = $structuresFields | uniq }}
 
-{{ return (dict "inputs" $inputsFields "structures" $structuresFields) }}
+{{ return (dict 
+  "inputs" $inputsFields 
+  "selectedInputs" $inputsSelectedFields 
+  "structures" $structuresFields
+) }}
