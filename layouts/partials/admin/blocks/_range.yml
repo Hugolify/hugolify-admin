@@ -1,11 +1,11 @@
 {{- with . -}}
   {{ range . }}
-    {{ $file := print "admin/blocks/types/" . ".html" }}
+    {{ $file := print "admin/blocks/types/" . ".yml" }}
     {{ if templates.Exists ( printf "partials/%s" $file ) }}
       {{ partial $file . }},
     {{ else }}
       {{ if isset site.Params.admin.blocks . }}
-        {{ partial "admin/blocks/types/_placeholder.html" . }},
+        {{ partial "admin/blocks/types/_placeholder.yml" . }},
       {{ end }}
     {{ end }}
   {{ end }}

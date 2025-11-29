@@ -11,5 +11,5 @@
   path: '{{`{{slug}}/_index`}}',
   {{ partial "admin/collections/config/slug.yml" }}
 
-  {{ partial "admin/collections/types/_default.html" . }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

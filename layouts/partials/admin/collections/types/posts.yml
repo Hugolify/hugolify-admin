@@ -10,5 +10,5 @@
   {{ partial "admin/collections/config/path.yml" "{{year}}/{{month}}/{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" "{{year}}-{{month}}-{{day}}-{{slug}}" }}
 
-  {{ partial "admin/collections/types/_default.html" . }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }

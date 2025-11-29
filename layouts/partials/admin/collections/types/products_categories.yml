@@ -10,5 +10,5 @@
   {{ partial "admin/collections/config/path.yml" . }}
   {{ partial "admin/collections/config/slug.yml" . }}
 
-  {{ partial "admin/collections/types/_default.html" . }}
+  {{ partial "admin/collections/types/_default.yml" . }}
 }
