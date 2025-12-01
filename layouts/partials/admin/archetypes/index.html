@@ -17,7 +17,11 @@
         {{- $default := "" -}}
         {{- if reflect.IsMap . -}}
           {{ range $k, $v := . }}
-            {{- $key = $v.collection -}}
+            {{- with $v.name -}}
+              {{- $key = . -}}
+            {{- else }}
+              {{- $key = $v.collection -}}
+            {{- end }}
           {{ end }}
         {{- end -}}
 
@@ -29,9 +33,9 @@
         {{- if eq $key "is_page" -}}{{- $key = "isPage" -}}{{- $default = true -}}{{- end -}}
 
         {{/* Add field to list */}}
-		{{- $id := or (ne $key "id") (and (eq $key "id") (eq site.Params.admin.config.id true)) }}
+		    {{- $id := or (ne $key "id") (and (eq $key "id") (eq site.Params.admin.config.id true)) }}
         {{- if and (ne $key "body") (ne $key false) $id -}}
-        {{- $fieldsList = $fieldsList | append (dict "field" $key "default" $default) -}}
+          {{- $fieldsList = $fieldsList | append (dict "field" $key "default" $default) -}}
         {{- end -}}
 
       {{- end -}}

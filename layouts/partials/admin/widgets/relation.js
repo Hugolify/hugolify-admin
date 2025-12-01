@@ -41,6 +41,7 @@
   label: '{{ $label }}',
   type: '{{ cond $multiple "multiselect" "select" }}',
   options: {
+    value_key: ['id', 'uuid', 'title', 'name', 'path'],
     values: 'collections.{{ $collection }}'
   }
 }
