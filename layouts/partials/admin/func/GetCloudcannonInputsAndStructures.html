@@ -30,7 +30,7 @@
 {{/* Get fields from enable blocks */}}
 {{ $blocks := site.Params.admin.blocks.enable }}
 {{ range $blocks }}
-  {{ $file := print "admin/blocks/types/" . ".html" }}
+  {{ $file := print "admin/blocks/types/" . ".yml" }}
   {{ if templates.Exists (printf "partials/%s" $file) }}
     {{ $blockFile := partialCached $file . }}
     
@@ -50,6 +50,7 @@
 
 {{/* Remove duplicates */}}
 {{ $fields = $fields | uniq }}
+{{ warnf "fields: %s" $fields }}
 
 {{/* Separate all fields in inputs and structures */}}
 {{ range $fields }}
@@ -57,6 +58,7 @@
   {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
 
   {{ $fileField := print "admin/fields/" $f.field ".yml" }}
+  {{ warnf "fileField: %s" $fileField }}
   {{ if templates.Exists (printf "partials/%s" $fileField) }}
     {{ $file := partial $fileField $f.values }}
 
@@ -77,6 +79,7 @@
       {{/* Process all subfields from this field */}}
       {{ range $datas.fields }}
         {{ $subField := print "admin/fields/" . ".yml" }}
+        {{ warnf "subField: %s" $subField }}
         {{ if templates.Exists (printf "partials/%s" $subField) }}
           {{ $subFile := partial $subField }}
           {{ $subDatas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $subFile) }}
