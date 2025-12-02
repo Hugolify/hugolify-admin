@@ -1,5 +1,5 @@
 {{- $name := dict "name" "items" }}
-{{- if eq site.Params.admin.cms "tinacms" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
   {{- $name = dict "name" "form_options" "nameOverride" "items" }}
 {{- end }}
 
@@ -11,6 +11,7 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.form.options.label" 2)
   "label_singular" (i18n "admin.fields.form.options.label" 1)
+  "label_options" ("admin.fields.form.options.options")
   "hint" (i18n "admin.fields.form.options.hint")
   "fields" $fields
   -}}

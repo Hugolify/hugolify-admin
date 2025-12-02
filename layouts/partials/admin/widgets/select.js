@@ -6,6 +6,7 @@
   - hint (string)
   - i18n (boolean or string)
   - label (string) required
+  - label_options (string)
   - multiple (boolean)
   - name (string) required
   - nameOverride (string)
@@ -20,6 +21,7 @@
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
+{{- $label_options := .label_options | default false }}
 {{- $multiple := .multiple | default false }}
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
@@ -39,13 +41,18 @@
     {{ with $options }}
     values: [
     {{- range $k, $v := . }}
-      {{- $name := $k -}}
+      {{- $option_name := $k -}}
       {{- if eq (printf "%T" $k) "int" }}
-        {{- $name = $v -}}
+        {{- $option_name = $v }}
       {{- end }}
-      {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . -}}
+      {{- $option_name = replace $option_name "-" "_" }}
+      {{- $label_option := i18n (print "admin.fields." $i18n ".options." $option_name) }}
+      {{- with $label_options }}
+        {{- $label_option = i18n (print . "." $option_name) }}
+      {{- end }}
+      {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
       { 
-        name: '{{ i18n (print "admin.fields." $i18n ".options." (replace $name "-" "_")) | default (humanize $name) }}', 
+        name: '{{ $label_option | default (humanize $option_name) }}', 
         value: {{ $value }} 
       },
       {{- end }}
@@ -73,13 +80,18 @@
     {{ with $options }}
     values: [
     {{- range $k, $v := . }}
-      {{- $name := $k -}}
+      {{- $option_name := $k -}}
       {{- if eq (printf "%T" $k) "int" }}
-        {{- $name = $v -}}
+        {{- $option_name = $v }}
       {{- end }}
-      {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . -}}
+      {{- $option_name = replace $option_name "-" "_" }}
+      {{- $label_option := i18n (print "admin.fields." $i18n ".options." $option_name) }}
+      {{- with $label_options }}
+        {{- $label_option = i18n (print . "." $option_name) }}
+      {{- end }}
+      {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
       { 
-        label: '{{ i18n (print "admin.fields." $i18n ".options." (replace $name "-" "_")) | default (humanize $name) }}', 
+        label: '{{ $label_option | default (humanize $option_name) }}', 
         value: {{ $value }} 
       },
       {{- end }}
@@ -106,13 +118,18 @@
   {{- with $options }}
   options: [
   {{- range $k, $v := . }}
-    {{- $name := $k -}}
+    {{- $option_name := $k -}}
     {{- if eq (printf "%T" $k) "int" }}
-      {{- $name = $v -}}
+      {{- $option_name = $v }}
     {{- end }}
-    {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . -}}
+    {{- $option_name = replace $option_name "-" "_" }}
+    {{- $label_option := i18n (print "admin.fields." $i18n ".options." $option_name) }}
+    {{- with $label_options }}
+      {{- $label_option = i18n (print . "." $option_name) }}
+    {{- end }}
+    {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
     { 
-      label: '{{ i18n (print "admin.fields." $i18n ".options." (replace $name "-" "_")) | default (humanize $name) }}', 
+      label: '{{ $label_option | default (humanize $name) }}', 
       value: {{ $value }} 
     },
   {{- end }}
@@ -123,6 +140,7 @@
 
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
 {{ else }}
+{{ warnf "label_options: %s" $label_options }}
 
 {
   label: '{{ $label }}',
@@ -136,11 +154,16 @@
   {{- range $k, $v := . }}
     {{- $option_name := $k -}}
     {{- if eq (printf "%T" $k) "int" }}
-      {{- $option_name = $v -}}
+      {{- $option_name = $v }}
     {{- end }}
-    {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . -}}
+    {{- $option_name = replace $option_name "-" "_" }}
+    {{- $label_option := i18n (print "admin.fields." $i18n ".options." $option_name) }}
+    {{- with $label_options }}
+      {{- $label_option = i18n (print . "." $option_name) }}
+    {{- end }}
+    {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
     { 
-      label: '{{ i18n (print "admin.fields." $name ".options." (replace $option_name "-" "_")) | default (humanize $name) }}', 
+      label: '{{ $label_option | default (humanize $name) }}', 
       value: {{ $value }} 
     },
   {{ end }}
