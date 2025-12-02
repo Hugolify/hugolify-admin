@@ -1,0 +1,842 @@
+admin:
+  blocks:
+    alert:
+      label: 警报
+    audio:
+      label: 音频
+    chart:
+      label: 图表
+    comparison:
+      label: 比较
+    cta:
+      label: 行动号召
+    datas:
+      label: 数据
+    editorial:
+      label: 编辑
+    embed:
+      label: 嵌入
+    faq:
+      label: 常见问题
+    figure:
+      label: 图形
+    form:
+      label: 表单
+    gallery:
+      label: 画廊
+    images:
+      label: 图片
+    informations:
+      label: 信息
+    instagram:
+      label: Instagram
+    latest:
+      label: 最新项目
+    location:
+      label: 位置
+    logos:
+      label: 标志
+    map:
+      label: 地图
+    newsletter:
+      label: 新闻通讯
+    paragraph:
+      label: 段落
+    pushes:
+      label: 推送
+    quote:
+      label: 引用
+    search:
+      label: 搜索
+    selected:
+      label: 选择 {{ .section }}
+    testimonials:
+      label: 推荐
+    timeline:
+      label: 时间线
+    title:
+      label: 标题
+    video:
+      label: 视频
+  collections:
+    authors:
+      label:
+        one: 作者
+        other: 作者
+    casestudies:
+      _description: 所有案例研究
+      label:
+        one: 案例研究
+        other: 案例研究
+    categories:
+      label:
+        one: 类别
+        other: 类别
+    config:
+      _description: 所有配置
+      label:
+        one: 配置
+        other: 配置
+    docs:
+      _description: 所有文档
+      label:
+        one: 文档
+        other: 文档
+    events:
+      _description: 所有活动
+      label:
+        one: 活动
+        other: 活动
+    events_categories:
+      _description: 所有活动类别
+      label:
+        one: 类别
+        other: 类别
+    expertises:
+      _description: 所有专业知识
+      label:
+        one: 专业知识
+        other: 专业知识
+    home: 首页
+    indexes:
+      _description: 所有索引页面
+      label:
+        one: 索引
+        other: 索引
+    jobs:
+      _description: 所有职位
+      label:
+        one: 职位
+        other: 职位
+    jobs_categories:
+      _description: 所有职位类别
+      label:
+        one: 类别
+        other: 类别
+    jobs_expertises:
+      _description: 所有专业知识
+      label:
+        one: 专业知识
+        other: 专业知识
+    jobs_places:
+      _description: 所有地点
+      label:
+        one: 地点
+        other: 地点
+    jobs_tags:
+      _description: 所有职位标签
+      label:
+        one: 标签
+        other: 标签
+    pages:
+      _description: 所有页面
+      label:
+        one: 页面
+        other: 页面
+    persons:
+      _description: 所有人员
+      label:
+        one: 人员
+        other: 人员
+    persons_expertises:
+      _description: 所有专业知识
+      label:
+        one: 专业知识
+        other: 专业知识
+    persons_places:
+      _description: 所有地点
+      label:
+        one: 地点
+        other: 地点
+    persons_statutes:
+      _description: 所有章程
+      label:
+        one: 状态
+        other: 章程
+    places:
+      _description: 所有地点
+      label:
+        one: 地点
+        other: 地点
+    posts:
+      _description: 所有新闻
+      label:
+        one: 新闻
+        other: 新闻
+    posts_categories:
+      _description: 所有新闻类别
+      label:
+        one: 类别
+        other: 类别
+    posts_expertises:
+      _description: 所有专业知识
+      label:
+        one: 专业知识
+        other: 专业知识
+    posts_tags:
+      _description: 所有新闻标签
+      label:
+        one: 标签
+        other: 标签
+    products:
+      _description: 所有产品
+      label:
+        one: 产品
+        other: 产品
+    products_categories:
+      _description: 所有产品类别
+      label:
+        one: 类别
+        other: 类别
+    products_tags:
+      _description: 所有产品标签
+      label:
+        one: 标签
+        other: 标签
+    projects:
+      _description: 所有项目
+      label:
+        one: 项目
+        other: 项目
+    projects_tags:
+      _description: 所有项目标签
+      label:
+        one: 标签
+        other: 标签
+    projects_types:
+      _description: 所有项目类型
+      label:
+        one: 类型
+        other: 类型
+    publications:
+      _description: 所有出版物
+      label:
+        one: 出版物
+        other: 出版物
+    publications_categories:
+      _description: 所有出版物类别
+      label:
+        one: 类别
+        other: 类别
+    publications_expertises:
+      _description: 所有专业知识
+      label:
+        one: 专业知识
+        other: 专业知识
+    publications_persons:
+      label:
+        one: 人员
+        other: 人员
+    realestates:
+      _description: 所有房地产
+      label:
+        one: 房地产
+        other: 房地产
+    realestates_categories:
+      _description: 所有房地产类别
+      label:
+        one: 类别
+        other: 类别
+    realestates_persons:
+      _description: 所有代理
+      label:
+        one: 代理
+        other: 代理
+    realestates_sellers:
+      _description: 所有卖家
+      label:
+        one: 卖家
+        other: 卖家
+    services:
+      _description: 所有服务
+      label:
+        one: 服务
+        other: 服务
+    services_categories:
+      _description: 所有服务类别
+      label:
+        one: 类别
+        other: 类别
+    tags:
+      _description: 所有标签
+      label:
+        one: 标签
+        other: 标签
+  fields:
+    address:
+      city:
+        label: 城市
+      country:
+        label: 国家
+      label: 地址
+      street:
+        label: 街道
+      zipcode:
+        label: 邮政编码
+    align:
+      label: 对齐
+      options:
+        center: 居中
+        end: 结束
+        start: 开始
+    arguments:
+      label:
+        one: 参数
+        other: 参数
+    audio:
+      label:
+        one: 音频
+        other: 音频
+      mp3:
+        label: MP3
+        hint: MP3音频文件
+      ogg:
+        label: OGG
+        hint: OGG音频文件
+    author:
+      label: 作者
+    autoplay:
+      label: 自动播放
+    background:
+      label: 带背景?
+    background_color:
+      label: 背景颜色
+    badge:
+      hint: 显示徽章
+      label: 徽章
+    blocks:
+      label:
+        one: 块
+        other: 块
+    body:
+      label: 正文
+    breakpoints:
+      hint: 屏幕尺寸
+      label:
+        one: 断点
+        other: 断点
+      options:
+        desktop: 桌面
+        laptop: 笔记本电脑
+        mobile: 手机
+        tablet: 平板电脑
+        wide_tablet: 宽屏平板电脑
+    carousel:
+      arrows:
+        label: 箭头
+      autoplay:
+        label: 自动播放
+      focus:
+        hint: 将活动幻灯片定位在中心?
+        label: 焦点
+      gap:
+        hint: 幻灯片之间的间隙。以rem表示。
+        label: 间隙
+      hint: 仅用于轮播显示
+      label: 轮播配置
+      padding:
+        hint: 轮播的左/右填充。以rem值表示
+        label: 填充
+      pagination:
+        label: 分页
+      params:
+        label: 参数
+      perpage:
+        hint: 要显示的幻灯片数量
+        label: 每页
+      responsive:
+        label: 响应式
+      type:
+        label: 轮播类型
+    chart:
+      label: 图表
+      data:
+        label: 数据(代码)
+        hint: '文档: https://www.chartjs.org/docs/'
+      type:
+        label: 图表类型
+        options:
+          bar: 条形图
+          line: 折线图
+          pie: 饼图
+          polarArea: 极区图
+          radar: 雷达图
+    class:
+      label: 类
+      hint: 向此组件添加CSS类
+    code:
+      label: 代码
+    color:
+      label: 颜色
+    column:
+      label: 列
+    contact:
+      label:
+        one: 联系人
+        other: 联系人
+    controls:
+      label: 控件
+    coordinates:
+      hint: '轻松查找联系详情: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: 地理坐标
+      lat:
+        label: 纬度
+      lng:
+        label: 经度
+    count:
+      hint: 要显示的项目
+      label: 计数
+    credit:
+      label: 署名
+    cta:
+      label:
+        one: 行动号召
+        other: 行动号召
+    datas:
+      label:
+        one: 数据
+        other: 数据
+    date:
+      from: 从
+      label: 日期
+      sale: 销售日期
+      to: 到
+    description:
+      hint:
+        显示在标签页、搜索结果和短信/消息/社交网络
+        预览中
+      label: 描述
+    diagnostic:
+      epd:
+        label: 千瓦时
+        hint: 能源性能诊断(DPE)
+      ghg:
+        label: 二氧化碳
+        hint: 温室气体(GHG)
+      label: 诊断
+      in_progress: 进行中?
+    direction:
+      label: 方向
+      options:
+        ltr: 文字在左/图片在右
+        rtl: 图片在左/文字在右
+    discount:
+      hint: '减少的金额,例如: 30%'
+      label: 折扣
+      pattern: 仅值(不含货币)
+    document:
+      label:
+        one: 文档
+        other: 文档
+    draft:
+      label: 草稿
+    email:
+      label: 电子邮件
+    embed:
+      label: 嵌入
+    event:
+      label:
+        one: 活动
+        other: 活动
+    fax:
+      label: 传真
+      hint: '国际格式,例如: +33 1 23 45 67 89'
+    featured_image:
+      hint: 显示在搜索结果和短信/消息/社交网络预览中
+      label: 主图
+    fee:
+      label:
+        one: 费用
+        other: 费用
+    figure:
+      label: 图形
+    form:
+      autocomplete:
+        label: 自动完成
+        options:
+          city: 城市
+          country_name: 国家名称
+          email: 电子邮件
+          family_name: 姓氏
+          given_name: 名字
+          honorific_prefix: 称谓
+          name: 姓名
+          organization: 组织
+          postal_code: 邮政编码
+          state: 州/省
+          street_address: 街道地址
+          tel: 电话
+      full:
+        label: 全宽字段?
+      hiddens:
+        label:
+          one: 隐藏字段
+          other: 隐藏字段
+      items:
+        label:
+          one: 字段
+          other: 字段
+      label: 表单
+      options:
+        hint: 仅用于选择字段
+        label:
+          one: 选项
+          other: 选项
+      type:
+        hint: 选择字段类型
+        email: 电子邮件
+        label: 类型
+        radio: 单选
+        select: 选择
+        tel: 电话
+        text: 文本
+        textarea: 文本区域
+      value:
+        hint: 仅用于复选框和单选字段
+        label: 值
+    gallery:
+      label: 画廊
+    grid:
+      label: 网格
+      options:
+        container: 容器
+        full: 全宽
+        large: 大
+        medium: 中
+        small: 小
+    heading:
+      label: 标题
+    hero:
+      label: 主图
+    icon:
+      hint: 来自 https://icons.getbootstrap.com/ 的图标名称
+      label: 图标
+    id:
+      label: ID
+    image:
+      label: 
+        one: 图片
+        other: 图片
+      alt:
+        hint: 用于传达信息的图片(如果是装饰性图片则留空)
+        label: 替代文本
+      filter:
+        hint: 为图片或截图设置Linear,留空以保持默认配置
+        label: 更改过滤器质量?
+        options:
+          box: 适合缩小的简单快速平均滤波器(默认)
+          catmullrom: 锐利的立方滤波器,比Lanczos滤波器更快,同时提供类似的结果
+          lanczos: 用于摄影图像的高质量重采样滤波器,产生锐利的结果
+          linear: 双线性重采样滤波器,产生平滑输出,比立方滤波器更快
+      src:
+        hint: '发送前调整大小并压缩图片: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: 图片
+    images:
+      label: 
+        one: 图片
+        other: 图片
+    is_background:
+      label: 是背景?
+    is_blank:
+      label: 是空白?
+    is_card:
+      hint: 在文本后面添加背景
+      label: 是卡片?
+    is_darken:
+      label: 变暗?
+    is_exclusive:
+      label: 独家?
+    is_half:
+      label: 半尺寸?
+    is_highlighted:
+      label: 已突出显示?
+    is_logo:
+      hint: 居中定位且不裁剪
+      label: 是标志?
+    is_open:
+      label: 打开?
+    is_pinned:
+      label: 已固定?
+    is_screenshot:
+      hint: 添加假浏览器
+      label: 是截图?
+    items:
+      label:
+        one: 项目
+        other: 项目
+    keyfeatures:
+      hint: '例如: 位置、朝向…'
+      label:
+        one: 关键特征
+        other: 关键特征
+    label:
+      label: 标签
+    lang:
+      hint: 如果与当前页面语言不同,请输入语言代码(例如 zh)
+      label: 语言
+    layout:
+      label: 布局
+      options:
+        carousel: 轮播
+        grid: 网格
+        list: 列表
+    legal:
+      label: 法律
+    legend:
+      label: 图例
+    limit:
+      label: 限制
+    links:
+      label:
+        one: 链接
+        other: 链接
+    location:
+      label: 位置
+    loop:
+      label: 循环
+    name:
+      label: 名称
+    map:
+      label: 地图
+    newsletter:
+      form:
+        label: 表单
+    notes:
+      hint: '要将文本中的单词链接到注释,请在其后添加"[\\*]"。注释和"[\\*]"按其顺序链接。'
+      label:
+        one: 注释
+        other: 注释
+    offer:
+      label:
+        one: 优惠
+        other: 优惠
+    offset:
+      label: 偏移
+      options:
+        center: 居中
+        end: 结束
+        start: 开始
+    parent:
+      label: 父页面
+    pdf:
+      label: PDF
+      hint: '发送前压缩PDF: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: 电话号码
+      hint: '国际格式,例如: +33 1 23 45 67 89'
+    placeholder:
+      label: 占位符
+    poster:
+      label: 海报
+      hint: 视频的占位符图片
+    prefix:
+      label: 前缀
+    press:
+      label: 新闻
+    price:
+      hide: 隐藏价格
+      hint: '例如: 300000(表示300 000 €)'
+      label: 价格
+      sold: 销售价格
+    quote:
+      label: 引用
+    realestates_energies:
+      label:
+        one: 能源
+        other: 能源
+      heating:
+        label: 供暖
+        options:
+          collective: 集体
+          individual: 个人
+      heating_type:
+        label: 供暖类型
+        options:
+          reversible_ac: 可逆空调
+          electric: 电力
+          gas: 燃气
+          solar: 太阳能
+    realestates_informations:
+      area:
+        hint: 以平方米表示
+        label: 室内面积
+      bathrooms:
+        label: 浴室数量
+      bedrooms:
+        label: 卧室数量
+      district:
+        label: 区域
+      exposure:
+        label: 朝向
+      field:
+        hint: 以平方米表示
+        label: 室外面积
+      floor:
+        label: 楼层
+      has_balcony:
+        label: 阳台?
+      has_box:
+        label: 储物间?
+      has_cave:
+        label: 地窖?
+      has_elevator:
+        label: 电梯?
+      has_garage:
+        label: 车库?
+      has_outbuilding:
+        label: 附属建筑?
+      has_parking:
+        label: 停车位?
+      has_swimmingpool:
+        label: 游泳池?
+      has_terrace:
+        label: 露台?
+      label: 信息
+      levels:
+        label: 楼层数
+      rooms:
+        label: 房间数
+      showerrooms:
+        label: 淋浴间数量
+      wc:
+        label: 卫生间
+      year:
+        label: 建造年份
+    realestates_types:
+      label: 交易类型
+      options:
+        rent: 租赁
+        sale: 销售
+    reference:
+      label: 参考
+    rent:
+      label: 租赁?
+    required:
+      label: 必填
+    section:
+      hint: 选择要显示的部分
+      label: 部分
+    show_more:
+      hint: 显示一个按钮以查看更多项目
+      label: 显示更多?
+    show_places:
+      hint: 仅当您已保存地点时(这将禁用下面的标记)
+      label: 显示所有已注册的地点?
+    slug:
+      hint: 留空以使用标题自动生成。**注意SEO影响。**
+      label: 别名
+      pattern:
+        仅包含小写字母、数字和连字符,不含空格、
+        重音符号或特殊字符
+    socials:
+      label:
+        one: 社交
+        other: 社交
+      plateform: 平台
+      twitter:
+        label: Twitter/X
+        hint: 用户名
+    sold:
+      label: 已售/已租?
+    state:
+      label: 状态
+      options:
+        danger: 危险
+        dark: 深色
+        info: 信息
+        light: 浅色
+        primary: 主要
+        secondary: 次要
+        success: 成功
+        warning: 警告
+    status:
+      label: 状态
+    submit:
+      label: 发送按钮文本
+    subtitle:
+      label: 副标题
+    suffix:
+      hint: '例如: %'
+      label: 后缀
+    summary:
+      label: 摘要
+    surtitle:
+      label: 上标题
+    text:
+      label: 文本
+    title:
+      label: 标题
+    title_page:
+      hint:
+        显示在标签页、搜索结果和短信/消息/社交网络
+        预览中
+      label: 页面标题
+    transcription:
+      label: 转录
+    url:
+      label: URL
+    value:
+      label: 值
+    video:
+      label: 
+        one: 视频
+        other: 视频
+      mp4:
+        label: MP4
+        hint: MP4视频文件
+        mobile:
+          label: MP4(手机)
+          hint: 手机MP4视频文件
+      webm:
+        label: WEBM
+        hint: WEBM视频文件
+        mobile:
+          label: WEBM(手机)
+          hint: 手机WEBM视频文件
+    website:
+      hint: URL (https://…)
+      label: 网站
+    weight:
+      label: 位置(重要性)
+      hint: 知道10是最重要的,100是最不重要的
+    year: 年份
+    zoom:
+      label: 缩放
+  files:
+    banner: 网站顶部的信息横幅
+    footer: 网站底部的信息文本
+    nav:
+      label: 导航
+      legal: 法律导航(声明、政策…)
+      primary: 主导航
+      secondary: 次导航
+      social: 社交导航
+    seo:
+      label: 全局SEO
+      title: 网站名称
+  group:
+    year: 年份
+  shortcodes:
+    alert:
+      label: 警报
+    badge:
+      label: 徽章
+    blank_link:
+      label: 空白链接
+    blockquote:
+      label: 引用块
+    button:
+      label: 按钮
+    details:
+      label: 详情
+    figure:
+      label: 图形
+    map:
+      label: 地图
+    twitter:
+      _id: Twitter ID
+      label: Twitter / X
+      user: Twitter用户名
+    youtube:
+      _id: Youtube ID
+      label: Youtube

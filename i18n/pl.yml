@@ -1,0 +1,842 @@
+admin:
+  blocks:
+    alert:
+      label: Alert
+    audio:
+      label: Audio
+    chart:
+      label: Wykres
+    comparison:
+      label: Porównanie
+    cta:
+      label: Wezwanie do działania
+    datas:
+      label: Dane
+    editorial:
+      label: Redakcyjny
+    embed:
+      label: Osadzenie
+    faq:
+      label: FAQ
+    figure:
+      label: Figura
+    form:
+      label: Formularz
+    gallery:
+      label: Galeria
+    images:
+      label: Obrazy
+    informations:
+      label: Informacje
+    instagram:
+      label: Instagram
+    latest:
+      label: Najnowsze elementy
+    location:
+      label: Lokalizacja
+    logos:
+      label: Logotypy
+    map:
+      label: Mapa
+    newsletter:
+      label: Newsletter
+    paragraph:
+      label: Akapit
+    pushes:
+      label: Wyróżnione
+    quote:
+      label: Cytat
+    search:
+      label: Wyszukiwanie
+    selected:
+      label: Wybór {{ .section }}
+    testimonials:
+      label: Referencje
+    timeline:
+      label: Oś czasu
+    title:
+      label: Tytuł
+    video:
+      label: Wideo
+  collections:
+    authors:
+      label:
+        one: Autor
+        other: Autorzy
+    casestudies:
+      _description: Wszystkie studia przypadków
+      label:
+        one: Studium przypadku
+        other: Studia przypadków
+    categories:
+      label:
+        one: Kategoria
+        other: Kategorie
+    config:
+      _description: Cała konfiguracja
+      label:
+        one: Konfiguracja
+        other: Konfiguracje
+    docs:
+      _description: Cała dokumentacja
+      label:
+        one: Dokument
+        other: Dokumenty
+    events:
+      _description: Wszystkie wydarzenia
+      label:
+        one: Wydarzenie
+        other: Wydarzenia
+    events_categories:
+      _description: Wszystkie kategorie wydarzeń
+      label:
+        one: Kategoria
+        other: Kategorie
+    expertises:
+      _description: Wszystkie specjalizacje
+      label:
+        one: Specjalizacja
+        other: Specjalizacje
+    home: Strona główna
+    indexes:
+      _description: Wszystkie strony indeksów
+      label:
+        one: Indeks
+        other: Indeksy
+    jobs:
+      _description: Wszystkie oferty pracy
+      label:
+        one: Oferta pracy
+        other: Oferty pracy
+    jobs_categories:
+      _description: Wszystkie kategorie ofert pracy
+      label:
+        one: Kategoria
+        other: Kategorie
+    jobs_expertises:
+      _description: Wszystkie specjalizacje
+      label:
+        one: Specjalizacja
+        other: Specjalizacje
+    jobs_places:
+      _description: Wszystkie miejsca
+      label:
+        one: Miejsce
+        other: Miejsca
+    jobs_tags:
+      _description: Wszystkie tagi ofert pracy
+      label:
+        one: Tag
+        other: Tagi
+    pages:
+      _description: Wszystkie strony
+      label:
+        one: Strona
+        other: Strony
+    persons:
+      _description: Wszystkie osoby
+      label:
+        one: Osoba
+        other: Osoby
+    persons_expertises:
+      _description: Wszystkie specjalizacje
+      label:
+        one: Specjalizacja
+        other: Specjalizacje
+    persons_places:
+      _description: Wszystkie miejsca
+      label:
+        one: Miejsce
+        other: Miejsca
+    persons_statutes:
+      _description: Wszystkie statuty
+      label:
+        one: Status
+        other: Statuty
+    places:
+      _description: Wszystkie miejsca
+      label:
+        one: Miejsce
+        other: Miejsca
+    posts:
+      _description: Wszystkie aktualności
+      label:
+        one: Aktualność
+        other: Aktualności
+    posts_categories:
+      _description: Wszystkie kategorie aktualności
+      label:
+        one: Kategoria
+        other: Kategorie
+    posts_expertises:
+      _description: Wszystkie specjalizacje
+      label:
+        one: Specjalizacja
+        other: Specjalizacje
+    posts_tags:
+      _description: Wszystkie tagi aktualności
+      label:
+        one: Tag
+        other: Tagi
+    products:
+      _description: Wszystkie produkty
+      label:
+        one: Produkt
+        other: Produkty
+    products_categories:
+      _description: Wszystkie kategorie produktów
+      label:
+        one: Kategoria
+        other: Kategorie
+    products_tags:
+      _description: Wszystkie tagi produktów
+      label:
+        one: Tag
+        other: Tagi
+    projects:
+      _description: Wszystkie projekty
+      label:
+        one: Projekt
+        other: Projekty
+    projects_tags:
+      _description: Wszystkie tagi projektów
+      label:
+        one: Tag
+        other: Tagi
+    projects_types:
+      _description: Wszystkie typy projektów
+      label:
+        one: Typ
+        other: Typy
+    publications:
+      _description: Wszystkie publikacje
+      label:
+        one: Publikacja
+        other: Publikacje
+    publications_categories:
+      _description: Wszystkie kategorie publikacji
+      label:
+        one: Kategoria
+        other: Kategorie
+    publications_expertises:
+      _description: Wszystkie specjalizacje
+      label:
+        one: Specjalizacja
+        other: Specjalizacje
+    publications_persons:
+      label:
+        one: Osoba
+        other: Osoby
+    realestates:
+      _description: Wszystkie nieruchomości
+      label:
+        one: Nieruchomość
+        other: Nieruchomości
+    realestates_categories:
+      _description: Wszystkie kategorie nieruchomości
+      label:
+        one: Kategoria
+        other: Kategorie
+    realestates_persons:
+      _description: Wszyscy agenci
+      label:
+        one: Agent
+        other: Agenci
+    realestates_sellers:
+      _description: Wszyscy sprzedawcy
+      label:
+        one: Sprzedawca
+        other: Sprzedawcy
+    services:
+      _description: Wszystkie usługi
+      label:
+        one: Usługa
+        other: Usługi
+    services_categories:
+      _description: Wszystkie kategorie usług
+      label:
+        one: Kategoria
+        other: Kategorie
+    tags:
+      _description: Wszystkie tagi
+      label:
+        one: Tag
+        other: Tagi
+  fields:
+    address:
+      city:
+        label: Miasto
+      country:
+        label: Kraj
+      label: Adres
+      street:
+        label: Ulica
+      zipcode:
+        label: Kod pocztowy
+    align:
+      label: Wyrównanie
+      options:
+        center: Środek
+        end: Koniec
+        start: Początek
+    arguments:
+      label:
+        one: Argument
+        other: Argumenty
+    audio:
+      label:
+        one: Audio
+        other: Audio
+      mp3:
+        label: MP3
+        hint: Plik audio MP3
+      ogg:
+        label: OGG
+        hint: Plik audio OGG
+    author:
+      label: Autor
+    autoplay:
+      label: Autoodtwarzanie
+    background:
+      label: Z tłem?
+    background_color:
+      label: Kolor tła
+    badge:
+      hint: Pokaż odznakę
+      label: Odznaka
+    blocks:
+      label:
+        one: Blok
+        other: Bloki
+    body:
+      label: Treść
+    breakpoints:
+      hint: Rozmiar ekranu
+      label:
+        one: Punkt przerwania
+        other: Punkty przerwania
+      options:
+        desktop: Komputer
+        laptop: Laptop
+        mobile: Telefon
+        tablet: Tablet
+        wide_tablet: Szeroki tablet
+    carousel:
+      arrows:
+        label: Strzałki
+      autoplay:
+        label: Autoodtwarzanie
+      focus:
+        hint: Umieścić aktywny slajd na środku?
+        label: Fokus
+      gap:
+        hint: Odstęp między slajdami. Wyrażony w rem.
+        label: Odstęp
+      hint: Tylko dla wyświetlania karuzeli
+      label: Konfiguracja karuzeli
+      padding:
+        hint: Wypełnienie lewo/prawo karuzeli. W wartości rem
+        label: Wypełnienie
+      pagination:
+        label: Paginacja
+      params:
+        label: Parametry
+      perpage:
+        hint: Liczba slajdów do wyświetlenia
+        label: Na stronę
+      responsive:
+        label: Responsywny
+      type:
+        label: Typ karuzeli
+    chart:
+      label: Wykres
+      data:
+        label: Dane (kod)
+        hint: 'Dokumentacja: https://www.chartjs.org/docs/'
+      type:
+        label: Typ wykresu
+        options:
+          bar: Słupkowy
+          line: Liniowy
+          pie: Kołowy
+          polarArea: Obszar polarny
+          radar: Radarowy
+    class:
+      label: Klasa
+      hint: Dodaj klasę CSS do tego komponentu
+    code:
+      label: Kod
+    color:
+      label: Kolor
+    column:
+      label: Kolumna
+    contact:
+      label:
+        one: Kontakt
+        other: Kontakty
+    controls:
+      label: Kontrolki
+    coordinates:
+      hint: 'Łatwo znajdź szczegóły kontaktu: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Współrzędne geograficzne
+      lat:
+        label: Szerokość geograficzna
+      lng:
+        label: Długość geograficzna
+    count:
+      hint: Elementy do wyświetlenia
+      label: Liczba
+    credit:
+      label: Źródło
+    cta:
+      label:
+        one: CTA
+        other: CTA
+    datas:
+      label:
+        one: Dana
+        other: Dane
+    date:
+      from: Od
+      label: Data
+      sale: Data sprzedaży
+      to: Do
+    description:
+      hint:
+        Wyświetlane w zakładkach, wynikach wyszukiwania i w podglądzie SMS/Wiadomości/Sieci
+        społecznościowych
+      label: Opis
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Diagnostyka efektywności energetycznej (DPE)
+      ghg:
+        label: Co2
+        hint: Gazy cieplarniane (GHG)
+      label: Diagnostyka
+      in_progress: W trakcie?
+    direction:
+      label: Kierunek
+      options:
+        ltr: Tekst po lewej / obraz po prawej
+        rtl: Obraz po lewej / tekst po prawej
+    discount:
+      hint: 'Kwota rabatu, np: 30%'
+      label: Rabat
+      pattern: Tylko wartość (bez waluty)
+    document:
+      label:
+        one: Dokument
+        other: Dokumenty
+    draft:
+      label: Wersja robocza
+    email:
+      label: E-mail
+    embed:
+      label: Osadzenie
+    event:
+      label:
+        one: Wydarzenie
+        other: Wydarzenia
+    fax:
+      label: Faks
+      hint: 'Format międzynarodowy, np: +33 1 23 45 67 89'
+    featured_image:
+      hint: Wyświetlane w wynikach wyszukiwania i w podglądzie SMS/Wiadomości/Sieci społecznościowych
+      label: Obraz główny
+    fee:
+      label:
+        one: Opłata
+        other: Opłaty
+    figure:
+      label: Figura
+    form:
+      autocomplete:
+        label: Autouzupełnianie
+        options:
+          city: Miasto
+          country_name: Nazwa kraju
+          email: E-mail
+          family_name: Nazwisko
+          given_name: Imię
+          honorific_prefix: Tytuł
+          name: Nazwa
+          organization: Organizacja
+          postal_code: Kod pocztowy
+          state: Województwo
+          street_address: Ulica
+          tel: Telefon
+      full:
+        label: Pole pełnej szerokości?
+      hiddens:
+        label:
+          one: Pole ukryte
+          other: Pola ukryte
+      items:
+        label:
+          one: Pole
+          other: Pola
+      label: Formularz
+      options:
+        hint: Tylko dla pól wyboru
+        label:
+          one: Opcja
+          other: Opcje
+      type:
+        hint: Wybierz typ pola
+        email: E-mail
+        label: Typ
+        radio: Radio
+        select: Wybór
+        tel: Telefon
+        text: Tekst
+        textarea: Obszar tekstowy
+      value:
+        hint: Tylko dla pól wyboru i radio
+        label: Wartość
+    gallery:
+      label: Galeria
+    grid:
+      label: Siatka
+      options:
+        container: Kontener
+        full: Pełny
+        large: Duży
+        medium: Średni
+        small: Mały
+    heading:
+      label: Nagłówek
+    hero:
+      label: Hero
+    icon:
+      hint: Nazwa ikony z https://icons.getbootstrap.com/
+      label: Ikona
+    id:
+      label: ID
+    image:
+      label: 
+        one: Obraz
+        other: Obrazy
+      alt:
+        hint: Dla obrazu przekazującego informacje (pozostaw puste, jeśli obraz jest dekoracyjny)
+        label: Tekst alternatywny
+      filter:
+        hint: Ustaw Linear dla zdjęcia lub zrzutu ekranu, pozostaw puste, aby zachować domyślną konfigurację
+        label: Zmienić jakość filtra?
+        options:
+          box: Prosty i szybki filtr uśredniający odpowiedni do zmniejszania (domyślny)
+          catmullrom: Ostry filtr sześcienny, który jest szybszy niż filtr Lanczosa, zapewniając podobne wyniki
+          lanczos: Wysokiej jakości filtr resamplingu dla obrazów fotograficznych dający ostre wyniki
+          linear: Dwuliniowy filtr resamplingu, produkuje gładkie wyjście, szybszy niż filtry sześcienne
+      src:
+        hint: 'Zmień rozmiar i skompresuj obraz przed wysłaniem: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Obraz
+    images:
+      label: 
+        one: Obraz
+        other: Obrazy
+    is_background:
+      label: Czy tło?
+    is_blank:
+      label: Czy puste?
+    is_card:
+      hint: Dodaje tło za tekstem
+      label: Czy karta?
+    is_darken:
+      label: Przyciemnić?
+    is_exclusive:
+      label: Ekskluzywne?
+    is_half:
+      label: Połowa rozmiaru?
+    is_highlighted:
+      label: Czy wyróżnione?
+    is_logo:
+      hint: Umieszczone na środku i nieprzycinane
+      label: Czy logo?
+    is_open:
+      label: Otwarte?
+    is_pinned:
+      label: Przypięte?
+    is_screenshot:
+      hint: Dodaj fałszywą przeglądarkę
+      label: Czy zrzut ekranu?
+    items:
+      label:
+        one: Element
+        other: Elementy
+    keyfeatures:
+      hint: 'np: Lokalizacja, ekspozycja…'
+      label:
+        one: kluczowa cecha
+        other: Kluczowe cechy
+    label:
+      label: Etykieta
+    lang:
+      hint: Wprowadź kod języka (np. pl), jeśli różni się od języka bieżącej strony
+      label: Język
+    layout:
+      label: Układ
+      options:
+        carousel: Karuzela
+        grid: Siatka
+        list: Lista
+    legal:
+      label: Prawne
+    legend:
+      label: Legenda
+    limit:
+      label: Limit
+    links:
+      label:
+        one: Link
+        other: Linki
+    location:
+      label: Lokalizacja
+    loop:
+      label: Pętla
+    name:
+      label: Nazwa
+    map:
+      label: Mapa
+    newsletter:
+      form:
+        label: Formularz
+    notes:
+      hint: 'Aby połączyć słowo w tekście z notatką, dodaj do niego sufiks "[\\*]". Notatki i "[\\*]" są połączone według kolejności.'
+      label:
+        one: Notatka
+        other: Notatki
+    offer:
+      label:
+        one: Oferta
+        other: Oferty
+    offset:
+      label: Przesunięcie
+      options:
+        center: Środek
+        end: Koniec
+        start: Początek
+    parent:
+      label: Strona nadrzędna
+    pdf:
+      label: PDF
+      hint: 'Skompresuj PDF przed wysłaniem: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Numer telefonu
+      hint: 'Format międzynarodowy, np: +33 1 23 45 67 89'
+    placeholder:
+      label: Symbol zastępczy
+    poster:
+      label: Plakat
+      hint: Obraz zastępczy dla wideo
+    prefix:
+      label: Prefiks
+    press:
+      label: Prasa
+    price:
+      hide: Ukryj cenę
+      hint: 'np: 300000 (dla 300 000 €)'
+      label: Cena
+      sold: Cena sprzedaży
+    quote:
+      label: Cytat
+    realestates_energies:
+      label:
+        one: Energia
+        other: Energie
+      heating:
+        label: Ogrzewanie
+        options:
+          collective: Zbiorowe
+          individual: Indywidualne
+      heating_type:
+        label: Typ ogrzewania
+        options:
+          reversible_ac: Klimatyzacja odwracalna
+          electric: Elektryczne
+          gas: Gazowe
+          solar: Słoneczne
+    realestates_informations:
+      area:
+        hint: Wyrażone w m2
+        label: Powierzchnia wewnętrzna
+      bathrooms:
+        label: Liczba łazienek
+      bedrooms:
+        label: Liczba sypialni
+      district:
+        label: Dzielnica
+      exposure:
+        label: Ekspozycja
+      field:
+        hint: Wyrażone w m2
+        label: Powierzchnia zewnętrzna
+      floor:
+        label: Piętro
+      has_balcony:
+        label: Balkon?
+      has_box:
+        label: Schowek?
+      has_cave:
+        label: Piwnica?
+      has_elevator:
+        label: Winda?
+      has_garage:
+        label: Garaż?
+      has_outbuilding:
+        label: Budynek gospodarczy?
+      has_parking:
+        label: Parking?
+      has_swimmingpool:
+        label: Basen?
+      has_terrace:
+        label: Taras?
+      label: Informacje
+      levels:
+        label: Liczba pięter
+      rooms:
+        label: Liczba pokoi
+      showerrooms:
+        label: Liczba łazienek z prysznicem
+      wc:
+        label: WC
+      year:
+        label: Rok budowy
+    realestates_types:
+      label: Typ transakcji
+      options:
+        rent: Wynajem
+        sale: Sprzedaż
+    reference:
+      label: Referencja
+    rent:
+      label: Wynajem?
+    required:
+      label: Wymagane
+    section:
+      hint: Wybierz sekcję do wyświetlenia
+      label: Sekcja
+    show_more:
+      hint: Pokazuje przycisk, aby zobaczyć więcej elementów
+      label: Pokaż więcej?
+    show_places:
+      hint: Tylko jeśli masz już zapisane miejsca (spowoduje to wyłączenie znacznika poniżej)
+      label: Pokaż wszystkie zarejestrowane miejsca?
+    slug:
+      hint: Pozostaw puste, aby automatycznie wypełnić tytułem. **Uważaj na wpływ na SEO.**
+      label: Slug
+      pattern:
+        Zawiera tylko małe litery, cyfry i myślniki, bez spacji,
+        znaków diakrytycznych lub znaków specjalnych
+    socials:
+      label:
+        one: Społecznościowy
+        other: Społecznościowe
+      plateform: Platforma
+      twitter:
+        label: Twitter/X
+        hint: Nazwa użytkownika
+    sold:
+      label: Sprzedane/wynajęte?
+    state:
+      label: Stan
+      options:
+        danger: Niebezpieczeństwo
+        dark: Ciemny
+        info: Info
+        light: Jasny
+        primary: Podstawowy
+        secondary: Drugorzędny
+        success: Sukces
+        warning: Ostrzeżenie
+    status:
+      label: Status
+    submit:
+      label: Tekst przycisku wysyłania
+    subtitle:
+      label: Podtytuł
+    suffix:
+      hint: 'np: %'
+      label: Sufiks
+    summary:
+      label: Podsumowanie
+    surtitle:
+      label: Nadtytuł
+    text:
+      label: Tekst
+    title:
+      label: Tytuł
+    title_page:
+      hint:
+        Wyświetlane w zakładkach, wynikach wyszukiwania i w podglądzie SMS/Wiadomości/Sieci
+        społecznościowych
+      label: Tytuł strony
+    transcription:
+      label: Transkrypcja
+    url:
+      label: URL
+    value:
+      label: Wartość
+    video:
+      label: 
+        one: Wideo
+        other: Wideo
+      mp4:
+        label: MP4
+        hint: Plik wideo MP4
+        mobile:
+          label: MP4 (Telefon)
+          hint: Plik wideo MP4 dla telefonu
+      webm:
+        label: WEBM
+        hint: Plik wideo WEBM
+        mobile:
+          label: WEBM (Telefon)
+          hint: Plik wideo WEBM dla telefonu
+    website:
+      hint: URL (https://…)
+      label: Strona internetowa
+    weight:
+      label: Pozycja (ważność)
+      hint: Wiedząc, że 10 jest najważniejsze, a 100 najmniej ważne
+    year: Rok
+    zoom:
+      label: Powiększenie
+  files:
+    banner: Baner informacyjny u góry strony
+    footer: Tekst informacyjny u dołu strony
+    nav:
+      label: Nawigacja
+      legal: Nawigacja prawna (wzmianki, polityka…)
+      primary: Nawigacja główna
+      secondary: Nawigacja drugorzędna
+      social: Nawigacja społecznościowa
+    seo:
+      label: Globalne SEO
+      title: Nazwa witryny
+  group:
+    year: Rok
+  shortcodes:
+    alert:
+      label: Alert
+    badge:
+      label: Odznaka
+    blank_link:
+      label: Pusty link
+    blockquote:
+      label: Cytat blokowy
+    button:
+      label: Przycisk
+    details:
+      label: Szczegóły
+    figure:
+      label: Figura
+    map:
+      label: Mapa
+    twitter:
+      _id: ID Twitter
+      label: Twitter / X
+      user: Nazwa użytkownika Twitter
+    youtube:
+      _id: ID Youtube
+      label: Youtube

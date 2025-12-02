@@ -1,0 +1,842 @@
+admin:
+  blocks:
+    alert:
+      label: Waarschuwing
+    audio:
+      label: Audio
+    chart:
+      label: Grafiek
+    comparison:
+      label: Vergelijking
+    cta:
+      label: Call to action
+    datas:
+      label: Gegevens
+    editorial:
+      label: Redactioneel
+    embed:
+      label: Insluiten
+    faq:
+      label: FAQ
+    figure:
+      label: Figuur
+    form:
+      label: Formulier
+    gallery:
+      label: Galerij
+    images:
+      label: Afbeeldingen
+    informations:
+      label: Informatie
+    instagram:
+      label: Instagram
+    latest:
+      label: Nieuwste items
+    location:
+      label: Locatie
+    logos:
+      label: Logo’s
+    map:
+      label: Kaart
+    newsletter:
+      label: Nieuwsbrief
+    paragraph:
+      label: Paragraaf
+    pushes:
+      label: Uitgelicht
+    quote:
+      label: Citaat
+    search:
+      label: Zoeken
+    selected:
+      label: Selectie {{ .section }}
+    testimonials:
+      label: Getuigenissen
+    timeline:
+      label: Tijdlijn
+    title:
+      label: Titel
+    video:
+      label: Video
+  collections:
+    authors:
+      label:
+        one: Auteur
+        other: Auteurs
+    casestudies:
+      _description: Alle casestudies
+      label:
+        one: Casestudie
+        other: Casestudies
+    categories:
+      label:
+        one: Categorie
+        other: Categorieën
+    config:
+      _description: Alle configuratie
+      label:
+        one: Configuratie
+        other: Configuraties
+    docs:
+      _description: Alle documentatie
+      label:
+        one: Document
+        other: Documenten
+    events:
+      _description: Alle evenementen
+      label:
+        one: Evenement
+        other: Evenementen
+    events_categories:
+      _description: Alle evenementcategorieën
+      label:
+        one: Categorie
+        other: Categorieën
+    expertises:
+      _description: Alle expertises
+      label:
+        one: Expertise
+        other: Expertises
+    home: Home
+    indexes:
+      _description: Alle indexpagina’s
+      label:
+        one: Index
+        other: Indexen
+    jobs:
+      _description: Alle vacatures
+      label:
+        one: Vacature
+        other: Vacatures
+    jobs_categories:
+      _description: Alle vacaturecategorieën
+      label:
+        one: Categorie
+        other: Categorieën
+    jobs_expertises:
+      _description: Alle expertises
+      label:
+        one: Expertise
+        other: Expertises
+    jobs_places:
+      _description: Alle locaties
+      label:
+        one: Locatie
+        other: Locaties
+    jobs_tags:
+      _description: Alle vacaturetags
+      label:
+        one: Tag
+        other: Tags
+    pages:
+      _description: Alle pagina’s
+      label:
+        one: Pagina
+        other: Pagina’s
+    persons:
+      _description: Alle personen
+      label:
+        one: Persoon
+        other: Personen
+    persons_expertises:
+      _description: Alle expertises
+      label:
+        one: Expertise
+        other: Expertises
+    persons_places:
+      _description: Alle locaties
+      label:
+        one: Locatie
+        other: Locaties
+    persons_statutes:
+      _description: Alle statuten
+      label:
+        one: Status
+        other: Statuten
+    places:
+      _description: Alle locaties
+      label:
+        one: Locatie
+        other: Locaties
+    posts:
+      _description: Alle nieuws
+      label:
+        one: Nieuwsbericht
+        other: Nieuws
+    posts_categories:
+      _description: Alle nieuwscategorieën
+      label:
+        one: Categorie
+        other: Categorieën
+    posts_expertises:
+      _description: Alle expertises
+      label:
+        one: Expertise
+        other: Expertises
+    posts_tags:
+      _description: Alle nieuwstags
+      label:
+        one: Tag
+        other: Tags
+    products:
+      _description: Alle producten
+      label:
+        one: Product
+        other: Producten
+    products_categories:
+      _description: Alle productcategorieën
+      label:
+        one: Categorie
+        other: Categorieën
+    products_tags:
+      _description: Alle producttags
+      label:
+        one: Tag
+        other: Tags
+    projects:
+      _description: Alle projecten
+      label:
+        one: Project
+        other: Projecten
+    projects_tags:
+      _description: Alle projecttags
+      label:
+        one: Tag
+        other: Tags
+    projects_types:
+      _description: Alle projecttypen
+      label:
+        one: Type
+        other: Types
+    publications:
+      _description: Alle publicaties
+      label:
+        one: Publicatie
+        other: Publicaties
+    publications_categories:
+      _description: Alle publicatiecategorieën
+      label:
+        one: Categorie
+        other: Categorieën
+    publications_expertises:
+      _description: Alle expertises
+      label:
+        one: Expertise
+        other: Expertises
+    publications_persons:
+      label:
+        one: Persoon
+        other: Personen
+    realestates:
+      _description: Alle onroerend goed
+      label:
+        one: Onroerend goed
+        other: Onroerend goed
+    realestates_categories:
+      _description: Alle onroerend goed categorieën
+      label:
+        one: Categorie
+        other: Categorieën
+    realestates_persons:
+      _description: Alle makelaars
+      label:
+        one: Makelaar
+        other: Makelaars
+    realestates_sellers:
+      _description: Alle verkopers
+      label:
+        one: Verkoper
+        other: Verkopers
+    services:
+      _description: Alle diensten
+      label:
+        one: Dienst
+        other: Diensten
+    services_categories:
+      _description: Alle dienstencategorieën
+      label:
+        one: Categorie
+        other: Categorieën
+    tags:
+      _description: Alle tags
+      label:
+        one: Tag
+        other: Tags
+  fields:
+    address:
+      city:
+        label: Stad
+      country:
+        label: Land
+      label: Adres
+      street:
+        label: Straat
+      zipcode:
+        label: Postcode
+    align:
+      label: Uitlijning
+      options:
+        center: Midden
+        end: Einde
+        start: Begin
+    arguments:
+      label:
+        one: Argument
+        other: Argumenten
+    audio:
+      label:
+        one: Audio
+        other: Audio’s
+      mp3:
+        label: MP3
+        hint: MP3 audiobestand
+      ogg:
+        label: OGG
+        hint: OGG audiobestand
+    author:
+      label: Auteur
+    autoplay:
+      label: Automatisch afspelen
+    background:
+      label: Met achtergrond?
+    background_color:
+      label: Achtergrondkleur
+    badge:
+      hint: Toon een badge
+      label: Badge
+    blocks:
+      label:
+        one: Blok
+        other: Blokken
+    body:
+      label: Inhoud
+    breakpoints:
+      hint: Schermgrootte
+      label:
+        one: Breekpunt
+        other: Breekpunten
+      options:
+        desktop: Desktop
+        laptop: Laptop
+        mobile: Mobiel
+        tablet: Tablet
+        wide_tablet: Brede tablet
+    carousel:
+      arrows:
+        label: Pijlen
+      autoplay:
+        label: Automatisch afspelen
+      focus:
+        hint: Actieve dia in het midden positioneren?
+        label: Focus
+      gap:
+        hint: De ruimte tussen dia’s. Uitgedrukt in rem.
+        label: Tussenruimte
+      hint: Alleen voor carrouseldisplay
+      label: Carrouselconfiguratie
+      padding:
+        hint: Opvulling links/rechts van de carrousel. In rem-waarde
+        label: Opvulling
+      pagination:
+        label: Paginering
+      params:
+        label: Parameters
+      perpage:
+        hint: Aantal dia’s om weer te geven
+        label: Per pagina
+      responsive:
+        label: Responsief
+      type:
+        label: Carrouseltype
+    chart:
+      label: Grafiek
+      data:
+        label: Gegevens (code)
+        hint: 'Documentatie: https://www.chartjs.org/docs/'
+      type:
+        label: Grafiektype
+        options:
+          bar: Staaf
+          line: Lijn
+          pie: Taart
+          polarArea: Poolgebied
+          radar: Radar
+    class:
+      label: Klasse
+      hint: Voeg CSS-klasse toe aan dit component
+    code:
+      label: Code
+    color:
+      label: Kleur
+    column:
+      label: Kolom
+    contact:
+      label:
+        one: Contact
+        other: Contacten
+    controls:
+      label: Besturingselementen
+    coordinates:
+      hint: 'Vind eenvoudig contactgegevens: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Geografische coördinaten
+      lat:
+        label: Breedtegraad
+      lng:
+        label: Lengtegraad
+    count:
+      hint: Items om weer te geven
+      label: Aantal
+    credit:
+      label: Credit
+    cta:
+      label:
+        one: CTA
+        other: CTA’s
+    datas:
+      label:
+        one: Gegeven
+        other: Gegevens
+    date:
+      from: Van
+      label: Datum
+      sale: Verkoopdatum
+      to: Tot
+    description:
+      hint:
+        Weergegeven in tabbladen, zoekresultaten en in SMS/Berichten/Sociale netwerken
+        voorbeeld
+      label: Beschrijving
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Energieprestatiediagnostiek (EPD)
+      ghg:
+        label: Co2
+        hint: Broeikasgassen (BKG)
+      label: Diagnostiek
+      in_progress: In uitvoering?
+    direction:
+      label: Richting
+      options:
+        ltr: Tekst links / afbeelding rechts
+        rtl: Afbeelding links / tekst rechts
+    discount:
+      hint: 'Bedrag van de korting, bijv: 30%'
+      label: Korting
+      pattern: Alleen waarde (zonder valuta)
+    document:
+      label:
+        one: Document
+        other: Documenten
+    draft:
+      label: Concept
+    email:
+      label: E-mail
+    embed:
+      label: Insluiten
+    event:
+      label:
+        one: Evenement
+        other: Evenementen
+    fax:
+      label: Fax
+      hint: 'Internationaal formaat, bijv: +33 1 23 45 67 89'
+    featured_image:
+      hint: Weergegeven in zoekresultaten en in SMS/Berichten/Sociale netwerken voorbeeld
+      label: Hoofdafbeelding
+    fee:
+      label:
+        one: Vergoeding
+        other: Vergoedingen
+    figure:
+      label: Figuur
+    form:
+      autocomplete:
+        label: Automatisch aanvullen
+        options:
+          city: Stad
+          country_name: Landnaam
+          email: E-mail
+          family_name: Achternaam
+          given_name: Voornaam
+          honorific_prefix: Titel
+          name: Naam
+          organization: Organisatie
+          postal_code: Postcode
+          state: Staat
+          street_address: Straat
+          tel: Telefoon
+      full:
+        label: Veld met volledige breedte?
+      hiddens:
+        label:
+          one: Verborgen veld
+          other: Verborgen velden
+      items:
+        label:
+          one: Veld
+          other: Velden
+      label: Formulier
+      options:
+        hint: Alleen voor selectievelden
+        label:
+          one: Optie
+          other: Opties
+      type:
+        hint: Kies veldtype
+        email: E-mail
+        label: Type
+        radio: Radio
+        select: Selectie
+        tel: Telefoon
+        text: Tekst
+        textarea: Tekstgebied
+      value:
+        hint: Alleen voor selectievakje en radiovelden
+        label: Waarde
+    gallery:
+      label: Galerij
+    grid:
+      label: Raster
+      options:
+        container: Container
+        full: Volledig
+        large: Groot
+        medium: Gemiddeld
+        small: Klein
+    heading:
+      label: Kop
+    hero:
+      label: Hero
+    icon:
+      hint: Pictogramnaam van https://icons.getbootstrap.com/
+      label: Pictogram
+    id:
+      label: ID
+    image:
+      label: 
+        one: Afbeelding
+        other: Afbeeldingen
+      alt:
+        hint: Voor een afbeelding die informatie overbrengt (laat leeg als het een decoratieve afbeelding is)
+        label: Alternatieve tekst
+      filter:
+        hint: Stel Linear in voor foto of screenshot, laat leeg om standaardconfiguratie te behouden
+        label: Filterkwaliteit wijzigen?
+        options:
+          box: Eenvoudig en snel gemiddeld filter geschikt voor verkleinen (standaard)
+          catmullrom: Scherp kubisch filter dat sneller is dan het Lanczos-filter terwijl het vergelijkbare resultaten oplevert
+          lanczos: Hoogwaardig resamplingfilter voor fotografische afbeeldingen die scherpe resultaten opleveren
+          linear: Bilineair resamplingfilter, produceert vloeiende uitvoer, sneller dan kubische filters
+      src:
+        hint: 'Formaat wijzigen en afbeelding comprimeren voor verzending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Afbeelding
+    images:
+      label: 
+        one: Afbeelding
+        other: Afbeeldingen
+    is_background:
+      label: Is achtergrond?
+    is_blank:
+      label: Is leeg?
+    is_card:
+      hint: Voegt een achtergrond toe achter de tekst
+      label: Is kaart?
+    is_darken:
+      label: Verdonkeren?
+    is_exclusive:
+      label: Exclusief?
+    is_half:
+      label: Halve grootte?
+    is_highlighted:
+      label: Is gemarkeerd?
+    is_logo:
+      hint: Gepositioneerd in het midden en niet bijgesneden
+      label: Is logo?
+    is_open:
+      label: Open?
+    is_pinned:
+      label: Vastgepind?
+    is_screenshot:
+      hint: Voeg nep-browser toe
+      label: Is screenshot?
+    items:
+      label:
+        one: Item
+        other: Items
+    keyfeatures:
+      hint: 'bijv: Locatie, ligging…'
+      label:
+        one: hoofdkenmerk
+        other: Hoofdkenmerken
+    label:
+      label: Label
+    lang:
+      hint: Voer taalcode in (bijv. nl) als deze verschilt van de huidige paginataal
+      label: Taal
+    layout:
+      label: Lay-out
+      options:
+        carousel: Carrousel
+        grid: Raster
+        list: Lijst
+    legal:
+      label: Juridisch
+    legend:
+      label: Legende
+    limit:
+      label: Limiet
+    links:
+      label:
+        one: Link
+        other: Links
+    location:
+      label: Locatie
+    loop:
+      label: Herhalen
+    name:
+      label: Naam
+    map:
+      label: Kaart
+    newsletter:
+      form:
+        label: Formulier
+    notes:
+      hint: 'Om een woord in de tekst aan een notitie te koppelen, voeg het achtervoegsel "[\\*]" toe. Notities en "[\\*]" zijn gekoppeld door hun volgorde.'
+      label:
+        one: Notitie
+        other: Notities
+    offer:
+      label:
+        one: Aanbieding
+        other: Aanbiedingen
+    offset:
+      label: Verschuiving
+      options:
+        center: Midden
+        end: Einde
+        start: Begin
+    parent:
+      label: Bovenliggende pagina
+    pdf:
+      label: PDF
+      hint: 'Comprimeer PDF voor verzending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Telefoonnummer
+      hint: 'Internationaal formaat, bijv: +33 1 23 45 67 89'
+    placeholder:
+      label: Tijdelijke aanduiding
+    poster:
+      label: Poster
+      hint: Tijdelijke aanduiding afbeelding voor video
+    prefix:
+      label: Voorvoegsel
+    press:
+      label: Pers
+    price:
+      hide: Prijs verbergen
+      hint: 'bijv: 300000 (voor 300 000 €)'
+      label: Prijs
+      sold: Verkoopprijs
+    quote:
+      label: Citaat
+    realestates_energies:
+      label:
+        one: Energie
+        other: Energieën
+      heating:
+        label: Verwarming
+        options:
+          collective: Collectief
+          individual: Individueel
+      heating_type:
+        label: Verwarmingstype
+        options:
+          reversible_ac: Omkeerbare airco
+          electric: Elektrisch
+          gas: Gas
+          solar: Zonne-energie
+    realestates_informations:
+      area:
+        hint: Uitgedrukt in m2
+        label: Binnenoppervlak
+      bathrooms:
+        label: Aantal badkamers
+      bedrooms:
+        label: Aantal slaapkamers
+      district:
+        label: Wijk
+      exposure:
+        label: Ligging
+      field:
+        hint: Uitgedrukt in m2
+        label: Buitenoppervlak
+      floor:
+        label: Verdieping
+      has_balcony:
+        label: Balkon?
+      has_box:
+        label: Box?
+      has_cave:
+        label: Kelder?
+      has_elevator:
+        label: Lift?
+      has_garage:
+        label: Garage?
+      has_outbuilding:
+        label: Bijgebouw?
+      has_parking:
+        label: Parkeerplaats?
+      has_swimmingpool:
+        label: Zwembad?
+      has_terrace:
+        label: Terras?
+      label: Informatie
+      levels:
+        label: Aantal verdiepingen
+      rooms:
+        label: Aantal kamers
+      showerrooms:
+        label: Aantal douchekamers
+      wc:
+        label: WC
+      year:
+        label: Bouwjaar
+    realestates_types:
+      label: Transactietype
+      options:
+        rent: Huur
+        sale: Verkoop
+    reference:
+      label: Referentie
+    rent:
+      label: Huren?
+    required:
+      label: Verplicht
+    section:
+      hint: Selecteer de sectie om weer te geven
+      label: Sectie
+    show_more:
+      hint: Toont een knop om meer items te zien
+      label: Meer tonen?
+    show_places:
+      hint: Alleen als u al locaties hebt opgeslagen (dit schakelt de onderstaande markering uit)
+      label: Alle geregistreerde locaties tonen?
+    slug:
+      hint: Laat leeg om te automatiseren met de titel. **Let op SEO-impact.**
+      label: Slug
+      pattern:
+        Bevat alleen kleine letters, cijfers en koppeltekens, zonder spaties,
+        accenten of speciale tekens
+    socials:
+      label:
+        one: Sociaal
+        other: Sociaal
+      plateform: Platform
+      twitter:
+        label: Twitter/X
+        hint: Gebruikersnaam
+    sold:
+      label: Verkocht/verhuurd?
+    state:
+      label: Status
+      options:
+        danger: Gevaar
+        dark: Donker
+        info: Info
+        light: Licht
+        primary: Primair
+        secondary: Secundair
+        success: Succes
+        warning: Waarschuwing
+    status:
+      label: Status
+    submit:
+      label: Verzendknoptekst
+    subtitle:
+      label: Ondertitel
+    suffix:
+      hint: 'bijv: %'
+      label: Achtervoegsel
+    summary:
+      label: Samenvatting
+    surtitle:
+      label: Boventitel
+    text:
+      label: Tekst
+    title:
+      label: Titel
+    title_page:
+      hint:
+        Weergegeven in tabbladen, zoekresultaten en in SMS/Berichten/Sociale netwerken
+        voorbeeld
+      label: Paginatitel
+    transcription:
+      label: Transcriptie
+    url:
+      label: URL
+    value:
+      label: Waarde
+    video:
+      label: 
+        one: Video
+        other: Video’s
+      mp4:
+        label: MP4
+        hint: MP4 videobestand
+        mobile:
+          label: MP4 (Mobiel)
+          hint: MP4 videobestand voor mobiel
+      webm:
+        label: WEBM
+        hint: WEBM videobestand
+        mobile:
+          label: WEBM (Mobiel)
+          hint: WEBM videobestand voor mobiel
+    website:
+      hint: URL (https://…)
+      label: Website
+    weight:
+      label: Positie (belang)
+      hint: Wetende dat 10 het belangrijkste is en 100 het minst belangrijke
+    year: Jaar
+    zoom:
+      label: Zoom
+  files:
+    banner: Informatiebanner bovenaan de site
+    footer: Informatietekst onderaan de site
+    nav:
+      label: Navigatie
+      legal: Juridische navigatie (vermeldingen, beleid…)
+      primary: Primaire navigatie
+      secondary: Secundaire navigatie
+      social: Sociale navigatie
+    seo:
+      label: Algemene SEO
+      title: Websitenaam
+  group:
+    year: Jaar
+  shortcodes:
+    alert:
+      label: Waarschuwing
+    badge:
+      label: Badge
+    blank_link:
+      label: Lege link
+    blockquote:
+      label: Blokcitaat
+    button:
+      label: Knop
+    details:
+      label: Details
+    figure:
+      label: Figuur
+    map:
+      label: Kaart
+    twitter:
+      _id: Twitter ID
+      label: Twitter / X
+      user: Twitter gebruikersnaam
+    youtube:
+      _id: Youtube ID
+      label: Youtube
