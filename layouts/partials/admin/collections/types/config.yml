@@ -1,8 +1,8 @@
 {{- $files := partial "admin/collections/config/files.yml" (dict "collection" "config") -}}
 {{- if eq site.Params.admin.cms "pagescms" }}
-  {{- $files = substr $files 0 -2 -}}
-  {{- $files = replaceRE "]},\\s*$" "]}" $files -}}
-  {{- $files = replace $files "files: [" "" -}}
+  {{/* Clean output format for PagesCMS: remove first/last lines and trailing comma */}}
+  {{- $files = replaceRE "(?s)^[^\n]*\n(.*)\n[^\n]*$" "$1" $files -}}
+  {{- $files = replaceRE ",\\s*$" "" $files -}}
   {{ $files }}
 {{- else -}}
 {

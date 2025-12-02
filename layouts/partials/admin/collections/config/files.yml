@@ -15,4 +15,4 @@ files: [
     {{- end -}}
     {{ partial "admin/datas/_range.yml" $files }}
   {{ end -}}
-],
+]
