@@ -2,7 +2,7 @@
 {{- $categories := false -}}
 {{- $tags := false -}}
 {{- $posts_expertises := false -}}
-{{- if and site.Params.admin.collections.persons.enable site.Params.admin.collections.posts_authors.enable -}}
+{{- if site.Params.admin.collections.persons.enable -}}
   {{- $author = dict "relation" (dict "collection" "persons" "name" "authors" "multiple" true) -}}
 {{- end -}}
 {{- if site.Params.admin.collections.posts_categories.enable -}}
