@@ -1,5 +1,6 @@
 {{- $files := partial "admin/collections/config/files.yml" (dict "collection" "config") -}}
 {{- if eq site.Params.admin.cms "pagescms" }}
+  {{/* Waiting for: https://github.com/pages-cms/pages-cms/issues/222 */}}
   {{/* Clean output format for PagesCMS: remove first/last lines and trailing comma */}}
   {{- $files = replaceRE "(?s)^[^\n]*\n(.*)\n[^\n]*$" "$1" $files -}}
   {{- $files = replaceRE ",\\s*$" "" $files -}}

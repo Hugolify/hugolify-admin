@@ -140,7 +140,6 @@
 
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
 {{ else }}
-{{ warnf "label_options: %s" $label_options }}
 
 {
   label: '{{ $label }}',
