@@ -348,6 +348,10 @@ admin:
         label: Responsive
       type:
         label: Carousel type
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       label: Chart
       data:

@@ -19,7 +19,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.form.autocomplete.label")
-  "label_options" ("admin.fields.form.autocomplete.options")
+  "label_options" "admin.fields.form.autocomplete.options"
   "options" $options
   -}}
 

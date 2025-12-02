@@ -7,6 +7,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.carousel.type.label")
+  "label_options" "admin.fields.carousel.type.options"
   "options" $options
   -}}
 

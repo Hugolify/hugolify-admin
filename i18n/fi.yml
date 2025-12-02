@@ -348,6 +348,10 @@ admin:
         label: Responsiivinen
       type:
         label: Kuvakarusellin tyyppi
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       data:
         hint: 'Documentaatio: https://www.chartjs.org/docs/'

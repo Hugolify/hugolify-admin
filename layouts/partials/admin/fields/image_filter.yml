@@ -7,6 +7,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.image.filter.label")
+  "label_options" "admin.fields.image.filter.options"
   "hint" (i18n "admin.fields.image.filter.hint")
   "options" $options
   -}}

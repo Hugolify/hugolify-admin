@@ -350,6 +350,10 @@ admin:
         label: Responsive
       type:
         label: Type de carrousel
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       label: Chart
       data:

@@ -348,6 +348,10 @@ admin:
         label: Responsywny
       type:
         label: Typ karuzeli
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       label: Wykres
       data:

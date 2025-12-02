@@ -348,6 +348,10 @@ admin:
         label: Odziven
       type:
         label: Vrsta vrtiljaka
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       label: Grafikon
       data:

@@ -348,6 +348,10 @@ admin:
         label: 반응형
       type:
         label: 캐러셀 유형
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       label: 차트
       data:

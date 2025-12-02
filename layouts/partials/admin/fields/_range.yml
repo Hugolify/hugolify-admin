@@ -5,7 +5,8 @@
       {{- $file := print "admin/fields/" . ".yml" }}
       {{- if templates.Exists ( printf "partials/%s" $file ) }}
         {{- if or (ne . "id") (and (eq site.Params.admin.config.id true) (eq . "id")) }}
-          {{- $r := partial $file $f.values }}
+          {{- $context := cond (not $f.values) $f.field $f.values }}
+          {{- $r := partial $file $context }}
           {{/* Specific to Cloudcannon */}}
           {{- if eq site.Params.admin.cms "cloudcannon" }}
             {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $r) }}

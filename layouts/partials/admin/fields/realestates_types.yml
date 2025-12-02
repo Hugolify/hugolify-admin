@@ -2,6 +2,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.realestates_types.label")
+  "label_options" "admin.fields.realestates_types.options"
   "name" "realestates_types"
   "default" "sale"
   "required" true

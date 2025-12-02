@@ -7,7 +7,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.form.type.label")
-  "label_options" ("admin.fields.form.type.options")
+  "label_options" "admin.fields.form.type.options"
   "default" "text"
   "required" true
   "options" $options

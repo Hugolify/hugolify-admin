@@ -7,6 +7,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.realestates_energies.heating.label")
+  "label_options" "admin.fields.realestates_energies.heating.options"
   "options" $options
   -}}
 

@@ -1,13 +1,13 @@
 {{- $fields := .fields -}}
 
 {{- with .block -}}
-  {{- $fields = (index site.Params.admin.blocks .).fields | default $fields -}}
+  {{- $fields = (index site.Params.admin.blocks .).fields -}}
 {{- end -}}
 {{- with .collection -}}
-  {{- $fields = (index site.Params.admin.collections .).fields | default $fields -}}
+  {{- $fields = (index site.Params.admin.collections .).fields -}}
 {{- end -}}
 {{- with .field -}}
-  {{- $fields = (index site.Params.admin.fields .).fields | default $fields -}}
+  {{- $fields = (index site.Params.admin.fields .).fields -}}
 {{- end -}}
 
-{{- return $fields -}}
+{{- return ($fields | default .fields) -}}

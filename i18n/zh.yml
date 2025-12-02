@@ -348,6 +348,10 @@ admin:
         label: 响应式
       type:
         label: 轮播类型
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       label: 图表
       data:

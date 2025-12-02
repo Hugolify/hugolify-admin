@@ -30,4 +30,4 @@
   "fields" $fields
   -}}
 
-{{ partial "admin/widgets/string.js" $args }}
+{{ partial "admin/widgets/object.js" $args }}

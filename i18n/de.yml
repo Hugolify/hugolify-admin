@@ -348,6 +348,10 @@ admin:
         label: Responsive
       type:
         label: Karussell-Typ
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       label: Diagramm
       data:
