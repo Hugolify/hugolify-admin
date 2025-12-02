@@ -34,6 +34,7 @@
   {{ if templates.Exists (printf "partials/%s" $file) }}
     {{ $blockFile := partialCached $file . }}
     
+    {{/* Remove last comma and get all selected */}}
     {{ if eq . "selected" }}
       {{ $blockFile = $blockFile | replaceRE `(?m)^\s*,\s*$` `` }}
     {{ end }}
@@ -50,7 +51,6 @@
 
 {{/* Remove duplicates */}}
 {{ $fields = $fields | uniq }}
-{{ warnf "fields: %s" $fields }}
 
 {{/* Separate all fields in inputs and structures */}}
 {{ range $fields }}
@@ -58,7 +58,6 @@
   {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
 
   {{ $fileField := print "admin/fields/" $f.field ".yml" }}
-  {{ warnf "fileField: %s" $fileField }}
   {{ if templates.Exists (printf "partials/%s" $fileField) }}
     {{ $file := partial $fileField $f.values }}
 
@@ -79,7 +78,6 @@
       {{/* Process all subfields from this field */}}
       {{ range $datas.fields }}
         {{ $subField := print "admin/fields/" . ".yml" }}
-        {{ warnf "subField: %s" $subField }}
         {{ if templates.Exists (printf "partials/%s" $subField) }}
           {{ $subFile := partial $subField }}
           {{ $subDatas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $subFile) }}

@@ -12,7 +12,7 @@
   {{/* Get datas from file */}}
   {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
 
-  {{ with (index $datas $f.field) }}
+  {{ range $datas }}
 
     {{/* Get fields of this object or array */}}
     {{ $fields := .fields | default false -}}
