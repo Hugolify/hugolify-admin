@@ -19,7 +19,6 @@
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
-{{- $i18n = cond (eq (printf "%T" $i18n) "boolean") $i18n (print "'" $i18n "'") }}
 {{- $label := .label | default "nolabel" }}
 {{- $multiple := .multiple | default false }}
 {{- $name := .name | default "noname" }}
@@ -135,13 +134,13 @@
   {{ with $options }}
   options: [
   {{- range $k, $v := . }}
-    {{- $name := $k -}}
+    {{- $option_name := $k -}}
     {{- if eq (printf "%T" $k) "int" }}
-      {{- $name = $v -}}
+      {{- $option_name = $v -}}
     {{- end }}
     {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . -}}
     { 
-      label: '{{ i18n (print "admin.fields." $i18n ".options." (replace $name "-" "_")) | default (humanize $name) }}', 
+      label: '{{ i18n (print "admin.fields." $name ".options." (replace $option_name "-" "_")) | default (humanize $name) }}', 
       value: {{ $value }} 
     },
   {{ end }}

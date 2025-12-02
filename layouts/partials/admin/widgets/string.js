@@ -109,7 +109,7 @@
   hint: '{{ . }}',
   {{ end }}
   name: '{{ $name }}',
-  widget: '{{ cond $hidden "hidden" "boolean" }}',
+  widget: '{{ cond $hidden "hidden" "string" }}',
   {{ if ne $default "" }}
   default: {{ $default }},
   {{ end }}
