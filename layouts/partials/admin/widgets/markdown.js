@@ -42,8 +42,8 @@
     pattern_message: "{{ .message }}",
     {{ end }}
     {{ with $minimal }}
-      allow_resize: false,
-      initial_height: 100,
+      allow_resize: true,
+      initial_height: 150,
     {{ end }}
     required: {{ $required }}
   }
