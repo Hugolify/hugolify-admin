@@ -7,4 +7,6 @@
   "label" (i18n "admin.fields.realestates_informations.has_swimmingpool.label")
   -}}
 
+{{- $args = merge $args $name }}
+
 {{ partial "admin/widgets/boolean.js" $args }}
