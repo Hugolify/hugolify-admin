@@ -52,10 +52,6 @@
     {{ with $max_file_size }}
     max_file_size: '{{ . }}',
     {{ end }}
-    paths: {
-      static: '{{ $public_folder }}',
-      uploads: '{{ $media_folder }}'
-    },
     required: {{ $required }}
   }
 }
