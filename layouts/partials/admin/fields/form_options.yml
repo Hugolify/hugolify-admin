@@ -9,9 +9,9 @@
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 
 {{- $args := dict 
-  "label" (i18n "admin.fields.options.label" 2)
-  "label_singular" (i18n "admin.fields.options.label" 1)
-  "hint" (i18n "admin.fields.options.hint")
+  "label" (i18n "admin.fields.form.options.label" 2)
+  "label_singular" (i18n "admin.fields.form.options.label" 1)
+  "hint" (i18n "admin.fields.form.options.hint")
   "fields" $fields
   -}}
 

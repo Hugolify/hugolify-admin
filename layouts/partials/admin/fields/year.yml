@@ -1,5 +1,5 @@
 {{- $args := dict 
-  "label" (i18n "admin.fields.year.label")
+  "label" (i18n "admin.fields.year")
   "name" "year"
   "step" 1
   -}}
