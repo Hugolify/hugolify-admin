@@ -21,7 +21,7 @@
 {{- $label := .label | default "nolabel" }}
 {{- $max := .max | default false }}
 {{- $min := .min | default false }}
-{{- $multiple := .multiple | default true }}
+{{- $multiple := .multiple | default false }}
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
 {{- $required := .required | default false }}

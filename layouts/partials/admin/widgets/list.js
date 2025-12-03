@@ -10,7 +10,6 @@
   - label_singular (string)
   - max (number)
   - min (number)
-  - multiple (boolean)
   - name (string) required
   - nameOverride (string)
   - required (boolean)
@@ -29,7 +28,6 @@
 {{- $nameOverride := .nameOverride | default false }}
 {{- $max := .max | default false }}
 {{- $min := .min | default false }}
-{{- $multiple := .multiple | default true }}
 {{- $required := .required | default false }}
 
 {{/* CloudCannon */}}

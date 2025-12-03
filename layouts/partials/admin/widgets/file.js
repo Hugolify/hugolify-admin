@@ -26,7 +26,7 @@
 {{- $label_singular := .label_singular | default false }}
 {{- $max := .max | default false }}
 {{- $min := .min | default false }}
-{{- $multiple := .multiple | default true }}
+{{- $multiple := .multiple | default false }}
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
 {{- $required := .required | default false }}
@@ -92,9 +92,12 @@
   type: 'file',
   options: {
     {{ with $extensions }}
-    extensions: [{{ delimit . "," }}],
+    extensions: [{{ . }}],
     {{ end }}
+    {{ warnf "multiple: %s" $multiple }}
+
     {{ if or $min $max }}
+    {{ warnf "min and max are supported for %s" $name }}
     multiple: {
       {{ with $min }}
       min: {{ . }},
@@ -104,6 +107,7 @@
       {{ end }}
     },
     {{ else if $multiple }}
+    {{ warnf "multiple is supported for %s" $name }}
     multiple: true,
     {{ end }}
     {{ with $type }}
