@@ -13,6 +13,9 @@ collections_config: {
       {{/* Convert to map */}}
       {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
       {{ $fields := $datas._inputs }}
+      
+      {{/* Card preview */}}
+      {{ $cardPreview := partial "admin/cms/cloudcannon/collection/config/card_preview.yml" $collection }}
 
       {{/* Modify arguments */}}
       {{ $newDatas := newScratch }}
@@ -28,6 +31,7 @@ collections_config: {
       {{ $newDatas.DeleteInMap "datas" "description" }}
       {{ $newDatas.DeleteInMap "datas" "i18n" }}
       {{ $newDatas.DeleteInMap "datas" "_inputs" }}
+      {{ $newDatas.SetInMap "datas" "preview" $cardPreview }}
       {{ $datas = $newDatas.Values.datas }}
 
       {{/* Add arguments */}}
