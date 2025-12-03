@@ -5,6 +5,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.coordinates.lat.label")
+  "value_type" "float"
   -}}
 
 {{- $args = merge $args $name }}

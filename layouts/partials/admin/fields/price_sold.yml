@@ -3,6 +3,7 @@
   "hint" (i18n "admin.fields.price.hint")
   "name" "price_sold"
   "i18n" "duplicate"
+  "value_type" "float"
   -}}
 
 {{ partial "admin/widgets/number.js" $args }}

@@ -3,6 +3,11 @@
   {{- $name = dict "name" "value_number" "nameOverride" "value" }}
 {{- end }}
 
-{{- $args := merge (dict "label" (i18n "admin.fields.value.label")) $name }}
+{{- $args := dict 
+  "label" (i18n "admin.fields.value.label")
+  "value_type" "float"
+  -}}
+
+{{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/number.js" $args }}

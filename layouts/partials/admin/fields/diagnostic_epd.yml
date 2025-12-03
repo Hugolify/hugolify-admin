@@ -8,6 +8,7 @@
   "hint" (i18n "admin.fields.diagnostic.epd.hint")
   "i18n" "duplicate"
   "min" 0
+  "value_type" "float"
   -}}
 
 {{- $args = merge $args $name }}
