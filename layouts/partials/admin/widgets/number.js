@@ -28,7 +28,7 @@
 {{- $range := .range | default false }}
 {{- $required := .required | default false }}
 {{- $step := .step | default false }}
-{{- $value_type := .value_type | default "float" }}
+{{- $value_type := .value_type | default "int" }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
