@@ -94,10 +94,7 @@
     {{ with $extensions }}
     extensions: [{{ . }}],
     {{ end }}
-    {{ warnf "multiple: %s" $multiple }}
-
     {{ if or $min $max }}
-    {{ warnf "min and max are supported for %s" $name }}
     multiple: {
       {{ with $min }}
       min: {{ . }},
@@ -107,7 +104,6 @@
       {{ end }}
     },
     {{ else if $multiple }}
-    {{ warnf "multiple is supported for %s" $name }}
     multiple: true,
     {{ end }}
     {{ with $type }}
