@@ -1,4 +1,4 @@
-{{- $custom_path := `{title_page|slugify}/_index.md` -}}
+{{- $custom_path := `{title|slugify}/_index.md` -}}
 {{- if (index site.Params.admin.collections .) -}}
   {{- with (index site.Params.admin.collections .).path -}}
     {{- $custom_path = . }}
