@@ -46,7 +46,7 @@
         {{- $option_name = $v }}
       {{- end }}
       {{- $option_name = replace $option_name "-" "_" }}
-      {{- $label_option := i18n (print "admin.fields." $i18n ".options." $option_name) }}
+      {{- $label_option := i18n (print "admin.fields." $name ".options." $option_name) }}
       {{- with $label_options }}
         {{- $label_option = i18n (print . "." $option_name) }}
       {{- end }}
@@ -85,7 +85,7 @@
         {{- $option_name = $v }}
       {{- end }}
       {{- $option_name = replace $option_name "-" "_" }}
-      {{- $label_option := i18n (print "admin.fields." $i18n ".options." $option_name) }}
+      {{- $label_option := i18n (print "admin.fields." $name ".options." $option_name) }}
       {{- with $label_options }}
         {{- $label_option = i18n (print . "." $option_name) }}
       {{- end }}
@@ -123,13 +123,13 @@
       {{- $option_name = $v }}
     {{- end }}
     {{- $option_name = replace $option_name "-" "_" }}
-    {{- $label_option := i18n (print "admin.fields." $i18n ".options." $option_name) }}
+    {{- $label_option := i18n (print "admin.fields." $name ".options." $option_name) }}
     {{- with $label_options }}
       {{- $label_option = i18n (print . "." $option_name) }}
     {{- end }}
     {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
     { 
-      label: '{{ $label_option | default (humanize $name) }}', 
+      label: '{{ $label_option | default (humanize $option_name) }}', 
       value: {{ $value }} 
     },
   {{- end }}
@@ -156,13 +156,14 @@
       {{- $option_name = $v }}
     {{- end }}
     {{- $option_name = replace $option_name "-" "_" }}
-    {{- $label_option := i18n (print "admin.fields." $i18n ".options." $option_name) }}
+    {{- $label_option := i18n (print "admin.fields." $name ".options." $option_name) }}
+    {{ warnf "label_option: %s" (print $name "." $option_name) }}
     {{- with $label_options }}
       {{- $label_option = i18n (print . "." $option_name) }}
     {{- end }}
     {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
     { 
-      label: '{{ $label_option | default (humanize $name) }}', 
+      label: '{{ $label_option | default (humanize $option_name) }}', 
       value: {{ $value }} 
     },
   {{ end }}
