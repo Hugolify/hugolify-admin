@@ -2,11 +2,13 @@
 
 ## CMS available
 
-- Decap CMS: https://decapcms.org/docs/
+- CloudCannon: <https://cloudcannon.com/> `beta`
+- Decap CMS: <https://decapcms.org/>
 - Netlify CMS `deprecated`
-- Pages CMS: https://github.com/pages-cms/pages-cms
-- Static CMS: https://staticjscms.netlify.app/ `deprecated`
-- Sveltia CMS: https://github.com/sveltia/sveltia-cms
+- Pages CMS: <https://pagescms.org/>
+- Static CMS: <https://staticjscms.netlify.app/> `deprecated`
+- Sveltia CMS: <https://github.com/sveltia/sveltia-cms>
+- Tina: <https://tina.io/> `beta`
 
 ## Install
 
@@ -108,13 +110,14 @@ params:
     fields:
       # Override fields of hugolify fields
       hero:
-        - title
-        - text_markdown
+        fields:
+          - title
+          - text_markdown
 ```
 
 ## Documentation
 
-https://www.hugolify.io/docs/cms/admin/
+<https://www.hugolify.io/docs/cms/admin/>
 
 ## Licensing
 
