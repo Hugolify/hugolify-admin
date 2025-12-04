@@ -4,12 +4,12 @@
   {{- if and .enable (ne $collection "config") (ne $collection "indexes") -}}
 
     {{- $fields := partial "admin/blocks/fields/selected.html" $collection -}}
-    {{- $name := i18n (print "admin.collections." $collection ".label") | default (humanize $collection) -}} 
+    {{- $collection_name := i18n (print "admin.collections." $collection ".label") | default (humanize $collection) -}} 
 
     {{ if gt $index 0 }},{{ end }}
 
     {{- $args := dict 
-      "label" (i18n "admin.blocks.selected.label" (dict "section" $name))
+      "label" (i18n "admin.blocks.selected.label" (dict "section" $collection_name))
       "name" (print "selected-" $collection)
       "collapsed" false
       "fields" $fields

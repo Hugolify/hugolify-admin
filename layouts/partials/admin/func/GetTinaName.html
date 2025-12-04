@@ -6,7 +6,6 @@
   {{ if strings.Contains $name "-" }}
     {{ $nameOverride = $name }}
     {{ $name = replace $name "-" "_" }}
-    {{ $names = slice $name $nameOverride }}
   {{ end }}
 {{ end }}
 
