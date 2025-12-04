@@ -10,6 +10,7 @@
   "label" (i18n "admin.fields.links.label" 2)
   "label_singular" (i18n "admin.fields.links.label" 1)
   "name" "links"
+  "collapsed" false
   "fields" $fields
   -}}
 
