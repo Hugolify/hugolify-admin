@@ -1,0 +1,846 @@
+admin:
+  blocks:
+    alert:
+      label: Varsel
+    audio:
+      label: Lyd
+    chart:
+      label: Diagram
+    comparison:
+      label: Sammenligning
+    cta:
+      label: Oppfordring til handling
+    datas:
+      label: Data
+    editorial:
+      label: Redaksjonelt
+    embed:
+      label: Bygg inn
+    faq:
+      label: FAQ
+    figure:
+      label: Figur
+    form:
+      label: Skjema
+    gallery:
+      label: Galleri
+    images:
+      label: Bilder
+    informations:
+      label: Informasjon
+    instagram:
+      label: Instagram
+    latest:
+      label: Siste elementer
+    location:
+      label: Plassering
+    logos:
+      label: Logoer
+    map:
+      label: Kart
+    newsletter:
+      label: Nyhetsbrev
+    paragraph:
+      label: Avsnitt
+    pushes:
+      label: Push-varsler
+    quote:
+      label: Sitat
+    search:
+      label: Søk
+    selected:
+      label: Utvalg {{ .section }}
+    testimonials:
+      label: Attester
+    timeline:
+      label: Tidslinje
+    title:
+      label: Tittel
+    video:
+      label: Video
+  collections:
+    authors:
+      label:
+        one: Forfatter
+        other: Forfattere
+    casestudies:
+      _description: Alle casestudier
+      label:
+        one: Casestudie
+        other: Casestudier
+    categories:
+      label:
+        one: Kategori
+        other: Kategorier
+    config:
+      _description: All konfigurasjon
+      label:
+        one: Konfig
+        other: Konfig
+    docs:
+      _description: Alle dokumenter
+      label:
+        one: Dok
+        other: Dok
+    events:
+      _description: Alle arrangementer
+      label:
+        one: Arrangement
+        other: Arrangementer
+    events_categories:
+      _description: Alle arrangementskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    expertises:
+      _description: Alle ekspertiser
+      label:
+        one: Ekspertise
+        other: Ekspertiser
+    home: Hjem
+    indexes:
+      _description: Alle indekssider
+      label:
+        one: Indeks
+        other: Indeks
+    jobs:
+      _description: Alle jobber
+      label:
+        one: Jobb
+        other: Jobber
+    jobs_categories:
+      _description: Alle nyhetskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    jobs_expertises:
+      _description: Alle ekspertiser
+      label:
+        one: Ekspertise
+        other: Ekspertiser
+    jobs_places:
+      _description: Alle steder
+      label:
+        one: Sted
+        other: Steder
+    jobs_tags:
+      _description: Alle produkttagger
+      label:
+        one: Tagg
+        other: Tagger
+    pages:
+      _description: Alle sider
+      label:
+        one: Side
+        other: Sider
+    persons:
+      _description: Alle personer
+      label:
+        one: Person
+        other: Personer
+    persons_expertises:
+      _description: Alle ekspertiser
+      label:
+        one: Ekspertise
+        other: Ekspertiser
+    persons_places:
+      _description: Alle steder
+      label:
+        one: Sted
+        other: Steder
+    persons_statutes:
+      _description: Alle statutter
+      label:
+        one: Status
+        other: Statutter
+    places:
+      _description: Alle steder
+      label:
+        one: Sted
+        other: Steder
+    posts:
+      _description: Alle nyheter
+      label:
+        one: Nyhet
+        other: Nyheter
+    posts_categories:
+      _description: Alle nyhetskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    posts_expertises:
+      _description: Alle ekspertiser
+      label:
+        one: Ekspertise
+        other: Ekspertiser
+    posts_tags:
+      _description: Alle nyhetstagger
+      label:
+        one: Tagg
+        other: Tagger
+    products:
+      _description: Alle produkter
+      label:
+        one: Produkt
+        other: Produkter
+    products_categories:
+      _description: Alle produktkategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    products_tags:
+      _description: Alle produkttagger
+      label:
+        one: Tagg
+        other: Tagger
+    projects:
+      _description: Alle prosjekter
+      label:
+        one: Prosjekt
+        other: Prosjekter
+    projects_tags:
+      _description: Alle prosjekttagger
+      label:
+        one: Tagg
+        other: Tagger
+    projects_types:
+      _description: Alle prosjekttyper
+      label:
+        one: Type
+        other: Typer
+    publications:
+      _description: Alle publikasjoner
+      label:
+        one: Publikasjon
+        other: Publikasjoner
+    publications_categories:
+      _description: Alle publikasjonskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    publications_expertises:
+      _description: Alle ekspertiser
+      label:
+        one: Ekspertise
+        other: Ekspertiser
+    publications_persons:
+      label:
+        one: Person
+        other: Personer
+    realestates:
+      _description: Alle eiendommer
+      label:
+        one: Eiendom
+        other: Eiendommer
+    realestates_categories:
+      _description: Alle eiendomskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    realestates_persons:
+      _description: Alle agenter
+      label:
+        one: Agent
+        other: Agenter
+    realestates_sellers:
+      _description: Alle selgere
+      label:
+        one: Selger
+        other: Selgere
+    services:
+      _description: Alle tjenester
+      label:
+        one: Tjeneste
+        other: Tjenester
+    services_categories:
+      _description: Alle tjenestekategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    tags:
+      _description: Alle tagger
+      label:
+        one: Tagg
+        other: Tagger
+  fields:
+    address:
+      city:
+        label: By
+      country:
+        label: Land
+      label: Adresse
+      street:
+        label: Gate
+      zipcode:
+        label: Postnummer
+    align:
+      label: Justering
+      options:
+        center: Midtstill
+        end: Slutt
+        start: Start
+    arguments:
+      label:
+        one: Argument
+        other: Argumenter
+    audio:
+      label:
+        one: Lyd
+        other: Lyder
+      mp3:
+        label: MP3
+        hint: MP3-lydfil
+      ogg:
+        label: OGG
+        hint: OGG-lydfil
+    author:
+      label: Forfatter
+    autoplay:
+      label: Autoplay
+    background:
+      label: Med bakgrunn?
+    background_color:
+      label: Bakgrunnsfarge
+    badge:
+      hint: Vis et merke
+      label: Merke
+    blocks:
+      label:
+        one: Blokk
+        other: Blokker
+    body:
+      label: Brødtekst
+    breakpoints:
+      hint: Skjermstørrelse
+      label:
+        one: Brytpunkt
+        other: Brytpunkter
+      options:
+        desktop: Skrivebord
+        laptop: Bærbar
+        mobile: Mobil
+        tablet: Nettbrett
+        wide_tablet: Bredt nettbrett
+    carousel:
+      arrows:
+        label: Piler
+      autoplay:
+        label: Autoplay
+      focus:
+        hint: Plasser aktivt lysbilde i sentrum?
+        label: Fokus
+      gap:
+        hint: Avstanden mellom lysbilder. Uttrykt i rem.
+        label: Avstand
+      hint: Kun for karusellvisning
+      label: Karusellkonfigurasjon
+      padding:
+        hint: Polstring venstre/høyre for karusellen. I rem-verdi
+        label: Polstring
+      pagination:
+        label: Paginering
+      params:
+        label: Parametere
+      perpage:
+        hint: Antall lysbilder å vise
+        label: Per side
+      responsive:
+        label: Responsiv
+      type:
+        label: Karuselltype
+        options:
+          slide: Lysbilde
+          loop: Løkke
+          fade: Fade
+    chart:
+      label: Diagram
+      data:
+        label: Data (kode)
+        hint: 'Dokumentasjon: https://www.chartjs.org/docs/'
+      type:
+        label: Diagramtype
+        options:
+          bar: Stolpe
+          line: Linje
+          pie: Kake
+          polarArea: Polart område
+          radar: Radar
+    class:
+      label: Klasse
+      hint: Legg til CSS-klasse til denne komponenten
+    code:
+      label: Kode
+    color:
+      label: Farge
+    column:
+      label: Kolonne
+    contact:
+      label:
+        one: Kontakt
+        other: Kontakter
+    controls:
+      label: Kontroller
+    coordinates:
+      hint: 'Finn enkelt kontaktdetaljer: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Geografiske koordinater
+      lat:
+        label: Breddegrad
+      lng:
+        label: Lengdegrad
+    count:
+      hint: Elementer å vise
+      label: Antall
+    credit:
+      label: Kreditt
+    cta:
+      label:
+        one: CTA
+        other: CTA-er
+    datas:
+      label:
+        one: Data
+        other: Data
+    date:
+      from: Fra
+      label: Dato
+      sale: Salgsdato
+      to: Til
+    description:
+      hint:
+        Vises i faner, søkeresultater og i forhåndsvisning av SMS/Meldinger/Sosiale nettverk
+        forhåndsvisning
+      label: Beskrivelse
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Energiytelsesdiagnostikk (DPE)
+      ghg:
+        label: Co2
+        hint: Klimagass (GHG)
+      label: Diagnostikk
+      in_progress: Pågår?
+    direction:
+      label: Retning
+      options:
+        ltr: Tekst til venstre / bilde til høyre
+        rtl: Bilde til venstre / tekst til høyre
+    discount:
+      hint: 'Beløpet for reduksjonen, f.eks: 30%'
+      label: Rabatt
+      pattern: Kun verdi (uten valuta)
+    document:
+      label:
+        one: Dokument
+        other: Dokumenter
+    draft:
+      label: Utkast
+    email:
+      label: E-post
+    embed:
+      label: Bygg inn
+    event:
+      label:
+        one: Arrangement
+        other: Arrangementer
+    fax:
+      label: Faks
+      hint: 'Internasjonalt format, f.eks: +33 1 23 45 67 89'
+    featured_image:
+      hint: Vises i søkeresultater, og i forhåndsvisning av SMS/Meldinger/Sosiale nettverk
+      label: Hovedbilde
+    fee:
+      label:
+        one: Gebyr
+        other: Gebyrer
+    figure:
+      label: Figur
+    form:
+      autocomplete:
+        label: Autofullfør
+        options:
+          city: By
+          country_name: Landnavn
+          email: E-post
+          family_name: Etternavn
+          given_name: Fornavn
+          honorific_prefix: Tittel
+          name: Navn
+          organization: Organisasjon
+          postal_code: Postnummer
+          state: Stat
+          street_address: Gateadresse
+          tel: Tlf
+      full:
+        label: Fullbreddefelt?
+      hiddens:
+        label:
+          one: Skjult felt
+          other: Skjulte felt
+      items:
+        label:
+          one: Felt
+          other: Felt
+      label: Skjema
+      options:
+        hint: Kun for valgfelt
+        label:
+          one: Alternativ
+          other: Alternativer
+      type:
+        hint: Velg felttype
+        email: E-post
+        label: Type
+        radio: Radio
+        select: Velg
+        tel: Telefon
+        text: Tekst
+        textarea: Tekstområde
+      value:
+        hint: Kun for avkrysningsboks og radiofelt
+        label: Verdi
+    gallery:
+      label: Galleri
+    grid:
+      label: Rutenett
+      options:
+        container: Beholder
+        full: Full
+        large: Stor
+        medium: Medium
+        small: Liten
+    heading:
+      label: Overskrift
+    hero:
+      label: Helt
+    icon:
+      hint: Ikonnavn fra https://icons.getbootstrap.com/
+      label: Ikon
+    id:
+      label: ID
+    image:
+      label: 
+        one: Bilde
+        other: Bilder
+      alt:
+        hint: For et bilde som formidler informasjon (la stå tomt hvis dekorativt bilde)
+        label: Alternativ tekst
+      filter:
+        hint: Sett Lineær for bilde eller skjermbilde, la stå tomt for å beholde standardkonfigurasjon
+        label: Endre filterkvalitet?
+        options:
+          box: Enkelt og raskt gjennomsnittsfilter passende for nedskalering (standard)
+          catmullrom: Skarpt kubisk filter som er raskere enn Lanczos-filteret mens det gir lignende resultater
+          lanczos: Høykvalitets resampling-filter for fotografiske bilder som gir skarpe resultater
+          linear: Bilineært resampling-filter, produserer jevn utgang, raskere enn kubiske filtre
+      src:
+        hint: 'Endre størrelse og komprimer bilde før sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Bilde
+    images:
+      label: 
+        one: Bilde
+        other: Bilder
+    is_background:
+      label: Er bakgrunn?
+    is_blank:
+      label: Er blank?
+    is_card:
+      hint: Legger til en bakgrunn bak teksten
+      label: Er kort?
+    is_darken:
+      label: Mørkne?
+    is_exclusive:
+      label: Eksklusiv?
+    is_half:
+      label: Halv størrelse?
+    is_highlighted:
+      label: Er fremhevet?
+    is_logo:
+      hint: Plassert i sentrum og ikke beskåret
+      label: Er logo?
+    is_open:
+      label: Åpen?
+    is_pinned:
+      label: Festet?
+    is_screenshot:
+      hint: Legg til falsk nettleser
+      label: Er skjermbilde?
+    items:
+      label:
+        one: Element
+        other: Elementer
+    keyfeatures:
+      hint: 'f.eks: Plassering, eksponering…'
+      label:
+        one: nøkkelfunksjon
+        other: Nøkkelfunksjoner
+    label:
+      label: Etikett
+    lang:
+      hint: Skriv inn språkkode (f.eks. fr) hvis forskjellig fra gjeldende sidespråk
+      label: Språk
+    layout:
+      label: Oppsett
+      options:
+        carousel: Karusell
+        grid: Rutenett
+        list: Liste
+    legal:
+      label: Juridisk
+    legend:
+      label: Legende
+    limit:
+      label: Grense
+    links:
+      label:
+        one: Lenke
+        other: Lenker
+    location:
+      label: Plassering
+    loop:
+      label: Løkke
+    name:
+      label: Navn
+    map:
+      label: Kart
+    newsletter:
+      form:
+        label: Skjema
+    notes:
+      hint: 'For å lenke et ord i teksten til en note, legg til "[\*]" bak det. Noter og "[\*]" er lenket av deres rekkefølge.'
+      label:
+        one: Note
+        other: Noter
+    offer:
+      label:
+        one: Tilbud
+        other: Tilbud
+    offset:
+      label: Orskyvning
+      options:
+        center: Midtstill
+        end: Slutt
+        start: Start
+    parent:
+      label: Foreldreside
+    pdf:
+      label: PDF
+      hint: 'Komprimer PDF før sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Telefonnummer
+      hint: 'Internasjonalt format, f.eks: +33 1 23 45 67 89'
+    placeholder:
+      label: Plassholder
+    poster:
+      label: Plakat
+      hint: Plakatbilde for video
+    prefix:
+      label: Prefiks
+    press:
+      label: Presse
+    price:
+      hide: Skjul pris
+      hint: 'f.eks: 300000 (for 300 000 kr)'
+      label: Pris
+      sold: Salgspris
+    quote:
+      label: Sitat
+    realestates_energies:
+      label:
+        one: Energi
+        other: Energier
+      heating:
+        label: Oppvarming
+        options:
+          collective: Kollektiv
+          individual: Individuell
+      heating_type:
+        label: Oppvarmingstype
+        options:
+          reversible_ac: Reversibel AC
+          electric: Elektrisk
+          gas: Gass
+          solar: Sol
+    realestates_informations:
+      area:
+        hint: Uttrykt i m2
+        label: Innvendig overflate
+      bathrooms:
+        label: Antall bad
+      bedrooms:
+        label: Antall soverom
+      district:
+        label: Distrikt
+      exposure:
+        label: Eksponering
+      field:
+        hint: Uttrykt i m2
+        label: Utvendig overflate
+      floor:
+        label: Etasje
+      has_balcony:
+        label: Balkong?
+      has_box:
+        label: Boks?
+      has_cave:
+        label: Kjeller?
+      has_elevator:
+        label: Heis?
+      has_garage:
+        label: Garasje?
+      has_outbuilding:
+        label: Uthus?
+      has_parking:
+        label: Parkering?
+      has_swimmingpool:
+        label: Svømmebasseng?
+      has_terrace:
+        label: Terrasse?
+      label: Informasjon
+      levels:
+        label: Antall etasjer
+      rooms:
+        label: Antall rom
+      showerrooms:
+        label: Antall dusjrom
+      wc:
+        label: WC
+      year:
+        label: Byggeår
+    realestates_types:
+      label: Transaksjonstype
+      options:
+        rent: Leie
+        sale: Salg
+    reference:
+      label: Referanse
+    rent:
+      label: Lei?
+    required:
+      label: Påkrevd
+    section:
+      hint: Velg seksjonen som skal vises
+      label: Seksjon
+    show_more:
+      hint: Viser en knapp for å se flere elementer
+      label: Vis mer?
+    show_places:
+      hint: Kun hvis du har steder allerede lagret (dette vil deaktivere markøren nedenfor)
+      label: Vis alle registrerte steder?
+    slug:
+      hint: La stå tomt for å automatisere med tittelen. **Vær forsiktig med SEO-påvirkning.**
+      label: Slug
+      pattern:
+        Inneholder kun små bokstaver, tall og bindestreker, uten mellomrom,
+        aksenter eller spesialtegn
+    socials:
+      label:
+        one: Sosial
+        other: Sosiale
+      plateform: Plattform
+      twitter:
+        label: Twitter/X
+        hint: Brukernavn
+    sold:
+      label: Solgt/leid?
+    state:
+      label: Tilstand
+      options:
+        danger: Fare
+        dark: Mørk
+        info: Info
+        light: Lys
+        primary: Primær
+        secondary: Sekundær
+        success: Suksess
+        warning: Advarsel
+    status:
+      label: Status
+    submit:
+      label: Send-knapptekst
+    subtitle:
+      label: Undertittel
+    suffix:
+      hint: 'f.eks: %'
+      label: Suffiks
+    summary:
+      label: Sammendrag
+    surtitle:
+      label: Overtittel
+    text:
+      label: Tekst
+    title:
+      label: Tittel
+    title_page:
+      hint:
+        Vises i faner, søkeresultater og i forhåndsvisning av SMS/Meldinger/Sosiale nettverk
+        forhåndsvisning
+      label: Sidetittel
+    transcription:
+      label: Transkripsjon
+    url:
+      label: URL
+    value:
+      label: Verdi
+    video:
+      label: 
+        one: Video
+        other: Videoer
+      mp4:
+        label: MP4
+        hint: MP4-videofil
+        mobile:
+          label: MP4 (Mobil)
+          hint: MP4-videofil for mobil
+      webm:
+        label: WEBM
+        hint: WEBM-videofil
+        mobile:
+          label: WEBM (Mobil)
+          hint: WEBM-videofil for mobil
+    website:
+      hint: URL (https://…)
+      label: Nettsted
+    weight:
+      label: Posisjon (viktighet)
+      hint: Vit at 10 er viktigst og 100 minst viktig
+    year: År
+    zoom:
+      label: Zoom
+  files:
+    banner: Informasjonsbanner øverst på siden
+    footer: Informasjonstekst nederst på siden
+    nav:
+      label: Navigasjon
+      legal: Juridisk navigasjon (omtaler, retningslinjer…)
+      primary: Primærnavigasjon
+      secondary: Sekundærnavigasjon
+      social: Sosial navigasjon
+    seo:
+      label: Global SEO
+      title: Nettstednavn
+  group:
+    year: År
+  shortcodes:
+    alert:
+      label: Varsel
+    badge:
+      label: Merke
+    blank_link:
+      label: Blank lenke
+    blockquote:
+      label: Sitatblokk
+    button:
+      label: Knapp
+    details:
+      label: Detaljer
+    figure:
+      label: Figur
+    map:
+      label: Kart
+    twitter:
+      _id: Twitter ID
+      label: Twitter / X
+      user: Twitter brukernavn
+    youtube:
+      _id: Youtube ID
+      label: Youtube

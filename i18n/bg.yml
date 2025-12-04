@@ -1,0 +1,846 @@
+admin:
+  blocks:
+    alert:
+      label: Сигнал
+    audio:
+      label: Аудио
+    chart:
+      label: Диаграма
+    comparison:
+      label: Сравнение
+    cta:
+      label: Призив за действие
+    datas:
+      label: Данни
+    editorial:
+      label: Редакционен
+    embed:
+      label: Вграждане
+    faq:
+      label: ЧЗВ
+    figure:
+      label: Фигура
+    form:
+      label: Форма
+    gallery:
+      label: Галерия
+    images:
+      label: Изображения
+    informations:
+      label: Информация
+    instagram:
+      label: Instagram
+    latest:
+      label: Най-нови елементи
+    location:
+      label: Местоположение
+    logos:
+      label: Логота
+    map:
+      label: Карта
+    newsletter:
+      label: Бюлетин
+    paragraph:
+      label: Параграф
+    pushes:
+      label: Известия
+    quote:
+      label: Цитат
+    search:
+      label: Търсене
+    selected:
+      label: Избор {{ .section }}
+    testimonials:
+      label: Отзиви
+    timeline:
+      label: Времева линия
+    title:
+      label: Заглавие
+    video:
+      label: Видео
+  collections:
+    authors:
+      label:
+        one: Автор
+        other: Автори
+    casestudies:
+      _description: Всички казуси
+      label:
+        one: Казус
+        other: Казуси
+    categories:
+      label:
+        one: Категория
+        other: Категории
+    config:
+      _description: Цялата конфигурация
+      label:
+        one: Конфигурация
+        other: Конфигурация
+    docs:
+      _description: Всички документи
+      label:
+        one: Документ
+        other: Документи
+    events:
+      _description: Всички събития
+      label:
+        one: Събитие
+        other: Събития
+    events_categories:
+      _description: Всички категории събития
+      label:
+        one: Категория
+        other: Категории
+    expertises:
+      _description: Всички експертизи
+      label:
+        one: Експертиза
+        other: Експертизи
+    home: Начало
+    indexes:
+      _description: Всички индексни страници
+      label:
+        one: Индекс
+        other: Индекси
+    jobs:
+      _description: Всички работни места
+      label:
+        one: Работа
+        other: Работни места
+    jobs_categories:
+      _description: Всички категории новини
+      label:
+        one: Категория
+        other: Категории
+    jobs_expertises:
+      _description: Всички експертизи
+      label:
+        one: Експертиза
+        other: Експертизи
+    jobs_places:
+      _description: Всички места
+      label:
+        one: Място
+        other: Места
+    jobs_tags:
+      _description: Всички етикети на продукти
+      label:
+        one: Етикет
+        other: Етикети
+    pages:
+      _description: Всички страници
+      label:
+        one: Страница
+        other: Страници
+    persons:
+      _description: Всички лица
+      label:
+        one: Лице
+        other: Лица
+    persons_expertises:
+      _description: Всички експертизи
+      label:
+        one: Експертиза
+        other: Експертизи
+    persons_places:
+      _description: Всички места
+      label:
+        one: Място
+        other: Места
+    persons_statutes:
+      _description: Всички статути
+      label:
+        one: Статут
+        other: Статути
+    places:
+      _description: Всички места
+      label:
+        one: Място
+        other: Места
+    posts:
+      _description: Всички новини
+      label:
+        one: Новина
+        other: Новини
+    posts_categories:
+      _description: Всички категории новини
+      label:
+        one: Категория
+        other: Категории
+    posts_expertises:
+      _description: Всички експертизи
+      label:
+        one: Експертиза
+        other: Експертизи
+    posts_tags:
+      _description: Всички етикети на новини
+      label:
+        one: Етикет
+        other: Етикети
+    products:
+      _description: Всички продукти
+      label:
+        one: Продукт
+        other: Продукти
+    products_categories:
+      _description: Всички категории продукти
+      label:
+        one: Категория
+        other: Категории
+    products_tags:
+      _description: Всички етикети на продукти
+      label:
+        one: Етикет
+        other: Етикети
+    projects:
+      _description: Всички проекти
+      label:
+        one: Проект
+        other: Проекти
+    projects_tags:
+      _description: Всички етикети на проекти
+      label:
+        one: Етикет
+        other: Етикети
+    projects_types:
+      _description: Всички видове проекти
+      label:
+        one: Тип
+        other: Типове
+    publications:
+      _description: Всички публикации
+      label:
+        one: Публикация
+        other: Публикации
+    publications_categories:
+      _description: Всички категории публикации
+      label:
+        one: Категория
+        other: Категории
+    publications_expertises:
+      _description: Всички експертизи
+      label:
+        one: Експертиза
+        other: Експертизи
+    publications_persons:
+      label:
+        one: Лице
+        other: Лица
+    realestates:
+      _description: Всички недвижими имоти
+      label:
+        one: Недвижим имот
+        other: Недвижими имоти
+    realestates_categories:
+      _description: Всички категории недвижими имоти
+      label:
+        one: Категория
+        other: Категории
+    realestates_persons:
+      _description: Всички агенти
+      label:
+        one: Агент
+        other: Агенти
+    realestates_sellers:
+      _description: Всички продавачи
+      label:
+        one: Продавач
+        other: Продавачи
+    services:
+      _description: Всички услуги
+      label:
+        one: Услуга
+        other: Услуги
+    services_categories:
+      _description: Всички категории услуги
+      label:
+        one: Категория
+        other: Категории
+    tags:
+      _description: Всички етикети
+      label:
+        one: Етикет
+        other: Етикети
+  fields:
+    address:
+      city:
+        label: Град
+      country:
+        label: Държава
+      label: Адрес
+      street:
+        label: Улица
+      zipcode:
+        label: Пощенски код
+    align:
+      label: Подравняване
+      options:
+        center: Център
+        end: Край
+        start: Начало
+    arguments:
+      label:
+        one: Аргумент
+        other: Аргументи
+    audio:
+      label:
+        one: Аудио
+        other: Аудио
+      mp3:
+        label: MP3
+        hint: MP3 аудио файл
+      ogg:
+        label: OGG
+        hint: OGG аудио файл
+    author:
+      label: Автор
+    autoplay:
+      label: Автоматично възпроизвеждане
+    background:
+      label: С фон?
+    background_color:
+      label: Цвят на фона
+    badge:
+      hint: Покажи значка
+      label: Значка
+    blocks:
+      label:
+        one: Блок
+        other: Блокове
+    body:
+      label: Тяло
+    breakpoints:
+      hint: Размер на екрана
+      label:
+        one: Точка на прекъсване
+        other: Точки на прекъсване
+      options:
+        desktop: Настолен
+        laptop: Лаптоп
+        mobile: Мобилен
+        tablet: Таблет
+        wide_tablet: Широк таблет
+    carousel:
+      arrows:
+        label: Стрелки
+      autoplay:
+        label: Автоматично възпроизвеждане
+      focus:
+        hint: Позициониране на активния слайд в центъра?
+        label: Фокус
+      gap:
+        hint: Разстоянието между слайдовете. Изразено в rem.
+        label: Разстояние
+      hint: Само за показване на въртележка
+      label: Конфигурация на въртележка
+      padding:
+        hint: Подложка отляво/отдясно на въртележката. В rem стойност
+        label: Подложка
+      pagination:
+        label: Пагинация
+      params:
+        label: Параметри
+      perpage:
+        hint: Брой слайдове за показване
+        label: На страница
+      responsive:
+        label: Отзивчив
+      type:
+        label: Тип въртележка
+        options:
+          slide: Слайд
+          loop: Цикъл
+          fade: Избледняване
+    chart:
+      label: Диаграма
+      data:
+        label: Данни (код)
+        hint: 'Документация: https://www.chartjs.org/docs/'
+      type:
+        label: Тип диаграма
+        options:
+          bar: Стълбовидна
+          line: Линейна
+          pie: Кръгова
+          polarArea: Полярна област
+          radar: Радарна
+    class:
+      label: Клас
+      hint: Добави CSS клас към този компонент
+    code:
+      label: Код
+    color:
+      label: Цвят
+    column:
+      label: Колона
+    contact:
+      label:
+        one: Контакт
+        other: Контакти
+    controls:
+      label: Контроли
+    coordinates:
+      hint: 'Намерете лесно данни за контакт: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Географски координати
+      lat:
+        label: Географска ширина
+      lng:
+        label: Географска дължина
+    count:
+      hint: Елементи за показване
+      label: Брой
+    credit:
+      label: Кредит
+    cta:
+      label:
+        one: CTA
+        other: CTA
+    datas:
+      label:
+        one: Данни
+        other: Данни
+    date:
+      from: От
+      label: Дата
+      sale: Дата на продажба
+      to: До
+    description:
+      hint:
+        Показва се в раздели, резултати от търсене и в преглед на SMS/Съобщения/Социални мрежи
+        преглед
+      label: Описание
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Диагностика на енергийните характеристики (DPE)
+      ghg:
+        label: Co2
+        hint: Парников газ (GHG)
+      label: Диагностика
+      in_progress: В процес?
+    direction:
+      label: Посока
+      options:
+        ltr: Текст отляво / изображение отдясно
+        rtl: Изображение отляво / текст отдясно
+    discount:
+      hint: 'Сума на намалението, напр.: 30%'
+      label: Отстъпка
+      pattern: Само стойност (без валута)
+    document:
+      label:
+        one: Документ
+        other: Документи
+    draft:
+      label: Чернова
+    email:
+      label: Имейл
+    embed:
+      label: Вграждане
+    event:
+      label:
+        one: Събитие
+        other: Събития
+    fax:
+      label: Факс
+      hint: 'Международен формат, напр.: +33 1 23 45 67 89'
+    featured_image:
+      hint: Показва се в резултати от търсене и в преглед на SMS/Съобщения/Социални мрежи
+      label: Основно изображение
+    fee:
+      label:
+        one: Такса
+        other: Такси
+    figure:
+      label: Фигура
+    form:
+      autocomplete:
+        label: Автоматично попълване
+        options:
+          city: Град
+          country_name: Име на държава
+          email: Имейл
+          family_name: Фамилия
+          given_name: Собствено име
+          honorific_prefix: Титла
+          name: Име
+          organization: Организация
+          postal_code: Пощенски код
+          state: Щат
+          street_address: Адрес на улица
+          tel: Тел
+      full:
+        label: Поле с пълна ширина?
+      hiddens:
+        label:
+          one: Скрито поле
+          other: Скрити полета
+      items:
+        label:
+          one: Поле
+          other: Полета
+      label: Форма
+      options:
+        hint: Само за полета за избор
+        label:
+          one: Опция
+          other: Опции
+      type:
+        hint: Изберете тип поле
+        email: Имейл
+        label: Тип
+        radio: Радио
+        select: Избор
+        tel: Телефон
+        text: Текст
+        textarea: Текстова област
+      value:
+        hint: Само за полета за отметка и радио
+        label: Стойност
+    gallery:
+      label: Галерия
+    grid:
+      label: Решетка
+      options:
+        container: Контейнер
+        full: Пълен
+        large: Голям
+        medium: Среден
+        small: Малък
+    heading:
+      label: Заглавие
+    hero:
+      label: Герой
+    icon:
+      hint: Име на икона от https://icons.getbootstrap.com/
+      label: Икона
+    id:
+      label: ID
+    image:
+      label: 
+        one: Изображение
+        other: Изображения
+      alt:
+        hint: За изображение, което предава информация (оставете празно, ако е декоративно изображение)
+        label: Алтернативен текст
+      filter:
+        hint: Задайте Линейно за картина или екранна снимка, оставете празно, за да запазите конфигурацията по подразбиране
+        label: Промяна на качеството на филтъра?
+        options:
+          box: Прост и бърз филтър за осредняване, подходящ за намаляване на мащаба (по подразбиране)
+          catmullrom: Остър кубичен филтър, който е по-бърз от филтъра на Lanczos, като същевременно осигурява подобни резултати
+          lanczos: Висококачествен филтър за пресемплиране за фотографски изображения, даващ остри резултати
+          linear: Билинеен филтър за пресемплиране, произвежда гладък изход, по-бърз от кубичните филтри
+      src:
+        hint: 'Преоразмерете и компресирайте изображението преди изпращане: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Изображение
+    images:
+      label: 
+        one: Изображение
+        other: Изображения
+    is_background:
+      label: Фон ли е?
+    is_blank:
+      label: Празно ли е?
+    is_card:
+      hint: Добавя фон зад текста
+      label: Карта ли е?
+    is_darken:
+      label: Потъмняване?
+    is_exclusive:
+      label: Ексклузивно?
+    is_half:
+      label: Половин размер?
+    is_highlighted:
+      label: Подчертано ли е?
+    is_logo:
+      hint: Позиционирано в центъра и не е изрязано
+      label: Лого ли е?
+    is_open:
+      label: Отворено?
+    is_pinned:
+      label: Закачено?
+    is_screenshot:
+      hint: Добави фалшив браузър
+      label: Екранна снимка ли е?
+    items:
+      label:
+        one: Елемент
+        other: Елементи
+    keyfeatures:
+      hint: 'напр.: Местоположение, изложение…'
+      label:
+        one: ключова характеристика
+        other: Ключови характеристики
+    label:
+      label: Етикет
+    lang:
+      hint: Въведете код на езика (напр. fr), ако е различен от текущия език на страницата
+      label: Език
+    layout:
+      label: Оформление
+      options:
+        carousel: Въртележка
+        grid: Решетка
+        list: Списък
+    legal:
+      label: Правен
+    legend:
+      label: Легенда
+    limit:
+      label: Лимит
+    links:
+      label:
+        one: Връзка
+        other: Връзки
+    location:
+      label: Местоположение
+    loop:
+      label: Цикъл
+    name:
+      label: Име
+    map:
+      label: Карта
+    newsletter:
+      form:
+        label: Форма
+    notes:
+      hint: 'За да свържете дума в текста с бележка, добавете "[\*]" след нея. Бележките и "[\*]" са свързани по техния ред.'
+      label:
+        one: Бележка
+        other: Бележки
+    offer:
+      label:
+        one: Оферта
+        other: Оферти
+    offset:
+      label: Отместване
+      options:
+        center: Център
+        end: Край
+        start: Начало
+    parent:
+      label: Родителска страница
+    pdf:
+      label: PDF
+      hint: 'Компресирайте PDF преди изпращане: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Телефонен номер
+      hint: 'Международен формат, напр.: +33 1 23 45 67 89'
+    placeholder:
+      label: Заместител
+    poster:
+      label: Плакат
+      hint: Изображение на плакат за видео
+    prefix:
+      label: Префикс
+    press:
+      label: Преса
+    price:
+      hide: Скрий цена
+      hint: 'напр.: 300000 (за 300 000 лв)'
+      label: Цена
+      sold: Продажна цена
+    quote:
+      label: Цитат
+    realestates_energies:
+      label:
+        one: Енергия
+        other: Енергии
+      heating:
+        label: Отопление
+        options:
+          collective: Колективно
+          individual: Индивидуално
+      heating_type:
+        label: Тип отопление
+        options:
+          reversible_ac: Реверсивен климатик
+          electric: Електрическо
+          gas: Газ
+          solar: Слънчево
+    realestates_informations:
+      area:
+        hint: Изразено в m2
+        label: Вътрешна повърхност
+      bathrooms:
+        label: Брой бани
+      bedrooms:
+        label: Брой спални
+      district:
+        label: Район
+      exposure:
+        label: Изложение
+      field:
+        hint: Изразено в m2
+        label: Външна повърхност
+      floor:
+        label: Етаж
+      has_balcony:
+        label: Балкон?
+      has_box:
+        label: Кутия?
+      has_cave:
+        label: Мазе?
+      has_elevator:
+        label: Асансьор?
+      has_garage:
+        label: Гараж?
+      has_outbuilding:
+        label: Постройка?
+      has_parking:
+        label: Паркинг?
+      has_swimmingpool:
+        label: Басейн?
+      has_terrace:
+        label: Тераса?
+      label: Информация
+      levels:
+        label: Брой етажи
+      rooms:
+        label: Брой стаи
+      showerrooms:
+        label: Брой душ кабини
+      wc:
+        label: WC
+      year:
+        label: Година на построяване
+    realestates_types:
+      label: Тип транзакция
+      options:
+        rent: Наем
+        sale: Продажба
+    reference:
+      label: Референция
+    rent:
+      label: Наем?
+    required:
+      label: Задължително
+    section:
+      hint: Изберете секцията за показване
+      label: Секция
+    show_more:
+      hint: Показва бутон за преглед на още елементи
+      label: Покажи още?
+    show_places:
+      hint: Само ако вече имате запазени места (това ще деактивира маркера по-долу)
+      label: Покажи всички регистрирани места?
+    slug:
+      hint: Оставете празно, за да автоматизирате със заглавието. **Внимавайте за SEO въздействието.**
+      label: Slug
+      pattern:
+        Съдържа само малки букви, цифри и тирета, без интервали,
+        акценти или специални знаци
+    socials:
+      label:
+        one: Социален
+        other: Социални
+      plateform: Платформа
+      twitter:
+        label: Twitter/X
+        hint: Потребителско име
+    sold:
+      label: Продадено/наето?
+    state:
+      label: Състояние
+      options:
+        danger: Опасност
+        dark: Тъмно
+        info: Инфо
+        light: Светло
+        primary: Първично
+        secondary: Вторично
+        success: Успех
+        warning: Предупреждение
+    status:
+      label: Статус
+    submit:
+      label: Текст на бутона за изпращане
+    subtitle:
+      label: Подзаглавие
+    suffix:
+      hint: 'напр.: %'
+      label: Суфикс
+    summary:
+      label: Резюме
+    surtitle:
+      label: Надзаглавие
+    text:
+      label: Текст
+    title:
+      label: Заглавие
+    title_page:
+      hint:
+        Показва се в раздели, резултати от търсене и в преглед на SMS/Съобщения/Социални мрежи
+        преглед
+      label: Заглавие на страницата
+    transcription:
+      label: Транскрипция
+    url:
+      label: URL
+    value:
+      label: Стойност
+    video:
+      label: 
+        one: Видео
+        other: Видеоклипове
+      mp4:
+        label: MP4
+        hint: MP4 видео файл
+        mobile:
+          label: MP4 (Мобилен)
+          hint: MP4 видео файл за мобилен
+      webm:
+        label: WEBM
+        hint: WEBM видео файл
+        mobile:
+          label: WEBM (Мобилен)
+          hint: WEBM видео файл за мобилен
+    website:
+      hint: URL (https://…)
+      label: Уебсайт
+    weight:
+      label: Позиция (важност)
+      hint: Знаейки, че 10 е най-важното, а 100 най-малко важното
+    year: Година
+    zoom:
+      label: Увеличение
+  files:
+    banner: Информационен банер в горната част на сайта
+    footer: Информационен текст в долната част на сайта
+    nav:
+      label: Навигация
+      legal: Правна навигация (споменавания, политика…)
+      primary: Основна навигация
+      secondary: Вторична навигация
+      social: Социална навигация
+    seo:
+      label: Глобално SEO
+      title: Име на уебсайта
+  group:
+    year: Година
+  shortcodes:
+    alert:
+      label: Сигнал
+    badge:
+      label: Значка
+    blank_link:
+      label: Празен линк
+    blockquote:
+      label: Цитат
+    button:
+      label: Бутон
+    details:
+      label: Детайли
+    figure:
+      label: Фигура
+    map:
+      label: Карта
+    twitter:
+      _id: Twitter ID
+      label: Twitter / X
+      user: Twitter потребителско име
+    youtube:
+      _id: Youtube ID
+      label: Youtube

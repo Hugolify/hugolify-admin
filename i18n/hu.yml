@@ -1,0 +1,846 @@
+admin:
+  blocks:
+    alert:
+      label: Figyelmeztetés
+    audio:
+      label: Hang
+    chart:
+      label: Diagram
+    comparison:
+      label: Összehasonlítás
+    cta:
+      label: Cselekvésre ösztönzés
+    datas:
+      label: Adatok
+    editorial:
+      label: Szerkesztői
+    embed:
+      label: Beágyazás
+    faq:
+      label: GYIK
+    figure:
+      label: Ábra
+    form:
+      label: Űrlap
+    gallery:
+      label: Galéria
+    images:
+      label: Képek
+    informations:
+      label: Információk
+    instagram:
+      label: Instagram
+    latest:
+      label: Legújabb elemek
+    location:
+      label: Helyszín
+    logos:
+      label: Logók
+    map:
+      label: Térkép
+    newsletter:
+      label: Hírlevél
+    paragraph:
+      label: Bekezdés
+    pushes:
+      label: Értesítések
+    quote:
+      label: Idézet
+    search:
+      label: Keresés
+    selected:
+      label: Kiválasztás {{ .section }}
+    testimonials:
+      label: Ajánlások
+    timeline:
+      label: Idővonal
+    title:
+      label: Cím
+    video:
+      label: Videó
+  collections:
+    authors:
+      label:
+        one: Szerző
+        other: Szerzők
+    casestudies:
+      _description: Minden esettanulmány
+      label:
+        one: Esettanulmány
+        other: Esettanulmányok
+    categories:
+      label:
+        one: Kategória
+        other: Kategóriák
+    config:
+      _description: Minden konfiguráció
+      label:
+        one: Konfig
+        other: Konfig
+    docs:
+      _description: Minden dokumentum
+      label:
+        one: Dok
+        other: Dok
+    events:
+      _description: Minden esemény
+      label:
+        one: Esemény
+        other: Események
+    events_categories:
+      _description: Minden eseménykategória
+      label:
+        one: Kategória
+        other: Kategóriák
+    expertises:
+      _description: Minden szakértelem
+      label:
+        one: Szakértelem
+        other: Szakértelmek
+    home: Kezdőlap
+    indexes:
+      _description: Minden indexoldal
+      label:
+        one: Index
+        other: Index
+    jobs:
+      _description: Minden állás
+      label:
+        one: Állás
+        other: Állások
+    jobs_categories:
+      _description: Minden hírkategória
+      label:
+        one: Kategória
+        other: Kategóriák
+    jobs_expertises:
+      _description: Minden szakértelem
+      label:
+        one: Szakértelem
+        other: Szakértelmek
+    jobs_places:
+      _description: Minden hely
+      label:
+        one: Hely
+        other: Helyek
+    jobs_tags:
+      _description: Minden termékcímke
+      label:
+        one: Címke
+        other: Címkék
+    pages:
+      _description: Minden oldal
+      label:
+        one: Oldal
+        other: Oldalak
+    persons:
+      _description: Minden személy
+      label:
+        one: Személy
+        other: Személyek
+    persons_expertises:
+      _description: Minden szakértelem
+      label:
+        one: Szakértelem
+        other: Szakértelmek
+    persons_places:
+      _description: Minden hely
+      label:
+        one: Hely
+        other: Helyek
+    persons_statutes:
+      _description: Minden státusz
+      label:
+        one: Státusz
+        other: Státuszok
+    places:
+      _description: Minden hely
+      label:
+        one: Hely
+        other: Helyek
+    posts:
+      _description: Minden hír
+      label:
+        one: Hír
+        other: Hírek
+    posts_categories:
+      _description: Minden hírkategória
+      label:
+        one: Kategória
+        other: Kategóriák
+    posts_expertises:
+      _description: Minden szakértelem
+      label:
+        one: Szakértelem
+        other: Szakértelmek
+    posts_tags:
+      _description: Minden hírcímke
+      label:
+        one: Címke
+        other: Címkék
+    products:
+      _description: Minden termék
+      label:
+        one: Termék
+        other: Termékek
+    products_categories:
+      _description: Minden termékkategória
+      label:
+        one: Kategória
+        other: Kategóriák
+    products_tags:
+      _description: Minden termékcímke
+      label:
+        one: Címke
+        other: Címkék
+    projects:
+      _description: Minden projekt
+      label:
+        one: Projekt
+        other: Projektek
+    projects_tags:
+      _description: Minden projektcímke
+      label:
+        one: Címke
+        other: Címkék
+    projects_types:
+      _description: Minden projekttípus
+      label:
+        one: Típus
+        other: Típusok
+    publications:
+      _description: Minden kiadvány
+      label:
+        one: Kiadvány
+        other: Kiadványok
+    publications_categories:
+      _description: Minden kiadványkategória
+      label:
+        one: Kategória
+        other: Kategóriák
+    publications_expertises:
+      _description: Minden szakértelem
+      label:
+        one: Szakértelem
+        other: Szakértelmek
+    publications_persons:
+      label:
+        one: Személy
+        other: Személyek
+    realestates:
+      _description: Minden ingatlan
+      label:
+        one: Ingatlan
+        other: Ingatlanok
+    realestates_categories:
+      _description: Minden ingatlankategória
+      label:
+        one: Kategória
+        other: Kategóriák
+    realestates_persons:
+      _description: Minden ügynök
+      label:
+        one: Ügynök
+        other: Ügynökök
+    realestates_sellers:
+      _description: Minden eladó
+      label:
+        one: Eladó
+        other: Eladók
+    services:
+      _description: Minden szolgáltatás
+      label:
+        one: Szolgáltatás
+        other: Szolgáltatások
+    services_categories:
+      _description: Minden szolgáltatáskategória
+      label:
+        one: Kategória
+        other: Kategóriák
+    tags:
+      _description: Minden címke
+      label:
+        one: Címke
+        other: Címkék
+  fields:
+    address:
+      city:
+        label: Város
+      country:
+        label: Ország
+      label: Cím
+      street:
+        label: Utca
+      zipcode:
+        label: Irányítószám
+    align:
+      label: Igazítás
+      options:
+        center: Közép
+        end: Vége
+        start: Kezdés
+    arguments:
+      label:
+        one: Érv
+        other: Érvek
+    audio:
+      label:
+        one: Hang
+        other: Hangok
+      mp3:
+        label: MP3
+        hint: MP3 hangfájl
+      ogg:
+        label: OGG
+        hint: OGG hangfájl
+    author:
+      label: Szerző
+    autoplay:
+      label: Automatikus lejátszás
+    background:
+      label: Háttérrel?
+    background_color:
+      label: Háttérszín
+    badge:
+      hint: Jelvény megjelenítése
+      label: Jelvény
+    blocks:
+      label:
+        one: Blokk
+        other: Blokkok
+    body:
+      label: Törzs
+    breakpoints:
+      hint: Képernyőméret
+      label:
+        one: Töréspont
+        other: Töréspontok
+      options:
+        desktop: Asztali
+        laptop: Laptop
+        mobile: Mobil
+        tablet: Táblagép
+        wide_tablet: Széles táblagép
+    carousel:
+      arrows:
+        label: Nyilak
+      autoplay:
+        label: Automatikus lejátszás
+      focus:
+        hint: Aktív dia középre helyezése?
+        label: Fókusz
+      gap:
+        hint: A diák közötti rés. Rem-ben kifejezve.
+        label: Rés
+      hint: Csak karusszel megjelenítéshez
+      label: Karusszel konfiguráció
+      padding:
+        hint: A karusszel bal/jobb oldali kitöltése. Rem értékben
+        label: Kitöltés
+      pagination:
+        label: Lapozás
+      params:
+        label: Paraméterek
+      perpage:
+        hint: Megjelenítendő diák száma
+        label: Oldalanként
+      responsive:
+        label: Reszponzív
+      type:
+        label: Karusszel típusa
+        options:
+          slide: Dia
+          loop: Hurok
+          fade: Áttűnés
+    chart:
+      label: Diagram
+      data:
+        label: Adat (kód)
+        hint: 'Dokumentáció: https://www.chartjs.org/docs/'
+      type:
+        label: Diagram típusa
+        options:
+          bar: Oszlop
+          line: Vonal
+          pie: Tort
+          polarArea: Poláris terület
+          radar: Radar
+    class:
+      label: Osztály
+      hint: CSS osztály hozzáadása ehhez a komponenshez
+    code:
+      label: Kód
+    color:
+      label: Szín
+    column:
+      label: Oszlop
+    contact:
+      label:
+        one: Kapcsolat
+        other: Kapcsolatok
+    controls:
+      label: Vezérlők
+    coordinates:
+      hint: 'Könnyen megtalálhatja az elérhetőségeket: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Földrajzi koordináták
+      lat:
+        label: Szélesség
+      lng:
+        label: Hosszúság
+    count:
+      hint: Megjelenítendő elemek
+      label: Szám
+    credit:
+      label: Hitel
+    cta:
+      label:
+        one: CTA
+        other: CTA-k
+    datas:
+      label:
+        one: Adat
+        other: Adatok
+    date:
+      from: Tól
+      label: Dátum
+      sale: Eladás dátuma
+      to: Ig
+    description:
+      hint:
+        Megjelenik a lapokon, a keresési eredményekben és az SMS/Üzenetek/Közösségi hálózatok előnézetében
+        előnézet
+      label: Leírás
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Energiateljesítmény-diagnosztika (DPE)
+      ghg:
+        label: Co2
+        hint: Üvegházhatású gáz (GHG)
+      label: Diagnosztika
+      in_progress: Folyamatban?
+    direction:
+      label: Irány
+      options:
+        ltr: Szöveg balra / kép jobbra
+        rtl: Kép balra / szöveg jobbra
+    discount:
+      hint: 'A csökkentés összege, pl.: 30%'
+      label: Kedvezmény
+      pattern: Csak érték (pénznem nélkül)
+    document:
+      label:
+        one: Dokumentum
+        other: Dokumentumok
+    draft:
+      label: Piszkozat
+    email:
+      label: E-mail
+    embed:
+      label: Beágyazás
+    event:
+      label:
+        one: Esemény
+        other: Események
+    fax:
+      label: Fax
+      hint: 'Nemzetközi formátum, pl.: +33 1 23 45 67 89'
+    featured_image:
+      hint: Megjelenik a keresési eredményekben és az SMS/Üzenetek/Közösségi hálózatok előnézetében
+      label: Fő kép
+    fee:
+      label:
+        one: Díj
+        other: Díjak
+    figure:
+      label: Ábra
+    form:
+      autocomplete:
+        label: Automatikus kiegészítés
+        options:
+          city: Város
+          country_name: Ország neve
+          email: E-mail
+          family_name: Vezetéknév
+          given_name: Keresztnév
+          honorific_prefix: Cím
+          name: Név
+          organization: Szervezet
+          postal_code: Irányítószám
+          state: Állam
+          street_address: Utcai cím
+          tel: Tel
+      full:
+        label: Teljes szélességű mező?
+      hiddens:
+        label:
+          one: Rejtett mező
+          other: Rejtett mezők
+      items:
+        label:
+          one: Mező
+          other: Mezők
+      label: Űrlap
+      options:
+        hint: Csak kiválasztó mezőkhöz
+        label:
+          one: Opció
+          other: Opciók
+      type:
+        hint: Válassza ki a mező típusát
+        email: E-mail
+        label: Típus
+        radio: Rádió
+        select: Kiválasztás
+        tel: Telefon
+        text: Szöveg
+        textarea: Szövegterület
+      value:
+        hint: Csak jelölőnégyzet és rádió mezőkhöz
+        label: Érték
+    gallery:
+      label: Galéria
+    grid:
+      label: Rács
+      options:
+        container: Konténer
+        full: Teljes
+        large: Nagy
+        medium: Közepes
+        small: Kicsi
+    heading:
+      label: Címsor
+    hero:
+      label: Hős
+    icon:
+      hint: Ikon neve a https://icons.getbootstrap.com/ oldalról
+      label: Ikon
+    id:
+      label: Azonosító
+    image:
+      label: 
+        one: Kép
+        other: Képek
+      alt:
+        hint: Információt közvetítő képhez (hagyja üresen, ha dekoratív kép)
+        label: Alternatív szöveg
+      filter:
+        hint: Állítsa Lineárisra kép vagy képernyőkép esetén, hagyja üresen az alapértelmezett konfiguráció megtartásához
+        label: Szűrő minőségének módosítása?
+        options:
+          box: Egyszerű és gyors átlagoló szűrő, amely alkalmas kicsinyítésre (alapértelmezett)
+          catmullrom: Éles köbös szűrő, amely gyorsabb, mint a Lanczos szűrő, miközben hasonló eredményeket ad
+          lanczos: Kiváló minőségű újramintavételezési szűrő fényképészeti képekhez, amely éles eredményeket ad
+          linear: Bilineáris újramintavételezési szűrő, sima kimenetet eredményez, gyorsabb, mint a köbös szűrők
+      src:
+        hint: 'Méretezze át és tömörítse a képet küldés előtt: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Kép
+    images:
+      label: 
+        one: Kép
+        other: Képek
+    is_background:
+      label: Háttér?
+    is_blank:
+      label: Üres?
+    is_card:
+      hint: Hátteret ad a szöveg mögé
+      label: Kártya?
+    is_darken:
+      label: Sötétítés?
+    is_exclusive:
+      label: Exkluzív?
+    is_half:
+      label: Fél méret?
+    is_highlighted:
+      label: Kiemelt?
+    is_logo:
+      hint: Középre helyezve és nincs levágva
+      label: Logó?
+    is_open:
+      label: Nyitva?
+    is_pinned:
+      label: Rögzített?
+    is_screenshot:
+      hint: Hamis böngésző hozzáadása
+      label: Képernyőkép?
+    items:
+      label:
+        one: Elem
+        other: Elemek
+    keyfeatures:
+      hint: 'pl.: Helyszín, kitettség…'
+      label:
+        one: kulcsfontosságú jellemző
+        other: Kulcsfontosságú jellemzők
+    label:
+      label: Címke
+    lang:
+      hint: Adja meg a nyelvkódot (pl. fr), ha eltér az aktuális oldal nyelvétől
+      label: Nyelv
+    layout:
+      label: Elrendezés
+      options:
+        carousel: Karusszel
+        grid: Rács
+        list: Lista
+    legal:
+      label: Jogi
+    legend:
+      label: Jelmagyarázat
+    limit:
+      label: Határ
+    links:
+      label:
+        one: Link
+        other: Linkek
+    location:
+      label: Helyszín
+    loop:
+      label: Hurok
+    name:
+      label: Név
+    map:
+      label: Térkép
+    newsletter:
+      form:
+        label: Űrlap
+    notes:
+      hint: 'Egy szó jegyzethez való kapcsolásához a szövegben, illessze utána a "[\*]" jelet. A jegyzetek és a "[\*]" sorrendjük alapján kapcsolódnak.'
+      label:
+        one: Jegyzet
+        other: Jegyzetek
+    offer:
+      label:
+        one: Ajánlat
+        other: Ajánlatok
+    offset:
+      label: Eltolás
+      options:
+        center: Közép
+        end: Vége
+        start: Kezdés
+    parent:
+      label: Szülő oldal
+    pdf:
+      label: PDF
+      hint: 'Tömörítse a PDF-et küldés előtt: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Telefonszám
+      hint: 'Nemzetközi formátum, pl.: +33 1 23 45 67 89'
+    placeholder:
+      label: Helyőrző
+    poster:
+      label: Poszter
+      hint: Poszterkép videóhoz
+    prefix:
+      label: Előtag
+    press:
+      label: Sajtó
+    price:
+      hide: Ár elrejtése
+      hint: 'pl.: 300000 (300 000 Ft-ért)'
+      label: Ár
+      sold: Eladási ár
+    quote:
+      label: Idézet
+    realestates_energies:
+      label:
+        one: Energia
+        other: Energiák
+      heating:
+        label: Fűtés
+        options:
+          collective: Közös
+          individual: Egyéni
+      heating_type:
+        label: Fűtés típusa
+        options:
+          reversible_ac: Reverzibilis klíma
+          electric: Elektromos
+          gas: Gáz
+          solar: Napenergia
+    realestates_informations:
+      area:
+        hint: m2-ben kifejezve
+        label: Belső felület
+      bathrooms:
+        label: Fürdőszobák száma
+      bedrooms:
+        label: Hálószobák száma
+      district:
+        label: Kerület
+      exposure:
+        label: Kitettség
+      field:
+        hint: m2-ben kifejezve
+        label: Külső felület
+      floor:
+        label: Emelet
+      has_balcony:
+        label: Erkély?
+      has_box:
+        label: Doboz?
+      has_cave:
+        label: Pince?
+      has_elevator:
+        label: Lift?
+      has_garage:
+        label: Garázs?
+      has_outbuilding:
+        label: Melléképület?
+      has_parking:
+        label: Parkoló?
+      has_swimmingpool:
+        label: Úszómedence?
+      has_terrace:
+        label: Terasz?
+      label: Információk
+      levels:
+        label: Emeletek száma
+      rooms:
+        label: Szobák száma
+      showerrooms:
+        label: Zuhanyzók száma
+      wc:
+        label: WC
+      year:
+        label: Építés éve
+    realestates_types:
+      label: Tranzakció típusa
+      options:
+        rent: Bérlés
+        sale: Eladás
+    reference:
+      label: Referencia
+    rent:
+      label: Bérlés?
+    required:
+      label: Kötelező
+    section:
+      hint: Válassza ki a megjelenítendő szakaszt
+      label: Szakasz
+    show_more:
+      hint: Megjelenít egy gombot további elemek megtekintéséhez
+      label: Több mutatása?
+    show_places:
+      hint: Csak akkor, ha már vannak mentett helyei (ez letiltja az alábbi jelölőt)
+      label: Összes regisztrált hely megjelenítése?
+    slug:
+      hint: Hagyja üresen a címmel való automatizáláshoz. **Ügyeljen a SEO hatásra.**
+      label: Slug
+      pattern:
+        Csak kisbetűket, számokat és kötőjeleket tartalmazhat, szóközök,
+        ékezetek vagy speciális karakterek nélkül
+    socials:
+      label:
+        one: Közösségi
+        other: Közösségi
+      plateform: Platform
+      twitter:
+        label: Twitter/X
+        hint: Felhasználónév
+    sold:
+      label: Eladva/kiadva?
+    state:
+      label: Állapot
+      options:
+        danger: Veszély
+        dark: Sötét
+        info: Infó
+        light: Világos
+        primary: Elsődleges
+        secondary: Másodlagos
+        success: Siker
+        warning: Figyelmeztetés
+    status:
+      label: Státusz
+    submit:
+      label: Küldés gomb szövege
+    subtitle:
+      label: Alcím
+    suffix:
+      hint: 'pl.: %'
+      label: Utótag
+    summary:
+      label: Összefoglaló
+    surtitle:
+      label: Főcím
+    text:
+      label: Szöveg
+    title:
+      label: Cím
+    title_page:
+      hint:
+        Megjelenik a lapokon, a keresési eredményekben és az SMS/Üzenetek/Közösségi hálózatok előnézetében
+        előnézet
+      label: Oldalcím
+    transcription:
+      label: Átírás
+    url:
+      label: URL
+    value:
+      label: Érték
+    video:
+      label: 
+        one: Videó
+        other: Videók
+      mp4:
+        label: MP4
+        hint: MP4 videofájl
+        mobile:
+          label: MP4 (Mobil)
+          hint: MP4 videofájl mobilhoz
+      webm:
+        label: WEBM
+        hint: WEBM videofájl
+        mobile:
+          label: WEBM (Mobil)
+          hint: WEBM videofájl mobilhoz
+    website:
+      hint: URL (https://…)
+      label: Weboldal
+    weight:
+      label: Pozíció (fontosság)
+      hint: Tudva, hogy a 10 a legfontosabb és a 100 a legkevésbé fontos
+    year: Év
+    zoom:
+      label: Nagyítás
+  files:
+    banner: Információs banner az oldal tetején
+    footer: Információs szöveg az oldal alján
+    nav:
+      label: Navigáció
+      legal: Jogi navigáció (említések, irányelvek…)
+      primary: Elsődleges navigáció
+      secondary: Másodlagos navigáció
+      social: Közösségi navigáció
+    seo:
+      label: Globális SEO
+      title: Weboldal neve
+  group:
+    year: Év
+  shortcodes:
+    alert:
+      label: Figyelmeztetés
+    badge:
+      label: Jelvény
+    blank_link:
+      label: Üres link
+    blockquote:
+      label: Idézetblokk
+    button:
+      label: Gomb
+    details:
+      label: Részletek
+    figure:
+      label: Ábra
+    map:
+      label: Térkép
+    twitter:
+      _id: Twitter azonosító
+      label: Twitter / X
+      user: Twitter felhasználónév
+    youtube:
+      _id: Youtube azonosító
+      label: Youtube

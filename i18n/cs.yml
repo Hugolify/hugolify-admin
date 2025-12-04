@@ -1,0 +1,846 @@
+admin:
+  blocks:
+    alert:
+      label: Upozornění
+    audio:
+      label: Zvuk
+    chart:
+      label: Graf
+    comparison:
+      label: Porovnání
+    cta:
+      label: Výzva k akci
+    datas:
+      label: Data
+    editorial:
+      label: Redakční
+    embed:
+      label: Vložit
+    faq:
+      label: FAQ
+    figure:
+      label: Obrázek
+    form:
+      label: Formulář
+    gallery:
+      label: Galerie
+    images:
+      label: Obrázky
+    informations:
+      label: Informace
+    instagram:
+      label: Instagram
+    latest:
+      label: Nejnovější položky
+    location:
+      label: Poloha
+    logos:
+      label: Loga
+    map:
+      label: Mapa
+    newsletter:
+      label: Newsletter
+    paragraph:
+      label: Odstavec
+    pushes:
+      label: Oznámení
+    quote:
+      label: Citát
+    search:
+      label: Hledat
+    selected:
+      label: Výběr {{ .section }}
+    testimonials:
+      label: Reference
+    timeline:
+      label: Časová osa
+    title:
+      label: Titulek
+    video:
+      label: Video
+  collections:
+    authors:
+      label:
+        one: Autor
+        other: Autoři
+    casestudies:
+      _description: Všechny případové studie
+      label:
+        one: Případová studie
+        other: Případové studie
+    categories:
+      label:
+        one: Kategorie
+        other: Kategorie
+    config:
+      _description: Veškerá konfigurace
+      label:
+        one: Konfigurace
+        other: Konfigurace
+    docs:
+      _description: Všechny dokumenty
+      label:
+        one: Dokument
+        other: Dokumenty
+    events:
+      _description: Všechny události
+      label:
+        one: Událost
+        other: Události
+    events_categories:
+      _description: Všechny kategorie událostí
+      label:
+        one: Kategorie
+        other: Kategorie
+    expertises:
+      _description: Všechny odbornosti
+      label:
+        one: Odbornost
+        other: Odbornosti
+    home: Domů
+    indexes:
+      _description: Všechny indexové stránky
+      label:
+        one: Index
+        other: Indexy
+    jobs:
+      _description: Všechny pracovní nabídky
+      label:
+        one: Práce
+        other: Práce
+    jobs_categories:
+      _description: Všechny kategorie novinek
+      label:
+        one: Kategorie
+        other: Kategorie
+    jobs_expertises:
+      _description: Všechny odbornosti
+      label:
+        one: Odbornost
+        other: Odbornosti
+    jobs_places:
+      _description: Všechna místa
+      label:
+        one: Místo
+        other: Místa
+    jobs_tags:
+      _description: Všechny štítky produktů
+      label:
+        one: Štítek
+        other: Štítky
+    pages:
+      _description: Všechny stránky
+      label:
+        one: Stránka
+        other: Stránky
+    persons:
+      _description: Všechny osoby
+      label:
+        one: Osoba
+        other: Osoby
+    persons_expertises:
+      _description: Všechny odbornosti
+      label:
+        one: Odbornost
+        other: Odbornosti
+    persons_places:
+      _description: Všechna místa
+      label:
+        one: Místo
+        other: Místa
+    persons_statutes:
+      _description: Všechny statusy
+      label:
+        one: Status
+        other: Statusy
+    places:
+      _description: Všechna místa
+      label:
+        one: Místo
+        other: Místa
+    posts:
+      _description: Všechny novinky
+      label:
+        one: Novinka
+        other: Novinky
+    posts_categories:
+      _description: Všechny kategorie novinek
+      label:
+        one: Kategorie
+        other: Kategorie
+    posts_expertises:
+      _description: Všechny odbornosti
+      label:
+        one: Odbornost
+        other: Odbornosti
+    posts_tags:
+      _description: Všechny štítky novinek
+      label:
+        one: Štítek
+        other: Štítky
+    products:
+      _description: Všechny produkty
+      label:
+        one: Produkt
+        other: Produkty
+    products_categories:
+      _description: Všechny kategorie produktů
+      label:
+        one: Kategorie
+        other: Kategorie
+    products_tags:
+      _description: Všechny štítky produktů
+      label:
+        one: Štítek
+        other: Štítky
+    projects:
+      _description: Všechny projekty
+      label:
+        one: Projekt
+        other: Projekty
+    projects_tags:
+      _description: Všechny štítky projektů
+      label:
+        one: Štítek
+        other: Štítky
+    projects_types:
+      _description: Všechny typy projektů
+      label:
+        one: Typ
+        other: Typy
+    publications:
+      _description: Všechny publikace
+      label:
+        one: Publikace
+        other: Publikace
+    publications_categories:
+      _description: Všechny kategorie publikací
+      label:
+        one: Kategorie
+        other: Kategorie
+    publications_expertises:
+      _description: Všechny odbornosti
+      label:
+        one: Odbornost
+        other: Odbornosti
+    publications_persons:
+      label:
+        one: Osoba
+        other: Osoby
+    realestates:
+      _description: Všechny nemovitosti
+      label:
+        one: Nemovitost
+        other: Nemovitosti
+    realestates_categories:
+      _description: Všechny kategorie nemovitostí
+      label:
+        one: Kategorie
+        other: Kategorie
+    realestates_persons:
+      _description: Všichni makléři
+      label:
+        one: Makléř
+        other: Makléři
+    realestates_sellers:
+      _description: Všichni prodejci
+      label:
+        one: Prodejce
+        other: Prodejci
+    services:
+      _description: Všechny služby
+      label:
+        one: Služba
+        other: Služby
+    services_categories:
+      _description: Všechny kategorie služeb
+      label:
+        one: Kategorie
+        other: Kategorie
+    tags:
+      _description: Všechny štítky
+      label:
+        one: Štítek
+        other: Štítky
+  fields:
+    address:
+      city:
+        label: Město
+      country:
+        label: Země
+      label: Adresa
+      street:
+        label: Ulice
+      zipcode:
+        label: PSČ
+    align:
+      label: Zarovnání
+      options:
+        center: Střed
+        end: Konec
+        start: Začátek
+    arguments:
+      label:
+        one: Argument
+        other: Argumenty
+    audio:
+      label:
+        one: Zvuk
+        other: Zvuky
+      mp3:
+        label: MP3
+        hint: Zvukový soubor MP3
+      ogg:
+        label: OGG
+        hint: Zvukový soubor OGG
+    author:
+      label: Autor
+    autoplay:
+      label: Automatické přehrávání
+    background:
+      label: S pozadím?
+    background_color:
+      label: Barva pozadí
+    badge:
+      hint: Zobrazit odznak
+      label: Odznak
+    blocks:
+      label:
+        one: Blok
+        other: Bloky
+    body:
+      label: Tělo
+    breakpoints:
+      hint: Velikost obrazovky
+      label:
+        one: Bod zlomu
+        other: Body zlomu
+      options:
+        desktop: Desktop
+        laptop: Laptop
+        mobile: Mobil
+        tablet: Tablet
+        wide_tablet: Široký tablet
+    carousel:
+      arrows:
+        label: Šipky
+      autoplay:
+        label: Automatické přehrávání
+      focus:
+        hint: Umístit aktivní snímek na střed?
+        label: Zaměření
+      gap:
+        hint: Mezera mezi snímky. Vyjádřeno v rem.
+        label: Mezera
+      hint: Pouze pro zobrazení karuselu
+      label: Konfigurace karuselu
+      padding:
+        hint: Odsazení vlevo/vpravo od karuselu. V hodnotě rem
+        label: Odsazení
+      pagination:
+        label: Stránkování
+      params:
+        label: Parametry
+      perpage:
+        hint: Počet snímků k zobrazení
+        label: Na stránku
+      responsive:
+        label: Responzivní
+      type:
+        label: Typ karuselu
+        options:
+          slide: Snímek
+          loop: Smyčka
+          fade: Prolnutí
+    chart:
+      label: Graf
+      data:
+        label: Data (kód)
+        hint: 'Dokumentace: https://www.chartjs.org/docs/'
+      type:
+        label: Typ grafu
+        options:
+          bar: Sloupcový
+          line: Čárový
+          pie: Koláčový
+          polarArea: Polární oblast
+          radar: Radarový
+    class:
+      label: Třída
+      hint: Přidat CSS třídu k této komponentě
+    code:
+      label: Kód
+    color:
+      label: Barva
+    column:
+      label: Sloupec
+    contact:
+      label:
+        one: Kontakt
+        other: Kontakty
+    controls:
+      label: Ovládací prvky
+    coordinates:
+      hint: 'Snadno najděte kontaktní údaje: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Zeměpisné souřadnice
+      lat:
+        label: Zeměpisná šířka
+      lng:
+        label: Zeměpisná délka
+    count:
+      hint: Položky k zobrazení
+      label: Počet
+    credit:
+      label: Kredit
+    cta:
+      label:
+        one: CTA
+        other: CTA
+    datas:
+      label:
+        one: Data
+        other: Data
+    date:
+      from: Od
+      label: Datum
+      sale: Datum prodeje
+      to: Do
+    description:
+      hint:
+        Zobrazeno na kartách, ve výsledcích vyhledávání a v náhledu SMS/Zpráv/Sociálních sítí
+        náhled
+      label: Popis
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Diagnostika energetické náročnosti (DPE)
+      ghg:
+        label: Co2
+        hint: Skleníkový plyn (GHG)
+      label: Diagnostika
+      in_progress: Probíhá?
+    direction:
+      label: Směr
+      options:
+        ltr: Text vlevo / obrázek vpravo
+        rtl: Obrázek vlevo / text vpravo
+    discount:
+      hint: 'Výše slevy, např.: 30%'
+      label: Sleva
+      pattern: Pouze hodnota (bez měny)
+    document:
+      label:
+        one: Dokument
+        other: Dokumenty
+    draft:
+      label: Koncept
+    email:
+      label: E-mail
+    embed:
+      label: Vložit
+    event:
+      label:
+        one: Událost
+        other: Události
+    fax:
+      label: Fax
+      hint: 'Mezinárodní formát, např.: +33 1 23 45 67 89'
+    featured_image:
+      hint: Zobrazeno ve výsledcích vyhledávání a v náhledu SMS/Zpráv/Sociálních sítí
+      label: Hlavní obrázek
+    fee:
+      label:
+        one: Poplatek
+        other: Poplatky
+    figure:
+      label: Obrázek
+    form:
+      autocomplete:
+        label: Automatické dokončování
+        options:
+          city: Město
+          country_name: Název země
+          email: E-mail
+          family_name: Příjmení
+          given_name: Křestní jméno
+          honorific_prefix: Titul
+          name: Jméno
+          organization: Organizace
+          postal_code: PSČ
+          state: Stát
+          street_address: Ulice
+          tel: Tel
+      full:
+        label: Pole na celou šířku?
+      hiddens:
+        label:
+          one: Skryté pole
+          other: Skrytá pole
+      items:
+        label:
+          one: Pole
+          other: Pole
+      label: Formulář
+      options:
+        hint: Pouze pro výběrová pole
+        label:
+          one: Možnost
+          other: Možnosti
+      type:
+        hint: Vyberte typ pole
+        email: E-mail
+        label: Typ
+        radio: Rádio
+        select: Výběr
+        tel: Telefon
+        text: Text
+        textarea: Textová oblast
+      value:
+        hint: Pouze pro zaškrtávací políčka a rádio pole
+        label: Hodnota
+    gallery:
+      label: Galerie
+    grid:
+      label: Mřížka
+      options:
+        container: Kontejner
+        full: Plný
+        large: Velký
+        medium: Střední
+        small: Malý
+    heading:
+      label: Nadpis
+    hero:
+      label: Hrdina
+    icon:
+      hint: Název ikony z https://icons.getbootstrap.com/
+      label: Ikona
+    id:
+      label: ID
+    image:
+      label: 
+        one: Obrázek
+        other: Obrázky
+      alt:
+        hint: Pro obrázek, který sděluje informace (nechte prázdné, pokud jde o dekorativní obrázek)
+        label: Alternativní text
+      filter:
+        hint: Nastavte Lineární pro obrázek nebo snímek obrazovky, nechte prázdné pro zachování výchozí konfigurace
+        label: Změnit kvalitu filtru?
+        options:
+          box: Jednoduchý a rychlý průměrovací filtr vhodný pro zmenšování (výchozí)
+          catmullrom: Ostrý kubický filtr, který je rychlejší než Lanczos filtr a poskytuje podobné výsledky
+          lanczos: Vysoce kvalitní převzorkovací filtr pro fotografické obrázky poskytující ostré výsledky
+          linear: Bilineární převzorkovací filtr, produkuje hladký výstup, rychlejší než kubické filtry
+      src:
+        hint: 'Změňte velikost a komprimujte obrázek před odesláním: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Obrázek
+    images:
+      label: 
+        one: Obrázek
+        other: Obrázky
+    is_background:
+      label: Je pozadí?
+    is_blank:
+      label: Je prázdný?
+    is_card:
+      hint: Přidá pozadí za text
+      label: Je karta?
+    is_darken:
+      label: Ztmavit?
+    is_exclusive:
+      label: Exkluzivní?
+    is_half:
+      label: Poloviční velikost?
+    is_highlighted:
+      label: Je zvýrazněno?
+    is_logo:
+      hint: Umístěno uprostřed a neoříznuto
+      label: Je logo?
+    is_open:
+      label: Otevřeno?
+    is_pinned:
+      label: Připnuto?
+    is_screenshot:
+      hint: Přidat falešný prohlížeč
+      label: Je snímek obrazovky?
+    items:
+      label:
+        one: Položka
+        other: Položky
+    keyfeatures:
+      hint: 'např.: Poloha, expozice…'
+      label:
+        one: klíčová vlastnost
+        other: Klíčové vlastnosti
+    label:
+      label: Štítek
+    lang:
+      hint: Zadejte kód jazyka (např. fr), pokud se liší od aktuálního jazyka stránky
+      label: Jazyk
+    layout:
+      label: Rozložení
+      options:
+        carousel: Karusel
+        grid: Mřížka
+        list: Seznam
+    legal:
+      label: Právní
+    legend:
+      label: Legenda
+    limit:
+      label: Limit
+    links:
+      label:
+        one: Odkaz
+        other: Odkazy
+    location:
+      label: Poloha
+    loop:
+      label: Smyčka
+    name:
+      label: Jméno
+    map:
+      label: Mapa
+    newsletter:
+      form:
+        label: Formulář
+    notes:
+      hint: 'Chcete-li propojit slovo v textu s poznámkou, přidejte za něj "[\*]". Poznámky a "[\*]" jsou propojeny podle jejich pořadí.'
+      label:
+        one: Poznámka
+        other: Poznámky
+    offer:
+      label:
+        one: Nabídka
+        other: Nabídky
+    offset:
+      label: Odsazení
+      options:
+        center: Střed
+        end: Konec
+        start: Začátek
+    parent:
+      label: Nadřazená stránka
+    pdf:
+      label: PDF
+      hint: 'Komprimujte PDF před odesláním: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Telefonní číslo
+      hint: 'Mezinárodní formát, např.: +33 1 23 45 67 89'
+    placeholder:
+      label: Zástupný text
+    poster:
+      label: Plakát
+      hint: Plakátový obrázek pro video
+    prefix:
+      label: Předpona
+    press:
+      label: Tisk
+    price:
+      hide: Skrýt cenu
+      hint: 'např.: 300000 (pro 300 000 Kč)'
+      label: Cena
+      sold: Prodejní cena
+    quote:
+      label: Citát
+    realestates_energies:
+      label:
+        one: Energie
+        other: Energie
+      heating:
+        label: Topení
+        options:
+          collective: Kolektivní
+          individual: Individuální
+      heating_type:
+        label: Typ topení
+        options:
+          reversible_ac: Reverzibilní klimatizace
+          electric: Elektrické
+          gas: Plyn
+          solar: Solární
+    realestates_informations:
+      area:
+        hint: Vyjádřeno v m2
+        label: Vnitřní plocha
+      bathrooms:
+        label: Počet koupelen
+      bedrooms:
+        label: Počet ložnic
+      district:
+        label: Čtvrť
+      exposure:
+        label: Expozice
+      field:
+        hint: Vyjádřeno v m2
+        label: Vnější plocha
+      floor:
+        label: Podlaží
+      has_balcony:
+        label: Balkon?
+      has_box:
+        label: Box?
+      has_cave:
+        label: Sklep?
+      has_elevator:
+        label: Výtah?
+      has_garage:
+        label: Garáž?
+      has_outbuilding:
+        label: Přístavba?
+      has_parking:
+        label: Parkování?
+      has_swimmingpool:
+        label: Bazén?
+      has_terrace:
+        label: Terasa?
+      label: Informace
+      levels:
+        label: Počet podlaží
+      rooms:
+        label: Počet pokojů
+      showerrooms:
+        label: Počet sprchových koutů
+      wc:
+        label: WC
+      year:
+        label: Rok výstavby
+    realestates_types:
+      label: Typ transakce
+      options:
+        rent: Pronájem
+        sale: Prodej
+    reference:
+      label: Reference
+    rent:
+      label: Pronájem?
+    required:
+      label: Povinné
+    section:
+      hint: Vyberte sekci k zobrazení
+      label: Sekce
+    show_more:
+      hint: Zobrazí tlačítko pro zobrazení více položek
+      label: Zobrazit více?
+    show_places:
+      hint: Pouze pokud již máte uložená místa (toto deaktivuje značku níže)
+      label: Zobrazit všechna registrovaná místa?
+    slug:
+      hint: Nechte prázdné pro automatizaci s titulkem. **Pozor na dopad na SEO.**
+      label: Slug
+      pattern:
+        Obsahuje pouze malá písmena, čísla a pomlčky, bez mezer,
+        diakritiky nebo speciálních znaků
+    socials:
+      label:
+        one: Sociální
+        other: Sociální
+      plateform: Platforma
+      twitter:
+        label: Twitter/X
+        hint: Uživatelské jméno
+    sold:
+      label: Prodáno/pronajato?
+    state:
+      label: Stav
+      options:
+        danger: Nebezpečí
+        dark: Tmavý
+        info: Info
+        light: Světlý
+        primary: Primární
+        secondary: Sekundární
+        success: Úspěch
+        warning: Varování
+    status:
+      label: Status
+    submit:
+      label: Text tlačítka Odeslat
+    subtitle:
+      label: Podtitul
+    suffix:
+      hint: 'např.: %'
+      label: Přípona
+    summary:
+      label: Shrnutí
+    surtitle:
+      label: Nadnadpis
+    text:
+      label: Text
+    title:
+      label: Titulek
+    title_page:
+      hint:
+        Zobrazeno na kartách, ve výsledcích vyhledávání a v náhledu SMS/Zpráv/Sociálních sítí
+        náhled
+      label: Titulek stránky
+    transcription:
+      label: Přepis
+    url:
+      label: URL
+    value:
+      label: Hodnota
+    video:
+      label: 
+        one: Video
+        other: Videa
+      mp4:
+        label: MP4
+        hint: Video soubor MP4
+        mobile:
+          label: MP4 (Mobil)
+          hint: Video soubor MP4 pro mobil
+      webm:
+        label: WEBM
+        hint: Video soubor WEBM
+        mobile:
+          label: WEBM (Mobil)
+          hint: Video soubor WEBM pro mobil
+    website:
+      hint: URL (https://…)
+      label: Webová stránka
+    weight:
+      label: Pozice (důležitost)
+      hint: Vědět, že 10 je nejdůležitější a 100 nejméně důležité
+    year: Rok
+    zoom:
+      label: Zoom
+  files:
+    banner: Informační banner v horní části webu
+    footer: Informační text v dolní části webu
+    nav:
+      label: Navigace
+      legal: Právní navigace (zmínky, zásady…)
+      primary: Primární navigace
+      secondary: Sekundární navigace
+      social: Sociální navigace
+    seo:
+      label: Globální SEO
+      title: Název webové stránky
+  group:
+    year: Rok
+  shortcodes:
+    alert:
+      label: Upozornění
+    badge:
+      label: Odznak
+    blank_link:
+      label: Prázdný odkaz
+    blockquote:
+      label: Bloková citace
+    button:
+      label: Tlačítko
+    details:
+      label: Podrobnosti
+    figure:
+      label: Obrázek
+    map:
+      label: Mapa
+    twitter:
+      _id: Twitter ID
+      label: Twitter / X
+      user: Uživatelské jméno Twitter
+    youtube:
+      _id: Youtube ID
+      label: Youtube
