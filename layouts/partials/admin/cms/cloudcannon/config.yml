@@ -2,8 +2,8 @@
 
 {{/* Config */}}
 paths:
-  static: assets
-  uploads: {{ site.Params.admin.media.media_folder | default "assets/images/uploads" }}
+  static: /assets
+  uploads: {{ site.Params.admin.media.media_folder | default "/assets/images/uploads" }}
 
 {{/* Snippets */}}
 _snippets_imports:
