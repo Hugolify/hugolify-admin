@@ -1,0 +1,12 @@
+match: {
+  {{- if ne . "pages" }}
+    exclude: '_index',
+  {{- else }}
+    include: '**/_index',
+    exclude: '{
+      {{- range $k, $v := site.Params.admin.collections -}}
+        {{ $k }}/*/_index,
+      {{- end -}}
+    }',
+  {{- end }}
+},

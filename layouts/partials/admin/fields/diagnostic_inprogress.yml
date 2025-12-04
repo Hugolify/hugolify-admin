@@ -1,0 +1,12 @@
+{{- $name := dict "name" "in_progress" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "diagnostic_inprogress" "nameOverride" "in_progress" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.diagnostic.in_progress")
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/boolean.js" $args }}

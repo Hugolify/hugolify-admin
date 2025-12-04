@@ -3,8 +3,8 @@ index_file: {
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   {{ if eq . "pages" }}
   label: {{ i18n "admin.collections.home" }},
-  {{ partial "admin/collections/fields.yml" (dict "collection" "pages") }}
+  {{ partial "admin/collections/config/fields.yml" (dict "collection" "pages") }}
   {{ else }}
-  {{ partial "admin/collections/fields.yml" (dict "collection" "indexes") }}
+  {{ partial "admin/collections/config/fields.yml" (dict "collection" "indexes") }}
   {{ end }}
 },

@@ -25,7 +25,9 @@ admin:
     gallery:
       label: Galleria
     images:
-      label: Kuvat
+      label:
+        one: Kuva
+        other: Kuvat
     informations:
       label: Tiedot
     instagram:
@@ -286,8 +288,10 @@ admin:
     audio:
       label: Ääni
       mp3:
+        label: MP3
         hint: Ääni (MP3)
       ogg:
+        label: OGG
         hint: Ääni (OGG)
     author:
       label: Tekijä
@@ -344,6 +348,10 @@ admin:
         label: Responsiivinen
       type:
         label: Kuvakarusellin tyyppi
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       data:
         hint: 'Documentaatio: https://www.chartjs.org/docs/'
@@ -507,6 +515,8 @@ admin:
     icon:
       hint: Kuvakkeen nimi osoitteesta https://icons.getbootstrap.com/
       label: Kuvake
+    id:
+      label: ID
     image:
       alt:
         hint: Tietoa välittävän kuvan osalta (jätä tyhjäksi, jos kyseessä on koristeellinen kuva).
@@ -592,7 +602,7 @@ admin:
       form:
         label: Lomake
     notes:
-      hint: 'To link a word in the text to a note, suffix it with "[*]". Notes and "[\\*]" are linked by their order.'
+      hint: 'To link a word in the text to a note, suffix it with "[\*]". Notes and "[\*]" are linked by their order.'
       label:
         one: Note
         other: Notes
@@ -776,15 +786,17 @@ admin:
         one: Video
         other: Videos
       mp4:
+        label: MP4
         hint: Video (MP4)
         mobile:
-          label: Mobile MP4
-          hint: Video (MP4)
+          label: MP4 (Mobile)
+          hint: MP4 video for mobile
       webm:
+        label: WEBM
         hint: Video (WEBM)
         mobile:
-          label: Mobile WEBM
-          hint: Video (WEBM)
+          label: WEBM (Mobile)
+          hint: WEBM video for mobile
     website:
       hint: URL (https://…)
       label: Verkkosivu

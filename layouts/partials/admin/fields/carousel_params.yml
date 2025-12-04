@@ -1,71 +1,24 @@
+{{- $name := dict "name" "params" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "carousel_params" "nameOverride" "params" }}
+{{- end }}
 
-{
-  label: '{{ i18n "admin.fields.carousel.params.label" }}',
-  name: 'params',
-  widget: 'object',
-  required: false,
-  i18n: true,
-  collapsed: false,
-  fields: [
-    {
-      label: '{{ i18n "admin.fields.carousel.focus.label" }}',
-      hint: '{{ i18n "admin.fields.carousel.focus.hint" }}',
-      name: 'focus',
-      widget: 'boolean',
-      required: false,
-      i18n: 'duplicate'
-    },
-    {
-      label: '{{ i18n "admin.fields.carousel.autoplay.label" }}',
-      name: 'autoplay',
-      widget: 'boolean',
-      default: true,
-      required: false,
-      i18n: 'duplicate'
-    },
-    {
-      label: '{{ i18n "admin.fields.carousel.arrows.label" }}',
-      name: 'arrows',
-      widget: 'boolean',
-      default: true,
-      required: false,
-      i18n: 'duplicate'
-    },
-    {
-      label: '{{ i18n "admin.fields.carousel.pagination.label" }}',
-      name: 'pagination',
-      widget: 'boolean',
-      default: false,
-      required: false,
-      i18n: 'duplicate'
-    },
-    {{- partial "admin/fields/select.yml" (dict "field" "type" "i18n" "carousel.type" "options" (slice "slide" "loop" "fade")) }},
-    {
-      label: '{{ i18n "admin.fields.carousel.perpage.label" }}',
-      hint: '{{ i18n "admin.fields.carousel.perpage.hint" }}',
-      name: 'perPage',
-      widget: 'number',
-      min: 1,
-      required: false,
-      i18n: 'duplicate'
-    },
-    {
-      label: '{{ i18n "admin.fields.carousel.padding.label" }}',
-      hint: '{{ i18n "admin.fields.carousel.padding.hint" }}',
-      name: 'padding',
-      widget: 'number',
-      min: 0,
-      required: false,
-      i18n: 'duplicate'
-    },
-    {
-      label: '{{ i18n "admin.fields.carousel.gap.label" }}',
-      hint: '{{ i18n "admin.fields.carousel.gap.hint" }}',
-      name: 'gap',
-      widget: 'number',
-      min: 0,
-      required: false,
-      i18n: 'duplicate'
-    }
-  ]
-}
+{{- $fields := slice 
+  "carousel_focus" 
+  "carousel_autoplay" 
+  "carousel_arrows" 
+  "carousel_pagination" 
+  "carousel_type" 
+  "carousel_perpage" 
+  "carousel_padding" 
+  "carousel_gap" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.carousel.params.label")
+  "fields" $fields
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/object.js" $args }}

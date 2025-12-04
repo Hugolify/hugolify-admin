@@ -1,38 +1,13 @@
-{
-  label: '{{ i18n "admin.fields.diagnostic.label" }}',
-  name: 'diagnostic',
-  widget: 'object',
-  required: false,
-  i18n: true,
-  collapsed: true,
-  fields:
-    [
-      {
-        label: '{{ i18n "admin.fields.diagnostic.epd.label" }}',
-        hint: '{{ i18n "admin.fields.diagnostic.epd.hint" }}',
-        name: 'kwh',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        value_type: 'float',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.diagnostic.ghg.label" }}',
-        hint: '{{ i18n "admin.fields.diagnostic.ghg.hint" }}',
-        name: 'co2',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        value_type: 'float',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.diagnostic.in_progress" }}',
-        name: 'in_progress',
-        widget: 'boolean',
-        required: false,
-        i18n: 'duplicate'
-      }
-    ]
-}
+{{- $fields := slice 
+  "diagnostic_epd" 
+  "diagnostic_ghg" 
+  "diagnostic_inprogress" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.diagnostic.label")
+  "name" "diagnostic"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

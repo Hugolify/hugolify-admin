@@ -1,0 +1,30 @@
+{{- if . }}
+  {{- range . }}
+    {{- $f := partial "admin/func/GetFieldNameValues.html" . }}
+    {{- with $f.field }}
+      {{- $file := print "admin/fields/" . ".yml" }}
+      {{- if templates.Exists ( printf "partials/%s" $file ) }}
+        {{- if or (ne . "id") (and (eq site.Params.admin.config.id true) (eq . "id")) }}
+          {{- $context := cond (not $f.values) $f.field $f.values }}
+          {{- $r := partial $file $context }}
+          {{/* Specific to Cloudcannon */}}
+          {{- if eq site.Params.admin.cms "cloudcannon" }}
+            {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $r) }}
+            {{- range $k, $v := $datas }}
+              {{- $newV := dict }}
+              {{- range $sk, $sv := $v }}
+                {{- if ne $sk "fields" }}
+                  {{- $newV = merge $newV (dict $sk $sv) }}
+                {{- end }}
+              {{- end }}
+              "{{ $k }}": {{ $newV | jsonify }},
+            {{- end }}
+          {{/* Others */}}
+          {{- else }}
+            {{ $r }},
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}

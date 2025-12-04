@@ -288,9 +288,11 @@ admin:
         one: Audio
         other: Audios
       mp3:
-        hint: Audio (MP3)
+        label: MP3
+        hint: MP3 audio file
       ogg:
-        hint: Audio (OGG)
+        label: OGG
+        hint: OGG audio file
     author:
       label: Author
     autoplay:
@@ -346,6 +348,10 @@ admin:
         label: Responsive
       type:
         label: Carousel type
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       label: Chart
       data:
@@ -509,6 +515,8 @@ admin:
     icon:
       hint: Icon name from https://icons.getbootstrap.com/
       label: Icon
+    id:
+      label: ID
     image:
       label: 
         one: Image
@@ -528,7 +536,9 @@ admin:
         hint: 'Resize and compress image before sending : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image
     images:
-      label: Images
+      label: 
+        one: Image
+        other: Images
     is_background:
       label: Is background?
     is_blank:
@@ -596,7 +606,7 @@ admin:
       form:
         label: Form
     notes:
-      hint: 'To link a word in the text to a note, suffix it with "[*]". Notes and "[\\*]" are linked by their order.'
+      hint: 'To link a word in the text to a note, suffix it with "[\*]". Notes and "[\*]" are linked by their order.'
       label:
         one: Note
         other: Notes
@@ -617,7 +627,7 @@ admin:
       hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telephone Number
-      hint: 'Format international, ex: +33 1 23 45 67 89'
+      hint: 'International format, e.g: +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     poster:
@@ -776,15 +786,17 @@ admin:
         one: Video
         other: Videos
       mp4:
-        hint: Video (MP4)
+        label: MP4
+        hint: MP4 video file
         mobile:
-          label: Mobile MP4
-          hint: Video (MP4)
+          label: MP4 (Mobile)
+          hint: MP4 video file for mobile
       webm:
-        hint: Video (WEBM)
+        label: WEBM
+        hint: WEBM video file
         mobile:
-          label: Mobile WEBM
-          hint: Video (WEBM)
+          label: WEBM (Mobile)
+          hint: WEBM video file for mobile
     website:
       hint: URL (https://…)
       label: Website

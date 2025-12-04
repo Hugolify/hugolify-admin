@@ -1,0 +1,3 @@
+{{- $create := (index site.Params.admin.collections .).create | default true }}
+disable_add: {{ cond $create false true }}, 
+disable_add_folder: true,

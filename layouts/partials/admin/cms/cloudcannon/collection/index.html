@@ -1,0 +1,53 @@
+collections_config: {
+  {{- range $collection, $value := site.Params.admin.collections }}
+    {{- if .enable }}
+
+      {{/* Get arguments */}}
+      {{ $file := print "admin/collections/types/" $collection ".yml" }}
+      {{ if templates.Exists ( printf "partials/%s" $file ) }}
+        {{ $file = partial $file $collection }}
+      {{ else }}
+        {{ $file = partial "admin/collections/types/_placeholder.yml" $collection }}
+      {{ end }}
+
+      {{/* Convert to map */}}
+      {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
+      {{ $fields := $datas._inputs }}
+      
+      {{/* Card preview */}}
+      {{ $cardPreview := partial "admin/cms/cloudcannon/collection/config/card_preview.yml" $collection }}
+
+      {{/* Modify arguments */}}
+      {{ $newDatas := newScratch }}
+      {{ $newDatas.Set "datas" $datas }}
+      {{ $newDatas.DeleteInMap "datas" "name" }}
+      {{ $newDatas.SetInMap "datas" "path" $datas.folder }}
+      {{ $newDatas.DeleteInMap "datas" "folder" }}
+      {{ $newDatas.SetInMap "datas" "name" $datas.label }}
+      {{ $newDatas.DeleteInMap "datas" "label" }}
+      {{ $newDatas.SetInMap "datas" "singular_name" $datas.label_singular }}
+      {{ $newDatas.DeleteInMap "datas" "label_singular" }}
+      {{ $newDatas.SetInMap "datas" "comment" $datas.description }}
+      {{ $newDatas.DeleteInMap "datas" "description" }}
+      {{ $newDatas.DeleteInMap "datas" "i18n" }}
+      {{ $newDatas.DeleteInMap "datas" "_inputs" }}
+      {{ $newDatas.SetInMap "datas" "preview" $cardPreview }}
+      {{ $datas = $newDatas.Values.datas }}
+
+      {{/* Add arguments */}}
+      {{ $archetype := print "archetypes/" $collection ".md" }}
+      {{ $args := dict "path" $archetype "reorder_inputs" false "remove_empty_inputs" true }}
+      {{ $datas = merge $datas (dict "schemas" (dict "default" $args)) }}
+
+      {{/* Set enabled editors */}}
+      {{ $enabled_editors := slice "data" }}
+      {{ if index $fields "body" }}
+        {{ $enabled_editors = $enabled_editors | append "content" }}
+      {{ end }}
+      {{ $datas = merge $datas (dict "_enabled_editors" $enabled_editors) }}
+
+      {{ $collection }}: {{ $datas | jsonify }},
+
+    {{- end }}
+  {{- end }}
+}

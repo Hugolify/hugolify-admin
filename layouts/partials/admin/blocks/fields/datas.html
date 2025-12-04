@@ -1,0 +1,13 @@
+{{- $subfields := slice "prefix" "value_number" "suffix" "limit" "title" "text" -}} 
+{{- $items := dict "items" (dict "name" "datas" "fields" $subfields) -}} 
+{{- $fields := slice 
+  "heading" 
+  "column" 
+  "show_gauge" 
+  "show_color" 
+  $items 
+  "background" -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
+
+{{- return $fields -}}

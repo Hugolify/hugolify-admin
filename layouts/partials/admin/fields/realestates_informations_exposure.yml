@@ -1,0 +1,13 @@
+{{- $name := dict "name" "exposure" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "realestates_informations_exposure" "nameOverride" "exposure" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_informations.exposure.label")
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/string.js" $args }}
+

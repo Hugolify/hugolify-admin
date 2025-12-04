@@ -1,16 +1,14 @@
 {
-  name: expertises,
-  folder: content/expertises,
+  name: 'expertises',
+  folder: 'content/expertises',
   label: '{{ i18n "admin.collections.expertises.label" }}',
   label_singular: '{{ i18n "admin.collections.expertises.label" 1 }}',
   description: '{{ i18n "admin.collections.expertises._description" }}',
-  
-  create: {{ site.Params.admin.collections.expertises.create | default true }},
-  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
-
-  path: '{{`{{slug}}`}}',
-  {{ partial "admin/collections/config/slug.yml" }}
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
+  {{ partial "admin/collections/config/path.yml" "{{slug}}" }}
+  {{ partial "admin/collections/config/slug.yml" . }}
 
   {{ partial "admin/collections/types/_default.yml" . }}
 }

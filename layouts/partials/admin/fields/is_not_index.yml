@@ -1,8 +1,15 @@
-{
-  label: 'is not index',
-  name: 'isIndex',
-  widget: 'hidden',
-  default: false,
-  required: false,
-  i18n: false 
-}
+
+{{- $name := dict "name" "isIndex" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_not_index" "nameOverride" "isIndex" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" "is not index"
+  "default" false
+  "hidden" true
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

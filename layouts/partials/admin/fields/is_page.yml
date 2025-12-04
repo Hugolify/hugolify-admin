@@ -1,8 +1,15 @@
-{
-  label: 'is page',
-  name: 'isPage',
-  widget: 'hidden',
-  default: true,
-  required: false,
-  i18n: 'duplicate'
-}
+
+{{- $name := dict "name" "isPage" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_page" "nameOverride" "isPage" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" "is page"
+  "default" true
+  "hidden" true
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

@@ -1,8 +1,14 @@
-{
-  label: '{{ i18n "admin.fields.form.value.label" }}',
-  hint: '{{ i18n "admin.fields.form.value.hint" }}',
-  name: 'value',
-  widget: 'string',
-  required: false,
-  i18n: true
-}
+{{- $name := dict "name" "value" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "form_value" "nameOverride" "value" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.form.value.label")
+  "label_options" "admin.fields.form.value.options"
+  "hint" (i18n "admin.fields.form.value.hint")
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/string.js" $args }}

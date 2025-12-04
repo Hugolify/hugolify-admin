@@ -25,7 +25,9 @@ admin:
     gallery:
       label: Galerie
     images:
-      label: Images
+      label: 
+        one: Image
+        other: Images
     informations:
       label: Informations
     instagram:
@@ -288,8 +290,10 @@ admin:
         one: Audio
         other: Audios
       mp3:
+        label: MP3
         hint: Audio en format MP3
       ogg:
+        label: OGG
         hint: Audio en format OGG
     author:
       label: Auteur
@@ -346,6 +350,10 @@ admin:
         label: Responsive
       type:
         label: Type de carrousel
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
     chart:
       label: Chart
       data:
@@ -509,6 +517,8 @@ admin:
     icon:
       hint: Nom de l’icon provenant de https://icons.getbootstrap.com/
       label: Icone
+    id:
+      label: ID
     image:
       label: 
         one: Image
@@ -596,7 +606,7 @@ admin:
       form:
         label: Formulaire
     notes:
-      hint: 'Pour lier un mot du texte à une note, suffixez le avec "[\\*]". Les notes et les "[\\*]" sont liés par leur ordre.'
+      hint: 'Pour lier un mot du texte à une note, suffixez le avec "[\*]". Les notes et les "[\*]" sont liés par leur ordre.'
       label:
         one: Note
         other: Notes
@@ -761,9 +771,7 @@ admin:
     title:
       label: Titre
     title_page:
-      hint:
-        Displayed in tabs, search results, and in SMS/Messages/Social networks
-        preview
+      hint: Visible dans les onglets, les résultats de recherche, et dans l’aperçu des SMS/Messages/Réseaux sociaux
       label: Titre de la page
     transcription:
       label: Transcription
@@ -776,15 +784,17 @@ admin:
         one: Vidéo
         other: Vidéos
       mp4:
-        hint: Vidéo en format MP4
+        label: MP4
+        hint: Vidéo au format MP4
         mobile:
-          label: Mobile MP4
-          hint: Vidéo en format MP4
+          label: MP4 (Mobile)
+          hint: Vidéo au format MP4 pour mobile seulement
       webm:
-        hint: Vidéo en format WEBM
+        label: WEBM
+        hint: Vidéo au format WEBM
         mobile:
-          label: Mobile WEBM
-          hint: Vidéo en format WEBM
+          label: WEBM (Mobile)
+          hint: Vidéo au format WEBM pour mobile seulement
     website:
       hint: URL (https://…)
       label: Site Web

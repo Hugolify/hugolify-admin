@@ -1,16 +1,9 @@
-{
-  label: 'MP3',
-  hint: '{{ i18n "admin.fields.audio.mp3.hint" }}',
-  name: 'mp3',
-  widget: 'file',
-  required: false,
-  i18n: 'duplicate',
-  choose_url: true,
-  media_library: {
-    config: {
-      max_file_size: {{site.Params.admin.media.audio_max_file_size}}
-    }
-  },
-  media_folder: '/static/assets/audios',
-  public_folder: '/assets/audios'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.audio.mp3.label")
+  "hint" (i18n "admin.fields.audio.mp3.hint")
+  "extensions" "mp3"
+  "name" "mp3"
+  "type" "audio"
+  -}}
+
+{{ partial "admin/widgets/file.js" $args }}

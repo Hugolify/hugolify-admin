@@ -1,8 +1,13 @@
-{
-  label: '{{ i18n "admin.fields.is_logo.label" }}',
-  hint: '{{ i18n "admin.fields.is_logo.hint" }}',
-  name: 'isLogo',
-  widget: 'boolean',
-  required: false,
-  i18n: 'duplicate' 
-}
+{{- $name := dict "name" "isLogo" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_logo" "nameOverride" "isLogo" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_logo.label")
+  "hint" (i18n "admin.fields.is_logo.hint")
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

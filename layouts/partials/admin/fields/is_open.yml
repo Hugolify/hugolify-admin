@@ -1,7 +1,12 @@
-{
-  label: '{{ i18n "admin.fields.is_open.label" }}',
-  name: 'open',
-  widget: 'boolean',
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $name := dict "name" "open" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_open" "nameOverride" "open" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_open.label")
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

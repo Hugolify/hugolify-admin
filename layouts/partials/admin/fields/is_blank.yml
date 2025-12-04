@@ -1,7 +1,12 @@
-{
-  label: '{{ i18n "admin.fields.is_blank.label" }}',
-  name: 'blank',
-  widget: 'boolean',
-  required: false,
-  i18n: true
-}
+{{- $name := dict "name" "blank" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_blank" "nameOverride" "blank" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_blank.label")
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/boolean.js" $args }}

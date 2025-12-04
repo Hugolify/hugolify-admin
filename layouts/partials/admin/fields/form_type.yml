@@ -1,1 +1,18 @@
-{{- partial "admin/fields/select.yml" (dict "field" "type" "i18n" "form.type" "options" (slice "email" "checkbox" "radio" "select" "tel" "text" "textarea") "default" "text") }}
+{{- $name := dict "name" "type" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "form_type" "nameOverride" "type" }}
+{{- end }}
+
+{{- $options := slice "email" "checkbox" "radio" "select" "tel" "text" "textarea" -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.form.type.label")
+  "label_options" "admin.fields.form.type.options"
+  "default" "text"
+  "required" true
+  "options" $options
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/select.js" $args }}

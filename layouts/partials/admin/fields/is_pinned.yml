@@ -1,8 +1,13 @@
-{
-  label: '{{ i18n "admin.fields.is_pinned.label" }}',
-  hint: '{{ i18n "admin.fields.is_pinned.hint" }}',
-  name: 'weight',
-  widget: 'boolean',
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $name := dict "name" "weight" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_pinned" "nameOverride" "weight" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_pinned.label")
+  "hint" (i18n "admin.fields.is_pinned.hint")
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

@@ -1,0 +1,12 @@
+{{- $fields := partial "admin/func/GetFields.html" (dict "block" .) -}}
+{{- $label := . | humanize }}
+{{- $name := . }}
+
+{{- $args := dict 
+  "label" $label
+  "name" $name
+  "collapsed" false
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

@@ -1,0 +1,15 @@
+{{- $name := dict "name" "floor" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "realestates_informations_floor" "nameOverride" "floor" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_informations.floor.label")
+  "i18n" "duplicate"
+  "step" 1
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/number.js" $args }}
+

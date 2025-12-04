@@ -1,11 +1,10 @@
-{
-  label: '{{ i18n "admin.fields.credit.label" }}',
-  name: 'credit',
-  widget: 'markdown',
-  minimal: true,
-  buttons: ['link'],
-  editor_components: [],
-  modes: ['rich_text'],
-  required: false,
-  i18n: true 
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.credit.label")
+  "name" "credit"
+  "minimal" true
+  "buttons" "['link']"
+  "editor_components" "[]"
+  "modes" "['rich_text']"
+  -}}
+
+{{ partial "admin/widgets/markdown.js" $args }}

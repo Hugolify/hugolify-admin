@@ -1,0 +1,10 @@
+{{- $fields := partial "admin/blocks/fields/search.html" . -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.blocks.search.label")
+  "name" "search"
+  "collapsed" false
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

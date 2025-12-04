@@ -1,8 +1,7 @@
-{
-  label: '{{ i18n "admin.fields.status.label" }}',
-  hint: '{{ i18n "admin.fields.status.hint" }}',
-  name: 'status',
-  widget: 'string',
-  required: false,
-  i18n: true
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.status.label")
+  "hint" (i18n "admin.fields.status.hint")
+  "name" "status"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

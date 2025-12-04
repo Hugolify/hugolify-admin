@@ -1,1 +1,17 @@
-{{- partial "admin/fields/select.yml" (dict "field" "filter" "i18n" "image.filter" "options" (slice "Box" "Lanczos" "CatmullRom" "Linear")) }}
+{{- $name := dict "name" "filter" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "image_filter" "nameOverride" "filter" }}
+{{- end }}
+
+{{- $options := slice "Box" "Lanczos" "CatmullRom" "Linear" -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.image.filter.label")
+  "label_options" "admin.fields.image.filter.options"
+  "hint" (i18n "admin.fields.image.filter.hint")
+  "options" $options
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/select.js" $args }}

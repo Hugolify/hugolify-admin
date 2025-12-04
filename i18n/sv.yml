@@ -1,0 +1,846 @@
+admin:
+  blocks:
+    alert:
+      label: Varning
+    audio:
+      label: Ljud
+    chart:
+      label: Diagram
+    comparison:
+      label: Jämförelse
+    cta:
+      label: Uppmaning till handling
+    datas:
+      label: Data
+    editorial:
+      label: Redaktionellt
+    embed:
+      label: Bädda in
+    faq:
+      label: FAQ
+    figure:
+      label: Figur
+    form:
+      label: Formulär
+    gallery:
+      label: Galleri
+    images:
+      label: Bilder
+    informations:
+      label: Information
+    instagram:
+      label: Instagram
+    latest:
+      label: Senaste objekt
+    location:
+      label: Plats
+    logos:
+      label: Logotyper
+    map:
+      label: Karta
+    newsletter:
+      label: Nyhetsbrev
+    paragraph:
+      label: Stycke
+    pushes:
+      label: Push-notiser
+    quote:
+      label: Citat
+    search:
+      label: Sök
+    selected:
+      label: Urval {{ .section }}
+    testimonials:
+      label: Vittnesmål
+    timeline:
+      label: Tidslinje
+    title:
+      label: Titel
+    video:
+      label: Video
+  collections:
+    authors:
+      label:
+        one: Författare
+        other: Författare
+    casestudies:
+      _description: Alla fallstudier
+      label:
+        one: Fallstudie
+        other: Fallstudier
+    categories:
+      label:
+        one: Kategori
+        other: Kategorier
+    config:
+      _description: All konfiguration
+      label:
+        one: Konfig
+        other: Konfig
+    docs:
+      _description: Alla dokument
+      label:
+        one: Dok
+        other: Dok
+    events:
+      _description: Alla evenemang
+      label:
+        one: Evenemang
+        other: Evenemang
+    events_categories:
+      _description: Alla evenemangskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    expertises:
+      _description: Alla expertiser
+      label:
+        one: Expertis
+        other: Expertiser
+    home: Hem
+    indexes:
+      _description: Alla indexsidor
+      label:
+        one: Index
+        other: Index
+    jobs:
+      _description: Alla jobb
+      label:
+        one: Jobb
+        other: Jobb
+    jobs_categories:
+      _description: Alla nyhetskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    jobs_expertises:
+      _description: Alla expertiser
+      label:
+        one: Expertis
+        other: Expertiser
+    jobs_places:
+      _description: Alla platser
+      label:
+        one: Plats
+        other: Platser
+    jobs_tags:
+      _description: Alla produkttaggar
+      label:
+        one: Tagg
+        other: Taggar
+    pages:
+      _description: Alla sidor
+      label:
+        one: Sida
+        other: Sidor
+    persons:
+      _description: Alla personer
+      label:
+        one: Person
+        other: Personer
+    persons_expertises:
+      _description: Alla expertiser
+      label:
+        one: Expertis
+        other: Expertiser
+    persons_places:
+      _description: Alla platser
+      label:
+        one: Plats
+        other: Platser
+    persons_statutes:
+      _description: Alla stadgar
+      label:
+        one: Status
+        other: Stadgar
+    places:
+      _description: Alla platser
+      label:
+        one: Plats
+        other: Platser
+    posts:
+      _description: Alla nyheter
+      label:
+        one: Nyhet
+        other: Nyheter
+    posts_categories:
+      _description: Alla nyhetskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    posts_expertises:
+      _description: Alla expertiser
+      label:
+        one: Expertis
+        other: Expertiser
+    posts_tags:
+      _description: Alla nyhetstaggar
+      label:
+        one: Tagg
+        other: Taggar
+    products:
+      _description: Alla produkter
+      label:
+        one: Produkt
+        other: Produkter
+    products_categories:
+      _description: Alla produktkategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    products_tags:
+      _description: Alla produkttaggar
+      label:
+        one: Tagg
+        other: Taggar
+    projects:
+      _description: Alla projekt
+      label:
+        one: Projekt
+        other: Projekt
+    projects_tags:
+      _description: Alla projekttaggar
+      label:
+        one: Tagg
+        other: Taggar
+    projects_types:
+      _description: Alla projekttyper
+      label:
+        one: Typ
+        other: Typer
+    publications:
+      _description: Alla publikationer
+      label:
+        one: Publikation
+        other: Publikationer
+    publications_categories:
+      _description: Alla publikationskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    publications_expertises:
+      _description: Alla expertiser
+      label:
+        one: Expertis
+        other: Expertiser
+    publications_persons:
+      label:
+        one: Person
+        other: Personer
+    realestates:
+      _description: Alla fastigheter
+      label:
+        one: Fastighet
+        other: Fastigheter
+    realestates_categories:
+      _description: Alla fastighetskategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    realestates_persons:
+      _description: Alla mäklare
+      label:
+        one: Mäklare
+        other: Mäklare
+    realestates_sellers:
+      _description: Alla säljare
+      label:
+        one: Säljare
+        other: Säljare
+    services:
+      _description: Alla tjänster
+      label:
+        one: Tjänst
+        other: Tjänster
+    services_categories:
+      _description: Alla tjänstekategorier
+      label:
+        one: Kategori
+        other: Kategorier
+    tags:
+      _description: Alla taggar
+      label:
+        one: Tagg
+        other: Taggar
+  fields:
+    address:
+      city:
+        label: Stad
+      country:
+        label: Land
+      label: Adress
+      street:
+        label: Gata
+      zipcode:
+        label: Postnummer
+    align:
+      label: Justering
+      options:
+        center: Centrera
+        end: Slut
+        start: Start
+    arguments:
+      label:
+        one: Argument
+        other: Argument
+    audio:
+      label:
+        one: Ljud
+        other: Ljud
+      mp3:
+        label: MP3
+        hint: MP3-ljudfil
+      ogg:
+        label: OGG
+        hint: OGG-ljudfil
+    author:
+      label: Författare
+    autoplay:
+      label: Autouppspelning
+    background:
+      label: Med bakgrund?
+    background_color:
+      label: Bakgrundsfärg
+    badge:
+      hint: Visa ett märke
+      label: Märke
+    blocks:
+      label:
+        one: Block
+        other: Block
+    body:
+      label: Brödtext
+    breakpoints:
+      hint: Skärmstorlek
+      label:
+        one: Brytpunkt
+        other: Brytpunkter
+      options:
+        desktop: Skrivbord
+        laptop: Bärbar dator
+        mobile: Mobil
+        tablet: Surfplatta
+        wide_tablet: Bred surfplatta
+    carousel:
+      arrows:
+        label: Pilar
+      autoplay:
+        label: Autouppspelning
+      focus:
+        hint: Placera aktiv bild i mitten?
+        label: Fokus
+      gap:
+        hint: Avståndet mellan bilder. Uttryckt i rem.
+        label: Avstånd
+      hint: Endast för karusellvisning
+      label: Karusellkonfiguration
+      padding:
+        hint: Fyllning vänster/höger om karusellen. I rem-värde
+        label: Fyllning
+      pagination:
+        label: Paginering
+      params:
+        label: Parametrar
+      perpage:
+        hint: Antal bilder att visa
+        label: Per sida
+      responsive:
+        label: Responsiv
+      type:
+        label: Karuselltyp
+        options:
+          slide: Bild
+          loop: Slinga
+          fade: Tona
+    chart:
+      label: Diagram
+      data:
+        label: Data (kod)
+        hint: 'Dokumentation: https://www.chartjs.org/docs/'
+      type:
+        label: Diagramtyp
+        options:
+          bar: Stapel
+          line: Linje
+          pie: Paj
+          polarArea: Polärt område
+          radar: Radar
+    class:
+      label: Klass
+      hint: Lägg till CSS-klass till denna komponent
+    code:
+      label: Kod
+    color:
+      label: Färg
+    column:
+      label: Kolumn
+    contact:
+      label:
+        one: Kontakt
+        other: Kontakter
+    controls:
+      label: Kontroller
+    coordinates:
+      hint: 'Hitta enkelt kontaktuppgifter: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Geografiska koordinater
+      lat:
+        label: Latitud
+      lng:
+        label: Longitud
+    count:
+      hint: Objekt att visa
+      label: Antal
+    credit:
+      label: Kredit
+    cta:
+      label:
+        one: CTA
+        other: CTA:er
+    datas:
+      label:
+        one: Data
+        other: Data
+    date:
+      from: Från
+      label: Datum
+      sale: Försäljningsdatum
+      to: Till
+    description:
+      hint:
+        Visas i flikar, sökresultat och i förhandsgranskning av SMS/Meddelanden/Sociala nätverk
+        förhandsgranskning
+      label: Beskrivning
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Energiprestandadiagnostik (DPE)
+      ghg:
+        label: Co2
+        hint: Växthusgas (GHG)
+      label: Diagnostik
+      in_progress: Pågår?
+    direction:
+      label: Riktning
+      options:
+        ltr: Text till vänster / bild till höger
+        rtl: Bild till vänster / text till höger
+    discount:
+      hint: 'Rabattens belopp, t.ex: 30%'
+      label: Rabatt
+      pattern: Endast värde (utan valuta)
+    document:
+      label:
+        one: Dokument
+        other: Dokument
+    draft:
+      label: Utkast
+    email:
+      label: E-post
+    embed:
+      label: Bädda in
+    event:
+      label:
+        one: Evenemang
+        other: Evenemang
+    fax:
+      label: Fax
+      hint: 'Internationellt format, t.ex: +33 1 23 45 67 89'
+    featured_image:
+      hint: Visas i sökresultat och i förhandsgranskning av SMS/Meddelanden/Sociala nätverk
+      label: Huvudbild
+    fee:
+      label:
+        one: Avgift
+        other: Avgifter
+    figure:
+      label: Figur
+    form:
+      autocomplete:
+        label: Komplettera automatiskt
+        options:
+          city: Stad
+          country_name: Landsnamn
+          email: E-post
+          family_name: Efternamn
+          given_name: Förnamn
+          honorific_prefix: Titel
+          name: Namn
+          organization: Organisation
+          postal_code: Postnummer
+          state: Stat
+          street_address: Gatuadress
+          tel: Tel
+      full:
+        label: Fullbreddsfält?
+      hiddens:
+        label:
+          one: Dolt fält
+          other: Dolda fält
+      items:
+        label:
+          one: Fält
+          other: Fält
+      label: Formulär
+      options:
+        hint: Endast för valfält
+        label:
+          one: Alternativ
+          other: Alternativ
+      type:
+        hint: Välj fälttyp
+        email: E-post
+        label: Typ
+        radio: Radio
+        select: Välj
+        tel: Telefon
+        text: Text
+        textarea: Textområde
+      value:
+        hint: Endast för kryssruta och radiofält
+        label: Värde
+    gallery:
+      label: Galleri
+    grid:
+      label: Rutnät
+      options:
+        container: Behållare
+        full: Full
+        large: Stor
+        medium: Medium
+        small: Liten
+    heading:
+      label: Rubrik
+    hero:
+      label: Hjälte
+    icon:
+      hint: Ikonnamn från https://icons.getbootstrap.com/
+      label: Ikon
+    id:
+      label: ID
+    image:
+      label: 
+        one: Bild
+        other: Bilder
+      alt:
+        hint: För en bild som förmedlar information (lämna tomt om dekorativ bild)
+        label: Alternativ text
+      filter:
+        hint: Ställ in Linjär för bild eller skärmdump, lämna tomt för att behålla standardkonfigurationen
+        label: Ändra filterkvalitet?
+        options:
+          box: Enkelt och snabbt genomsnittsfilter lämpligt för nedskalning (standard)
+          catmullrom: Skarpt kubiskt filter som är snabbare än Lanczos-filtret samtidigt som det ger liknande resultat
+          lanczos: Högkvalitativt omsamplingsfilter för fotografiska bilder som ger skarpa resultat
+          linear: Bilinjärt omsamplingsfilter, producerar jämn utdata, snabbare än kubiska filter
+      src:
+        hint: 'Ändra storlek och komprimera bild innan du skickar: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Bild
+    images:
+      label: 
+        one: Bild
+        other: Bilder
+    is_background:
+      label: Är bakgrund?
+    is_blank:
+      label: Är blank?
+    is_card:
+      hint: Lägger till en bakgrund bakom texten
+      label: Är kort?
+    is_darken:
+      label: Mörka?
+    is_exclusive:
+      label: Exklusiv?
+    is_half:
+      label: Halv storlek?
+    is_highlighted:
+      label: Är markerad?
+    is_logo:
+      hint: Placerad i mitten och inte beskuren
+      label: Är logotyp?
+    is_open:
+      label: Öppen?
+    is_pinned:
+      label: Fäst?
+    is_screenshot:
+      hint: Lägg till falsk webbläsare
+      label: Är skärmdump?
+    items:
+      label:
+        one: Objekt
+        other: Objekt
+    keyfeatures:
+      hint: 't.ex: Plats, exponering…'
+      label:
+        one: nyckelfunktion
+        other: Nyckelfunktioner
+    label:
+      label: Etikett
+    lang:
+      hint: Ange språkkod (t.ex. fr) om den skiljer sig från aktuell sidspråk
+      label: Språk
+    layout:
+      label: Layout
+      options:
+        carousel: Karusell
+        grid: Rutnät
+        list: Lista
+    legal:
+      label: Juridisk
+    legend:
+      label: Legend
+    limit:
+      label: Gräns
+    links:
+      label:
+        one: Länk
+        other: Länkar
+    location:
+      label: Plats
+    loop:
+      label: Slinga
+    name:
+      label: Namn
+    map:
+      label: Karta
+    newsletter:
+      form:
+        label: Formulär
+    notes:
+      hint: 'För att länka ett ord i texten till en anteckning, lägg till "[\*]" efter det. Anteckningar och "[\*]" länkas av deras ordning.'
+      label:
+        one: Anteckning
+        other: Anteckningar
+    offer:
+      label:
+        one: Erbjudande
+        other: Erbjudanden
+    offset:
+      label: Förskjutning
+      options:
+        center: Centrera
+        end: Slut
+        start: Start
+    parent:
+      label: Föräldrasida
+    pdf:
+      label: PDF
+      hint: 'Komprimera PDF innan du skickar: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Telefonnummer
+      hint: 'Internationellt format, t.ex: +33 1 23 45 67 89'
+    placeholder:
+      label: Platshållare
+    poster:
+      label: Affisch
+      hint: Affischbild för video
+    prefix:
+      label: Prefix
+    press:
+      label: Press
+    price:
+      hide: Dölj pris
+      hint: 't.ex: 300000 (för 300 000 kr)'
+      label: Pris
+      sold: Försäljningspris
+    quote:
+      label: Citat
+    realestates_energies:
+      label:
+        one: Energi
+        other: Energier
+      heating:
+        label: Uppvärmning
+        options:
+          collective: Kollektiv
+          individual: Individuell
+      heating_type:
+        label: Uppvärmningstyp
+        options:
+          reversible_ac: Reversibel AC
+          electric: Elektrisk
+          gas: Gas
+          solar: Sol
+    realestates_informations:
+      area:
+        hint: Uttryckt i m2
+        label: Inre yta
+      bathrooms:
+        label: Antal badrum
+      bedrooms:
+        label: Antal sovrum
+      district:
+        label: Distrikt
+      exposure:
+        label: Exponering
+      field:
+        hint: Uttryckt i m2
+        label: Yttre yta
+      floor:
+        label: Våning
+      has_balcony:
+        label: Balkong?
+      has_box:
+        label: Box?
+      has_cave:
+        label: Källare?
+      has_elevator:
+        label: Hiss?
+      has_garage:
+        label: Garage?
+      has_outbuilding:
+        label: Uthus?
+      has_parking:
+        label: Parkering?
+      has_swimmingpool:
+        label: Pool?
+      has_terrace:
+        label: Terrass?
+      label: Information
+      levels:
+        label: Antal våningar
+      rooms:
+        label: Antal rum
+      showerrooms:
+        label: Antal duschrum
+      wc:
+        label: WC
+      year:
+        label: Byggår
+    realestates_types:
+      label: Transaktionstyp
+      options:
+        rent: Hyra
+        sale: Försäljning
+    reference:
+      label: Referens
+    rent:
+      label: Hyra?
+    required:
+      label: Krävs
+    section:
+      hint: Välj avsnitt att visa
+      label: Avsnitt
+    show_more:
+      hint: Visar en knapp för att se fler objekt
+      label: Visa mer?
+    show_places:
+      hint: Endast om du har platser redan sparade (detta inaktiverar markören nedan)
+      label: Visa alla registrerade platser?
+    slug:
+      hint: Lämna tomt för att automatisera med titeln. **Var försiktig med SEO-påverkan.**
+      label: Slug
+      pattern:
+        Innehåller endast gemener, siffror och bindestreck, utan mellanslag,
+        accenter eller specialtecken
+    socials:
+      label:
+        one: Social
+        other: Sociala
+      plateform: Plattform
+      twitter:
+        label: Twitter/X
+        hint: Användarnamn
+    sold:
+      label: Såld/uthyrd?
+    state:
+      label: Tillstånd
+      options:
+        danger: Fara
+        dark: Mörk
+        info: Info
+        light: Ljus
+        primary: Primär
+        secondary: Sekundär
+        success: Framgång
+        warning: Varning
+    status:
+      label: Status
+    submit:
+      label: Skicka-knapptext
+    subtitle:
+      label: Undertitel
+    suffix:
+      hint: 't.ex: %'
+      label: Suffix
+    summary:
+      label: Sammanfattning
+    surtitle:
+      label: Övertitel
+    text:
+      label: Text
+    title:
+      label: Titel
+    title_page:
+      hint:
+        Visas i flikar, sökresultat och i förhandsgranskning av SMS/Meddelanden/Sociala nätverk
+        förhandsgranskning
+      label: Sidtitel
+    transcription:
+      label: Transkription
+    url:
+      label: URL
+    value:
+      label: Värde
+    video:
+      label: 
+        one: Video
+        other: Videor
+      mp4:
+        label: MP4
+        hint: MP4-videofil
+        mobile:
+          label: MP4 (Mobil)
+          hint: MP4-videofil för mobil
+      webm:
+        label: WEBM
+        hint: WEBM-videofil
+        mobile:
+          label: WEBM (Mobil)
+          hint: WEBM-videofil för mobil
+    website:
+      hint: URL (https://…)
+      label: Webbplats
+    weight:
+      label: Position (viktighet)
+      hint: Att veta att 10 är viktigast och 100 minst viktigt
+    year: År
+    zoom:
+      label: Zoom
+  files:
+    banner: Informationsbanner högst upp på webbplatsen
+    footer: Informationstext längst ner på webbplatsen
+    nav:
+      label: Navigering
+      legal: Juridisk navigering (omnämnanden, policy…)
+      primary: Primär navigering
+      secondary: Sekundär navigering
+      social: Social navigering
+    seo:
+      label: Global SEO
+      title: Webbplatsnamn
+  group:
+    year: År
+  shortcodes:
+    alert:
+      label: Varning
+    badge:
+      label: Märke
+    blank_link:
+      label: Blank länk
+    blockquote:
+      label: Citatblock
+    button:
+      label: Knapp
+    details:
+      label: Detaljer
+    figure:
+      label: Figur
+    map:
+      label: Karta
+    twitter:
+      _id: Twitter ID
+      label: Twitter / X
+      user: Twitter användarnamn
+    youtube:
+      _id: Youtube ID
+      label: Youtube

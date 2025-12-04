@@ -1,0 +1,1 @@
+{{ partial "admin/archetypes/index.html" . }}

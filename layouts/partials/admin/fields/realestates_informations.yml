@@ -1,111 +1,33 @@
-{
-  label: '{{ i18n "admin.fields.realestates_informations.label" }}',
-  name: 'informations',
-  widget: 'object',
-  required: false,
-  i18n: true,
-  collapsed: false,
-  fields:
-    [
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.year.label" }}',
-        hint: '1930',
-        name: 'year',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        min: 1800,
-        max: 2100
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.district.label" }}',
-        name: 'district',
-        widget: 'string',
-        required: false,
-        i18n: true
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.area.label" }}',
-        hint: '{{ i18n "admin.fields.realestates_informations.area.hint" }}',
-        name: 'area',
-        widget: 'number',
-        value_type: 'float',
-        required: false,
-        i18n: 'duplicate',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.field.label" }}',
-        hint: '{{ i18n "admin.fields.realestates_informations.field.hint" }}',
-        name: 'field',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.levels.label" }}',
-        name: 'levels',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.floor.label" }}',
-        name: 'floor',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate'
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.rooms.label" }}',
-        name: 'rooms',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.bedrooms.label" }}',
-        name: 'bedrooms',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.bathrooms.label" }}',
-        name: 'bathrooms',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.showerrooms.label" }}',
-        name: 'showerrooms',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.wc.label" }}',
-        name: 'wc',
-        widget: 'number',
-        required: false,
-        i18n: 'duplicate',
-        min: 0
-      },
-      {
-        label: '{{ i18n "admin.fields.realestates_informations.exposure.label" }}',
-        name: 'exposure',
-        widget: 'string',
-        required: false,
-        i18n: true
-      },
-      {{  partial "admin/fields/realestates_has.yml" }}
-      {{  partial "admin/fields/realestates_energies.yml" }}
-    ]
-}
+{{- $fields := slice 
+  "realestates_informations_year" 
+  "realestates_informations_district" 
+  "realestates_informations_area" 
+  "realestates_informations_field" 
+  "realestates_informations_levels" 
+  "realestates_informations_floor" 
+  "realestates_informations_rooms" 
+  "realestates_informations_bedrooms" 
+  "realestates_informations_bathrooms" 
+  "realestates_informations_showerrooms" 
+  "realestates_informations_wc" 
+  "realestates_informations_exposure" 
+  "realestates_informations_has_balcony" 
+  "realestates_informations_has_cave" 
+  "realestates_informations_has_elevator" 
+  "realestates_informations_has_garage" 
+  "realestates_informations_has_box" 
+  "realestates_informations_has_parking" 
+  "realestates_informations_has_outbuilding" 
+  "realestates_informations_has_swimmingpool" 
+  "realestates_informations_has_terrace" 
+  "realestates_energies" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_informations.label")
+  "name" "informations"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

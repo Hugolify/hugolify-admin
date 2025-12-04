@@ -1,0 +1,16 @@
+{{- $name := dict "name" "heating_type" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "realestates_energies_heating_type" "nameOverride" "heating_type" }}
+{{- end }}
+
+{{- $options := slice "reversible_ac" "electric" "gas" "solar" }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_energies.heating_type.label")
+  "label_options" "admin.fields.realestates_energies.heating_type.options"
+  "options" $options
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/select.js" $args }}

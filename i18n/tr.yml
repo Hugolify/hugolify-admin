@@ -1,0 +1,846 @@
+admin:
+  blocks:
+    alert:
+      label: Uyarı
+    audio:
+      label: Ses
+    chart:
+      label: Grafik
+    comparison:
+      label: Karşılaştırma
+    cta:
+      label: Eylem Çağrısı
+    datas:
+      label: Veriler
+    editorial:
+      label: Editöryal
+    embed:
+      label: Gömülü
+    faq:
+      label: SSS
+    figure:
+      label: Şekil
+    form:
+      label: Form
+    gallery:
+      label: Galeri
+    images:
+      label: Görseller
+    informations:
+      label: Bilgiler
+    instagram:
+      label: Instagram
+    latest:
+      label: Son Öğeler
+    location:
+      label: Konum
+    logos:
+      label: Logolar
+    map:
+      label: Harita
+    newsletter:
+      label: Bülten
+    paragraph:
+      label: Paragraf
+    pushes:
+      label: Bildirimler
+    quote:
+      label: Alıntı
+    search:
+      label: Arama
+    selected:
+      label: Seçim {{ .section }}
+    testimonials:
+      label: Referanslar
+    timeline:
+      label: Zaman Çizelgesi
+    title:
+      label: Başlık
+    video:
+      label: Video
+  collections:
+    authors:
+      label:
+        one: Yazar
+        other: Yazarlar
+    casestudies:
+      _description: Tüm vaka çalışmaları
+      label:
+        one: Vaka çalışması
+        other: Vaka çalışmaları
+    categories:
+      label:
+        one: Kategori
+        other: Kategoriler
+    config:
+      _description: Tüm yapılandırma
+      label:
+        one: Yapılandırma
+        other: Yapılandırma
+    docs:
+      _description: Tüm dokümanlar
+      label:
+        one: Doküman
+        other: Dokümanlar
+    events:
+      _description: Tüm etkinlikler
+      label:
+        one: Etkinlik
+        other: Etkinlikler
+    events_categories:
+      _description: Tüm etkinlik kategorileri
+      label:
+        one: Kategori
+        other: Kategoriler
+    expertises:
+      _description: Tüm uzmanlıklar
+      label:
+        one: Uzmanlık
+        other: Uzmanlıklar
+    home: Ana Sayfa
+    indexes:
+      _description: Tüm dizin sayfaları
+      label:
+        one: Dizin
+        other: Dizin
+    jobs:
+      _description: Tüm işler
+      label:
+        one: İş
+        other: İşler
+    jobs_categories:
+      _description: Tüm haber kategorileri
+      label:
+        one: Kategori
+        other: Kategoriler
+    jobs_expertises:
+      _description: Tüm uzmanlıklar
+      label:
+        one: Uzmanlık
+        other: Uzmanlıklar
+    jobs_places:
+      _description: Tüm yerler
+      label:
+        one: Yer
+        other: Yerler
+    jobs_tags:
+      _description: Tüm ürün etiketleri
+      label:
+        one: Etiket
+        other: Etiketler
+    pages:
+      _description: Tüm sayfalar
+      label:
+        one: Sayfa
+        other: Sayfalar
+    persons:
+      _description: Tüm kişiler
+      label:
+        one: Kişi
+        other: Kişiler
+    persons_expertises:
+      _description: Tüm uzmanlıklar
+      label:
+        one: Uzmanlık
+        other: Uzmanlıklar
+    persons_places:
+      _description: Tüm yerler
+      label:
+        one: Yer
+        other: Yerler
+    persons_statutes:
+      _description: Tüm statüler
+      label:
+        one: Statü
+        other: Statüler
+    places:
+      _description: Tüm yerler
+      label:
+        one: Yer
+        other: Yerler
+    posts:
+      _description: Tüm haberler
+      label:
+        one: Haber
+        other: Haberler
+    posts_categories:
+      _description: Tüm haber kategorileri
+      label:
+        one: Kategori
+        other: Kategoriler
+    posts_expertises:
+      _description: Tüm uzmanlıklar
+      label:
+        one: Uzmanlık
+        other: Uzmanlıklar
+    posts_tags:
+      _description: Tüm haber etiketleri
+      label:
+        one: Etiket
+        other: Etiketler
+    products:
+      _description: Tüm ürünler
+      label:
+        one: Ürün
+        other: Ürünler
+    products_categories:
+      _description: Tüm ürün kategorileri
+      label:
+        one: Kategori
+        other: Kategoriler
+    products_tags:
+      _description: Tüm ürün etiketleri
+      label:
+        one: Etiket
+        other: Etiketler
+    projects:
+      _description: Tüm projeler
+      label:
+        one: Proje
+        other: Projeler
+    projects_tags:
+      _description: Tüm proje etiketleri
+      label:
+        one: Etiket
+        other: Etiketler
+    projects_types:
+      _description: Tüm proje türleri
+      label:
+        one: Tür
+        other: Türler
+    publications:
+      _description: Tüm yayınlar
+      label:
+        one: Yayın
+        other: Yayınlar
+    publications_categories:
+      _description: Tüm yayın kategorileri
+      label:
+        one: Kategori
+        other: Kategoriler
+    publications_expertises:
+      _description: Tüm uzmanlıklar
+      label:
+        one: Uzmanlık
+        other: Uzmanlıklar
+    publications_persons:
+      label:
+        one: Kişi
+        other: Kişiler
+    realestates:
+      _description: Tüm gayrimenkuller
+      label:
+        one: Gayrimenkul
+        other: Gayrimenkuller
+    realestates_categories:
+      _description: Tüm gayrimenkul kategorileri
+      label:
+        one: Kategori
+        other: Kategoriler
+    realestates_persons:
+      _description: Tüm emlakçılar
+      label:
+        one: Emlakçı
+        other: Emlakçılar
+    realestates_sellers:
+      _description: Tüm satıcılar
+      label:
+        one: Satıcı
+        other: Satıcılar
+    services:
+      _description: Tüm hizmetler
+      label:
+        one: Hizmet
+        other: Hizmetler
+    services_categories:
+      _description: Tüm hizmet kategorileri
+      label:
+        one: Kategori
+        other: Kategoriler
+    tags:
+      _description: Tüm etiketler
+      label:
+        one: Etiket
+        other: Etiketler
+  fields:
+    address:
+      city:
+        label: Şehir
+      country:
+        label: Ülke
+      label: Adres
+      street:
+        label: Sokak
+      zipcode:
+        label: Posta Kodu
+    align:
+      label: Hizalama
+      options:
+        center: Orta
+        end: Son
+        start: Başlangıç
+    arguments:
+      label:
+        one: Argüman
+        other: Argümanlar
+    audio:
+      label:
+        one: Ses
+        other: Sesler
+      mp3:
+        label: MP3
+        hint: MP3 ses dosyası
+      ogg:
+        label: OGG
+        hint: OGG ses dosyası
+    author:
+      label: Yazar
+    autoplay:
+      label: Otomatik Oynat
+    background:
+      label: Arka planlı mı?
+    background_color:
+      label: Arka plan rengi
+    badge:
+      hint: Bir rozet göster
+      label: Rozet
+    blocks:
+      label:
+        one: Blok
+        other: Bloklar
+    body:
+      label: Gövde
+    breakpoints:
+      hint: Ekran boyutu
+      label:
+        one: Kırılma Noktası
+        other: Kırılma Noktaları
+      options:
+        desktop: Masaüstü
+        laptop: Dizüstü
+        mobile: Mobil
+        tablet: Tablet
+        wide_tablet: Geniş Tablet
+    carousel:
+      arrows:
+        label: Oklar
+      autoplay:
+        label: Otomatik Oynat
+      focus:
+        hint: Aktif slaytı ortada konumlandır?
+        label: Odak
+      gap:
+        hint: Slaytlar arasındaki boşluk. Rem cinsinden ifade edilir.
+        label: Boşluk
+      hint: Sadece karusel görünümü için
+      label: Karusel yapılandırması
+      padding:
+        hint: Karuselin sol/sağ dolgusu. Rem değeri
+        label: Dolgu
+      pagination:
+        label: Sayfalandırma
+      params:
+        label: Parametreler
+      perpage:
+        hint: Gösterilecek slayt sayısı
+        label: Sayfa başına
+      responsive:
+        label: Duyarlı
+      type:
+        label: Karusel türü
+        options:
+          slide: Slayt
+          loop: Döngü
+          fade: Soluk
+    chart:
+      label: Grafik
+      data:
+        label: Veri (kod)
+        hint: 'Dokümantasyon: https://www.chartjs.org/docs/'
+      type:
+        label: Grafik türü
+        options:
+          bar: Çubuk
+          line: Çizgi
+          pie: Pasta
+          polarArea: Kutupsal Alan
+          radar: Radar
+    class:
+      label: Sınıf
+      hint: Bu bileşene CSS sınıfı ekle
+    code:
+      label: Kod
+    color:
+      label: Renk
+    column:
+      label: Sütun
+    contact:
+      label:
+        one: İletişim
+        other: İletişimler
+    controls:
+      label: Kontroller
+    coordinates:
+      hint: 'İletişim bilgilerini kolayca bulun: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Coğrafi koordinatlar
+      lat:
+        label: Enlem
+      lng:
+        label: Boylam
+    count:
+      hint: Gösterilecek öğeler
+      label: Sayı
+    credit:
+      label: Kredi
+    cta:
+      label:
+        one: CTA
+        other: CTA'lar
+    datas:
+      label:
+        one: Veri
+        other: Veriler
+    date:
+      from: Başlangıç
+      label: Tarih
+      sale: Satış tarihi
+      to: Bitiş
+    description:
+      hint:
+        Sekmelerde, arama sonuçlarında ve SMS/Mesajlar/Sosyal ağ önizlemelerinde görüntülenir
+        önizleme
+      label: Açıklama
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Enerji performans teşhisi (DPE)
+      ghg:
+        label: Co2
+        hint: Sera gazı (GHG)
+      label: Teşhis
+      in_progress: Devam ediyor mu?
+    direction:
+      label: Yön
+      options:
+        ltr: Metin solda / resim sağda
+        rtl: Resim solda / metin sağda
+    discount:
+      hint: 'İndirim miktarı, örn: %30'
+      label: İndirim
+      pattern: Sadece değer (para birimi olmadan)
+    document:
+      label:
+        one: Belge
+        other: Belge
+    draft:
+      label: Taslak
+    email:
+      label: E-posta
+    embed:
+      label: Gömülü
+    event:
+      label:
+        one: Etkinlik
+        other: Etkinlikler
+    fax:
+      label: Faks
+      hint: 'Uluslararası format, örn: +33 1 23 45 67 89'
+    featured_image:
+      hint: Arama sonuçlarında ve SMS/Mesajlar/Sosyal ağ önizlemelerinde görüntülenir
+      label: Ana Resim
+    fee:
+      label:
+        one: Ücret
+        other: Ücretler
+    figure:
+      label: Şekil
+    form:
+      autocomplete:
+        label: Otomatik Tamamlama
+        options:
+          city: Şehir
+          country_name: Ülke adı
+          email: E-posta
+          family_name: Soyadı
+          given_name: Adı
+          honorific_prefix: Ünvan
+          name: İsim
+          organization: Organizasyon
+          postal_code: Posta kodu
+          state: Eyalet
+          street_address: Sokak adresi
+          tel: Tel
+      full:
+        label: Tam genişlikte alan mı?
+      hiddens:
+        label:
+          one: Gizli alan
+          other: Gizli alanlar
+      items:
+        label:
+          one: Alan
+          other: Alanlar
+      label: Form
+      options:
+        hint: Sadece seçim alanları için
+        label:
+          one: Seçenek
+          other: Seçenekler
+      type:
+        hint: Alan türünü seçin
+        email: E-posta
+        label: Tür
+        radio: Radyo
+        select: Seçim
+        tel: Telefon
+        text: Metin
+        textarea: Metin alanı
+      value:
+        hint: Sadece onay kutusu ve radyo alanları için
+        label: Değer
+    gallery:
+      label: Galeri
+    grid:
+      label: Izgara
+      options:
+        container: Konteyner
+        full: Tam
+        large: Büyük
+        medium: Orta
+        small: Küçük
+    heading:
+      label: Başlık
+    hero:
+      label: Kahraman
+    icon:
+      hint: https://icons.getbootstrap.com/ adresinden ikon adı
+      label: İkon
+    id:
+      label: Kimlik
+    image:
+      label: 
+        one: Resim
+        other: Resimler
+      alt:
+        hint: Bilgi ileten bir resim için (dekoratif resimse boş bırakın)
+        label: Alternatif metin
+      filter:
+        hint: Resim veya ekran görüntüsü için Linear ayarlayın, varsayılan yapılandırmayı korumak için boş bırakın
+        label: Filtre kalitesini değiştir?
+        options:
+          box: Küçültme için uygun basit ve hızlı ortalama filtresi (varsayılan)
+          catmullrom: Lanczos filtresinden daha hızlı olan ancak benzer sonuçlar veren keskin kübik filtre
+          lanczos: Fotoğrafik görüntüler için keskin sonuçlar veren yüksek kaliteli yeniden örnekleme filtresi
+          linear: Bilineer yeniden örnekleme filtresi, pürüzsüz çıktı üretir, kübik filtrelerden daha hızlıdır
+      src:
+        hint: 'Göndermeden önce resmi yeniden boyutlandırın ve sıkıştırın: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Resim
+    images:
+      label: 
+        one: Resim
+        other: Resimler
+    is_background:
+      label: Arka plan mı?
+    is_blank:
+      label: Boş mu?
+    is_card:
+      hint: Metnin arkasına bir arka plan ekler
+      label: Kart mı?
+    is_darken:
+      label: Karart?
+    is_exclusive:
+      label: Özel mi?
+    is_half:
+      label: Yarım boyut mu?
+    is_highlighted:
+      label: Vurgulandı mı?
+    is_logo:
+      hint: Ortada konumlandırılmış ve kırpılmamış
+      label: Logo mu?
+    is_open:
+      label: Açık mı?
+    is_pinned:
+      label: Sabitlenmiş mi?
+    is_screenshot:
+      hint: Sahte tarayıcı ekle
+      label: Ekran görüntüsü mü?
+    items:
+      label:
+        one: Öğe
+        other: Öğeler
+    keyfeatures:
+      hint: 'örn: Konum, maruz kalma…'
+      label:
+        one: ana özellik
+        other: Ana özellikler
+    label:
+      label: Etiket
+    lang:
+      hint: Geçerli sayfa dilinden farklıysa dil kodunu girin (örn. tr)
+      label: Dil
+    layout:
+      label: Düzen
+      options:
+        carousel: Karusel
+        grid: Izgara
+        list: Liste
+    legal:
+      label: Yasal
+    legend:
+      label: Efsane
+    limit:
+      label: Sınır
+    links:
+      label:
+        one: Bağlantı
+        other: Bağlantılar
+    location:
+      label: Konum
+    loop:
+      label: Döngü
+    name:
+      label: İsim
+    map:
+      label: Harita
+    newsletter:
+      form:
+        label: Form
+    notes:
+      hint: 'Metindeki bir kelimeyi bir nota bağlamak için sonuna "[\*]" ekleyin. Notlar ve "[\*]" sıralarına göre bağlanır.'
+      label:
+        one: Not
+        other: Notlar
+    offer:
+      label:
+        one: Teklif
+        other: Teklifler
+    offset:
+      label: Ofset
+      options:
+        center: Orta
+        end: Son
+        start: Başlangıç
+    parent:
+      label: Üst sayfa
+    pdf:
+      label: PDF
+      hint: 'Göndermeden önce PDF''i sıkıştırın: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Telefon Numarası
+      hint: 'Uluslararası format, örn: +33 1 23 45 67 89'
+    placeholder:
+      label: Yer Tutucu
+    poster:
+      label: Poster
+      hint: Video için poster resmi
+    prefix:
+      label: Önek
+    press:
+      label: Basın
+    price:
+      hide: Fiyatı gizle
+      hint: 'örn: 300000 (300 000 TL için)'
+      label: Fiyat
+      sold: Satış fiyatı
+    quote:
+      label: Alıntı
+    realestates_energies:
+      label:
+        one: Enerji
+        other: Enerjiler
+      heating:
+        label: Isıtma
+        options:
+          collective: Toplu
+          individual: Bireysel
+      heating_type:
+        label: Isıtma türü
+        options:
+          reversible_ac: Tersinir Klima
+          electric: Elektrik
+          gas: Gaz
+          solar: Güneş
+    realestates_informations:
+      area:
+        hint: m2 cinsinden ifade edilir
+        label: İç yüzey
+      bathrooms:
+        label: Banyo sayısı
+      bedrooms:
+        label: Oda sayısı
+      district:
+        label: Bölge
+      exposure:
+        label: Maruz kalma
+      field:
+        hint: m2 cinsinden ifade edilir
+        label: Dış yüzey
+      floor:
+        label: Kat
+      has_balcony:
+        label: Balkon?
+      has_box:
+        label: Kutu?
+      has_cave:
+        label: Mağara?
+      has_elevator:
+        label: Asansör?
+      has_garage:
+        label: Garaj?
+      has_outbuilding:
+        label: Müştemilat?
+      has_parking:
+        label: Otopark?
+      has_swimmingpool:
+        label: Yüzme havuzu?
+      has_terrace:
+        label: Teras?
+      label: Bilgiler
+      levels:
+        label: Kat sayısı
+      rooms:
+        label: Oda sayısı
+      showerrooms:
+        label: Duş odası sayısı
+      wc:
+        label: WC
+      year:
+        label: Yapım yılı
+    realestates_types:
+      label: İşlem Türü
+      options:
+        rent: Kira
+        sale: Satış
+    reference:
+      label: Referans
+    rent:
+      label: Kira?
+    required:
+      label: Gerekli
+    section:
+      hint: Görüntülenecek bölümü seçin
+      label: Bölüm
+    show_more:
+      hint: Daha fazla öğe görmek için bir düğme gösterir
+      label: Daha fazla göster?
+    show_places:
+      hint: Sadece zaten kayıtlı yerleriniz varsa (bu aşağıdaki işaretçiyi devre dışı bırakır)
+      label: Tüm kayıtlı yerleri göster?
+    slug:
+      hint: Başlıkla otomatikleştirmek için boş bırakın. **SEO etkisine dikkat edin.**
+      label: Slug
+      pattern:
+        Sadece küçük harfler, sayılar ve tireler içerir, boşluk,
+        aksan veya özel karakterler içermez
+    socials:
+      label:
+        one: Sosyal
+        other: Sosyaller
+      plateform: Platform
+      twitter:
+        label: Twitter/X
+        hint: Kullanıcı adı
+    sold:
+      label: Satıldı/kiralandı?
+    state:
+      label: Durum
+      options:
+        danger: Tehlike
+        dark: Koyu
+        info: Bilgi
+        light: Açık
+        primary: Birincil
+        secondary: İkincil
+        success: Başarı
+        warning: Uyarı
+    status:
+      label: Durum
+    submit:
+      label: Gönder düğmesi metni
+    subtitle:
+      label: Alt başlık
+    suffix:
+      hint: 'örn: %'
+      label: Sonek
+    summary:
+      label: Özet
+    surtitle:
+      label: Üst başlık
+    text:
+      label: Metin
+    title:
+      label: Başlık
+    title_page:
+      hint:
+        Sekmelerde, arama sonuçlarında ve SMS/Mesajlar/Sosyal ağ önizlemelerinde görüntülenir
+        önizleme
+      label: Sayfa başlığı
+    transcription:
+      label: Transkripsiyon
+    url:
+      label: URL
+    value:
+      label: Değer
+    video:
+      label: 
+        one: Video
+        other: Videolar
+      mp4:
+        label: MP4
+        hint: MP4 video dosyası
+        mobile:
+          label: MP4 (Mobil)
+          hint: Mobil için MP4 video dosyası
+      webm:
+        label: WEBM
+        hint: WEBM video dosyası
+        mobile:
+          label: WEBM (Mobil)
+          hint: Mobil için WEBM video dosyası
+    website:
+      hint: URL (https://…)
+      label: Web sitesi
+    weight:
+      label: Pozisyon (önem)
+      hint: 10'un en önemli ve 100'ün en az önemli olduğunu bilerek
+    year: Yıl
+    zoom:
+      label: Yakınlaştır
+  files:
+    banner: Sitenin üst kısmındaki bilgi afişi
+    footer: Sitenin alt kısmındaki bilgi metni
+    nav:
+      label: Navigasyon
+      legal: Yasal navigasyon (bahsetmeler, politika…)
+      primary: Birincil navigasyon
+      secondary: İkincil navigasyon
+      social: Sosyal navigasyon
+    seo:
+      label: Küresel SEO
+      title: Web sitesi adı
+  group:
+    year: Yıl
+  shortcodes:
+    alert:
+      label: Uyarı
+    badge:
+      label: Rozet
+    blank_link:
+      label: Boş bağlantı
+    blockquote:
+      label: Alıntı bloğu
+    button:
+      label: Düğme
+    details:
+      label: Detaylar
+    figure:
+      label: Şekil
+    map:
+      label: Harita
+    twitter:
+      _id: Twitter Kimliği
+      label: Twitter / X
+      user: Twitter kullanıcı adı
+    youtube:
+      _id: Youtube Kimliği
+      label: Youtube

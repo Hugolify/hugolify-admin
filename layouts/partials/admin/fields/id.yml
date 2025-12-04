@@ -1,6 +1,7 @@
-{
-  label: 'Id',
-  name: 'id',
-  widget: 'uuid',
-  i18n: 'duplicate' 
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.id.label")
+  "name" "id"
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/uuid.js" $args }}

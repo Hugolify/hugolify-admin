@@ -1,9 +1,13 @@
-{
-  label: '{{ i18n "admin.fields.is_screenshot.label" }}',
-  hint: '{{ i18n "admin.fields.is_screenshot.hint" }}',
-  name: 'screenshot',
-  widget: 'boolean',
-  default: false,
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $name := dict "name" "screenshot" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_screenshot" "nameOverride" "screenshot" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_screenshot.label")
+  "hint" (i18n "admin.fields.is_screenshot.hint")
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

@@ -1,12 +1,21 @@
+
 {{ if eq site.Params.admin.cms "sveltiacms" }}
+
 {{ partial "admin/fields/is_not_index.yml" . }} 
+
 {{ else }}
-{
-  label: 'is index',
-  name: 'isIndex',
-  widget: 'hidden',
-  default: true,
-  required: false,
-  i18n: false 
-}
+
+{{- $name := dict "name" "isIndex" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_index" "nameOverride" "isIndex" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" "is index"
+  "default" true
+  "hidden" true
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}
+
 {{ end }}

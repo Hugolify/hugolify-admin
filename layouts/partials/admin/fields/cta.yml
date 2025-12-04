@@ -3,14 +3,12 @@
   "url" 
   "lang" 
   "is_blank"  -}}
-{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
-{
-  label: '{{ i18n "admin.fields.cta.label" 1 }}',
-  name: 'cta',
-  widget: 'object',
-  required: false,
-  i18n: true,
-  collapsed: true,
-  summary: '{{`{{text}}`}}',
-  {{ partial "admin/fields/_fields.yml" $fields }}
-}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.cta.label" 1)
+  "name" "cta"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

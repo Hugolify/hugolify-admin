@@ -1,16 +1,14 @@
 {
-  name: persons_statutes,
-  folder: content/persons_statutes,
+  name: 'persons_statutes',
+  folder: 'content/persons_statutes',
   label: '{{ i18n "admin.collections.persons_statutes.label" }}',
   label_singular: '{{ i18n "admin.collections.persons_statutes.label" 1 }}',
   description: '{{ i18n "admin.collections.persons_statutes._description" }}',
-  
-  create: {{ site.Params.admin.collections.persons_statutes.create | default true }},
-  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
-
-  path: '{{`{{slug}}/_index`}}',
-  {{ partial "admin/collections/config/slug.yml" }}
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
+  {{ partial "admin/collections/config/path.yml" . }}
+  {{ partial "admin/collections/config/slug.yml" . }}
 
   {{ partial "admin/collections/types/_default.yml" . }}
 }

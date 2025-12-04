@@ -1,0 +1,122 @@
+{{ $fields := slice }}
+{{ $inputsFields := slice }}
+{{ $inputsSelectedFields := slice }}
+{{ $structuresFields := slice }}
+
+{{/* Get fields from enable collections */}}
+{{ $collections := site.Params.admin.collections }}
+{{- range $collection, $value := $collections -}}
+  {{- if .enable -}}
+    {{ $file := print "admin/collections/fields/" $collection ".fields.default.html" }}
+    {{ if templates.Exists (printf "partials/%s" $file) }}
+      {{ $collectionFields := partialCached $file . }}
+      {{ range $collectionFields }}
+        {{ $fields = $fields | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Remove "blocks", "body" and false from the list $fields */}}
+{{ $fields = $fields | complement (slice "blocks" "body" false) }}
+
+{{/* Get selectedField (only first level fields) */}}
+{{ $selectedFields := $fields | uniq }}
+{{ range $fields }}
+  {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+  {{ $inputsSelectedFields = $inputsSelectedFields | append (dict $f.field $f.values) }}
+{{ end }}
+
+{{/* Get fields from enable blocks */}}
+{{ $blocks := site.Params.admin.blocks.enable }}
+{{ range $blocks }}
+  {{ $file := print "admin/blocks/types/" . ".yml" }}
+  {{ if templates.Exists (printf "partials/%s" $file) }}
+    {{ $blockFile := partialCached $file . }}
+    
+    {{/* Remove last comma and get all selected */}}
+    {{ if eq . "selected" }}
+      {{ $blockFile = $blockFile | replaceRE `(?m)^\s*,\s*$` `` }}
+    {{ end }}
+
+    {{ $blockDatas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $blockFile) }}
+    {{ range $blockDatas }}
+      {{ range .fields }}
+        {{ $fields = $fields | append . }}
+      {{ end }}
+    {{ end }}
+
+  {{ end }}
+{{ end }}
+
+{{/* Remove duplicates */}}
+{{ $fields = $fields | uniq }}
+
+{{/* Separate all fields in inputs and structures */}}
+{{ range $fields }}
+
+  {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+
+  {{ $fileField := print "admin/fields/" $f.field ".yml" }}
+  {{ if templates.Exists (printf "partials/%s" $fileField) }}
+    {{ $file := partial $fileField $f.values }}
+
+    {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $file) }}
+    {{ range $datas }}
+      {{ $datas = . }}
+    {{ end }}
+
+    {{/* Get type of field */}}
+    {{ $type := $datas.type }}
+  
+    {{/* Conditional switch */}}
+    {{ if or (eq $type "object") (eq $type "array") }}
+    
+      {{/* Add field to structures */}}
+      {{ $structuresFields = $structuresFields | append . }}
+      
+      {{/* Process all subfields from this field */}}
+      {{ range $datas.fields }}
+        {{ $subField := print "admin/fields/" . ".yml" }}
+        {{ if templates.Exists (printf "partials/%s" $subField) }}
+          {{ $subFile := partial $subField }}
+          {{ $subDatas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $subFile) }}
+          {{ range $subDatas }}
+            {{ $subDatas = . }}
+          {{ end }}
+          
+          {{/* Get type of field */}}
+          {{ $subType := $subDatas.type }}
+          
+          {{/* Conditional switch */}}
+          {{ if or (eq $subType "object") (eq $subType "array") }}
+
+            {{/* Add field to structures */}}
+            {{ $structuresFields = $structuresFields | append . }}
+
+          {{ end }}
+          
+          {{/* Add field to inputs */}}
+          {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+          {{ $inputsFields = $inputsFields | append (dict $f.field $f.values) }}
+          
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Add field to inputs */}}
+    {{ $inputsFields = $inputsFields | append (dict $f.field $f.values) }}
+
+  {{ end }}
+{{ end }}
+
+{{/* Remove duplicates */}}
+{{ $inputsFields = $inputsFields | uniq }}
+{{ $inputsSelectedFields = $inputsSelectedFields | uniq }}
+{{ $structuresFields = $structuresFields | uniq }}
+
+{{ return (dict 
+  "inputs" $inputsFields 
+  "selectedInputs" $inputsSelectedFields 
+  "structures" $structuresFields
+) }}

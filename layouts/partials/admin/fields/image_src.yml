@@ -1,22 +1,13 @@
-{
-  label: '{{ i18n "admin.fields.image.src.label" }}',
-  hint: '{{ i18n "admin.fields.image.src.hint" }}',
-  name: 'src',
-  widget: 'image',
-  required: false,
-  i18n: true,
-{{- if eq site.Params.admin.cms "pagescms" }}
-  options: {
-    media: 'images'
-  }
-{{- else }}
-  choose_url: false,
-  media_library: {
-    config: {
-      max_file_size: '{{ site.Params.admin.media.max_file_size }}'
-    }
-  },
-  media_folder: '{{ site.Params.admin.media.media_folder | default "/assets/images/uploads" }}',
-  public_folder: '{{ site.Params.admin.media.public_folder | default "/images/uploads" }}'
+{{- $name := dict "name" "src" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "image_src" "nameOverride" "src" }}
 {{- end }}
-}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.image.src.label")
+  "hint" (i18n "admin.fields.image.src.hint")
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/image.js" $args }}

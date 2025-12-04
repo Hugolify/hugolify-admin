@@ -1,42 +1,18 @@
-{{- $field := .field | default false -}}
-{{- $i18n := .i18n | default $field -}}
+{{- $name := .name | default false -}}
+{{- $i18n := .i18n | default $name -}}
 {{- $options := .options | default false -}}
 {{- $default := .default | default false -}}
 {{- $multiple := .multiple | default false -}}
 {{- $required := .required | default false -}}
-{{- if and $field $options }}
-{
-  label: '{{ i18n (print "admin.fields." $i18n ".label") }}',
-  hint: '{{ i18n (print "admin.fields." $i18n ".hint") }}',
-  name: '{{ $field }}',
-  widget: 'select',
-  {{- if eq site.Params.admin.cms "pagescms" }}
-    options: {
-      {{- with $multiple }}
-      multiple: true,
-      {{- end }}
-      values: [
-        {{- range $options }}
-        {{- $value := cond (eq (printf "%T" .) "string") (print "'" . "'") . -}}
-        { label: '{{ i18n (print "admin.fields." $i18n ".options." (replace . "-" "_")) | default (humanize .) }}', value: {{ $value }} },
-        {{- end }}
-      ]
-    },
-  {{- else }}
-    options: [
-      {{- range $options }}
-      {{- $value := cond (eq (printf "%T" .) "string") (print "'" . "'") . -}}
-      { label: '{{ i18n (print "admin.fields." $i18n ".options." (replace . "-" "_")) | default (humanize .) }}', value: {{ $value }} },
-      {{- end }}
-    ],
-    {{- with $multiple }}
-    multiple: true,
-    {{- end }}
-    {{- with $default }}
-    default: '{{ . }}',
-    {{- end }}
-  {{- end }}
-  required: {{ $required }},
-  i18n: 'duplicate'
-}
-{{- end }}
+
+{{- $args := dict 
+  "label" (i18n (print "admin.fields." $i18n ".label"))
+  "hint" (i18n (print "admin.fields." $i18n ".hint"))
+  "name" $name
+  "required" $required
+  "multiple" $multiple
+  "options" $options
+  "default" $default
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

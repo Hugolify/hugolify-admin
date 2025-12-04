@@ -1,7 +1,9 @@
-{{- partial "admin/fields/select.yml" (dict 
-  "field" "autocomplete" 
-  "i18n" "form.autocomplete" 
-  "options" (slice 
+{{- $name := dict "name" "autocomplete" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "form_autocomplete" "nameOverride" "autocomplete" }}
+{{- end }}
+
+{{- $options := slice 
     "email" 
     "tel" 
     "honorific-prefix" 
@@ -13,5 +15,14 @@
     "address-level2" 
     "postal-code" 
     "country-name" 
-    "organization")
-  "required" false) }}
+    "organization" -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.form.autocomplete.label")
+  "label_options" "admin.fields.form.autocomplete.options"
+  "options" $options
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/select.js" $args }}

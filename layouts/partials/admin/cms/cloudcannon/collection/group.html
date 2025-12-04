@@ -1,0 +1,14 @@
+{{ with site.Params.admin.collection_groups }}
+collection_groups: [
+  {{- range . }}
+    {
+      heading: '{{ .heading }}',
+      collections: [
+        {{- range .collections }}
+          '{{ . }}',
+        {{- end }}
+      ]
+    },
+  {{- end }}
+]
+{{ end }}

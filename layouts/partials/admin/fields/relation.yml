@@ -1,7 +1,7 @@
 {{- $collection := .collection | default "pages" -}}
 {{- $filters := .filters | default false -}}
-{{- $display_fields := .display_fields | default (slice "title") -}}
-{{- $search_fields := .search_fields | default (slice "title") -}}
+{{- $display_fields := .display_fields | default (slice `"title"`) -}}
+{{- $search_fields := .search_fields | default (slice `"title"`) -}}
 {{- $name := .name | default $collection -}}
 {{- $i18n := $collection -}}
 {{- if ne .name "items" -}}
@@ -12,46 +12,30 @@
 {{- end -}}
 {{- $multiple := .multiple | default false -}}
 {{- $required := .required | default false -}}
-{{- $slug := `{{slug}}` -}}
+{{- $value_field := `{{slug}}` -}}
 {{/* Decap CMS bug with bundle page (add /_index), we use title for taxonomies */}}
 {{- if eq site.Params.admin.cms "decapcms" "netlifycms" "staticcms" -}}
   {{- with site.GetPage $collection -}}
     {{- if eq .Kind "taxonomy" -}}
-      {{- $slug = `{{title}}` -}}
+      {{- $value_field = `{{title}}` -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- $slug = cond site.Params.admin.config.id `{{id}}` $slug -}}
-{
-  label: '{{ i18n (print "admin.collections." $i18n ".label") }}',
-  label_singular: '{{ i18n (print "admin.collections." $i18n ".label") 1 }}',
-  hint: '{{ i18n (print "admin.collections." $i18n ".hint") }}',
-  name: '{{ $name }}',
-  {{- if eq site.Params.admin.cms "pagescms" }}
-  widget: 'reference',
-  options: {
-    collection: {{ $collection }},
-    {{- $label := slice }}
-    {{- range $display_fields }}
-    {{- $label = $label | append (printf `{%s}` .) }}
-    {{- end }}
-    label: "{{ delimit $label `,` }}",
-    image: "{image.src}",
-    multiple: {{ $multiple }},
-    search: {{ delimit $search_fields "," }},
-    value: '{{ substr $slug 1 -1 }}'
-  },
-  {{- else }}
-  widget: 'relation',
-  collection: {{ $collection }},
-  display_fields: {{ $display_fields }},
-  search_fields: {{ $search_fields }},
-  value_field: '{{$slug}}',
-  {{- with $filters }}
-  filters: {{ . }},
-  {{- end }}
-  multiple: {{ $multiple }},
-  {{- end }}
-  required: {{ $required }},
-  i18n: 'duplicate'
-}
+{{- $value_field = cond site.Params.admin.config.id `{{id}}` $value_field -}}
+
+
+{{- $args := dict 
+  "label" (i18n (print "admin.collections." $i18n ".label"))
+  "label_singular" (i18n (print "admin.collections." $i18n ".label") 1)
+  "hint" (i18n (print "admin.collections." $i18n ".hint"))
+  "name" $name
+  "collection" $collection
+  "display_fields" $display_fields
+  "search_fields" $search_fields
+  "value_field" $value_field
+  "filters" $filters
+  "multiple" $multiple
+  "required" $required
+  -}}
+
+{{ partial "admin/widgets/relation.js" $args }}

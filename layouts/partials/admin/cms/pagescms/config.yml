@@ -1,35 +1,7 @@
 settings:
   hide: {{ site.Params.admin.settings.hide | default true }}
 
-media:
-  - name: images
-    label: '{{ i18n "admin.fields.image.label" }}'
-    input: {{ site.Params.admin.media.media_folder | default "assets/images/uploads" }}
-    output: {{ site.Params.admin.media.public_folder | default "/images/uploads" }}
-    categories: [ image ]
-  {{- if eq site.Params.admin.media.audio_folders true }}
-  - name: audios
-    label: '{{ i18n "admin.fields.audio.label" }}'
-    input: {{ site.Params.admin.media.audio_media_folder | default "static/assets/audios" }}
-    output: {{ site.Params.admin.media.audio_public_folder | default "/assets/audios" }}
-    categories: [ audio ]
-  {{ end }}
-  {{- if eq site.Params.admin.media.pdf_folders true }}
-  - name: pdf
-    label: '{{ i18n "admin.admin.fields.pdf.label" }}'
-    input: {{ site.Params.admin.media.pdf_media_folder | default "static/pdf" }}
-    output: {{ site.Params.admin.media.pdf_public_folder | default "/pdf" }}
-    categories: [ document ]
-  {{ end }}
-  {{- if eq site.Params.admin.media.video_folders true }}
-  - name: videos
-    label: '{{ i18n "admin.fields.video.label" }}'
-    input: {{ site.Params.admin.media.video_media_folder | default "static/assets/videos" }}
-    output: {{ site.Params.admin.media.video_public_folder | default "/assets/videos" }}
-    categories: [ video ]
-  {{ end }}
-
-{{- $partial := partialCached "admin/collections/index.yml" . -}}
+{{ partialCached "admin/cms/pagescms/media.html" . }}
 
 {{- $sliceCompatibity := slice 
   (dict "{{slug}}/_index" `{fields.title}/_index.md`)
@@ -40,20 +12,14 @@ media:
   (dict "path:" `filename:`) 
   (dict "folder:" `type: 'collection', path:`) 
   (dict "file:" `type: 'file', path:`) 
-  (dict "hint:" `description:`) 
-  (dict "widget: 'hidden'" `widget: 'boolean', hidden: true`) 
-  (dict "widget: 'list'" `widget: 'object', list: true`) 
-  (dict "widget: 'datetime'" `widget: 'date', options: { format: "yyyy-MM-dd'T'HH:mm:ssX", time: true }`) 
-  (dict "widget: 'markdown'" `widget: 'rich-text'`) 
-  (dict "widget:" `type:`) 
-  (dict "types:" `type: 'block', blockKey: 'type', blocks:`) 
   (dict "collections:" `content:`) 
-  -}}
+  }}
 
+{{- $collections := partialCached "admin/collections/index.yml" . }}
 {{- range $sliceCompatibity }}
   {{- range $key, $value := . }}
-    {{- $partial = replace $partial $key $value -}}
-  {{- end -}}
+    {{- $collections = replace $collections $key $value }}
+  {{- end }}
 {{- end }}
 
-{{ transform.Remarshal "yaml" $partial }}
+{{ transform.Remarshal "yaml" $collections }}

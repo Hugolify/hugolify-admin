@@ -1,16 +1,14 @@
 {
-  name: products,
-  folder: content/products,
+  name: 'products',
+  folder: 'content/products',
   label: '{{ i18n "admin.collections.products.label" }}',
   label_singular: '{{ i18n "admin.collections.products.label" 1 }}',
   description: '{{ i18n "admin.collections.products._description" }}',
-  
-  create: {{ site.Params.admin.collections.products.create | default true }},
-  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
-
-  path: '{{`{{year}}/{{slug}}`}}',
-  {{ partial "admin/collections/config/slug.yml" }}
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
+  {{ partial "admin/collections/config/path.yml" "{{year}}/{{slug}}" }}
+  {{ partial "admin/collections/config/slug.yml" . }}
   
   {{ partial "admin/collections/types/_default.yml" . }}
 }

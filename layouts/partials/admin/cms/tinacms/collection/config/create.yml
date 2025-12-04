@@ -1,0 +1,6 @@
+ui: {
+  allowedActions: {
+    create: {{ (index site.Params.admin.collections .).create | default true }},
+    createNestedFolder: false,
+  },
+},

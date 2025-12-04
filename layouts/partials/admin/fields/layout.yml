@@ -1,5 +1,19 @@
-{{- $layout := . -}}
-{{- if not (reflect.IsSlice $layout) -}}
-  {{- $layout = slice "grid" -}}
+{{- $options := . -}}
+{{- if not (reflect.IsSlice $options) -}}
+  {{- $options = slice "grid" -}}
 {{- end -}}
-{{- partial "admin/fields/select.yml" (dict "field" "layout" "options" $layout) }}
+
+{{- $name := dict "name" "layout" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $nameOverride := printf "layout_%s" (delimit $options "_") }}
+  {{- $name = dict "name" $nameOverride "nameOverride" "layout" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.layout.label")
+  "options" $options
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/select.js" $args }}

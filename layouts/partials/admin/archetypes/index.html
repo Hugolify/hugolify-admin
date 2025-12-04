@@ -1,0 +1,51 @@
+{{- $archetypes := dict -}}
+
+{{/* Get enabled collections */}}
+{{- range $collection, $value := site.Params.admin.collections -}}
+  {{- if .enable -}}
+
+    {{/* Get fields */}}
+    {{- $fieldsList := slice -}}
+    {{- $fields := partial "admin/func/GetFieldsCollection.html" $collection -}}
+
+    {{/* Map fields */}}
+    {{- with $fields -}}
+      {{- range . -}}
+
+        {{/* Get field key */}}
+        {{- $key := . -}}
+        {{- $default := "" -}}
+        {{- if reflect.IsMap . -}}
+          {{ range $k, $v := . }}
+            {{- with $v.name -}}
+              {{- $key = . -}}
+            {{- else }}
+              {{- $key = $v.collection -}}
+            {{- end }}
+          {{ end }}
+        {{- end -}}
+
+        {{/* Manual mapping for known divergences */}}
+		    {{- if eq $key "title_page" }}{{ $key = "title" }}{{ end }}
+        {{- if eq $key "featured_image" }}{{ $key = "image" }}{{ end }}  
+        {{- if eq $key "is_index" }}{{ $key = "isIndex" }}{{ $default = true }}{{ end }}
+        {{- if eq $key "is_not_index" }}{{ $key = "isIndex" }}{{ $default = false }}{{ end }}
+        {{- if eq $key "is_page" }}{{ $key = "isPage" }}{{ $default = true }}{{ end }}
+        {{- if eq $key "draft" }}{{ $default = false }}{{ end }}
+
+        {{/* Add field to list */}}
+		    {{- $id := or (ne $key "id") (and (eq $key "id") (eq site.Params.admin.config.id true)) }}
+        {{- if and (ne $key "body") (ne $key false) $id -}}
+          {{- $fieldsList = $fieldsList | append (dict "field" $key "default" $default) -}}
+        {{- end -}}
+
+      {{- end -}}
+    {{- end -}}
+
+    {{/* Add collection to list */}}
+    {{- $archetypes = merge $archetypes (dict $collection $fieldsList) -}}
+
+  {{- end -}}
+{{- end -}}
+
+{{- $archetypes | jsonify -}}

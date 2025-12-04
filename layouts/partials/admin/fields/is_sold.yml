@@ -1,8 +1,13 @@
-{
-  label: '{{ i18n "admin.fields.sold.label" }}',
-  name: 'sold',
-  widget: 'boolean',
-  default: false,
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $name := dict "name" "sold" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_sold" "nameOverride" "sold" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.sold.label")
+  "default" false
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

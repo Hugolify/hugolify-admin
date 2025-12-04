@@ -16,6 +16,16 @@ outputFormats:
     isPlainText: true
     mediaType: application/yaml
     notAlternative: false
+  admin_config_js:
+    baseName: config
+    isPlainText: true
+    mediaType: text/javascript
+    notAlternative: false
+  admin_archetypes_json:
+    baseName: archetypes
+    isPlainText: true
+    mediaType: application/json
+    notAlternative: false
 mediaTypes:
   application/yaml:
     suffixes:
@@ -34,20 +44,34 @@ params:
       locales: false # "[en,fr]" for an i18n website
     # locale: en # Language of the CMS interface. On the other hand, the Hugolify Admin fields are in the main locale of the project
     media:
+      # Image
       media_folder: '/assets/images/uploads'
       public_folder: '/images/uploads'
+      max_file_size: 700000 # 700ko
+      specific_filter: false # set true to add a selected filter by image
+      # Audio
       audio_max_file_size: 700000 # 700ko
-      audio_folders: true
+      audio_folders: false # set true to active
       audio_media_folder: '/static/assets/audios'
       audio_public_folder: '/assets/audios'
-      max_file_size: 700000 # 700ko
+      # Document
+      document_max_file_size: 5000000 # 5Mo
+      document_folders: false # set true to active
+      document_media_folder: '/static/assets/documents'
+      document_public_folder: '/assets/documents'
+      # File
+      file_max_file_size: 5000000 # 5Mo
+      file_folders: false # set true to active
+      file_media_folder: '/static/assets/files'
+      file_public_folder: '/assets/files'
+      # PDF
       pdf_max_file_size: 5000000 # 5Mo
-      pdf_folders: true
+      pdf_folders: false # set true to active
       pdf_media_folder: '/static/pdf'
       pdf_public_folder: '/pdf'
-      specific_filter: false # set true to add a selected filter by image
+      # Video
       video_max_file_size: 5000000 # 5Mo
-      video_folders: true
+      video_folders: false # set true to active
       video_media_folder: '/static/assets/videos'
       video_public_folder: '/assets/videos'
     nested:
@@ -56,25 +80,47 @@ params:
       netlify_identity: true
     preview: false
 
+    # CMS
+    cloudcannon:
+      icon: material_icons
+    sveltiacms:
+      icon: material_symbols
+
     # Collections
     collections:
       config:
         enable: true
         icon:
-          sveltiacms: settings
+          bootstrap_icons: gear
+          iconoir: settings
+          lucide: settings
+          material_icons: settings
+          material_symbols: settings
+          sveltiacms: settings # legacy
       indexes:
+        create: false
         enable: true
         filter:
           - field: isIndex
             value: true
         icon:
-          sveltiacms: schema
+          bootstrap_icons: list-ul
+          iconoir: list
+          lucide: table-of-contents
+          material_icons: schema
+          material_symbols: schema
+          sveltiacms: schema # legacy
         nested:
           depth: 2
       pages:
         enable: true
         icon:
-          sveltiacms: description
+          bootstrap_icons: file-earmark
+          iconoir: page
+          lucide: file
+          material_icons: description
+          material_symbols: description
+          sveltiacms: description # legacy
         filter:
           - field: isPage
             value: true
@@ -113,6 +159,91 @@ params:
         - timeline
         - title
         - video
+      
+      alert:
+        icon:
+          material_icons: warning_amber
+      audio:
+        icon:
+          material_icons: audiotrack
+      chart:
+        icon:
+          material_icons: pie_chart
+      comparison:
+        icon:
+          material_icons: compare
+      cta:
+        icon:
+          material_icons: call_to_action
+      datas:
+        icon:
+          material_icons: data_usage
+      editorial:
+        icon:
+          material_icons: vertical_split
+      embed:
+        icon:
+          material_icons: code
+      faq:
+        icon:
+          material_icons: quiz
+      figure:
+        icon:
+          material_icons: image
+      form:
+        icon:
+          material_icons: send
+      gallery:
+        icon:
+          material_icons: view_module
+      images:
+        icon:
+          material_icons: collections
+      informations:
+        icon:
+          material_icons: dashboard
+      instagram:
+        icon:
+          material_icons: web_stories
+      latest:
+        icon:
+          material_icons: view_timeline
+      logos:
+        icon:
+          material_icons: grain
+      map:
+        icon:
+          material_icons: map
+      newsletter:
+        icon:
+          material_icons: attach_email
+      paragraph:
+        icon:
+          material_icons: subject
+      pushes:
+        icon:
+          material_icons: panorama_wide_angle
+      quote:
+        icon:
+          material_icons: format_quote
+      search:
+        icon:
+          material_icons: search
+      selected:
+        icon:
+          material_icons: checklist_rtl
+      testimonials:
+        icon:
+          material_icons: 3p
+      timeline:
+        icon:
+          material_icons: timeline
+      title:
+        icon:
+          material_icons: format_h2
+      video:
+        icon:
+          material_icons: videocam
 
     # Shortcodes
     shortcodes:

@@ -1,3 +1,10 @@
+{{- if eq site.Params.admin.cms "cloudcannon" }}
+options: {
+  "subtype": "object",
+  {{ partial "admin/cms/cloudcannon/inputs.js" . }}
+},
+{{- else }}
 fields: [
-  {{ partial "admin/fields/_range-fields.yml" . }}
+  {{ partial "admin/fields/_range.yml" . }}
 ]
+{{- end }}

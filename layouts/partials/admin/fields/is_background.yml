@@ -1,7 +1,12 @@
-{
-  label: '{{ i18n "admin.fields.is_background.label" }}',
-  name: 'background',
-  widget: 'boolean',
-  required: false,
-  i18n: 'duplicate' 
-}
+{{- $name := dict "name" "background" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_background" "nameOverride" "background" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_background.label")
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/boolean.js" $args }}

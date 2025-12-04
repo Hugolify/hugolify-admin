@@ -1,0 +1,13 @@
+{{- $name := dict "name" "autoplay" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "carousel_autoplay" "nameOverride" "autoplay" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.carousel.autoplay.label")
+  "default" true
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/boolean.js" $args }}

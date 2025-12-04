@@ -1,13 +1,12 @@
 {
-  name: indexes,
-  folder: content,
+  name: 'indexes',
+  folder: 'content',
   label: '{{ i18n "admin.collections.indexes.label" }}',
   label_singular: '{{ i18n "admin.collections.indexes.label" 1 }}',
   description: '{{ i18n "admin.collections.indexes._description" }}',
-  
-  create: {{ site.Params.admin.collections.indexes.create | default false }},
-  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
 
   {{ partial "admin/collections/types/_default.yml" . }}
 }

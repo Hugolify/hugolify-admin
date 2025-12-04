@@ -1,9 +1,7 @@
-{
-  label: '{{ i18n "admin.fields.year.label" }}',
-  name: 'year',
-  widget: 'number',
-  step: 1,
-  value_type: "int",
-  required: false,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.year")
+  "name" "year"
+  "step" 1
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

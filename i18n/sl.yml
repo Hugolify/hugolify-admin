@@ -1,0 +1,846 @@
+admin:
+  blocks:
+    alert:
+      label: Opozorilo
+    audio:
+      label: Avdio
+    chart:
+      label: Grafikon
+    comparison:
+      label: Primerjava
+    cta:
+      label: Poziv k dejanju
+    datas:
+      label: Podatki
+    editorial:
+      label: Uredniški
+    embed:
+      label: Vdelava
+    faq:
+      label: Pogosta vprašanja
+    figure:
+      label: Slika
+    form:
+      label: Obrazec
+    gallery:
+      label: Galerija
+    images:
+      label: Slike
+    informations:
+      label: Informacije
+    instagram:
+      label: Instagram
+    latest:
+      label: Najnovejši elementi
+    location:
+      label: Lokacija
+    logos:
+      label: Logotipi
+    map:
+      label: Zemljevid
+    newsletter:
+      label: Novice
+    paragraph:
+      label: Odstavek
+    pushes:
+      label: Izpostavljeno
+    quote:
+      label: Citat
+    search:
+      label: Iskanje
+    selected:
+      label: Izbor {{ .section }}
+    testimonials:
+      label: Mnenja
+    timeline:
+      label: Časovnica
+    title:
+      label: Naslov
+    video:
+      label: Video
+  collections:
+    authors:
+      label:
+        one: Avtor
+        other: Avtorji
+    casestudies:
+      _description: Vse študije primerov
+      label:
+        one: Študija primera
+        other: Študije primerov
+    categories:
+      label:
+        one: Kategorija
+        other: Kategorije
+    config:
+      _description: Vsa konfiguracija
+      label:
+        one: Konfiguracija
+        other: Konfiguracije
+    docs:
+      _description: Vsa dokumentacija
+      label:
+        one: Dokument
+        other: Dokumenti
+    events:
+      _description: Vsi dogodki
+      label:
+        one: Dogodek
+        other: Dogodki
+    events_categories:
+      _description: Vse kategorije dogodkov
+      label:
+        one: Kategorija
+        other: Kategorije
+    expertises:
+      _description: Vse strokovnosti
+      label:
+        one: Strokovnost
+        other: Strokovnosti
+    home: Domov
+    indexes:
+      _description: Vse strani kazala
+      label:
+        one: Kazalo
+        other: Kazala
+    jobs:
+      _description: Vsa delovna mesta
+      label:
+        one: Delovno mesto
+        other: Delovna mesta
+    jobs_categories:
+      _description: Vse kategorije delovnih mest
+      label:
+        one: Kategorija
+        other: Kategorije
+    jobs_expertises:
+      _description: Vse strokovnosti
+      label:
+        one: Strokovnost
+        other: Strokovnosti
+    jobs_places:
+      _description: Vsa mesta
+      label:
+        one: Mesto
+        other: Mesta
+    jobs_tags:
+      _description: Vse oznake delovnih mest
+      label:
+        one: Oznaka
+        other: Oznake
+    pages:
+      _description: Vse strani
+      label:
+        one: Stran
+        other: Strani
+    persons:
+      _description: Vse osebe
+      label:
+        one: Oseba
+        other: Osebe
+    persons_expertises:
+      _description: Vse strokovnosti
+      label:
+        one: Strokovnost
+        other: Strokovnosti
+    persons_places:
+      _description: Vsa mesta
+      label:
+        one: Mesto
+        other: Mesta
+    persons_statutes:
+      _description: Vsi statuti
+      label:
+        one: Status
+        other: Statuti
+    places:
+      _description: Vsa mesta
+      label:
+        one: Mesto
+        other: Mesta
+    posts:
+      _description: Vse novice
+      label:
+        one: Novica
+        other: Novice
+    posts_categories:
+      _description: Vse kategorije novic
+      label:
+        one: Kategorija
+        other: Kategorije
+    posts_expertises:
+      _description: Vse strokovnosti
+      label:
+        one: Strokovnost
+        other: Strokovnosti
+    posts_tags:
+      _description: Vse oznake novic
+      label:
+        one: Oznaka
+        other: Oznake
+    products:
+      _description: Vsi izdelki
+      label:
+        one: Izdelek
+        other: Izdelki
+    products_categories:
+      _description: Vse kategorije izdelkov
+      label:
+        one: Kategorija
+        other: Kategorije
+    products_tags:
+      _description: Vse oznake izdelkov
+      label:
+        one: Oznaka
+        other: Oznake
+    projects:
+      _description: Vsi projekti
+      label:
+        one: Projekt
+        other: Projekti
+    projects_tags:
+      _description: Vse oznake projektov
+      label:
+        one: Oznaka
+        other: Oznake
+    projects_types:
+      _description: Vse vrste projektov
+      label:
+        one: Vrsta
+        other: Vrste
+    publications:
+      _description: Vse publikacije
+      label:
+        one: Publikacija
+        other: Publikacije
+    publications_categories:
+      _description: Vse kategorije publikacij
+      label:
+        one: Kategorija
+        other: Kategorije
+    publications_expertises:
+      _description: Vse strokovnosti
+      label:
+        one: Strokovnost
+        other: Strokovnosti
+    publications_persons:
+      label:
+        one: Oseba
+        other: Osebe
+    realestates:
+      _description: Vse nepremičnine
+      label:
+        one: Nepremičnina
+        other: Nepremičnine
+    realestates_categories:
+      _description: Vse kategorije nepremičnin
+      label:
+        one: Kategorija
+        other: Kategorije
+    realestates_persons:
+      _description: Vsi agenti
+      label:
+        one: Agent
+        other: Agenti
+    realestates_sellers:
+      _description: Vsi prodajalci
+      label:
+        one: Prodajalec
+        other: Prodajalci
+    services:
+      _description: Vse storitve
+      label:
+        one: Storitev
+        other: Storitve
+    services_categories:
+      _description: Vse kategorije storitev
+      label:
+        one: Kategorija
+        other: Kategorije
+    tags:
+      _description: Vse oznake
+      label:
+        one: Oznaka
+        other: Oznake
+  fields:
+    address:
+      city:
+        label: Mesto
+      country:
+        label: Država
+      label: Naslov
+      street:
+        label: Ulica
+      zipcode:
+        label: Poštna številka
+    align:
+      label: Poravnava
+      options:
+        center: Sredina
+        end: Konec
+        start: Začetek
+    arguments:
+      label:
+        one: Argument
+        other: Argumenti
+    audio:
+      label:
+        one: Avdio
+        other: Avdio
+      mp3:
+        label: MP3
+        hint: Avdio datoteka MP3
+      ogg:
+        label: OGG
+        hint: Avdio datoteka OGG
+    author:
+      label: Avtor
+    autoplay:
+      label: Samodejno predvajanje
+    background:
+      label: S ozadjem?
+    background_color:
+      label: Barva ozadja
+    badge:
+      hint: Prikaži značko
+      label: Značka
+    blocks:
+      label:
+        one: Blok
+        other: Bloki
+    body:
+      label: Vsebina
+    breakpoints:
+      hint: Velikost zaslona
+      label:
+        one: Prelomna točka
+        other: Prelomne točke
+      options:
+        desktop: Namizje
+        laptop: Prenosnik
+        mobile: Mobilni
+        tablet: Tablica
+        wide_tablet: Široka tablica
+    carousel:
+      arrows:
+        label: Puščice
+      autoplay:
+        label: Samodejno predvajanje
+      focus:
+        hint: Postaviti aktivni diapozitiv na sredino?
+        label: Fokus
+      gap:
+        hint: Razmik med diapozitivi. Izraženo v rem.
+        label: Razmik
+      hint: Samo za prikaz vrtiljaka
+      label: Konfiguracija vrtiljaka
+      padding:
+        hint: Polnjenje levo/desno vrtiljaka. V vrednosti rem
+        label: Polnjenje
+      pagination:
+        label: Paginacija
+      params:
+        label: Parametri
+      perpage:
+        hint: Število diapozitivov za prikaz
+        label: Na stran
+      responsive:
+        label: Odziven
+      type:
+        label: Vrsta vrtiljaka
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Fade
+    chart:
+      label: Grafikon
+      data:
+        label: Podatki (koda)
+        hint: 'Dokumentacija: https://www.chartjs.org/docs/'
+      type:
+        label: Vrsta grafikona
+        options:
+          bar: Stolpčni
+          line: Črtni
+          pie: Tortni
+          polarArea: Polarno območje
+          radar: Radarski
+    class:
+      label: Razred
+      hint: Dodaj razred CSS tej komponenti
+    code:
+      label: Koda
+    color:
+      label: Barva
+    column:
+      label: Stolpec
+    contact:
+      label:
+        one: Stik
+        other: Stiki
+    controls:
+      label: Kontrole
+    coordinates:
+      hint: 'Enostavno najdite podatke o stiku: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Geografske koordinate
+      lat:
+        label: Zemljepisna širina
+      lng:
+        label: Zemljepisna dolžina
+    count:
+      hint: Elementi za prikaz
+      label: Število
+    credit:
+      label: Zasluge
+    cta:
+      label:
+        one: CTA
+        other: CTA
+    datas:
+      label:
+        one: Podatek
+        other: Podatki
+    date:
+      from: Od
+      label: Datum
+      sale: Datum prodaje
+      to: Do
+    description:
+      hint:
+        Prikazano v zavihkih, rezultatih iskanja in v predogledu SMS/Sporočil/Družbenih
+        omrežij
+      label: Opis
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Diagnostika energetske učinkovitosti (DPE)
+      ghg:
+        label: Co2
+        hint: Toplogredni plini (GHG)
+      label: Diagnostika
+      in_progress: V teku?
+    direction:
+      label: Smer
+      options:
+        ltr: Besedilo levo / slika desno
+        rtl: Slika levo / besedilo desno
+    discount:
+      hint: 'Znesek popusta, npr: 30%'
+      label: Popust
+      pattern: Samo vrednost (brez valute)
+    document:
+      label:
+        one: Dokument
+        other: Dokumenti
+    draft:
+      label: Osnutek
+    email:
+      label: E-pošta
+    embed:
+      label: Vdelava
+    event:
+      label:
+        one: Dogodek
+        other: Dogodki
+    fax:
+      label: Faks
+      hint: 'Mednarodni format, npr: +33 1 23 45 67 89'
+    featured_image:
+      hint: Prikazano v rezultatih iskanja in v predogledu SMS/Sporočil/Družbenih omrežij
+      label: Glavna slika
+    fee:
+      label:
+        one: Pristojbina
+        other: Pristojbine
+    figure:
+      label: Slika
+    form:
+      autocomplete:
+        label: Samodejno izpolnjevanje
+        options:
+          city: Mesto
+          country_name: Ime države
+          email: E-pošta
+          family_name: Priimek
+          given_name: Ime
+          honorific_prefix: Naziv
+          name: Ime
+          organization: Organizacija
+          postal_code: Poštna številka
+          state: Regija
+          street_address: Ulica
+          tel: Telefon
+      full:
+        label: Polje polne širine?
+      hiddens:
+        label:
+          one: Skrito polje
+          other: Skrita polja
+      items:
+        label:
+          one: Polje
+          other: Polja
+      label: Obrazec
+      options:
+        hint: Samo za izbirna polja
+        label:
+          one: Možnost
+          other: Možnosti
+      type:
+        hint: Izberite vrsto polja
+        email: E-pošta
+        label: Vrsta
+        radio: Radio
+        select: Izbira
+        tel: Telefon
+        text: Besedilo
+        textarea: Območje besedila
+      value:
+        hint: Samo za potrditvena polja in radio
+        label: Vrednost
+    gallery:
+      label: Galerija
+    grid:
+      label: Mreža
+      options:
+        container: Vsebnik
+        full: Polno
+        large: Veliko
+        medium: Srednje
+        small: Majhno
+    heading:
+      label: Naslov
+    hero:
+      label: Hero
+    icon:
+      hint: Ime ikone iz https://icons.getbootstrap.com/
+      label: Ikona
+    id:
+      label: ID
+    image:
+      label: 
+        one: Slika
+        other: Slike
+      alt:
+        hint: Za sliko, ki prenaša informacije (pustite prazno, če je slika okrasna)
+        label: Nadomestno besedilo
+      filter:
+        hint: Nastavite Linear za fotografijo ali posnetek zaslona, pustite prazno za ohranitev privzete konfiguracije
+        label: Spremeniti kakovost filtra?
+        options:
+          box: Preprost in hiter filter povprečenja primeren za pomanjšanje (privzeto)
+          catmullrom: Oster kubični filter, ki je hitrejši od filtra Lanczos, hkrati pa zagotavlja podobne rezultate
+          lanczos: Visokokakovosten filter ponovnega vzorčenja za fotografske slike, ki daje ostre rezultate
+          linear: Bilinearni filter ponovnega vzorčenja, proizvaja gladek izhod, hitrejši od kubičnih filtrov
+      src:
+        hint: 'Spremenite velikost in stisnite sliko pred pošiljanjem: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Slika
+    images:
+      label: 
+        one: Slika
+        other: Slike
+    is_background:
+      label: Je ozadje?
+    is_blank:
+      label: Je prazno?
+    is_card:
+      hint: Doda ozadje za besedilom
+      label: Je kartica?
+    is_darken:
+      label: Zatemniti?
+    is_exclusive:
+      label: Ekskluzivno?
+    is_half:
+      label: Polovična velikost?
+    is_highlighted:
+      label: Je poudarjeno?
+    is_logo:
+      hint: Postavljeno na sredino in neobrezano
+      label: Je logotip?
+    is_open:
+      label: Odprto?
+    is_pinned:
+      label: Pripeto?
+    is_screenshot:
+      label: Je posnetek zaslona?
+      hint: Dodaj lažni brskalnik
+    items:
+      label:
+        one: Element
+        other: Elementi
+    keyfeatures:
+      hint: 'npr: Lokacija, izpostavljenost…'
+      label:
+        one: ključna značilnost
+        other: Ključne značilnosti
+    label:
+      label: Oznaka
+    lang:
+      hint: Vnesite kodo jezika (npr. sl), če se razlikuje od jezika trenutne strani
+      label: Jezik
+    layout:
+      label: Postavitev
+      options:
+        carousel: Vrtiljak
+        grid: Mreža
+        list: Seznam
+    legal:
+      label: Pravno
+    legend:
+      label: Legenda
+    limit:
+      label: Omejitev
+    links:
+      label:
+        one: Povezava
+        other: Povezave
+    location:
+      label: Lokacija
+    loop:
+      label: Zanka
+    name:
+      label: Ime
+    map:
+      label: Zemljevid
+    newsletter:
+      form:
+        label: Obrazec
+    notes:
+      hint: 'Če želite povezati besedo v besedilu z opombo, ji dodajte pripono "[\\*]". Opombe in "[\\*]" so povezane po vrstnem redu.'
+      label:
+        one: Opomba
+        other: Opombe
+    offer:
+      label:
+        one: Ponudba
+        other: Ponudbe
+    offset:
+      label: Zamik
+      options:
+        center: Sredina
+        end: Konec
+        start: Začetek
+    parent:
+      label: Nadrejena stran
+    pdf:
+      label: PDF
+      hint: 'Stisnite PDF pred pošiljanjem: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Telefonska številka
+      hint: 'Mednarodni format, npr: +33 1 23 45 67 89'
+    placeholder:
+      label: Nadomestno besedilo
+    poster:
+      label: Plakat
+      hint: Nadomestna slika za video
+    prefix:
+      label: Predpona
+    press:
+      label: Tisk
+    price:
+      hide: Skrij ceno
+      hint: 'npr: 300000 (za 300 000 €)'
+      label: Cena
+      sold: Prodajna cena
+    quote:
+      label: Citat
+    realestates_energies:
+      label:
+        one: Energija
+        other: Energije
+      heating:
+        label: Ogrevanje
+        options:
+          collective: Skupno
+          individual: Individualno
+      heating_type:
+        label: Vrsta ogrevanja
+        options:
+          reversible_ac: Reverzibilna klimatska naprava
+          electric: Električno
+          gas: Plin
+          solar: Sončno
+    realestates_informations:
+      area:
+        hint: Izraženo v m2
+        label: Notranja površina
+      bathrooms:
+        label: Število kopalnic
+      bedrooms:
+        label: Število spalnic
+      district:
+        label: Okrožje
+      exposure:
+        label: Izpostavljenost
+      field:
+        hint: Izraženo v m2
+        label: Zunanja površina
+      floor:
+        label: Nadstropje
+      has_balcony:
+        label: Balkon?
+      has_box:
+        label: Shramba?
+      has_cave:
+        label: Klet?
+      has_elevator:
+        label: Dvigalo?
+      has_garage:
+        label: Garaža?
+      has_outbuilding:
+        label: Gospodarska stavba?
+      has_parking:
+        label: Parkirišče?
+      has_swimmingpool:
+        label: Bazen?
+      has_terrace:
+        label: Terasa?
+      label: Informacije
+      levels:
+        label: Število nadstropij
+      rooms:
+        label: Število sob
+      showerrooms:
+        label: Število kopalnic s prho
+      wc:
+        label: WC
+      year:
+        label: Leto gradnje
+    realestates_types:
+      label: Vrsta transakcije
+      options:
+        rent: Najem
+        sale: Prodaja
+    reference:
+      label: Referenca
+    rent:
+      label: Najem?
+    required:
+      label: Obvezno
+    section:
+      hint: Izberite razdelek za prikaz
+      label: Razdelek
+    show_more:
+      hint: Prikaže gumb za ogled več elementov
+      label: Prikaži več?
+    show_places:
+      hint: Samo če imate že shranjena mesta (to bo onemogočilo spodnji označevalec)
+      label: Prikaži vsa registrirana mesta?
+    slug:
+      hint: Pustite prazno za samodejno izpolnitev z naslovom. **Pazite na vpliv na SEO.**
+      label: Slug
+      pattern:
+        Vsebuje samo male črke, številke in pomišljaje, brez presledkov,
+        naglasov ali posebnih znakov
+    socials:
+      label:
+        one: Družbeno
+        other: Družbeno
+      plateform: Platforma
+      twitter:
+        label: Twitter/X
+        hint: Uporabniško ime
+    sold:
+      label: Prodano/najeto?
+    state:
+      label: Stanje
+      options:
+        danger: Nevarnost
+        dark: Temno
+        info: Info
+        light: Svetlo
+        primary: Primarno
+        secondary: Sekundarno
+        success: Uspeh
+        warning: Opozorilo
+    status:
+      label: Status
+    submit:
+      label: Besedilo gumba za pošiljanje
+    subtitle:
+      label: Podnaslov
+    suffix:
+      hint: 'npr: %'
+      label: Pripona
+    summary:
+      label: Povzetek
+    surtitle:
+      label: Nadnaslov
+    text:
+      label: Besedilo
+    title:
+      label: Naslov
+    title_page:
+      hint:
+        Prikazano v zavihkih, rezultatih iskanja in v predogledu SMS/Sporočil/Družbenih
+        omrežij
+      label: Naslov strani
+    transcription:
+      label: Prepis
+    url:
+      label: URL
+    value:
+      label: Vrednost
+    video:
+      label: 
+        one: Video
+        other: Videi
+      mp4:
+        label: MP4
+        hint: Video datoteka MP4
+        mobile:
+          label: MP4 (Mobilni)
+          hint: Video datoteka MP4 za mobilne naprave
+      webm:
+        label: WEBM
+        hint: Video datoteka WEBM
+        mobile:
+          label: WEBM (Mobilni)
+          hint: Video datoteka WEBM za mobilne naprave
+    website:
+      hint: URL (https://…)
+      label: Spletna stran
+    weight:
+      label: Položaj (pomembnost)
+      hint: Vedoč, da je 10 najpomembnejše in 100 najmanj pomembno
+    year: Leto
+    zoom:
+      label: Povečava
+  files:
+    banner: Informacijski pasica na vrhu strani
+    footer: Informacijsko besedilo na dnu strani
+    nav:
+      label: Navigacija
+      legal: Pravna navigacija (omembe, politika…)
+      primary: Primarna navigacija
+      secondary: Sekundarna navigacija
+      social: Družbena navigacija
+    seo:
+      label: Globalni SEO
+      title: Ime spletne strani
+  group:
+    year: Leto
+  shortcodes:
+    alert:
+      label: Opozorilo
+    badge:
+      label: Značka
+    blank_link:
+      label: Prazna povezava
+    blockquote:
+      label: Blokovni citat
+    button:
+      label: Gumb
+    details:
+      label: Podrobnosti
+    figure:
+      label: Slika
+    map:
+      label: Zemljevid
+    twitter:
+      _id: Twitter ID
+      label: Twitter / X
+      user: Twitter uporabniško ime
+    youtube:
+      _id: Youtube ID
+      label: Youtube

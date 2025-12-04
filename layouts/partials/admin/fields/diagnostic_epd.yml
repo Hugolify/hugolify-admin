@@ -1,0 +1,16 @@
+{{- $name := dict "name" "kwh" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "diagnostic_epd" "nameOverride" "kwh" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.diagnostic.epd.label")
+  "hint" (i18n "admin.fields.diagnostic.epd.hint")
+  "i18n" "duplicate"
+  "min" 0
+  "value_type" "float"
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/number.js" $args }}

@@ -1,12 +1,13 @@
-{
-  label: '{{ i18n "admin.fields.count.label" }}',
-  hint: '{{ i18n "admin.fields.count.hint" }}',
-  name: 'count',
-  widget: 'number',
-  required: true,
-  default: 4,
-  min: 1,
-  max: 10,
-  step: 1,
-  i18n: 'duplicate'
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.count.label")
+  "hint" (i18n "admin.fields.count.hint")
+  "name" "count"
+  "default" 4
+  "min" 1
+  "max" 10
+  "step" 1
+  "i18n" "duplicate"
+  "range" true
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

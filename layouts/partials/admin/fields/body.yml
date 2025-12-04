@@ -1,10 +1,6 @@
-{
-  label: '{{ i18n "admin.fields.body.label" }}',
-  name: 'body',
-  widget: 'markdown',
-  required: false,
-  i18n: true, 
-  {{- if eq site.Params.admin.cms "tinacms" }}
-  isBody: true
-  {{ end }}
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.body.label")
+  "name" "body"
+  -}}
+
+{{ partial "admin/widgets/markdown.js" $args }}

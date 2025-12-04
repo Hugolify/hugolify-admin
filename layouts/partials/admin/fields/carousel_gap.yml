@@ -1,0 +1,14 @@
+{{- $name := dict "name" "gap" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "carousel_gap" "nameOverride" "gap" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.carousel.gap.label")
+  "hint" (i18n "admin.fields.carousel.gap.hint")
+  "min" 0
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/number.js" $args }}

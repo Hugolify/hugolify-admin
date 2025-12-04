@@ -1,0 +1,10 @@
+{{- $fields := partial "admin/blocks/fields/images.html" . -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.blocks.images.label")
+  "name" "images"
+  "collapsed" false
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

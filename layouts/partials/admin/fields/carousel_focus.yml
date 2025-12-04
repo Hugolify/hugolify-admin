@@ -1,0 +1,13 @@
+{{- $name := dict "name" "focus" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "carousel_focus" "nameOverride" "focus" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.carousel.focus.label")
+  "default" true
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/boolean.js" $args }}

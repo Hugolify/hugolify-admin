@@ -1,1 +1,9 @@
-{{- partial "admin/fields/select.yml" (dict "field" "align" "options" (slice "start" "center" "end") "required" false) }}
+{{- $options := slice "start" "center" "end" -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.align.label")
+  "name" "align"
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

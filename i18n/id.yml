@@ -1,0 +1,846 @@
+admin:
+  blocks:
+    alert:
+      label: Peringatan
+    audio:
+      label: Audio
+    chart:
+      label: Grafik
+    comparison:
+      label: Perbandingan
+    cta:
+      label: Ajakan Bertindak
+    datas:
+      label: Data
+    editorial:
+      label: Editorial
+    embed:
+      label: Sematkan
+    faq:
+      label: FAQ
+    figure:
+      label: Gambar
+    form:
+      label: Formulir
+    gallery:
+      label: Galeri
+    images:
+      label: Gambar
+    informations:
+      label: Informasi
+    instagram:
+      label: Instagram
+    latest:
+      label: Item Terbaru
+    location:
+      label: Lokasi
+    logos:
+      label: Logo
+    map:
+      label: Peta
+    newsletter:
+      label: Buletin
+    paragraph:
+      label: Paragraf
+    pushes:
+      label: Pemberitahuan
+    quote:
+      label: Kutipan
+    search:
+      label: Pencarian
+    selected:
+      label: Pilihan {{ .section }}
+    testimonials:
+      label: Testimoni
+    timeline:
+      label: Linimasa
+    title:
+      label: Judul
+    video:
+      label: Video
+  collections:
+    authors:
+      label:
+        one: Penulis
+        other: Penulis
+    casestudies:
+      _description: Semua studi kasus
+      label:
+        one: Studi Kasus
+        other: Studi Kasus
+    categories:
+      label:
+        one: Kategori
+        other: Kategori
+    config:
+      _description: Semua konfigurasi
+      label:
+        one: Konfigurasi
+        other: Konfigurasi
+    docs:
+      _description: Semua dokumen
+      label:
+        one: Dokumen
+        other: Dokumen
+    events:
+      _description: Semua acara
+      label:
+        one: Acara
+        other: Acara
+    events_categories:
+      _description: Semua kategori acara
+      label:
+        one: Kategori
+        other: Kategori
+    expertises:
+      _description: Semua keahlian
+      label:
+        one: Keahlian
+        other: Keahlian
+    home: Beranda
+    indexes:
+      _description: Semua halaman indeks
+      label:
+        one: Indeks
+        other: Indeks
+    jobs:
+      _description: Semua pekerjaan
+      label:
+        one: Pekerjaan
+        other: Pekerjaan
+    jobs_categories:
+      _description: Semua kategori berita
+      label:
+        one: Kategori
+        other: Kategori
+    jobs_expertises:
+      _description: Semua keahlian
+      label:
+        one: Keahlian
+        other: Keahlian
+    jobs_places:
+      _description: Semua tempat
+      label:
+        one: Tempat
+        other: Tempat
+    jobs_tags:
+      _description: Semua tag produk
+      label:
+        one: Tag
+        other: Tag
+    pages:
+      _description: Semua halaman
+      label:
+        one: Halaman
+        other: Halaman
+    persons:
+      _description: Semua orang
+      label:
+        one: Orang
+        other: Orang
+    persons_expertises:
+      _description: Semua keahlian
+      label:
+        one: Keahlian
+        other: Keahlian
+    persons_places:
+      _description: Semua tempat
+      label:
+        one: Tempat
+        other: Tempat
+    persons_statutes:
+      _description: Semua status
+      label:
+        one: Status
+        other: Status
+    places:
+      _description: Semua tempat
+      label:
+        one: Tempat
+        other: Tempat
+    posts:
+      _description: Semua berita
+      label:
+        one: Berita
+        other: Berita
+    posts_categories:
+      _description: Semua kategori berita
+      label:
+        one: Kategori
+        other: Kategori
+    posts_expertises:
+      _description: Semua keahlian
+      label:
+        one: Keahlian
+        other: Keahlian
+    posts_tags:
+      _description: Semua tag berita
+      label:
+        one: Tag
+        other: Tag
+    products:
+      _description: Semua produk
+      label:
+        one: Produk
+        other: Produk
+    products_categories:
+      _description: Semua kategori produk
+      label:
+        one: Kategori
+        other: Kategori
+    products_tags:
+      _description: Semua tag produk
+      label:
+        one: Tag
+        other: Tag
+    projects:
+      _description: Semua proyek
+      label:
+        one: Proyek
+        other: Proyek
+    projects_tags:
+      _description: Semua tag proyek
+      label:
+        one: Tag
+        other: Tag
+    projects_types:
+      _description: Semua jenis proyek
+      label:
+        one: Jenis
+        other: Jenis
+    publications:
+      _description: Semua publikasi
+      label:
+        one: Publikasi
+        other: Publikasi
+    publications_categories:
+      _description: Semua kategori publikasi
+      label:
+        one: Kategori
+        other: Kategori
+    publications_expertises:
+      _description: Semua keahlian
+      label:
+        one: Keahlian
+        other: Keahlian
+    publications_persons:
+      label:
+        one: Orang
+        other: Orang
+    realestates:
+      _description: Semua real estat
+      label:
+        one: Real Estat
+        other: Real Estat
+    realestates_categories:
+      _description: Semua kategori real estat
+      label:
+        one: Kategori
+        other: Kategori
+    realestates_persons:
+      _description: Semua agen
+      label:
+        one: Agen
+        other: Agen
+    realestates_sellers:
+      _description: Semua penjual
+      label:
+        one: Penjual
+        other: Penjual
+    services:
+      _description: Semua layanan
+      label:
+        one: Layanan
+        other: Layanan
+    services_categories:
+      _description: Semua kategori layanan
+      label:
+        one: Kategori
+        other: Kategori
+    tags:
+      _description: Semua tag
+      label:
+        one: Tag
+        other: Tag
+  fields:
+    address:
+      city:
+        label: Kota
+      country:
+        label: Negara
+      label: Alamat
+      street:
+        label: Jalan
+      zipcode:
+        label: Kode Pos
+    align:
+      label: Penjajaran
+      options:
+        center: Tengah
+        end: Akhir
+        start: Awal
+    arguments:
+      label:
+        one: Argumen
+        other: Argumen
+    audio:
+      label:
+        one: Audio
+        other: Audio
+      mp3:
+        label: MP3
+        hint: File audio MP3
+      ogg:
+        label: OGG
+        hint: File audio OGG
+    author:
+      label: Penulis
+    autoplay:
+      label: Putar Otomatis
+    background:
+      label: Dengan latar belakang?
+    background_color:
+      label: Warna Latar Belakang
+    badge:
+      hint: Tampilkan lencana
+      label: Lencana
+    blocks:
+      label:
+        one: Blok
+        other: Blok
+    body:
+      label: Isi
+    breakpoints:
+      hint: Ukuran layar
+      label:
+        one: Titik Henti
+        other: Titik Henti
+      options:
+        desktop: Desktop
+        laptop: Laptop
+        mobile: Seluler
+        tablet: Tablet
+        wide_tablet: Tablet Lebar
+    carousel:
+      arrows:
+        label: Panah
+      autoplay:
+        label: Putar Otomatis
+      focus:
+        hint: Posisikan slide aktif di tengah?
+        label: Fokus
+      gap:
+        hint: Celah antara slide. Dinyatakan dalam rem.
+        label: Celah
+      hint: Hanya untuk tampilan korsel
+      label: Konfigurasi Korsel
+      padding:
+        hint: Padding kiri/kanan korsel. Dalam nilai rem
+        label: Padding
+      pagination:
+        label: Paginasi
+      params:
+        label: Parameter
+      perpage:
+        hint: Jumlah slide yang akan ditampilkan
+        label: Per halaman
+      responsive:
+        label: Responsif
+      type:
+        label: Jenis Korsel
+        options:
+          slide: Slide
+          loop: Loop
+          fade: Pudar
+    chart:
+      label: Grafik
+      data:
+        label: Data (kode)
+        hint: 'Dokumentasi: https://www.chartjs.org/docs/'
+      type:
+        label: Jenis Grafik
+        options:
+          bar: Batang
+          line: Garis
+          pie: Pai
+          polarArea: Area Kutub
+          radar: Radar
+    class:
+      label: Kelas
+      hint: Tambahkan kelas CSS ke komponen ini
+    code:
+      label: Kode
+    color:
+      label: Warna
+    column:
+      label: Kolom
+    contact:
+      label:
+        one: Kontak
+        other: Kontak
+    controls:
+      label: Kontrol
+    coordinates:
+      hint: 'Temukan detail kontak dengan mudah: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: Koordinat Geografis
+      lat:
+        label: Lintang
+      lng:
+        label: Bujur
+    count:
+      hint: Item untuk ditampilkan
+      label: Jumlah
+    credit:
+      label: Kredit
+    cta:
+      label:
+        one: CTA
+        other: CTA
+    datas:
+      label:
+        one: Data
+        other: Data
+    date:
+      from: Dari
+      label: Tanggal
+      sale: Tanggal Penjualan
+      to: Sampai
+    description:
+      hint:
+        Ditampilkan di tab, hasil pencarian, dan di pratinjau SMS/Pesan/Jejaring Sosial
+        pratinjau
+      label: Deskripsi
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: Diagnostik Kinerja Energi (DPE)
+      ghg:
+        label: Co2
+        hint: Gas Rumah Kaca (GHG)
+      label: Diagnostik
+      in_progress: Sedang berlangsung?
+    direction:
+      label: Arah
+      options:
+        ltr: Teks di kiri / gambar di kanan
+        rtl: Gambar di kiri / teks di kanan
+    discount:
+      hint: 'Jumlah pengurangan, mis: 30%'
+      label: Diskon
+      pattern: Hanya nilai (tanpa mata uang)
+    document:
+      label:
+        one: Dokumen
+        other: Dokumen
+    draft:
+      label: Draf
+    email:
+      label: Email
+    embed:
+      label: Sematkan
+    event:
+      label:
+        one: Acara
+        other: Acara
+    fax:
+      label: Faks
+      hint: 'Format internasional, mis: +33 1 23 45 67 89'
+    featured_image:
+      hint: Ditampilkan di hasil pencarian, dan di pratinjau SMS/Pesan/Jejaring Sosial
+      label: Gambar Utama
+    fee:
+      label:
+        one: Biaya
+        other: Biaya
+    figure:
+      label: Gambar
+    form:
+      autocomplete:
+        label: Pelengkap Otomatis
+        options:
+          city: Kota
+          country_name: Nama Negara
+          email: Email
+          family_name: Nama Belakang
+          given_name: Nama Depan
+          honorific_prefix: Gelar
+          name: Nama
+          organization: Organisasi
+          postal_code: Kode Pos
+          state: Negara Bagian
+          street_address: Alamat Jalan
+          tel: Telp
+      full:
+        label: Bidang lebar penuh?
+      hiddens:
+        label:
+          one: Bidang Tersembunyi
+          other: Bidang Tersembunyi
+      items:
+        label:
+          one: Bidang
+          other: Bidang
+      label: Formulir
+      options:
+        hint: Hanya untuk bidang pilih
+        label:
+          one: Opsi
+          other: Opsi
+      type:
+        hint: Pilih jenis bidang
+        email: Email
+        label: Jenis
+        radio: Radio
+        select: Pilih
+        tel: Telepon
+        text: Teks
+        textarea: Area Teks
+      value:
+        hint: Hanya untuk bidang kotak centang dan radio
+        label: Nilai
+    gallery:
+      label: Galeri
+    grid:
+      label: Kisi
+      options:
+        container: Kontainer
+        full: Penuh
+        large: Besar
+        medium: Sedang
+        small: Kecil
+    heading:
+      label: Judul
+    hero:
+      label: Hero
+    icon:
+      hint: Nama ikon dari https://icons.getbootstrap.com/
+      label: Ikon
+    id:
+      label: ID
+    image:
+      label: 
+        one: Gambar
+        other: Gambar
+      alt:
+        hint: Untuk gambar yang menyampaikan informasi (biarkan kosong jika gambar dekoratif)
+        label: Teks Alternatif
+      filter:
+        hint: Atur Linear untuk gambar atau tangkapan layar, biarkan kosong untuk menyimpan konfigurasi default
+        label: Ubah kualitas filter?
+        options:
+          box: Filter rata-rata sederhana dan cepat yang sesuai untuk pengecilan skala (default)
+          catmullrom: Filter kubik tajam yang lebih cepat dari filter Lanczos sambil memberikan hasil serupa
+          lanczos: Filter resampling berkualitas tinggi untuk gambar fotografi yang menghasilkan hasil tajam
+          linear: Filter resampling bilinear, menghasilkan output halus, lebih cepat dari filter kubik
+      src:
+        hint: 'Ubah ukuran dan kompres gambar sebelum mengirim: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: Gambar
+    images:
+      label: 
+        one: Gambar
+        other: Gambar
+    is_background:
+      label: Apakah latar belakang?
+    is_blank:
+      label: Apakah kosong?
+    is_card:
+      hint: Menambahkan latar belakang di belakang teks
+      label: Apakah kartu?
+    is_darken:
+      label: Gelapkan?
+    is_exclusive:
+      label: Eksklusif?
+    is_half:
+      label: Setengah ukuran?
+    is_highlighted:
+      label: Disorot?
+    is_logo:
+      hint: Diposisikan di tengah dan tidak dipotong
+      label: Apakah logo?
+    is_open:
+      label: Buka?
+    is_pinned:
+      label: Disematkan?
+    is_screenshot:
+      hint: Tambahkan browser palsu
+      label: Apakah tangkapan layar?
+    items:
+      label:
+        one: Item
+        other: Item
+    keyfeatures:
+      hint: 'mis: Lokasi, paparan…'
+      label:
+        one: fitur utama
+        other: Fitur Utama
+    label:
+      label: Label
+    lang:
+      hint: Masukkan kode bahasa (mis. fr) jika berbeda dari bahasa halaman saat ini
+      label: Bahasa
+    layout:
+      label: Tata Letak
+      options:
+        carousel: Korsel
+        grid: Kisi
+        list: Daftar
+    legal:
+      label: Hukum
+    legend:
+      label: Legenda
+    limit:
+      label: Batas
+    links:
+      label:
+        one: Tautan
+        other: Tautan
+    location:
+      label: Lokasi
+    loop:
+      label: Loop
+    name:
+      label: Nama
+    map:
+      label: Peta
+    newsletter:
+      form:
+        label: Formulir
+    notes:
+      hint: 'Untuk menautkan kata dalam teks ke catatan, tambahkan "[\*]" di belakangnya. Catatan dan "[\*]" ditautkan berdasarkan urutannya.'
+      label:
+        one: Catatan
+        other: Catatan
+    offer:
+      label:
+        one: Penawaran
+        other: Penawaran
+    offset:
+      label: Offset
+      options:
+        center: Tengah
+        end: Akhir
+        start: Awal
+    parent:
+      label: Halaman Induk
+    pdf:
+      label: PDF
+      hint: 'Kompres PDF sebelum mengirim: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: Nomor Telepon
+      hint: 'Format internasional, mis: +33 1 23 45 67 89'
+    placeholder:
+      label: Placeholder
+    poster:
+      label: Poster
+      hint: Gambar poster untuk video
+    prefix:
+      label: Awalan
+    press:
+      label: Pers
+    price:
+      hide: Sembunyikan harga
+      hint: 'mis: 300000 (untuk 300.000 Rp)'
+      label: Harga
+      sold: Harga Jual
+    quote:
+      label: Kutipan
+    realestates_energies:
+      label:
+        one: Energi
+        other: Energi
+      heating:
+        label: Pemanas
+        options:
+          collective: Kolektif
+          individual: Individu
+      heating_type:
+        label: Jenis Pemanas
+        options:
+          reversible_ac: AC Reversibel
+          electric: Listrik
+          gas: Gas
+          solar: Surya
+    realestates_informations:
+      area:
+        hint: Dinyatakan dalam m2
+        label: Permukaan Interior
+      bathrooms:
+        label: Jumlah Kamar Mandi
+      bedrooms:
+        label: Jumlah Kamar Tidur
+      district:
+        label: Distrik
+      exposure:
+        label: Paparan
+      field:
+        hint: Dinyatakan dalam m2
+        label: Permukaan Eksterior
+      floor:
+        label: Lantai
+      has_balcony:
+        label: Balkon?
+      has_box:
+        label: Kotak?
+      has_cave:
+        label: Gua?
+      has_elevator:
+        label: Lift?
+      has_garage:
+        label: Garasi?
+      has_outbuilding:
+        label: Bangunan Tambahan?
+      has_parking:
+        label: Parkir?
+      has_swimmingpool:
+        label: Kolam Renang?
+      has_terrace:
+        label: Teras?
+      label: Informasi
+      levels:
+        label: Jumlah Lantai
+      rooms:
+        label: Jumlah Ruangan
+      showerrooms:
+        label: Jumlah Kamar Mandi
+      wc:
+        label: WC
+      year:
+        label: Tahun Konstruksi
+    realestates_types:
+      label: Jenis Transaksi
+      options:
+        rent: Sewa
+        sale: Jual
+    reference:
+      label: Referensi
+    rent:
+      label: Sewa?
+    required:
+      label: Wajib
+    section:
+      hint: Pilih bagian yang akan ditampilkan
+      label: Bagian
+    show_more:
+      hint: Menampilkan tombol untuk melihat lebih banyak item
+      label: Tampilkan lebih banyak?
+    show_places:
+      hint: Hanya jika Anda memiliki tempat yang sudah disimpan (ini akan menonaktifkan penanda di bawah)
+      label: Tampilkan semua tempat terdaftar?
+    slug:
+      hint: Biarkan kosong untuk mengotomatiskan dengan judul. **Hati-hati dengan dampak SEO.**
+      label: Slug
+      pattern:
+        Hanya berisi huruf kecil, angka, dan tanda hubung, tanpa spasi,
+        aksen, atau karakter khusus
+    socials:
+      label:
+        one: Sosial
+        other: Sosial
+      plateform: Platform
+      twitter:
+        label: Twitter/X
+        hint: Nama Pengguna
+    sold:
+      label: Terjual/Disewa?
+    state:
+      label: Keadaan
+      options:
+        danger: Bahaya
+        dark: Gelap
+        info: Info
+        light: Terang
+        primary: Utama
+        secondary: Sekunder
+        success: Sukses
+        warning: Peringatan
+    status:
+      label: Status
+    submit:
+      label: Teks Tombol Kirim
+    subtitle:
+      label: Subjudul
+    suffix:
+      hint: 'mis: %'
+      label: Akhiran
+    summary:
+      label: Ringkasan
+    surtitle:
+      label: Judul Atas
+    text:
+      label: Teks
+    title:
+      label: Judul
+    title_page:
+      hint:
+        Ditampilkan di tab, hasil pencarian, dan di pratinjau SMS/Pesan/Jejaring Sosial
+        pratinjau
+      label: Judul Halaman
+    transcription:
+      label: Transkripsi
+    url:
+      label: URL
+    value:
+      label: Nilai
+    video:
+      label: 
+        one: Video
+        other: Video
+      mp4:
+        label: MP4
+        hint: File video MP4
+        mobile:
+          label: MP4 (Seluler)
+          hint: File video MP4 untuk seluler
+      webm:
+        label: WEBM
+        hint: File video WEBM
+        mobile:
+          label: WEBM (Seluler)
+          hint: File video WEBM untuk seluler
+    website:
+      hint: URL (https://…)
+      label: Situs Web
+    weight:
+      label: Posisi (kepentingan)
+      hint: Mengetahui bahwa 10 adalah yang paling penting dan 100 yang paling tidak penting
+    year: Tahun
+    zoom:
+      label: Zoom
+  files:
+    banner: Spanduk informasi di bagian atas situs
+    footer: Teks informasi di bagian bawah situs
+    nav:
+      label: Navigasi
+      legal: Navigasi hukum (sebutan, kebijakan…)
+      primary: Navigasi Utama
+      secondary: Navigasi Sekunder
+      social: Navigasi Sosial
+    seo:
+      label: SEO Global
+      title: Nama Situs Web
+  group:
+    year: Tahun
+  shortcodes:
+    alert:
+      label: Peringatan
+    badge:
+      label: Lencana
+    blank_link:
+      label: Tautan Kosong
+    blockquote:
+      label: Kutipan Blok
+    button:
+      label: Tombol
+    details:
+      label: Detail
+    figure:
+      label: Gambar
+    map:
+      label: Peta
+    twitter:
+      _id: ID Twitter
+      label: Twitter / X
+      user: Nama Pengguna Twitter
+    youtube:
+      _id: ID Youtube
+      label: Youtube

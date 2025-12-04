@@ -1,1 +1,17 @@
-{{- partial "admin/fields/select.yml" (dict "field" "type" "i18n" "chart.type" "options" (slice "bar" "pie" "line" "polarArea" "radar") "default" "bar") }}
+{{- $name := dict "name" "type" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "chart_type" "nameOverride" "type" }}
+{{- end }}
+
+{{- $options := slice "bar" "pie" "line" "polarArea" "radar" }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.chart.type.label")
+  "label_options" "admin.fields.chart.type.options"
+  "default" "bar"
+  "options" $options
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/select.js" $args }}

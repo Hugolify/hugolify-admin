@@ -1,8 +1,7 @@
-{
-  label: '{{ i18n "admin.fields.draft.label" }}',
-  name: 'draft',
-  widget: 'boolean',
-  default: true,
-  required: false,
-  i18n: true
-}
+{{- $args := dict 
+  "label" (i18n "admin.fields.draft.label")
+  "name" "draft"
+  "default" true
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

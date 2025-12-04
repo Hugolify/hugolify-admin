@@ -1,16 +1,14 @@
 {
-  name: realestates_sellers,
-  folder: content/realestates_sellers,
+  name: 'realestates_sellers',
+  folder: 'content/realestates_sellers',
   label: '{{ i18n "admin.collections.realestates_sellers.label" }}',
   label_singular: '{{ i18n "admin.collections.realestates_sellers.label" 1 }}',
   description: '{{ i18n "admin.collections.realestates_sellers._description" }}',
-  
-  create: {{ site.Params.admin.collections.realestates_sellers.create | default true }},
-  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
-
-  path: '{{`{{slug}}/_index`}}',
-  {{ partial "admin/collections/config/slug.yml" }}
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
+  {{ partial "admin/collections/config/path.yml" . }}
+  {{ partial "admin/collections/config/slug.yml" . }}
   
   {{ partial "admin/collections/types/_default.yml" . }}
 }

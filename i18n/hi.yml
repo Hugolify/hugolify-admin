@@ -1,0 +1,846 @@
+admin:
+  blocks:
+    alert:
+      label: चेतावनी
+    audio:
+      label: ऑडियो
+    chart:
+      label: चार्ट
+    comparison:
+      label: तुलना
+    cta:
+      label: कॉल टू एक्शन
+    datas:
+      label: डेटा
+    editorial:
+      label: संपादकीय
+    embed:
+      label: एम्बेड
+    faq:
+      label: सामान्य प्रश्न
+    figure:
+      label: आकृति
+    form:
+      label: फॉर्म
+    gallery:
+      label: गैलरी
+    images:
+      label: चित्र
+    informations:
+      label: जानकारी
+    instagram:
+      label: इंस्टाग्राम
+    latest:
+      label: नवीनतम आइटम
+    location:
+      label: स्थान
+    logos:
+      label: लोगो
+    map:
+      label: मानचित्र
+    newsletter:
+      label: न्यूज़लैटर
+    paragraph:
+      label: अनुच्छेद
+    pushes:
+      label: सूचनाएं
+    quote:
+      label: उद्धरण
+    search:
+      label: खोज
+    selected:
+      label: चयन {{ .section }}
+    testimonials:
+      label: प्रशंसापत्र
+    timeline:
+      label: समयरेखा
+    title:
+      label: शीर्षक
+    video:
+      label: वीडियो
+  collections:
+    authors:
+      label:
+        one: लेखक
+        other: लेखक
+    casestudies:
+      _description: सभी केस स्टडी
+      label:
+        one: केस स्टडी
+        other: केस स्टडीज
+    categories:
+      label:
+        one: श्रेणी
+        other: श्रेणियाँ
+    config:
+      _description: सभी कॉन्फ़िगरेशन
+      label:
+        one: कॉन्फ़िगरेशन
+        other: कॉन्फ़िगरेशन
+    docs:
+      _description: सभी दस्तावेज़
+      label:
+        one: दस्तावेज़
+        other: दस्तावेज़
+    events:
+      _description: सभी कार्यक्रम
+      label:
+        one: कार्यक्रम
+        other: कार्यक्रम
+    events_categories:
+      _description: सभी कार्यक्रम श्रेणियाँ
+      label:
+        one: श्रेणी
+        other: श्रेणियाँ
+    expertises:
+      _description: सभी विशेषज्ञता
+      label:
+        one: विशेषज्ञता
+        other: विशेषज्ञता
+    home: होम
+    indexes:
+      _description: सभी इंडेक्स पेज
+      label:
+        one: इंडेक्स
+        other: इंडेक्स
+    jobs:
+      _description: सभी नौकरियां
+      label:
+        one: नौकरी
+        other: नौकरियां
+    jobs_categories:
+      _description: सभी समाचार श्रेणियाँ
+      label:
+        one: श्रेणी
+        other: श्रेणियाँ
+    jobs_expertises:
+      _description: सभी विशेषज्ञता
+      label:
+        one: विशेषज्ञता
+        other: विशेषज्ञता
+    jobs_places:
+      _description: सभी स्थान
+      label:
+        one: स्थान
+        other: स्थान
+    jobs_tags:
+      _description: सभी उत्पाद टैग
+      label:
+        one: टैग
+        other: टैग
+    pages:
+      _description: सभी पृष्ठ
+      label:
+        one: पृष्ठ
+        other: पृष्ठ
+    persons:
+      _description: सभी व्यक्ति
+      label:
+        one: व्यक्ति
+        other: व्यक्ति
+    persons_expertises:
+      _description: सभी विशेषज्ञता
+      label:
+        one: विशेषज्ञता
+        other: विशेषज्ञता
+    persons_places:
+      _description: सभी स्थान
+      label:
+        one: स्थान
+        other: स्थान
+    persons_statutes:
+      _description: सभी क़ानून
+      label:
+        one: स्थिति
+        other: क़ानून
+    places:
+      _description: सभी स्थान
+      label:
+        one: स्थान
+        other: स्थान
+    posts:
+      _description: सभी समाचार
+      label:
+        one: समाचार
+        other: समाचार
+    posts_categories:
+      _description: सभी समाचार श्रेणियाँ
+      label:
+        one: श्रेणी
+        other: श्रेणियाँ
+    posts_expertises:
+      _description: सभी विशेषज्ञता
+      label:
+        one: विशेषज्ञता
+        other: विशेषज्ञता
+    posts_tags:
+      _description: सभी समाचार टैग
+      label:
+        one: टैग
+        other: टैग
+    products:
+      _description: सभी उत्पाद
+      label:
+        one: उत्पाद
+        other: उत्पाद
+    products_categories:
+      _description: सभी उत्पाद श्रेणियाँ
+      label:
+        one: श्रेणी
+        other: श्रेणियाँ
+    products_tags:
+      _description: सभी उत्पाद टैग
+      label:
+        one: टैग
+        other: टैग
+    projects:
+      _description: सभी परियोजनाएं
+      label:
+        one: परियोजना
+        other: परियोजनाएं
+    projects_tags:
+      _description: सभी परियोजना टैग
+      label:
+        one: टैग
+        other: टैग
+    projects_types:
+      _description: सभी परियोजना प्रकार
+      label:
+        one: प्रकार
+        other: प्रकार
+    publications:
+      _description: सभी प्रकाशन
+      label:
+        one: प्रकाशन
+        other: प्रकाशन
+    publications_categories:
+      _description: सभी प्रकाशन श्रेणियाँ
+      label:
+        one: श्रेणी
+        other: श्रेणियाँ
+    publications_expertises:
+      _description: सभी विशेषज्ञता
+      label:
+        one: विशेषज्ञता
+        other: विशेषज्ञता
+    publications_persons:
+      label:
+        one: व्यक्ति
+        other: व्यक्ति
+    realestates:
+      _description: सभी अचल संपत्ति
+      label:
+        one: अचल संपत्ति
+        other: अचल संपत्ति
+    realestates_categories:
+      _description: सभी अचल संपत्ति श्रेणियाँ
+      label:
+        one: श्रेणी
+        other: श्रेणियाँ
+    realestates_persons:
+      _description: सभी एजेंट
+      label:
+        one: एजेंट
+        other: एजेंट
+    realestates_sellers:
+      _description: सभी विक्रेता
+      label:
+        one: विक्रेता
+        other: विक्रेता
+    services:
+      _description: सभी सेवाएं
+      label:
+        one: सेवा
+        other: सेवाएं
+    services_categories:
+      _description: सभी सेवा श्रेणियाँ
+      label:
+        one: श्रेणी
+        other: श्रेणियाँ
+    tags:
+      _description: सभी टैग
+      label:
+        one: टैग
+        other: टैग
+  fields:
+    address:
+      city:
+        label: शहर
+      country:
+        label: देश
+      label: पता
+      street:
+        label: सड़क
+      zipcode:
+        label: डाक कोड
+    align:
+      label: संरेखण
+      options:
+        center: केंद्र
+        end: अंत
+        start: प्रारंभ
+    arguments:
+      label:
+        one: तर्क
+        other: तर्क
+    audio:
+      label:
+        one: ऑडियो
+        other: ऑडियो
+      mp3:
+        label: MP3
+        hint: MP3 ऑडियो फ़ाइल
+      ogg:
+        label: OGG
+        hint: OGG ऑडियो फ़ाइल
+    author:
+      label: लेखक
+    autoplay:
+      label: ऑटोप्ले
+    background:
+      label: पृष्ठभूमि के साथ?
+    background_color:
+      label: पृष्ठभूमि का रंग
+    badge:
+      hint: बैज दिखाएं
+      label: बैज
+    blocks:
+      label:
+        one: ब्लॉक
+        other: ब्लॉक
+    body:
+      label: मुख्य भाग
+    breakpoints:
+      hint: स्क्रीन का आकार
+      label:
+        one: ब्रेकपॉइंट
+        other: ब्रेकपॉइंट्स
+      options:
+        desktop: डेस्कटॉप
+        laptop: लैपटॉप
+        mobile: मोबाइल
+        tablet: टैबलेट
+        wide_tablet: वाइड टैबलेट
+    carousel:
+      arrows:
+        label: तीर
+      autoplay:
+        label: ऑटोप्ले
+      focus:
+        hint: सक्रिय स्लाइड को केंद्र में रखें?
+        label: फोकस
+      gap:
+        hint: स्लाइड के बीच का अंतर। रेम में व्यक्त।
+        label: अंतर
+      hint: केवल हिंडोला प्रदर्शन के लिए
+      label: हिंडोला कॉन्फ़िगरेशन
+      padding:
+        hint: हिंडोला के बाएं/दाएं पैडिंग। रेम मान में
+        label: पैडिंग
+      pagination:
+        label: पृष्ठांकन
+      params:
+        label: पैरामीटर
+      perpage:
+        hint: प्रदर्शित करने के लिए स्लाइड की संख्या
+        label: प्रति पृष्ठ
+      responsive:
+        label: उत्तरदायी
+      type:
+        label: हिंडोला प्रकार
+        options:
+          slide: स्लाइड
+          loop: लूप
+          fade: फीका
+    chart:
+      label: चार्ट
+      data:
+        label: डेटा (कोड)
+        hint: 'दस्तावेज़ीकरण: https://www.chartjs.org/docs/'
+      type:
+        label: चार्ट प्रकार
+        options:
+          bar: बार
+          line: लाइन
+          pie: पाई
+          polarArea: ध्रुवीय क्षेत्र
+          radar: रडार
+    class:
+      label: क्लास
+      hint: इस घटक में CSS क्लास जोड़ें
+    code:
+      label: कोड
+    color:
+      label: रंग
+    column:
+      label: कॉलम
+    contact:
+      label:
+        one: संपर्क
+        other: संपर्क
+    controls:
+      label: नियंत्रण
+    coordinates:
+      hint: 'आसानी से संपर्क विवरण खोजें: https://www.latlong.net/convert-address-to-lat-long.html'
+      label: भौगोलिक निर्देशांक
+      lat:
+        label: अक्षांश
+      lng:
+        label: देशांतर
+    count:
+      hint: प्रदर्शित करने के लिए आइटम
+      label: गिनती
+    credit:
+      label: क्रेडिट
+    cta:
+      label:
+        one: CTA
+        other: CTAs
+    datas:
+      label:
+        one: डेटा
+        other: डेटा
+    date:
+      from: से
+      label: दिनांक
+      sale: बिक्री की तारीख
+      to: तक
+    description:
+      hint:
+        टैब, खोज परिणामों और एसएमएस/संदेश/सोशल नेटवर्क पूर्वावलोकन में प्रदर्शित
+        पूर्वावलोकन
+      label: विवरण
+    diagnostic:
+      epd:
+        label: Kwh
+        hint: ऊर्जा प्रदर्शन निदान (DPE)
+      ghg:
+        label: Co2
+        hint: ग्रीनहाउस गैस (GHG)
+      label: निदान
+      in_progress: प्रगति पर है?
+    direction:
+      label: दिशा
+      options:
+        ltr: बाईं ओर टेक्स्ट / दाईं ओर छवि
+        rtl: बाईं ओर छवि / दाईं ओर टेक्स्ट
+    discount:
+      hint: 'कमी की राशि, उदाहरण: 30%'
+      label: छूट
+      pattern: केवल मान (मुद्रा के बिना)
+    document:
+      label:
+        one: दस्तावेज़
+        other: दस्तावेज़
+    draft:
+      label: मसौदा
+    email:
+      label: ईमेल
+    embed:
+      label: एम्बेड
+    event:
+      label:
+        one: कार्यक्रम
+        other: कार्यक्रम
+    fax:
+      label: फैक्स
+      hint: 'अंतर्राष्ट्रीय प्रारूप, उदाहरण: +33 1 23 45 67 89'
+    featured_image:
+      hint: खोज परिणामों और एसएमएस/संदेश/सोशल नेटवर्क पूर्वावलोकन में प्रदर्शित
+      label: मुख्य छवि
+    fee:
+      label:
+        one: शुल्क
+        other: शुल्क
+    figure:
+      label: आकृति
+    form:
+      autocomplete:
+        label: स्वतः पूर्ण
+        options:
+          city: शहर
+          country_name: देश का नाम
+          email: ईमेल
+          family_name: उपनाम
+          given_name: प्रथम नाम
+          honorific_prefix: शीर्षक
+          name: नाम
+          organization: संगठन
+          postal_code: डाक कोड
+          state: राज्य
+          street_address: सड़क का पता
+          tel: दूरभाष
+      full:
+        label: पूर्ण चौड़ाई क्षेत्र?
+      hiddens:
+        label:
+          one: छिपा हुआ क्षेत्र
+          other: छिपे हुए क्षेत्र
+      items:
+        label:
+          one: क्षेत्र
+          other: क्षेत्र
+      label: फॉर्म
+      options:
+        hint: केवल चयन क्षेत्रों के लिए
+        label:
+          one: विकल्प
+          other: विकल्प
+      type:
+        hint: क्षेत्र प्रकार चुनें
+        email: ईमेल
+        label: प्रकार
+        radio: रेडियो
+        select: चयन
+        tel: टेलीफोन
+        text: टेक्स्ट
+        textarea: टेक्स्ट एरिया
+      value:
+        hint: केवल चेकबॉक्स और रेडियो क्षेत्रों के लिए
+        label: मान
+    gallery:
+      label: गैलरी
+    grid:
+      label: ग्रिड
+      options:
+        container: कंटेनर
+        full: पूर्ण
+        large: बड़ा
+        medium: मध्यम
+        small: छोटा
+    heading:
+      label: शीर्षक
+    hero:
+      label: हीरो
+    icon:
+      hint: https://icons.getbootstrap.com/ से आइकन का नाम
+      label: आइकन
+    id:
+      label: आईडी
+    image:
+      label: 
+        one: छवि
+        other: छवियां
+      alt:
+        hint: जानकारी देने वाली छवि के लिए (यदि सजावटी छवि है तो खाली छोड़ दें)
+        label: वैकल्पिक पाठ
+      filter:
+        hint: चित्र या स्क्रीनशॉट के लिए रैखिक सेट करें, डिफ़ॉल्ट कॉन्फ़िगरेशन रखने के लिए खाली छोड़ दें
+        label: फ़िल्टर गुणवत्ता बदलें?
+        options:
+          box: डाउनस्केलिंग के लिए उपयुक्त सरल और तेज़ औसत फ़िल्टर (डिफ़ॉल्ट)
+          catmullrom: तेज क्यूबिक फ़िल्टर जो लैंक्ज़ोस फ़िल्टर से तेज़ है जबकि समान परिणाम प्रदान करता है
+          lanczos: फोटोग्राफिक छवियों के लिए उच्च गुणवत्ता वाला रीसैम्पलिंग फ़िल्टर जो तेज परिणाम देता है
+          linear: बिलिनियर रीसैम्पलिंग फ़िल्टर, चिकनी आउटपुट पैदा करता है, क्यूबिक फ़िल्टर से तेज़
+      src:
+        hint: 'भेजने से पहले छवि का आकार बदलें और संपीड़ित करें: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        label: छवि
+    images:
+      label: 
+        one: छवि
+        other: छवियां
+    is_background:
+      label: क्या पृष्ठभूमि है?
+    is_blank:
+      label: क्या खाली है?
+    is_card:
+      hint: टेक्स्ट के पीछे एक पृष्ठभूमि जोड़ता है
+      label: क्या कार्ड है?
+    is_darken:
+      label: गहरा करें?
+    is_exclusive:
+      label: विशेष?
+    is_half:
+      label: आधा आकार?
+    is_highlighted:
+      label: क्या हाइलाइट किया गया है?
+    is_logo:
+      hint: केंद्र में स्थित और क्रॉप नहीं किया गया
+      label: क्या लोगो है?
+    is_open:
+      label: खुला?
+    is_pinned:
+      label: पिन किया गया?
+    is_screenshot:
+      hint: नकली ब्राउज़र जोड़ें
+      label: क्या स्क्रीनशॉट है?
+    items:
+      label:
+        one: आइटम
+        other: आइटम
+    keyfeatures:
+      hint: 'उदाहरण: स्थान, जोखिम…'
+      label:
+        one: मुख्य विशेषता
+        other: मुख्य विशेषताएं
+    label:
+      label: लेबल
+    lang:
+      hint: भाषा कोड दर्ज करें (उदाहरण के लिए fr) यदि वर्तमान पृष्ठ भाषा से भिन्न है
+      label: भाषा
+    layout:
+      label: लेआउट
+      options:
+        carousel: हिंडोला
+        grid: ग्रिड
+        list: सूची
+    legal:
+      label: कानूनी
+    legend:
+      label: किंवदंती
+    limit:
+      label: सीमा
+    links:
+      label:
+        one: लिंक
+        other: लिंक
+    location:
+      label: स्थान
+    loop:
+      label: लूप
+    name:
+      label: नाम
+    map:
+      label: मानचित्र
+    newsletter:
+      form:
+        label: फॉर्म
+    notes:
+      hint: 'टेक्स्ट में किसी शब्द को नोट से लिंक करने के लिए, उसके बाद "[\*]" जोड़ें। नोट्स और "[\*]" उनके क्रम से जुड़े होते हैं।'
+      label:
+        one: नोट
+        other: नोट्स
+    offer:
+      label:
+        one: प्रस्ताव
+        other: प्रस्ताव
+    offset:
+      label: ऑफसेट
+      options:
+        center: केंद्र
+        end: अंत
+        start: प्रारंभ
+    parent:
+      label: मूल पृष्ठ
+    pdf:
+      label: पीडीएफ
+      hint: 'भेजने से पहले पीडीएफ को संपीड़ित करें: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+    phone:
+      label: टेलीफोन नंबर
+      hint: 'अंतर्राष्ट्रीय प्रारूप, उदाहरण: +33 1 23 45 67 89'
+    placeholder:
+      label: प्लेसहोल्डर
+    poster:
+      label: पोस्टर
+      hint: वीडियो के लिए पोस्टर छवि
+    prefix:
+      label: उपसर्ग
+    press:
+      label: प्रेस
+    price:
+      hide: कीमत छिपाएं
+      hint: 'उदाहरण: 300000 (300 000 ₹ के लिए)'
+      label: कीमत
+      sold: बिक्री मूल्य
+    quote:
+      label: उद्धरण
+    realestates_energies:
+      label:
+        one: ऊर्जा
+        other: ऊर्जा
+      heating:
+        label: हीटिंग
+        options:
+          collective: सामूहिक
+          individual: व्यक्तिगत
+      heating_type:
+        label: हीटिंग प्रकार
+        options:
+          reversible_ac: प्रतिवर्ती एसी
+          electric: इलेक्ट्रिक
+          gas: गैस
+          solar: सौर
+    realestates_informations:
+      area:
+        hint: m2 में व्यक्त
+        label: आंतरिक सतह
+      bathrooms:
+        label: बाथरूम की संख्या
+      bedrooms:
+        label: बेडरूम की संख्या
+      district:
+        label: जिला
+      exposure:
+        label: जोखिम
+      field:
+        hint: m2 में व्यक्त
+        label: बाहरी सतह
+      floor:
+        label: मंजिल
+      has_balcony:
+        label: बालकनी?
+      has_box:
+        label: बॉक्स?
+      has_cave:
+        label: गुफा?
+      has_elevator:
+        label: लिफ्ट?
+      has_garage:
+        label: गैरेज?
+      has_outbuilding:
+        label: आउटबिल्डिंग?
+      has_parking:
+        label: पार्किंग?
+      has_swimmingpool:
+        label: स्विमिंग पूल?
+      has_terrace:
+        label: छत?
+      label: जानकारी
+      levels:
+        label: मंजिलों की संख्या
+      rooms:
+        label: कमरों की संख्या
+      showerrooms:
+        label: शावर रूम की संख्या
+      wc:
+        label: शौचालय
+      year:
+        label: निर्माण का वर्ष
+    realestates_types:
+      label: लेनदेन प्रकार
+      options:
+        rent: किराया
+        sale: बिक्री
+    reference:
+      label: संदर्भ
+    rent:
+      label: किराया?
+    required:
+      label: आवश्यक
+    section:
+      hint: प्रदर्शित करने के लिए अनुभाग चुनें
+      label: अनुभाग
+    show_more:
+      hint: अधिक आइटम देखने के लिए एक बटन दिखाता है
+      label: और दिखाओ?
+    show_places:
+      hint: केवल तभी जब आपके पास पहले से ही स्थान सहेजे गए हों (यह नीचे दिए गए मार्कर को अक्षम कर देगा)
+      label: सभी पंजीकृत स्थान दिखाएं?
+    slug:
+      hint: शीर्षक के साथ स्वचालित करने के लिए खाली छोड़ दें। **एसईओ प्रभाव से सावधान रहें।**
+      label: स्लग
+      pattern:
+        केवल छोटे अक्षर, संख्याएं और हाइफ़न शामिल हैं, कोई रिक्त स्थान,
+        लहजे या विशेष वर्ण नहीं
+    socials:
+      label:
+        one: सोशल
+        other: सोशल
+      plateform: प्लेटफॉर्म
+      twitter:
+        label: ट्विटर/X
+        hint: उपयोगकर्ता नाम
+    sold:
+      label: बेचा/किराए पर दिया?
+    state:
+      label: राज्य
+      options:
+        danger: खतरा
+        dark: गहरा
+        info: जानकारी
+        light: हल्का
+        primary: प्राथमिक
+        secondary: माध्यमिक
+        success: सफलता
+        warning: चेतावनी
+    status:
+      label: स्थिति
+    submit:
+      label: भेजें बटन टेक्स्ट
+    subtitle:
+      label: उपशीर्षक
+    suffix:
+      hint: 'उदाहरण: %'
+      label: प्रत्यय
+    summary:
+      label: सारांश
+    surtitle:
+      label: सुरटाइटल
+    text:
+      label: टेक्स्ट
+    title:
+      label: शीर्षक
+    title_page:
+      hint:
+        टैब, खोज परिणामों और एसएमएस/संदेश/सोशल नेटवर्क पूर्वावलोकन में प्रदर्शित
+        पूर्वावलोकन
+      label: पृष्ठ शीर्षक
+    transcription:
+      label: प्रतिलेखन
+    url:
+      label: URL
+    value:
+      label: मान
+    video:
+      label: 
+        one: वीडियो
+        other: वीडियो
+      mp4:
+        label: MP4
+        hint: MP4 वीडियो फ़ाइल
+        mobile:
+          label: MP4 (मोबाइल)
+          hint: मोबाइल के लिए MP4 वीडियो फ़ाइल
+      webm:
+        label: WEBM
+        hint: WEBM वीडियो फ़ाइल
+        mobile:
+          label: WEBM (मोबाइल)
+          hint: मोबाइल के लिए WEBM वीडियो फ़ाइल
+    website:
+      hint: URL (https://…)
+      label: वेबसाइट
+    weight:
+      label: स्थिति (महत्व)
+      hint: यह जानते हुए कि 10 सबसे महत्वपूर्ण है और 100 सबसे कम महत्वपूर्ण है
+    year: वर्ष
+    zoom:
+      label: ज़ूम
+  files:
+    banner: साइट के शीर्ष पर सूचना बैनर
+    footer: साइट के नीचे सूचना पाठ
+    nav:
+      label: नेविगेशन
+      legal: कानूनी नेविगेशन (उल्लेख, नीति…)
+      primary: प्राथमिक नेविगेशन
+      secondary: माध्यमिक नेविगेशन
+      social: सोशल नेविगेशन
+    seo:
+      label: वैश्विक एसईओ
+      title: वेबसाइट का नाम
+  group:
+    year: वर्ष
+  shortcodes:
+    alert:
+      label: चेतावनी
+    badge:
+      label: बैज
+    blank_link:
+      label: खाली लिंक
+    blockquote:
+      label: ब्लॉककोट
+    button:
+      label: बटन
+    details:
+      label: विवरण
+    figure:
+      label: आकृति
+    map:
+      label: मानचित्र
+    twitter:
+      _id: ट्विटर आईडी
+      label: ट्विटर / X
+      user: ट्विटर उपयोगकर्ता नाम
+    youtube:
+      _id: यूट्यूब आईडी
+      label: यूट्यूब

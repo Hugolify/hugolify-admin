@@ -1,0 +1,13 @@
+{{- $subfields := slice "title" "url" "image_src" -}} 
+{{- $items := dict "items" (dict "name" "logos" "fields" $subfields) -}}
+{{- $layout := dict "layout" (slice "grid" "carousel") -}} 
+{{- $fields := slice 
+  "heading" 
+  $items 
+  $layout 
+  "carousel" 
+  "background" -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
+
+{{- return $fields -}}

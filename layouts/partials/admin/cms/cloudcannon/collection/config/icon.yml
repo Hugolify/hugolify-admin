@@ -1,0 +1,4 @@
+{{ $library := site.Params.admin.cloudcannon.icon }}
+{{ with (index (index site.Params.admin.collections .).icon $library) }}
+icon: "{{ . }}",
+{{ end }}

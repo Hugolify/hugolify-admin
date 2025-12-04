@@ -1,2 +1,12 @@
+{{- $options := slice "rent" "sale" -}}
 
-{{- partial "admin/fields/select.yml" (dict "field" "realestates_types" "options" (slice "rent" "sale") "default" "sale") }}
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_types.label")
+  "label_options" "admin.fields.realestates_types.options"
+  "name" "realestates_types"
+  "default" "sale"
+  "required" true
+  "options" $options
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

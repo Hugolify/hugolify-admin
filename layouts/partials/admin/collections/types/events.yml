@@ -1,17 +1,14 @@
 {
-  name: events,
-  folder: content/events,
+  name: 'events',
+  folder: 'content/events',
   label: '{{ i18n "admin.collections.events.label" }}',
   label_singular: '{{ i18n "admin.collections.events.label" 1 }}',
   description: '{{ i18n "admin.collections.events._description" }}',
-  
-  create: {{ site.Params.admin.collections.events.create | default true }},
-  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
-
-  path: '{{`{{year}}/{{slug}}`}}',
-  {{ $slug := "{{year}}-{{slug}}" }}
-  {{ partial "admin/collections/config/slug.yml" $slug }}
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
+  {{ partial "admin/collections/config/path.yml" "{{year}}/{{slug}}" }}
+  {{ partial "admin/collections/config/slug.yml" "{{year}}-{{slug}}" }}
 
   {{ partial "admin/collections/types/_default.yml" . }}
 }

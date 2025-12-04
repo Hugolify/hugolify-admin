@@ -1,7 +1,12 @@
-{
-  label: '{{ i18n "admin.fields.text.label" }}',
-  name: 'text',
-  widget: 'text',
-  required: false,
-  i18n: true 
-}
+{{- $name := dict "name" "text" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "text_area" "nameOverride" "text" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.text.label")
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/text.js" $args }}

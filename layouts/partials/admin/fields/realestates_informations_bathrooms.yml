@@ -1,0 +1,16 @@
+{{- $name := dict "name" "bathrooms" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "realestates_informations_bathrooms" "nameOverride" "bathrooms" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.realestates_informations.bathrooms.label")
+  "hint" (i18n "admin.fields.realestates_informations.bathrooms.hint")
+  "i18n" "duplicate"
+  "min" 0
+  "step" 1
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/number.js" $args }}

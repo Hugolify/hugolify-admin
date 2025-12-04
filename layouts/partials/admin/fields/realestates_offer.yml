@@ -1,16 +1,21 @@
+{{- $name := dict "name" "offer" }}
+{{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
+  {{- $name = dict "name" "realestates_offer" "nameOverride" "offer" }}
+{{- end }}
+
 {{- $fields := slice 
   "price" 
   "is_sold" 
   "is_exclusive" 
   "status" 
   "hide_price" -}}
-{{- $fields = partial "admin/func/get_fields.html" (dict "field" . "fields" $fields) -}}
-{
-  label: '{{ i18n "admin.fields.offer.label" 1 }}',
-  name: 'offer',
-  widget: 'object',
-  required: false,
-  i18n: true,
-  collapsed: false,
-  {{ partial "admin/fields/_fields.yml" $fields }}
-}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.offer.label" 1)
+  "fields" $fields
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/object.js" $args }}

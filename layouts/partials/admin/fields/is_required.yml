@@ -1,7 +1,12 @@
-{
-  label: '{{ i18n "admin.fields.required.label" }}',
-  name: 'required',
-  widget: 'boolean',
-  required: false,
-  i18n: 'duplicate' 
-}
+{{- $name := dict "name" "required" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "is_required" "nameOverride" "required" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.required.label")
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

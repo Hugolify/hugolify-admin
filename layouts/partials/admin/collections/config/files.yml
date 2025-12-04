@@ -1,0 +1,18 @@
+files: [
+  {{- $collection := .collection | default "config" -}}
+  {{- range (index site.Params.admin.collections $collection).files }}
+    {{- $file := print "admin/datas/" . ".yml" -}}
+    {{- if templates.Exists ( printf "partials/%s" $file ) }}
+      {{ partialCached $file . }},
+    {{- end }}
+  {{- else -}}
+    {{- $file := print "admin/collections/fields/" $collection ".files.default.html" -}}
+    {{- $files := false -}}
+    {{- if templates.Exists ( printf "partials/%s" $file ) }}
+      {{- $files = partialCached $file . -}}
+    {{- else -}}
+      {{- $files = partialCached "admin/collections/fields/_files.default.html" . -}}
+    {{- end -}}
+    {{ partial "admin/datas/_range.yml" $files }}
+  {{ end -}}
+]

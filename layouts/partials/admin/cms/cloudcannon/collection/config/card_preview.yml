@@ -1,0 +1,11 @@
+{{ $card_preview := dict 
+  "text" (dict "key" "title")
+  "subtext" (dict "key" "description")
+  "gallery" (dict "image" (dict "key" "image.src"))
+}}
+
+{{ with (index site.Params.admin.collections .).card_preview }}
+	{{ $card_preview = merge $card_preview . }}
+{{ end }}
+
+{{ return $card_preview }}

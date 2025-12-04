@@ -1,0 +1,11 @@
+{{ $field := . }}
+{{ $values := false }}
+
+{{ if reflect.IsMap . }}
+  {{ range $k, $v := . }}
+    {{ $field = $k }}
+    {{ $values = $v }}
+  {{ end }}
+{{ end }}
+
+{{ return (dict "field" $field "values" $values) }}

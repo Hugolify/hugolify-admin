@@ -1,0 +1,13 @@
+{{- $name := dict "name" "lat" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "coordinates_lat" "nameOverride" "lat" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.coordinates.lat.label")
+  "value_type" "float"
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/number.js" $args }}

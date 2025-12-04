@@ -1,0 +1,16 @@
+{{ $field := . }}
+
+{{ if reflect.IsMap . }}
+  {{ range $k, $v := . }}
+    {{ $field = $k }}
+    {{ if reflect.IsSlice . }}
+      {{ $field = printf "%s_%s" $k (delimit $v "_") }}
+    {{ else if reflect.IsMap . }}
+      {{ if $v.name }}
+      {{ $field = printf "%s_%s" $k $v.name }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $field }}
