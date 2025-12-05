@@ -5,7 +5,7 @@ view_filters: [
     {
       label: "{{ .label }}",
       field: "{{ .field }}",
-      pattern: "{{ .pattern }}"
+      pattern: "{{ replace .pattern "\\" "\\\\" }}"
     },
   {{ end }}
 ],

@@ -33,7 +33,7 @@
   type: 'textarea',
   options: {
     {{ with $pattern }}
-    pattern: '{{ .regex }}',
+    pattern: "{{ replace .regex "\\" "\\\\" }}",
     pattern_message: '{{ .message }}',
     {{ end }}
     required: {{ $required }}
@@ -55,7 +55,7 @@
   {{ end }}
   {{ with $pattern }}
   pattern: {
-    regex: '{{ .regex }}',
+    regex: "{{ replace .regex "\\" "\\\\" }}",
     message: '{{ .message }}'
   },
   {{ end }}
@@ -97,7 +97,7 @@
   required: {{ $required }},
   {{ with $pattern }}
   pattern: [
-    '{{ .regex }}',
+    '{{ replace .regex "\\" "\\\\" }}',
     '{{ .message }}'
   ],
   {{ end }}
