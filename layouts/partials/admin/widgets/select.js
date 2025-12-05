@@ -157,7 +157,6 @@
     {{- end }}
     {{- $option_name = replace $option_name "-" "_" }}
     {{- $label_option := i18n (print "admin.fields." $name ".options." $option_name) }}
-    {{ warnf "label_option: %s" (print $name "." $option_name) }}
     {{- with $label_options }}
       {{- $label_option = i18n (print . "." $option_name) }}
     {{- end }}
