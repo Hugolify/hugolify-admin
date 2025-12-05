@@ -1,5 +1,6 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.show_more.label")
+  "hint" (i18n "admin.fields.show_more.hint")
   "name" "show_more"
   "default" true
   -}}

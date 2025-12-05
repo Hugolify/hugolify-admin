@@ -778,7 +778,7 @@ admin:
     transcription:
       label: 전사
     url:
-      hint: 절대 URL (예: https://www.example.com)
+      hint: '절대 URL (예: https://www.example.com)'
       label: URL
     value:
       label: 값
