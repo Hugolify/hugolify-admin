@@ -1,9 +1,10 @@
+{{- $notes := cond site.Params.admin.blocks.editorial.notes "notes" false -}}
 {{- $fields := slice 
   "direction" 
   "surtitle" 
   "title" 
   "text_markdown" 
-  "notes" 
+  $notes 
   "ctas" 
   "image" 
   "background" -}}

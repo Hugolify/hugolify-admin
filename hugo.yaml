@@ -181,6 +181,7 @@ params:
       editorial:
         icon:
           material_icons: vertical_split
+        notes: false
       embed:
         icon:
           material_icons: code
@@ -220,6 +221,7 @@ params:
       paragraph:
         icon:
           material_icons: subject
+        notes: false
       pushes:
         icon:
           material_icons: panorama_wide_angle

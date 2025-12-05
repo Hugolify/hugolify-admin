@@ -1,8 +1,9 @@
+{{- $notes := cond site.Params.admin.blocks.paragraph.notes "notes" false -}}
 {{- $fields := slice 
   "surtitle" 
   "title" 
   "text_markdown" 
-  "notes" 
+  $notes 
   "ctas" 
   "grid" 
   "offset" 
