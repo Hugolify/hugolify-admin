@@ -10,7 +10,7 @@
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 
 {{- $args := dict 
-  "label" (i18n "admin.fields.image.label")
+  "label" (i18n "admin.fields.image.label" 1)
   "fields" $fields
   -}}
 
