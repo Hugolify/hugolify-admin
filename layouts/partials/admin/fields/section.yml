@@ -1,6 +1,6 @@
 {{- $collections := slice -}}
 {{- range $collection, $value := site.Params.admin.collections }}
-  {{- if and .enable (ne $collection "indexes") -}}
+  {{- if and .enable (ne $collection "indexes") (ne $collection "config") -}}
     {{- if or (strings.Contains $collection "posts_authors") (strings.Contains $collection "posts_categories") (strings.Contains $collection "posts_tags") -}}
       {{- $collection = replace $collection "posts_" "" -}} 
     {{- end -}}
