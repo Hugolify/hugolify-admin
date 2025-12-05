@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Transkrypcja
     url:
+      hint: Bezwzględny adres URL (np. https://www.example.com)
       label: URL
     value:
       label: Wartość

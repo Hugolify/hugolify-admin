@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Transkriptio
     url:
+      hint: Absoluuttinen URL (esim. https://www.example.com)
       label: Verkko-osoite
     value:
       label: Arvo

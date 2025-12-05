@@ -778,6 +778,7 @@ admin:
     transcription:
       label: 文字起こし
     url:
+      hint: 絶対URL（例：https://www.example.com）
       label: URL
     value:
       label: 値

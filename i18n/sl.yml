@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Prepis
     url:
+      hint: Absolutni URL (npr. https://www.example.com)
       label: URL
     value:
       label: Vrednost

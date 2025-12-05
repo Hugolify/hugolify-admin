@@ -776,6 +776,7 @@ admin:
     transcription:
       label: Transcription
     url:
+      hint: 'URL absolue (ex : https://www.example.com)'
       label: URL
     value:
       label: Valeur

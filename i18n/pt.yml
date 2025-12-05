@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Transcrição
     url:
+      hint: URL absoluto (ex. https://www.example.com)
       label: URL
     value:
       label: Valor

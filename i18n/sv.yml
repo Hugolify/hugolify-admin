@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Transkription
     url:
+      hint: Absolut URL (t.ex. https://www.example.com)
       label: URL
     value:
       label: Värde

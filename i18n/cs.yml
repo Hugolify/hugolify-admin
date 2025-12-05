@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Přepis
     url:
+      hint: Absolutní URL (např. https://www.example.com)
       label: URL
     value:
       label: Hodnota

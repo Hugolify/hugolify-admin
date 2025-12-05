@@ -778,6 +778,7 @@ admin:
     transcription:
       label: प्रतिलेखन
     url:
+      hint: पूर्ण URL (उदा. https://www.example.com)
       label: URL
     value:
       label: मान

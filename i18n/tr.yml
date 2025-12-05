@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Transkripsiyon
     url:
+      hint: Mutlak URL (örn. https://www.example.com)
       label: URL
     value:
       label: Değer

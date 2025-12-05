@@ -778,6 +778,7 @@ admin:
     transcription:
       label: 转录
     url:
+      hint: 绝对URL（例如 https://www.example.com）
       label: URL
     value:
       label: 值

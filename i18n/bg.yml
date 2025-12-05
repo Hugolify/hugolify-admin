@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Транскрипция
     url:
+      hint: Абсолютен URL (напр. https://www.example.com)
       label: URL
     value:
       label: Стойност

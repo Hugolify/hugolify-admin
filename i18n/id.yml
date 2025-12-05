@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Transkripsi
     url:
+      hint: URL absolut (mis. https://www.example.com)
       label: URL
     value:
       label: Nilai

@@ -778,6 +778,7 @@ admin:
     transcription:
       label: Átírás
     url:
+      hint: Abszolút URL (pl. https://www.example.com)
       label: URL
     value:
       label: Érték
