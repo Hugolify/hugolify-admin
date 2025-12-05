@@ -15,7 +15,7 @@
 
 {{- $cms := site.Params.admin.cms }}
 
-{{- $fields := partial "admin/func/GetFields.html" (dict "field" .name "fields" .fields) | default slice -}}
+{{- $fields := .fields | default slice -}}
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
