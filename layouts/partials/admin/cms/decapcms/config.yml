@@ -25,7 +25,7 @@ locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default
 logo: 
   src: "./assets/logo.svg"
   show_in_header: true
-media_folder: {{ site.Params.admin.media.media_folder | default "assets/images/uploads" }}
+media_folder: {{ site.Params.admin.media.media_folder | default "/assets/images/uploads" }}
 
 {{- with site.Params.admin.media.cloud }}
 media_library:

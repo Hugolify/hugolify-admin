@@ -26,7 +26,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "{{ site.Params.admin.media.media_folder | default `assets/images/uploads` }}",
+      mediaRoot: "{{ site.Params.admin.media.media_folder | default `/assets/images/uploads` }}",
       publicFolder: "public",
     },
   },

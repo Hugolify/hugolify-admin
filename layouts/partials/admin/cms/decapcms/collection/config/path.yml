@@ -1,10 +1,15 @@
 {{- $custom_path := `{{slug}}/_index` -}}
+{{- $media_folder := site.Params.admin.media.media_folder -}}
 {{- if (index site.Params.admin.collections .) -}}
   {{- with (index site.Params.admin.collections .).path -}}
     {{- $custom_path = . }}
+  {{- end -}}
+  {{- with (index site.Params.admin.collections .).media_folder -}}
+    {{- $media_folder = . }}
   {{- end -}}
 {{- else -}}
   {{- $custom_path = . }}
 {{- end -}}
 
 path: "{{$custom_path}}",
+media_folder: "{{ $media_folder | default "/assets/images/uploads" }}",
