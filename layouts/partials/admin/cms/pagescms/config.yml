@@ -4,27 +4,27 @@ settings:
 media:
   - name: images
     label: '{{ i18n "admin.fields.image.label" }}'
-    input: {{ site.Params.admin.media.media_folder | default "assets/images/uploads" }}
+    input: {{ site.Params.admin.media.media_folder | default "/assets/images/uploads" }}
     output: {{ site.Params.admin.media.public_folder | default "/images/uploads" }}
     categories: [ image ]
   {{- if eq site.Params.admin.media.audio_folders true }}
   - name: audios
     label: '{{ i18n "admin.fields.audio.label" }}'
-    input: {{ site.Params.admin.media.audio_media_folder | default "static/assets/audios" }}
+    input: {{ site.Params.admin.media.audio_media_folder | default "/static/assets/audios" }}
     output: {{ site.Params.admin.media.audio_public_folder | default "/assets/audios" }}
     categories: [ audio ]
   {{ end }}
   {{- if eq site.Params.admin.media.pdf_folders true }}
   - name: pdf
     label: '{{ i18n "admin.admin.fields.pdf.label" }}'
-    input: {{ site.Params.admin.media.pdf_media_folder | default "static/pdf" }}
+    input: {{ site.Params.admin.media.pdf_media_folder | default "/static/pdf" }}
     output: {{ site.Params.admin.media.pdf_public_folder | default "/pdf" }}
     categories: [ document ]
   {{ end }}
   {{- if eq site.Params.admin.media.video_folders true }}
   - name: videos
     label: '{{ i18n "admin.fields.video.label" }}'
-    input: {{ site.Params.admin.media.video_media_folder | default "static/assets/videos" }}
+    input: {{ site.Params.admin.media.video_media_folder | default "/static/assets/videos" }}
     output: {{ site.Params.admin.media.video_public_folder | default "/assets/videos" }}
     categories: [ video ]
   {{ end }}

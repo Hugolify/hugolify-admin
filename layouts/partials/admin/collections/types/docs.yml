@@ -10,6 +10,7 @@
   i18n: true,
 
   path: "{{`{{slug}}/_index`}}",
+  media_folder: {{ site.Params.admin.media.media_folder | default "/assets/images/uploads" }},
   {{ partial "admin/collections/config/slug.yml" }}
   
   {{ partial "admin/collections/types/_default.yml" . }}

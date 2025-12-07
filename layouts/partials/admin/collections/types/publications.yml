@@ -10,6 +10,7 @@
   i18n: true,
 
   path: '{{`{{year}}/{{month}}/{{slug}}`}}',
+  media_folder: {{ site.Params.admin.media.media_folder | default "/assets/images/uploads" }},
   {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
   
