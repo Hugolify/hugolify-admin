@@ -1,5 +1,6 @@
 
 {{- $collection := . | default "pages" -}}
+{{- $collapsed := site.Params.admin.fields.blocks.collapsed | default false -}}
 {{- $blocks := site.Params.admin.blocks.enable -}}
 {{- with (index site.Params.admin.collections $collection).blocks -}}
   {{- $blocks = . -}}
@@ -9,7 +10,7 @@
   "label" (i18n "admin.fields.blocks.label" 2)
   "label_singular" (i18n "admin.fields.blocks.label" 1)
   "name" "blocks"
-  "collapsed" false
+  "collapsed" $collapsed
   "blocks" $blocks
   -}}
 
