@@ -1,15 +1,19 @@
+{{ $label := i18n (printf "admin.collections.%s.label" .) 2 | default (. | humanize) }}
+{{ $label_singular := i18n (printf "admin.collections.%s.label" .) 1 | default (. | humanize | singularize) }}
+{{ $description := i18n (printf "admin.collections.%s._description" .) | default false }}
 {
   name: {{ . }},
   folder: content/{{ . }},
-  label: '{{ . | humanize }}',
-  label_singular: '{{ . | humanize | singularize }}',
-  
+  label: '{{ $label }}',
+  label_singular: '{{ $label_singular }}',
+  {{- with $description }}
+  description: '{{ . }}',
+  {{- end }}
   create: true,
   editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
-
-  path: '{{`{{slug}}/_index`}}',
-  {{ partial "admin/collections/config/slug.yml" }}
+  {{ partial "admin/collections/config/path.yml" . }}
+  {{ partial "admin/collections/config/slug.yml" . }}
 
   {{ partial "admin/collections/types/_default.yml" . }}
 }
