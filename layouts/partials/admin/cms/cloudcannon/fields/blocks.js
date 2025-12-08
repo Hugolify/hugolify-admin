@@ -17,9 +17,10 @@
       {{ $block_icon := index (index site.Params.admin.blocks .).icon $library }}
 
       {{/* Get block fields file */}}
-      {{ $fields := print "admin/blocks/fields/" . ".html" }}
-      {{ if templates.Exists ( printf "partials/%s" $fields ) }}
-        {{ $fields = partialCached $fields . }}
+      {{ $fields_file := print "admin/blocks/fields/" . ".html" }}
+      {{ $fields := (index site.Params.admin.blocks .).fields }}
+      {{ if and (not $fields) (templates.Exists ( printf "partials/%s" $fields_file )) }}
+        {{ $fields = partialCached $fields_file . }}
       {{ end }}
 
       {
