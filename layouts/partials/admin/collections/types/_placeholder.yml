@@ -2,8 +2,8 @@
 {{ $label_singular := i18n (printf "admin.collections.%s.label" .) 1 | default (. | humanize | singularize) }}
 {{ $description := i18n (printf "admin.collections.%s._description" .) | default false }}
 {
-  name: {{ . }},
-  folder: content/{{ . }},
+  name: '{{ . }}',
+  folder: 'content/{{ . }}',
   label: '{{ $label }}',
   label_singular: '{{ $label_singular }}',
   {{- with $description }}
