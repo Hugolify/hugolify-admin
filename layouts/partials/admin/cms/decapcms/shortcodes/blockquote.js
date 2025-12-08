@@ -4,7 +4,8 @@ CMS.registerEditorComponent({
   fields: [
     {{ partialCached "admin/fields/quote.yml" . | safeHTML }},
     {{ partialCached "admin/fields/title.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/text.yml" . | safeHTML }}
+    {{ partialCached "admin/fields/text.yml" . | safeHTML }},
+    {{ (replace (partialCached "admin/fields/image_src.yml" .) "src" "image") | safeHTML }}
   ],
   pattern: /{{`{{< blockquote (.*) >}}` | safeHTML }}/,
 
@@ -24,7 +25,8 @@ CMS.registerEditorComponent({
     return {
       quote: parsed.quote || '',
       title: parsed.title || '',
-      text: parsed.text || ''
+      text: parsed.text || '',
+      image: parsed.image || ''
     };
   },
 
@@ -35,6 +37,7 @@ CMS.registerEditorComponent({
     if (obj.quote) shortcode += ' quote="' + obj.quote + '"';
     if (obj.title) shortcode += ' title="' + obj.title + '"';
     if (obj.text) shortcode += ' text="' + obj.text + '"';
+    if (obj.image) shortcode += ' image="' + obj.image + '"';
     shortcode += ' ' + close;
     return shortcode;
   },
@@ -44,6 +47,7 @@ CMS.registerEditorComponent({
       <figure class="quote">
         <blockquote>${obj.quote}</blockquote>
         <figcaption>
+          ${obj.image ? `<picture><img src="${obj.image}" alt=""></picture>` : ''}
           <div>
             ${obj.title ? `<cite>${obj.title}</cite>` : ''}
             ${obj.text}
