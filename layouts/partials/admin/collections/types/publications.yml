@@ -11,6 +11,7 @@
 
   path: '{{`{{year}}/{{month}}/{{slug}}`}}',
   media_folder: {{ site.Params.admin.media.media_folder | default "/assets/images/uploads" }},
+  public_folder: {{ site.Params.admin.media.public_folder | default "/images/uploads" }},
   {{ $slug := "{{year}}-{{month}}-{{day}}-{{slug}}" }}
   {{ partial "admin/collections/config/slug.yml" $slug }}
   
