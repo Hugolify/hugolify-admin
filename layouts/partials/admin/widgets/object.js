@@ -11,10 +11,12 @@
   - name (string) required
   - nameOverride (string)
   - required (boolean)
+  - summary (string)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
+{{- $collapsed := .collapsed | default true }}
 {{- $fields := .fields | default slice -}}
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
@@ -24,7 +26,11 @@
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
 {{- $required := .required | default false }}
-{{- $collapsed := .collapsed | default true }}
+{{- $summary := .summary | default false }}
+
+{{/* Icon */}}
+{{- $library := printf "site.Params.admin.%s.icon" $cms }}
+{{- $widget_icon := index (index site.Params.admin.fields .).icon $library | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -53,6 +59,14 @@
     structures: '_structures.{{ $name }}',
     required: {{ $required }},
     subtype: 'object'
+  },
+  preview: {
+    {{ with $widget_icon }}
+    icon: '{{ . }}',
+    {{ end }}
+    {{ with $summary }}
+    text: '{{ . }}',
+    {{ end }}
   }
 }
 
@@ -100,6 +114,9 @@
   required: {{ $required }},
   collapsed: {{ $collapsed }},
   i18n: {{ $i18n }},
+  {{ with $summary }}
+  summary: '{{ . }}',
+  {{ end }}
   {{ partial "admin/fields/_fields.yml" $fields }}
 }
 

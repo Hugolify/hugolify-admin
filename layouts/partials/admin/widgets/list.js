@@ -13,6 +13,7 @@
   - name (string) required
   - nameOverride (string)
   - required (boolean)
+  - summary (string)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
@@ -29,6 +30,11 @@
 {{- $max := .max | default false }}
 {{- $min := .min | default false }}
 {{- $required := .required | default false }}
+{{- $summary := .summary | default false }}
+
+{{/* Icon */}}
+{{- $library := printf "site.Params.admin.%s.icon" $cms }}
+{{- $widget_icon := index (index site.Params.admin.fields .).icon $library | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -62,6 +68,14 @@
     max_items: {{ . }},
     {{ end }}
     required: {{ $required }}
+  },
+  preview: {
+    {{ with $widget_icon }}
+    icon: '{{ . }}',
+    {{ end }}
+    {{ with $summary }}
+    text: '{{ . }}',
+    {{ end }}
   }
 }
 
@@ -77,6 +91,12 @@
   type: 'object',
   {{ if or $min $max }}
   list: {
+    collapsible: {
+      collapsed:{{ $collapsed }},
+      {{ with $summary }}
+      summary: "{{ replace (replace . "{{" "{") "}}" "}" }}",
+      {{ end }}
+    },
     {{ with $min }}
     min: {{ . }},
     {{ end }}
@@ -85,7 +105,14 @@
     {{ end }}
   },
   {{ else }}
-  list: true,
+  list: {
+    collapsible: {
+      collapsed:{{ $collapsed }},
+      {{ with $summary }}
+      summary: "{{ replace (replace . "{{" "{") "}}" "}" }}",
+      {{ end }}
+    }
+  },
   {{ end }}
   required: {{ $required }},
   {{ partial "admin/fields/_fields.yml" $fields }}
@@ -139,6 +166,9 @@
   required: {{ $required }},
   collapsed: {{ $collapsed }},
   i18n: {{ $i18n }},
+  {{ with $summary }}
+  summary: '{{ . }}',
+  {{ end }}
   {{ partial "admin/fields/_fields.yml" $fields }}
 }
 
