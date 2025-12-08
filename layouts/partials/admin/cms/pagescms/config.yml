@@ -4,12 +4,11 @@ settings:
 {{ partialCached "admin/cms/pagescms/media.html" . }}
 
 {{- $sliceCompatibity := slice 
-  (dict "{{slug}}/_index" `{fields.title}/_index.md`)
-  (dict "{{slug}}" `{fields.title}.md`)
+  (dict "{{slug}}/_index" `{fields.title}/_index`)
+  (dict "{{slug}}" `{fields.title}`)
   (dict "{{year}}" `{year}`) 
   (dict "{{month}}" `{month}`) 
   (dict "{{day}}" `{day}`) 
-  (dict "path:" `filename:`) 
   (dict "folder:" `type: 'collection', path:`) 
   (dict "file:" `type: 'file', path:`) 
   (dict "collections:" `content:`) 
