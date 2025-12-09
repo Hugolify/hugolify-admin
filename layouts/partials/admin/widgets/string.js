@@ -48,7 +48,10 @@
     pattern_message: '{{ .message }}',
     {{ end }}
     required: {{ $required }}
-  }
+  },
+  {{ if ne $default "" }}
+  value: {{ $default }}
+  {{ end }}
 }
 
 {{/* Pages CMS */}}

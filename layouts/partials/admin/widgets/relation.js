@@ -41,7 +41,10 @@
   label: '{{ $label }}',
   type: '{{ cond $multiple "multiselect" "select" }}',
   options: {
-    value_key: ['id', 'uuid', 'title', 'name', 'path'],
+    {{ with $value_field }}
+    {{ $value_key := replace (substr $value_field 2 -2) `slug` `filename_without_ext` }}
+    value_key: [{{ $value_key }}],
+    {{ end }}
     values: 'collections.{{ $collection }}'
   }
 }

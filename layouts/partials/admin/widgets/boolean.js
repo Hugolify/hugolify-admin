@@ -36,7 +36,10 @@
   type: 'switch',
   options: {
     required: {{ $required }}
-  }
+  },
+  {{ if ne $default "" }}
+  value: {{ $default }}
+  {{ end }}
 }
 
 {{/* Pages CMS */}}
