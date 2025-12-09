@@ -64,9 +64,15 @@
     {{ with $widget_icon }}
     icon: '{{ . }}',
     {{ end }}
-    {{ with $summary }}
-    text: '{{ . }}',
-    {{ end }}
+    text: [
+      {{ with $summary }}
+      key: {{ replace (replace . "{{" "{") "}}" "}" }}
+      {{ else }}
+      key: 'title',
+      key: 'name',
+      key: 'text'
+      {{ end }}
+    ],
   }
 }
 
