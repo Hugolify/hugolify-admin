@@ -1,4 +1,4 @@
-{{/* 
+{{/*
   Trim and clean up a "map-like" text (e.g. Hugo map[...] syntax),
   turning it into valid JSON so it can be unmarshaled into a real map.
 */}}
@@ -12,8 +12,24 @@
 {{/* 3. Replace single quotes with double quotes (JSON requires double quotes) */}}
 {{ $file = replace $file `'` `"` }}
 
+{{/* 3.1 Protect content inside double-quoted strings from regex processing */}}
+{{/* First, hide escaped quotes so they don't confuse our string matcher */}}
+{{ $file = replace $file `\"` `__ESC_QUOTE__` }}
+
+{{/* Now replace special structural characters inside strings with placeholders */}}
+{{/* We repeat to handle multiple occurrences in the same string */}}
+{{/* IMPORTANT: We explicitly exclude newlines from the match ([^"\n]*) to prevent */}}
+{{/* matching across multiple lines (e.g. from end of one value to start of another) */}}
+{{ range seq 5 }}
+  {{ $file = replaceRE `"([^"\n]*):([^"\n]*)"` `"${1}__COLON__${2}"` $file }}
+  {{ $file = replaceRE `"([^"\n]*),([^"\n]*)"` `"${1}__COMMA__${2}"` $file }}
+  {{ $file = replaceRE `"([^"\n]*)\{([^"\n]*)"` `"${1}__LBRACE__${2}"` $file }}
+  {{ $file = replaceRE `"([^"\n]*)\}([^"\n]*)"` `"${1}__RBRACE__${2}"` $file }}
+{{ end }}
+
 {{/* 4. Wrap bare keys with double quotes */}}
-{{ $file = replaceRE `(?m)(^|,|\{)\s*([A-Za-z_][A-Za-z0-9_]*)\s*:` `${1}"${2}":` $file }}
+{{/* Since we protected strings, we can safely quote any word followed by a colon */}}
+{{ $file = replaceRE `([A-Za-z_][A-Za-z0-9_]*)\s*:` `"${1}":` $file }}
 
 {{/* 5. Wrap unquoted text values with double quotes */}}
 {{ $file = replaceRE `(?m):\s*([A-Za-z_][A-Za-z0-9_]*)\s*(,|$|\})` `:"${1}"$2` $file }}
@@ -28,6 +44,13 @@
 
 {{/* 7. Remove a final trailing comma at the end of the file, if any */}}
 {{ $file = replaceRE `,\s*$` `` $file }}
+
+{{/* 7.1 Restore protected content */}}
+{{ $file = replace $file `__COLON__` `:` }}
+{{ $file = replace $file `__COMMA__` `,` }}
+{{ $file = replace $file `__LBRACE__` `{` }}
+{{ $file = replace $file `__RBRACE__` `}` }}
+{{ $file = replace $file `__ESC_QUOTE__` `\"` }}
 
 {{/* 8. Convert the cleaned JSON string into a Hugo map/object */}}
 {{ return ($file | transform.Unmarshal) }}
