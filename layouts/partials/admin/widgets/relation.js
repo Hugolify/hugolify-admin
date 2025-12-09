@@ -90,9 +90,29 @@
   {{- end }}
   name: 'items_{{ $name }}',
   nameOverride: '{{ $name }}',
+  {{/* List support https://github.com/tinacms/tinacms/issues/4641 */}}
+  {{- if $multiple }}
+  type: 'object',
+  list: true,
+  ui: {
+    itemProps: (item) => {
+      return { label: item?.item }
+    }
+  },
+  fields: [
+    {
+      name: 'item',
+      label: '{{ $label_singular | default "Item" }}',
+      type: 'reference',
+      collections: ['{{ $collection }}'],
+      required: {{ $required }}
+    }
+  ],
+  {{- else }}
   type: 'reference',
   collections: ['{{ $collection }}'],
   required: {{ $required }}
+  {{- end }}
 }
 
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
