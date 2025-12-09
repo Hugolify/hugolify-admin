@@ -1,6 +1,6 @@
 {{- $name := dict "name" "section" }}
 {{- if eq site.Params.admin.cms "tinacms" }}
-  {{- $name = dict "name" "section-hidden" "nameOverride" "section" }}
+  {{- $name = dict "name" "section_hidden" "nameOverride" "section" }}
 {{- end }}
 
 {{- $collection := . -}} 
