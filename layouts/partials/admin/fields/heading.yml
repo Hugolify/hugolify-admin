@@ -8,6 +8,7 @@
   "label" (i18n "admin.fields.heading.label")
   "name" "heading"
   "fields" $fields
+  "summary" "{{ title }}"
   -}}
 
 {{ partial "admin/widgets/object.js" $args }}
