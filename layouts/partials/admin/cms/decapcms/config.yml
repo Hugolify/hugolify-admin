@@ -1,15 +1,24 @@
 backend:
   branch: {{ site.Params.admin.branch | default "main" }}
-  name: {{ site.Params.admin.git | default "git-gateway" }}
+  name: {{ site.Params.admin.git | default site.Params.admin.name | default "git-gateway" }}
   {{- with site.Params.admin.repo }}
   repo: {{ . }}
   {{- end }}
   {{- with site.Params.admin.base_url }}
   base_url: {{ . }}
   {{- end }}
-  {{- with site.Params.admin.auth_endpoint }}
+
+{{- with site.Params.admin.auth }}
+  {{- with .app_id }}
+  app_id: {{ . }}
+  {{- end }}
+  {{- with .api_root }}
+  api_root: {{ . }}
+  {{- end }}
+  {{- with .auth_endpoint }}
   auth_endpoint: {{ . }}
   {{- end }}
+{{- end }}
 
 display_url: "{{ site.BaseURL }}"
 
@@ -20,7 +29,7 @@ i18n:
   default_locale: {{ site.Params.admin.i18n.default_locale }}
 {{- end }}
 
-local_backend: true
+local_backend: {{ site.Params.admin.local_backend | default true }}
 locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
 logo: 
   src: "./assets/logo.svg"

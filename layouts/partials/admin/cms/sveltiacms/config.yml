@@ -1,10 +1,22 @@
 backend:
   branch: {{ site.Params.admin.branch | default "main" }}
-  name: {{ site.Params.admin.git | default "github" }}
+  name: {{ site.Params.admin.git | default site.Params.admin.name | default "github" }}
   {{ with site.Params.admin.repo }}
   repo: {{ . }}
   {{ end }}
   automatic_deployments: {{ site.Params.admin.automatic_deployments | default false }}
+
+{{- with site.Params.admin.auth }}
+  {{- with .app_id }}
+  app_id: {{ . }}
+  {{- end }}
+  {{- with .api_root }}
+  api_root: {{ . }}
+  {{- end }}
+  {{- with .auth_endpoint }}
+  auth_endpoint: {{ . }}
+  {{- end }}
+{{- end }}
 
 display_url: {{ site.BaseURL }}
 
@@ -15,13 +27,40 @@ i18n:
   default_locale: {{ site.Params.admin.i18n.default_locale }}
 {{ end }}
 
-local_backend: true
+local_backend: {{ site.Params.admin.local_backend | default true }}
 locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
 logo_url: ./logo-picto.svg
 media_folder: {{ site.Params.admin.media.media_folder }}
 public_folder: {{ site.Params.admin.media.public_folder }}
 
 publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
+
+{{- $slugify_filename := site.Params.admin.media.slugify_filename | default false }}
+{{- with site.Params.admin.media.cloud }}
+{{- $name := cond (reflect.IsSlice .name) .name (slice .name) }}
+media_library:
+  default:
+    {{ with site.Params.admin.media.max_file_size }}
+    max_file_size: '{{ . }}'
+    {{ end }}
+    slugify_filename: {{ $slugify_filename }}
+  {{ range $name }}
+    {{ . }}:
+      config:
+        {{- with .cloud_name }}
+        cloud_name: "{{ . }}"
+        {{ end }}
+        {{- with .api_key }}
+        api_key: {{ . }}
+        {{ end }}
+        {{- with .public_key }}
+        publicKey: {{ . }}
+        {{ end }}
+        {{- with .tabs }}
+        tabs: {{ . }}
+        {{ end }}
+  {{- end }}
+{{- end }}
 
 slug:
   encoding: unicode
