@@ -39,10 +39,17 @@ params:
     cms: decapcms # All CMS available https://www.hugolify.io/docs/cms/admin/cms/
     config:
       id: false # set true to use ID for dir/name files and relation
-    publish_mode: simple # simple or editorial_workflow
+    
+    # Config
+    branch: main # Branch to update 
+    git: git-gateway # or gitlab, gitea…
+    repo: # Repository like owner-name/repo-name (optional)
+
     i18n:
       default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
+
+    # Media config
     media:
       media_folder: '/assets/images/uploads'
       public_folder: '/images/uploads'
@@ -66,9 +73,14 @@ params:
 
     # Auth
     auth:
+      app_id: # The Client ID provided by Gitea/GitLab
+      api_root: # API URL of your Gitea/GitLab instance
+      auth_endpoint: # Auth endpoint of your Gitea/GitLab instance
+      base_url: # Root URL of your Gitea/GitLab instance
       netlify_identity: true # Add Netlify identity
 
     preview: false
+    publish_mode: simple # simple or editorial_workflow
 
     # Blocks
     blocks:
