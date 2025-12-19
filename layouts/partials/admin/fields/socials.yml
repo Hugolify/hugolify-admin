@@ -1,5 +1,5 @@
 {{- $fields := slice 
-  "socials_plateform" 
+  "socials_platform" 
   "url" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 

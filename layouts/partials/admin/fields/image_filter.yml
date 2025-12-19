@@ -4,6 +4,7 @@
 {{- end }}
 
 {{- $options := slice "Box" "Lanczos" "CatmullRom" "Linear" -}}
+{{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
 {{- $args := dict 
   "label" (i18n "admin.fields.image.filter.label")

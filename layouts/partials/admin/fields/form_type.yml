@@ -4,6 +4,7 @@
 {{- end }}
 
 {{- $options := slice "email" "checkbox" "radio" "select" "tel" "text" "textarea" -}}
+{{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
 {{- $args := dict 
   "label" (i18n "admin.fields.form.type.label")

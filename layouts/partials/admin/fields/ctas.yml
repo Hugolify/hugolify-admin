@@ -10,7 +10,6 @@
   "label_singular" (i18n "admin.fields.cta.label" 1)
   "name" "ctas"
   "min" 0
-  "max" 2
   "fields" $fields
   -}}
 

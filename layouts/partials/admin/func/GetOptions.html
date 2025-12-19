@@ -1,0 +1,6 @@
+{{- $options := .options -}}
+{{- with .field -}}
+	{{- $options = (index site.Params.admin.fields .).options -}}
+{{- end -}}
+
+{{- return ($options | default .options) -}}

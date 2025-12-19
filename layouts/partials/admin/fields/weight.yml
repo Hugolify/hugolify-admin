@@ -1,4 +1,5 @@
 {{- $options := slice 10 20 30 40 50 60 70 80 90 100 -}}
+{{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
 {{- $args := dict 
   "label" (i18n "admin.fields.weight.label")

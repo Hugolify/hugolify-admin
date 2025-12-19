@@ -2,6 +2,7 @@
 {{- if not (reflect.IsSlice $options) -}}
   {{- $options = slice "grid" -}}
 {{- end -}}
+{{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
 {{- $name := dict "name" "layout" }}
 {{- if eq site.Params.admin.cms "tinacms" }}
