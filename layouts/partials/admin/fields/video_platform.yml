@@ -10,7 +10,7 @@
   "label" (i18n "admin.fields.video.platform.label")
   "hint" (i18n "admin.fields.video.platform.hint")
   "name" "platform"
-  "required" true
+  "required" false
   "options" $options
   -}}
 

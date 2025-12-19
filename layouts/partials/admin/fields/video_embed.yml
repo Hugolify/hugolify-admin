@@ -6,6 +6,7 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.video.embed.label")
   "name" "video_embed"
+  "required" false
   "fields" $fields
   -}}
 

@@ -1,7 +1,7 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.video.id.label")
   "name" "id"
-  "required" true
+  "required" false
   -}}
 
 {{ partial "admin/widgets/string.js" $args }}
