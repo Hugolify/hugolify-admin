@@ -736,7 +736,7 @@ admin:
       label:
         one: Sosiaalinen media
         other: Sosiaaliset mediat
-      plateform: Alusta
+      platform: Alusta
       twitter:
         hint: Käyttäjänimi
         label: Twitter/X
@@ -783,6 +783,10 @@ admin:
     value:
       label: Arvo
     video:
+      embed:
+        label: Upotettu video
+      id:
+        label: Videon tunnus
       label:
         one: Video
         other: Videos
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (Mobile)
           hint: MP4 video for mobile
+      platform:
+        label: Alusta
+        hint: Alusta, jolla video sijaitsee
       webm:
         label: WEBM
         hint: Video (WEBM)

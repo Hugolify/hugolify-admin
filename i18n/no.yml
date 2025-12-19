@@ -736,7 +736,7 @@ admin:
       label:
         one: Sosial
         other: Sosiale
-      plateform: Plattform
+      platform: Plattform
       twitter:
         label: Twitter/X
         hint: Brukernavn
@@ -783,6 +783,10 @@ admin:
     value:
       label: Verdi
     video:
+      embed:
+        label: Innebygd video
+      id:
+        label: Video-ID
       label: 
         one: Video
         other: Videoer
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (Mobil)
           hint: MP4-videofil for mobil
+      platform:
+        label: Plattform
+        hint: Plattformen videoen befinner seg på
       webm:
         label: WEBM
         hint: WEBM-videofil

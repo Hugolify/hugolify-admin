@@ -736,7 +736,7 @@ admin:
       label:
         one: 소셜
         other: 소셜
-      plateform: 플랫폼
+      platform: 플랫폼
       twitter:
         label: Twitter/X
         hint: 사용자 이름
@@ -783,6 +783,10 @@ admin:
     value:
       label: 값
     video:
+      embed:
+        label: 임베드 비디오
+      id:
+        label: 비디오 ID
       label: 
         one: 동영상
         other: 동영상
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (모바일)
           hint: 모바일용 MP4 동영상 파일
+      platform:
+        label: 플랫폼
+        hint: 비디오가 위치한 플랫폼
       webm:
         label: WEBM
         hint: WEBM 동영상 파일

@@ -736,7 +736,7 @@ admin:
       label:
         one: Sociální
         other: Sociální
-      plateform: Platforma
+      platform: Platforma
       twitter:
         label: Twitter/X
         hint: Uživatelské jméno
@@ -783,6 +783,10 @@ admin:
     value:
       label: Hodnota
     video:
+      embed:
+        label: Vložené video
+      id:
+        label: ID videa
       label: 
         one: Video
         other: Videa
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (Mobil)
           hint: Video soubor MP4 pro mobil
+      platform:
+        label: Platforma
+        hint: Platforma, kde se video nachází
       webm:
         label: WEBM
         hint: Video soubor WEBM

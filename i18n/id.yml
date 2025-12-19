@@ -736,7 +736,7 @@ admin:
       label:
         one: Sosial
         other: Sosial
-      plateform: Platform
+      platform: Platform
       twitter:
         label: Twitter/X
         hint: Nama Pengguna
@@ -783,6 +783,10 @@ admin:
     value:
       label: Nilai
     video:
+      embed:
+        label: Video embed
+      id:
+        label: ID Video
       label: 
         one: Video
         other: Video
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (Seluler)
           hint: File video MP4 untuk seluler
+      platform:
+        label: Platform
+        hint: Platform tempat video berada
       webm:
         label: WEBM
         hint: File video WEBM

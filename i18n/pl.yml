@@ -736,7 +736,7 @@ admin:
       label:
         one: Społecznościowy
         other: Społecznościowe
-      plateform: Platforma
+      platform: Platforma
       twitter:
         label: Twitter/X
         hint: Nazwa użytkownika
@@ -783,6 +783,10 @@ admin:
     value:
       label: Wartość
     video:
+      embed:
+        label: Osadzone wideo
+      id:
+        label: ID wideo
       label: 
         one: Wideo
         other: Wideo
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (Telefon)
           hint: Plik wideo MP4 dla telefonu
+      platform:
+        label: Platforma
+        hint: Platforma, na której znajduje się wideo
       webm:
         label: WEBM
         hint: Plik wideo WEBM

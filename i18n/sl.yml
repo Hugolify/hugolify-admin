@@ -736,7 +736,7 @@ admin:
       label:
         one: Družbeno
         other: Družbeno
-      plateform: Platforma
+      platform: Platforma
       twitter:
         label: Twitter/X
         hint: Uporabniško ime
@@ -783,6 +783,10 @@ admin:
     value:
       label: Vrednost
     video:
+      embed:
+        label: Vdelan video
+      id:
+        label: ID videa
       label: 
         one: Video
         other: Videi
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (Mobilni)
           hint: Video datoteka MP4 za mobilne naprave
+      platform:
+        label: Platforma
+        hint: Platforma, kjer se nahaja video
       webm:
         label: WEBM
         hint: Video datoteka WEBM

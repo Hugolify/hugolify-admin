@@ -736,7 +736,7 @@ admin:
       label:
         one: Social
         other: Sociala
-      plateform: Plattform
+      platform: Plattform
       twitter:
         label: Twitter/X
         hint: Användarnamn
@@ -783,6 +783,10 @@ admin:
     value:
       label: Värde
     video:
+      embed:
+        label: Inbäddad video
+      id:
+        label: Video-ID
       label: 
         one: Video
         other: Videor
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (Mobil)
           hint: MP4-videofil för mobil
+      platform:
+        label: Plattform
+        hint: Plattformen där videon finns
       webm:
         label: WEBM
         hint: WEBM-videofil

@@ -1,0 +1,12 @@
+{{- $fields := slice 
+  "video_platform" 
+  "video_id" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.video.embed.label")
+  "name" "video_embed"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

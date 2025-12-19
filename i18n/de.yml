@@ -736,7 +736,7 @@ admin:
       label:
         one: Soziales Netzwerk
         other: Soziale Netzwerke
-      plateform: Plattform
+      platform: Plattform
       twitter:
         label: Twitter/X
         hint: Benutzername
@@ -783,6 +783,10 @@ admin:
     value:
       label: Wert
     video:
+      embed:
+        label: Video-Embed
+      id:
+        label: Video-ID
       label: 
         one: Video
         other: Videos
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (Mobil)
           hint: MP4-Videodatei für Mobilgeräte
+      platform:
+        label: Plattform
+        hint: Die Plattform, auf der sich das Video befindet
       webm:
         label: WEBM
         hint: WEBM-Videodatei

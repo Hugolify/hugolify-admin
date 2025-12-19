@@ -11,10 +11,11 @@
   "twitter" 
   "vimeo" 
   "youtube" }}
+{{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
 {{- $args := dict 
-  "label" (i18n "admin.fields.socials.plateform")
-  "name" "plateform"
+  "label" (i18n "admin.fields.socials.platform")
+  "name" "platform"
   "required" true
   "options" $options
   -}}

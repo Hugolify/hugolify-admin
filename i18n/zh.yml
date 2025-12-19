@@ -736,7 +736,7 @@ admin:
       label:
         one: 社交
         other: 社交
-      plateform: 平台
+      platform: 平台
       twitter:
         label: Twitter/X
         hint: 用户名
@@ -783,6 +783,10 @@ admin:
     value:
       label: 值
     video:
+      embed:
+        label: 嵌入视频
+      id:
+        label: 视频 ID
       label: 
         one: 视频
         other: 视频
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4(手机)
           hint: 手机MP4视频文件
+      platform:
+        label: 平台
+        hint: 视频所在的平台
       webm:
         label: WEBM
         hint: WEBM视频文件

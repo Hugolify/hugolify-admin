@@ -736,7 +736,7 @@ admin:
       label:
         one: Социален
         other: Социални
-      plateform: Платформа
+      platform: Платформа
       twitter:
         label: Twitter/X
         hint: Потребителско име
@@ -783,6 +783,10 @@ admin:
     value:
       label: Стойност
     video:
+      embed:
+        label: Вградено видео
+      id:
+        label: Видео ID
       label: 
         one: Видео
         other: Видеоклипове
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (Мобилен)
           hint: MP4 видео файл за мобилен
+      platform:
+        label: Платформа
+        hint: Платформата, където се намира видеото
       webm:
         label: WEBM
         hint: WEBM видео файл

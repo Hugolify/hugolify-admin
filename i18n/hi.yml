@@ -736,7 +736,7 @@ admin:
       label:
         one: सोशल
         other: सोशल
-      plateform: प्लेटफॉर्म
+      platform: प्लेटफॉर्म
       twitter:
         label: ट्विटर/X
         hint: उपयोगकर्ता नाम
@@ -783,6 +783,10 @@ admin:
     value:
       label: मान
     video:
+      embed:
+        label: एम्बेड वीडियो
+      id:
+        label: वीडियो आईडी
       label: 
         one: वीडियो
         other: वीडियो
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4 (मोबाइल)
           hint: मोबाइल के लिए MP4 वीडियो फ़ाइल
+      platform:
+        label: प्लेटफ़ॉर्म
+        hint: वह प्लेटफ़ॉर्म जहाँ वीडियो स्थित है
       webm:
         label: WEBM
         hint: WEBM वीडियो फ़ाइल

@@ -736,7 +736,7 @@ admin:
       label:
         one: ソーシャル
         other: ソーシャル
-      plateform: プラットフォーム
+      platform: プラットフォーム
       twitter:
         label: Twitter/X
         hint: ユーザー名
@@ -783,6 +783,10 @@ admin:
     value:
       label: 値
     video:
+      embed:
+        label: 埋め込み動画
+      id:
+        label: 動画ID
       label: 
         one: 動画
         other: 動画
@@ -792,6 +796,9 @@ admin:
         mobile:
           label: MP4（モバイル）
           hint: モバイル用MP4動画ファイル
+      platform:
+        label: プラットフォーム
+        hint: 動画があるプラットフォーム
       webm:
         label: WEBM
         hint: WEBM動画ファイル
