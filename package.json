@@ -12,10 +12,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@hugolify/prettier-config": "^0.3.1",
-    "@tinacms/cli": "^1.7.0"
-  },
-  "dependencies": {
-    "tinacms": "^2.5.2"
+    "@hugolify/prettier-config": "^0.3.1"
   }
 }
