@@ -6,5 +6,7 @@
 {{- else -}}
   {{- $custom_path = . }}
 {{- end -}}
+{{- $custom_path = replace $custom_path "{{" "{" }}
+{{- $custom_path = replace $custom_path "}}" "}" }}
 
 filename: "{{$custom_path}}.md",
