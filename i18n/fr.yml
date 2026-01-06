@@ -408,9 +408,7 @@ admin:
       sale: Date de vente
       to: Jusqu’au
     description:
-      hint:
-        Displayed in tabs, search results, and in SMS/Messages/Social networks
-        preview
+      hint: Affiché dans les onglets, les résultats de recherche et l’aperçu des SMS/messages/réseaux sociaux
       label: Description
     diagnostic:
       epd:
@@ -448,7 +446,7 @@ admin:
       label: Fax
       hint: 'Format international, ex: +33 1 23 45 67 89'
     featured_image:
-      hint: Displayed in search results, and in SMS/Messages/Social networks preview
+      hint: Affiché dans les onglets, les résultats de recherche et l’aperçu des SMS/messages/réseaux sociaux
       label: Image principale
     fee:
       label:
@@ -771,7 +769,7 @@ admin:
     title:
       label: Titre
     title_page:
-      hint: Visible dans les onglets, les résultats de recherche, et dans l’aperçu des SMS/Messages/Réseaux sociaux
+      hint: Affiché dans les onglets, les résultats de recherche et l’aperçu des SMS/messages/réseaux sociaux
       label: Titre de la page
     transcription:
       label: Transcription
