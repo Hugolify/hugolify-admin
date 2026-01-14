@@ -108,8 +108,12 @@
       {{ end }}
     }
   },
-  media_folder: '{{ $media_folder }}',
-  public_folder: '{{ $public_folder }}'
+  {{- with site.Params.admin.media.media_folder }}
+  media_folder: {{ . }},
+  {{- end }}
+  {{- with site.Params.admin.media.public_folder }}
+  public_folder: '{{ . }}'
+  {{- end }}
 }
 
 {{ end }}

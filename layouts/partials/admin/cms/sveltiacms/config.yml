@@ -20,45 +20,48 @@ backend:
 
 display_url: {{ site.BaseURL }}
 
-{{ if site.Params.admin.i18n.locales }}
+{{- if site.Params.admin.i18n.locales }}
 i18n:
   structure: multiple_files
   locales: {{ site.Params.admin.i18n.locales }}
   default_locale: {{ site.Params.admin.i18n.default_locale }}
-{{ end }}
+{{- end }}
 
 local_backend: {{ site.Params.admin.local_backend | default true }}
 locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
 logo_url: ./logo-picto.svg
-media_folder: {{ site.Params.admin.media.media_folder }}
-public_folder: {{ site.Params.admin.media.public_folder }}
-
+{{- with site.Params.admin.media.media_folder }}
+media_folder: {{ . }}
+{{- end }}
+{{- with site.Params.admin.media.public_folder }}
+public_folder: {{ . }}
+{{- end }}
 publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
 
-{{- $slugify_filename := site.Params.admin.media.slugify_filename | default false }}
 {{- with site.Params.admin.media.cloud }}
-{{- $name := cond (reflect.IsSlice .name) .name (slice .name) }}
-media_library:
+  {{- $slugify_filename := site.Params.admin.media.slugify_filename | default false }}
+  {{- $cloud := cond (reflect.IsSlice .) . (slice .) }}
+media_libraries:
   default:
-    {{ with site.Params.admin.media.max_file_size }}
+    {{- with site.Params.admin.media.max_file_size }}
     max_file_size: '{{ . }}'
-    {{ end }}
+    {{- end }}
     slugify_filename: {{ $slugify_filename }}
-  {{ range $name }}
-    {{ . }}:
-      config:
-        {{- with .cloud_name }}
-        cloud_name: "{{ . }}"
-        {{ end }}
-        {{- with .api_key }}
-        api_key: {{ . }}
-        {{ end }}
-        {{- with .public_key }}
-        publicKey: {{ . }}
-        {{ end }}
-        {{- with .tabs }}
-        tabs: {{ . }}
-        {{ end }}
+  {{- range $cloud }}
+  {{ .name }}:
+    config:
+      {{- with .cloud_name }}
+      cloud_name: "{{ . }}"
+      {{ end }}
+      {{- with .api_key }}
+      api_key: {{ . }}
+      {{- end }}
+      {{- with .public_key }}
+      publicKey: {{ . }}
+      {{- end }}
+      {{- with .tabs }}
+      tabs: {{ . }}
+      {{- end }}
   {{- end }}
 {{- end }}
 

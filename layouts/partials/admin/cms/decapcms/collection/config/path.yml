@@ -12,4 +12,6 @@
 {{- end -}}
 
 path: "{{$custom_path}}",
-media_folder: "{{ $media_folder | default "/assets/images/uploads" }}",
+{{- with $media_folder }}
+media_folder: "{{ . }}",
+{{- end }}
