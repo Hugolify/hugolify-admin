@@ -1,5 +1,5 @@
 header nav::before {
-    background: url('./logo-picto.svg') no-repeat;
+    background: url('./assets/logo-picto.svg') no-repeat;
     background-size: contain;
     content: '';
     float: left;

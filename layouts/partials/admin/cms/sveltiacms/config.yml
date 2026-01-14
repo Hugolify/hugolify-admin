@@ -29,7 +29,7 @@ i18n:
 
 local_backend: {{ site.Params.admin.local_backend | default true }}
 locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
-logo_url: ./logo-picto.svg
+logo_url: ./assets/logo-picto.svg
 {{- with site.Params.admin.media.media_folder }}
 media_folder: {{ . }}
 {{- end }}
