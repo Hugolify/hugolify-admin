@@ -39,18 +39,27 @@
 
 {{ $accept := slice }}
 {{ with $extensions }}
-  {{ if eq . "mp3" }}
-    {{ $accept = $accept | append "'audio/mpeg'" }}
-  {{ else if eq . "mp4" }}
-    {{ $accept = $accept | append "'video/mp4'" }}
-  {{ else if eq . "ogg" }}
-    {{ $accept = $accept | append "'audio/ogg'" }}
-  {{ else if eq . "pdf" }}
-    {{ $accept = $accept | append "'application/pdf'" }}
-  {{ else if eq . "webm" }}
-    {{ $accept = $accept | append "'video/webm'" }}
-  {{ else if eq . "zip" }}
-    {{ $accept = $accept | append "'application/zip'" }}
+  {{ $exts := cond (reflect.IsSlice .) . (slice .) }} 
+  {{ range $exts }} 
+    {{ if or (eq . "jpg") (eq . "jpeg") }}
+      {{ $accept = $accept | append "image/jpeg" }}
+    {{ else if eq . "mp3" }}
+      {{ $accept = $accept | append "audio/mpeg" }}
+    {{ else if eq . "mp4" }}
+      {{ $accept = $accept | append "video/mp4" }}
+    {{ else if eq . "ogg" }}
+      {{ $accept = $accept | append "audio/ogg" }}
+    {{ else if eq . "pdf" }}
+      {{ $accept = $accept | append "application/pdf" }}
+    {{ else if eq . "png" }}
+      {{ $accept = $accept | append "image/png" }}
+    {{ else if eq . "webm" }}
+      {{ $accept = $accept | append "video/webm" }}
+    {{ else if eq . "webp" }}
+      {{ $accept = $accept | append "image/webp" }}
+    {{ else if eq . "zip" }}
+      {{ $accept = $accept | append "application/zip" }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
@@ -128,7 +137,9 @@
   media: {
     {{- with $accept }}
     accept: [
-      {{ delimit . "," }}
+      {{- range . }}
+      '{{ . }}',
+      {{- end }}
     ]
     {{- end }}
   },
@@ -151,6 +162,9 @@
   required: {{ $required }},
   i18n: {{ $i18n }},
   choose_url: {{ $choose_url }},
+  {{ with $accept }}
+  accept: '{{ delimit . "," }}',
+  {{ end }}
   media_library: {
     config: {
       {{ with $max_file_size }}
