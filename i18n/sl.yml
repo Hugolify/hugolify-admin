@@ -333,6 +333,9 @@ admin:
         hint: Razmik med diapozitivi. Izraženo v rem.
         label: Razmik
       hint: Samo za prikaz vrtiljaka
+      interval:
+        hint: Čas med vsakim diapozitivom. Izraženo v ms.
+        label: Interval
       label: Konfiguracija vrtiljaka
       padding:
         hint: Polnjenje levo/desno vrtiljaka. V vrednosti rem
@@ -341,6 +344,9 @@ admin:
         label: Paginacija
       params:
         label: Parametri
+      permove:
+        hint: Število diapozitivov za premik
+        label: Na premik
       perpage:
         hint: Število diapozitivov za prikaz
         label: Na stran

@@ -333,6 +333,9 @@ admin:
         hint: Avståndet mellan bilder. Uttryckt i rem.
         label: Avstånd
       hint: Endast för karusellvisning
+      interval:
+        hint: Tid mellan varje bild. Uttryckt i ms.
+        label: Intervall
       label: Karusellkonfiguration
       padding:
         hint: Fyllning vänster/höger om karusellen. I rem-värde
@@ -341,6 +344,9 @@ admin:
         label: Paginering
       params:
         label: Parametrar
+      permove:
+        hint: Antal bilder att flytta
+        label: Per flyttning
       perpage:
         hint: Antal bilder att visa
         label: Per sida

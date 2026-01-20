@@ -333,6 +333,9 @@ admin:
         hint: A diák közötti rés. Rem-ben kifejezve.
         label: Rés
       hint: Csak karusszel megjelenítéshez
+      interval:
+        hint: Idő minden dia között. Ms-ban kifejezve.
+        label: Intervallum
       label: Karusszel konfiguráció
       padding:
         hint: A karusszel bal/jobb oldali kitöltése. Rem értékben
@@ -341,6 +344,9 @@ admin:
         label: Lapozás
       params:
         label: Paraméterek
+      permove:
+        hint: Mozgatandó diák száma
+        label: Mozgatásonként
       perpage:
         hint: Megjelenítendő diák száma
         label: Oldalanként

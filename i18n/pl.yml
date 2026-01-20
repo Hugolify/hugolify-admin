@@ -333,6 +333,9 @@ admin:
         hint: Odstęp między slajdami. Wyrażony w rem.
         label: Odstęp
       hint: Tylko dla wyświetlania karuzeli
+      interval:
+        hint: Czas między każdym slajdem. Wyrażony w ms.
+        label: Interwał
       label: Konfiguracja karuzeli
       padding:
         hint: Wypełnienie lewo/prawo karuzeli. W wartości rem
@@ -341,6 +344,9 @@ admin:
         label: Paginacja
       params:
         label: Parametry
+      permove:
+        hint: Liczba slajdów do przesunięcia
+        label: Na przesunięcie
       perpage:
         hint: Liczba slajdów do wyświetlenia
         label: Na stronę

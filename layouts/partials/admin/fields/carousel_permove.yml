@@ -1,0 +1,14 @@
+{{- $name := dict "name" "perMove" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "carousel_permove" "nameOverride" "perMove" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.carousel.permove.label")
+  "hint" (i18n "admin.fields.carousel.permove.hint")
+  "min" 1
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/number.js" $args }}

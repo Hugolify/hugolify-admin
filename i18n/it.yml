@@ -333,6 +333,9 @@ admin:
         hint: Lo spazio tra le diapositive. Espresso in rem.
         label: Spazio
       hint: Solo per visualizzazione a carosello
+      interval:
+        hint: Tempo tra ogni diapositiva. Espresso in ms.
+        label: Intervallo
       label: Configurazione carosello
       padding:
         hint: Padding sinistro/destro del carosello. In valore rem
@@ -341,6 +344,9 @@ admin:
         label: Paginazione
       params:
         label: Parametri
+      permove:
+        hint: Numero di diapositive da spostare
+        label: Per spostamento
       perpage:
         hint: Numero di diapositive da visualizzare
         label: Per pagina

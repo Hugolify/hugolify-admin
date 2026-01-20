@@ -7,8 +7,10 @@
   "carousel_focus" 
   "carousel_autoplay" 
   "carousel_arrows" 
+  "carousel_interval" 
   "carousel_pagination" 
   "carousel_type" 
+  "carousel_permove" 
   "carousel_perpage" 
   "carousel_padding" 
   "carousel_gap" -}}

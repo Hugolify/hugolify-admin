@@ -333,6 +333,9 @@ admin:
         hint: Celah antara slide. Dinyatakan dalam rem.
         label: Celah
       hint: Hanya untuk tampilan korsel
+      interval:
+        hint: Waktu antara setiap slide. Dinyatakan dalam ms.
+        label: Interval
       label: Konfigurasi Korsel
       padding:
         hint: Padding kiri/kanan korsel. Dalam nilai rem
@@ -341,6 +344,9 @@ admin:
         label: Paginasi
       params:
         label: Parameter
+      permove:
+        hint: Jumlah slide yang akan dipindahkan
+        label: Per gerakan
       perpage:
         hint: Jumlah slide yang akan ditampilkan
         label: Per halaman

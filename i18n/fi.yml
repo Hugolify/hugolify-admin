@@ -333,6 +333,9 @@ admin:
         hint: Kuvien väli. Ilmoita rem-yksikössä
         label: Väli
       hint: Vain kuvakarusellille
+      interval:
+        hint: Aika jokaisen kuvan välillä. Ilmoita ms-yksikössä.
+        label: Aikaväli
       label: Kuvakarusellin asetukset
       padding:
         hint: Kuvakarusellin vasen/oikea sisennys. Ilmoita rem-yksikössä
@@ -341,6 +344,9 @@ admin:
         label: Sivutus
       params:
         label: Parametrit
+      permove:
+        hint: Siirrettävien kuvien lukumäärä
+        label: Per siirto
       perpage:
         hint: Näytettävien kuvien lukumäärä
         label: Per sivu

@@ -333,6 +333,9 @@ admin:
         hint: De ruimte tussen dia’s. Uitgedrukt in rem.
         label: Tussenruimte
       hint: Alleen voor carrouseldisplay
+      interval:
+        hint: Tijd tussen elke dia. Uitgedrukt in ms.
+        label: Interval
       label: Carrouselconfiguratie
       padding:
         hint: Opvulling links/rechts van de carrousel. In rem-waarde
@@ -341,6 +344,9 @@ admin:
         label: Paginering
       params:
         label: Parameters
+      permove:
+        hint: Aantal dia's om te verplaatsen
+        label: Per verplaatsing
       perpage:
         hint: Aantal dia’s om weer te geven
         label: Per pagina

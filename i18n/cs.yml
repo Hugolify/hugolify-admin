@@ -333,6 +333,9 @@ admin:
         hint: Mezera mezi snímky. Vyjádřeno v rem.
         label: Mezera
       hint: Pouze pro zobrazení karuselu
+      interval:
+        hint: Čas mezi každým snímkem. Vyjádřeno v ms.
+        label: Interval
       label: Konfigurace karuselu
       padding:
         hint: Odsazení vlevo/vpravo od karuselu. V hodnotě rem
@@ -341,6 +344,9 @@ admin:
         label: Stránkování
       params:
         label: Parametry
+      permove:
+        hint: Počet snímků k přesunutí
+        label: Na přesun
       perpage:
         hint: Počet snímků k zobrazení
         label: Na stránku

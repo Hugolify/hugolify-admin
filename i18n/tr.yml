@@ -333,6 +333,9 @@ admin:
         hint: Slaytlar arasındaki boşluk. Rem cinsinden ifade edilir.
         label: Boşluk
       hint: Sadece karusel görünümü için
+      interval:
+        hint: Her slayt arasındaki süre. Ms cinsinden ifade edilir.
+        label: Aralık
       label: Karusel yapılandırması
       padding:
         hint: Karuselin sol/sağ dolgusu. Rem değeri
@@ -341,6 +344,9 @@ admin:
         label: Sayfalandırma
       params:
         label: Parametreler
+      permove:
+        hint: Taşınacak slayt sayısı
+        label: Hareket başına
       perpage:
         hint: Gösterilecek slayt sayısı
         label: Sayfa başına

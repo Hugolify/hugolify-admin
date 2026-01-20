@@ -333,6 +333,9 @@ admin:
         hint: Avstanden mellom lysbilder. Uttrykt i rem.
         label: Avstand
       hint: Kun for karusellvisning
+      interval:
+        hint: Tid mellom hvert lysbilde. Uttrykt i ms.
+        label: Intervall
       label: Karusellkonfigurasjon
       padding:
         hint: Polstring venstre/høyre for karusellen. I rem-verdi
@@ -341,6 +344,9 @@ admin:
         label: Paginering
       params:
         label: Parametere
+      permove:
+        hint: Antall lysbilder å flytte
+        label: Per flytting
       perpage:
         hint: Antall lysbilder å vise
         label: Per side

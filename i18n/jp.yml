@@ -333,6 +333,9 @@ admin:
         hint: スライド間の間隔。remで表現されます。
         label: 間隔
       hint: カルーセル表示のみ
+      interval:
+        hint: 各スライド間の時間。msで表現されます。
+        label: インターバル
       label: カルーセル設定
       padding:
         hint: カルーセルの左右のパディング。rem値
@@ -341,6 +344,9 @@ admin:
         label: ページネーション
       params:
         label: パラメータ
+      permove:
+        hint: 移動するスライド数
+        label: 移動あたり
       perpage:
         hint: 表示するスライド数
         label: ページあたり

@@ -333,6 +333,9 @@ admin:
         hint: 幻灯片之间的间隙。以rem表示。
         label: 间隙
       hint: 仅用于轮播显示
+      interval:
+        hint: 每张幻灯片之间的时间。以毫秒表示。
+        label: 间隔
       label: 轮播配置
       padding:
         hint: 轮播的左/右填充。以rem值表示
@@ -341,6 +344,9 @@ admin:
         label: 分页
       params:
         label: 参数
+      permove:
+        hint: 要移动的幻灯片数量
+        label: 每次移动
       perpage:
         hint: 要显示的幻灯片数量
         label: 每页

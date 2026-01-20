@@ -333,6 +333,9 @@ admin:
         hint: 슬라이드 간 간격. rem으로 표현됩니다.
         label: 간격
       hint: 캐러셀 표시 전용
+      interval:
+        hint: 각 슬라이드 간 시간. ms로 표현됩니다.
+        label: 간격
       label: 캐러셀 설정
       padding:
         hint: 캐러셀의 왼쪽/오른쪽 패딩. rem 값
@@ -341,6 +344,9 @@ admin:
         label: 페이지네이션
       params:
         label: 매개변수
+      permove:
+        hint: 이동할 슬라이드 수
+        label: 이동당
       perpage:
         hint: 표시할 슬라이드 수
         label: 페이지당

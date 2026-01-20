@@ -333,6 +333,9 @@ admin:
         hint: Der Abstand zwischen den Folien. Ausgedrückt in rem.
         label: Abstand
       hint: Nur für Karussell-Anzeige
+      interval:
+        hint: Zeit zwischen jeder Folie. Ausgedrückt in ms.
+        label: Intervall
       label: Karussell-Konfiguration
       padding:
         hint: Padding links/rechts des Karussells. In rem-Wert
@@ -341,6 +344,9 @@ admin:
         label: Paginierung
       params:
         label: Parameter
+      permove:
+        hint: Anzahl der zu verschiebenden Folien
+        label: Pro Bewegung
       perpage:
         hint: Anzahl der anzuzeigenden Folien
         label: Pro Seite

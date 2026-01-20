@@ -333,6 +333,9 @@ admin:
         hint: El espacio entre diapositivas. Expresado en rem.
         label: Espacio
       hint: Solo para visualización en carrusel
+      interval:
+        hint: Tiempo entre cada diapositiva. Expresado en ms.
+        label: Intervalo
       label: Configuración del carrusel
       padding:
         hint: Relleno izquierdo/derecho del carrusel. En valor rem
@@ -341,6 +344,9 @@ admin:
         label: Paginación
       params:
         label: Parámetros
+      permove:
+        hint: Número de diapositivas a mover
+        label: Por movimiento
       perpage:
         hint: Número de diapositivas a mostrar
         label: Por página

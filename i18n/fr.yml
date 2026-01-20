@@ -335,6 +335,9 @@ admin:
         hint: L’écart entre les slides. Exprimé en rem.
         label: Gap
       hint: Seulement pour un affichage en carrousel
+      interval:
+        hint: Temps entre chaque slide. Exprimé en ms.
+        label: Interval
       label: Configuration carrousel
       padding:
         hint: Padding left/right of the carousel. In rem value
@@ -343,6 +346,9 @@ admin:
         label: Pagination
       params:
         label: Paramêtres
+      permove:
+        hint: Nombre de slide à déplacer
+        label: Par move
       perpage:
         hint: Nombre de slide à afficher
         label: Par page

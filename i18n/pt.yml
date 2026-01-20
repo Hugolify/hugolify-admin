@@ -333,6 +333,9 @@ admin:
         hint: O espaço entre os slides. Expresso em rem.
         label: Espaçamento
       hint: Apenas para exibição em carrossel
+      interval:
+        hint: Tempo entre cada slide. Expresso em ms.
+        label: Intervalo
       label: Configuração do carrossel
       padding:
         hint: Preenchimento esquerda/direita do carrossel. Em valor rem
@@ -341,6 +344,9 @@ admin:
         label: Paginação
       params:
         label: Parâmetros
+      permove:
+        hint: Número de slides a mover
+        label: Por movimento
       perpage:
         hint: Número de slides a exibir
         label: Por página
