@@ -8,5 +8,6 @@
 {{- end -}}
 {{- $custom_path = replace $custom_path "{{" "{" }}
 {{- $custom_path = replace $custom_path "}}" "}" }}
+{{- $custom_path = replace $custom_path "slug" "primary" }}
 
-filename: "{{$custom_path}}.md",
+filename: "{{ $custom_path }}.md",
