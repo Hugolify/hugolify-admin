@@ -817,16 +817,16 @@ admin:
     weight:
       label: Pozisyon (önem)
       options:
-        10: İlk
-        20: İkinci
-        30: Üçüncü
-        40: Dördüncü
-        50: Beşinci
-        60: Altıncı
-        70: Yedinci
-        80: Sekizinci
-        90: Dokuzuncu
-        100: Son
+        "10": İlk
+        "20": İkinci
+        "30": Üçüncü
+        "40": Dördüncü
+        "50": Beşinci
+        "60": Altıncı
+        "70": Yedinci
+        "80": Sekizinci
+        "90": Dokuzuncu
+        "100": Son
     year: Yıl
     zoom:
       label: Yakınlaştır

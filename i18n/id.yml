@@ -817,16 +817,16 @@ admin:
     weight:
       label: Posisi (kepentingan)
       options:
-        10: Yang pertama
-        20: Yang kedua
-        30: Yang ketiga
-        40: Yang keempat
-        50: Yang kelima
-        60: Yang keenam
-        70: Yang ketujuh
-        80: Yang kedelapan
-        90: Yang kesembilan
-        100: Yang terakhir
+        "10": Yang pertama
+        "20": Yang kedua
+        "30": Yang ketiga
+        "40": Yang keempat
+        "50": Yang kelima
+        "60": Yang keenam
+        "70": Yang ketujuh
+        "80": Yang kedelapan
+        "90": Yang kesembilan
+        "100": Yang terakhir
     year: Tahun
     zoom:
       label: Zoom

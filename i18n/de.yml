@@ -817,16 +817,16 @@ admin:
     weight:
       label: Position (Wichtigkeit)
       options:
-        10: Der Erste
-        20: Der Zweite
-        30: Der Dritte
-        40: Der Vierte
-        50: Der Fünfte
-        60: Der Sechste
-        70: Der Siebte
-        80: Der Achte
-        90: Der Neunte
-        100: Der Letzte
+        "10": Der Erste
+        "20": Der Zweite
+        "30": Der Dritte
+        "40": Der Vierte
+        "50": Der Fünfte
+        "60": Der Sechste
+        "70": Der Siebte
+        "80": Der Achte
+        "90": Der Neunte
+        "100": Der Letzte
     year: Jahr
     zoom:
       label: Zoom

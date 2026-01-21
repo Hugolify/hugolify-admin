@@ -817,16 +817,16 @@ admin:
     weight:
       label: Position (viktighet)
       options:
-        10: Den första
-        20: Den andra
-        30: Den tredje
-        40: Den fjärde
-        50: Den femte
-        60: Den sjätte
-        70: Den sjunde
-        80: Den åttonde
-        90: Den nionde
-        100: Den sista
+        "10": Den första
+        "20": Den andra
+        "30": Den tredje
+        "40": Den fjärde
+        "50": Den femte
+        "60": Den sjätte
+        "70": Den sjunde
+        "80": Den åttonde
+        "90": Den nionde
+        "100": Den sista
     year: År
     zoom:
       label: Zoom

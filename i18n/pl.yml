@@ -817,16 +817,16 @@ admin:
     weight:
       label: Pozycja (ważność)
       options:
-        10: Pierwszy
-        20: Drugi
-        30: Trzeci
-        40: Czwarty
-        50: Piąty
-        60: Szósty
-        70: Siódmy
-        80: Ósmy
-        90: Dziewiąty
-        100: Ostatni
+        "10": Pierwszy
+        "20": Drugi
+        "30": Trzeci
+        "40": Czwarty
+        "50": Piąty
+        "60": Szósty
+        "70": Siódmy
+        "80": Ósmy
+        "90": Dziewiąty
+        "100": Ostatni
     year: Rok
     zoom:
       label: Powiększenie

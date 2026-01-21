@@ -817,16 +817,16 @@ admin:
     weight:
       label: Posição (importância)
       options:
-        10: O primeiro
-        20: O segundo
-        30: O terceiro
-        40: O quarto
-        50: O quinto
-        60: O sexto
-        70: O sétimo
-        80: O oitavo
-        90: O nono
-        100: O último
+        "10": O primeiro
+        "20": O segundo
+        "30": O terceiro
+        "40": O quarto
+        "50": O quinto
+        "60": O sexto
+        "70": O sétimo
+        "80": O oitavo
+        "90": O nono
+        "100": O último
     year: Ano
     zoom:
       label: Zoom

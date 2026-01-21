@@ -817,16 +817,16 @@ admin:
     weight:
       label: Položaj (pomembnost)
       options:
-        10: Prvi
-        20: Drugi
-        30: Tretji
-        40: Četrti
-        50: Peti
-        60: Šesti
-        70: Sedmi
-        80: Osmi
-        90: Deveti
-        100: Zadnji
+        "10": Prvi
+        "20": Drugi
+        "30": Tretji
+        "40": Četrti
+        "50": Peti
+        "60": Šesti
+        "70": Sedmi
+        "80": Osmi
+        "90": Deveti
+        "100": Zadnji
     year: Leto
     zoom:
       label: Povečava
