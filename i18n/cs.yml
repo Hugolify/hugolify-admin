@@ -816,7 +816,17 @@ admin:
       label: Webová stránka
     weight:
       label: Pozice (důležitost)
-      hint: Vědět, že 10 je nejdůležitější a 100 nejméně důležité
+      options:
+        10: První
+        20: Druhý
+        30: Třetí
+        40: Čtvrtý
+        50: Pátý
+        60: Šestý
+        70: Sedmý
+        80: Osmý
+        90: Devátý
+        100: Poslední
     year: Rok
     zoom:
       label: Zoom

@@ -815,8 +815,18 @@ admin:
       hint: URL (https://…)
       label: Verkkosivu
     weight:
-      hint: Tietäen, että 10 on tärkein ja 100 vähiten tärkeä.
       label: Asema (merkitys)
+      options:
+        10: Ensimmäinen
+        20: Toinen
+        30: Kolmas
+        40: Neljäs
+        50: Viides
+        60: Kuudes
+        70: Seitsemäs
+        80: Kahdeksas
+        90: Yhdeksäs
+        100: Viimeinen
     year: Vuosi
     zoom:
       label: Lähennä

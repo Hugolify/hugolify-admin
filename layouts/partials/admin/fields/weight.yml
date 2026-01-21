@@ -4,7 +4,6 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.weight.label")
   "name" "weight"
-  "required" true
   "options" $options
   -}}
 

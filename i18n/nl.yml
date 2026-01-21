@@ -816,7 +816,17 @@ admin:
       label: Website
     weight:
       label: Positie (belang)
-      hint: Wetende dat 10 het belangrijkste is en 100 het minst belangrijke
+      options:
+        10: De eerste
+        20: De tweede
+        30: De derde
+        40: De vierde
+        50: De vijfde
+        60: De zesde
+        70: De zevende
+        80: De achtste
+        90: De negende
+        100: De laatste
     year: Jaar
     zoom:
       label: Zoom

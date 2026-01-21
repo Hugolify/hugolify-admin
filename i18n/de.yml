@@ -816,7 +816,17 @@ admin:
       label: Website
     weight:
       label: Position (Wichtigkeit)
-      hint: Wobei 10 am wichtigsten und 100 am unwichtigsten ist
+      options:
+        10: Der Erste
+        20: Der Zweite
+        30: Der Dritte
+        40: Der Vierte
+        50: Der Fünfte
+        60: Der Sechste
+        70: Der Siebte
+        80: Der Achte
+        90: Der Neunte
+        100: Der Letzte
     year: Jahr
     zoom:
       label: Zoom

@@ -816,7 +816,17 @@ admin:
       label: Weboldal
     weight:
       label: Pozíció (fontosság)
-      hint: Tudva, hogy a 10 a legfontosabb és a 100 a legkevésbé fontos
+      options:
+        10: Az első
+        20: A második
+        30: A harmadik
+        40: A negyedik
+        50: Az ötödik
+        60: A hatodik
+        70: A hetedik
+        80: A nyolcadik
+        90: A kilencedik
+        100: Az utolsó
     year: Év
     zoom:
       label: Nagyítás

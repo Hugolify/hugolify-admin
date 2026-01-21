@@ -816,7 +816,17 @@ admin:
       label: Sito web
     weight:
       label: Posizione (importanza)
-      hint: Sapendo che 10 è il più importante e 100 il meno importante
+      options:
+        10: Il primo
+        20: Il secondo
+        30: Il terzo
+        40: Il quarto
+        50: Il quinto
+        60: Il sesto
+        70: Il settimo
+        80: L'ottavo
+        90: Il nono
+        100: L'ultimo
     year: Anno
     zoom:
       label: Zoom

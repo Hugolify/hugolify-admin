@@ -816,7 +816,17 @@ admin:
       label: Webbplats
     weight:
       label: Position (viktighet)
-      hint: Att veta att 10 är viktigast och 100 minst viktigt
+      options:
+        10: Den första
+        20: Den andra
+        30: Den tredje
+        40: Den fjärde
+        50: Den femte
+        60: Den sjätte
+        70: Den sjunde
+        80: Den åttonde
+        90: Den nionde
+        100: Den sista
     year: År
     zoom:
       label: Zoom
