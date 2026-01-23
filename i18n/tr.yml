@@ -460,6 +460,8 @@ admin:
         other: Ücretler
     figure:
       label: Şekil
+    firstname:
+      label: Ad
     form:
       autocomplete:
         label: Otomatik Tamamlama
@@ -518,6 +520,8 @@ admin:
       label: Başlık
     hero:
       label: Kahraman
+    honorific:
+      label: Hitap
     icon:
       hint: https://icons.getbootstrap.com/ adresinden ikon adı
       label: İkon
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Geçerli sayfa dilinden farklıysa dil kodunu girin (örn. tr)
       label: Dil
+    lastname:
+      label: Soyad
     layout:
       label: Düzen
       options:

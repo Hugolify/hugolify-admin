@@ -460,6 +460,8 @@ admin:
         other: Poplatky
     figure:
       label: Obrázek
+    firstname:
+      label: Jméno
     form:
       autocomplete:
         label: Automatické dokončování
@@ -518,6 +520,8 @@ admin:
       label: Nadpis
     hero:
       label: Hrdina
+    honorific:
+      label: Oslovení
     icon:
       hint: Název ikony z https://icons.getbootstrap.com/
       label: Ikona
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Zadejte kód jazyka (např. fr), pokud se liší od aktuálního jazyka stránky
       label: Jazyk
+    lastname:
+      label: Příjmení
     layout:
       label: Rozložení
       options:

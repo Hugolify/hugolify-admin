@@ -460,6 +460,8 @@ admin:
         other: Vergoedingen
     figure:
       label: Figuur
+    firstname:
+      label: Voornaam
     form:
       autocomplete:
         label: Automatisch aanvullen
@@ -518,6 +520,8 @@ admin:
       label: Kop
     hero:
       label: Hero
+    honorific:
+      label: Aanhef
     icon:
       hint: Pictogramnaam van https://icons.getbootstrap.com/
       label: Pictogram
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Voer taalcode in (bijv. nl) als deze verschilt van de huidige paginataal
       label: Taal
+    lastname:
+      label: Achternaam
     layout:
       label: Lay-out
       options:

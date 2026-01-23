@@ -460,6 +460,8 @@ admin:
         other: Taxas
     figure:
       label: Figura
+    firstname:
+      label: Nome
     form:
       autocomplete:
         label: Preenchimento automático
@@ -518,6 +520,8 @@ admin:
       label: Cabeçalho
     hero:
       label: Hero
+    honorific:
+      label: Pronome de tratamento
     icon:
       hint: Nome do ícone de https://icons.getbootstrap.com/
       label: Ícone
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Digite o código do idioma (ex. pt) se for diferente do idioma da página atual
       label: Idioma
+    lastname:
+      label: Sobrenome
     layout:
       label: Layout
       options:

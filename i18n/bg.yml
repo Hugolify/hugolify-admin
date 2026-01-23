@@ -460,6 +460,8 @@ admin:
         other: Такси
     figure:
       label: Фигура
+    firstname:
+      label: Име
     form:
       autocomplete:
         label: Автоматично попълване
@@ -518,6 +520,8 @@ admin:
       label: Заглавие
     hero:
       label: Герой
+    honorific:
+      label: Обръщение
     icon:
       hint: Име на икона от https://icons.getbootstrap.com/
       label: Икона
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Въведете код на езика (напр. fr), ако е различен от текущия език на страницата
       label: Език
+    lastname:
+      label: Фамилия
     layout:
       label: Оформление
       options:

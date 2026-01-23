@@ -460,6 +460,8 @@ admin:
         other: Onorari
     figure:
       label: Figura
+    firstname:
+      label: Nome
     form:
       autocomplete:
         label: Autocompletamento
@@ -518,6 +520,8 @@ admin:
       label: Intestazione
     hero:
       label: Hero
+    honorific:
+      label: Titolo
     icon:
       hint: Nome dell'icona da https://icons.getbootstrap.com/
       label: Icona
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Inserisci codice lingua (es. it) se diverso dalla lingua della pagina corrente
       label: Lingua
+    lastname:
+      label: Cognome
     layout:
       label: Layout
       options:

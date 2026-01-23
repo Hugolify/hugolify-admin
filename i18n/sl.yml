@@ -460,6 +460,8 @@ admin:
         other: Pristojbine
     figure:
       label: Slika
+    firstname:
+      label: Ime
     form:
       autocomplete:
         label: Samodejno izpolnjevanje
@@ -518,6 +520,8 @@ admin:
       label: Naslov
     hero:
       label: Hero
+    honorific:
+      label: Nagovor
     icon:
       hint: Ime ikone iz https://icons.getbootstrap.com/
       label: Ikona
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Vnesite kodo jezika (npr. sl), če se razlikuje od jezika trenutne strani
       label: Jezik
+    lastname:
+      label: Priimek
     layout:
       label: Postavitev
       options:

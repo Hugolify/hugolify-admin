@@ -460,6 +460,8 @@ admin:
         other: Opłaty
     figure:
       label: Figura
+    firstname:
+      label: Imię
     form:
       autocomplete:
         label: Autouzupełnianie
@@ -518,6 +520,8 @@ admin:
       label: Nagłówek
     hero:
       label: Hero
+    honorific:
+      label: Zwrot grzecznościowy
     icon:
       hint: Nazwa ikony z https://icons.getbootstrap.com/
       label: Ikona
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Wprowadź kod języka (np. pl), jeśli różni się od języka bieżącej strony
       label: Język
+    lastname:
+      label: Nazwisko
     layout:
       label: Układ
       options:

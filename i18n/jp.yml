@@ -460,6 +460,8 @@ admin:
         other: 手数料
     figure:
       label: 図
+    firstname:
+      label: 名
     form:
       autocomplete:
         label: オートコンプリート
@@ -518,6 +520,8 @@ admin:
       label: 見出し
     hero:
       label: ヒーロー
+    honorific:
+      label: 敬称
     icon:
       hint: https://icons.getbootstrap.com/ のアイコン名
       label: アイコン
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: 現在のページの言語と異なる場合は言語コードを入力（例：ja）
       label: 言語
+    lastname:
+      label: 姓
     layout:
       label: レイアウト
       options:

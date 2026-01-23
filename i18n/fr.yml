@@ -460,6 +460,8 @@ admin:
         other: Honoraires
     figure:
       label: Figure
+    firstname:
+      label: Prénom
     form:
       autocomplete:
         label: Autocomplete
@@ -518,6 +520,8 @@ admin:
       label: En-tête
     hero:
       label: Hero
+    honorific:
+      label: Titre
     icon:
       hint: Nom de l’icon provenant de https://icons.getbootstrap.com/
       label: Icone
@@ -582,6 +586,8 @@ admin:
     lang:
       hint: Enter code lang (e.g. fr) if different of the current page language
       label: Langue
+    lastname:
+      label: Nom
     layout:
       label: Affichage
       options:

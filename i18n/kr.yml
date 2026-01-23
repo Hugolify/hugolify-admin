@@ -460,6 +460,8 @@ admin:
         other: 수수료
     figure:
       label: 그림
+    firstname:
+      label: 이름
     form:
       autocomplete:
         label: 자동 완성
@@ -518,6 +520,8 @@ admin:
       label: 제목
     hero:
       label: 히어로
+    honorific:
+      label: 호칭
     icon:
       hint: https://icons.getbootstrap.com/ 의 아이콘 이름
       label: 아이콘
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: '현재 페이지 언어와 다른 경우 언어 코드 입력 (예: ko)'
       label: 언어
+    lastname:
+      label: 성
     layout:
       label: 레이아웃
       options:

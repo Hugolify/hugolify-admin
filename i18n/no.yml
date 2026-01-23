@@ -460,6 +460,8 @@ admin:
         other: Gebyrer
     figure:
       label: Figur
+    firstname:
+      label: Fornavn
     form:
       autocomplete:
         label: Autofullfør
@@ -518,6 +520,8 @@ admin:
       label: Overskrift
     hero:
       label: Helt
+    honorific:
+      label: Tiltaleform
     icon:
       hint: Ikonnavn fra https://icons.getbootstrap.com/
       label: Ikon
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Skriv inn språkkode (f.eks. fr) hvis forskjellig fra gjeldende sidespråk
       label: Språk
+    lastname:
+      label: Etternavn
     layout:
       label: Oppsett
       options:

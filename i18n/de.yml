@@ -460,6 +460,8 @@ admin:
         other: Gebühren
     figure:
       label: Abbildung
+    firstname:
+      label: Vorname
     form:
       autocomplete:
         label: Autovervollständigung
@@ -518,6 +520,8 @@ admin:
       label: Überschrift
     hero:
       label: Hero
+    honorific:
+      label: Anrede
     icon:
       hint: Icon-Name von https://icons.getbootstrap.com/
       label: Icon
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Sprachcode eingeben (z.B. de), falls abweichend von der aktuellen Seitensprache
       label: Sprache
+    lastname:
+      label: Nachname
     layout:
       label: Layout
       options:

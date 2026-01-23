@@ -460,6 +460,8 @@ admin:
         other: Maksut
     figure:
       label: Kuvio
+    firstname:
+      label: Etunimi
     form:
       autocomplete:
         label: Automaattinen täydennys
@@ -518,6 +520,8 @@ admin:
       label: Otsikko
     hero:
       label: Hero
+    honorific:
+      label: Puhuttelu
     icon:
       hint: Kuvakkeen nimi osoitteesta https://icons.getbootstrap.com/
       label: Kuvake
@@ -580,6 +584,8 @@ admin:
     lang:
       hint: Syötä koodin kieli (esim. fr), jos se on eri kuin nykyisen sivun kieli
       label: Kieli
+    lastname:
+      label: Sukunimi
     layout:
       label: Asettelu
       options:

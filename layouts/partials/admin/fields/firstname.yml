@@ -1,0 +1,6 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.firstname.label")
+  "name" "firstname"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

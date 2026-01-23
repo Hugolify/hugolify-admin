@@ -460,6 +460,8 @@ admin:
         other: Díjak
     figure:
       label: Ábra
+    firstname:
+      label: Keresztnév
     form:
       autocomplete:
         label: Automatikus kiegészítés
@@ -518,6 +520,8 @@ admin:
       label: Címsor
     hero:
       label: Hős
+    honorific:
+      label: Megszólítás
     icon:
       hint: Ikon neve a https://icons.getbootstrap.com/ oldalról
       label: Ikon
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Adja meg a nyelvkódot (pl. fr), ha eltér az aktuális oldal nyelvétől
       label: Nyelv
+    lastname:
+      label: Vezetéknév
     layout:
       label: Elrendezés
       options:

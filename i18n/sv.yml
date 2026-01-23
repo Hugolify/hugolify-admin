@@ -460,6 +460,8 @@ admin:
         other: Avgifter
     figure:
       label: Figur
+    firstname:
+      label: Förnamn
     form:
       autocomplete:
         label: Komplettera automatiskt
@@ -518,6 +520,8 @@ admin:
       label: Rubrik
     hero:
       label: Hjälte
+    honorific:
+      label: Tilltalsnamn
     icon:
       hint: Ikonnamn från https://icons.getbootstrap.com/
       label: Ikon
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Ange språkkod (t.ex. fr) om den skiljer sig från aktuell sidspråk
       label: Språk
+    lastname:
+      label: Efternamn
     layout:
       label: Layout
       options:

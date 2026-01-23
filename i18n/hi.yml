@@ -460,6 +460,8 @@ admin:
         other: शुल्क
     figure:
       label: आकृति
+    firstname:
+      label: प्रथम नाम
     form:
       autocomplete:
         label: स्वतः पूर्ण
@@ -518,6 +520,8 @@ admin:
       label: शीर्षक
     hero:
       label: हीरो
+    honorific:
+      label: सम्मानजनक
     icon:
       hint: https://icons.getbootstrap.com/ से आइकन का नाम
       label: आइकन
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: भाषा कोड दर्ज करें (उदाहरण के लिए fr) यदि वर्तमान पृष्ठ भाषा से भिन्न है
       label: भाषा
+    lastname:
+      label: अंतिम नाम
     layout:
       label: लेआउट
       options:

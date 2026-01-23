@@ -460,6 +460,8 @@ admin:
         other: Fees
     figure:
       label: Figure
+    firstname:
+      label: Firstname
     form:
       autocomplete:
         label: Autocomplete
@@ -518,6 +520,8 @@ admin:
       label: Heading
     hero:
       label: Hero
+    honorific:
+      label: Honorific
     icon:
       hint: Icon name from https://icons.getbootstrap.com/
       label: Icon
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Enter code lang (e.g. fr) if different of the current page language
       label: Language
+    lastname:
+      label: Lastname
     layout:
       label: Layout
       options:

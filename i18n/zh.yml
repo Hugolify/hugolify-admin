@@ -460,6 +460,8 @@ admin:
         other: 费用
     figure:
       label: 图形
+    firstname:
+      label: 名字
     form:
       autocomplete:
         label: 自动完成
@@ -518,6 +520,8 @@ admin:
       label: 标题
     hero:
       label: 主图
+    honorific:
+      label: 称呼
     icon:
       hint: 来自 https://icons.getbootstrap.com/ 的图标名称
       label: 图标
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: 如果与当前页面语言不同,请输入语言代码(例如 zh)
       label: 语言
+    lastname:
+      label: 姓氏
     layout:
       label: 布局
       options:

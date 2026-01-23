@@ -460,6 +460,8 @@ admin:
         other: Biaya
     figure:
       label: Gambar
+    firstname:
+      label: Nama depan
     form:
       autocomplete:
         label: Pelengkap Otomatis
@@ -518,6 +520,8 @@ admin:
       label: Judul
     hero:
       label: Hero
+    honorific:
+      label: Sebutan
     icon:
       hint: Nama ikon dari https://icons.getbootstrap.com/
       label: Ikon
@@ -584,6 +588,8 @@ admin:
     lang:
       hint: Masukkan kode bahasa (mis. fr) jika berbeda dari bahasa halaman saat ini
       label: Bahasa
+    lastname:
+      label: Nama belakang
     layout:
       label: Tata Letak
       options:
