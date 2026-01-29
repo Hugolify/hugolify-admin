@@ -62,6 +62,10 @@ media_libraries:
       {{- with .tabs }}
       tabs: {{ . }}
       {{- end }}
+    {{- if and (eq .name "uploadcare") (ne .filename false) }}
+    settings:
+      autoFilename: true
+    {{- end }}
   {{- end }}
 {{- end }}
 
