@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Sahte tarayıcı ekle
       label: Ekran görüntüsü mü?
+    is_shorts:
+      hint: Dikey video
+      label: Shorts mu?
     items:
       label:
         one: Öğe

@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: 가짜 브라우저 추가
       label: 스크린샷으로?
+    is_shorts:
+      hint: 세로 동영상
+      label: Shorts로?
     items:
       label:
         one: 항목

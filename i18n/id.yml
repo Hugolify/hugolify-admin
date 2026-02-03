@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Tambahkan browser palsu
       label: Apakah tangkapan layar?
+    is_shorts:
+      hint: Video vertikal
+      label: Apakah shorts?
     items:
       label:
         one: Item

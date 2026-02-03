@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Добави фалшив браузър
       label: Екранна снимка ли е?
+    is_shorts:
+      hint: Вертикално видео
+      label: Shorts ли е?
     items:
       label:
         one: Елемент

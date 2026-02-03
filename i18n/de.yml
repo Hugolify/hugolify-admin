@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Fügt einen falschen Browser hinzu
       label: Als Screenshot?
+    is_shorts:
+      hint: Vertikales Video
+      label: Ist Shorts?
     items:
       label:
         one: Element

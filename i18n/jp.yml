@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: 偽のブラウザを追加
       label: スクリーンショットとして?
+    is_shorts:
+      hint: 縦型動画
+      label: Shortsとして?
     items:
       label:
         one: アイテム

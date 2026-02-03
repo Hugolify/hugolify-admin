@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Aggiungi browser finto
       label: Come screenshot?
+    is_shorts:
+      hint: Video verticale
+      label: Come shorts?
     items:
       label:
         one: Elemento

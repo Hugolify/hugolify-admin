@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Legg til falsk nettleser
       label: Er skjermbilde?
+    is_shorts:
+      hint: Vertikal video
+      label: Er shorts?
     items:
       label:
         one: Element

@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Dodaj fałszywą przeglądarkę
       label: Czy zrzut ekranu?
+    is_shorts:
+      hint: Wideo pionowe
+      label: Czy shorts?
     items:
       label:
         one: Element

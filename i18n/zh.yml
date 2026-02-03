@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: 添加假浏览器
       label: 是截图?
+    is_shorts:
+      hint: 竖屏视频
+      label: 是Shorts?
     items:
       label:
         one: 项目

@@ -570,6 +570,9 @@ admin:
     is_screenshot:
       hint: Lisää valeselain
       label: Näyttökuva
+    is_shorts:
+      hint: Pystyvideo
+      label: Shorts?
     items:
       label:
         one: Kohde

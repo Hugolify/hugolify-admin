@@ -572,6 +572,9 @@ admin:
     is_screenshot:
       hint: Ajoute un faux navigateur autour de l’image
       label: Capture d’écran ?
+    is_shorts:
+      hint: Vidéo verticale
+      label: Shorts ?
     items:
       label:
         one: Item

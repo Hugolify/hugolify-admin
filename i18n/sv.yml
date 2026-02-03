@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Lägg till falsk webbläsare
       label: Är skärmdump?
+    is_shorts:
+      hint: Vertikal video
+      label: Är shorts?
     items:
       label:
         one: Objekt

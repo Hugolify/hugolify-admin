@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       label: Je posnetek zaslona?
       hint: Dodaj lažni brskalnik
+    is_shorts:
+      hint: Navpični video
+      label: Je shorts?
     items:
       label:
         one: Element

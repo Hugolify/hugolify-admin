@@ -1,0 +1,7 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.is_shorts.label")
+  "hint" (i18n "admin.fields.is_shorts.hint")
+  "name" "shorts"
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

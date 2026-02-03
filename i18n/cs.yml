@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Přidat falešný prohlížeč
       label: Je snímek obrazovky?
+    is_shorts:
+      hint: Vertikální video
+      label: Je shorts?
     items:
       label:
         one: Položka

@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Agregar navegador falso
       label: ¿Como captura de pantalla?
+    is_shorts:
+      hint: Vídeo vertical
+      label: ¿Es shorts?
     items:
       label:
         one: Elemento

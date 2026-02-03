@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Hamis böngésző hozzáadása
       label: Képernyőkép?
+    is_shorts:
+      hint: Függőleges videó
+      label: Shorts?
     items:
       label:
         one: Elem

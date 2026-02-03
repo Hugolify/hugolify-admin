@@ -1,6 +1,7 @@
 {{- $fields := slice 
   "video_platform" 
-  "video_id" -}}
+  "video_id"
+  "is_shorts" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 
 {{- $args := dict 

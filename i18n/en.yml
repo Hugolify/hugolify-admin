@@ -574,6 +574,9 @@ admin:
     is_screenshot:
       hint: Add fake browser
       label: Is screenshot?
+    is_shorts:
+      hint: Vertical video
+      label: Is shorts?
     items:
       label:
         one: Item
