@@ -7,7 +7,12 @@
   {{- $fields = (index site.Params.admin.collections .).fields -}}
 {{- end -}}
 {{- with .field -}}
-  {{- $fields = (index site.Params.admin.fields .).fields -}}
+  {{- $fields = (index site.Params.admin.fields .).fields }}
+  {{- if reflect.IsMap . }}
+    {{- with .fields }}
+      {{- $fields = . }}
+    {{- end }}
+  {{- end }}
 {{- end -}}
 
 {{- return ($fields | default .fields) -}}
