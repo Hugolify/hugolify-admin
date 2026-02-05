@@ -19,7 +19,7 @@ imports:
   - path: github.com/hugolify/hugolify-admin
 ```
 
-E.g: Hugolify setting for a blog
+E.g: Hugolify setting for a [blog](https://www.hugolify.io/tutorials/how-to-create-a-blog-with-hugo-and-decap-cms-using-hugolify/)
 
 ```yml
 imports:
@@ -59,14 +59,14 @@ params:
       specific_filter: false # set true to add a selected filter by image
       video_max_file_size: 5000000 # 5Mo
 
-    # Cloud asset config (optional)
-    media_library:
-      name: # cloudinary or uploadcare
+      # Cloud asset config (optional)
       config:
+        name: # cloudinary or uploadcare
         cloud_name: # for cloudinary
         api_key: # for cloudinary
         public_key: # for uploadcare
         tabs: # for uploadcare
+      providers: # for sveltia-cms
 
     nested:
       depth: 5 # set minimum 2
