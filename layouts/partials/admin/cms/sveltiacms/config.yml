@@ -47,6 +47,18 @@ media_libraries:
     max_file_size: '{{ . }}'
     {{- end }}
     slugify_filename: {{ $slugify_filename }}
+  {{- if isset site.Params.admin.media "providers" }}
+  stock_assets:
+    {{- $providers := site.Params.admin.media.providers }}
+    {{- if eq $providers false }}
+    providers: []
+    {{- else }}
+    providers: 
+      {{- range $providers }}
+      - {{ . }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
   {{- range $cloud }}
   {{ .name }}:
     config:
