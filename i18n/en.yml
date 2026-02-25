@@ -552,7 +552,7 @@ admin:
     is_background:
       label: Is background?
     is_blank:
-      label: Is blank?
+      label: New window?
     is_card:
       hint: Adds a background behind the text
       label: Is card?
