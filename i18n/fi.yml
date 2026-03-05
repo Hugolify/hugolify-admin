@@ -379,6 +379,7 @@ admin:
     color:
       label: Väri
     column:
+      hint: Desktopilla näytettävien sarakkeiden määrä
       label: Sarake
     contact:
       label:

@@ -379,6 +379,7 @@ admin:
     color:
       label: Renk
     column:
+      hint: Masaüstünde görüntülenen sütun sayısı
       label: Sütun
     contact:
       label:

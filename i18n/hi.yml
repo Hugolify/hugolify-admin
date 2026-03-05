@@ -379,6 +379,7 @@ admin:
     color:
       label: रंग
     column:
+      hint: डेस्कटॉप पर प्रदर्शित कॉलम की संख्या
       label: कॉलम
     contact:
       label:

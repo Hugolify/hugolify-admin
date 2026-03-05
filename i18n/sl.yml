@@ -379,6 +379,7 @@ admin:
     color:
       label: Barva
     column:
+      hint: Število stolpcev prikazanih na desktopu
       label: Stolpec
     contact:
       label:

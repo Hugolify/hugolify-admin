@@ -9,7 +9,7 @@ admin:
     comparison:
       label: Confronto
     cta:
-      label: Invito all'azione
+      label: Invito all’azione
     datas:
       label: Dati
     editorial:
@@ -379,6 +379,7 @@ admin:
     color:
       label: Colore
     column:
+      hint: Numero di colonne visualizzate sul desktop
       label: Colonna
     contact:
       label:
@@ -413,7 +414,7 @@ admin:
       to: A
     description:
       hint:
-        Visualizzato nelle schede, nei risultati di ricerca e nell'anteprima di
+        Visualizzato nelle schede, nei risultati di ricerca e nell’anteprima di
         SMS/Messaggi/Social network
       label: Descrizione
     diagnostic:
@@ -452,7 +453,7 @@ admin:
       label: Fax
       hint: 'Formato internazionale, es.: +33 1 23 45 67 89'
     featured_image:
-      hint: Visualizzato nei risultati di ricerca e nell'anteprima di SMS/Messaggi/Social network
+      hint: Visualizzato nei risultati di ricerca e nell’anteprima di SMS/Messaggi/Social network
       label: Immagine principale
     fee:
       label:
@@ -523,7 +524,7 @@ admin:
     honorific:
       label: Titolo
     icon:
-      hint: Nome dell'icona da https://icons.getbootstrap.com/
+      hint: Nome dell’icona da https://icons.getbootstrap.com/
       label: Icona
     id:
       label: ID
@@ -532,7 +533,7 @@ admin:
         one: Immagine
         other: Immagini
       alt:
-        hint: Per un'immagine che trasmette informazioni (lasciare vuoto se decorativa)
+        hint: Per un’immagine che trasmette informazioni (lasciare vuoto se decorativa)
         label: Testo alternativo
       filter:
         hint: Imposta Linear per foto o screenshot, lascia vuoto per mantenere la configurazione predefinita
@@ -546,7 +547,7 @@ admin:
         label: Immagine di condivisione
         hint: Immagine utilizzata per i social network e i link
       src:
-        hint: 'Ridimensiona e comprimi l''immagine prima dell''invio: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
+        hint: 'Ridimensiona e comprimi l’immagine prima dell’invio: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Immagine
     images:
       label: 
@@ -642,7 +643,7 @@ admin:
       label: Pagina padre
     pdf:
       label: PDF
-      hint: 'Comprimi PDF prima dell''invio: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+      hint: 'Comprimi PDF prima dell’invio: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Numero di telefono
       hint: 'Formato internazionale, es.: +33 1 23 45 67 89'
@@ -745,7 +746,7 @@ admin:
       hint: Solo se hai già luoghi salvati (questo disabiliterà il marcatore sotto)
       label: Mostra tutti i luoghi registrati?
     slug:
-      hint: Lascia vuoto per automatizzare con il titolo. **Attenzione all'impatto SEO.**
+      hint: Lascia vuoto per automatizzare con il titolo. **Attenzione all’impatto SEO.**
       label: Slug
       pattern:
         Contiene solo lettere minuscole, numeri e trattini, senza spazi,
@@ -790,13 +791,13 @@ admin:
       label: Titolo
     title_page:
       hint:
-        Visualizzato nelle schede, nei risultati di ricerca e nell'anteprima di
+        Visualizzato nelle schede, nei risultati di ricerca e nell’anteprima di
         SMS/Messaggi/Social network
       label: Titolo della pagina
     transcription:
       label: Trascrizione
     url:
-      hint: URL assoluto (es. https://www.example.com)
+      hint: 'URL assoluto (es. https://www.example.com)'
       label: URL
     value:
       label: Valore
@@ -836,9 +837,9 @@ admin:
         "50": Il quinto
         "60": Il sesto
         "70": Il settimo
-        "80": L'ottavo
+        "80": L’ottavo
         "90": Il nono
-        "100": L'ultimo
+        "100": L’ultimo
     year: Anno
     zoom:
       label: Zoom

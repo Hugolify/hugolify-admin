@@ -379,6 +379,7 @@ admin:
     color:
       label: Warna
     column:
+      hint: Jumlah kolom yang ditampilkan di desktop
       label: Kolom
     contact:
       label:

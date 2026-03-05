@@ -379,6 +379,7 @@ admin:
     color:
       label: Farbe
     column:
+      hint: Anzahl der auf dem Desktop angezeigten Spalten
       label: Spalte
     contact:
       label:

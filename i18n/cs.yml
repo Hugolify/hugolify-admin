@@ -379,6 +379,7 @@ admin:
     color:
       label: Barva
     column:
+      hint: Počet sloupců zobrazených na desktopu
       label: Sloupec
     contact:
       label:

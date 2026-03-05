@@ -379,6 +379,7 @@ admin:
     color:
       label: Kleur
     column:
+      hint: Aantal kolommen weergegeven op desktop
       label: Kolom
     contact:
       label:

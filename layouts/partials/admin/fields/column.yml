@@ -1,5 +1,6 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.column.label")
+  "hint" (i18n "admin.fields.column.hint")
   "name" "column"
   "default" 3
   "min" 1

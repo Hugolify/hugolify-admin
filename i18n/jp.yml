@@ -379,6 +379,7 @@ admin:
     color:
       label: 色
     column:
+      hint: デスクトップに表示される列の数
       label: 列
     contact:
       label:

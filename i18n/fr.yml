@@ -381,6 +381,7 @@ admin:
     color:
       label: Couleur
     column:
+      hint: Nombre de colonnes affichées sur ordinateur
       label: Colonne
     contact:
       label:

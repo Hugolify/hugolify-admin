@@ -379,6 +379,7 @@ admin:
     color:
       label: Color
     column:
+      hint: Número de columnas mostradas en desktop
       label: Columna
     contact:
       label:

@@ -379,6 +379,7 @@ admin:
     color:
       label: Szín
     column:
+      hint: Asztali nézetben megjelenített oszlopok száma
       label: Oszlop
     contact:
       label:

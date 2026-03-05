@@ -379,6 +379,7 @@ admin:
     color:
       label: 颜色
     column:
+      hint: 桌面端显示的列数
       label: 列
     contact:
       label:

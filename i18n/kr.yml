@@ -379,6 +379,7 @@ admin:
     color:
       label: 색상
     column:
+      hint: 데스크탑에 표시되는 열 수
       label: 열
     contact:
       label:
