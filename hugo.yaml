@@ -50,7 +50,7 @@ params:
       max_file_size: 700000 # 700ko
       specific_filter: false # set true to add a selected filter by image
       # Audio
-      audio_max_file_size: 700000 # 700ko
+      audio_max_file_size: 1000000 # 1Mo
       audio_folders: false # set true to active
       audio_media_folder: '/static/assets/audios'
       audio_public_folder: '/assets/audios'

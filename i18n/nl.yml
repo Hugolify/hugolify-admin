@@ -542,6 +542,9 @@ admin:
           catmullrom: Scherp kubisch filter dat sneller is dan het Lanczos-filter terwijl het vergelijkbare resultaten oplevert
           lanczos: Hoogwaardig resamplingfilter voor fotografische afbeeldingen die scherpe resultaten opleveren
           linear: Bilineair resamplingfilter, produceert vloeiende uitvoer, sneller dan kubische filters
+      seo:
+        label: Deelafbeelding
+        hint: Afbeelding gebruikt voor sociale netwerken en links
       src:
         hint: 'Formaat wijzigen en afbeelding comprimeren voor verzending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Afbeelding

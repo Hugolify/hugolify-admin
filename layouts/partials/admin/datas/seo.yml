@@ -1,4 +1,4 @@
-{{- $fields := slice "title" "description" "image_src" "twitter" -}}
+{{- $fields := slice "title" "description" "image_seo" "twitter" -}}
 {
   label: '{{ i18n "admin.files.seo.label" }}',
   name: 'seo',

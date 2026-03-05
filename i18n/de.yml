@@ -542,6 +542,9 @@ admin:
           catmullrom: Scharfer kubischer Filter, schneller als Lanczos mit ähnlichen Ergebnissen
           lanczos: Hochwertiger Resampling-Filter für fotografische Bilder mit scharfen Ergebnissen
           linear: Bilinearer Resampling-Filter, erzeugt glatte Ausgabe, schneller als kubische Filter
+      seo:
+        label: Freigabebild
+        hint: Bild für soziale Netzwerke und Links
       src:
         hint: 'Bild vor dem Senden verkleinern und komprimieren: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Bild

@@ -542,6 +542,9 @@ admin:
           catmullrom: Ostry filtr sześcienny, który jest szybszy niż filtr Lanczosa, zapewniając podobne wyniki
           lanczos: Wysokiej jakości filtr resamplingu dla obrazów fotograficznych dający ostre wyniki
           linear: Dwuliniowy filtr resamplingu, produkuje gładkie wyjście, szybszy niż filtry sześcienne
+      seo:
+        label: Obraz do udostępniania
+        hint: Obraz używany w sieciach społecznościowych i linkach
       src:
         hint: 'Zmień rozmiar i skompresuj obraz przed wysłaniem: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Obraz

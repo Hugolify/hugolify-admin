@@ -542,6 +542,9 @@ admin:
           catmullrom: Filter kubik tajam yang lebih cepat dari filter Lanczos sambil memberikan hasil serupa
           lanczos: Filter resampling berkualitas tinggi untuk gambar fotografi yang menghasilkan hasil tajam
           linear: Filter resampling bilinear, menghasilkan output halus, lebih cepat dari filter kubik
+      seo:
+        label: Gambar berbagi
+        hint: Gambar yang digunakan untuk jejaring sosial dan tautan
       src:
         hint: 'Ubah ukuran dan kompres gambar sebelum mengirim: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Gambar

@@ -542,6 +542,9 @@ admin:
           catmullrom: Sharp cubic filter that is faster than the Lanczos filter while providing similar results
           Lanczos: High-quality resampling filter for photographic images yielding sharp results
           linear: Bilinear resampling filter, produces smooth output, faster than cubic filters
+      seo:
+        label: Image de partage
+        hint: Image utilisée pour les réseaux sociaux et les liens
       src:
         hint: 'Redimensionner et compresser l’image avant l’envoi : https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Image

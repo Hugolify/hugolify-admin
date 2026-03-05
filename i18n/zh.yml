@@ -542,6 +542,9 @@ admin:
           catmullrom: 锐利的立方滤波器,比Lanczos滤波器更快,同时提供类似的结果
           lanczos: 用于摄影图像的高质量重采样滤波器,产生锐利的结果
           linear: 双线性重采样滤波器,产生平滑输出,比立方滤波器更快
+      seo:
+        label: 分享图片
+        hint: 用于社交网络和链接的图片
       src:
         hint: '发送前调整大小并压缩图片: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: 图片

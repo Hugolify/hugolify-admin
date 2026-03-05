@@ -542,6 +542,9 @@ admin:
           catmullrom: Lanczos 필터보다 빠르면서 유사한 결과를 생성하는 선명한 3차 필터
           lanczos: 선명한 결과를 생성하는 사진 이미지용 고품질 리샘플링 필터
           linear: 부드러운 출력을 생성하는 쌍선형 리샘플링 필터, 3차 필터보다 빠름
+      seo:
+        label: 공유 이미지
+        hint: 소셜 네트워크 및 링크에 사용되는 이미지
       src:
         hint: '전송 전에 이미지 크기 조정 및 압축: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: 이미지

@@ -542,6 +542,9 @@ admin:
           catmullrom: Lanczosフィルターより高速で同様の結果を生成するシャープな三次フィルター
           lanczos: 鮮明な結果を生成する写真画像用の高品質リサンプリングフィルター
           linear: 滑らかな出力を生成するバイリニアリサンプリングフィルター、三次フィルターより高速
+      seo:
+        label: シェア画像
+        hint: ソーシャルネットワークとリンクに使用される画像
       src:
         hint: '送信前に画像のサイズ変更と圧縮: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: 画像

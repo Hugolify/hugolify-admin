@@ -542,6 +542,9 @@ admin:
           catmullrom: Skarpt kubisk filter som er raskere enn Lanczos-filteret mens det gir lignende resultater
           lanczos: Høykvalitets resampling-filter for fotografiske bilder som gir skarpe resultater
           linear: Bilineært resampling-filter, produserer jevn utgang, raskere enn kubiske filtre
+      seo:
+        label: Delingsbilde
+        hint: Bilde brukt for sosiale nettverk og lenker
       src:
         hint: 'Endre størrelse og komprimer bilde før sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Bilde

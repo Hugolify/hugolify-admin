@@ -542,6 +542,9 @@ admin:
           catmullrom: Ostrý kubický filtr, který je rychlejší než Lanczos filtr a poskytuje podobné výsledky
           lanczos: Vysoce kvalitní převzorkovací filtr pro fotografické obrázky poskytující ostré výsledky
           linear: Bilineární převzorkovací filtr, produkuje hladký výstup, rychlejší než kubické filtry
+      seo:
+        label: Sdílený obrázek
+        hint: Obrázek používaný pro sociální sítě a odkazy
       src:
         hint: 'Změňte velikost a komprimujte obrázek před odesláním: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Obrázek

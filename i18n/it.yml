@@ -542,6 +542,9 @@ admin:
           catmullrom: Filtro cubico nitido più veloce di Lanczos con risultati simili
           lanczos: Filtro di ricampionamento di alta qualità per immagini fotografiche con risultati nitidi
           linear: Filtro di ricampionamento bilineare, produce output fluido, più veloce dei filtri cubici
+      seo:
+        label: Immagine di condivisione
+        hint: Immagine utilizzata per i social network e i link
       src:
         hint: 'Ridimensiona e comprimi l''immagine prima dell''invio: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Immagine

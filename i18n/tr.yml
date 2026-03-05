@@ -542,6 +542,9 @@ admin:
           catmullrom: Lanczos filtresinden daha hızlı olan ancak benzer sonuçlar veren keskin kübik filtre
           lanczos: Fotoğrafik görüntüler için keskin sonuçlar veren yüksek kaliteli yeniden örnekleme filtresi
           linear: Bilineer yeniden örnekleme filtresi, pürüzsüz çıktı üretir, kübik filtrelerden daha hızlıdır
+      seo:
+        label: Paylaşım görseli
+        hint: Sosyal ağlar ve bağlantılar için kullanılan görsel
       src:
         hint: 'Göndermeden önce resmi yeniden boyutlandırın ve sıkıştırın: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Resim

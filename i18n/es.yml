@@ -542,6 +542,9 @@ admin:
           catmullrom: Filtro cúbico nítido más rápido que Lanczos con resultados similares
           lanczos: Filtro de remuestreo de alta calidad para imágenes fotográficas con resultados nítidos
           linear: Filtro de remuestreo bilineal, produce salida suave, más rápido que filtros cúbicos
+      seo:
+        label: Imagen para compartir
+        hint: Imagen utilizada para redes sociales y enlaces
       src:
         hint: 'Redimensionar y comprimir imagen antes de enviar: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Imagen

@@ -542,6 +542,9 @@ admin:
           catmullrom: Oster kubični filter, ki je hitrejši od filtra Lanczos, hkrati pa zagotavlja podobne rezultate
           lanczos: Visokokakovosten filter ponovnega vzorčenja za fotografske slike, ki daje ostre rezultate
           linear: Bilinearni filter ponovnega vzorčenja, proizvaja gladek izhod, hitrejši od kubičnih filtrov
+      seo:
+        label: Slika za deljenje
+        hint: Slika, ki se uporablja za družbena omrežja in povezave
       src:
         hint: 'Spremenite velikost in stisnite sliko pred pošiljanjem: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Slika

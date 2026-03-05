@@ -20,17 +20,36 @@
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
 {{- $max := .max | default false }}
+{{- $max_file_size := .max_file_size | default false }}
 {{- $min := .min | default false }}
+{{- $media_folder := .media_folder | default false }}
 {{- $multiple := .multiple | default false }}
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
+{{- $public_folder := .public_folder | default false }}
 {{- $required := .required | default false }}
 
-{{- $max_file_size := site.Params.admin.media.max_file_size | default false }}
-{{- $media_folder := site.Params.admin.media.media_folder | default "/assets/" }}
-{{- $public_folder := site.Params.admin.media.public_folder | default "/assets/" }}
+{{/* Upload config */}}
 {{- $choose_url := site.Params.admin.media.choose_url | default false }}
 
+{{/* Max file size */}}
+{{- if eq $max_file_size false }}
+  {{- $max_file_size = (index site.Params.admin.fields $name).media.max_file_size | default site.Params.admin.media.max_file_size }}
+{{- end }}
+
+{{/* Media folder */}}
+{{- if eq site.Params.admin.media.media_folder false }}
+  {{- $media_folder = false }}
+{{- else if eq $media_folder false }}
+  {{- $media_folder = (index site.Params.admin.fields $name).media.media_folder | default site.Params.admin.media.media_folder }}
+{{- end }}
+
+{{/* Public folder */}}
+{{- if eq site.Params.admin.media.public_folder false }}
+  {{- $public_folder = false }}
+{{- else if eq $public_folder false }}
+  {{- $public_folder = (index site.Params.admin.fields $name).media.public_folder | default site.Params.admin.media.public_folder }}
+{{- end }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -43,6 +62,7 @@
   type: 'image',
   options: {
     accepts_mime_types: [
+      "image/avif",
       "image/gif",
       "image/jpeg",
       "image/png",
@@ -108,10 +128,10 @@
       {{ end }}
     }
   },
-  {{- with site.Params.admin.media.media_folder }}
+  {{- with $media_folder }}
   media_folder: {{ . }},
   {{- end }}
-  {{- with site.Params.admin.media.public_folder }}
+  {{- with $public_folder }}
   public_folder: '{{ . }}'
   {{- end }}
 }

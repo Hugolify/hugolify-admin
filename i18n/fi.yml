@@ -540,6 +540,9 @@ admin:
           lanczos: Laadukas resampling-suodatin valokuville, joka tuottaa teräviä tuloksia
           linear: Bilineaarinen uudelleen näytteenottosuodatin, tuottaa tasaisen tulosteen, nopeampi kuin kuutiosuodattimet
       label: Kuva
+      seo:
+        label: Jaettava kuva
+        hint: Kuva, jota käytetään sosiaalisessa mediassa ja linkeissä
       src:
         hint: 'Koon muuttaminen ja kuvan pakkaaminen ennen lähettämistä : https://bulkresizephotos.com/fi?quality=90&type=width&width=1600'
         label: Kuva

@@ -542,6 +542,9 @@ admin:
           catmullrom: Éles köbös szűrő, amely gyorsabb, mint a Lanczos szűrő, miközben hasonló eredményeket ad
           lanczos: Kiváló minőségű újramintavételezési szűrő fényképészeti képekhez, amely éles eredményeket ad
           linear: Bilineáris újramintavételezési szűrő, sima kimenetet eredményez, gyorsabb, mint a köbös szűrők
+      seo:
+        label: Megosztott kép
+        hint: Kép a közösségi hálózatokhoz és hivatkozásokhoz
       src:
         hint: 'Méretezze át és tömörítse a képet küldés előtt: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Kép
