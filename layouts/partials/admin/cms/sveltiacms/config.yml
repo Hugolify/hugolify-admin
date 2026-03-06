@@ -7,6 +7,9 @@ backend:
   automatic_deployments: {{ site.Params.admin.automatic_deployments | default false }}
 
 {{- with site.Params.admin.auth }}
+  {{- with .base_url }}
+  base_url: {{ . }}
+  {{- end }}
   {{- with .app_id }}
   app_id: {{ . }}
   {{- end }}

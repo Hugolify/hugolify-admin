@@ -5,10 +5,10 @@ backend:
   repo: {{ . }}
   {{- end }}
 
-  {{- with site.Params.admin.auth.base_url }}
+{{- with site.Params.admin.auth }}
+  {{- with .base_url }}
   base_url: {{ . }}
   {{- end }}
-{{- with site.Params.admin.auth }}
   {{- with .app_id }}
   app_id: {{ . }}
   {{- end }}
