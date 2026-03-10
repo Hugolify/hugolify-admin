@@ -613,6 +613,9 @@ admin:
       label:
         one: लिंक
         other: लिंक
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: स्थान
     loop:

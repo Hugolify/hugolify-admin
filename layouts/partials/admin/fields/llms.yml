@@ -1,0 +1,17 @@
+{{- $name := dict "name" "body" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "llms_body" "nameOverride" "body" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.llms.label")
+  "hint" (i18n "admin.fields.llms.hint")
+  "i18n" false
+  "minimal" (site.Params.admin.fields.llms.minimal | default false)
+  "modes" (site.Params.admin.fields.llms.modes | default "['raw']")
+  "editor_components" "[]"
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/markdown.js" $args }}

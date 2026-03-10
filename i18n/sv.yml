@@ -613,6 +613,9 @@ admin:
       label:
         one: Länk
         other: Länkar
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: Plats
     loop:

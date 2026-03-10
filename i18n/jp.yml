@@ -613,6 +613,9 @@ admin:
       label:
         one: リンク
         other: リンク
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: 場所
     loop:

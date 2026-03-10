@@ -613,6 +613,9 @@ admin:
       label:
         one: Link
         other: Linki
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: Lokalizacja
     loop:
