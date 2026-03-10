@@ -10,7 +10,7 @@
 
 {{- $cms := site.Params.admin.cms }}
 
-{{- $default := .default | default "" }}
+{{- $default := .default | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
@@ -19,19 +19,19 @@
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
-{{/* TODO */}}
+{{/* NOT AVAILABLE */}}
 {}
 
 {{/* Pages CMS */}}
 {{ else if eq $cms "pagescms" }}
 
-{{/* TODO */}}
+{{/* NOT AVAILABLE */}}
 {}
 
 {{/* Tina CMS */}}
 {{ else if eq $cms "tinacms" }}
 
-{{/* TODO */}}
+{{/* NOT AVAILABLE */}}
 {}
 
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
@@ -43,8 +43,8 @@
   hint: '{{ . }}',
   {{ end }}
   name: '{{ $name }}',
-  {{ if ne $default "" }}
-  default: {{ $default }},
+  {{ with $default }}
+  default: '{{ . }}',
   {{ end }}
   widget: 'map',
   i18n: {{ $i18n }}
