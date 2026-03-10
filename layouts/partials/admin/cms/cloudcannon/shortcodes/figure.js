@@ -9,7 +9,7 @@ hugolify_figure: {
   definitions: {
     shortcode_name: figure,
     named_args: [
-      { editor_key: image, type: string },
+      { editor_key: src, type: string },
       { editor_key: alt, type: string, optional: true },
       { editor_key: legend, type: string, optional: true },
       { editor_key: credit, type: string, optional: true },

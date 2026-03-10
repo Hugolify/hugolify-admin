@@ -1,6 +1,6 @@
 {{- $fields := partialCached "admin/shortcodes/fields/blockquote.html" . -}}
 hugolify_blockquote: {
-  template: hugo_paired_shortcode_named_args,
+  template: hugo_shortcode_named_args,
   inline: false,
   preview: {
     icon: format_quote,

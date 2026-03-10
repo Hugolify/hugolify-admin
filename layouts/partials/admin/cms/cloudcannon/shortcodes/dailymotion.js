@@ -1,6 +1,6 @@
 {{- $fields := partialCached "admin/shortcodes/fields/dailymotion.html" . -}}
 hugolify_dailymotion: {
-  template: hugo_shortcode_named_args,
+  template: hugo_shortcode_positional_args,
   inline: false,
   preview: {
     icon: videocam,

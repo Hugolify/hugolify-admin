@@ -1,6 +1,6 @@
 {{- $fields := partialCached "admin/shortcodes/fields/alert-block.html" . }}
 hugolify_alert_block: {
-  template: hugo_shortcode_named_args,
+  template: hugo_paired_shortcode_named_args,
   inline: false,
   preview: {
     icon: warning,
