@@ -22,6 +22,7 @@
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
 {{- $minimal := .minimal | default false }}
+{{- $modes := .modes | default "['rich_text']" }}
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
 {{- $pattern := .pattern | default false }}
@@ -121,7 +122,9 @@
   {{ with $minimal }}
   minimal: true,
   {{ end }}
-  modes: ['rich_text'],
+  {{ with $modes }}
+  modes: {{ . }},
+  {{ end }}
   required: {{ $required }},
   {{ with $pattern }}
   pattern: [
