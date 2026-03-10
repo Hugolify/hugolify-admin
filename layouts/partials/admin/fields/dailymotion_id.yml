@@ -1,0 +1,6 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.socials.dailymotion.id" | default "ID")
+  "name" "id"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

@@ -7,10 +7,12 @@ paths:
 
 {{/* Snippets */}}
 _snippets_imports:
-  hugo: true
+  hugo:
+    exclude:
+      - hugo_figure
 
 {{/* Custom Snippets */}}
-{{ partial "admin/cms/cloudcannon/shortcodes.yml" . }}
+{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/shortcodes.js" .) }}
 
 {{/* Collections */}}
 {{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/index.html" .) }}

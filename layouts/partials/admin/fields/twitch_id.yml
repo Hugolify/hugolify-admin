@@ -1,11 +1,10 @@
 {{- $name := dict "name" "id" }}
 {{- if (eq site.Params.admin.cms "tinacms") }}
-  {{- $name = dict "name" "video_id" "nameOverride" "id" }}
+  {{- $name = dict "name" "twitch_id" "nameOverride" "id" }}
 {{- end }}
 
 {{- $args := dict 
-  "label" (i18n "admin.fields.video.id.label")
-  "required" false
+  "label" (i18n "admin.fields.socials.twitch.id" | default "ID")
   -}}
 
 {{- $args = merge $args $name }}

@@ -385,6 +385,8 @@ admin:
       label:
         one: Contact
         other: Contacts
+    contents:
+      label: Contents
     controls:
       label: Controls
     coordinates:
@@ -752,13 +754,23 @@ admin:
         Contain only lowercase letters, numbers, and hyphens, with no spaces,
         accents, or special characters
     socials:
+      dailymotion:
+        _id: Dailymotion ID
+        label: Dailymotion
       label:
         one: Social
         other: Socials
       platform: Platform
+      twitch:
+        _id: Twitch ID
+        label: Twitch
       twitter:
+        _id: Twitter ID
         label: Twitter/X
         hint: Username
+      youtube:
+        _id: Youtube ID
+        label: Youtube
     sold:
       label: Sold/rent ?
     state:
@@ -868,20 +880,23 @@ admin:
       label: Blockquote
     button:
       label: Button
+    dailymotion:
+      label: Dailymotion
     details:
       label: Details
     figure:
       label: Figure
     map:
       label: Map
+    twicth:
+      label: Twitch
     twitter:
-      _id: Twitter ID
       label: Twitter / X
-      user: Twitter username
     span_lang:
       label: Span lang
     video:
       label: Video
+    vimeo:
+      label: Vimeo
     youtube:
-      _id: Youtube ID
       label: Youtube

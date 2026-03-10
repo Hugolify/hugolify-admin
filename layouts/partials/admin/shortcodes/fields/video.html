@@ -1,0 +1,11 @@
+{{- $fields := slice 
+  "video_mp4"
+  "video_webm"
+  "controls"
+  "is_screenshot"
+  "legend"
+  "credit" -}}
+  
+{{- $fields = partial "admin/func/GetFields.html" (dict "shortcode" . "fields" $fields) -}}
+
+{{- return $fields -}}
