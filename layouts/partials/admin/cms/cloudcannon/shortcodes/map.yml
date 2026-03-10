@@ -1,0 +1,14 @@
+  hugolify_map:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: {{ i18n "admin.shortcodes.map.label" | default "Map" }}
+    definitions:
+      shortcode_name: map
+      named_args:
+        - source_key: markers
+          editor_key: markers
+          type: string
+    _inputs:
+      markers:
+        type: text

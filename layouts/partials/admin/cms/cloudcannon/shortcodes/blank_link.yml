@@ -1,0 +1,19 @@
+  hugolify_blank_link:
+    template: hugo_shortcode_named_args
+    inline: true
+    preview:
+      text: {{ i18n "admin.shortcodes.blank_link.label" | default "Blank link" }}
+    definitions:
+      shortcode_name: blank_link
+      named_args:
+        - source_key: text
+          editor_key: text
+          type: string
+        - source_key: link
+          editor_key: link
+          type: string
+    _inputs:
+      text:
+        type: text
+      link:
+        type: url

@@ -1,0 +1,62 @@
+  hugolify_video:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: {{ i18n "admin.shortcodes.video.label" | default "Video" }}
+    definitions:
+      shortcode_name: video
+      named_args:
+        - source_key: mp4
+          editor_key: mp4
+          type: string
+        - source_key: webm
+          editor_key: webm
+          type: string
+          optional: true
+        - source_key: autoplay
+          editor_key: autoplay
+          type: boolean
+          optional: true
+        - source_key: controls
+          editor_key: controls
+          type: boolean
+          optional: true
+        - source_key: loop
+          editor_key: loop
+          type: boolean
+          optional: true
+        - source_key: legend
+          editor_key: legend
+          type: string
+          optional: true
+        - source_key: credit
+          editor_key: credit
+          type: string
+          optional: true
+        - source_key: screenshot
+          editor_key: screenshot
+          type: boolean
+          optional: true
+    _inputs:
+      mp4:
+        type: file
+        options:
+          accepts_mime_types:
+            - video/mp4
+      webm:
+        type: file
+        options:
+          accepts_mime_types:
+            - video/webm
+      autoplay:
+        type: checkbox
+      controls:
+        type: checkbox
+      loop:
+        type: checkbox
+      legend:
+        type: text
+      credit:
+        type: text
+      screenshot:
+        type: checkbox

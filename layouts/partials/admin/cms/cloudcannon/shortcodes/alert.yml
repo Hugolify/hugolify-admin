@@ -1,0 +1,26 @@
+{{- $stateOptions := partial "admin/func/GetStateOptions.html" . -}}
+  hugolify_alert:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: {{ i18n "admin.shortcodes.alert.label" | default "Alert" }}
+    definitions:
+      shortcode_name: alert
+      named_args:
+        - source_key: text
+          editor_key: text
+          type: string
+        - source_key: state
+          editor_key: state
+          type: string
+          optional: true
+    _inputs:
+      text:
+        type: text
+      state:
+        type: select
+        options:
+          values:
+            {{- range $stateOptions }}
+            - {{ . }}
+            {{- end }}

@@ -878,6 +878,10 @@ admin:
       _id: Twitter ID
       label: Twitter / X
       user: Twitterユーザー名
+    span_lang:
+      label: Span lang
+    video:
+      label: Video
     youtube:
       _id: Youtube ID
       label: Youtube

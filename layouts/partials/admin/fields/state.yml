@@ -1,5 +1,4 @@
-{{- $options := slice "danger" "dark" "info" "light" "primary" "secondary" "success" "warning" -}}
-{{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
+{{- $options := partial "admin/func/GetStateOptions.html" . -}}
 
 {{- $args := dict 
   "label" (i18n "admin.fields.state.label")

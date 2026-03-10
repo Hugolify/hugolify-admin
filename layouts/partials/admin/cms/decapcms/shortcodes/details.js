@@ -1,6 +1,6 @@
 CMS.registerEditorComponent({
   id: 'details',
-  label: '{{ i18n "admin.shortcodes.details.label" }}',
+  label: '{{ i18n "admin.shortcodes.details.label" | default "Details" }}',
   fields: [
     {{ partialCached "admin/fields/name.yml" . | safeHTML }},
     {{ partialCached "admin/fields/title.yml" . | safeHTML }},

@@ -1,0 +1,31 @@
+  hugolify_button:
+    template: hugo_shortcode_named_args
+    inline: true
+    preview:
+      text: {{ i18n "admin.shortcodes.button.label" | default "Button" }}
+    definitions:
+      shortcode_name: button
+      named_args:
+        - source_key: text
+          editor_key: text
+          type: string
+        - source_key: url
+          editor_key: url
+          type: string
+        - source_key: class
+          editor_key: class
+          type: string
+          optional: true
+        - source_key: blank
+          editor_key: blank
+          type: boolean
+          optional: true
+    _inputs:
+      text:
+        type: text
+      url:
+        type: url
+      class:
+        type: text
+      blank:
+        type: checkbox

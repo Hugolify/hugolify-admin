@@ -1,14 +1,14 @@
 CMS.registerEditorComponent({
   id: 'twitter',
-  label: '{{ i18n "admin.shortcodes.twitter.label" }}',
+  label: '{{ i18n "admin.shortcodes.twitter.label" | default "Twitter" }}',
   fields: [
     {
-      label: '{{ i18n "admin.shortcodes.twitter.user" }}',
+      label: '{{ i18n "admin.shortcodes.twitter.user" | default "User" }}',
       name: 'user',
       widget: 'string'
     },
     {
-      label: '{{ i18n "admin.shortcodes.twitter._id" }}',
+      label: '{{ i18n "admin.shortcodes.twitter._id" | default "ID" }}',
       name: 'id',
       widget: 'string'
     }

@@ -1,0 +1,29 @@
+  hugolify_details:
+    template: hugo_paired_shortcode_named_args
+    inline: false
+    preview:
+      text: {{ i18n "admin.shortcodes.details.label" | default "Details" }}
+    definitions:
+      shortcode_name: details
+      content_key: content
+      named_args:
+        - source_key: summary
+          editor_key: summary
+          type: string
+        - source_key: name
+          editor_key: name
+          type: string
+          optional: true
+        - source_key: title
+          editor_key: title
+          type: string
+          optional: true
+    _inputs:
+      summary:
+        type: text
+      name:
+        type: text
+      title:
+        type: text
+      content:
+        type: markdown

@@ -1,6 +1,6 @@
 CMS.registerEditorComponent({
   id: 'badge',
-  label: '{{ i18n "admin.shortcodes.badge.label" }}',
+  label: '{{ i18n "admin.shortcodes.badge.label" | default "Badge" }}',
   fields: [
     {{ partialCached "admin/fields/text.yml" . | safeHTML }},
     {{ partialCached "admin/fields/state.yml" . | safeHTML }},

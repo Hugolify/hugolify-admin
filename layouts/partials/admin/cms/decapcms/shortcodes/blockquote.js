@@ -1,6 +1,6 @@
 CMS.registerEditorComponent({
   id: 'blockquote',
-  label: '{{ i18n "admin.shortcodes.blockquote.label" }}',
+  label: '{{ i18n "admin.shortcodes.blockquote.label" | default "Blockquote" }}',
   fields: [
     {{ partialCached "admin/fields/quote.yml" . | safeHTML }},
     {{ partialCached "admin/fields/title.yml" . | safeHTML }},

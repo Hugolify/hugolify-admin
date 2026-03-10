@@ -1,6 +1,6 @@
 CMS.registerEditorComponent({
   id: 'alert',
-  label: '{{ i18n "admin.shortcodes.alert.label" }}',
+  label: '{{ i18n "admin.shortcodes.alert.label" | default "Alert" }}',
   fields: [
     {{ partialCached "admin/fields/text.yml" . | safeHTML }},
     {{ partialCached "admin/fields/state.yml" . | safeHTML }},

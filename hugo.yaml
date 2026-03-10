@@ -257,8 +257,11 @@ params:
         - blockquote
         - button
         - details
+        - figure
         - map
+        - span_lang
         - twitter
+        - video
         - youtube
 
     # Widgets

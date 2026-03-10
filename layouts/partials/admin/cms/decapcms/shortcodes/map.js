@@ -1,9 +1,9 @@
 CMS.registerEditorComponent({
   id: 'map',
-  label: '{{ i18n "admin.shortcodes.map.label" }}',
+  label: '{{ i18n "admin.shortcodes.map.label" | default "Map" }}',
   fields: [
     {
-      label: 'Markers',
+      label: '{{ i18n "admin.shortcodes.map.markers" | default "Markers" }}',
       name: 'markers',
       widget: 'text'
     }

@@ -1,6 +1,6 @@
 CMS.registerEditorComponent({
   id: 'blank_link',
-  label: '{{ i18n "admin.shortcodes.blank_link.label" }}',
+  label: '{{ i18n "admin.shortcodes.blank_link.label" | default "Blank Link" }}',
   fields: [
     {{ partialCached "admin/fields/text.yml" . | safeHTML }},
     {{ partialCached "admin/fields/link.yml" . | safeHTML }}

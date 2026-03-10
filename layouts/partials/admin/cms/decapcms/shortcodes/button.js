@@ -1,6 +1,6 @@
 CMS.registerEditorComponent({
   id: 'button',
-  label: '{{ i18n "admin.shortcodes.button.label" }}',
+  label: '{{ i18n "admin.shortcodes.button.label" | default "Button" }}',
   fields: [
     {{ partialCached "admin/fields/text.yml" . | safeHTML }},
     {{ partialCached "admin/fields/url.yml" . | safeHTML }},

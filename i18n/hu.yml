@@ -878,6 +878,10 @@ admin:
       _id: Twitter azonosító
       label: Twitter / X
       user: Twitter felhasználónév
+    span_lang:
+      label: Span lang
+    video:
+      label: Video
     youtube:
       _id: Youtube azonosító
       label: Youtube

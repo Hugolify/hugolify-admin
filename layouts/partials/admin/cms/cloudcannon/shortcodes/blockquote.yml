@@ -1,0 +1,32 @@
+  hugolify_blockquote:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: {{ i18n "admin.shortcodes.blockquote.label" | default "Blockquote" }}
+    definitions:
+      shortcode_name: blockquote
+      named_args:
+        - source_key: quote
+          editor_key: quote
+          type: string
+        - source_key: title
+          editor_key: title
+          type: string
+          optional: true
+        - source_key: text
+          editor_key: text
+          type: string
+          optional: true
+        - source_key: image
+          editor_key: image
+          type: string
+          optional: true
+    _inputs:
+      quote:
+        type: textarea
+      title:
+        type: text
+      text:
+        type: text
+      image:
+        type: image

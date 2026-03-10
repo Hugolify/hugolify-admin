@@ -1,0 +1,2 @@
+{{- $defaults := slice "danger" "dark" "info" "light" "primary" "secondary" "success" "warning" -}}
+{{- return (partial "admin/func/GetOptions.html" (dict "field" "state" "options" $defaults)) -}}

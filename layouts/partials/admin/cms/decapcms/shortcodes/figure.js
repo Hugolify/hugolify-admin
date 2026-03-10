@@ -1,6 +1,6 @@
 CMS.registerEditorComponent({
   id: 'figure',
-  label: '{{ i18n "admin.shortcodes.figure.label" }}',
+  label: '{{ i18n "admin.shortcodes.figure.label" | default "Figure" }}',
   fields: [
     {{ partialCached "admin/fields/image_src.yml" . | safeHTML }}, 
     {{ partialCached "admin/fields/image_alt.yml" . | safeHTML }}, 

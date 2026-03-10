@@ -9,6 +9,9 @@ paths:
 _snippets_imports:
   hugo: true
 
+{{/* Custom Snippets */}}
+{{ partial "admin/cms/cloudcannon/shortcodes.yml" . }}
+
 {{/* Collections */}}
 {{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/index.html" .) }}
 

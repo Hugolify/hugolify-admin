@@ -878,6 +878,10 @@ admin:
       _id: Twitter Kimliği
       label: Twitter / X
       user: Twitter kullanıcı adı
+    span_lang:
+      label: Span lang
+    video:
+      label: Video
     youtube:
       _id: Youtube Kimliği
       label: Youtube

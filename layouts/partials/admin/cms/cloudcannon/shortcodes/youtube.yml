@@ -1,0 +1,20 @@
+  hugolify_youtube:
+    template: hugo_shortcode_named_args
+    inline: false
+    preview:
+      text: {{ i18n "admin.shortcodes.youtube.label" | default "Youtube" }}
+    definitions:
+      shortcode_name: youtube
+      named_args:
+        - source_key: id
+          editor_key: id
+          type: string
+        - source_key: title
+          editor_key: title
+          type: string
+          optional: true
+    _inputs:
+      id:
+        type: text
+      title:
+        type: text

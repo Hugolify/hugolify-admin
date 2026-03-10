@@ -872,6 +872,10 @@ admin:
       _id: Twitter ID
       label: Twitter / X
       user: Twitter username
+    span_lang:
+      label: <span lang=""></span>
+    video:
+      label: Vidéo
     youtube:
       _id: Youtube ID
       label: Youtube
