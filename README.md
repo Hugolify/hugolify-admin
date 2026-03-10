@@ -2,6 +2,8 @@
 
 > This module is allowing the build of the config file for different Headless CMS for Hugo.
 
+<img width="1280" height="640" alt="share-hugolify-admin" src="https://github.com/user-attachments/assets/2ca87df4-3fc9-47fd-870a-35bd7ce995e6" />
+
 ## CMS available
 
 - CloudCannon: <https://cloudcannon.com/> `beta`
