@@ -1,4 +1,6 @@
-# hugolify-admin
+# Hugolify Admin
+
+> This module is allowing the build of the config file for different Headless CMS for Hugo.
 
 ## CMS available
 
@@ -27,6 +29,22 @@ imports:
   - path: github.com/hugolify/hugolify-posts
   - path: github.com/hugolify/hugolify-theme
   - path: github.com/hugolify/hugolify-admin
+```
+
+## Build Pages CMS and Cloudcannon config files
+
+Copy scripts directory to your project root directory.
+
+Then run the corresponding command:
+
+```bash
+node scripts/build-config-cloudcannon.js
+```
+
+or
+
+```bash
+node scripts/build-config-pages.js
 ```
 
 ## Params
