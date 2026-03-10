@@ -1,12 +1,11 @@
+{{- $fields := partialCached "admin/shortcodes/fields/figure.html" }}
 CMS.registerEditorComponent({
   id: 'figure',
   label: '{{ i18n "admin.shortcodes.figure.label" | default "Figure" }}',
   fields: [
-    {{ partialCached "admin/fields/image_src.yml" . | safeHTML }}, 
-    {{ partialCached "admin/fields/image_alt.yml" . | safeHTML }}, 
-    {{ partialCached "admin/fields/legend.yml" . | safeHTML }}, 
-    {{ partialCached "admin/fields/credit.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/is_screenshot.yml" . | safeHTML }}
+    {{- range $fields }}
+    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{- end }}
   ],
   pattern: /{{`{{< figure (.*) >}}` | safeHTML }}/,
 

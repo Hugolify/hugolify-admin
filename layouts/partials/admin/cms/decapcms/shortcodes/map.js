@@ -1,12 +1,11 @@
+{{- $fields := partialCached "admin/shortcodes/fields/map.html" }}
 CMS.registerEditorComponent({
   id: 'map',
   label: '{{ i18n "admin.shortcodes.map.label" | default "Map" }}',
   fields: [
-    {
-      label: '{{ i18n "admin.shortcodes.map.markers" | default "Markers" }}',
-      name: 'markers',
-      widget: 'text'
-    }
+    {{- range $fields }}
+    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{- end }}
   ],
   pattern: /{{"{{< map markers=`(.*)` >}}" | safeHTML }}/,
   fromBlock: function (match) {

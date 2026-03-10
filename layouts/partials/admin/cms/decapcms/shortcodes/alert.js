@@ -1,9 +1,11 @@
+{{- $fields := partialCached "admin/shortcodes/fields/alert.html" }}
 CMS.registerEditorComponent({
   id: 'alert',
   label: '{{ i18n "admin.shortcodes.alert.label" | default "Alert" }}',
   fields: [
-    {{ partialCached "admin/fields/text.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/state.yml" . | safeHTML }},
+    {{- range $fields }}
+    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{- end }}
   ],
   pattern: /{{`{{< alert (.*) >}}` | safeHTML }}/,
 

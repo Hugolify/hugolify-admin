@@ -1,11 +1,11 @@
+{{- $fields := partialCached "admin/shortcodes/fields/alert.html" }}
 CMS.registerEditorComponent({
   id: 'blockquote',
   label: '{{ i18n "admin.shortcodes.blockquote.label" | default "Blockquote" }}',
   fields: [
-    {{ partialCached "admin/fields/quote.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/title.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/text.yml" . | safeHTML }},
-    {{ replace (partialCached "admin/fields/image_src.yml" . | safeHTML) "src" "image" }}
+    {{- range $fields }}
+    {{ replace (partialCached (print "admin/fields/" . ".yml") . | safeHTML) "src:" "image:" }}
+    {{- end }}
   ],
   pattern: /{{`{{< blockquote (.*) >}}` | safeHTML }}/,
 

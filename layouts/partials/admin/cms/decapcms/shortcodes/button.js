@@ -1,11 +1,11 @@
+{{- $fields := partialCached "admin/shortcodes/fields/button.html" }}
 CMS.registerEditorComponent({
   id: 'button',
   label: '{{ i18n "admin.shortcodes.button.label" | default "Button" }}',
   fields: [
-    {{ partialCached "admin/fields/text.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/url.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/class.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/is_blank.yml" . | safeHTML }}
+    {{- range $fields }}
+    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{- end }}
   ],
   pattern: /{{`{{< button (.*) >}}` | safeHTML }}/,
 

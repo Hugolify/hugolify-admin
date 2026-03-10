@@ -1,19 +1,11 @@
+{{- $fields := partialCached "admin/shortcodes/fields/details.html" }}
 CMS.registerEditorComponent({
   id: 'details',
   label: '{{ i18n "admin.shortcodes.details.label" | default "Details" }}',
   fields: [
-    {{ partialCached "admin/fields/name.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/title.yml" . | safeHTML }},
-    {
-      name: 'summary',
-      label: 'Summary',
-      widget: 'string'
-    },
-    {
-      name: 'contents',
-      label: 'Contents',
-      widget: 'markdown'
-    }
+    {{- range $fields }}
+    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{- end }}
   ],
   pattern: /{{`{{< details (.*) >}}([\s\S]*?){{< \/details >}}` | safeHTML }}/,
 

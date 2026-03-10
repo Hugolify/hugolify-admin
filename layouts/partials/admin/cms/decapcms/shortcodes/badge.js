@@ -1,9 +1,11 @@
+{{- $fields := partialCached "admin/shortcodes/fields/badge.html" }}
 CMS.registerEditorComponent({
   id: 'badge',
   label: '{{ i18n "admin.shortcodes.badge.label" | default "Badge" }}',
   fields: [
-    {{ partialCached "admin/fields/text.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/state.yml" . | safeHTML }},
+    {{- range $fields }}
+    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{- end }}
   ],
   pattern: /{{`{{< badge (.*) >}}` | safeHTML }}/,
 

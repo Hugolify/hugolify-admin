@@ -1,9 +1,11 @@
+{{- $fields := partialCached "admin/shortcodes/fields/blank_link.html" }}
 CMS.registerEditorComponent({
   id: 'blank_link',
   label: '{{ i18n "admin.shortcodes.blank_link.label" | default "Blank Link" }}',
   fields: [
-    {{ partialCached "admin/fields/text.yml" . | safeHTML }},
-    {{ partialCached "admin/fields/link.yml" . | safeHTML }}
+    {{- range $fields }}
+    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{- end }}
   ],
   pattern: /{{`{{< blank_link (.*) >}}` | safeHTML }}/,
 
