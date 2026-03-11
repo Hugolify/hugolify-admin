@@ -1,10 +1,10 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.credit.label")
   "name" "credit"
-  "minimal" true
-  "buttons" "['link']"
+  "minimal" (site.Params.admin.fields.credit.minimal | default true)
+  "buttons" (site.Params.admin.fields.credit.buttons | default "['link']")
+  "modes" (site.Params.admin.fields.credit.modes | default "['rich_text']")
   "editor_components" "[]"
-  "modes" "['rich_text']"
   -}}
 
 {{ partial "admin/widgets/markdown.js" $args }}

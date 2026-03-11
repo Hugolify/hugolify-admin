@@ -7,6 +7,7 @@
   - i18n (boolean or string)
   - label (string) required
   - minimal (boolean)
+  - modes (array)
   - name (string) required
   - nameOverride (string)
   - pattern (object)
@@ -21,7 +22,8 @@
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
-{{- $minimal := .minimal | default false }}
+{{- $minimal := .minimal | default true }}
+{{- $modes := .modes | default "['rich_text']" }}
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
 {{- $pattern := .pattern | default false }}
@@ -118,10 +120,10 @@
   {{ with $buttons }}
   buttons: {{ $buttons }},
   {{ end }}
-  {{ with $minimal }}
-  minimal: true,
+  minimal: {{ $minimal }},
+  {{ with $modes }}
+  modes: {{ . }},
   {{ end }}
-  modes: ['rich_text'],
   required: {{ $required }},
   {{ with $pattern }}
   pattern: [

@@ -613,6 +613,9 @@ admin:
       label:
         one: Linkki
         other: Linkit
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: Sijainti
     loop:

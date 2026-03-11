@@ -5,9 +5,9 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.text.label")
-  "minimal" true
-  "buttons" "['bold', 'italic', 'link', 'bulleted-list']"
-  "modes" "['rich_text']"
+  "minimal" (site.Params.admin.fields.text_markdown.minimal | default true)
+  "buttons" (site.Params.admin.fields.text_markdown.buttons | default "['bold', 'italic', 'link', 'bulleted-list']")
+  "modes" (site.Params.admin.fields.text_markdown.modes | default "['rich_text']")
   "editor_components" "[]"
   -}}
 

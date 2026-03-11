@@ -1,9 +1,9 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.quote.label")
   "name" "quote"
-  "minimal" true
-  "buttons" "['bold', 'italic', 'link']"
-  "modes" "['rich_text']"
+  "minimal" (site.Params.admin.fields.quote.minimal | default true)
+  "buttons" (site.Params.admin.fields.quote.buttons | default "['bold', 'italic','link']")
+  "modes" (site.Params.admin.fields.quote.modes | default "['rich_text']")
   "editor_components" "[]"
   -}}
 

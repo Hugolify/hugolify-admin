@@ -617,6 +617,9 @@ admin:
       label:
         one: 링크
         other: 링크
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: 위치
     loop:

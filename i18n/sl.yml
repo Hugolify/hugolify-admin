@@ -617,6 +617,9 @@ admin:
       label:
         one: Povezava
         other: Povezave
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: Lokacija
     loop:

@@ -617,6 +617,9 @@ admin:
       label:
         one: Bağlantı
         other: Bağlantılar
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: Konum
     loop:

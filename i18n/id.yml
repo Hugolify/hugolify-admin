@@ -617,6 +617,9 @@ admin:
       label:
         one: Tautan
         other: Tautan
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: Lokasi
     loop:

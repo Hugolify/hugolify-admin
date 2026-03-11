@@ -617,6 +617,9 @@ admin:
       label:
         one: Odkaz
         other: Odkazy
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: Poloha
     loop:

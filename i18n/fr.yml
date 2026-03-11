@@ -613,6 +613,9 @@ admin:
       label:
         one: Lien
         other: Liens
+    llms:
+      label: LLMS
+      hint: 'Documentation: https://llmstxt.org/'
     location:
       label: Lieu
     loop:
@@ -866,7 +869,7 @@ admin:
       secondary: Navigation secondaire
       social: Navigation réseaux sociaux
     seo:
-      label: Global SEO
+      label: Référencement - SEO (Search Engine Optimization) global
       title: Nom du site
   group:
     year: Année
