@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Peringatan
+    alert_block:
+      label: Blok peringatan
     audio:
       label: Audio
     chart:
@@ -58,6 +60,8 @@ admin:
       label: Judul
     video:
       label: Video
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -759,6 +763,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: Nama Pengguna
+    twitch:
+      label: Twitch
     sold:
       label: Terjual/Disewa?
     state:
@@ -868,6 +874,8 @@ admin:
       label: Kutipan Blok
     button:
       label: Tombol
+    dailymotion:
+      label: Dailymotion
     details:
       label: Detail
     figure:

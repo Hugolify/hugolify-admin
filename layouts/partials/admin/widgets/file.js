@@ -160,7 +160,7 @@
   name: '{{ $name }}',
   widget: 'file',
   required: {{ $required }},
-  i18n: {{ $i18n }},
+  i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }},
   choose_url: {{ $choose_url }},
   {{ with $accept }}
   accept: '{{ delimit . "," }}',
@@ -176,7 +176,7 @@
     }
   },
   {{- with site.Params.admin.media.media_folder }}
-  media_folder: {{ . }},
+  media_folder: '{{ . }}',
   {{- end }}
   {{- with site.Params.admin.media.public_folder }}
   public_folder: '{{ . }}'

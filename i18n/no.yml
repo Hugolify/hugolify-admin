@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Varsel
+    alert_block:
+      label: Varselblokk
     audio:
       label: Lyd
     chart:
@@ -58,6 +60,8 @@ admin:
       label: Tittel
     video:
       label: Video
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -759,6 +763,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: Brukernavn
+    twitch:
+      label: Twitch
     sold:
       label: Solgt/leid?
     state:
@@ -868,6 +874,8 @@ admin:
       label: Sitatblokk
     button:
       label: Knapp
+    dailymotion:
+      label: Dailymotion
     details:
       label: Detaljer
     figure:

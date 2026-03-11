@@ -1,10 +1,10 @@
-{{- $fields := partialCached "admin/shortcodes/fields/youtube.html" }}
+{{- $fields := partialCached "admin/shortcodes/fields/youtube.html" . }}
 CMS.registerEditorComponent({
   id: 'youtube',
   label: '{{ i18n "admin.shortcodes.youtube.label" | default "Youtube" }}',
   fields: [
     {{- range $fields }}
-    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{ partialCached (print "admin/fields/" . ".yml") . . | safeHTML }},
     {{- end }}
   ],
   pattern: /{{`{{< youtube id="(.*)" title="(.*?)" class="youtube" >}}` | safeHTML }}/,

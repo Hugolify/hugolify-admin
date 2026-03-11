@@ -119,7 +119,7 @@
   widget: 'object',
   required: {{ $required }},
   collapsed: {{ $collapsed }},
-  i18n: {{ $i18n }},
+  i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }},
   {{ with $summary }}
   summary: '{{ . }}',
   {{ end }}

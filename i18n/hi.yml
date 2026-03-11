@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: चेतावनी
+    alert_block:
+      label: चेतावनी ब्लॉक
     audio:
       label: ऑडियो
     chart:
@@ -58,6 +60,8 @@ admin:
       label: शीर्षक
     video:
       label: वीडियो
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -759,6 +763,8 @@ admin:
       twitter:
         label: ट्विटर/X
         hint: उपयोगकर्ता नाम
+    twitch:
+      label: Twitch
     sold:
       label: बेचा/किराए पर दिया?
     state:
@@ -868,18 +874,20 @@ admin:
       label: ब्लॉककोट
     button:
       label: बटन
+    dailymotion:
+      label: Dailymotion
     details:
       label: विवरण
     figure:
       label: आकृति
     map:
       label: मानचित्र
+    span_lang:
+      label: Span lang
     twitter:
       _id: ट्विटर आईडी
       label: ट्विटर / X
       user: ट्विटर उपयोगकर्ता नाम
-    span_lang:
-      label: Span lang
     video:
       label: Video
     youtube:

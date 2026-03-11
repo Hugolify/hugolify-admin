@@ -872,10 +872,12 @@ admin:
   shortcodes:
     alert:
       label: Alert
+    alert_block:
+      label: Alert block
     badge:
       label: Badge
     blank_link:
-      label: Blank link
+      label: Link (new window)
     blockquote:
       label: Blockquote
     button:
@@ -885,15 +887,15 @@ admin:
     details:
       label: Details
     figure:
-      label: Figure
+      label: Image block
     map:
       label: Map
-    twicth:
+    span_lang:
+      label: Language (span)
+    twitch:
       label: Twitch
     twitter:
       label: Twitter / X
-    span_lang:
-      label: Span lang
     video:
       label: Video
     vimeo:

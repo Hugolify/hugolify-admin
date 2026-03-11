@@ -4,7 +4,7 @@
 {{- end }}
 
 {{- $args := dict 
-  "label" (i18n "admin.fields.socials.twitter.id" | default "ID")
+  "label" (i18n "admin.fields.socials.twitter._id" | default "ID")
   -}}
 
 {{- $args = merge $args $name }}

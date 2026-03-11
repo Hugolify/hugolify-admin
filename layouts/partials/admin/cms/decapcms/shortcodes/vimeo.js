@@ -1,10 +1,10 @@
-{{- $fields := partialCached "admin/shortcodes/fields/vimeo.html" }}
+{{- $fields := partialCached "admin/shortcodes/fields/vimeo.html" . }}
 CMS.registerEditorComponent({
   id: 'vimeo',
   label: '{{ i18n "admin.shortcodes.vimeo.label" | default "Vimeo" }}',
   fields: [
     {{- range $fields }}
-    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{ partialCached (print "admin/fields/" . ".yml") . . | safeHTML }},
     {{- end }}
   ],
   pattern: /{{`{{< vimeo (\S+) >}}` | safeHTML }}/,

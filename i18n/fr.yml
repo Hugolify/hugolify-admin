@@ -769,6 +769,8 @@ admin:
       youtube:
         _id: Youtube ID
         label: Youtube
+    details:
+      label: Détails
     sold:
       label: Vendu/loué ?
     summary:
@@ -868,10 +870,12 @@ admin:
   shortcodes:
     alert:
       label: Alert
+    alert_block:
+      label: Bloc alert
     badge:
       label: Badge
     blank_link:
-      label: Blank link
+      label: Lien (nouvelle fenêtre)
     blockquote:
       label: Bloc citation
     button:
@@ -879,15 +883,15 @@ admin:
     dailymotion:
       label: Dailymotion
     figure:
-      label: Figure
+      label: Bloc image
     map:
       label: Carte
+    span_lang:
+      label: Language (span)
     twitch:
       label: Twitch
     twitter:
       label: Twitter / X
-    span_lang:
-      label: Span lang
     video:
       label: Vidéo
     vimeo:

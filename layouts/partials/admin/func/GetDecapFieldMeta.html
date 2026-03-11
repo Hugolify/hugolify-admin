@@ -1,0 +1,21 @@
+{{/*
+  Extracts the CMS field name and widget type from a field partial output (decapcms format).
+  Takes a field key (e.g. "is_blank", "image_src") and returns dict { name, widget }.
+  Falls back to the field key itself if extraction fails.
+*/}}
+{{- $fieldKey := . -}}
+{{- $fieldFile := printf "admin/fields/%s.yml" $fieldKey -}}
+{{- $name := $fieldKey -}}
+{{- $widget := "string" -}}
+{{- if templates.Exists (printf "partials/%s" $fieldFile) -}}
+  {{- $rendered := partialCached $fieldFile $fieldKey $fieldKey | htmlUnescape -}}
+  {{- $afterName := $rendered | replaceRE `(?s)^[\s\S]*?name:\s*'` "" -}}
+  {{- if ne $afterName $rendered -}}
+    {{- $name = $afterName | replaceRE `'[\s\S]*$` "" | strings.TrimSpace -}}
+    {{- $afterWidget := $rendered | replaceRE `(?s)^[\s\S]*?widget:\s*'` "" -}}
+    {{- if ne $afterWidget $rendered -}}
+      {{- $widget = $afterWidget | replaceRE `'[\s\S]*$` "" | strings.TrimSpace -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "name" $name "widget" $widget) -}}

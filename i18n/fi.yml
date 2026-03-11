@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Hälytys
+    alert_block:
+      label: Hälytyslohko
     audio:
       label: Ääni
     chart:
@@ -60,6 +62,8 @@ admin:
       label: Otsikko
     video:
       label: Video
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -759,6 +763,8 @@ admin:
       twitter:
         hint: Käyttäjänimi
         label: Twitter/X
+    twitch:
+      label: Twitch
     sold:
       label: Myyty/vuokrattu?
     state:
@@ -868,6 +874,8 @@ admin:
       label: Blockquote
     button:
       label: Painike
+    dailymotion:
+      label: Dailymotion
     details:
       label: Details
     figure:

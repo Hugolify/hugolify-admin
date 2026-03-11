@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: 警报
+    alert_block:
+      label: 警报块
     audio:
       label: 音频
     chart:
@@ -58,6 +60,8 @@ admin:
       label: 标题
     video:
       label: 视频
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -759,6 +763,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: 用户名
+    twitch:
+      label: Twitch
     sold:
       label: 已售/已租?
     state:
@@ -868,6 +874,8 @@ admin:
       label: 引用块
     button:
       label: 按钮
+    dailymotion:
+      label: Dailymotion
     details:
       label: 详情
     figure:

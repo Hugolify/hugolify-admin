@@ -1,10 +1,10 @@
-{{- $fields := partialCached "admin/shortcodes/fields/twitter.html" }}
+{{- $fields := partialCached "admin/shortcodes/fields/twitter.html" . }}
 CMS.registerEditorComponent({
   id: 'twitter',
   label: '{{ i18n "admin.shortcodes.twitter.label" | default "Twitter" }}',
   fields: [
     {{- range $fields }}
-    {{ partialCached (print "admin/fields/" . ".yml") | safeHTML }},
+    {{ partialCached (print "admin/fields/" . ".yml") . . | safeHTML }},
     {{- end }}
   ],
   pattern: /{{`{{< tweet user="(.*?)" id="(.*)" >}}` | safeHTML }}/,

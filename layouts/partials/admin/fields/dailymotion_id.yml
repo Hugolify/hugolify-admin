@@ -1,5 +1,5 @@
 {{- $args := dict 
-  "label" (i18n "admin.fields.socials.dailymotion.id" | default "ID")
+  "label" (i18n "admin.fields.socials.dailymotion._id" | default "ID")
   "name" "id"
   -}}
 

@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Uyarı
+    alert_block:
+      label: Uyarı bloğu
     audio:
       label: Ses
     chart:
@@ -58,6 +60,8 @@ admin:
       label: Başlık
     video:
       label: Video
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -759,6 +763,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: Kullanıcı adı
+    twitch:
+      label: Twitch
     sold:
       label: Satıldı/kiralandı?
     state:
@@ -868,6 +874,8 @@ admin:
       label: Alıntı bloğu
     button:
       label: Düğme
+    dailymotion:
+      label: Dailymotion
     details:
       label: Detaylar
     figure:

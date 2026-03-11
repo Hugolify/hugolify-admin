@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Alert
+    alert_block:
+      label: Blok alertu
     audio:
       label: Audio
     chart:
@@ -58,6 +60,8 @@ admin:
       label: Tytuł
     video:
       label: Wideo
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -759,6 +763,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: Nazwa użytkownika
+    twitch:
+      label: Twitch
     sold:
       label: Sprzedane/wynajęte?
     state:
@@ -868,6 +874,8 @@ admin:
       label: Cytat blokowy
     button:
       label: Przycisk
+    dailymotion:
+      label: Dailymotion
     details:
       label: Szczegóły
     figure:

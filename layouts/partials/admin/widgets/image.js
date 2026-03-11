@@ -116,7 +116,7 @@
   name: '{{ $name }}',
   widget: 'image',
   required: {{ $required }},
-  i18n: {{ $i18n }},
+  i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }},
   choose_url: {{ $choose_url }},
   media_library: {
     config: {
@@ -129,7 +129,7 @@
     }
   },
   {{- with $media_folder }}
-  media_folder: {{ . }},
+  media_folder: '{{ . }}',
   {{- end }}
   {{- with $public_folder }}
   public_folder: '{{ . }}'

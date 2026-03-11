@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Figyelmeztetés
+    alert_block:
+      label: Figyelmeztetési blokk
     audio:
       label: Hang
     chart:
@@ -58,6 +60,8 @@ admin:
       label: Cím
     video:
       label: Videó
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -759,6 +763,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: Felhasználónév
+    twitch:
+      label: Twitch
     sold:
       label: Eladva/kiadva?
     state:
@@ -868,6 +874,8 @@ admin:
       label: Idézetblokk
     button:
       label: Gomb
+    dailymotion:
+      label: Dailymotion
     details:
       label: Részletek
     figure:

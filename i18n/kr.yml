@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: 알림
+    alert_block:
+      label: 알림 블록
     audio:
       label: 오디오
     chart:
@@ -58,6 +60,8 @@ admin:
       label: 제목
     video:
       label: 동영상
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -759,6 +763,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: 사용자 이름
+    twitch:
+      label: Twitch
     sold:
       label: 판매됨/임대됨?
     state:
@@ -868,6 +874,8 @@ admin:
       label: 블록 인용
     button:
       label: 버튼
+    dailymotion:
+      label: Dailymotion
     details:
       label: 세부 정보
     figure:
