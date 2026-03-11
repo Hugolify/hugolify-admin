@@ -1,6 +1,7 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.body.label")
   "name" "body"
+  "editor_components" true
   -}}
 
 {{ partial "admin/widgets/markdown.js" $args }}

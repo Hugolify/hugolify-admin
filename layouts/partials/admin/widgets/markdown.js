@@ -2,6 +2,7 @@
   Partial to generate a markdown widget
   
   - default (string)
+  - editorComponents (array)
   - hidden (boolean)
   - hint (string)
   - i18n (boolean or string)
@@ -18,6 +19,7 @@
 
 {{- $buttons := .buttons | default false }}
 {{- $default := .default | default "" }}
+{{- $editorComponents := .editor_components }}
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
@@ -124,6 +126,9 @@
   {{ with $modes }}
   modes: {{ . }},
   {{ end }}
+  {{- if ne $editorComponents true }}
+  editor_components: {{ if not $editorComponents }}[]{{ else }}{{ $editorComponents }}{{ end }},
+  {{- end }}
   required: {{ $required }},
   {{ with $pattern }}
   pattern: [
