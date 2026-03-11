@@ -57,11 +57,11 @@ CMS.registerEditorComponent({
          - Positional: captures a single word value:             {{< name (\S+) >}}
          - Paired:     captures named args + inner content:      {{< name (...) >}}...{{< /name >}} */}}
   {{- if $paired }}
-  pattern: /{{ print "{{< " $shortcode " (.*) >}}([\\s\\S]*?){{< \\/" $shortcode " >}}" | safeHTML }}/,
+  pattern: /{{ print "{{< " $shortcode "(?=[\\s>])([\\s\\S]*?)>}}([\\s\\S]*?){{< \\/" $shortcode " >}}" | safeHTML }}/,
   {{- else if $positional }}
   pattern: /{{ print "{{< " $shortcode " (\\S+) >}}" | safeHTML }}/,
   {{- else }}
-  pattern: /{{ print "{{< " $shortcode " (.*) >}}" | safeHTML }}/,
+  pattern: /{{ print "{{< " $shortcode "(?=[\\s>])([\\s\\S]*?)>}}" | safeHTML }}/,
   {{- end }}
 
   {{/* Parse the shortcode string back into a field object for the editor.
@@ -79,11 +79,11 @@ CMS.registerEditorComponent({
     {{ if $paired -}}
     const contents = match[2] || '';
     {{ end -}}
-    const attrRe = /([^\s=]+)(?:=(?:"([^"]*)"|'([^']*)'|([^\s"'>]+)))?/g;
+    const attrRe = /([^\s=]+)(?:=(?:`([^`]*)`|"([^"]*)"|'([^']*)'|([^\s"'>]+)))?/g;
     const parsed = {};
     let m;
     while ((m = attrRe.exec(attrs)) !== null) {
-      parsed[m[1]] = (m[2] !== undefined) ? m[2] : (m[3] !== undefined) ? m[3] : (m[4] !== undefined) ? m[4] : true;
+      parsed[m[1]] = (m[2] !== undefined) ? m[2] : (m[3] !== undefined) ? m[3] : (m[4] !== undefined) ? m[4] : (m[5] !== undefined) ? m[5] : true;
     }
     return {
       {{- range $fieldMetasNamed }}
@@ -106,7 +106,7 @@ CMS.registerEditorComponent({
     {{- else -}}
     let shortcode = open + ' {{ $shortcode }}';
     {{- range $fieldMetasNamed }}
-    if (obj.{{ .name }}) shortcode += ' {{ .name }}="' + obj.{{ .name }} + '"';
+    if (obj.{{ .name }}) { const _v{{ .name }} = obj.{{ .name }}; shortcode += ' {{ .name }}=' + (_v{{ .name }}.includes('"') ? '`' + _v{{ .name }} + '`' : '"' + _v{{ .name }} + '"'); }
     {{- end }}
     shortcode += ' ' + close;
     {{ if $paired -}}

@@ -1,3 +1,8 @@
+{{/*
+  Custom implementation — cannot use _register.js because:
+  - The pattern and toBlock always inject a hardcoded class="youtube" attribute.
+  - _register.js only handles dynamic named args from field definitions.
+*/}}
 {{- $fields := partialCached "admin/shortcodes/fields/youtube.html" . }}
 CMS.registerEditorComponent({
   id: 'youtube',

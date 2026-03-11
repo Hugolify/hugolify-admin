@@ -623,6 +623,9 @@ admin:
       label: Name
     map:
       label: Map
+    markers:
+      hint: 'JSON coordinates. e.g.: {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
+      label: Markers
     newsletter:
       form:
         label: Form

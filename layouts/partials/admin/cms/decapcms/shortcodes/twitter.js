@@ -1,3 +1,8 @@
+{{/*
+  Custom implementation — cannot use _register.js because:
+  - The Hugo shortcode name is "tweet" but the CMS component id is "twitter".
+  - _register.js uses the same name for both the pattern and the component id.
+*/}}
 {{- $fields := partialCached "admin/shortcodes/fields/twitter.html" . }}
 CMS.registerEditorComponent({
   id: 'twitter',

@@ -89,7 +89,7 @@
   name: '{{ $name }}',
   widget: 'code',
   {{ with $language }}
-  default_language: '{{ . }}',
+  default_language: '{{ . | lower }}',
   {{ end }}
   {{ if ne $default "" }}
   default: {{ $default }},

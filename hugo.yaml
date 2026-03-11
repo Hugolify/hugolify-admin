@@ -261,10 +261,12 @@ params:
         - details
         - figure
         - map
+        - qr
         - span_lang
         - twitch
         - twitter
         - video
+        - vimeo
         - youtube
 
     # Widgets

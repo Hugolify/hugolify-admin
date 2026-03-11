@@ -4,7 +4,7 @@
   "minimal" true
   "buttons" "['bold', 'italic', 'link']"
   "modes" "['rich_text']"
-  "editor_components" "[]"
+  "editor_components" "['blank_link']"
   -}}
 
 {{ partial "admin/widgets/markdown.js" $args }}

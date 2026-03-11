@@ -1,6 +1,8 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.markers.label" | default "Markers")
+  "hint" (i18n "admin.fields.markers.hint" | default "Enter a JSON array of markers.")
   "name" "markers"
+  "i18n" "duplicate"
   -}}
 
 {{ partial "admin/widgets/string.js" $args }}
