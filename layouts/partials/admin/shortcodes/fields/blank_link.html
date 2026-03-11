@@ -1,0 +1,7 @@
+{{- $fields := slice 
+  "text" 
+  "link" -}}
+  
+{{- $fields = partial "admin/func/GetFields.html" (dict "shortcode" . "fields" $fields) -}}
+
+{{- return $fields -}}

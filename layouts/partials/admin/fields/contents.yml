@@ -1,0 +1,10 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.contents.label" | default "Contents")
+  "name" "contents"
+  "minimal" true
+  "buttons" "['bold', 'italic', 'link']"
+  "modes" "['rich_text']"
+  "editor_components" "['blank_link']"
+  -}}
+
+{{ partial "admin/widgets/markdown.js" $args }}

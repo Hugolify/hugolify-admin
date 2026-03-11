@@ -1,0 +1,8 @@
+{{- $fields := slice 
+  "vimeo_id"
+  "class"
+  "title" -}}
+  
+{{- $fields = partial "admin/func/GetFields.html" (dict "shortcode" . "fields" $fields) -}}
+
+{{- return $fields -}}

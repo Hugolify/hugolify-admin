@@ -9,6 +9,12 @@
 {{/* 2. Escape specific HTML characters */}}
 {{ $file = replace $file `"[\*]"` `` }}
 
+{{/* 2.5. Escape literal double-quotes inside single-quoted strings */}}
+{{/* Iterate to handle multiple occurrences (greedy match catches last " each pass) */}}
+{{ range seq 10 }}
+  {{ $file = replaceRE `'([^'\n]*)"([^'\n]*)'` `'${1}__DQ__${2}'` $file }}
+{{ end }}
+
 {{/* 3. Replace single quotes with double quotes (JSON requires double quotes) */}}
 {{ $file = replace $file `'` `"` }}
 
@@ -51,6 +57,9 @@
 {{ $file = replace $file `__LBRACE__` `{` }}
 {{ $file = replace $file `__RBRACE__` `}` }}
 {{ $file = replace $file `__ESC_QUOTE__` `\"` }}
+
+{{/* 7.2. Restore literal double-quotes that were inside single-quoted strings */}}
+{{ $file = replace $file `__DQ__` `\"` }}
 
 {{/* 8. Convert the cleaned JSON string into a Hugo map/object */}}
 {{ return ($file | transform.Unmarshal) }}

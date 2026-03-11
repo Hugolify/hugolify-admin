@@ -252,13 +252,21 @@ params:
       # Set shortcodes available to markdown editor, all shortcodes https://www.hugolify.io/docs/shortcodes/
       enable:
         - alert
+        - alert-block
         - badge
         - blank_link
         - blockquote
+        - dailymotion
         - button
         - details
+        - figure
         - map
+        - qr
+        - span_lang
+        - twitch
         - twitter
+        - video
+        - vimeo
         - youtube
 
     # Widgets

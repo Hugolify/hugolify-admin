@@ -1,0 +1,7 @@
+{{- $fields := slice 
+  "twitter_id" 
+  "twitter_username" -}}
+  
+{{- $fields = partial "admin/func/GetFields.html" (dict "shortcode" . "fields" $fields) -}}
+
+{{- return $fields -}}

@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Varning
+    alert_block:
+      label: Varningsblock
     audio:
       label: Ljud
     chart:
@@ -58,6 +60,8 @@ admin:
       label: Titel
     video:
       label: Video
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -762,6 +766,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: Användarnamn
+    twitch:
+      label: Twitch
     sold:
       label: Såld/uthyrd?
     state:
@@ -871,6 +877,8 @@ admin:
       label: Citatblock
     button:
       label: Knapp
+    dailymotion:
+      label: Dailymotion
     details:
       label: Detaljer
     figure:
@@ -881,6 +889,10 @@ admin:
       _id: Twitter ID
       label: Twitter / X
       user: Twitter användarnamn
+    span_lang:
+      label: Span lang
+    video:
+      label: Video
     youtube:
       _id: Youtube ID
       label: Youtube

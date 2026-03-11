@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Opozorilo
+    alert_block:
+      label: Blok opozorilo
     audio:
       label: Avdio
     chart:
@@ -58,6 +60,8 @@ admin:
       label: Naslov
     video:
       label: Video
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -762,6 +766,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: Uporabniško ime
+    twitch:
+      label: Twitch
     sold:
       label: Prodano/najeto?
     state:
@@ -871,6 +877,8 @@ admin:
       label: Blokovni citat
     button:
       label: Gumb
+    dailymotion:
+      label: Dailymotion
     details:
       label: Podrobnosti
     figure:
@@ -881,6 +889,10 @@ admin:
       _id: Twitter ID
       label: Twitter / X
       user: Twitter uporabniško ime
+    span_lang:
+      label: Span lang
+    video:
+      label: Video
     youtube:
       _id: Youtube ID
       label: Youtube

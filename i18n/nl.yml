@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Waarschuwing
+    alert_block:
+      label: Waarschuwingsblok
     audio:
       label: Audio
     chart:
@@ -58,6 +60,8 @@ admin:
       label: Titel
     video:
       label: Video
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -762,6 +766,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: Gebruikersnaam
+    twitch:
+      label: Twitch
     sold:
       label: Verkocht/verhuurd?
     state:
@@ -871,6 +877,8 @@ admin:
       label: Blokcitaat
     button:
       label: Knop
+    dailymotion:
+      label: Dailymotion
     details:
       label: Details
     figure:
@@ -881,6 +889,10 @@ admin:
       _id: Twitter ID
       label: Twitter / X
       user: Twitter gebruikersnaam
+    span_lang:
+      label: Span lang
+    video:
+      label: Video
     youtube:
       _id: Youtube ID
       label: Youtube

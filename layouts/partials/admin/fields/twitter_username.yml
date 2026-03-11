@@ -1,0 +1,7 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.socials.twitter.label" | default "Username")
+  "hint" (i18n "admin.fields.socials.twitter.hint")
+  "name" "twitter"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

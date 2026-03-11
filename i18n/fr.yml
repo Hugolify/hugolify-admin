@@ -387,6 +387,8 @@ admin:
       label:
         one: Contact
         other: Contacts
+    contents:
+      label: Contenu
     controls:
       label: Contrôles
     coordinates:
@@ -622,6 +624,9 @@ admin:
       label: Nom
     map:
       label: Carte
+    markers:
+      hint: 'Coordonnées JSON. ex: {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
+      label: Marqueurs
     newsletter:
       form:
         label: Formulaire
@@ -753,13 +758,25 @@ admin:
         Contain only lowercase letters, numbers, and hyphens, with no spaces,
         accents, or special characters
     socials:
+      dailymotion:
+        _id: Dailymotion ID
+        label: Dailymotion
       label:
         one: Social
         other: Socials
       platform: Plateforme
+      twitch:
+        _id: Twitch ID
+        label: Twitch
       twitter:
+        _id: Twitter ID
         label: Twitter/X
         hint: Nom d’utilisateur
+      youtube:
+        _id: Youtube ID
+        label: Youtube
+    details:
+      label: Détails
     sold:
       label: Vendu/loué ?
     summary:
@@ -859,22 +876,31 @@ admin:
   shortcodes:
     alert:
       label: Alert
+    alert_block:
+      label: Bloc alert
     badge:
       label: Badge
     blank_link:
-      label: Blank link
+      label: Lien (nouvelle fenêtre)
     blockquote:
       label: Bloc citation
     button:
       label: Bouton
+    dailymotion:
+      label: Dailymotion
     figure:
-      label: Figure
+      label: Bloc image
     map:
       label: Carte
+    span_lang:
+      label: Language (span)
+    twitch:
+      label: Twitch
     twitter:
-      _id: Twitter ID
       label: Twitter / X
-      user: Twitter username
+    video:
+      label: Vidéo
+    vimeo:
+      label: Vimeo
     youtube:
-      _id: Youtube ID
       label: Youtube

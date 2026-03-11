@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: アラート
+    alert_block:
+      label: アラートブロック
     audio:
       label: オーディオ
     chart:
@@ -58,6 +60,8 @@ admin:
       label: タイトル
     video:
       label: 動画
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -762,6 +766,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: ユーザー名
+    twitch:
+      label: Twitch
     sold:
       label: 売却済み/賃貸済み?
     state:
@@ -871,6 +877,8 @@ admin:
       label: ブロック引用
     button:
       label: ボタン
+    dailymotion:
+      label: Dailymotion
     details:
       label: 詳細
     figure:
@@ -881,6 +889,10 @@ admin:
       _id: Twitter ID
       label: Twitter / X
       user: Twitterユーザー名
+    span_lang:
+      label: Span lang
+    video:
+      label: Video
     youtube:
       _id: Youtube ID
       label: Youtube

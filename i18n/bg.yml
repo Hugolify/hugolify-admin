@@ -2,6 +2,8 @@ admin:
   blocks:
     alert:
       label: Сигнал
+    alert_block:
+      label: Блок сигнал
     audio:
       label: Аудио
     chart:
@@ -58,6 +60,8 @@ admin:
       label: Заглавие
     video:
       label: Видео
+    vimeo:
+      label: Vimeo
   collections:
     authors:
       label:
@@ -762,6 +766,8 @@ admin:
       twitter:
         label: Twitter/X
         hint: Потребителско име
+    twitch:
+      label: Twitch
     sold:
       label: Продадено/наето?
     state:
@@ -871,6 +877,8 @@ admin:
       label: Цитат
     button:
       label: Бутон
+    dailymotion:
+      label: Dailymotion
     details:
       label: Детайли
     figure:
@@ -881,6 +889,10 @@ admin:
       _id: Twitter ID
       label: Twitter / X
       user: Twitter потребителско име
+    span_lang:
+      label: Span lang
+    video:
+      label: Video
     youtube:
       _id: Youtube ID
       label: Youtube
