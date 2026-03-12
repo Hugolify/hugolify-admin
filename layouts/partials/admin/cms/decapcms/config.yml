@@ -61,4 +61,4 @@ slug:
   clean_accents: false
   sanitize_replacement: "-"
 
-{{ transform.Remarshal "yaml" (partial "admin/collections/index.yml" .) }}
+{{ partial "admin/func/RemarshalYaml.html" (partial "admin/collections/index.yml" .) }}

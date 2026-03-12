@@ -1,0 +1,60 @@
+{{/*
+  RemarshalYaml
+  =============
+  Wraps Hugo's `transform.Remarshal "yaml"` and fixes YAML anchors generated
+  by yaml.v3 (Go) for repeated identical values.
+
+  Problem
+  -------
+  Hugo's `transform.Remarshal "yaml"` uses the yaml.v3 Go library, which
+  automatically creates YAML anchors (&anchorN) when it encounters the same
+  value multiple times in memory — notably the empty sequence `[]`.
+  In a large config with many markdown fields using `editor_components: []`,
+  yaml.v3 generates:
+
+    1st occurrence:   editor_components: &editor_components75
+                      []
+    2nd occurrence:   editor_components: &editor_components *editor_components  (self-ref!)
+    3rd+ occurrence:  editor_components: *editor_components75  (alias)
+
+  YAML anchors are valid per spec, but several CMS parsers (Sveltia, Decap,
+  Netlify CMS) fail to read them correctly in config.yml.
+
+  Fix
+  ---
+  After remarshal, three regex patterns are applied to restore plain `[]`:
+
+    Pattern 1 — anchor definition with value on the next line:
+      editor_components: &anchorN
+      []
+      → editor_components: []
+      Note: uses ` *\n` (spaces only) not `\s*\n` because \s* would
+      greedily consume the newline, leaving nothing for the \n to match.
+
+    Pattern 2 — self-referencing anchor + alias on the same line:
+      editor_components: &anchor *anchor
+      → editor_components: []
+
+    Pattern 3 — standalone alias reference:
+      editor_components: *anchor
+      → editor_components: []
+
+  Usage
+  -----
+  Replace any direct call to `transform.Remarshal "yaml"` that produces
+  YAML containing repeated `editor_components: []` fields:
+
+    {{- $yaml := partial "admin/func/RemarshalYaml.html" (partial "admin/collections/index.yml" .) -}}
+    {{ $yaml }}
+
+  Input  : string — raw YAML-like content to be remarshal'd
+  Output : string — normalized YAML with anchors resolved
+*/}}
+{{- $yaml := transform.Remarshal "yaml" . -}}
+{{/* Pattern 1: anchor definition + value on next line */}}
+{{- $yaml = replaceRE `(editor_components: )&\S+ *\n\s*\[\]` "${1}[]" $yaml -}}
+{{/* Pattern 2: self-referencing anchor + alias on same line */}}
+{{- $yaml = replaceRE `(editor_components: )&\S+ \*\S+` "${1}[]" $yaml -}}
+{{/* Pattern 3: standalone alias reference */}}
+{{- $yaml = replaceRE `(editor_components: )\*\S+` "${1}[]" $yaml -}}
+{{- return $yaml -}}
