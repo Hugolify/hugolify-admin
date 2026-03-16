@@ -12,8 +12,7 @@
   i18n: true,
   {{- with $blocks -}}
     collapsed: false,
-    widget: 'list',
-    types: [
+    widget: 'list', types: [
       {{- range . -}}
         {{- $file := print "admin/blocks/" . ".yml" -}}
         {{- if templates.Exists ( printf "partials/%s" $file ) -}}
