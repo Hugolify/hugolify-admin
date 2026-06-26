@@ -796,6 +796,14 @@ admin:
       label: Boventitel
     text:
       label: Tekst
+    theme:
+      label: Thema
+      options:
+        accent: Accent
+        black: Zwart
+        dark: Donker
+        light: Licht
+        white: Wit
     title:
       label: Titel
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Paginatitel
     transcription:
       label: Transcriptie
+    ui:
+      label: UI
     url:
       hint: Absolute URL (bijv. https://www.example.com)
       label: URL

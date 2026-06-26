@@ -1,0 +1,11 @@
+{{- $fields := slice "theme" "grid" "offset" "align" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.ui.label")
+  "name" "ui"
+  "collapsed" true
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

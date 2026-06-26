@@ -796,6 +796,14 @@ admin:
       label: Alaotsikko
     text:
       label: Teksti
+    theme:
+      label: Teema
+      options:
+        accent: Aksentti
+        black: Musta
+        dark: Tumma
+        light: Vaalea
+        white: Valkoinen
     title:
       label: Otsikko
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Sivun otsikko
     transcription:
       label: Transkriptio
+    ui:
+      label: UI
     url:
       hint: Absoluuttinen URL (esim. https://www.example.com)
       label: Verkko-osoite

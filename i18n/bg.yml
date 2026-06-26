@@ -796,6 +796,14 @@ admin:
       label: Надзаглавие
     text:
       label: Текст
+    theme:
+      label: Тема
+      options:
+        accent: Акцент
+        black: Черен
+        dark: Тъмен
+        light: Светъл
+        white: Бял
     title:
       label: Заглавие
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Заглавие на страницата
     transcription:
       label: Транскрипция
+    ui:
+      label: UI
     url:
       hint: Абсолютен URL (напр. https://www.example.com)
       label: URL

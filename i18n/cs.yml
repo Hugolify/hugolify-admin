@@ -796,6 +796,14 @@ admin:
       label: Nadnadpis
     text:
       label: Text
+    theme:
+      label: Téma
+      options:
+        accent: Akcent
+        black: Černá
+        dark: Tmavá
+        light: Světlá
+        white: Bílá
     title:
       label: Titulek
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Titulek stránky
     transcription:
       label: Přepis
+    ui:
+      label: UI
     url:
       hint: Absolutní URL (např. https://www.example.com)
       label: URL

@@ -805,6 +805,14 @@ admin:
       label: Sur-titre
     text:
       label: Texte
+    theme:
+      label: Thème
+      options:
+        accent: Accent
+        black: Noir
+        dark: Sombre
+        light: Clair
+        white: Blanc
     title:
       label: Titre
     title_page:
@@ -812,6 +820,8 @@ admin:
       label: Titre de la page
     transcription:
       label: Transcription
+    ui:
+      label: UI
     url:
       hint: 'URL absolue (ex : https://www.example.com)'
       label: URL

@@ -805,6 +805,14 @@ admin:
       label: Surtitle
     text:
       label: Text
+    theme:
+      label: Theme
+      options:
+        accent: Accent
+        black: Black
+        dark: Dark
+        light: Light
+        white: White
     title:
       label: Title
     title_page:
@@ -814,6 +822,8 @@ admin:
       label: Page title
     transcription:
       label: Transcription
+    ui:
+      label: UI
     url:
       hint: Absolute URL (e.g https://www.example.com)
       label: URL

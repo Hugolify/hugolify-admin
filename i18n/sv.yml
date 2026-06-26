@@ -796,6 +796,14 @@ admin:
       label: Övertitel
     text:
       label: Text
+    theme:
+      label: Tema
+      options:
+        accent: Accent
+        black: Svart
+        dark: Mörk
+        light: Ljus
+        white: Vit
     title:
       label: Titel
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Sidtitel
     transcription:
       label: Transkription
+    ui:
+      label: UI
     url:
       hint: Absolut URL (t.ex. https://www.example.com)
       label: URL

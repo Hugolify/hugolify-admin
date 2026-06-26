@@ -796,6 +796,14 @@ admin:
       label: 上位タイトル
     text:
       label: テキスト
+    theme:
+      label: テーマ
+      options:
+        accent: アクセント
+        black: 黒
+        dark: ダーク
+        light: ライト
+        white: 白
     title:
       label: タイトル
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: ページタイトル
     transcription:
       label: 文字起こし
+    ui:
+      label: UI
     url:
       hint: 絶対URL（例：https://www.example.com）
       label: URL

@@ -796,6 +796,14 @@ admin:
       label: 상위 제목
     text:
       label: 텍스트
+    theme:
+      label: 테마
+      options:
+        accent: 강조
+        black: 검정
+        dark: 어둡게
+        light: 밝게
+        white: 흰색
     title:
       label: 제목
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: 페이지 제목
     transcription:
       label: 전사
+    ui:
+      label: UI
     url:
       hint: '절대 URL (예: https://www.example.com)'
       label: URL

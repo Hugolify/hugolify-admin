@@ -796,6 +796,14 @@ admin:
       label: Sopratitolo
     text:
       label: Testo
+    theme:
+      label: Tema
+      options:
+        accent: Accento
+        black: Nero
+        dark: Scuro
+        light: Chiaro
+        white: Bianco
     title:
       label: Titolo
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Titolo della pagina
     transcription:
       label: Trascrizione
+    ui:
+      label: UI
     url:
       hint: 'URL assoluto (es. https://www.example.com)'
       label: URL

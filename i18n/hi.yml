@@ -796,6 +796,14 @@ admin:
       label: सुरटाइटल
     text:
       label: टेक्स्ट
+    theme:
+      label: थीम
+      options:
+        accent: एक्सेंट
+        black: काला
+        dark: गहरा
+        light: हल्का
+        white: सफेद
     title:
       label: शीर्षक
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: पृष्ठ शीर्षक
     transcription:
       label: प्रतिलेखन
+    ui:
+      label: UI
     url:
       hint: पूर्ण URL (उदा. https://www.example.com)
       label: URL

@@ -796,6 +796,14 @@ admin:
       label: Főcím
     text:
       label: Szöveg
+    theme:
+      label: Téma
+      options:
+        accent: Kiemelő
+        black: Fekete
+        dark: Sötét
+        light: Világos
+        white: Fehér
     title:
       label: Cím
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Oldalcím
     transcription:
       label: Átírás
+    ui:
+      label: UI
     url:
       hint: Abszolút URL (pl. https://www.example.com)
       label: URL

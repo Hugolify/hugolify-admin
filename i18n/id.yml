@@ -796,6 +796,14 @@ admin:
       label: Judul Atas
     text:
       label: Teks
+    theme:
+      label: Tema
+      options:
+        accent: Aksen
+        black: Hitam
+        dark: Gelap
+        light: Terang
+        white: Putih
     title:
       label: Judul
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Judul Halaman
     transcription:
       label: Transkripsi
+    ui:
+      label: UI
     url:
       hint: URL absolut (mis. https://www.example.com)
       label: URL

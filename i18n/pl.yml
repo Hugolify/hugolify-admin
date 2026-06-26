@@ -796,6 +796,14 @@ admin:
       label: Nadtytuł
     text:
       label: Tekst
+    theme:
+      label: Motyw
+      options:
+        accent: Akcent
+        black: Czarny
+        dark: Ciemny
+        light: Jasny
+        white: Biały
     title:
       label: Tytuł
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Tytuł strony
     transcription:
       label: Transkrypcja
+    ui:
+      label: UI
     url:
       hint: Bezwzględny adres URL (np. https://www.example.com)
       label: URL

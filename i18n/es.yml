@@ -796,6 +796,14 @@ admin:
       label: Sobretítulo
     text:
       label: Texto
+    theme:
+      label: Tema
+      options:
+        accent: Acento
+        black: Negro
+        dark: Oscuro
+        light: Claro
+        white: Blanco
     title:
       label: Título
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Título de la página
     transcription:
       label: Transcripción
+    ui:
+      label: UI
     url:
       hint: URL absoluta (p. ej. https://www.example.com)
       label: URL

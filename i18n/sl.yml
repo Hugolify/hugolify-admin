@@ -796,6 +796,14 @@ admin:
       label: Nadnaslov
     text:
       label: Besedilo
+    theme:
+      label: Tema
+      options:
+        accent: Poudarek
+        black: Črna
+        dark: Temna
+        light: Svetla
+        white: Bela
     title:
       label: Naslov
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Naslov strani
     transcription:
       label: Prepis
+    ui:
+      label: UI
     url:
       hint: Absolutni URL (npr. https://www.example.com)
       label: URL

@@ -796,6 +796,14 @@ admin:
       label: 上标题
     text:
       label: 文本
+    theme:
+      label: 主题
+      options:
+        accent: 强调色
+        black: 黑色
+        dark: 深色
+        light: 浅色
+        white: 白色
     title:
       label: 标题
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: 页面标题
     transcription:
       label: 转录
+    ui:
+      label: UI
     url:
       hint: 绝对URL（例如 https://www.example.com）
       label: URL

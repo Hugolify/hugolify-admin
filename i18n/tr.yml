@@ -796,6 +796,14 @@ admin:
       label: Üst başlık
     text:
       label: Metin
+    theme:
+      label: Tema
+      options:
+        accent: Vurgu
+        black: Siyah
+        dark: Koyu
+        light: Açık
+        white: Beyaz
     title:
       label: Başlık
     title_page:
@@ -805,6 +813,8 @@ admin:
       label: Sayfa başlığı
     transcription:
       label: Transkripsiyon
+    ui:
+      label: UI
     url:
       hint: Mutlak URL (örn. https://www.example.com)
       label: URL
