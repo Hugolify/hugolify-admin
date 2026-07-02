@@ -1,4 +1,4 @@
-// Hugolify theme core v2 required
+{{/* HUGOLIFY THEME v2 REQUIRED */}}
 {{- $fields := partial "admin/func/GetFields.html" (dict "field" . "fields" .) -}}
 
 {{- $args := dict
