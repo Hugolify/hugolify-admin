@@ -10,8 +10,9 @@
   {{- $name = dict "name" $nameOverride "nameOverride" "layout" }}
 {{- end }}
 
-{{- $args := dict 
+{{- $args := dict
   "label" (i18n "admin.fields.layout.label")
+  "hint" (i18n "admin.fields.layout.hint")
   "options" $options
   -}}
 

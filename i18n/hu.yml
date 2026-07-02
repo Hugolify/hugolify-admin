@@ -670,6 +670,9 @@ admin:
       sold: Eladási ár
     quote:
       label: Idézet
+    ratio:
+      hint: A média képaránya (1 = négyzet)
+      label: Képarány
     realestates_energies:
       label:
         one: Energia
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Átírás
     ui:
-      label: UI
+      label: Elrendezés és megjelenés
+      hint: Állítsa be a blokk elrendezését, rácsát, igazítását és témáját
     url:
       hint: Abszolút URL (pl. https://www.example.com)
       label: URL

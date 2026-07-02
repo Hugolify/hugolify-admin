@@ -4,13 +4,15 @@
 {{- $section := dict "section-hidden" $collection  -}} 
 {{- $relation := dict "relation" (dict "collection" $collection "name" "items" "multiple" true "required" true) -}} 
 {{- $layout := dict "layout" (slice "grid" "list") -}} 
+{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout -}} 
+{{- $ui := dict "ui" $uiFields -}}
+
 {{- $fields := slice 
   "heading"
   $section 
   $relation 
-  $layout
   "show_more"
-  "background" -}}
+  $ui -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" $block "fields" $fields) -}}
 

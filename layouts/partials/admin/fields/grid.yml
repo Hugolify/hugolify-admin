@@ -1,11 +1,10 @@
-{{- $options := slice "small" "medium" "large" "container" "full" }}
-{{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
+{{- $options := partial "admin/func/GetOptions.html" (dict "field" . "options" .) -}}
 
-{{- $args := dict 
+{{- $args := dict
   "label" (i18n "admin.fields.grid.label")
+  "hint" (i18n "admin.fields.grid.hint")
   "name" "grid"
-  "default" "large"
-  "required" true
+  "required" false
   "options" $options
   -}}
 

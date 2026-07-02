@@ -670,6 +670,9 @@ admin:
       sold: Verkoopprijs
     quote:
       label: Citaat
+    ratio:
+      hint: Beeldverhouding van de media (1 = vierkant)
+      label: Verhouding
     realestates_energies:
       label:
         one: Energie
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Transcriptie
     ui:
-      label: UI
+      label: Lay-out & weergave
+      hint: Stel de lay-out, het raster, de uitlijning en het thema van dit blok in
     url:
       hint: Absolute URL (bijv. https://www.example.com)
       label: URL

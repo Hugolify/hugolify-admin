@@ -1,0 +1,9 @@
+{{- $args := dict 
+  "label" (i18n "admin.fields.ratio.label")
+  "hint" (i18n "admin.fields.ratio.hint")
+  "name" "ratio"
+  "i18n" "duplicate"
+  "value_type" "float"
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

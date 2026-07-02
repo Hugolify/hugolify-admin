@@ -670,6 +670,9 @@ admin:
       sold: Försäljningspris
     quote:
       label: Citat
+    ratio:
+      hint: Mediets bildförhållande (1 = kvadrat)
+      label: Bildförhållande
     realestates_energies:
       label:
         one: Energi
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Transkription
     ui:
-      label: UI
+      label: Layout och utseende
+      hint: Ange layout, rutnät, justering och tema för det här blocket
     url:
       hint: Absolut URL (t.ex. https://www.example.com)
       label: URL

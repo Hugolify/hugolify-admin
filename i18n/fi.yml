@@ -666,6 +666,9 @@ admin:
       sold: Myyntihinta
     quote:
       label: Lainaus
+    ratio:
+      hint: Median kuvasuhde (1 = neliö)
+      label: Kuvasuhde
     realestates_energies:
       heating:
         label: Lämmitys
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Transkriptio
     ui:
-      label: UI
+      label: Asettelu ja ulkoasu
+      hint: Määritä tämän lohkon asettelu, ruudukko, tasaus ja teema
     url:
       hint: Absoluuttinen URL (esim. https://www.example.com)
       label: Verkko-osoite

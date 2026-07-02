@@ -670,6 +670,9 @@ admin:
       sold: 판매 가격
     quote:
       label: 인용
+    ratio:
+      hint: 미디어의 종횡비 (1 = 정사각형)
+      label: 비율
     realestates_energies:
       label:
         one: 에너지
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: 전사
     ui:
-      label: UI
+      label: 레이아웃 및 모양
+      hint: 이 블록의 레이아웃, 그리드, 정렬 및 테마를 설정합니다
     url:
       hint: '절대 URL (예: https://www.example.com)'
       label: URL

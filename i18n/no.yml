@@ -670,6 +670,9 @@ admin:
       sold: Salgspris
     quote:
       label: Sitat
+    ratio:
+      hint: Sideforhold for mediet (1 = kvadrat)
+      label: Forhold
     realestates_energies:
       label:
         one: Energi
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Transkripsjon
     ui:
-      label: UI
+      label: Layout og utseende
+      hint: Angi layout, rutenett, justering og tema for denne blokken
     url:
       hint: Absolutt URL (f.eks. https://www.example.com)
       label: URL

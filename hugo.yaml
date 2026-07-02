@@ -247,6 +247,26 @@ params:
         icon:
           material_icons: videocam
 
+    # Fields
+    fields:
+      grid:
+        options:
+          - container
+          - small
+          - medium
+          - large
+          - full
+      theme:
+        options:
+          - light
+          - dark
+          - accent
+      ui:
+        fields:
+          - theme
+          - grid
+          - offset
+
     # Shortcodes
     shortcodes:
       # Set shortcodes available to markdown editor, all shortcodes https://www.hugolify.io/docs/shortcodes/

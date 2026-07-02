@@ -1,8 +1,9 @@
-{{- $fields := slice "theme" "grid" "offset" "align" -}}
-{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+// Hugolify theme core v2 required
+{{- $fields := partial "admin/func/GetFields.html" (dict "field" . "fields" .) -}}
 
 {{- $args := dict
   "label" (i18n "admin.fields.ui.label")
+  "hint" (i18n "admin.fields.ui.hint")
   "name" "ui"
   "collapsed" true
   "fields" $fields

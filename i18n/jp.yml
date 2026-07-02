@@ -670,6 +670,9 @@ admin:
       sold: 販売価格
     quote:
       label: 引用
+    ratio:
+      hint: メディアの縦横比（1 = 正方形）
+      label: 比率
     realestates_energies:
       label:
         one: エネルギー
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: 文字起こし
     ui:
-      label: UI
+      label: レイアウトと外観
+      hint: このブロックのレイアウト、グリッド、配置、テーマを設定します
     url:
       hint: 絶対URL（例：https://www.example.com）
       label: URL

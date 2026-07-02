@@ -670,6 +670,9 @@ admin:
       sold: Precio de venta
     quote:
       label: Cita
+    ratio:
+      hint: Relación de aspecto del medio (1 = cuadrado)
+      label: Proporción
     realestates_energies:
       label:
         one: Energía
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Transcripción
     ui:
-      label: UI
+      label: Diseño y apariencia
+      hint: Define el diseño, la cuadrícula, la alineación y el tema de este bloque
     url:
       hint: URL absoluta (p. ej. https://www.example.com)
       label: URL

@@ -1,7 +1,7 @@
-{{- $fields := slice 
-  "price" 
-  "discount" 
-  "hide_price" 
+{{- $fields := slice
+  "price"
+  "discount"
+  "hide_price"
   "text" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 

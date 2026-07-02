@@ -670,6 +670,9 @@ admin:
       sold: Harga Jual
     quote:
       label: Kutipan
+    ratio:
+      hint: Rasio aspek media (1 = persegi)
+      label: Rasio
     realestates_energies:
       label:
         one: Energi
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Transkripsi
     ui:
-      label: UI
+      label: Tata letak & tampilan
+      hint: Atur tata letak, grid, perataan, dan tema blok ini
     url:
       hint: URL absolut (mis. https://www.example.com)
       label: URL

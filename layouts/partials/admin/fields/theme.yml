@@ -1,5 +1,4 @@
-{{- $options := slice "white" "light" "dark" "black" "accent" -}}
-{{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
+{{- $options := partial "admin/func/GetOptions.html" (dict "field" . "options" .) -}}
 
 {{- $args := dict
   "label" (i18n "admin.fields.theme.label")

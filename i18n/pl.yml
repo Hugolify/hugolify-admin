@@ -670,6 +670,9 @@ admin:
       sold: Cena sprzedaży
     quote:
       label: Cytat
+    ratio:
+      hint: Proporcje medium (1 = kwadrat)
+      label: Proporcje
     realestates_energies:
       label:
         one: Energia
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Transkrypcja
     ui:
-      label: UI
+      label: Układ i wygląd
+      hint: Ustaw układ, siatkę, wyrównanie i motyw tego bloku
     url:
       hint: Bezwzględny adres URL (np. https://www.example.com)
       label: URL

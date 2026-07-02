@@ -276,6 +276,7 @@ admin:
       zipcode:
         label: Code postal
     align:
+      hint: Alignement du texte
       label: Alignement
       options:
         center: Center
@@ -512,6 +513,7 @@ admin:
     gallery:
       label: Galerie
     grid:
+      hint: Taille horizontale (hors mobile)
       label: Grid
       options:
         container: Container
@@ -598,6 +600,7 @@ admin:
     lastname:
       label: Nom
     layout:
+      hint: Type d’affichage (liste, carrousel, grille)
       label: Affichage
       options:
         carousel: Carrousel
@@ -640,6 +643,7 @@ admin:
         one: Offre
         other: Offres
     offset:
+      hint: Position horizontale (hors mobile)
       label: Offset
       options:
         center: Center
@@ -669,6 +673,9 @@ admin:
       sold: Prix vendu
     quote:
       label: Citation
+    ratio:
+      hint: Ratio d’affichage du média (1 = carré)
+      label: Ratio
     realestates_energies:
       label:
         one: Energie
@@ -821,7 +828,8 @@ admin:
     transcription:
       label: Transcription
     ui:
-      label: UI
+      label: Mise en page et apparence
+      hint: Définissez la mise en page, la grille, l’alignement et le thème de ce bloc
     url:
       hint: 'URL absolue (ex : https://www.example.com)'
       label: URL

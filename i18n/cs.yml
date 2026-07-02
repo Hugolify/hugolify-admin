@@ -670,6 +670,9 @@ admin:
       sold: Prodejní cena
     quote:
       label: Citát
+    ratio:
+      hint: Poměr stran média (1 = čtverec)
+      label: Poměr stran
     realestates_energies:
       label:
         one: Energie
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Přepis
     ui:
-      label: UI
+      label: Rozvržení a vzhled
+      hint: Nastavte rozvržení, mřížku, zarovnání a téma tohoto bloku
     url:
       hint: Absolutní URL (např. https://www.example.com)
       label: URL

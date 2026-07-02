@@ -670,6 +670,9 @@ admin:
       sold: Продажна цена
     quote:
       label: Цитат
+    ratio:
+      hint: Съотношение на страните на медията (1 = квадрат)
+      label: Съотношение
     realestates_energies:
       label:
         one: Енергия
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Транскрипция
     ui:
-      label: UI
+      label: Оформление и облик
+      hint: Задайте оформлението, мрежата, подравняването и темата на този блок
     url:
       hint: Абсолютен URL (напр. https://www.example.com)
       label: URL

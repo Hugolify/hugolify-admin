@@ -1,8 +1,10 @@
+{{- $uiFields := site.Params.admin.fields.ui.fields | append "column" "ratio" -}} 
+{{- $ui := dict "ui" $uiFields -}}
+
 {{- $fields := slice 
   "heading" 
-  "column" 
   "gallery" 
-  "background" -}}
+  $ui -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
 

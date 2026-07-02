@@ -670,6 +670,9 @@ admin:
       sold: बिक्री मूल्य
     quote:
       label: उद्धरण
+    ratio:
+      hint: मीडिया का पहलू अनुपात (1 = वर्ग)
+      label: अनुपात
     realestates_energies:
       label:
         one: ऊर्जा
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: प्रतिलेखन
     ui:
-      label: UI
+      label: लेआउट और रूप
+      hint: इस ब्लॉक का लेआउट, ग्रिड, संरेखण और थीम सेट करें
     url:
       hint: पूर्ण URL (उदा. https://www.example.com)
       label: URL

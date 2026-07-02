@@ -1,10 +1,12 @@
-{{- $subfields := slice "title" "text" "badge" "offer" "arguments" "is_highlighted" "cta" -}} 
-{{- $items := dict "items" (dict "name" "comparison" "fields" $subfields) -}}
+{{- $itemsFields := slice "title" "text" "badge" "offer" "arguments" "is_highlighted" "cta" -}} 
+{{- $items := dict "items" (dict "name" "comparison" "fields" $itemsFields) -}}
+{{- $uiFields := site.Params.admin.fields.ui.fields | append "column" -}} 
+{{- $ui := dict "ui" $uiFields -}}
+
 {{- $fields := slice 
   "heading" 
-  "column" 
   $items 
-  "background" -}}
+  $ui -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
 

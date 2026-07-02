@@ -670,6 +670,9 @@ admin:
       sold: Satış fiyatı
     quote:
       label: Alıntı
+    ratio:
+      hint: Medyanın en boy oranı (1 = kare)
+      label: Oran
     realestates_energies:
       label:
         one: Enerji
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Transkripsiyon
     ui:
-      label: UI
+      label: Düzen ve görünüm
+      hint: Bu bloğun düzenini, ızgarasını, hizalamasını ve temasını ayarlayın
     url:
       hint: Mutlak URL (örn. https://www.example.com)
       label: URL

@@ -1,8 +1,9 @@
 {{- $options := slice "start" "center" "end" -}}
 {{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
-{{- $args := dict 
+{{- $args := dict
   "label" (i18n "admin.fields.align.label")
+  "hint" (i18n "admin.fields.align.hint")
   "name" "align"
   "options" $options
   -}}

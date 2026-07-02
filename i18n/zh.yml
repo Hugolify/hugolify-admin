@@ -670,6 +670,9 @@ admin:
       sold: 销售价格
     quote:
       label: 引用
+    ratio:
+      hint: 媒体的宽高比（1 = 正方形）
+      label: 比例
     realestates_energies:
       label:
         one: 能源
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: 转录
     ui:
-      label: UI
+      label: 布局与外观
+      hint: 设置此区块的布局、网格、对齐方式和主题
     url:
       hint: 绝对URL（例如 https://www.example.com）
       label: URL

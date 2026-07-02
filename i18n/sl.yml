@@ -670,6 +670,9 @@ admin:
       sold: Prodajna cena
     quote:
       label: Citat
+    ratio:
+      hint: Razmerje stranic medija (1 = kvadrat)
+      label: Razmerje
     realestates_energies:
       label:
         one: Energija
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Prepis
     ui:
-      label: UI
+      label: Postavitev in videz
+      hint: Nastavite postavitev, mrežo, poravnavo in temo tega bloka
     url:
       hint: Absolutni URL (npr. https://www.example.com)
       label: URL

@@ -670,6 +670,9 @@ admin:
       sold: Verkaufspreis
     quote:
       label: Zitat
+    ratio:
+      hint: Seitenverhältnis des Mediums (1 = quadratisch)
+      label: Seitenverhältnis
     realestates_energies:
       label:
         one: Energie
@@ -814,7 +817,8 @@ admin:
     transcription:
       label: Transkription
     ui:
-      label: UI
+      label: Layout & Darstellung
+      hint: Layout, Raster, Ausrichtung und Thema dieses Blocks festlegen
     url:
       hint: Absolute URL (z.B. https://www.example.com)
       label: URL
