@@ -1,4 +1,4 @@
-{{- $options := slice "white" "light" "dark" "black" "accent" -}}
+{{- $options := slice "light" "dark" -}}
 {{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
 {{- $args := dict

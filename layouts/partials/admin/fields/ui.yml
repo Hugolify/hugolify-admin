@@ -1,4 +1,4 @@
-{{- $fields := slice "theme" "grid" "offset" "align" -}}
+{{- $fields := slice "theme" "grid" "offset" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 
 {{- $args := dict
