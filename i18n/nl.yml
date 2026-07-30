@@ -870,6 +870,14 @@ admin:
     banner: Informatiebanner bovenaan de site
     footer: Informatietekst onderaan de site
     nav:
+      footer:
+        primary: "Voettekst – Primaire navigatie"
+        secondary: "Voettekst – Secundaire navigatie"
+        tertiary: "Voettekst – Tertiaire navigatie"
+      header:
+        primary: "Koptekst – Primaire navigatie"
+        secondary: "Koptekst – Secundaire navigatie"
+        tertiary: "Koptekst – Tertiaire navigatie"
       label: Navigatie
       legal: Juridische navigatie (vermeldingen, beleid…)
       primary: Primaire navigatie

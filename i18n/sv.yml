@@ -870,6 +870,14 @@ admin:
     banner: Informationsbanner högst upp på webbplatsen
     footer: Informationstext längst ner på webbplatsen
     nav:
+      footer:
+        primary: "Sidfot – Primär navigering"
+        secondary: "Sidfot – Sekundär navigering"
+        tertiary: "Sidfot – Tertiär navigering"
+      header:
+        primary: "Sidhuvud – Primär navigering"
+        secondary: "Sidhuvud – Sekundär navigering"
+        tertiary: "Sidhuvud – Tertiär navigering"
       label: Navigering
       legal: Juridisk navigering (omnämnanden, policy…)
       primary: Primär navigering

@@ -881,13 +881,21 @@ admin:
     banner: Bannière d’information en haut du site
     footer: Texte d’information en bas du site
     nav:
+      footer:
+        primary: "Footer – Navigation principale"
+        secondary: "Footer – Navigation secondaire"
+        tertiary: "Footer – Navigation tertiaire"
+      header:
+        primary: "Header – Navigation principale"
+        secondary: "Header – Navigation secondaire"
+        tertiary: "Header – Navigation tertiaire"
       label: Navigation
       legal: Navigation légales (mentions, politiques…)
       primary: Navigation principale
       secondary: Navigation secondaire
       social: Navigation réseaux sociaux
     seo:
-      label: Référencement - SEO (Search Engine Optimization) global
+      label: Référencement – SEO (Search Engine Optimization) global
       title: Nom du site
   group:
     year: Année

@@ -870,6 +870,14 @@ admin:
     banner: Informacijski pasica na vrhu strani
     footer: Informacijsko besedilo na dnu strani
     nav:
+      footer:
+        primary: "Noga – Primarna navigacija"
+        secondary: "Noga – Sekundarna navigacija"
+        tertiary: "Noga – Terciarna navigacija"
+      header:
+        primary: "Glava – Primarna navigacija"
+        secondary: "Glava – Sekundarna navigacija"
+        tertiary: "Glava – Terciarna navigacija"
       label: Navigacija
       legal: Pravna navigacija (omembe, politika…)
       primary: Primarna navigacija

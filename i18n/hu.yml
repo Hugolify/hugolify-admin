@@ -870,6 +870,14 @@ admin:
     banner: Információs banner az oldal tetején
     footer: Információs szöveg az oldal alján
     nav:
+      footer:
+        primary: "Lábléc – Elsődleges navigáció"
+        secondary: "Lábléc – Másodlagos navigáció"
+        tertiary: "Lábléc – Harmadlagos navigáció"
+      header:
+        primary: "Fejléc – Elsődleges navigáció"
+        secondary: "Fejléc – Másodlagos navigáció"
+        tertiary: "Fejléc – Harmadlagos navigáció"
       label: Navigáció
       legal: Jogi navigáció (említések, irányelvek…)
       primary: Elsődleges navigáció

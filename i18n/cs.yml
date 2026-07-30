@@ -870,6 +870,14 @@ admin:
     banner: Informační banner v horní části webu
     footer: Informační text v dolní části webu
     nav:
+      footer:
+        primary: "Zápatí – Primární navigace"
+        secondary: "Zápatí – Sekundární navigace"
+        tertiary: "Zápatí – Terciární navigace"
+      header:
+        primary: "Záhlaví – Primární navigace"
+        secondary: "Záhlaví – Sekundární navigace"
+        tertiary: "Záhlaví – Terciární navigace"
       label: Navigace
       legal: Právní navigace (zmínky, zásady…)
       primary: Primární navigace

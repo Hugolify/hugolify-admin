@@ -870,6 +870,14 @@ admin:
     banner: Tietopalkki sivuston yläosassa
     footer: Tietopalkki sivuston alaosassa
     nav:
+      footer:
+        primary: "Alatunniste – Ensisijainen navigaatio"
+        secondary: "Alatunniste – Toissijainen navigaatio"
+        tertiary: "Alatunniste – Kolmannen tason navigaatio"
+      header:
+        primary: "Ylätunniste – Ensisijainen navigaatio"
+        secondary: "Ylätunniste – Toissijainen navigaatio"
+        tertiary: "Ylätunniste – Kolmannen tason navigaatio"
       label: Navigaatio
       legal: Lainsäädännöllinen navigointi (maininnat, politiikka...)
       primary: Ensisijainen navigaatio

@@ -870,6 +870,14 @@ admin:
     banner: Informasjonsbanner øverst på siden
     footer: Informasjonstekst nederst på siden
     nav:
+      footer:
+        primary: "Bunntekst – Primærnavigasjon"
+        secondary: "Bunntekst – Sekundærnavigasjon"
+        tertiary: "Bunntekst – Tertiærnavigasjon"
+      header:
+        primary: "Topptekst – Primærnavigasjon"
+        secondary: "Topptekst – Sekundærnavigasjon"
+        tertiary: "Topptekst – Tertiærnavigasjon"
       label: Navigasjon
       legal: Juridisk navigasjon (omtaler, retningslinjer…)
       primary: Primærnavigasjon

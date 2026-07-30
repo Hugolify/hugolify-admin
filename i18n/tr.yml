@@ -870,6 +870,14 @@ admin:
     banner: Sitenin üst kısmındaki bilgi afişi
     footer: Sitenin alt kısmındaki bilgi metni
     nav:
+      footer:
+        primary: "Alt bilgi – Birincil navigasyon"
+        secondary: "Alt bilgi – İkincil navigasyon"
+        tertiary: "Alt bilgi – Üçüncül navigasyon"
+      header:
+        primary: "Üst bilgi – Birincil navigasyon"
+        secondary: "Üst bilgi – İkincil navigasyon"
+        tertiary: "Üst bilgi – Üçüncül navigasyon"
       label: Navigasyon
       legal: Yasal navigasyon (bahsetmeler, politika…)
       primary: Birincil navigasyon

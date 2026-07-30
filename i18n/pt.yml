@@ -870,6 +870,14 @@ admin:
     banner: Banner de informações no topo do site
     footer: Texto de informações no rodapé do site
     nav:
+      footer:
+        primary: "Rodapé – Navegação primária"
+        secondary: "Rodapé – Navegação secundária"
+        tertiary: "Rodapé – Navegação terciária"
+      header:
+        primary: "Cabeçalho – Navegação primária"
+        secondary: "Cabeçalho – Navegação secundária"
+        tertiary: "Cabeçalho – Navegação terciária"
       label: Navegação
       legal: Navegação legal (menções, política…)
       primary: Navegação primária

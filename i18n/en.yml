@@ -883,6 +883,14 @@ admin:
     banner: Information banner at the top of the site
     footer: Information text at the bottom of the site
     nav:
+      footer:
+        primary: "Footer – Primary navigation"
+        secondary: "Footer – Secondary navigation"
+        tertiary: "Footer – Tertiary navigation"
+      header:
+        primary: "Header – Primary navigation"
+        secondary: "Header – Secondary navigation"
+        tertiary: "Header – Tertiary navigation"
       label: Navigation
       legal: Legals navigation (mentions, policy…)
       primary: Primary navigation

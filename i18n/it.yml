@@ -870,6 +870,14 @@ admin:
     banner: Banner informativo nella parte superiore del sito
     footer: Testo informativo nella parte inferiore del sito
     nav:
+      footer:
+        primary: "Piè di pagina – Navigazione primaria"
+        secondary: "Piè di pagina – Navigazione secondaria"
+        tertiary: "Piè di pagina – Navigazione terziaria"
+      header:
+        primary: "Intestazione – Navigazione primaria"
+        secondary: "Intestazione – Navigazione secondaria"
+        tertiary: "Intestazione – Navigazione terziaria"
       label: Navigazione
       legal: Navigazione legale (note legali, privacy…)
       primary: Navigazione primaria

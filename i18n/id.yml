@@ -870,6 +870,14 @@ admin:
     banner: Spanduk informasi di bagian atas situs
     footer: Teks informasi di bagian bawah situs
     nav:
+      footer:
+        primary: "Footer – Navigasi Utama"
+        secondary: "Footer – Navigasi Sekunder"
+        tertiary: "Footer – Navigasi Tersier"
+      header:
+        primary: "Header – Navigasi Utama"
+        secondary: "Header – Navigasi Sekunder"
+        tertiary: "Header – Navigasi Tersier"
       label: Navigasi
       legal: Navigasi hukum (sebutan, kebijakan…)
       primary: Navigasi Utama

@@ -870,6 +870,14 @@ admin:
     banner: 사이트 상단의 정보 배너
     footer: 사이트 하단의 정보 텍스트
     nav:
+      footer:
+        primary: "푸터 – 기본 내비게이션"
+        secondary: "푸터 – 보조 내비게이션"
+        tertiary: "푸터 – 3차 내비게이션"
+      header:
+        primary: "헤더 – 기본 내비게이션"
+        secondary: "헤더 – 보조 내비게이션"
+        tertiary: "헤더 – 3차 내비게이션"
       label: 내비게이션
       legal: 법적 내비게이션 (약관, 정책…)
       primary: 기본 내비게이션

@@ -870,6 +870,14 @@ admin:
     banner: Baner informacyjny u góry strony
     footer: Tekst informacyjny u dołu strony
     nav:
+      footer:
+        primary: "Stopka – Nawigacja główna"
+        secondary: "Stopka – Nawigacja drugorzędna"
+        tertiary: "Stopka – Nawigacja trzeciorzędna"
+      header:
+        primary: "Nagłówek – Nawigacja główna"
+        secondary: "Nagłówek – Nawigacja drugorzędna"
+        tertiary: "Nagłówek – Nawigacja trzeciorzędna"
       label: Nawigacja
       legal: Nawigacja prawna (wzmianki, polityka…)
       primary: Nawigacja główna

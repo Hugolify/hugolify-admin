@@ -870,6 +870,14 @@ admin:
     banner: 网站顶部的信息横幅
     footer: 网站底部的信息文本
     nav:
+      footer:
+        primary: "页脚 – 主导航"
+        secondary: "页脚 – 次导航"
+        tertiary: "页脚 – 三级导航"
+      header:
+        primary: "页眉 – 主导航"
+        secondary: "页眉 – 次导航"
+        tertiary: "页眉 – 三级导航"
       label: 导航
       legal: 法律导航(声明、政策…)
       primary: 主导航

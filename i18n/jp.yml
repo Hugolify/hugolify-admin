@@ -870,6 +870,14 @@ admin:
     banner: サイト上部の情報バナー
     footer: サイト下部の情報テキスト
     nav:
+      footer:
+        primary: "フッター – プライマリナビゲーション"
+        secondary: "フッター – セカンダリナビゲーション"
+        tertiary: "フッター – 第3ナビゲーション"
+      header:
+        primary: "ヘッダー – プライマリナビゲーション"
+        secondary: "ヘッダー – セカンダリナビゲーション"
+        tertiary: "ヘッダー – 第3ナビゲーション"
       label: ナビゲーション
       legal: 法的ナビゲーション（利用規約、プライバシー…）
       primary: プライマリナビゲーション
