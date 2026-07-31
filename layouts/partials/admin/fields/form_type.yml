@@ -3,7 +3,7 @@
   {{- $name = dict "name" "form_type" "nameOverride" "type" }}
 {{- end }}
 
-{{- $options := slice "email" "checkbox" "radio" "select" "tel" "text" "textarea" -}}
+{{- $options := slice "checkbox" "email" "file" "radio" "select" "tel" "text" "textarea" -}}
 {{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
 {{- $args := dict 
