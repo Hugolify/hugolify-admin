@@ -8,7 +8,7 @@
   {{ partial "admin/collections/config/create.yml" . }}
   {{ partial "admin/collections/config/preview.yml" . }}
   {{ partial "admin/collections/config/path.yml" "{{slug}}" }}
-  {{ partial "admin/collections/config/slug.yml" . }}
+  {{ partial "admin/collections/config/slug.yml" "{{slug}}" }}
 
   {{ partial "admin/collections/types/_default.yml" . }}
 }
