@@ -333,7 +333,7 @@ admin:
         hint: Positionner le slide actif au centre ?
         label: Focus
       gap:
-        hint: L’écart entre les slides. Exprimé en rem.
+        hint: L’écart entre les slides. Exprimé en rem de préférence.
         label: Gap
       hint: Seulement pour un affichage en carrousel
       interval:
@@ -341,7 +341,7 @@ admin:
         label: Interval
       label: Configuration carrousel
       padding:
-        hint: Padding left/right of the carousel. In rem value
+        hint: Marge gauche/droite du carrousel. Exprimé en rem de préférence.
         label: Padding
       pagination:
         label: Pagination

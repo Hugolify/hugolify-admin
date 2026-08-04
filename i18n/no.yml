@@ -334,7 +334,7 @@ admin:
         hint: Plasser aktivt lysbilde i sentrum?
         label: Fokus
       gap:
-        hint: Avstanden mellom lysbilder. Uttrykt i rem.
+        hint: Avstanden mellom lysbilder. Fortrinnsvis uttrykt i rem.
         label: Avstand
       hint: Kun for karusellvisning
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Intervall
       label: Karusellkonfigurasjon
       padding:
-        hint: Polstring venstre/høyre for karusellen. I rem-verdi
+        hint: Polstring venstre/høyre for karusellen. Fortrinnsvis i rem-verdi
         label: Polstring
       pagination:
         label: Paginering

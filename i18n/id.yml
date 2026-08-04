@@ -334,7 +334,7 @@ admin:
         hint: Posisikan slide aktif di tengah?
         label: Fokus
       gap:
-        hint: Celah antara slide. Dinyatakan dalam rem.
+        hint: Celah antara slide. Sebaiknya dinyatakan dalam rem.
         label: Celah
       hint: Hanya untuk tampilan korsel
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Interval
       label: Konfigurasi Korsel
       padding:
-        hint: Padding kiri/kanan korsel. Dalam nilai rem
+        hint: Padding kiri/kanan korsel. Sebaiknya dalam nilai rem
         label: Padding
       pagination:
         label: Paginasi

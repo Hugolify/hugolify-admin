@@ -334,7 +334,7 @@ admin:
         hint: Aktif slaytı ortada konumlandır?
         label: Odak
       gap:
-        hint: Slaytlar arasındaki boşluk. Rem cinsinden ifade edilir.
+        hint: Slaytlar arasındaki boşluk. Tercihen rem cinsinden ifade edilir.
         label: Boşluk
       hint: Sadece karusel görünümü için
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Aralık
       label: Karusel yapılandırması
       padding:
-        hint: Karuselin sol/sağ dolgusu. Rem değeri
+        hint: Karuselin sol/sağ dolgusu. Tercihen rem değeri
         label: Dolgu
       pagination:
         label: Sayfalandırma

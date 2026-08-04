@@ -334,7 +334,7 @@ admin:
         hint: Aktív dia középre helyezése?
         label: Fókusz
       gap:
-        hint: A diák közötti rés. Rem-ben kifejezve.
+        hint: A diák közötti rés. Lehetőleg rem-ben kifejezve.
         label: Rés
       hint: Csak karusszel megjelenítéshez
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Intervallum
       label: Karusszel konfiguráció
       padding:
-        hint: A karusszel bal/jobb oldali kitöltése. Rem értékben
+        hint: A karusszel bal/jobb oldali kitöltése. Lehetőleg rem értékben
         label: Kitöltés
       pagination:
         label: Lapozás

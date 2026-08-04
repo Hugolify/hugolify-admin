@@ -334,7 +334,7 @@ admin:
         hint: Posicionar slide ativo no centro?
         label: Foco
       gap:
-        hint: O espaço entre os slides. Expresso em rem.
+        hint: O espaço entre os slides. Preferencialmente expresso em rem.
         label: Espaçamento
       hint: Apenas para exibição em carrossel
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Intervalo
       label: Configuração do carrossel
       padding:
-        hint: Preenchimento esquerda/direita do carrossel. Em valor rem
+        hint: Preenchimento esquerda/direita do carrossel. Preferencialmente em valor rem
         label: Preenchimento
       pagination:
         label: Paginação

@@ -334,7 +334,7 @@ admin:
         hint: Umístit aktivní snímek na střed?
         label: Zaměření
       gap:
-        hint: Mezera mezi snímky. Vyjádřeno v rem.
+        hint: Mezera mezi snímky. Vyjádřeno nejlépe v rem.
         label: Mezera
       hint: Pouze pro zobrazení karuselu
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Interval
       label: Konfigurace karuselu
       padding:
-        hint: Odsazení vlevo/vpravo od karuselu. V hodnotě rem
+        hint: Odsazení vlevo/vpravo od karuselu. Nejlépe v hodnotě rem
         label: Odsazení
       pagination:
         label: Stránkování

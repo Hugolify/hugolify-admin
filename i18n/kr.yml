@@ -334,7 +334,7 @@ admin:
         hint: 활성 슬라이드를 중앙에 배치하시겠습니까?
         label: 포커스
       gap:
-        hint: 슬라이드 간 간격. rem으로 표현됩니다.
+        hint: 슬라이드 간 간격. 가급적 rem으로 표현합니다.
         label: 간격
       hint: 캐러셀 표시 전용
       interval:
@@ -342,7 +342,7 @@ admin:
         label: 간격
       label: 캐러셀 설정
       padding:
-        hint: 캐러셀의 왼쪽/오른쪽 패딩. rem 값
+        hint: 캐러셀의 왼쪽/오른쪽 패딩. 가급적 rem 값
         label: 패딩
       pagination:
         label: 페이지네이션

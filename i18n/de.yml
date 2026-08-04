@@ -334,7 +334,7 @@ admin:
         hint: Aktive Folie in der Mitte positionieren?
         label: Fokus
       gap:
-        hint: Der Abstand zwischen den Folien. Ausgedrückt in rem.
+        hint: Der Abstand zwischen den Folien. Vorzugsweise in rem ausgedrückt.
         label: Abstand
       hint: Nur für Karussell-Anzeige
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Intervall
       label: Karussell-Konfiguration
       padding:
-        hint: Padding links/rechts des Karussells. In rem-Wert
+        hint: Padding links/rechts des Karussells. Vorzugsweise in rem-Wert
         label: Padding
       pagination:
         label: Paginierung

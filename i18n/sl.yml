@@ -334,7 +334,7 @@ admin:
         hint: Postaviti aktivni diapozitiv na sredino?
         label: Fokus
       gap:
-        hint: Razmik med diapozitivi. Izraženo v rem.
+        hint: Razmik med diapozitivi. Po možnosti izraženo v rem.
         label: Razmik
       hint: Samo za prikaz vrtiljaka
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Interval
       label: Konfiguracija vrtiljaka
       padding:
-        hint: Polnjenje levo/desno vrtiljaka. V vrednosti rem
+        hint: Polnjenje levo/desno vrtiljaka. Po možnosti v vrednosti rem
         label: Polnjenje
       pagination:
         label: Paginacija

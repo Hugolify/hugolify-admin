@@ -334,7 +334,7 @@ admin:
         hint: ¿Posicionar la diapositiva activa en el centro?
         label: Enfoque
       gap:
-        hint: El espacio entre diapositivas. Expresado en rem.
+        hint: El espacio entre diapositivas. Expresado preferiblemente en rem.
         label: Espacio
       hint: Solo para visualización en carrusel
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Intervalo
       label: Configuración del carrusel
       padding:
-        hint: Relleno izquierdo/derecho del carrusel. En valor rem
+        hint: Relleno izquierdo/derecho del carrusel. Preferiblemente en valor rem
         label: Relleno
       pagination:
         label: Paginación

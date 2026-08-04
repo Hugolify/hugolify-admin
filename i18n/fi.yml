@@ -334,7 +334,7 @@ admin:
         hint: Keskitä aktiivinen kuva
         label: Fokus
       gap:
-        hint: Kuvien väli. Ilmoita rem-yksikössä
+        hint: Kuvien väli. Ilmoita mieluiten rem-yksikössä
         label: Väli
       hint: Vain kuvakarusellille
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Aikaväli
       label: Kuvakarusellin asetukset
       padding:
-        hint: Kuvakarusellin vasen/oikea sisennys. Ilmoita rem-yksikössä
+        hint: Kuvakarusellin vasen/oikea sisennys. Ilmoita mieluiten rem-yksikössä
         label: Sisennys
       pagination:
         label: Sivutus

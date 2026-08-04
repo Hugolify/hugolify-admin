@@ -334,7 +334,7 @@ admin:
         hint: Umieścić aktywny slajd na środku?
         label: Fokus
       gap:
-        hint: Odstęp między slajdami. Wyrażony w rem.
+        hint: Odstęp między slajdami. Najlepiej wyrażony w rem.
         label: Odstęp
       hint: Tylko dla wyświetlania karuzeli
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Interwał
       label: Konfiguracja karuzeli
       padding:
-        hint: Wypełnienie lewo/prawo karuzeli. W wartości rem
+        hint: Wypełnienie lewo/prawo karuzeli. Najlepiej w wartości rem
         label: Wypełnienie
       pagination:
         label: Paginacja

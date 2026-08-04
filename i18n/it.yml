@@ -334,7 +334,7 @@ admin:
         hint: Posizionare la diapositiva attiva al centro?
         label: Focus
       gap:
-        hint: Lo spazio tra le diapositive. Espresso in rem.
+        hint: Lo spazio tra le diapositive. Preferibilmente espresso in rem.
         label: Spazio
       hint: Solo per visualizzazione a carosello
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Intervallo
       label: Configurazione carosello
       padding:
-        hint: Padding sinistro/destro del carosello. In valore rem
+        hint: Padding sinistro/destro del carosello. Preferibilmente in valore rem
         label: Padding
       pagination:
         label: Paginazione

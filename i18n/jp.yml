@@ -334,7 +334,7 @@ admin:
         hint: アクティブなスライドを中央に配置しますか?
         label: フォーカス
       gap:
-        hint: スライド間の間隔。remで表現されます。
+        hint: スライド間の間隔。できればremで指定してください。
         label: 間隔
       hint: カルーセル表示のみ
       interval:
@@ -342,7 +342,7 @@ admin:
         label: インターバル
       label: カルーセル設定
       padding:
-        hint: カルーセルの左右のパディング。rem値
+        hint: カルーセルの左右のパディング。できればrem値で
         label: パディング
       pagination:
         label: ページネーション

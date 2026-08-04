@@ -334,7 +334,7 @@ admin:
         hint: 将活动幻灯片定位在中心?
         label: 焦点
       gap:
-        hint: 幻灯片之间的间隙。以rem表示。
+        hint: 幻灯片之间的间隙。最好以rem表示。
         label: 间隙
       hint: 仅用于轮播显示
       interval:
@@ -342,7 +342,7 @@ admin:
         label: 间隔
       label: 轮播配置
       padding:
-        hint: 轮播的左/右填充。以rem值表示
+        hint: 轮播的左/右填充。最好以rem值表示
         label: 填充
       pagination:
         label: 分页

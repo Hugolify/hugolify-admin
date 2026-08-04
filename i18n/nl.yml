@@ -334,7 +334,7 @@ admin:
         hint: Actieve dia in het midden positioneren?
         label: Focus
       gap:
-        hint: De ruimte tussen dia’s. Uitgedrukt in rem.
+        hint: De ruimte tussen dia’s. Bij voorkeur uitgedrukt in rem.
         label: Tussenruimte
       hint: Alleen voor carrouseldisplay
       interval:
@@ -342,7 +342,7 @@ admin:
         label: Interval
       label: Carrouselconfiguratie
       padding:
-        hint: Opvulling links/rechts van de carrousel. In rem-waarde
+        hint: Opvulling links/rechts van de carrousel. Bij voorkeur in rem-waarde
         label: Opvulling
       pagination:
         label: Paginering
