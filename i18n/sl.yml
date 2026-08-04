@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Vrednost
+    vertical_align:
+      hint: Navpična poravnava besedila
+      label: Navpična poravnava
+      options:
+        center: Sredina
+        end: Konec
+        start: Začetek
     video:
       embed:
         label: Vdelan video

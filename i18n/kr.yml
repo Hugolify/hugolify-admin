@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: 값
+    vertical_align:
+      hint: 텍스트의 수직 정렬
+      label: 수직 정렬
+      options:
+        center: 가운데
+        end: 끝
+        start: 시작
     video:
       embed:
         label: 임베드 비디오

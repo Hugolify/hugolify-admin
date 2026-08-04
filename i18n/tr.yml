@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Değer
+    vertical_align:
+      hint: Metnin dikey hizalaması
+      label: Dikey hizalama
+      options:
+        center: Orta
+        end: Son
+        start: Başlangıç
     video:
       embed:
         label: Gömülü video

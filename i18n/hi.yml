@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: मान
+    vertical_align:
+      hint: पाठ का लंबवत संरेखण
+      label: लंबवत संरेखण
+      options:
+        center: केंद्र
+        end: अंत
+        start: प्रारंभ
     video:
       embed:
         label: एम्बेड वीडियो

@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Wartość
+    vertical_align:
+      hint: Wyrównanie pionowe tekstu
+      label: Wyrównanie pionowe
+      options:
+        center: Środek
+        end: Koniec
+        start: Początek
     video:
       embed:
         label: Osadzone wideo

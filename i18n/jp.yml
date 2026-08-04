@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: 値
+    vertical_align:
+      hint: テキストの垂直方向の配置
+      label: 垂直方向の配置
+      options:
+        center: 中央
+        end: 終了
+        start: 開始
     video:
       embed:
         label: 埋め込み動画

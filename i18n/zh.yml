@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: 值
+    vertical_align:
+      hint: 文本的垂直对齐
+      label: 垂直对齐
+      options:
+        center: 居中
+        end: 结束
+        start: 开始
     video:
       embed:
         label: 嵌入视频

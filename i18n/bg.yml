@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Стойност
+    vertical_align:
+      hint: Вертикално подравняване на текста
+      label: Вертикално подравняване
+      options:
+        center: Център
+        end: Край
+        start: Начало
     video:
       embed:
         label: Вградено видео

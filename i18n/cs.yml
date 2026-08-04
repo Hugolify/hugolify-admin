@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Hodnota
+    vertical_align:
+      hint: Vertikální zarovnání textu
+      label: Vertikální zarovnání
+      options:
+        center: Střed
+        end: Konec
+        start: Začátek
     video:
       embed:
         label: Vložené video

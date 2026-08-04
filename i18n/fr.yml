@@ -834,7 +834,14 @@ admin:
       hint: 'URL absolue (ex : https://www.example.com)'
       label: URL
     value:
-      label: Valeur
+      label: valeur
+    vertical_align:
+      hint: Alignement vertical du texte
+      label: Alignement vertical
+      options:
+        center: Center
+        end: End
+        start: Start
     video:
       embed:
         label: Vidéo embed

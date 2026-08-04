@@ -824,6 +824,13 @@ admin:
       label: Verkko-osoite
     value:
       label: Arvo
+    vertical_align:
+      hint: Tekstin pystysuuntainen tasaus
+      label: Pystytasaus
+      options:
+        center: Keski
+        end: Loppu
+        start: Alku
     video:
       embed:
         label: Upotettu video

@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Verdi
+    vertical_align:
+      hint: Vertikal justering av teksten
+      label: Vertikal justering
+      options:
+        center: Midtstill
+        end: Slutt
+        start: Start
     video:
       embed:
         label: Innebygd video

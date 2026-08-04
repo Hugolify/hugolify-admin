@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Valor
+    vertical_align:
+      hint: Alinhamento vertical do texto
+      label: Alinhamento vertical
+      options:
+        center: Centro
+        end: Fim
+        start: Início
     video:
       embed:
         label: Vídeo embed

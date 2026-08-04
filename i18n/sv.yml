@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Värde
+    vertical_align:
+      hint: Vertikal justering av texten
+      label: Vertikal justering
+      options:
+        center: Centrera
+        end: Slut
+        start: Start
     video:
       embed:
         label: Inbäddad video

@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Érték
+    vertical_align:
+      hint: A szöveg függőleges igazítása
+      label: Függőleges igazítás
+      options:
+        center: Közép
+        end: Vége
+        start: Kezdés
     video:
       embed:
         label: Beágyazott videó

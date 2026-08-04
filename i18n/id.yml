@@ -824,6 +824,13 @@ admin:
       label: URL
     value:
       label: Nilai
+    vertical_align:
+      hint: Penjajaran vertikal teks
+      label: Penjajaran vertikal
+      options:
+        center: Tengah
+        end: Akhir
+        start: Awal
     video:
       embed:
         label: Video embed
