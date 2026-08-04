@@ -3,7 +3,7 @@
 
 {{- $section := dict "section-hidden" $collection  -}} 
 {{- $relation := dict "relation" (dict "collection" $collection "name" "items" "multiple" true "required" true) -}} 
-{{- $layout := dict "layout" (slice "grid" "list") -}} 
+{{- $layout := dict "layout" (slice "carousel" "grid" "list") -}} 
 {{- $uiFields := site.Params.admin.fields.ui.fields | append $layout -}} 
 {{- $ui := dict "ui" $uiFields -}}
 
@@ -12,7 +12,8 @@
   $section 
   $relation 
   "show_more"
-  $ui -}}
+  $ui
+  "carousel" -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" $block "fields" $fields) -}}
 
