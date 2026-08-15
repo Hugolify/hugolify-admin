@@ -1,4 +1,4 @@
-{{- $fields := slice "title" "text_area" "cta" -}}
+{{- $fields := slice "title" "text_area" "cta" "blocks" -}}
 {
   label: '{{ i18n "admin.files.footer" }}',
   name: 'footer',

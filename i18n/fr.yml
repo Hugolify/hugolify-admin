@@ -885,8 +885,8 @@ admin:
     zoom:
       label: Zoom
   files:
-    banner: Bannière d’information en haut du site
-    footer: Texte d’information en bas du site
+    banner: Header – Bannière d’information en haut du site
+    footer: Footer – Blocs et informations en bas du site
     nav:
       footer:
         primary: "Footer – Navigation principale"
