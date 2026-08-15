@@ -1,6 +1,4 @@
 {{- $notes := cond site.Params.admin.blocks.paragraph.notes "notes" false -}}
-{{- $uiFields := site.Params.admin.fields.ui.fields | append "align" -}} 
-{{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 
   "surtitle" 
@@ -8,7 +6,7 @@
   "text_markdown" 
   $notes 
   "ctas" 
-  $ui -}}
+  "ui" -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
 
