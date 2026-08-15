@@ -12,6 +12,7 @@
   "label" (i18n "admin.fields.section.label")
   "name" "section"
   "options" $collections
+  "required" true
   -}}
 
 {{ partial "admin/widgets/select.js" $args }}
