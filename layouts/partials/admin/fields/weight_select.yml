@@ -4,8 +4,7 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.weight.label")
   "name" "weight"
-  "min" 1
-  "value_type" "int"
+  "options" $options
   -}}
 
-{{ partial "admin/widgets/number.js" $args }}
+{{ partial "admin/widgets/select.js" $args }}
