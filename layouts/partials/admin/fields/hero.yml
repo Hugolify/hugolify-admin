@@ -1,6 +1,6 @@
 {{- $image := dict "image" (dict "is_background" true "is_darken" true) -}}
 {{- $video := dict "video" (dict "is_background" true "is_darken" true "has_mobile" true) -}}
-{{- $uiFields := slice "align" "vertical-align" "is_darken" -}} 
+{{- $uiFields := slice "align" "vertical_align" "is_darken" -}} 
 {{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 
