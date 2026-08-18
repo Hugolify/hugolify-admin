@@ -749,6 +749,12 @@ admin:
     section:
       hint: Válassza ki a megjelenítendő szakaszt
       label: Szakasz
+    selected_source:
+      hint: Hogyan válasszuk ki a megjelenítendő elemeket
+      label: Forrás
+      options:
+        selection: Kézi kiválasztás
+        taxonomies: Szűrés taxonómia szerint
     show_more:
       hint: Megjelenít egy gombot további elemek megtekintéséhez
       label: Több mutatása?

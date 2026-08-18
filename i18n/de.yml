@@ -749,6 +749,12 @@ admin:
     section:
       hint: Anzuzeigende Sektion auswählen
       label: Sektion
+    selected_source:
+      hint: Wie die anzuzeigenden Elemente ausgewählt werden
+      label: Quelle
+      options:
+        selection: Manuelle Auswahl
+        taxonomies: Nach Taxonomie filtern
     show_more:
       hint: Zeigt einen Button zum Anzeigen weiterer Elemente
       label: Mehr anzeigen?

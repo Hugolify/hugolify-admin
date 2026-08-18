@@ -752,6 +752,12 @@ admin:
     section:
       hint: Choix de la section à afficher
       label: Section
+    selected_source:
+      hint: Choix du mode de sélection des éléments à afficher
+      label: Source
+      options:
+        selection: Sélection manuelle
+        taxonomies: Filtrer par taxonomie
     show_more:
       hint: Affiche un bouton pour voir plus d’éléments
       label: Plus d’items ?

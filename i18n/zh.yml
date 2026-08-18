@@ -749,6 +749,12 @@ admin:
     section:
       hint: 选择要显示的部分
       label: 部分
+    selected_source:
+      hint: 选择要显示项目的方式
+      label: 来源
+      options:
+        selection: 手动选择
+        taxonomies: 按分类筛选
     show_more:
       hint: 显示一个按钮以查看更多项目
       label: 显示更多?

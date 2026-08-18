@@ -749,6 +749,12 @@ admin:
     section:
       hint: Izberite razdelek za prikaz
       label: Razdelek
+    selected_source:
+      hint: Kako se izberejo elementi za prikaz
+      label: Vir
+      options:
+        selection: Ročni izbor
+        taxonomies: Filtriraj po taksonomiji
     show_more:
       hint: Prikaže gumb za ogled več elementov
       label: Prikaži več?

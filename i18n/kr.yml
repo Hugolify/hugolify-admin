@@ -749,6 +749,12 @@ admin:
     section:
       hint: 표시할 섹션 선택
       label: 섹션
+    selected_source:
+      hint: 표시할 항목을 선택하는 방법
+      label: 소스
+      options:
+        selection: 직접 선택
+        taxonomies: 분류로 필터링
     show_more:
       hint: 더 많은 항목을 보기 위한 버튼 표시
       label: 더 보기?

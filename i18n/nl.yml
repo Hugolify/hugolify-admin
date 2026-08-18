@@ -749,6 +749,12 @@ admin:
     section:
       hint: Selecteer de sectie om weer te geven
       label: Sectie
+    selected_source:
+      hint: Hoe de weer te geven items worden gekozen
+      label: Bron
+      options:
+        selection: Handmatige selectie
+        taxonomies: Filteren op taxonomie
     show_more:
       hint: Toont een knop om meer items te zien
       label: Meer tonen?

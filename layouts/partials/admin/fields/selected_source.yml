@@ -1,0 +1,20 @@
+{{- $name := dict "name" "source" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "selected_source" "nameOverride" "source" }}
+{{- end }}
+
+{{- $options := slice "selection" "taxonomies" -}}
+{{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.selected_source.label")
+  "hint" (i18n "admin.fields.selected_source.hint")
+  "label_options" "admin.fields.selected_source.options"
+  "default" "selection"
+  "options" $options
+  "required" true
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/select.js" $args }}

@@ -749,6 +749,12 @@ admin:
     section:
       hint: Vyberte sekci k zobrazení
       label: Sekce
+    selected_source:
+      hint: Jak se vybírají položky k zobrazení
+      label: Zdroj
+      options:
+        selection: Ruční výběr
+        taxonomies: Filtrovat podle taxonomie
     show_more:
       hint: Zobrazí tlačítko pro zobrazení více položek
       label: Zobrazit více?

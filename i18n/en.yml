@@ -754,6 +754,12 @@ admin:
     section:
       hint: Select the section to display
       label: Section
+    selected_source:
+      hint: How the items to display are chosen
+      label: Source
+      options:
+        selection: Manual selection
+        taxonomies: Filter by taxonomy
     show_more:
       hint: Shows a button to see more items
       label: Show more?

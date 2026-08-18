@@ -749,6 +749,12 @@ admin:
     section:
       hint: Görüntülenecek bölümü seçin
       label: Bölüm
+    selected_source:
+      hint: Görüntülenecek öğelerin nasıl seçileceği
+      label: Kaynak
+      options:
+        selection: Manuel seçim
+        taxonomies: Taksonomiye göre filtrele
     show_more:
       hint: Daha fazla öğe görmek için bir düğme gösterir
       label: Daha fazla göster?

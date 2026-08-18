@@ -1,0 +1,30 @@
+{{/* 
+  Partial to get the taxonomies of a collection
+
+  Taxonomies are the relation fields declared in the collection fields 
+  definition (see admin/collections/fields/{collection}.fields.default.html).
+  Disabled taxonomies are skipped, as they are set to false there.
+
+  - . (string) collection name
+
+  Returns a slice of dict:
+  - name (string) field name used in the front matter
+  - collection (string) collection holding the terms
+*/}}
+
+{{- $collection := . -}}
+{{- $taxonomies := slice -}}
+
+{{- range partial "admin/func/GetFieldsCollection.html" $collection -}}
+  {{- if reflect.IsMap . -}}
+    {{- with .relation -}}
+      {{- $target := .collection -}}
+      {{- $name := .name | default $target -}}
+      {{- with $target -}}
+        {{- $taxonomies = $taxonomies | append (dict "name" $name "collection" $target) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $taxonomies -}}

@@ -2,17 +2,32 @@
 {{- $block := print "selected-" . -}}
 
 {{- $section := dict "section-hidden" $collection  -}} 
-{{- $relation := dict "relation" (dict "collection" $collection "name" "items" "multiple" true "required" true) -}} 
 {{- $layout := dict "layout" (slice "carousel" "grid" "list") -}} 
 {{- $uiFields := site.Params.admin.fields.ui.fields | append $layout -}} 
 {{- $ui := dict "ui" $uiFields -}}
 
+{{/* Taxonomies of the section, used to filter the pages when source is "taxonomies" */}}
+{{- $taxonomies := partial "admin/func/GetTaxonomies.html" $collection -}}
+
+{{/* Without taxonomy, the manual selection is the only source, so it is required */}}
+{{- $relation := dict "relation" (dict "collection" $collection "name" "items" "multiple" true "required" (not $taxonomies)) -}} 
+
 {{- $fields := slice 
   "heading"
-  $section 
-  $relation 
-  "show_more"
-  $ui
+  $section -}}
+
+{{- if $taxonomies -}}
+  {{- $fields = $fields | append "selected_source" $relation -}}
+  {{- range $taxonomies -}}
+    {{- $fields = $fields | append (dict "relation" (dict "collection" .collection "name" .name "multiple" true)) -}}
+  {{- end -}}
+{{- else -}}
+  {{- $fields = $fields | append $relation -}}
+{{- end -}}
+
+{{- $fields = $fields | append 
+  "show_more" 
+  $ui 
   "carousel" -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" $block "fields" $fields) -}}

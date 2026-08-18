@@ -749,6 +749,12 @@ admin:
     section:
       hint: Velg seksjonen som skal vises
       label: Seksjon
+    selected_source:
+      hint: Hvordan elementene som skal vises velges
+      label: Kilde
+      options:
+        selection: Manuelt utvalg
+        taxonomies: Filtrer etter taksonomi
     show_more:
       hint: Viser en knapp for å se flere elementer
       label: Vis mer?

@@ -749,6 +749,12 @@ admin:
     section:
       hint: प्रदर्शित करने के लिए अनुभाग चुनें
       label: अनुभाग
+    selected_source:
+      hint: प्रदर्शित करने के लिए आइटम कैसे चुने जाते हैं
+      label: स्रोत
+      options:
+        selection: मैन्युअल चयन
+        taxonomies: वर्गीकरण द्वारा फ़िल्टर करें
     show_more:
       hint: अधिक आइटम देखने के लिए एक बटन दिखाता है
       label: और दिखाओ?

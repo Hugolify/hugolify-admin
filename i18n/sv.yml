@@ -749,6 +749,12 @@ admin:
     section:
       hint: Välj avsnitt att visa
       label: Avsnitt
+    selected_source:
+      hint: Hur objekten som ska visas väljs
+      label: Källa
+      options:
+        selection: Manuellt urval
+        taxonomies: Filtrera efter taxonomi
     show_more:
       hint: Visar en knapp för att se fler objekt
       label: Visa mer?

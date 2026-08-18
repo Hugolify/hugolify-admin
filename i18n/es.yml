@@ -749,6 +749,12 @@ admin:
     section:
       hint: Seleccionar la sección a mostrar
       label: Sección
+    selected_source:
+      hint: Cómo se eligen los elementos a mostrar
+      label: Origen
+      options:
+        selection: Selección manual
+        taxonomies: Filtrar por taxonomía
     show_more:
       hint: Muestra un botón para ver más elementos
       label: ¿Mostrar más?

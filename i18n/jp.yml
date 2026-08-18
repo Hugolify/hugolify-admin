@@ -749,6 +749,12 @@ admin:
     section:
       hint: 表示するセクションを選択
       label: セクション
+    selected_source:
+      hint: 表示する項目の選び方
+      label: ソース
+      options:
+        selection: 手動で選択
+        taxonomies: タクソノミーで絞り込む
     show_more:
       hint: より多くのアイテムを表示するボタンを表示
       label: もっと見る?

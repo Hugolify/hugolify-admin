@@ -749,6 +749,12 @@ admin:
     section:
       hint: Pilih bagian yang akan ditampilkan
       label: Bagian
+    selected_source:
+      hint: Cara memilih item yang akan ditampilkan
+      label: Sumber
+      options:
+        selection: Pilihan manual
+        taxonomies: Filter berdasarkan taksonomi
     show_more:
       hint: Menampilkan tombol untuk melihat lebih banyak item
       label: Tampilkan lebih banyak?

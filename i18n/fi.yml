@@ -745,6 +745,12 @@ admin:
     section:
       hint: Valitse näytettävä osa
       label: Osa
+    selected_source:
+      hint: Miten näytettävät kohteet valitaan
+      label: Lähde
+      options:
+        selection: Manuaalinen valinta
+        taxonomies: Suodata taksonomian mukaan
     show_more:
       hint: Näyttää painikkeen nähdäksesi lisää kohteita
       label: Näytä lisää?

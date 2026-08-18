@@ -749,6 +749,12 @@ admin:
     section:
       hint: Изберете секцията за показване
       label: Секция
+    selected_source:
+      hint: Как се избират елементите за показване
+      label: Източник
+      options:
+        selection: Ръчен избор
+        taxonomies: Филтриране по таксономия
     show_more:
       hint: Показва бутон за преглед на още елементи
       label: Покажи още?
