@@ -553,6 +553,9 @@ admin:
       src:
         hint: '전송 전에 이미지 크기 조정 및 압축: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: 이미지
+        mobile:
+          hint: 모바일용 이미지
+          label: 이미지 (모바일)
     images:
       label: 
         one: 이미지

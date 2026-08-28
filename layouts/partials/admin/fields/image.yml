@@ -2,6 +2,7 @@
 {{- $is_background := false -}}
 {{- $is_darken := false -}}
 {{- $is_screenshot := false -}}
+{{- $has_mobile := false -}}
 {{- if reflect.IsMap . -}}
   {{- with .is_background -}}
     {{- $is_background = true -}}
@@ -12,13 +13,21 @@
   {{- with .is_screenshot -}}
     {{- $is_screenshot = true -}}
   {{- end -}}
+  {{- with .has_mobile -}}
+    {{- $has_mobile = true -}}
+  {{- end -}}
 {{- end -}}
 
 {{- $fields := slice 
-  "image_src" 
-  $image_filter
-  "image_alt" 
-  "credit" -}}
+  "image_src" -}}
+
+{{- with $has_mobile -}}
+  {{- $fields = $fields | append "image_src_mobile" -}}
+{{- end -}}
+
+{{- $fields = $fields | append $image_filter -}}
+{{- $fields = $fields | append "image_alt" -}}
+{{- $fields = $fields | append "credit" -}}
 
 {{- with $is_screenshot -}}
   {{- $fields = $fields | append "is_screenshot" -}}

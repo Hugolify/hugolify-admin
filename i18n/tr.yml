@@ -553,6 +553,9 @@ admin:
       src:
         hint: 'Göndermeden önce resmi yeniden boyutlandırın ve sıkıştırın: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Resim
+        mobile:
+          hint: Mobil için resim
+          label: Resim (Mobil)
     images:
       label: 
         one: Resim

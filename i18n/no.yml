@@ -553,6 +553,9 @@ admin:
       src:
         hint: 'Endre størrelse og komprimer bilde før sending: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Bilde
+        mobile:
+          hint: Bilde for mobil
+          label: Bilde (Mobil)
     images:
       label: 
         one: Bilde

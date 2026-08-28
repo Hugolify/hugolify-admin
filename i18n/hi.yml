@@ -553,6 +553,9 @@ admin:
       src:
         hint: 'भेजने से पहले छवि का आकार बदलें और संपीड़ित करें: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: छवि
+        mobile:
+          hint: मोबाइल के लिए छवि
+          label: छवि (मोबाइल)
     images:
       label: 
         one: छवि

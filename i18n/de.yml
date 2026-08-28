@@ -553,6 +553,9 @@ admin:
       src:
         hint: 'Bild vor dem Senden verkleinern und komprimieren: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Bild
+        mobile:
+          hint: Bild für Mobilgeräte
+          label: Bild (Mobil)
     images:
       label: 
         one: Bild

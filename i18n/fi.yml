@@ -551,6 +551,9 @@ admin:
       src:
         hint: 'Koon muuttaminen ja kuvan pakkaaminen ennen lähettämistä : https://bulkresizephotos.com/fi?quality=90&type=width&width=1600'
         label: Kuva
+        mobile:
+          hint: Kuva mobiililaitteille
+          label: Kuva (Mobiili)
     images:
       label: Kuvat
     is_background:

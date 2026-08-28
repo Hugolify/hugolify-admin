@@ -553,6 +553,9 @@ admin:
       src:
         hint: 'Změňte velikost a komprimujte obrázek před odesláním: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Obrázek
+        mobile:
+          hint: Obrázek pro mobil
+          label: Obrázek (Mobil)
     images:
       label: 
         one: Obrázek

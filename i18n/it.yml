@@ -553,6 +553,9 @@ admin:
       src:
         hint: 'Ridimensiona e comprimi l’immagine prima dell’invio: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Immagine
+        mobile:
+          hint: Immagine per mobile
+          label: Immagine (Mobile)
     images:
       label: 
         one: Immagine

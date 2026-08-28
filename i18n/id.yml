@@ -553,6 +553,9 @@ admin:
       src:
         hint: 'Ubah ukuran dan kompres gambar sebelum mengirim: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Gambar
+        mobile:
+          hint: Gambar untuk seluler
+          label: Gambar (Seluler)
     images:
       label: 
         one: Gambar

@@ -553,6 +553,9 @@ admin:
       src:
         hint: 'Преоразмерете и компресирайте изображението преди изпращане: https://bulkresizephotos.com/fr?quality=90&type=width&width=1600'
         label: Изображение
+        mobile:
+          hint: Изображение за мобилен
+          label: Изображение (Мобилен)
     images:
       label: 
         one: Изображение
