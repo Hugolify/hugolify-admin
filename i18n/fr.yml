@@ -752,6 +752,16 @@ admin:
       label: Loué ?
     required:
       label: Requis
+    scrollsnap:
+      hint: Tailles d’écran où les éléments défilent sur le côté
+      label: Défilement horizontal
+      options:
+        all: Toujours
+        lg: Mobile à laptop
+        md: Mobile à tablet
+        none: Jamais
+        sm: Mobile seulement
+        xl: Mobile à desktop
     section:
       hint: Choix de la section à afficher
       label: Section

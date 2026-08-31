@@ -754,6 +754,16 @@ admin:
       label: Rent?
     required:
       label: Required
+    scrollsnap:
+      hint: Screen sizes where the items scroll sideways
+      label: Horizontal scroll
+      options:
+        all: Always
+        lg: Mobile to laptop
+        md: Mobile to tablet
+        none: Never
+        sm: Mobile only
+        xl: Mobile to desktop
     section:
       hint: Select the section to display
       label: Section

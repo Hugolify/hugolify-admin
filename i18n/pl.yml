@@ -749,6 +749,16 @@ admin:
       label: Wynajem?
     required:
       label: Wymagane
+    scrollsnap:
+      hint: Rozmiary ekranu, na których elementy przewijają się w poziomie
+      label: Przewijanie poziome
+      options:
+        all: Zawsze
+        lg: Telefon → laptop
+        md: Telefon → tablet
+        none: Nigdy
+        sm: Tylko telefon
+        xl: Telefon → komputer
     section:
       hint: Wybierz sekcję do wyświetlenia
       label: Sekcja

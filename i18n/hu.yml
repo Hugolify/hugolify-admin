@@ -749,6 +749,16 @@ admin:
       label: Bérlés?
     required:
       label: Kötelező
+    scrollsnap:
+      hint: Képernyőméretek, ahol az elemek oldalirányban görgethetők
+      label: Vízszintes görgetés
+      options:
+        all: Mindig
+        lg: Mobil → laptop
+        md: Mobil → táblagép
+        none: Soha
+        sm: Csak mobil
+        xl: Mobil → asztali
     section:
       hint: Válassza ki a megjelenítendő szakaszt
       label: Szakasz

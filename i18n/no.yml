@@ -749,6 +749,16 @@ admin:
       label: Lei?
     required:
       label: Påkrevd
+    scrollsnap:
+      hint: Skjermstørrelser der elementene ruller sidelengs
+      label: Horisontal rulling
+      options:
+        all: Alltid
+        lg: Mobil til bærbar
+        md: Mobil til nettbrett
+        none: Aldri
+        sm: Kun mobil
+        xl: Mobil til skrivebord
     section:
       hint: Velg seksjonen som skal vises
       label: Seksjon

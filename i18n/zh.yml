@@ -749,6 +749,16 @@ admin:
       label: 租赁?
     required:
       label: 必填
+    scrollsnap:
+      hint: 元素横向滚动的屏幕尺寸
+      label: 横向滚动
+      options:
+        all: 始终
+        lg: 手机至笔记本电脑
+        md: 手机至平板电脑
+        none: 从不
+        sm: 仅手机
+        xl: 手机至桌面
     section:
       hint: 选择要显示的部分
       label: 部分

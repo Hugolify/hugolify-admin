@@ -3,7 +3,7 @@
 
 {{- $section := dict "section-hidden" $collection  -}} 
 {{- $layout := dict "layout" (slice "carousel" "grid" "list") -}} 
-{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout -}} 
+{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "scrollsnap" -}} 
 {{- $ui := dict "ui" $uiFields -}}
 
 {{/* Taxonomies of the section, used to filter the pages when source is "taxonomies" */}}

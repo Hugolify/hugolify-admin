@@ -749,6 +749,16 @@ admin:
       label: Affittato?
     required:
       label: Richiesto
+    scrollsnap:
+      hint: Dimensioni dello schermo in cui gli elementi scorrono lateralmente
+      label: Scorrimento orizzontale
+      options:
+        all: Sempre
+        lg: Da mobile a laptop
+        md: Da mobile a tablet
+        none: Mai
+        sm: Solo mobile
+        xl: Da mobile a desktop
     section:
       hint: Seleziona la sezione da visualizzare
       label: Sezione

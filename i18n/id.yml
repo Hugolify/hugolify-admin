@@ -749,6 +749,16 @@ admin:
       label: Sewa?
     required:
       label: Wajib
+    scrollsnap:
+      hint: Ukuran layar saat item bergulir ke samping
+      label: Gulir horizontal
+      options:
+        all: Selalu
+        lg: Seluler → laptop
+        md: Seluler → tablet
+        none: Tidak pernah
+        sm: Hanya seluler
+        xl: Seluler → desktop
     section:
       hint: Pilih bagian yang akan ditampilkan
       label: Bagian

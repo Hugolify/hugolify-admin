@@ -749,6 +749,16 @@ admin:
       label: Pronájem?
     required:
       label: Povinné
+    scrollsnap:
+      hint: Velikosti obrazovky, kde se položky posouvají do stran
+      label: Vodorovné posouvání
+      options:
+        all: Vždy
+        lg: Mobil → laptop
+        md: Mobil → tablet
+        none: Nikdy
+        sm: Pouze mobil
+        xl: Mobil → desktop
     section:
       hint: Vyberte sekci k zobrazení
       label: Sekce

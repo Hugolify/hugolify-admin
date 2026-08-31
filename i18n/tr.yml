@@ -749,6 +749,16 @@ admin:
       label: Kira?
     required:
       label: Gerekli
+    scrollsnap:
+      hint: Öğelerin yana kaydığı ekran boyutları
+      label: Yatay kaydırma
+      options:
+        all: Her zaman
+        lg: Mobil → dizüstü
+        md: Mobil → tablet
+        none: Asla
+        sm: Yalnızca mobil
+        xl: Mobil → masaüstü
     section:
       hint: Görüntülenecek bölümü seçin
       label: Bölüm

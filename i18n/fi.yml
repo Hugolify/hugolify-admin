@@ -745,6 +745,16 @@ admin:
       label: Vuokra?
     required:
       label: Vaadittu
+    scrollsnap:
+      hint: Näyttökoot, joissa elementit vierivät sivusuunnassa
+      label: Vaakasuora vieritys
+      options:
+        all: Aina
+        lg: Mobiili → kannettava
+        md: Mobiili → tabletti
+        none: Ei koskaan
+        sm: Vain mobiili
+        xl: Mobiili → työpöytä
     section:
       hint: Valitse näytettävä osa
       label: Osa

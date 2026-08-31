@@ -749,6 +749,16 @@ admin:
       label: ¿Alquilado?
     required:
       label: Requerido
+    scrollsnap:
+      hint: Tamaños de pantalla en los que los elementos se desplazan lateralmente
+      label: Desplazamiento horizontal
+      options:
+        all: Siempre
+        lg: De móvil a portátil
+        md: De móvil a tableta
+        none: Nunca
+        sm: Solo móvil
+        xl: De móvil a escritorio
     section:
       hint: Seleccionar la sección a mostrar
       label: Sección

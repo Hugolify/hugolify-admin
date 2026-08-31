@@ -749,6 +749,16 @@ admin:
       label: Najem?
     required:
       label: Obvezno
+    scrollsnap:
+      hint: Velikosti zaslona, kjer elementi drsijo vodoravno
+      label: Vodoravno drsenje
+      options:
+        all: Vedno
+        lg: Mobilni → prenosnik
+        md: Mobilni → tablica
+        none: Nikoli
+        sm: Samo mobilni
+        xl: Mobilni → namizje
     section:
       hint: Izberite razdelek za prikaz
       label: Razdelek

@@ -749,6 +749,16 @@ admin:
       label: Vermietet?
     required:
       label: Erforderlich
+    scrollsnap:
+      hint: Bildschirmgrößen, auf denen die Elemente seitlich scrollen
+      label: Horizontales Scrollen
+      options:
+        all: Immer
+        lg: Mobil bis Laptop
+        md: Mobil bis Tablet
+        none: Nie
+        sm: Nur Mobil
+        xl: Mobil bis Desktop
     section:
       hint: Anzuzeigende Sektion auswählen
       label: Sektion

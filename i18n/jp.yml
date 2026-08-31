@@ -749,6 +749,16 @@ admin:
       label: 賃貸済み?
     required:
       label: 必須
+    scrollsnap:
+      hint: 項目が横スクロールする画面サイズ
+      label: 横スクロール
+      options:
+        all: 常に
+        lg: モバイル〜ラップトップ
+        md: モバイル〜タブレット
+        none: なし
+        sm: モバイルのみ
+        xl: モバイル〜デスクトップ
     section:
       hint: 表示するセクションを選択
       label: セクション

@@ -749,6 +749,16 @@ admin:
       label: Hyra?
     required:
       label: Krävs
+    scrollsnap:
+      hint: Skärmstorlekar där objekten scrollar i sidled
+      label: Horisontell scroll
+      options:
+        all: Alltid
+        lg: Mobil till bärbar dator
+        md: Mobil till surfplatta
+        none: Aldrig
+        sm: Endast mobil
+        xl: Mobil till skrivbord
     section:
       hint: Välj avsnitt att visa
       label: Avsnitt

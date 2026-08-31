@@ -749,6 +749,16 @@ admin:
       label: Huren?
     required:
       label: Verplicht
+    scrollsnap:
+      hint: Schermformaten waarop de items zijwaarts scrollen
+      label: Horizontaal scrollen
+      options:
+        all: Altijd
+        lg: Mobiel tot laptop
+        md: Mobiel tot tablet
+        none: Nooit
+        sm: Alleen mobiel
+        xl: Mobiel tot desktop
     section:
       hint: Selecteer de sectie om weer te geven
       label: Sectie

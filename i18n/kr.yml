@@ -749,6 +749,16 @@ admin:
       label: 임대됨?
     required:
       label: 필수
+    scrollsnap:
+      hint: 항목이 가로로 스크롤되는 화면 크기
+      label: 가로 스크롤
+      options:
+        all: 항상
+        lg: 모바일~노트북
+        md: 모바일~태블릿
+        none: 사용 안 함
+        sm: 모바일만
+        xl: 모바일~데스크톱
     section:
       hint: 표시할 섹션 선택
       label: 섹션

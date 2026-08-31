@@ -1,7 +1,7 @@
 {{- $subfields := slice "quote" "author" -}} 
 {{- $items := dict "items" (dict "name" "testimonials" "fields" $subfields) -}}
 {{- $layout := dict "layout" (slice "grid" "carousel") -}} 
-{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout -}} 
+{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "scrollsnap" -}} 
 {{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 

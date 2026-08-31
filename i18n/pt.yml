@@ -749,6 +749,16 @@ admin:
       label: Alugar?
     required:
       label: Obrigatório
+    scrollsnap:
+      hint: Tamanhos de ecrã em que os elementos deslizam lateralmente
+      label: Deslocamento horizontal
+      options:
+        all: Sempre
+        lg: De celular a laptop
+        md: De celular a tablet
+        none: Nunca
+        sm: Apenas celular
+        xl: De celular a desktop
     section:
       hint: Selecione a seção a exibir
       label: Seção

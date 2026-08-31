@@ -1,6 +1,6 @@
 {{- $itemsFields := slice "icon" "image_simple" "surtitle" "title" "text_markdown" "cta" -}} 
 {{- $items := dict "items" (dict "name" "informations" "fields" $itemsFields) -}}
-{{- $uiFields := site.Params.admin.fields.ui.fields | append "column" "ratio" -}} 
+{{- $uiFields := site.Params.admin.fields.ui.fields | append "column" "scrollsnap" "ratio" -}} 
 {{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 

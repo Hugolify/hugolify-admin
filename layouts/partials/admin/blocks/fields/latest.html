@@ -1,5 +1,5 @@
 {{- $layout := dict "layout" (slice "grid" "list") -}} 
-{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout -}} 
+{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "scrollsnap" -}} 
 {{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 
