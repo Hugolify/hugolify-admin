@@ -1,6 +1,10 @@
 {{- $services_categories := false -}}
+{{- $services_persons := false -}}
 {{- if site.Params.admin.collections.services_categories.enable -}}
   {{- $services_categories = dict "relation" (dict "collection" "services_categories" "multiple" true) -}}
+{{- end -}}
+{{- if site.Params.admin.collections.persons.enable -}}
+  {{- $services_persons = dict "relation" (dict "collection" "persons" "name" "services_persons" "multiple" true) -}}
 {{- end -}}
 
 {{- return slice 
@@ -10,6 +14,7 @@
   "title_page" 
   "description"
   $services_categories 
+  $services_persons 
   "featured_image" 
   "body"
   "weight" 
