@@ -96,6 +96,11 @@ admin:
       label:
         one: 类别
         other: 类别
+    events_persons:
+      _description: 所有人员
+      label:
+        one: 人员
+        other: 人员
     expertises:
       _description: 所有专业知识
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: 类别
         other: 类别
+    services_persons:
+      _description: 所有人员
+      label:
+        one: 人员
+        other: 人员
     tags:
       _description: 所有标签
       label:

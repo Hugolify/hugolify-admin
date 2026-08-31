@@ -96,6 +96,11 @@ admin:
       label:
         one: Kategorija
         other: Kategorije
+    events_persons:
+      _description: Vse osebe
+      label:
+        one: Oseba
+        other: Osebe
     expertises:
       _description: Vse strokovnosti
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: Kategorija
         other: Kategorije
+    services_persons:
+      _description: Vse osebe
+      label:
+        one: Oseba
+        other: Osebe
     tags:
       _description: Vse oznake
       label:

@@ -96,6 +96,11 @@ admin:
       label:
         one: Категория
         other: Категории
+    events_persons:
+      _description: Всички лица
+      label:
+        one: Лице
+        other: Лица
     expertises:
       _description: Всички експертизи
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: Категория
         other: Категории
+    services_persons:
+      _description: Всички лица
+      label:
+        one: Лице
+        other: Лица
     tags:
       _description: Всички етикети
       label:

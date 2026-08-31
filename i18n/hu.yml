@@ -96,6 +96,11 @@ admin:
       label:
         one: Kategória
         other: Kategóriák
+    events_persons:
+      _description: Minden személy
+      label:
+        one: Személy
+        other: Személyek
     expertises:
       _description: Minden szakértelem
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: Kategória
         other: Kategóriák
+    services_persons:
+      _description: Minden személy
+      label:
+        one: Személy
+        other: Személyek
     tags:
       _description: Minden címke
       label:

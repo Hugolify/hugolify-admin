@@ -96,6 +96,11 @@ admin:
       label:
         one: 카테고리
         other: 카테고리
+    events_persons:
+      _description: 모든 인물
+      label:
+        one: 인물
+        other: 인물
     expertises:
       _description: 모든 전문 분야
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: 카테고리
         other: 카테고리
+    services_persons:
+      _description: 모든 인물
+      label:
+        one: 인물
+        other: 인물
     tags:
       _description: 모든 태그
       label:

@@ -96,6 +96,11 @@ admin:
       label:
         one: श्रेणी
         other: श्रेणियाँ
+    events_persons:
+      _description: सभी व्यक्ति
+      label:
+        one: व्यक्ति
+        other: व्यक्ति
     expertises:
       _description: सभी विशेषज्ञता
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: श्रेणी
         other: श्रेणियाँ
+    services_persons:
+      _description: सभी व्यक्ति
+      label:
+        one: व्यक्ति
+        other: व्यक्ति
     tags:
       _description: सभी टैग
       label:

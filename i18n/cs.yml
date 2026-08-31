@@ -96,6 +96,11 @@ admin:
       label:
         one: Kategorie
         other: Kategorie
+    events_persons:
+      _description: Všechny osoby
+      label:
+        one: Osoba
+        other: Osoby
     expertises:
       _description: Všechny odbornosti
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: Kategorie
         other: Kategorie
+    services_persons:
+      _description: Všechny osoby
+      label:
+        one: Osoba
+        other: Osoby
     tags:
       _description: Všechny štítky
       label:

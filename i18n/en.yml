@@ -92,6 +92,11 @@ admin:
       label:
         one: Category
         other: Categories
+    events_persons:
+      _description: All persons
+      label:
+        one: Person
+        other: Persons
     expertises:
       _description: All expertises
       label:
@@ -257,6 +262,11 @@ admin:
       label:
         one: Category
         other: Categories
+    services_persons:
+      _description: All persons
+      label:
+        one: Person
+        other: Persons
     tags:
       _description: All tags
       label:

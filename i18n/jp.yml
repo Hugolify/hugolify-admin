@@ -96,6 +96,11 @@ admin:
       label:
         one: カテゴリー
         other: カテゴリー
+    events_persons:
+      _description: すべての人物
+      label:
+        one: 人物
+        other: 人物
     expertises:
       _description: すべての専門分野
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: カテゴリー
         other: カテゴリー
+    services_persons:
+      _description: すべての人物
+      label:
+        one: 人物
+        other: 人物
     tags:
       _description: すべてのタグ
       label:

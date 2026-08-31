@@ -98,6 +98,11 @@ admin:
       label:
         one: Kategoria
         other: Kategoriat
+    events_persons:
+      _description: Kaikki henkilöt
+      label:
+        one: Henkilö
+        other: Henkilöt
     expertises:
       _description: Kaikki erikoisalat
       label:
@@ -263,6 +268,11 @@ admin:
       label:
         one: Kategoria
         other: Kategoriat
+    services_persons:
+      _description: Kaikki henkilöt
+      label:
+        one: Henkilö
+        other: Henkilöt
     tags:
       _description: Kaikki tunnisteet
       label:

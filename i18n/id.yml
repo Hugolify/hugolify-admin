@@ -96,6 +96,11 @@ admin:
       label:
         one: Kategori
         other: Kategori
+    events_persons:
+      _description: Semua orang
+      label:
+        one: Orang
+        other: Orang
     expertises:
       _description: Semua keahlian
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: Kategori
         other: Kategori
+    services_persons:
+      _description: Semua orang
+      label:
+        one: Orang
+        other: Orang
     tags:
       _description: Semua tag
       label:

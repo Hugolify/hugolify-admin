@@ -96,6 +96,11 @@ admin:
       label:
         one: Kategori
         other: Kategorier
+    events_persons:
+      _description: Alla personer
+      label:
+        one: Person
+        other: Personer
     expertises:
       _description: Alla expertiser
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: Kategori
         other: Kategorier
+    services_persons:
+      _description: Alla personer
+      label:
+        one: Person
+        other: Personer
     tags:
       _description: Alla taggar
       label:

@@ -96,6 +96,11 @@ admin:
       label:
         one: Kategoria
         other: Kategorie
+    events_persons:
+      _description: Wszystkie osoby
+      label:
+        one: Osoba
+        other: Osoby
     expertises:
       _description: Wszystkie specjalizacje
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: Kategoria
         other: Kategorie
+    services_persons:
+      _description: Wszystkie osoby
+      label:
+        one: Osoba
+        other: Osoby
     tags:
       _description: Wszystkie tagi
       label:

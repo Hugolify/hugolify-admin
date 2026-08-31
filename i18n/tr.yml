@@ -96,6 +96,11 @@ admin:
       label:
         one: Kategori
         other: Kategoriler
+    events_persons:
+      _description: Tüm kişiler
+      label:
+        one: Kişi
+        other: Kişiler
     expertises:
       _description: Tüm uzmanlıklar
       label:
@@ -261,6 +266,11 @@ admin:
       label:
         one: Kategori
         other: Kategoriler
+    services_persons:
+      _description: Tüm kişiler
+      label:
+        one: Kişi
+        other: Kişiler
     tags:
       _description: Tüm etiketler
       label:
