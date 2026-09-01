@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Nagovor
     icon:
-      hint: Ime ikone iz https://icons.getbootstrap.com/
+      hint: 'Ime ikone (npr.: phone). Glejte https://lucide.dev/ ali https://icons.getbootstrap.com/'
       label: Ikona
     id:
       label: ID

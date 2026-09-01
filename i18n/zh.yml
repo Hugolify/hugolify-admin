@@ -528,7 +528,7 @@ admin:
     honorific:
       label: 称呼
     icon:
-      hint: 来自 https://icons.getbootstrap.com/ 的图标名称
+      hint: '图标名称（例: phone）。参见 https://lucide.dev/ 或 https://icons.getbootstrap.com/'
       label: 图标
     id:
       label: ID

@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Tratamiento
     icon:
-      hint: Nombre del icono de https://icons.getbootstrap.com/
+      hint: 'Nombre del icono (p. ej.: phone). Consulta https://lucide.dev/ o https://icons.getbootstrap.com/'
       label: Icono
     id:
       label: ID

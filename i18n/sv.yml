@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Tilltalsnamn
     icon:
-      hint: Ikonnamn från https://icons.getbootstrap.com/
+      hint: 'Ikonnamn (t.ex.: phone). Se https://lucide.dev/ eller https://icons.getbootstrap.com/'
       label: Ikon
     id:
       label: ID

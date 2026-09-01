@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Zwrot grzecznościowy
     icon:
-      hint: Nazwa ikony z https://icons.getbootstrap.com/
+      hint: 'Nazwa ikony (np.: phone). Zobacz https://lucide.dev/ lub https://icons.getbootstrap.com/'
       label: Ikona
     id:
       label: ID

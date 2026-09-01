@@ -528,7 +528,7 @@ admin:
     honorific:
       label: 호칭
     icon:
-      hint: https://icons.getbootstrap.com/ 의 아이콘 이름
+      hint: '아이콘 이름 (예: phone). https://lucide.dev/ 또는 https://icons.getbootstrap.com/ 참조'
       label: 아이콘
     id:
       label: ID

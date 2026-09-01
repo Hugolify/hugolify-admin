@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Обръщение
     icon:
-      hint: Име на икона от https://icons.getbootstrap.com/
+      hint: 'Име на икона (напр.: phone). Вижте https://lucide.dev/ или https://icons.getbootstrap.com/'
       label: Икона
     id:
       label: ID

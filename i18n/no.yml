@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Tiltaleform
     icon:
-      hint: Ikonnavn fra https://icons.getbootstrap.com/
+      hint: 'Ikonnavn (f.eks.: phone). Se https://lucide.dev/ eller https://icons.getbootstrap.com/'
       label: Ikon
     id:
       label: ID

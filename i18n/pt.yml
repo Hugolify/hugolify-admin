@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Pronome de tratamento
     icon:
-      hint: Nome do ícone de https://icons.getbootstrap.com/
+      hint: 'Nome do ícone (ex.: phone). Ver https://lucide.dev/ ou https://icons.getbootstrap.com/'
       label: Ícone
     id:
       label: ID

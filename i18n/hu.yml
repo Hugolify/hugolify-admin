@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Megszólítás
     icon:
-      hint: Ikon neve a https://icons.getbootstrap.com/ oldalról
+      hint: 'Ikon neve (pl.: phone). Lásd https://lucide.dev/ vagy https://icons.getbootstrap.com/'
       label: Ikon
     id:
       label: Azonosító

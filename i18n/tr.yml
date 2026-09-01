@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Hitap
     icon:
-      hint: https://icons.getbootstrap.com/ adresinden ikon adı
+      hint: 'İkon adı (örn.: phone). Bkz. https://lucide.dev/ veya https://icons.getbootstrap.com/'
       label: İkon
     id:
       label: Kimlik

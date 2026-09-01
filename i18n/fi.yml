@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Puhuttelu
     icon:
-      hint: Kuvakkeen nimi osoitteesta https://icons.getbootstrap.com/
+      hint: 'Kuvakkeen nimi (esim.: phone). Katso https://lucide.dev/ tai https://icons.getbootstrap.com/'
       label: Kuvake
     id:
       label: ID

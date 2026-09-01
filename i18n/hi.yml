@@ -528,7 +528,7 @@ admin:
     honorific:
       label: सम्मानजनक
     icon:
-      hint: https://icons.getbootstrap.com/ से आइकन का नाम
+      hint: 'आइकन का नाम (उदा.: phone). देखें https://lucide.dev/ या https://icons.getbootstrap.com/'
       label: आइकन
     id:
       label: आईडी

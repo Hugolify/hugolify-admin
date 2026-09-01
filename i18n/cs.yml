@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Oslovení
     icon:
-      hint: Název ikony z https://icons.getbootstrap.com/
+      hint: 'Název ikony (např.: phone). Viz https://lucide.dev/ nebo https://icons.getbootstrap.com/'
       label: Ikona
     id:
       label: ID

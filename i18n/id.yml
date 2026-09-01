@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Sebutan
     icon:
-      hint: Nama ikon dari https://icons.getbootstrap.com/
+      hint: 'Nama ikon (mis.: phone). Lihat https://lucide.dev/ atau https://icons.getbootstrap.com/'
       label: Ikon
     id:
       label: ID

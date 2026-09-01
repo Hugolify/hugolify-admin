@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Honorific
     icon:
-      hint: Icon name from https://icons.getbootstrap.com/
+      hint: 'Icon name (e.g: phone). See https://lucide.dev/ or https://icons.getbootstrap.com/'
       label: Icon
     id:
       label: ID

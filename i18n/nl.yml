@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Aanhef
     icon:
-      hint: Pictogramnaam van https://icons.getbootstrap.com/
+      hint: 'Pictogramnaam (bijv.: phone). Zie https://lucide.dev/ of https://icons.getbootstrap.com/'
       label: Pictogram
     id:
       label: ID

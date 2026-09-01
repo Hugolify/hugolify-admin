@@ -528,7 +528,7 @@ admin:
     honorific:
       label: Titolo
     icon:
-      hint: Nome dell’icona da https://icons.getbootstrap.com/
+      hint: 'Nome dell’icona (es.: phone). Vedi https://lucide.dev/ o https://icons.getbootstrap.com/'
       label: Icona
     id:
       label: ID
