@@ -2,6 +2,7 @@
   Partial to generate a datetime widget
   
   - default (date or string)
+  - format (string) Day.js tokens, storage format for Decap/Sveltia
   - hidden (boolean)
   - hint (string)
   - i18n (boolean or string)
@@ -14,6 +15,7 @@
 {{- $cms := site.Params.admin.cms }}
 
 {{- $default := .default | default "" }}
+{{- $format := .format | default "YYYY-MM-DD[T]HH:mm:ss" }}
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
@@ -85,6 +87,7 @@
   {{ end }}
   name: '{{ $name }}',
   widget: 'datetime',
+  format: '{{ $format }}',
   {{ if ne $default "" }}
     {{ if eq $default "now" }}
       {{ $default = `"{{now}}"` }}
