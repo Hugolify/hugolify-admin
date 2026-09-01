@@ -1,17 +1,23 @@
 {{- $events_categories := false -}}
+{{- $events_persons := false -}}
 {{- if site.Params.admin.collections.events_categories.enable -}}
   {{- $events_categories = dict "relation" (dict "collection" "events_categories" "multiple" true) -}}
 {{- end -}}
+{{- if site.Params.admin.collections.persons.enable -}}
+  {{- $events_persons = dict "relation" (dict "collection" "persons" "name" "events_persons" "multiple" true) -}}
+{{- end -}}
+
 {{- return slice 
   "id" 
-  "is_not_index" 
+  "is_not_index"
   "draft" 
   "is_pinned" 
   "date" 
   "title_page"
   "description"
-  "featured_image" 
   $events_categories 
+  $events_persons 
+  "featured_image" 
   "event" 
   "body"
   "slug" -}}
