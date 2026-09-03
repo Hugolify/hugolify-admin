@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Ad
     form:
+      accept:
+        hint: 'Yalnızca dosya alanları için (ör.: .pdf, .doc, .docx)'
+        label: Kabul edilen uzantılar
       autocomplete:
         label: Otomatik Tamamlama
         options:
@@ -494,11 +497,18 @@ admin:
           one: Alan
           other: Alanlar
       label: Form
+      name:
+        hint: 'Formla birlikte gönderilen tanımlayıcı: Netlify gönderimleri gruplamak ve sütunları adlandırmak için bunu kullanır. Bilinçli olarak tüm diller arasında paylaşılır. Boş bırakılırsa etiketten veya bloğun konumundan türetilir.'
+        label: İsim
+        pattern: 'Sadece küçük harfler, sayılar ve tireler içerir, boşluk, aksan veya özel karakterler içermez'
       options:
         hint: Sadece seçim alanları için
         label:
           one: Seçenek
           other: Seçenekler
+      pattern:
+        hint: 'Doğrulama düzenli ifadesi (ör.: [0-9]{5}). Yalnızca giriş alanları için'
+        label: Desen
       type:
         hint: Alan türünü seçin
         email: E-posta

@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Jméno
     form:
+      accept:
+        hint: 'Pouze pro souborová pole (např.: .pdf, .doc, .docx)'
+        label: Povolené přípony
       autocomplete:
         label: Automatické dokončování
         options:
@@ -494,11 +497,18 @@ admin:
           one: Pole
           other: Pole
       label: Formulář
+      name:
+        hint: 'Identifikátor odesílaný s formulářem: Netlify jej používá k seskupení odeslání a pojmenování sloupců. Záměrně je sdílený mezi všemi jazyky. Pokud zůstane prázdný, odvodí se z popisku nebo z pozice bloku.'
+        label: Jméno
+        pattern: 'Obsahuje pouze malá písmena, čísla a pomlčky, bez mezer, diakritiky nebo speciálních znaků'
       options:
         hint: Pouze pro výběrová pole
         label:
           one: Možnost
           other: Možnosti
+      pattern:
+        hint: 'Regulární výraz pro ověření (např.: [0-9]{5}). Pouze pro vstupní pole'
+        label: Vzor
       type:
         hint: Vyberte typ pole
         email: E-mail

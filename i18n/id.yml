@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Nama depan
     form:
+      accept:
+        hint: 'Hanya untuk bidang file (mis.: .pdf, .doc, .docx)'
+        label: Ekstensi yang diterima
       autocomplete:
         label: Pelengkap Otomatis
         options:
@@ -494,11 +497,18 @@ admin:
           one: Bidang
           other: Bidang
       label: Formulir
+      name:
+        hint: 'Pengenal yang dikirim bersama formulir: Netlify memakainya untuk mengelompokkan kiriman dan menamai kolom. Sengaja dibagikan di semua bahasa. Jika dikosongkan, nilainya diambil dari label atau dari posisi blok.'
+        label: Nama
+        pattern: 'Hanya berisi huruf kecil, angka, dan tanda hubung, tanpa spasi, aksen, atau karakter khusus'
       options:
         hint: Hanya untuk bidang pilih
         label:
           one: Opsi
           other: Opsi
+      pattern:
+        hint: 'Ekspresi reguler validasi (mis.: [0-9]{5}). Hanya untuk bidang isian'
+        label: Pola
       type:
         hint: Pilih jenis bidang
         email: Email

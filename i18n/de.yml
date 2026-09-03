@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Vorname
     form:
+      accept:
+        hint: 'Nur für Datei-Felder (z. B.: .pdf, .doc, .docx)'
+        label: Akzeptierte Dateiendungen
       autocomplete:
         label: Autovervollständigung
         options:
@@ -494,11 +497,18 @@ admin:
           one: Feld
           other: Felder
       label: Formular
+      name:
+        hint: 'Kennung, die mit dem Formular gesendet wird: Netlify gruppiert damit die Einsendungen und benennt die Spalten. Sie wird bewusst über alle Sprachen hinweg geteilt. Bleibt sie leer, wird sie aus dem Label oder der Blockposition abgeleitet.'
+        label: Name
+        pattern: 'Nur Kleinbuchstaben, Zahlen und Bindestriche, ohne Leerzeichen, Akzente oder Sonderzeichen'
       options:
         hint: Nur für Auswahlfelder
         label:
           one: Option
           other: Optionen
+      pattern:
+        hint: 'Regulärer Ausdruck zur Validierung (z. B.: [0-9]{5}). Nur für Eingabefelder'
+        label: Muster
       type:
         hint: Feldtyp wählen
         email: E-Mail

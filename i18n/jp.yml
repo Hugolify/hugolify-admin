@@ -468,6 +468,9 @@ admin:
     firstname:
       label: 名
     form:
+      accept:
+        hint: 'ファイル項目のみ (例: .pdf, .doc, .docx)'
+        label: 許可する拡張子
       autocomplete:
         label: オートコンプリート
         options:
@@ -494,11 +497,18 @@ admin:
           one: フィールド
           other: フィールド
       label: フォーム
+      name:
+        hint: 'フォームと一緒に送信される識別子。Netlify はこれで送信データをまとめ、列名を決めます。意図的にすべての言語で共有されます。空欄の場合はラベルまたはブロックの位置から決まります。'
+        label: 名前
+        pattern: '小文字、数字、ハイフンのみを含み、スペース、 アクセント、特殊文字は含まない'
       options:
         hint: 選択フィールドのみ
         label:
           one: オプション
           other: オプション
+      pattern:
+        hint: '検証用の正規表現 (例: [0-9]{5})。入力項目のみ'
+        label: パターン
       type:
         hint: フィールドタイプを選択
         email: メールアドレス

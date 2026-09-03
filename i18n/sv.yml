@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Förnamn
     form:
+      accept:
+        hint: 'Endast för filfält (t.ex.: .pdf, .doc, .docx)'
+        label: Godkända filändelser
       autocomplete:
         label: Komplettera automatiskt
         options:
@@ -494,11 +497,18 @@ admin:
           one: Fält
           other: Fält
       label: Formulär
+      name:
+        hint: 'Identifierare som skickas med formuläret: Netlify använder den för att gruppera inskickningar och namnge kolumnerna. Den delas medvetet mellan alla språk. Lämnas den tom härleds den från etiketten eller från blockets position.'
+        label: Namn
+        pattern: 'Innehåller endast gemener, siffror och bindestreck, utan mellanslag, accenter eller specialtecken'
       options:
         hint: Endast för valfält
         label:
           one: Alternativ
           other: Alternativ
+      pattern:
+        hint: 'Reguljärt uttryck för validering (t.ex.: [0-9]{5}). Endast för inmatningsfält'
+        label: Mönster
       type:
         hint: Välj fälttyp
         email: E-post

@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Fornavn
     form:
+      accept:
+        hint: 'Kun for filfelt (f.eks.: .pdf, .doc, .docx)'
+        label: Godkjente filtyper
       autocomplete:
         label: Autofullfør
         options:
@@ -494,11 +497,18 @@ admin:
           one: Felt
           other: Felt
       label: Skjema
+      name:
+        hint: 'Identifikator som sendes med skjemaet: Netlify bruker den til å gruppere innsendinger og navngi kolonnene. Den deles bevisst på tvers av alle språk. Står den tom, utledes den fra etiketten eller fra blokkens posisjon.'
+        label: Navn
+        pattern: 'Inneholder kun små bokstaver, tall og bindestreker, uten mellomrom, aksenter eller spesialtegn'
       options:
         hint: Kun for valgfelt
         label:
           one: Alternativ
           other: Alternativer
+      pattern:
+        hint: 'Regulært uttrykk for validering (f.eks.: [0-9]{5}). Kun for inndatafelt'
+        label: Mønster
       type:
         hint: Velg felttype
         email: E-post

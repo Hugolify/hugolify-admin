@@ -467,6 +467,9 @@ admin:
     firstname:
       label: Firstname
     form:
+      accept:
+        hint: 'Only for file fields (ex: .pdf, .doc, .docx)'
+        label: Accepted extensions
       autocomplete:
         label: Autocomplete
         options:
@@ -493,11 +496,18 @@ admin:
           one: Field
           other: Fields
       label: Form
+      name:
+        hint: 'Identifier sent with the form: Netlify uses it to group submissions and name the columns. Deliberately shared across all languages. Left empty, it is derived from the label or from the block position.'
+        label: Name
+        pattern: 'Contain only lowercase letters, numbers, and hyphens, with no spaces, accents, or special characters'
       options:
         hint: Only for select fields
         label:
           one: Option
           other: Options
+      pattern:
+        hint: 'Validation regular expression (ex: [0-9]{5}). Only for input fields'
+        label: Pattern
       type:
         hint: Choose type field
         email: Email

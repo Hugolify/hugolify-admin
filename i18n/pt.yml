@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Nome
     form:
+      accept:
+        hint: 'Apenas para campos de arquivo (ex.: .pdf, .doc, .docx)'
+        label: Extensões aceitas
       autocomplete:
         label: Preenchimento automático
         options:
@@ -494,11 +497,18 @@ admin:
           one: Campo
           other: Campos
       label: Formulário
+      name:
+        hint: 'Identificador enviado com o formulário: o Netlify o usa para agrupar os envios e nomear as colunas. É compartilhado propositalmente entre todos os idiomas. Se ficar vazio, é deduzido do rótulo ou da posição do bloco.'
+        label: Nome
+        pattern: 'Contém apenas letras minúsculas, números e hífens, sem espaços, acentos ou caracteres especiais'
       options:
         hint: Apenas para campos de seleção
         label:
           one: Opção
           other: Opções
+      pattern:
+        hint: 'Expressão regular de validação (ex.: [0-9]{5}). Apenas para campos de entrada'
+        label: Padrão
       type:
         hint: Escolha o tipo de campo
         email: E-mail

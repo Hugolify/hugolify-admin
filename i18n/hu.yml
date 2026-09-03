@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Keresztnév
     form:
+      accept:
+        hint: 'Csak fájl mezőkhöz (pl.: .pdf, .doc, .docx)'
+        label: Elfogadott kiterjesztések
       autocomplete:
         label: Automatikus kiegészítés
         options:
@@ -494,11 +497,18 @@ admin:
           one: Mező
           other: Mezők
       label: Űrlap
+      name:
+        hint: 'Az űrlappal elküldött azonosító: a Netlify ez alapján csoportosítja a beküldéseket és nevezi el az oszlopokat. Szándékosan közös minden nyelv között. Üresen hagyva a címkéből vagy a blokk pozíciójából származik.'
+        label: Név
+        pattern: 'Csak kisbetűket, számokat és kötőjeleket tartalmazhat, szóközök, ékezetek vagy speciális karakterek nélkül'
       options:
         hint: Csak kiválasztó mezőkhöz
         label:
           one: Opció
           other: Opciók
+      pattern:
+        hint: 'Ellenőrzési reguláris kifejezés (pl.: [0-9]{5}). Csak beviteli mezőkhöz'
+        label: Minta
       type:
         hint: Válassza ki a mező típusát
         email: E-mail

@@ -1,0 +1,19 @@
+{{ $regex := "^(|[a-z0-9-]+)$" }}
+{{ $message := i18n "admin.fields.form.name.pattern" }}
+{{ $pattern := dict "regex" $regex "message" $message }}
+
+{{- $name := dict "name" "name" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "form_name" "nameOverride" "name" }}
+{{- end }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.form.name.label")
+  "hint" (i18n "admin.fields.form.name.hint")
+  "i18n" "duplicate"
+  "pattern" $pattern
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/string.js" $args }}

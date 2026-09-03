@@ -468,6 +468,9 @@ admin:
     firstname:
       label: 名字
     form:
+      accept:
+        hint: '仅适用于文件字段（例如：.pdf、.doc、.docx）'
+        label: 允许的扩展名
       autocomplete:
         label: 自动完成
         options:
@@ -494,11 +497,18 @@ admin:
           one: 字段
           other: 字段
       label: 表单
+      name:
+        hint: '随表单一起发送的标识符：Netlify 用它来归组提交数据并命名列。该值有意在所有语言之间共享。留空时将根据标签或区块位置推导。'
+        label: 名称
+        pattern: '仅包含小写字母、数字和连字符,不含空格、 重音符号或特殊字符'
       options:
         hint: 仅用于选择字段
         label:
           one: 选项
           other: 选项
+      pattern:
+        hint: '验证正则表达式（例如：[0-9]{5}）。仅适用于输入字段'
+        label: 模式
       type:
         hint: 选择字段类型
         email: 电子邮件

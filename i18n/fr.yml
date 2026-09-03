@@ -467,6 +467,9 @@ admin:
     firstname:
       label: Prénom
     form:
+      accept:
+        hint: 'Seulement pour les champs file (ex: .pdf, .doc, .docx)'
+        label: Extensions acceptées
       autocomplete:
         label: Autocomplete
         options:
@@ -493,11 +496,18 @@ admin:
           one: Champ
           other: Champs
       label: Formulaire
+      name:
+        hint: 'Identifiant envoyé avec le formulaire : Netlify s’en sert pour regrouper les soumissions et nommer les colonnes. Volontairement partagé entre toutes les langues. Laissé vide, il est déduit du label ou de la position du bloc.'
+        label: Nom
+        pattern: 'Contient uniquement des lettres minuscules, des chiffres et des tirets, sans espaces, accents ni caractères spéciaux'
       options:
         hint: Seulement pour les champs select
         label:
           one: Option
           other: Options
+      pattern:
+        hint: 'Expression régulière de validation (ex: [0-9]{5}). Seulement pour les champs de saisie'
+        label: Pattern
       type:
         hint: Choix du type de champ
         email: Email

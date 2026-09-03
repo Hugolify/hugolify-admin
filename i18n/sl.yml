@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Ime
     form:
+      accept:
+        hint: 'Samo za polja z datoteko (npr.: .pdf, .doc, .docx)'
+        label: Sprejete končnice
       autocomplete:
         label: Samodejno izpolnjevanje
         options:
@@ -494,11 +497,18 @@ admin:
           one: Polje
           other: Polja
       label: Obrazec
+      name:
+        hint: 'Identifikator, poslan z obrazcem: Netlify z njim združuje oddaje in poimenuje stolpce. Namenoma je skupen vsem jezikom. Če ostane prazen, se izpelje iz oznake ali iz položaja bloka.'
+        label: Ime
+        pattern: 'Vsebuje samo male črke, številke in pomišljaje, brez presledkov, naglasov ali posebnih znakov'
       options:
         hint: Samo za izbirna polja
         label:
           one: Možnost
           other: Možnosti
+      pattern:
+        hint: 'Regularni izraz za preverjanje (npr.: [0-9]{5}). Samo za vnosna polja'
+        label: Vzorec
       type:
         hint: Izberite vrsto polja
         email: E-pošta

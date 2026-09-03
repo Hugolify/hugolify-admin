@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Voornaam
     form:
+      accept:
+        hint: 'Alleen voor bestandsvelden (bv.: .pdf, .doc, .docx)'
+        label: Geaccepteerde extensies
       autocomplete:
         label: Automatisch aanvullen
         options:
@@ -494,11 +497,18 @@ admin:
           one: Veld
           other: Velden
       label: Formulier
+      name:
+        hint: 'Identificatie die met het formulier wordt verzonden: Netlify groepeert er de inzendingen mee en benoemt de kolommen. Bewust gedeeld over alle talen. Leeg gelaten wordt hij afgeleid van het label of van de positie van het blok.'
+        label: Naam
+        pattern: 'Bevat alleen kleine letters, cijfers en koppeltekens, zonder spaties, accenten of speciale tekens'
       options:
         hint: Alleen voor selectievelden
         label:
           one: Optie
           other: Opties
+      pattern:
+        hint: 'Reguliere expressie voor validatie (bv.: [0-9]{5}). Alleen voor invoervelden'
+        label: Patroon
       type:
         hint: Kies veldtype
         email: E-mail

@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Imię
     form:
+      accept:
+        hint: 'Tylko dla pól plików (np.: .pdf, .doc, .docx)'
+        label: Akceptowane rozszerzenia
       autocomplete:
         label: Autouzupełnianie
         options:
@@ -494,11 +497,18 @@ admin:
           one: Pole
           other: Pola
       label: Formularz
+      name:
+        hint: 'Identyfikator wysyłany z formularzem: Netlify używa go do grupowania zgłoszeń i nazywania kolumn. Celowo współdzielony przez wszystkie języki. Pozostawiony pusty, jest wyprowadzany z etykiety lub z pozycji bloku.'
+        label: Nazwa
+        pattern: 'Zawiera tylko małe litery, cyfry i myślniki, bez spacji, znaków diakrytycznych lub znaków specjalnych'
       options:
         hint: Tylko dla pól wyboru
         label:
           one: Opcja
           other: Opcje
+      pattern:
+        hint: 'Wyrażenie regularne do walidacji (np.: [0-9]{5}). Tylko dla pól tekstowych'
+        label: Wzorzec
       type:
         hint: Wybierz typ pola
         email: E-mail

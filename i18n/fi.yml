@@ -468,6 +468,9 @@ admin:
     firstname:
       label: Etunimi
     form:
+      accept:
+        hint: 'Vain tiedostokentille (esim.: .pdf, .doc, .docx)'
+        label: Hyväksytyt tiedostopäätteet
       autocomplete:
         label: Automaattinen täydennys
         options:
@@ -494,11 +497,18 @@ admin:
           one: Kenttä
           other: Kentät
       label: Lomake
+      name:
+        hint: 'Lomakkeen mukana lähetettävä tunniste: Netlify ryhmittelee sillä lähetykset ja nimeää sarakkeet. Se on tarkoituksella jaettu kaikkien kielten kesken. Jos se jätetään tyhjäksi, se johdetaan otsikosta tai lohkon sijainnista.'
+        label: Nimi
+        pattern: 'Sisältää vain pieniä kirjaimia, numeroita ja väliviivoja, ei välilyöntejä, aksentteja tai erikoismerkkejä.'
       options:
         hint: Vain valituille kentille
         label:
           one: Vaihtoehto
           other: Vaihtoehdot
+      pattern:
+        hint: 'Vahvistuksen säännöllinen lauseke (esim.: [0-9]{5}). Vain syöttökentille'
+        label: Kaava
       type:
         hint: Choose type field
         email: Sähköposti

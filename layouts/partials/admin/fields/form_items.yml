@@ -5,10 +5,12 @@
 
 {{- $fields := slice 
   "label" 
-  "name" 
+  "form_name" 
   "form_type" 
   "form_options" 
   "form_value" 
+  "form_accept" 
+  "form_pattern" 
   "is_required" 
   "is_form_full" 
   "placeholder" 
