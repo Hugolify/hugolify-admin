@@ -904,6 +904,7 @@ admin:
       label: Zoom
   files:
     banner: Informationsbanner högst upp på webbplatsen
+    credit: Krediter längst ner på webbplatsen
     footer: Informationstext längst ner på webbplatsen
     nav:
       footer:

@@ -904,6 +904,7 @@ admin:
       label: 缩放
   files:
     banner: 网站顶部的信息横幅
+    credit: 网站底部的鸣谢
     footer: 网站底部的信息文本
     nav:
       footer:

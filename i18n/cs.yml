@@ -904,6 +904,7 @@ admin:
       label: Zoom
   files:
     banner: Informační banner v horní části webu
+    credit: Kredity v dolní části webu
     footer: Informační text v dolní části webu
     nav:
       footer:

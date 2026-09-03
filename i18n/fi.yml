@@ -904,6 +904,7 @@ admin:
       label: Lähennä
   files:
     banner: Tietopalkki sivuston yläosassa
+    credit: Tekijätiedot sivuston alaosassa
     footer: Tietopalkki sivuston alaosassa
     nav:
       footer:

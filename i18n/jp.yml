@@ -904,6 +904,7 @@ admin:
       label: ズーム
   files:
     banner: サイト上部の情報バナー
+    credit: サイト下部のクレジット
     footer: サイト下部の情報テキスト
     nav:
       footer:

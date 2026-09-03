@@ -904,6 +904,7 @@ admin:
       label: Nagyítás
   files:
     banner: Információs banner az oldal tetején
+    credit: Kreditek az oldal alján
     footer: Információs szöveg az oldal alján
     nav:
       footer:

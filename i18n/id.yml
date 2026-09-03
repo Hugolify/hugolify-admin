@@ -904,6 +904,7 @@ admin:
       label: Zoom
   files:
     banner: Spanduk informasi di bagian atas situs
+    credit: Kredit di bagian bawah situs
     footer: Teks informasi di bagian bawah situs
     nav:
       footer:

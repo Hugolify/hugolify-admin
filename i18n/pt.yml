@@ -904,6 +904,7 @@ admin:
       label: Zoom
   files:
     banner: Banner de informações no topo do site
+    credit: Créditos no rodapé do site
     footer: Texto de informações no rodapé do site
     nav:
       footer:

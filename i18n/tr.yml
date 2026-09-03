@@ -904,6 +904,7 @@ admin:
       label: Yakınlaştır
   files:
     banner: Sitenin üst kısmındaki bilgi afişi
+    credit: Sitenin alt kısmındaki krediler
     footer: Sitenin alt kısmındaki bilgi metni
     nav:
       footer:

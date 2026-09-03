@@ -904,6 +904,7 @@ admin:
       label: 줌
   files:
     banner: 사이트 상단의 정보 배너
+    credit: 사이트 하단의 크레딧
     footer: 사이트 하단의 정보 텍스트
     nav:
       footer:

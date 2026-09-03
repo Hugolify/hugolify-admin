@@ -904,6 +904,7 @@ admin:
       label: Powiększenie
   files:
     banner: Baner informacyjny u góry strony
+    credit: Kredyty u dołu strony
     footer: Tekst informacyjny u dołu strony
     nav:
       footer:

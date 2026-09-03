@@ -917,6 +917,7 @@ admin:
       label: Zoom
   files:
     banner: Header – Information banner at the top of the site
+    credit: Footer – Credits at the bottom of the site
     footer: Footer – Blocks and information text at the bottom of the site
     nav:
       footer:

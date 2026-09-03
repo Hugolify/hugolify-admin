@@ -904,6 +904,7 @@ admin:
       label: Povečava
   files:
     banner: Informacijski pasica na vrhu strani
+    credit: Zasluge na dnu strani
     footer: Informacijsko besedilo na dnu strani
     nav:
       footer:

@@ -904,6 +904,7 @@ admin:
       label: ज़ूम
   files:
     banner: साइट के शीर्ष पर सूचना बैनर
+    credit: साइट के नीचे क्रेडिट
     footer: साइट के नीचे सूचना पाठ
     nav:
       footer:
