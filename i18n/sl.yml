@@ -272,6 +272,10 @@ admin:
         label: Mesto
       country:
         label: Država
+      country_code:
+        hint: "Koda države po ISO 3166-1 alpha-2 (FR, ES, BE…), ki jo uporabljajo strukturirani podatki. Polje Država ostane prikazana oznaka."
+        label: "Koda države"
+        pattern: "Dve črki, koda ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Naslov
       street:
         label: Ulica
@@ -659,6 +663,21 @@ admin:
         center: Sredina
         end: Konec
         start: Začetek
+    organization:
+      hint: "Identiteta organizacije v strukturiranih podatkih: ime, logotip, naslov in kontakt."
+      label: "Organizacija"
+    organization_type:
+      options:
+        Organization: "Organizacija (splošna)"
+        Corporation: "Družba"
+        LocalBusiness: "Lokalno podjetje"
+        ProfessionalService: "Strokovna storitev"
+        LegalService: "Pravna storitev"
+        MedicalOrganization: "Zdravstvena organizacija"
+        EducationalOrganization: "Izobraževalna ustanova"
+        NGO: "NVO / društvo"
+      hint: "Vrsta organizacije za strukturirane podatke: Organization, LocalBusiness, ProfessionalService, LegalService… Pri kraju ga izpolnjeno spremeni v pisarno organizacije; če ostane prazno, kraj ostane zgolj lokacija."
+      label: Vrsta schema.org
     parent:
       label: Nadrejena stran
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Najem?
     required:
       label: Obvezno
+    schema_email:
+      hint: "V strukturirane podatke vključi e-poštne naslove. Izklopite, da omejite samodejno zbiranje."
+      label: "Objavim e-poštne naslove?"
     scrollsnap:
       hint: Velikosti zaslona, kjer elementi drsijo vodoravno
       label: Vodoravno drsenje
@@ -920,6 +942,7 @@ admin:
       primary: Primarna navigacija
       secondary: Sekundarna navigacija
       social: Družbena navigacija
+    schema: "Strukturirani podatki – Organizacija in schema.org"
     seo:
       label: Globalni SEO
       title: Ime spletne strani

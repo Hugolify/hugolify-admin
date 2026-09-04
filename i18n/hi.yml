@@ -272,6 +272,10 @@ admin:
         label: शहर
       country:
         label: देश
+      country_code:
+        hint: "देश का ISO 3166-1 alpha-2 कोड (FR, ES, BE…), संरचित डेटा में उपयोग होता है. ऊपर का देश फ़ील्ड प्रदर्शित नाम बना रहता है."
+        label: "देश कोड"
+        pattern: "दो अक्षर, ISO 3166-1 alpha-2 कोड (FR, ES, BE…)."
       label: पता
       street:
         label: सड़क
@@ -659,6 +663,21 @@ admin:
         center: केंद्र
         end: अंत
         start: प्रारंभ
+    organization:
+      hint: "संरचित डेटा में प्रकाशित संस्था की पहचान: नाम, लोगो, पता और संपर्क।"
+      label: "संगठन"
+    organization_type:
+      options:
+        Organization: "संगठन (सामान्य)"
+        Corporation: "कंपनी"
+        LocalBusiness: "स्थानीय व्यवसाय"
+        ProfessionalService: "व्यावसायिक सेवा"
+        LegalService: "विधिक सेवा"
+        MedicalOrganization: "चिकित्सा संगठन"
+        EducationalOrganization: "शैक्षणिक संस्थान"
+        NGO: "एनजीओ / संस्था"
+      hint: "संरचित डेटा के लिए संगठन का प्रकार: Organization, LocalBusiness, ProfessionalService, LegalService… किसी स्थान पर इसे भरने से वह संगठन का कार्यालय बन जाता है; खाली छोड़ने पर वह केवल एक स्थान रहता है."
+      label: Schema.org प्रकार
     parent:
       label: मूल पृष्ठ
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: किराया?
     required:
       label: आवश्यक
+    schema_email:
+      hint: "संरचित डेटा में ईमेल पते शामिल करता है। स्वचालित संग्रहण सीमित करने के लिए बंद करें।"
+      label: "ईमेल पते प्रकाशित करें?"
     scrollsnap:
       hint: स्क्रीन आकार जहाँ आइटम बगल में स्क्रॉल होते हैं
       label: क्षैतिज स्क्रॉल
@@ -920,6 +942,7 @@ admin:
       primary: प्राथमिक नेविगेशन
       secondary: माध्यमिक नेविगेशन
       social: सोशल नेविगेशन
+    schema: "संरचित डेटा – संगठन और schema.org"
     seo:
       label: वैश्विक एसईओ
       title: वेबसाइट का नाम

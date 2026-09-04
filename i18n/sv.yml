@@ -272,6 +272,10 @@ admin:
         label: Stad
       country:
         label: Land
+      country_code:
+        hint: "Landskod enligt ISO 3166-1 alpha-2 (FR, ES, BE…), används av strukturerade data. Fältet Land förblir den visade etiketten."
+        label: "Landskod"
+        pattern: "Två bokstäver, en ISO 3166-1 alpha-2-kod (FR, ES, BE…)."
       label: Adress
       street:
         label: Gata
@@ -659,6 +663,21 @@ admin:
         center: Centrera
         end: Slut
         start: Start
+    organization:
+      hint: "Organisationens identitet i de strukturerade data: namn, logotyp, adress och kontakt."
+      label: "Organisation"
+    organization_type:
+      options:
+        Organization: "Organisation (generisk)"
+        Corporation: "Företag"
+        LocalBusiness: "Lokalt företag"
+        ProfessionalService: "Professionell tjänst"
+        LegalService: "Juridisk tjänst"
+        MedicalOrganization: "Medicinsk organisation"
+        EducationalOrganization: "Utbildningsinstitution"
+        NGO: "Ideell organisation / förening"
+      hint: "Organisationstyp för strukturerade data: Organization, LocalBusiness, ProfessionalService, LegalService… På en plats gör ett ifyllt värde den till ett kontor för organisationen; lämnas det tomt förblir platsen bara en plats."
+      label: Schema.org-typ
     parent:
       label: Föräldrasida
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Hyra?
     required:
       label: Krävs
+    schema_email:
+      hint: "Tar med e-postadresser i de strukturerade data. Stäng av för att begränsa automatiserad insamling."
+      label: "Publicera e-postadresser?"
     scrollsnap:
       hint: Skärmstorlekar där objekten scrollar i sidled
       label: Horisontell scroll
@@ -920,6 +942,7 @@ admin:
       primary: Primär navigering
       secondary: Sekundär navigering
       social: Social navigering
+    schema: "Strukturerade data – Organisation och schema.org"
     seo:
       label: Global SEO
       title: Webbplatsnamn

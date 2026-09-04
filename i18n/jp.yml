@@ -272,6 +272,10 @@ admin:
         label: 市区町村
       country:
         label: 国
+      country_code:
+        hint: "ISO 3166-1 alpha-2 の国コード（FR, ES, BE…）。構造化データで使われます。上の「国」欄は表示用の名称のままです。"
+        label: "国コード"
+        pattern: "2 文字の ISO 3166-1 alpha-2 コード（FR, ES, BE…）。"
       label: 住所
       street:
         label: 番地
@@ -659,6 +663,21 @@ admin:
         center: 中央
         end: 終了
         start: 開始
+    organization:
+      hint: "構造化データに公開する組織の情報：名称・ロゴ・住所・連絡先。"
+      label: "組織"
+    organization_type:
+      options:
+        Organization: "組織（汎用）"
+        Corporation: "企業"
+        LocalBusiness: "地域ビジネス"
+        ProfessionalService: "専門サービス"
+        LegalService: "法務サービス"
+        MedicalOrganization: "医療機関"
+        EducationalOrganization: "教育機関"
+        NGO: "NGO・非営利団体"
+      hint: "構造化データ用の組織タイプ: Organization, LocalBusiness, ProfessionalService, LegalService… 場所に設定すると、その場所は組織の拠点になります。空のままなら単なる所在地として扱われます。"
+      label: schema.org のタイプ
     parent:
       label: 親ページ
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: 賃貸済み?
     required:
       label: 必須
+    schema_email:
+      hint: "構造化データにメールアドレスを含めます。自動収集を抑えたい場合はオフにしてください。"
+      label: "メールアドレスを公開しますか？"
     scrollsnap:
       hint: 項目が横スクロールする画面サイズ
       label: 横スクロール
@@ -920,6 +942,7 @@ admin:
       primary: プライマリナビゲーション
       secondary: セカンダリナビゲーション
       social: ソーシャルナビゲーション
+    schema: "構造化データ – 組織と schema.org"
     seo:
       label: グローバルSEO
       title: ウェブサイト名

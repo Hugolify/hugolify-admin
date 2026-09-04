@@ -272,6 +272,10 @@ admin:
         label: By
       country:
         label: Land
+      country_code:
+        hint: "Landkode etter ISO 3166-1 alpha-2 (FR, ES, BE…), brukt av de strukturerte dataene. Feltet Land forblir den viste teksten."
+        label: "Landkode"
+        pattern: "To bokstaver, en ISO 3166-1 alpha-2-kode (FR, ES, BE…)."
       label: Adresse
       street:
         label: Gate
@@ -659,6 +663,21 @@ admin:
         center: Midtstill
         end: Slutt
         start: Start
+    organization:
+      hint: "Organisasjonens identitet i de strukturerte dataene: navn, logo, adresse og kontakt."
+      label: "Organisasjon"
+    organization_type:
+      options:
+        Organization: "Organisasjon (generisk)"
+        Corporation: "Selskap"
+        LocalBusiness: "Lokal virksomhet"
+        ProfessionalService: "Profesjonell tjeneste"
+        LegalService: "Juridisk tjeneste"
+        MedicalOrganization: "Medisinsk organisasjon"
+        EducationalOrganization: "Utdanningsinstitusjon"
+        NGO: "NGO / forening"
+      hint: "Organisasjonstype for strukturerte data: Organization, LocalBusiness, ProfessionalService, LegalService… På et sted gjør en utfylt verdi det til et kontor for organisasjonen; står den tom, forblir stedet bare et sted."
+      label: Schema.org-type
     parent:
       label: Foreldreside
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Lei?
     required:
       label: Påkrevd
+    schema_email:
+      hint: "Tar med e-postadresser i de strukturerte dataene. Slå av for å begrense automatisert innsamling."
+      label: "Publisere e-postadresser?"
     scrollsnap:
       hint: Skjermstørrelser der elementene ruller sidelengs
       label: Horisontal rulling
@@ -920,6 +942,7 @@ admin:
       primary: Primærnavigasjon
       secondary: Sekundærnavigasjon
       social: Sosial navigasjon
+    schema: "Strukturerte data – Organisasjon og schema.org"
     seo:
       label: Global SEO
       title: Nettstednavn

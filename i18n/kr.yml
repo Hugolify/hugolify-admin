@@ -272,6 +272,10 @@ admin:
         label: 도시
       country:
         label: 국가
+      country_code:
+        hint: "ISO 3166-1 alpha-2 국가 코드(FR, ES, BE…). 구조화된 데이터에 사용됩니다. 위의 국가 필드는 표시용 이름으로 유지됩니다."
+        label: "국가 코드"
+        pattern: "두 글자의 ISO 3166-1 alpha-2 코드 (FR, ES, BE…)."
       label: 주소
       street:
         label: 거리
@@ -659,6 +663,21 @@ admin:
         center: 가운데
         end: 끝
         start: 시작
+    organization:
+      hint: "구조화된 데이터에 게시되는 조직 정보: 이름, 로고, 주소 및 연락처."
+      label: "조직"
+    organization_type:
+      options:
+        Organization: "조직 (일반)"
+        Corporation: "회사"
+        LocalBusiness: "지역 사업체"
+        ProfessionalService: "전문 서비스"
+        LegalService: "법률 서비스"
+        MedicalOrganization: "의료 기관"
+        EducationalOrganization: "교육 기관"
+        NGO: "NGO / 비영리 단체"
+      hint: "구조화된 데이터용 조직 유형: Organization, LocalBusiness, ProfessionalService, LegalService… 장소에 값을 지정하면 해당 장소가 조직의 사무소가 됩니다. 비워 두면 단순한 위치로 유지됩니다."
+      label: schema.org 유형
     parent:
       label: 상위 페이지
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: 임대됨?
     required:
       label: 필수
+    schema_email:
+      hint: "구조화된 데이터에 이메일 주소를 포함합니다. 자동 수집을 줄이려면 끄십시오."
+      label: "이메일 주소를 공개할까요?"
     scrollsnap:
       hint: 항목이 가로로 스크롤되는 화면 크기
       label: 가로 스크롤
@@ -920,6 +942,7 @@ admin:
       primary: 기본 내비게이션
       secondary: 보조 내비게이션
       social: 소셜 내비게이션
+    schema: "구조화된 데이터 – 조직 및 schema.org"
     seo:
       label: 글로벌 SEO
       title: 웹사이트 이름

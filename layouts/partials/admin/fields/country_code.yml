@@ -1,0 +1,12 @@
+{{ $regex := "^[A-Za-z]{2}$" }}
+{{ $message := i18n "admin.fields.address.country_code.pattern" }}
+{{ $pattern := dict "regex" $regex "message" $message }}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.address.country_code.label")
+  "hint" (i18n "admin.fields.address.country_code.hint")
+  "name" "country_code"
+  "pattern" $pattern
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

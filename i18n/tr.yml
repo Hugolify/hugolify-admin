@@ -272,6 +272,10 @@ admin:
         label: Şehir
       country:
         label: Ülke
+      country_code:
+        hint: "ISO 3166-1 alpha-2 ülke kodu (FR, ES, BE…), yapılandırılmış veriler tarafından kullanılır. Yukarıdaki Ülke alanı görüntülenen etiket olarak kalır."
+        label: "Ülke kodu"
+        pattern: "İki harf, ISO 3166-1 alpha-2 kodu (FR, ES, BE…)."
       label: Adres
       street:
         label: Sokak
@@ -659,6 +663,21 @@ admin:
         center: Orta
         end: Son
         start: Başlangıç
+    organization:
+      hint: "Yapılandırılmış verilerde yayımlanan kuruluş kimliği: ad, logo, adres ve iletişim."
+      label: "Kuruluş"
+    organization_type:
+      options:
+        Organization: "Kuruluş (genel)"
+        Corporation: "Şirket"
+        LocalBusiness: "Yerel işletme"
+        ProfessionalService: "Profesyonel hizmet"
+        LegalService: "Hukuki hizmet"
+        MedicalOrganization: "Sağlık kuruluşu"
+        EducationalOrganization: "Eğitim kurumu"
+        NGO: "STK / dernek"
+      hint: "Yapılandırılmış veriler için kuruluş türü: Organization, LocalBusiness, ProfessionalService, LegalService… Bir yer için doldurulduğunda o yer kuruluşun bir ofisi olur; boş bırakılırsa yalnızca bir konum olarak kalır."
+      label: Schema.org türü
     parent:
       label: Üst sayfa
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Kira?
     required:
       label: Gerekli
+    schema_email:
+      hint: "E-posta adreslerini yapılandırılmış verilere ekler. Otomatik toplamayı sınırlamak için kapatın."
+      label: "E-posta adresleri yayımlansın mı?"
     scrollsnap:
       hint: Öğelerin yana kaydığı ekran boyutları
       label: Yatay kaydırma
@@ -920,6 +942,7 @@ admin:
       primary: Birincil navigasyon
       secondary: İkincil navigasyon
       social: Sosyal navigasyon
+    schema: "Yapılandırılmış veriler – Kuruluş ve schema.org"
     seo:
       label: Küresel SEO
       title: Web sitesi adı

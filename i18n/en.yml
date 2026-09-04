@@ -268,6 +268,10 @@ admin:
         label: City
       country:
         label: Country
+      country_code:
+        hint: "ISO 3166-1 alpha-2 country code (FR, ES, BE…), used by the structured data. The Country field above stays the displayed label."
+        label: "Country code"
+        pattern: "Two letters, an ISO 3166-1 alpha-2 code (FR, ES, BE…)."
       label: Address
       street:
         label: Street
@@ -664,6 +668,21 @@ admin:
         center: Center
         end: End
         start: Start
+    organization:
+      hint: "Identity of the company published in the structured data: name, logo, address and contact."
+      label: "Organization"
+    organization_type:
+      options:
+        Organization: "Organization (generic)"
+        Corporation: "Company"
+        LocalBusiness: "Local business"
+        ProfessionalService: "Professional service"
+        LegalService: "Legal service"
+        MedicalOrganization: "Medical organization"
+        EducationalOrganization: "Educational organization"
+        NGO: "NGO / non-profit"
+      hint: "Organization type for structured data: Organization, LocalBusiness, ProfessionalService, LegalService… On a place, filling it makes that place an office of the organization; left empty, the place stays a plain location."
+      label: Schema.org type
     parent:
       label: Parent page
     pdf:
@@ -764,6 +783,9 @@ admin:
       label: Rent?
     required:
       label: Required
+    schema_email:
+      hint: "Includes email addresses in the structured data. Turn off to limit automated harvesting."
+      label: "Publish email addresses?"
     scrollsnap:
       hint: Screen sizes where the items scroll sideways
       label: Horizontal scroll
@@ -933,6 +955,7 @@ admin:
       primary: Primary navigation
       secondary: Secondary navigation
       social: Socials navigation
+    schema: "Structured data – Organization and schema.org"
     seo:
       label: Global SEO (Search Engine Optimization)
       title: Website name

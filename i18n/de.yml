@@ -272,6 +272,10 @@ admin:
         label: Stadt
       country:
         label: Land
+      country_code:
+        hint: "Ländercode nach ISO 3166-1 alpha-2 (FR, ES, BE…), für die strukturierten Daten. Das Feld Land bleibt die angezeigte Bezeichnung."
+        label: "Ländercode"
+        pattern: "Zwei Buchstaben, Code nach ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Adresse
       street:
         label: Straße
@@ -659,6 +663,21 @@ admin:
         center: Zentriert
         end: Ende
         start: Anfang
+    organization:
+      hint: "Identität des Unternehmens in den strukturierten Daten: Name, Logo, Adresse und Kontakt."
+      label: "Organisation"
+    organization_type:
+      options:
+        Organization: "Organisation (allgemein)"
+        Corporation: "Unternehmen"
+        LocalBusiness: "Lokales Unternehmen"
+        ProfessionalService: "Professionelle Dienstleistung"
+        LegalService: "Rechtsdienstleistung"
+        MedicalOrganization: "Medizinische Einrichtung"
+        EducationalOrganization: "Bildungseinrichtung"
+        NGO: "NRO / Verein"
+      hint: "Organisationstyp für strukturierte Daten: Organization, LocalBusiness, ProfessionalService, LegalService… Bei einem Ort macht ein ausgefüllter Wert daraus eine Niederlassung der Organisation; leer bleibt der Ort ein reiner Standort."
+      label: Schema.org-Typ
     parent:
       label: Übergeordnete Seite
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Vermietet?
     required:
       label: Erforderlich
+    schema_email:
+      hint: "Nimmt E-Mail-Adressen in die strukturierten Daten auf. Deaktivieren, um automatisiertes Sammeln zu begrenzen."
+      label: "E-Mail-Adressen veröffentlichen?"
     scrollsnap:
       hint: Bildschirmgrößen, auf denen die Elemente seitlich scrollen
       label: Horizontales Scrollen
@@ -920,6 +942,7 @@ admin:
       primary: Primäre Navigation
       secondary: Sekundäre Navigation
       social: Soziale Netzwerke Navigation
+    schema: "Strukturierte Daten – Organisation und schema.org"
     seo:
       label: Globales SEO
       title: Website-Name

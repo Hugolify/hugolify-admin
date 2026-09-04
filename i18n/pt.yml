@@ -272,6 +272,10 @@ admin:
         label: Cidade
       country:
         label: País
+      country_code:
+        hint: "Código do país ISO 3166-1 alpha-2 (FR, ES, BE…), usado pelos dados estruturados. O campo País continua a ser o rótulo apresentado."
+        label: "Código do país"
+        pattern: "Duas letras, código ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Endereço
       street:
         label: Rua
@@ -659,6 +663,21 @@ admin:
         center: Centro
         end: Fim
         start: Início
+    organization:
+      hint: "Identidade da entidade publicada nos dados estruturados: nome, logótipo, morada e contacto."
+      label: "Organização"
+    organization_type:
+      options:
+        Organization: "Organização (genérica)"
+        Corporation: "Sociedade"
+        LocalBusiness: "Negócio local"
+        ProfessionalService: "Serviço profissional"
+        LegalService: "Serviço jurídico"
+        MedicalOrganization: "Organização médica"
+        EducationalOrganization: "Estabelecimento de ensino"
+        NGO: "ONG / associação"
+      hint: "Tipo de organização para os dados estruturados: Organization, LocalBusiness, ProfessionalService, LegalService… Num local, preenchê-lo torna-o um escritório da organização; deixado vazio, o local continua a ser apenas uma localização."
+      label: Tipo schema.org
     parent:
       label: Página pai
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Alugar?
     required:
       label: Obrigatório
+    schema_email:
+      hint: "Inclui os endereços de e-mail nos dados estruturados. Desative para limitar a recolha automatizada."
+      label: "Publicar os endereços de e-mail?"
     scrollsnap:
       hint: Tamanhos de ecrã em que os elementos deslizam lateralmente
       label: Deslocamento horizontal
@@ -920,6 +942,7 @@ admin:
       primary: Navegação primária
       secondary: Navegação secundária
       social: Navegação social
+    schema: "Dados estruturados – Organização e schema.org"
     seo:
       label: SEO global
       title: Nome do website

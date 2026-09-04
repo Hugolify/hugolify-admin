@@ -272,6 +272,10 @@ admin:
         label: Város
       country:
         label: Ország
+      country_code:
+        hint: "Az ország ISO 3166-1 alpha-2 kódja (FR, ES, BE…), a strukturált adatokhoz. Az Ország mező marad a megjelenített felirat."
+        label: "Országkód"
+        pattern: "Két betű, ISO 3166-1 alpha-2 kód (FR, ES, BE…)."
       label: Cím
       street:
         label: Utca
@@ -659,6 +663,21 @@ admin:
         center: Közép
         end: Vége
         start: Kezdés
+    organization:
+      hint: "A szervezet azonosítása a strukturált adatokban: név, logó, cím és kapcsolat."
+      label: "Szervezet"
+    organization_type:
+      options:
+        Organization: "Szervezet (általános)"
+        Corporation: "Vállalat"
+        LocalBusiness: "Helyi vállalkozás"
+        ProfessionalService: "Szakmai szolgáltatás"
+        LegalService: "Jogi szolgáltatás"
+        MedicalOrganization: "Egészségügyi szervezet"
+        EducationalOrganization: "Oktatási intézmény"
+        NGO: "NGO / egyesület"
+      hint: "A szervezet típusa a strukturált adatokhoz: Organization, LocalBusiness, ProfessionalService, LegalService… Egy helyszínnél a kitöltése a szervezet irodájává teszi; üresen hagyva a helyszín pusztán egy hely marad."
+      label: Schema.org típus
     parent:
       label: Szülő oldal
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Bérlés?
     required:
       label: Kötelező
+    schema_email:
+      hint: "Az e-mail-címeket is beleveszi a strukturált adatokba. Kapcsolja ki az automatikus gyűjtés korlátozásához."
+      label: "Közzéteszi az e-mail-címeket?"
     scrollsnap:
       hint: Képernyőméretek, ahol az elemek oldalirányban görgethetők
       label: Vízszintes görgetés
@@ -920,6 +942,7 @@ admin:
       primary: Elsődleges navigáció
       secondary: Másodlagos navigáció
       social: Közösségi navigáció
+    schema: "Strukturált adatok – Szervezet és schema.org"
     seo:
       label: Globális SEO
       title: Weboldal neve

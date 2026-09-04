@@ -272,6 +272,10 @@ admin:
         label: Město
       country:
         label: Země
+      country_code:
+        hint: "Kód země podle ISO 3166-1 alpha-2 (FR, ES, BE…), používaný strukturovanými daty. Pole Země zůstává zobrazovaným popiskem."
+        label: "Kód země"
+        pattern: "Dvě písmena, kód ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Adresa
       street:
         label: Ulice
@@ -659,6 +663,21 @@ admin:
         center: Střed
         end: Konec
         start: Začátek
+    organization:
+      hint: "Identita subjektu ve strukturovaných datech: název, logo, adresa a kontakt."
+      label: "Organizace"
+    organization_type:
+      options:
+        Organization: "Organizace (obecná)"
+        Corporation: "Společnost"
+        LocalBusiness: "Místní podnik"
+        ProfessionalService: "Profesionální služba"
+        LegalService: "Právní služba"
+        MedicalOrganization: "Zdravotnická organizace"
+        EducationalOrganization: "Vzdělávací instituce"
+        NGO: "NNO / spolek"
+      hint: "Typ organizace pro strukturovaná data: Organization, LocalBusiness, ProfessionalService, LegalService… U místa: vyplněním se z něj stane pobočka organizace; ponecháte-li prázdné, zůstane běžným místem."
+      label: Typ schema.org
     parent:
       label: Nadřazená stránka
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Pronájem?
     required:
       label: Povinné
+    schema_email:
+      hint: "Zahrne e-mailové adresy do strukturovaných dat. Vypněte pro omezení automatického sběru."
+      label: "Publikovat e-mailové adresy?"
     scrollsnap:
       hint: Velikosti obrazovky, kde se položky posouvají do stran
       label: Vodorovné posouvání
@@ -920,6 +942,7 @@ admin:
       primary: Primární navigace
       secondary: Sekundární navigace
       social: Sociální navigace
+    schema: "Strukturovaná data – Organizace a schema.org"
     seo:
       label: Globální SEO
       title: Název webové stránky

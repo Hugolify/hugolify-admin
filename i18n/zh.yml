@@ -272,6 +272,10 @@ admin:
         label: 城市
       country:
         label: 国家
+      country_code:
+        hint: "ISO 3166-1 alpha-2 国家代码（FR, ES, BE…），供结构化数据使用。上方的「国家」字段仍是显示用名称。"
+        label: "国家代码"
+        pattern: "两个字母的 ISO 3166-1 alpha-2 代码（FR、ES、BE…）。"
       label: 地址
       street:
         label: 街道
@@ -659,6 +663,21 @@ admin:
         center: 居中
         end: 结束
         start: 开始
+    organization:
+      hint: "在结构化数据中发布的机构信息：名称、标识、地址和联系方式。"
+      label: "组织"
+    organization_type:
+      options:
+        Organization: "组织（通用）"
+        Corporation: "公司"
+        LocalBusiness: "本地商户"
+        ProfessionalService: "专业服务"
+        LegalService: "法律服务"
+        MedicalOrganization: "医疗机构"
+        EducationalOrganization: "教育机构"
+        NGO: "非政府组织 / 协会"
+      hint: "结构化数据的组织类型：Organization, LocalBusiness, ProfessionalService, LegalService… 用于地点时，填写后该地点会成为组织的办公点；留空则仅作为普通位置。"
+      label: schema.org 类型
     parent:
       label: 父页面
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: 租赁?
     required:
       label: 必填
+    schema_email:
+      hint: "将电子邮件地址包含在结构化数据中。如需减少自动抓取，请关闭。"
+      label: "是否发布电子邮件地址？"
     scrollsnap:
       hint: 元素横向滚动的屏幕尺寸
       label: 横向滚动
@@ -920,6 +942,7 @@ admin:
       primary: 主导航
       secondary: 次导航
       social: 社交导航
+    schema: "结构化数据 – 组织与 schema.org"
     seo:
       label: 全局SEO
       title: 网站名称

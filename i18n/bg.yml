@@ -272,6 +272,10 @@ admin:
         label: Град
       country:
         label: Държава
+      country_code:
+        hint: "Код на държавата по ISO 3166-1 alpha-2 (FR, ES, BE…), използван от структурираните данни. Полето Държава остава показваният надпис."
+        label: "Код на държавата"
+        pattern: "Две букви, код по ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Адрес
       street:
         label: Улица
@@ -659,6 +663,21 @@ admin:
         center: Център
         end: Край
         start: Начало
+    organization:
+      hint: "Идентичност на структурата в структурираните данни: име, лого, адрес и контакти."
+      label: "Организация"
+    organization_type:
+      options:
+        Organization: "Организация (обща)"
+        Corporation: "Дружество"
+        LocalBusiness: "Местен бизнес"
+        ProfessionalService: "Професионална услуга"
+        LegalService: "Правна услуга"
+        MedicalOrganization: "Медицинска организация"
+        EducationalOrganization: "Учебно заведение"
+        NGO: "НПО / сдружение"
+      hint: "Тип на организацията за структурираните данни: Organization, LocalBusiness, ProfessionalService, LegalService… В контекста на място: попълването го прави офис на организацията; оставено празно, мястото си остава просто местоположение."
+      label: Тип schema.org
     parent:
       label: Родителска страница
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Наем?
     required:
       label: Задължително
+    schema_email:
+      hint: "Включва имейл адресите в структурираните данни. Изключете, за да ограничите автоматичното събиране."
+      label: "Публикуване на имейл адресите?"
     scrollsnap:
       hint: Размери на екрана, при които елементите се превъртат настрани
       label: Хоризонтално превъртане
@@ -920,6 +942,7 @@ admin:
       primary: Основна навигация
       secondary: Вторична навигация
       social: Социална навигация
+    schema: "Структурирани данни – Организация и schema.org"
     seo:
       label: Глобално SEO
       title: Име на уебсайта

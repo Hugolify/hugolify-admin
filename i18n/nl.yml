@@ -272,6 +272,10 @@ admin:
         label: Stad
       country:
         label: Land
+      country_code:
+        hint: "ISO 3166-1 alpha-2-landcode (FR, ES, BE…), gebruikt door de gestructureerde gegevens. Het veld Land blijft het getoonde label."
+        label: "Landcode"
+        pattern: "Twee letters, een ISO 3166-1 alpha-2-code (FR, ES, BE…)."
       label: Adres
       street:
         label: Straat
@@ -659,6 +663,21 @@ admin:
         center: Midden
         end: Einde
         start: Begin
+    organization:
+      hint: "Identiteit van de organisatie in de gestructureerde gegevens: naam, logo, adres en contact."
+      label: "Organisatie"
+    organization_type:
+      options:
+        Organization: "Organisatie (algemeen)"
+        Corporation: "Onderneming"
+        LocalBusiness: "Lokaal bedrijf"
+        ProfessionalService: "Professionele dienst"
+        LegalService: "Juridische dienst"
+        MedicalOrganization: "Medische organisatie"
+        EducationalOrganization: "Onderwijsinstelling"
+        NGO: "Ngo / vereniging"
+      hint: "Organisatietype voor gestructureerde gegevens: Organization, LocalBusiness, ProfessionalService, LegalService… Bij een locatie maakt een ingevulde waarde er een vestiging van de organisatie van; leeg gelaten blijft het een gewone locatie."
+      label: Schema.org-type
     parent:
       label: Bovenliggende pagina
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Huren?
     required:
       label: Verplicht
+    schema_email:
+      hint: "Neemt e-mailadressen op in de gestructureerde gegevens. Schakel uit om geautomatiseerd verzamelen te beperken."
+      label: "E-mailadressen publiceren?"
     scrollsnap:
       hint: Schermformaten waarop de items zijwaarts scrollen
       label: Horizontaal scrollen
@@ -920,6 +942,7 @@ admin:
       primary: Primaire navigatie
       secondary: Secundaire navigatie
       social: Sociale navigatie
+    schema: "Gestructureerde gegevens – Organisatie en schema.org"
     seo:
       label: Algemene SEO
       title: Websitenaam

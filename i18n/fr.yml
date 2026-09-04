@@ -270,6 +270,10 @@ admin:
         label: Ville
       country:
         label: Pays
+      country_code:
+        hint: "Code ISO 3166-1 alpha-2 du pays (FR, ES, BE…), utilisé par les données structurées. Le champ Pays reste le libellé affiché."
+        label: "Code pays"
+        pattern: "Deux lettres, code ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Addresse
       street:
         label: Rue
@@ -662,6 +666,21 @@ admin:
         center: Center
         end: End
         start: Start
+    organization:
+      hint: "Identité de la structure publiée dans les données structurées : nom, logo, adresse et contact."
+      label: "Organisation"
+    organization_type:
+      options:
+        Organization: "Organisation (générique)"
+        Corporation: "Société"
+        LocalBusiness: "Commerce de proximité"
+        ProfessionalService: "Service professionnel"
+        LegalService: "Service juridique"
+        MedicalOrganization: "Organisation médicale"
+        EducationalOrganization: "Établissement d’enseignement"
+        NGO: "ONG / association"
+      hint: "Type d’organisation pour les données structurées : Organization, LocalBusiness, ProfessionalService, LegalService… Sur un lieu, le renseigner en fait un bureau de la structure ; laissé vide, le lieu reste un simple lieu."
+      label: Type schema.org
     parent:
       label: Page parente
     pdf:
@@ -762,6 +781,9 @@ admin:
       label: Loué ?
     required:
       label: Requis
+    schema_email:
+      hint: "Inclut les adresses e-mail dans les données structurées. À désactiver pour limiter la collecte automatisée."
+      label: "Publier les adresses e-mail ?"
     scrollsnap:
       hint: Tailles d’écran où les éléments défilent sur le côté
       label: Défilement horizontal
@@ -931,6 +953,7 @@ admin:
       primary: Navigation principale
       secondary: Navigation secondaire
       social: Navigation réseaux sociaux
+    schema: "Données structurées – Organisation et schema.org"
     seo:
       label: Référencement – SEO (Search Engine Optimization) global
       title: Nom du site

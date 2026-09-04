@@ -272,6 +272,10 @@ admin:
         label: Ciudad
       country:
         label: País
+      country_code:
+        hint: "Código de país ISO 3166-1 alpha-2 (FR, ES, BE…), utilizado por los datos estructurados. El campo País sigue siendo la etiqueta mostrada."
+        label: "Código de país"
+        pattern: "Dos letras, código ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Dirección
       street:
         label: Calle
@@ -659,6 +663,21 @@ admin:
         center: Centro
         end: Final
         start: Inicio
+    organization:
+      hint: "Identidad de la entidad publicada en los datos estructurados: nombre, logotipo, dirección y contacto."
+      label: "Organización"
+    organization_type:
+      options:
+        Organization: "Organización (genérica)"
+        Corporation: "Sociedad"
+        LocalBusiness: "Negocio local"
+        ProfessionalService: "Servicio profesional"
+        LegalService: "Servicio jurídico"
+        MedicalOrganization: "Organización médica"
+        EducationalOrganization: "Centro educativo"
+        NGO: "ONG / asociación"
+      hint: "Tipo de organización para los datos estructurados: Organization, LocalBusiness, ProfessionalService, LegalService… En un lugar, rellenarlo lo convierte en una oficina de la organización; si se deja vacío, el lugar sigue siendo una simple ubicación."
+      label: Tipo schema.org
     parent:
       label: Página padre
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: ¿Alquilado?
     required:
       label: Requerido
+    schema_email:
+      hint: "Incluye las direcciones de correo en los datos estructurados. Desactívalo para limitar la recolección automatizada."
+      label: "¿Publicar las direcciones de correo?"
     scrollsnap:
       hint: Tamaños de pantalla en los que los elementos se desplazan lateralmente
       label: Desplazamiento horizontal
@@ -920,6 +942,7 @@ admin:
       primary: Navegación primaria
       secondary: Navegación secundaria
       social: Navegación de redes sociales
+    schema: "Datos estructurados – Organización y schema.org"
     seo:
       label: SEO global
       title: Nombre del sitio web

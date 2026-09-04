@@ -272,6 +272,10 @@ admin:
         label: Kota
       country:
         label: Negara
+      country_code:
+        hint: "Kode negara ISO 3166-1 alpha-2 (FR, ES, BE…), dipakai oleh data terstruktur. Kolom Negara tetap menjadi label yang ditampilkan."
+        label: "Kode negara"
+        pattern: "Dua huruf, kode ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Alamat
       street:
         label: Jalan
@@ -659,6 +663,21 @@ admin:
         center: Tengah
         end: Akhir
         start: Awal
+    organization:
+      hint: "Identitas badan usaha dalam data terstruktur: nama, logo, alamat, dan kontak."
+      label: "Organisasi"
+    organization_type:
+      options:
+        Organization: "Organisasi (umum)"
+        Corporation: "Perusahaan"
+        LocalBusiness: "Bisnis lokal"
+        ProfessionalService: "Layanan profesional"
+        LegalService: "Layanan hukum"
+        MedicalOrganization: "Organisasi medis"
+        EducationalOrganization: "Lembaga pendidikan"
+        NGO: "LSM / organisasi nirlaba"
+      hint: "Tipe organisasi untuk data terstruktur: Organization, LocalBusiness, ProfessionalService, LegalService… Pada sebuah lokasi, mengisinya menjadikan lokasi tersebut kantor organisasi; jika dikosongkan, lokasi tetap sekadar tempat."
+      label: Tipe schema.org
     parent:
       label: Halaman Induk
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Sewa?
     required:
       label: Wajib
+    schema_email:
+      hint: "Menyertakan alamat email dalam data terstruktur. Matikan untuk membatasi pengumpulan otomatis."
+      label: "Publikasikan alamat email?"
     scrollsnap:
       hint: Ukuran layar saat item bergulir ke samping
       label: Gulir horizontal
@@ -920,6 +942,7 @@ admin:
       primary: Navigasi Utama
       secondary: Navigasi Sekunder
       social: Navigasi Sosial
+    schema: "Data terstruktur – Organisasi dan schema.org"
     seo:
       label: SEO Global
       title: Nama Situs Web

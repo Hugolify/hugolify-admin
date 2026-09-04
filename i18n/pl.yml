@@ -272,6 +272,10 @@ admin:
         label: Miasto
       country:
         label: Kraj
+      country_code:
+        hint: "Kod kraju ISO 3166-1 alpha-2 (FR, ES, BE…), używany przez dane strukturalne. Pole Kraj pozostaje wyświetlaną etykietą."
+        label: "Kod kraju"
+        pattern: "Dwie litery, kod ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Adres
       street:
         label: Ulica
@@ -659,6 +663,21 @@ admin:
         center: Środek
         end: Koniec
         start: Początek
+    organization:
+      hint: "Tożsamość podmiotu w danych strukturalnych: nazwa, logo, adres i kontakt."
+      label: "Organizacja"
+    organization_type:
+      options:
+        Organization: "Organizacja (ogólna)"
+        Corporation: "Spółka"
+        LocalBusiness: "Firma lokalna"
+        ProfessionalService: "Usługa profesjonalna"
+        LegalService: "Usługa prawna"
+        MedicalOrganization: "Organizacja medyczna"
+        EducationalOrganization: "Placówka edukacyjna"
+        NGO: "NGO / stowarzyszenie"
+      hint: "Typ organizacji dla danych strukturalnych: Organization, LocalBusiness, ProfessionalService, LegalService… W przypadku miejsca wypełnienie czyni z niego biuro organizacji; pozostawione puste, miejsce pozostaje zwykłą lokalizacją."
+      label: Typ schema.org
     parent:
       label: Strona nadrzędna
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Wynajem?
     required:
       label: Wymagane
+    schema_email:
+      hint: "Dołącza adresy e-mail do danych strukturalnych. Wyłącz, aby ograniczyć automatyczne zbieranie."
+      label: "Publikować adresy e-mail?"
     scrollsnap:
       hint: Rozmiary ekranu, na których elementy przewijają się w poziomie
       label: Przewijanie poziome
@@ -920,6 +942,7 @@ admin:
       primary: Nawigacja główna
       secondary: Nawigacja drugorzędna
       social: Nawigacja społecznościowa
+    schema: "Dane strukturalne – Organizacja i schema.org"
     seo:
       label: Globalne SEO
       title: Nazwa witryny

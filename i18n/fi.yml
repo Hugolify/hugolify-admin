@@ -274,6 +274,10 @@ admin:
         label: Kaupunki
       country:
         label: Maa
+      country_code:
+        hint: "Maan ISO 3166-1 alpha-2 -koodi (FR, ES, BE…), jota rakenteinen data käyttää. Maa-kenttä pysyy näytettävänä nimenä."
+        label: "Maakoodi"
+        pattern: "Kaksi kirjainta, ISO 3166-1 alpha-2 -koodi (FR, ES, BE…)."
       label: Osoite
       street:
         label: Katuosoite
@@ -655,6 +659,21 @@ admin:
         center: Keski
         end: Loppu
         start: Alku
+    organization:
+      hint: "Organisaation tiedot rakenteisessa datassa: nimi, logo, osoite ja yhteystiedot."
+      label: "Organisaatio"
+    organization_type:
+      options:
+        Organization: "Organisaatio (yleinen)"
+        Corporation: "Yritys"
+        LocalBusiness: "Paikallinen yritys"
+        ProfessionalService: "Ammattipalvelu"
+        LegalService: "Lakipalvelu"
+        MedicalOrganization: "Terveydenhuollon organisaatio"
+        EducationalOrganization: "Oppilaitos"
+        NGO: "Kansalaisjärjestö / yhdistys"
+      hint: "Organisaation tyyppi rakenteista dataa varten: Organization, LocalBusiness, ProfessionalService, LegalService… Paikan kohdalla arvon täyttäminen tekee siitä organisaation toimipisteen; tyhjänä paikka pysyy pelkkänä sijaintina."
+      label: Schema.org-tyyppi
     parent:
       label: Ylätason sivu
     pdf:
@@ -755,6 +774,9 @@ admin:
       label: Vuokra?
     required:
       label: Vaadittu
+    schema_email:
+      hint: "Sisällyttää sähköpostiosoitteet rakenteiseen dataan. Poista käytöstä rajoittaaksesi automaattista keräämistä."
+      label: "Julkaistaanko sähköpostiosoitteet?"
     scrollsnap:
       hint: Näyttökoot, joissa elementit vierivät sivusuunnassa
       label: Vaakasuora vieritys
@@ -920,6 +942,7 @@ admin:
       primary: Ensisijainen navigaatio
       secondary: Toissijainen navigaatio
       social: Sosiaalisen median navigaatio
+    schema: "Rakenteinen data – Organisaatio ja schema.org"
     seo:
       label: Yleinen SEO
       title: Verkkosivun nimi

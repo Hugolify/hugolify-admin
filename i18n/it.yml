@@ -272,6 +272,10 @@ admin:
         label: Città
       country:
         label: Paese
+      country_code:
+        hint: "Codice paese ISO 3166-1 alpha-2 (FR, ES, BE…), usato dai dati strutturati. Il campo Paese resta l’etichetta visualizzata."
+        label: "Codice paese"
+        pattern: "Due lettere, codice ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Indirizzo
       street:
         label: Via
@@ -659,6 +663,21 @@ admin:
         center: Centro
         end: Fine
         start: Inizio
+    organization:
+      hint: "Identità della struttura pubblicata nei dati strutturati: nome, logo, indirizzo e contatti."
+      label: "Organizzazione"
+    organization_type:
+      options:
+        Organization: "Organizzazione (generica)"
+        Corporation: "Società"
+        LocalBusiness: "Attività locale"
+        ProfessionalService: "Servizio professionale"
+        LegalService: "Servizio legale"
+        MedicalOrganization: "Organizzazione medica"
+        EducationalOrganization: "Istituto scolastico"
+        NGO: "ONG / associazione"
+      hint: "Tipo di organizzazione per i dati strutturati: Organization, LocalBusiness, ProfessionalService, LegalService… Su un luogo, compilarlo lo rende una sede dell’organizzazione; lasciato vuoto, il luogo resta una semplice località."
+      label: Tipo schema.org
     parent:
       label: Pagina padre
     pdf:
@@ -759,6 +778,9 @@ admin:
       label: Affittato?
     required:
       label: Richiesto
+    schema_email:
+      hint: "Include gli indirizzi e-mail nei dati strutturati. Disattiva per limitare la raccolta automatizzata."
+      label: "Pubblicare gli indirizzi e-mail?"
     scrollsnap:
       hint: Dimensioni dello schermo in cui gli elementi scorrono lateralmente
       label: Scorrimento orizzontale
@@ -920,6 +942,7 @@ admin:
       primary: Navigazione primaria
       secondary: Navigazione secondaria
       social: Navigazione social
+    schema: "Dati strutturati – Organizzazione e schema.org"
     seo:
       label: SEO globale
       title: Nome del sito web
