@@ -666,18 +666,6 @@ admin:
     organization:
       hint: "構造化データに公開する組織の情報：名称・ロゴ・住所・連絡先。"
       label: "組織"
-    organization_type:
-      options:
-        Organization: "組織（汎用）"
-        Corporation: "企業"
-        LocalBusiness: "地域ビジネス"
-        ProfessionalService: "専門サービス"
-        LegalService: "法務サービス"
-        MedicalOrganization: "医療機関"
-        EducationalOrganization: "教育機関"
-        NGO: "NGO・非営利団体"
-      hint: "構造化データ用の組織タイプ: Organization, LocalBusiness, ProfessionalService, LegalService… 場所に設定すると、その場所は組織の拠点になります。空のままなら単なる所在地として扱われます。"
-      label: schema.org のタイプ
     parent:
       label: 親ページ
     pdf:
@@ -781,6 +769,27 @@ admin:
     schema_email:
       hint: "構造化データにメールアドレスを含めます。自動収集を抑えたい場合はオフにしてください。"
       label: "メールアドレスを公開しますか？"
+    schema:
+      hint: "このページが構造化データでどう記述されるか。"
+      label: "構造化データ"
+    schema_type:
+      options:
+        Organization: "組織（汎用）"
+        Corporation: "企業"
+        LocalBusiness: "地域ビジネス"
+        ProfessionalService: "専門サービス"
+        LegalService: "法務サービス"
+        MedicalOrganization: "医療機関"
+        EducationalOrganization: "教育機関"
+        NGO: "NGO・非営利団体"
+        Place: "場所（汎用）"
+        LandmarksOrHistoricalBuildings: "名所・歴史的建造物"
+        TouristAttraction: "観光名所"
+        CivicStructure: "公共施設"
+        Accommodation: "宿泊施設"
+        Residence: "住居"
+      hint: "エンティティの schema.org タイプ。Organization のサブタイプなら拠点、Place のサブタイプなら単なる場所として扱われます。"
+      label: "schema.org のタイプ"
     scrollsnap:
       hint: 項目が横スクロールする画面サイズ
       label: 横スクロール

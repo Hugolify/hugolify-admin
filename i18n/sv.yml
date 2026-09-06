@@ -666,18 +666,6 @@ admin:
     organization:
       hint: "Organisationens identitet i de strukturerade data: namn, logotyp, adress och kontakt."
       label: "Organisation"
-    organization_type:
-      options:
-        Organization: "Organisation (generisk)"
-        Corporation: "Företag"
-        LocalBusiness: "Lokalt företag"
-        ProfessionalService: "Professionell tjänst"
-        LegalService: "Juridisk tjänst"
-        MedicalOrganization: "Medicinsk organisation"
-        EducationalOrganization: "Utbildningsinstitution"
-        NGO: "Ideell organisation / förening"
-      hint: "Organisationstyp för strukturerade data: Organization, LocalBusiness, ProfessionalService, LegalService… På en plats gör ett ifyllt värde den till ett kontor för organisationen; lämnas det tomt förblir platsen bara en plats."
-      label: Schema.org-typ
     parent:
       label: Föräldrasida
     pdf:
@@ -781,6 +769,27 @@ admin:
     schema_email:
       hint: "Tar med e-postadresser i de strukturerade data. Stäng av för att begränsa automatiserad insamling."
       label: "Publicera e-postadresser?"
+    schema:
+      hint: "Hur den här sidan beskriver sig själv i de strukturerade data."
+      label: "Strukturerade data"
+    schema_type:
+      options:
+        Organization: "Organisation (generisk)"
+        Corporation: "Företag"
+        LocalBusiness: "Lokalt företag"
+        ProfessionalService: "Professionell tjänst"
+        LegalService: "Juridisk tjänst"
+        MedicalOrganization: "Medicinsk organisation"
+        EducationalOrganization: "Utbildningsinstitution"
+        NGO: "Ideell organisation / förening"
+        Place: "Plats (generisk)"
+        LandmarksOrHistoricalBuildings: "Landmärke eller historisk byggnad"
+        TouristAttraction: "Turistattraktion"
+        CivicStructure: "Offentlig byggnad"
+        Accommodation: "Boende"
+        Residence: "Bostad"
+      hint: "Schema.org-typ för entiteten. En Organization-undertyp gör platsen till ett kontor; en Place-undertyp låter den vara en plats."
+      label: "Schema.org-typ"
     scrollsnap:
       hint: Skärmstorlekar där objekten scrollar i sidled
       label: Horisontell scroll

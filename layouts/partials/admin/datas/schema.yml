@@ -1,0 +1,13 @@
+{{- $fields := slice "organization" "schema_email" -}}
+{
+  label: '{{ i18n "admin.files.schema" }}',
+  name: 'schema',
+  file: 'data/schema.yml',
+  {{/* Translated like every other file of the collection. An organization is
+       a single entity all the same — one address, one phone, one @id — so a
+       locale only needs to carry what it actually changes: the theme falls
+       back on the default language for the rest, through
+       func/GetSchemaData.html. */}}
+  i18n: true,
+  {{- partial "admin/fields/_fields.yml" $fields -}}
+}

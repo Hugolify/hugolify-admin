@@ -1,0 +1,18 @@
+{{/* Structured data of a page.
+
+     How the page describes itself in schema.org terms, without claiming to be
+     anything else: a place carries its address and contact where they are
+     displayed, and only what the markup needs lives here.
+*/}}
+{{- $fields := slice "schema_type" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.schema.label")
+  "hint" (i18n "admin.fields.schema.hint")
+  "name" "schema"
+  "collapsed" true
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

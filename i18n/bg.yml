@@ -666,18 +666,6 @@ admin:
     organization:
       hint: "Идентичност на структурата в структурираните данни: име, лого, адрес и контакти."
       label: "Организация"
-    organization_type:
-      options:
-        Organization: "Организация (обща)"
-        Corporation: "Дружество"
-        LocalBusiness: "Местен бизнес"
-        ProfessionalService: "Професионална услуга"
-        LegalService: "Правна услуга"
-        MedicalOrganization: "Медицинска организация"
-        EducationalOrganization: "Учебно заведение"
-        NGO: "НПО / сдружение"
-      hint: "Тип на организацията за структурираните данни: Organization, LocalBusiness, ProfessionalService, LegalService… В контекста на място: попълването го прави офис на организацията; оставено празно, мястото си остава просто местоположение."
-      label: Тип schema.org
     parent:
       label: Родителска страница
     pdf:
@@ -781,6 +769,27 @@ admin:
     schema_email:
       hint: "Включва имейл адресите в структурираните данни. Изключете, за да ограничите автоматичното събиране."
       label: "Публикуване на имейл адресите?"
+    schema:
+      hint: "Как тази страница се описва в структурираните данни."
+      label: "Структурирани данни"
+    schema_type:
+      options:
+        Organization: "Организация (обща)"
+        Corporation: "Дружество"
+        LocalBusiness: "Местен бизнес"
+        ProfessionalService: "Професионална услуга"
+        LegalService: "Правна услуга"
+        MedicalOrganization: "Медицинска организация"
+        EducationalOrganization: "Учебно заведение"
+        NGO: "НПО / сдружение"
+        Place: "Място (общо)"
+        LandmarksOrHistoricalBuildings: "Забележителност или историческа сграда"
+        TouristAttraction: "Туристическа атракция"
+        CivicStructure: "Обществена сграда"
+        Accommodation: "Настаняване"
+        Residence: "Жилище"
+      hint: "Тип schema.org на обекта. Подтип на Organization прави мястото офис на структурата; подтип на Place го оставя обикновено място."
+      label: "Тип schema.org"
     scrollsnap:
       hint: Размери на екрана, при които елементите се превъртат настрани
       label: Хоризонтално превъртане

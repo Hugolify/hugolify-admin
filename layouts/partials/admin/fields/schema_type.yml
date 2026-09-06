@@ -1,0 +1,29 @@
+{{/* Schema.org type, for the organization and for a place alike.
+
+     Written as `type`, always nested — under `organization` in data/schema.yml,
+     under `schema` on a page — because Hugo reserves a top level `type` in
+     front matter to select the content type.
+
+     Duplicated rather than translated: an entity has one type, and on a place
+     it decides the role — an organization subtype makes it an office, anything
+     else a location. Left empty, the theme falls back on Organization for the
+     site and on Place for a page.
+
+     Options come from the theme, so the select and the template reading it
+     cannot drift apart.
+*/}}
+{{- $options := slice "Organization" -}}
+{{- if templates.Exists "partials/func/GetSchemaTypes.html" -}}
+  {{- $options = (partial "func/GetSchemaTypes.html").all -}}
+{{- end -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.schema_type.label")
+  "hint" (i18n "admin.fields.schema_type.hint")
+  "name" "type"
+  "i18n" "duplicate"
+  "options" $options
+  "label_options" "admin.fields.schema_type.options"
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

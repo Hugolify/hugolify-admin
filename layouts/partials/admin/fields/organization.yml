@@ -1,0 +1,17 @@
+{{- $fields := slice 
+  "name" 
+  "schema_type" 
+  "image" 
+  (dict "address" (dict "is_schema_only" true)) 
+  (dict "contact" (dict "fields" (slice "email" "phone" "fax" "socials"))) -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict 
+  "label" (i18n "admin.fields.organization.label")
+  "hint" (i18n "admin.fields.organization.hint")
+  "name" "organization"
+  "collapsed" false
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

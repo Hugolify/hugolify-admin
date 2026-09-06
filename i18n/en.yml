@@ -671,18 +671,6 @@ admin:
     organization:
       hint: "Identity of the company published in the structured data: name, logo, address and contact."
       label: "Organization"
-    organization_type:
-      options:
-        Organization: "Organization (generic)"
-        Corporation: "Company"
-        LocalBusiness: "Local business"
-        ProfessionalService: "Professional service"
-        LegalService: "Legal service"
-        MedicalOrganization: "Medical organization"
-        EducationalOrganization: "Educational organization"
-        NGO: "NGO / non-profit"
-      hint: "Organization type for structured data: Organization, LocalBusiness, ProfessionalService, LegalService… On a place, filling it makes that place an office of the organization; left empty, the place stays a plain location."
-      label: Schema.org type
     parent:
       label: Parent page
     pdf:
@@ -786,6 +774,27 @@ admin:
     schema_email:
       hint: "Includes email addresses in the structured data. Turn off to limit automated harvesting."
       label: "Publish email addresses?"
+    schema:
+      hint: "How this page describes itself in the structured data."
+      label: "Structured data"
+    schema_type:
+      options:
+        Organization: "Organization (generic)"
+        Corporation: "Company"
+        LocalBusiness: "Local business"
+        ProfessionalService: "Professional service"
+        LegalService: "Legal service"
+        MedicalOrganization: "Medical organization"
+        EducationalOrganization: "Educational organization"
+        NGO: "NGO / non-profit"
+        Place: "Place (generic)"
+        LandmarksOrHistoricalBuildings: "Landmark or historical building"
+        TouristAttraction: "Tourist attraction"
+        CivicStructure: "Civic structure"
+        Accommodation: "Accommodation"
+        Residence: "Residence"
+      hint: "Schema.org type of the entity. An Organization subtype makes a place an office of the organization; a Place subtype leaves it a location."
+      label: "Schema.org type"
     scrollsnap:
       hint: Screen sizes where the items scroll sideways
       label: Horizontal scroll

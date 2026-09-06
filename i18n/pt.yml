@@ -666,18 +666,6 @@ admin:
     organization:
       hint: "Identidade da entidade publicada nos dados estruturados: nome, logótipo, morada e contacto."
       label: "Organização"
-    organization_type:
-      options:
-        Organization: "Organização (genérica)"
-        Corporation: "Sociedade"
-        LocalBusiness: "Negócio local"
-        ProfessionalService: "Serviço profissional"
-        LegalService: "Serviço jurídico"
-        MedicalOrganization: "Organização médica"
-        EducationalOrganization: "Estabelecimento de ensino"
-        NGO: "ONG / associação"
-      hint: "Tipo de organização para os dados estruturados: Organization, LocalBusiness, ProfessionalService, LegalService… Num local, preenchê-lo torna-o um escritório da organização; deixado vazio, o local continua a ser apenas uma localização."
-      label: Tipo schema.org
     parent:
       label: Página pai
     pdf:
@@ -781,6 +769,27 @@ admin:
     schema_email:
       hint: "Inclui os endereços de e-mail nos dados estruturados. Desative para limitar a recolha automatizada."
       label: "Publicar os endereços de e-mail?"
+    schema:
+      hint: "Como esta página se descreve nos dados estruturados."
+      label: "Dados estruturados"
+    schema_type:
+      options:
+        Organization: "Organização (genérica)"
+        Corporation: "Sociedade"
+        LocalBusiness: "Negócio local"
+        ProfessionalService: "Serviço profissional"
+        LegalService: "Serviço jurídico"
+        MedicalOrganization: "Organização médica"
+        EducationalOrganization: "Estabelecimento de ensino"
+        NGO: "ONG / associação"
+        Place: "Local (genérico)"
+        LandmarksOrHistoricalBuildings: "Monumento ou edifício histórico"
+        TouristAttraction: "Atração turística"
+        CivicStructure: "Edifício público"
+        Accommodation: "Alojamento"
+        Residence: "Residência"
+      hint: "Tipo schema.org da entidade. Um subtipo de Organization torna o local um escritório; um subtipo de Place deixa-o como localização."
+      label: "Tipo schema.org"
     scrollsnap:
       hint: Tamanhos de ecrã em que os elementos deslizam lateralmente
       label: Deslocamento horizontal

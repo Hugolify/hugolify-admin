@@ -666,18 +666,6 @@ admin:
     organization:
       hint: "Identiteta organizacije v strukturiranih podatkih: ime, logotip, naslov in kontakt."
       label: "Organizacija"
-    organization_type:
-      options:
-        Organization: "Organizacija (splošna)"
-        Corporation: "Družba"
-        LocalBusiness: "Lokalno podjetje"
-        ProfessionalService: "Strokovna storitev"
-        LegalService: "Pravna storitev"
-        MedicalOrganization: "Zdravstvena organizacija"
-        EducationalOrganization: "Izobraževalna ustanova"
-        NGO: "NVO / društvo"
-      hint: "Vrsta organizacije za strukturirane podatke: Organization, LocalBusiness, ProfessionalService, LegalService… Pri kraju ga izpolnjeno spremeni v pisarno organizacije; če ostane prazno, kraj ostane zgolj lokacija."
-      label: Vrsta schema.org
     parent:
       label: Nadrejena stran
     pdf:
@@ -781,6 +769,27 @@ admin:
     schema_email:
       hint: "V strukturirane podatke vključi e-poštne naslove. Izklopite, da omejite samodejno zbiranje."
       label: "Objavim e-poštne naslove?"
+    schema:
+      hint: "Kako se ta stran opiše v strukturiranih podatkih."
+      label: "Strukturirani podatki"
+    schema_type:
+      options:
+        Organization: "Organizacija (splošna)"
+        Corporation: "Družba"
+        LocalBusiness: "Lokalno podjetje"
+        ProfessionalService: "Strokovna storitev"
+        LegalService: "Pravna storitev"
+        MedicalOrganization: "Zdravstvena organizacija"
+        EducationalOrganization: "Izobraževalna ustanova"
+        NGO: "NVO / društvo"
+        Place: "Kraj (splošno)"
+        LandmarksOrHistoricalBuildings: "Znamenitost ali zgodovinska stavba"
+        TouristAttraction: "Turistična znamenitost"
+        CivicStructure: "Javna stavba"
+        Accommodation: "Nastanitev"
+        Residence: "Bivališče"
+      hint: "Vrsta schema.org za entiteto. Podvrsta Organization naredi iz kraja pisarno; podvrsta Place ga pusti kot lokacijo."
+      label: "Vrsta schema.org"
     scrollsnap:
       hint: Velikosti zaslona, kjer elementi drsijo vodoravno
       label: Vodoravno drsenje

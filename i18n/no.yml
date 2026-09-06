@@ -666,18 +666,6 @@ admin:
     organization:
       hint: "Organisasjonens identitet i de strukturerte dataene: navn, logo, adresse og kontakt."
       label: "Organisasjon"
-    organization_type:
-      options:
-        Organization: "Organisasjon (generisk)"
-        Corporation: "Selskap"
-        LocalBusiness: "Lokal virksomhet"
-        ProfessionalService: "Profesjonell tjeneste"
-        LegalService: "Juridisk tjeneste"
-        MedicalOrganization: "Medisinsk organisasjon"
-        EducationalOrganization: "Utdanningsinstitusjon"
-        NGO: "NGO / forening"
-      hint: "Organisasjonstype for strukturerte data: Organization, LocalBusiness, ProfessionalService, LegalService… På et sted gjør en utfylt verdi det til et kontor for organisasjonen; står den tom, forblir stedet bare et sted."
-      label: Schema.org-type
     parent:
       label: Foreldreside
     pdf:
@@ -781,6 +769,27 @@ admin:
     schema_email:
       hint: "Tar med e-postadresser i de strukturerte dataene. Slå av for å begrense automatisert innsamling."
       label: "Publisere e-postadresser?"
+    schema:
+      hint: "Hvordan denne siden beskriver seg selv i de strukturerte dataene."
+      label: "Strukturerte data"
+    schema_type:
+      options:
+        Organization: "Organisasjon (generisk)"
+        Corporation: "Selskap"
+        LocalBusiness: "Lokal virksomhet"
+        ProfessionalService: "Profesjonell tjeneste"
+        LegalService: "Juridisk tjeneste"
+        MedicalOrganization: "Medisinsk organisasjon"
+        EducationalOrganization: "Utdanningsinstitusjon"
+        NGO: "NGO / forening"
+        Place: "Sted (generisk)"
+        LandmarksOrHistoricalBuildings: "Landemerke eller historisk bygning"
+        TouristAttraction: "Turistattraksjon"
+        CivicStructure: "Offentlig bygg"
+        Accommodation: "Overnatting"
+        Residence: "Bolig"
+      hint: "Schema.org-type for enheten. En Organization-undertype gjør stedet til et kontor; en Place-undertype lar det være et sted."
+      label: "Schema.org-type"
     scrollsnap:
       hint: Skjermstørrelser der elementene ruller sidelengs
       label: Horisontal rulling

@@ -669,18 +669,6 @@ admin:
     organization:
       hint: "Identité de la structure publiée dans les données structurées : nom, logo, adresse et contact."
       label: "Organisation"
-    organization_type:
-      options:
-        Organization: "Organisation (générique)"
-        Corporation: "Société"
-        LocalBusiness: "Commerce de proximité"
-        ProfessionalService: "Service professionnel"
-        LegalService: "Service juridique"
-        MedicalOrganization: "Organisation médicale"
-        EducationalOrganization: "Établissement d’enseignement"
-        NGO: "ONG / association"
-      hint: "Type d’organisation pour les données structurées : Organization, LocalBusiness, ProfessionalService, LegalService… Sur un lieu, le renseigner en fait un bureau de la structure ; laissé vide, le lieu reste un simple lieu."
-      label: Type schema.org
     parent:
       label: Page parente
     pdf:
@@ -784,6 +772,27 @@ admin:
     schema_email:
       hint: "Inclut les adresses e-mail dans les données structurées. À désactiver pour limiter la collecte automatisée."
       label: "Publier les adresses e-mail ?"
+    schema:
+      hint: "Comment cette page est décrite dans les données structurées."
+      label: "Données structurées"
+    schema_type:
+      options:
+        Organization: "Organisation (générique)"
+        Corporation: "Société"
+        LocalBusiness: "Commerce de proximité"
+        ProfessionalService: "Service professionnel"
+        LegalService: "Service juridique"
+        MedicalOrganization: "Organisation médicale"
+        EducationalOrganization: "Établissement d’enseignement"
+        NGO: "ONG / association"
+        Place: "Lieu (générique)"
+        LandmarksOrHistoricalBuildings: "Monument ou bâtiment historique"
+        TouristAttraction: "Site touristique"
+        CivicStructure: "Équipement public"
+        Accommodation: "Hébergement"
+        Residence: "Résidence"
+      hint: "Type schema.org de l’entité. Un sous-type d’Organization fait du lieu un bureau de la structure ; un sous-type de Place en fait un simple lieu."
+      label: "Type schema.org"
     scrollsnap:
       hint: Tailles d’écran où les éléments défilent sur le côté
       label: Défilement horizontal

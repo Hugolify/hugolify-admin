@@ -666,18 +666,6 @@ admin:
     organization:
       hint: "在结构化数据中发布的机构信息：名称、标识、地址和联系方式。"
       label: "组织"
-    organization_type:
-      options:
-        Organization: "组织（通用）"
-        Corporation: "公司"
-        LocalBusiness: "本地商户"
-        ProfessionalService: "专业服务"
-        LegalService: "法律服务"
-        MedicalOrganization: "医疗机构"
-        EducationalOrganization: "教育机构"
-        NGO: "非政府组织 / 协会"
-      hint: "结构化数据的组织类型：Organization, LocalBusiness, ProfessionalService, LegalService… 用于地点时，填写后该地点会成为组织的办公点；留空则仅作为普通位置。"
-      label: schema.org 类型
     parent:
       label: 父页面
     pdf:
@@ -781,6 +769,27 @@ admin:
     schema_email:
       hint: "将电子邮件地址包含在结构化数据中。如需减少自动抓取，请关闭。"
       label: "是否发布电子邮件地址？"
+    schema:
+      hint: "本页面在结构化数据中的自我描述方式。"
+      label: "结构化数据"
+    schema_type:
+      options:
+        Organization: "组织（通用）"
+        Corporation: "公司"
+        LocalBusiness: "本地商户"
+        ProfessionalService: "专业服务"
+        LegalService: "法律服务"
+        MedicalOrganization: "医疗机构"
+        EducationalOrganization: "教育机构"
+        NGO: "非政府组织 / 协会"
+        Place: "地点（通用）"
+        LandmarksOrHistoricalBuildings: "地标或历史建筑"
+        TouristAttraction: "旅游景点"
+        CivicStructure: "公共建筑"
+        Accommodation: "住宿"
+        Residence: "住所"
+      hint: "实体的 schema.org 类型。Organization 的子类型会让该地点成为办公点；Place 的子类型则保持为普通位置。"
+      label: "schema.org 类型"
     scrollsnap:
       hint: 元素横向滚动的屏幕尺寸
       label: 横向滚动

@@ -662,18 +662,6 @@ admin:
     organization:
       hint: "Organisaation tiedot rakenteisessa datassa: nimi, logo, osoite ja yhteystiedot."
       label: "Organisaatio"
-    organization_type:
-      options:
-        Organization: "Organisaatio (yleinen)"
-        Corporation: "Yritys"
-        LocalBusiness: "Paikallinen yritys"
-        ProfessionalService: "Ammattipalvelu"
-        LegalService: "Lakipalvelu"
-        MedicalOrganization: "Terveydenhuollon organisaatio"
-        EducationalOrganization: "Oppilaitos"
-        NGO: "Kansalaisjärjestö / yhdistys"
-      hint: "Organisaation tyyppi rakenteista dataa varten: Organization, LocalBusiness, ProfessionalService, LegalService… Paikan kohdalla arvon täyttäminen tekee siitä organisaation toimipisteen; tyhjänä paikka pysyy pelkkänä sijaintina."
-      label: Schema.org-tyyppi
     parent:
       label: Ylätason sivu
     pdf:
@@ -777,6 +765,27 @@ admin:
     schema_email:
       hint: "Sisällyttää sähköpostiosoitteet rakenteiseen dataan. Poista käytöstä rajoittaaksesi automaattista keräämistä."
       label: "Julkaistaanko sähköpostiosoitteet?"
+    schema:
+      hint: "Miten tämä sivu kuvaa itsensä rakenteisessa datassa."
+      label: "Rakenteinen data"
+    schema_type:
+      options:
+        Organization: "Organisaatio (yleinen)"
+        Corporation: "Yritys"
+        LocalBusiness: "Paikallinen yritys"
+        ProfessionalService: "Ammattipalvelu"
+        LegalService: "Lakipalvelu"
+        MedicalOrganization: "Terveydenhuollon organisaatio"
+        EducationalOrganization: "Oppilaitos"
+        NGO: "Kansalaisjärjestö / yhdistys"
+        Place: "Paikka (yleinen)"
+        LandmarksOrHistoricalBuildings: "Maamerkki tai historiallinen rakennus"
+        TouristAttraction: "Nähtävyys"
+        CivicStructure: "Julkinen rakennus"
+        Accommodation: "Majoitus"
+        Residence: "Asuinpaikka"
+      hint: "Kohteen schema.org-tyyppi. Organization-alatyyppi tekee paikasta toimipisteen; Place-alatyyppi jättää sen sijainniksi."
+      label: "Schema.org-tyyppi"
     scrollsnap:
       hint: Näyttökoot, joissa elementit vierivät sivusuunnassa
       label: Vaakasuora vieritys

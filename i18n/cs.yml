@@ -666,18 +666,6 @@ admin:
     organization:
       hint: "Identita subjektu ve strukturovaných datech: název, logo, adresa a kontakt."
       label: "Organizace"
-    organization_type:
-      options:
-        Organization: "Organizace (obecná)"
-        Corporation: "Společnost"
-        LocalBusiness: "Místní podnik"
-        ProfessionalService: "Profesionální služba"
-        LegalService: "Právní služba"
-        MedicalOrganization: "Zdravotnická organizace"
-        EducationalOrganization: "Vzdělávací instituce"
-        NGO: "NNO / spolek"
-      hint: "Typ organizace pro strukturovaná data: Organization, LocalBusiness, ProfessionalService, LegalService… U místa: vyplněním se z něj stane pobočka organizace; ponecháte-li prázdné, zůstane běžným místem."
-      label: Typ schema.org
     parent:
       label: Nadřazená stránka
     pdf:
@@ -781,6 +769,27 @@ admin:
     schema_email:
       hint: "Zahrne e-mailové adresy do strukturovaných dat. Vypněte pro omezení automatického sběru."
       label: "Publikovat e-mailové adresy?"
+    schema:
+      hint: "Jak se tato stránka popisuje ve strukturovaných datech."
+      label: "Strukturovaná data"
+    schema_type:
+      options:
+        Organization: "Organizace (obecná)"
+        Corporation: "Společnost"
+        LocalBusiness: "Místní podnik"
+        ProfessionalService: "Profesionální služba"
+        LegalService: "Právní služba"
+        MedicalOrganization: "Zdravotnická organizace"
+        EducationalOrganization: "Vzdělávací instituce"
+        NGO: "NNO / spolek"
+        Place: "Místo (obecné)"
+        LandmarksOrHistoricalBuildings: "Památka nebo historická budova"
+        TouristAttraction: "Turistická atrakce"
+        CivicStructure: "Veřejná stavba"
+        Accommodation: "Ubytování"
+        Residence: "Rezidence"
+      hint: "Typ schema.org entity. Podtyp Organization udělá z místa pobočku; podtyp Place z něj nechá běžné místo."
+      label: "Typ schema.org"
     scrollsnap:
       hint: Velikosti obrazovky, kde se položky posouvají do stran
       label: Vodorovné posouvání
