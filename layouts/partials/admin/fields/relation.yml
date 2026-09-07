@@ -13,11 +13,18 @@
 {{- $multiple := .multiple | default false -}}
 {{- $required := .required | default false -}}
 {{- $value_field := `{{slug}}` -}}
-{{/* Decap CMS bug with bundle page (add /_index), we use title for taxonomies */}}
+{{/* Decap CMS builds the slug from the file path, so a branch bundle keeps a
+  trailing /_index that breaks the relation on the Hugo side. A taxonomy value is
+  a plain string, so the title is stored instead: it stays the same whether the
+  target page is a leaf or a branch bundle. The field name is checked too, because
+  a taxonomy can be filled from a regular section (persons_expertises from the
+  expertises collection) and not only from a taxonomy collection. */}}
 {{- if eq site.Params.admin.cms "cloudcannon" "decapcms" "netlifycms" "staticcms" -}}
-  {{- with site.GetPage $collection -}}
-    {{- if eq .Kind "taxonomy" -}}
-      {{- $value_field = `{{title}}` -}}
+  {{- range slice $name $collection -}}
+    {{- with site.GetPage . -}}
+      {{- if eq .Kind "taxonomy" -}}
+        {{- $value_field = `{{title}}` -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
