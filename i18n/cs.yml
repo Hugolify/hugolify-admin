@@ -67,6 +67,11 @@ admin:
       label:
         one: Autor
         other: Autoři
+    awards:
+      _description: Všechna ocenění
+      label:
+        one: Ocenění
+        other: Ocenění
     casestudies:
       _description: Všechny případové studie
       label:

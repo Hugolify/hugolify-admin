@@ -67,6 +67,11 @@ admin:
       label:
         one: 저자
         other: 저자
+    awards:
+      _description: 모든 수상
+      label:
+        one: 수상
+        other: 수상
     casestudies:
       _description: 모든 사례 연구
       label:

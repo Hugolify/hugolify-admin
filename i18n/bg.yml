@@ -67,6 +67,11 @@ admin:
       label:
         one: Автор
         other: Автори
+    awards:
+      _description: Всички награди
+      label:
+        one: Награда
+        other: Награди
     casestudies:
       _description: Всички казуси
       label:

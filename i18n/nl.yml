@@ -67,6 +67,11 @@ admin:
       label:
         one: Auteur
         other: Auteurs
+    awards:
+      _description: Alle onderscheidingen
+      label:
+        one: Onderscheiding
+        other: Onderscheidingen
     casestudies:
       _description: Alle casestudies
       label:

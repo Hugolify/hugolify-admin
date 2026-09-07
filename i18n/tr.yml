@@ -67,6 +67,11 @@ admin:
       label:
         one: Yazar
         other: Yazarlar
+    awards:
+      _description: Tüm ödüller
+      label:
+        one: Ödül
+        other: Ödüller
     casestudies:
       _description: Tüm vaka çalışmaları
       label:

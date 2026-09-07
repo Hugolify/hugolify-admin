@@ -67,6 +67,11 @@ admin:
       label:
         one: लेखक
         other: लेखक
+    awards:
+      _description: सभी पुरस्कार
+      label:
+        one: पुरस्कार
+        other: पुरस्कार
     casestudies:
       _description: सभी केस स्टडी
       label:

@@ -65,6 +65,11 @@ admin:
       label:
         one: Auteur
         other: Auteurs
+    awards:
+      _description: Toutes les distinctions
+      label:
+        one: Distinction
+        other: Distinctions
     casestudies:
       _description: Toutes les études de cas
       label:

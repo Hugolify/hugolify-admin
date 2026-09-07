@@ -69,6 +69,11 @@ admin:
       label:
         one: Tekijä
         other: Tekijät
+    awards:
+      _description: Kaikki palkinnot
+      label:
+        one: Palkinto
+        other: Palkinnot
     casestudies:
       _description: Kaikki esimerkkitapaukset
       label:

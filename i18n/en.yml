@@ -63,6 +63,11 @@ admin:
       label:
         one: Author
         other: Authors
+    awards:
+      _description: All awards
+      label:
+        one: Award
+        other: Awards
     casestudies:
       _description: All cases studies
       label:

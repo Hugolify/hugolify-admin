@@ -67,6 +67,11 @@ admin:
       label:
         one: Szerző
         other: Szerzők
+    awards:
+      _description: Minden díj
+      label:
+        one: Díj
+        other: Díjak
     casestudies:
       _description: Minden esettanulmány
       label:

@@ -67,6 +67,11 @@ admin:
       label:
         one: Autor
         other: Autores
+    awards:
+      _description: Todos los premios
+      label:
+        one: Premio
+        other: Premios
     casestudies:
       _description: Todos los casos de estudio
       label:

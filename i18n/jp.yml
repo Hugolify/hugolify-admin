@@ -67,6 +67,11 @@ admin:
       label:
         one: 著者
         other: 著者
+    awards:
+      _description: すべての受賞
+      label:
+        one: 受賞
+        other: 受賞
     casestudies:
       _description: すべてのケーススタディ
       label:

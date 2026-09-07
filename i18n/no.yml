@@ -67,6 +67,11 @@ admin:
       label:
         one: Forfatter
         other: Forfattere
+    awards:
+      _description: Alle utmerkelser
+      label:
+        one: Utmerkelse
+        other: Utmerkelser
     casestudies:
       _description: Alle casestudier
       label:

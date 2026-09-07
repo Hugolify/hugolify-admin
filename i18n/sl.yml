@@ -67,6 +67,11 @@ admin:
       label:
         one: Avtor
         other: Avtorji
+    awards:
+      _description: Vse nagrade
+      label:
+        one: Nagrada
+        other: Nagrade
     casestudies:
       _description: Vse študije primerov
       label:

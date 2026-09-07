@@ -67,6 +67,11 @@ admin:
       label:
         one: 作者
         other: 作者
+    awards:
+      _description: 所有奖项
+      label:
+        one: 奖项
+        other: 奖项
     casestudies:
       _description: 所有案例研究
       label:

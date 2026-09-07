@@ -67,6 +67,11 @@ admin:
       label:
         one: Penulis
         other: Penulis
+    awards:
+      _description: Semua penghargaan
+      label:
+        one: Penghargaan
+        other: Penghargaan
     casestudies:
       _description: Semua studi kasus
       label:
