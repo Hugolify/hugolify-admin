@@ -147,6 +147,11 @@ admin:
       label:
         one: Személy
         other: Személyek
+    persons_awards:
+      _description: Minden díj
+      label:
+        one: Díj
+        other: Díjak
     persons_expertises:
       _description: Minden szakértelem
       label:

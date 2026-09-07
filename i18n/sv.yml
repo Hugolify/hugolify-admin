@@ -147,6 +147,11 @@ admin:
       label:
         one: Person
         other: Personer
+    persons_awards:
+      _description: Alla utmärkelser
+      label:
+        one: Utmärkelse
+        other: Utmärkelser
     persons_expertises:
       _description: Alla expertiser
       label:

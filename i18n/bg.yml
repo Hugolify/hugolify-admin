@@ -147,6 +147,11 @@ admin:
       label:
         one: Лице
         other: Лица
+    persons_awards:
+      _description: Всички награди
+      label:
+        one: Награда
+        other: Награди
     persons_expertises:
       _description: Всички експертизи
       label:

@@ -147,6 +147,11 @@ admin:
       label:
         one: Persona
         other: Personas
+    persons_awards:
+      _description: Todos los premios
+      label:
+        one: Premio
+        other: Premios
     persons_expertises:
       _description: Todas las especialidades
       label:

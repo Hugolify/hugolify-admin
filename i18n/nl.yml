@@ -147,6 +147,11 @@ admin:
       label:
         one: Persoon
         other: Personen
+    persons_awards:
+      _description: Alle onderscheidingen
+      label:
+        one: Onderscheiding
+        other: Onderscheidingen
     persons_expertises:
       _description: Alle expertises
       label:

@@ -147,6 +147,11 @@ admin:
       label:
         one: Kişi
         other: Kişiler
+    persons_awards:
+      _description: Tüm ödüller
+      label:
+        one: Ödül
+        other: Ödüller
     persons_expertises:
       _description: Tüm uzmanlıklar
       label:

@@ -147,6 +147,11 @@ admin:
       label:
         one: Oseba
         other: Osebe
+    persons_awards:
+      _description: Vse nagrade
+      label:
+        one: Nagrada
+        other: Nagrade
     persons_expertises:
       _description: Vse strokovnosti
       label:

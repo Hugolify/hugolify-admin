@@ -147,6 +147,11 @@ admin:
       label:
         one: 人员
         other: 人员
+    persons_awards:
+      _description: 所有奖项
+      label:
+        one: 奖项
+        other: 奖项
     persons_expertises:
       _description: 所有专业知识
       label:

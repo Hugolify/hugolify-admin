@@ -147,6 +147,11 @@ admin:
       label:
         one: 인물
         other: 인물
+    persons_awards:
+      _description: 모든 수상
+      label:
+        one: 수상
+        other: 수상
     persons_expertises:
       _description: 모든 전문 분야
       label:

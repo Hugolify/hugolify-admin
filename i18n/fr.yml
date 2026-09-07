@@ -145,6 +145,11 @@ admin:
       label:
         one: Personne
         other: Personnes
+    persons_awards:
+      _description: Toutes les distinctions
+      label:
+        one: Distinction
+        other: Distinctions
     persons_expertises:
       _description: Toutes les expertises
       label:

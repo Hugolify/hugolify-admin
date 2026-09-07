@@ -149,6 +149,11 @@ admin:
       label:
         one: Henkilö
         other: Henkilöt
+    persons_awards:
+      _description: Kaikki palkinnot
+      label:
+        one: Palkinto
+        other: Palkinnot
     persons_expertises:
       _description: Kaikki erikoisalat
       label:

@@ -147,6 +147,11 @@ admin:
       label:
         one: Osoba
         other: Osoby
+    persons_awards:
+      _description: Všechna ocenění
+      label:
+        one: Ocenění
+        other: Ocenění
     persons_expertises:
       _description: Všechny odbornosti
       label:

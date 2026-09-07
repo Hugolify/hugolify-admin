@@ -143,6 +143,11 @@ admin:
       label:
         one: Person
         other: Persons
+    persons_awards:
+      _description: All awards
+      label:
+        one: Award
+        other: Awards
     persons_expertises:
       _description: All expertises
       label:

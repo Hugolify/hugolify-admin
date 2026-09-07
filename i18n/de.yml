@@ -147,6 +147,11 @@ admin:
       label:
         one: Person
         other: Personen
+    persons_awards:
+      _description: Alle Auszeichnungen
+      label:
+        one: Auszeichnung
+        other: Auszeichnungen
     persons_expertises:
       _description: Alle Fachgebiete
       label:

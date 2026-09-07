@@ -147,6 +147,11 @@ admin:
       label:
         one: व्यक्ति
         other: व्यक्ति
+    persons_awards:
+      _description: सभी पुरस्कार
+      label:
+        one: पुरस्कार
+        other: पुरस्कार
     persons_expertises:
       _description: सभी विशेषज्ञता
       label:
