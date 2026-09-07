@@ -3,7 +3,7 @@
 {{- $persons_expertises := false -}}
 {{- $persons_places := false -}}
 {{- if site.Params.admin.collections.awards.enable -}}
-  {{- $persons_awards = dict "relation" (dict "collection" "awards" "name" "persons_awards" "multiple" false) -}}
+  {{- $persons_awards = dict "relation" (dict "collection" "awards" "name" "persons_awards" "multiple" true) -}}
 {{- end -}}
 {{- if site.Params.admin.collections.persons_statutes.enable -}}
   {{- $persons_statutes = dict "relation" (dict "collection" "persons_statutes" "multiple" false) -}}
