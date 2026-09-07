@@ -1,6 +1,10 @@
+{{- $persons_awards := false -}}
 {{- $persons_statutes := false -}}
 {{- $persons_expertises := false -}}
 {{- $persons_places := false -}}
+{{- if site.Params.admin.collections.awards.enable -}}
+  {{- $persons_awards = dict "relation" (dict "collection" "awards" "name" "persons_awards" "multiple" false) -}}
+{{- end -}}
 {{- if site.Params.admin.collections.persons_statutes.enable -}}
   {{- $persons_statutes = dict "relation" (dict "collection" "persons_statutes" "multiple" false) -}}
 {{- end -}}
@@ -23,7 +27,9 @@
   $persons_statutes
   $persons_expertises
   $persons_places
+  $persons_awards
   "contact"
   "body"
   "blocks"
+  "weight"
   "slug" -}}

@@ -104,3 +104,6 @@ aside [href='#/collections/services_categories'] span::before {
 aside [href='#/collections/tags'] span::before {
   content: '\F5B2';
 }
+aside [href='#/collections/awards'] span::before {
+  content: '\F154';
+}
