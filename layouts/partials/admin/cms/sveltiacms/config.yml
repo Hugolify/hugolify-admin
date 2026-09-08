@@ -48,7 +48,7 @@ media_libraries:
   default:
     config:
       {{- with site.Params.admin.media.max_file_size }}
-      max_file_size: '{{ . }}'
+      max_file_size: {{ . | default 1000000 }}
       {{- end }}
       slugify_filename: {{ $slugify_filename }}
   {{- if isset site.Params.admin.media "providers" }}
