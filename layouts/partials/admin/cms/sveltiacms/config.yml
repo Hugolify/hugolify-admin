@@ -46,10 +46,11 @@ publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
   {{- $cloud := cond (reflect.IsSlice .) . (slice .) }}
 media_libraries:
   default:
-    {{- with site.Params.admin.media.max_file_size }}
-    max_file_size: '{{ . }}'
-    {{- end }}
-    slugify_filename: {{ $slugify_filename }}
+    config:
+      {{- with site.Params.admin.media.max_file_size }}
+      max_file_size: {{ . | default 1000000 }}
+      {{- end }}
+      slugify_filename: {{ $slugify_filename }}
   {{- if isset site.Params.admin.media "providers" }}
   stock_assets:
     {{- $providers := site.Params.admin.media.providers }}
