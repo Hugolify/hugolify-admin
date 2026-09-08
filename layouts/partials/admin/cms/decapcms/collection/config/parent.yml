@@ -2,7 +2,7 @@
 meta: {
   path: {
     label: '{{ i18n "admin.fields.parent.label" }}',
-    widget: string,
+    widget: nested_path,
     index_file: _index
   }
 }
