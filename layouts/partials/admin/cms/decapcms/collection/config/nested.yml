@@ -3,5 +3,5 @@
 nested: {
   depth: {{ $nested }},
 },
-{{ partialCached "admin/cms/decapcms/collection/config/parent.yml" . }}
+{{ partialCached "admin/cms/decapcms/collection/config/parent.yml" . . }}
 {{ end }}
