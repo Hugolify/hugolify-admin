@@ -1,4 +1,5 @@
 <!-- Sveltia CMS -->
-<script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+{{- $version := site.Params.admin.version | default false -}}
+<script src="https://unpkg.com/@sveltia/cms{{- if $version }}@{{ $version }}{{- end }}/dist/sveltia-cms.js"></script>
 <!-- Custom widget/shortcodes/previews… -->
 {{ partial "admin/cms/sveltiacms/custom.html" }}
