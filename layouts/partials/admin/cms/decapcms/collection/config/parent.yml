@@ -4,6 +4,7 @@ meta: {
   path: {
     label: '{{ i18n "admin.fields.parent.label" }}',
     widget: nested_path,
+    i18n: duplicate,
     index_file: _index
   }
 }

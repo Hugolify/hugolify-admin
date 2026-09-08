@@ -45,6 +45,7 @@
   }
 
   var NEW_ROUTE = /\/collections\/[^/]+\/new(\?|$)/;
+  var ENTRY_ROUTE = /^#?\/collections\/([^/]+)\/entries\/(.+)$/;
 
   function currentUrl() {
     return window.location.hash || window.location.search || '';
@@ -58,6 +59,8 @@
     return new URLSearchParams(url.slice(mark + 1)).get('path') || '';
   }
 
+  var indexFiles = {};
+
   var NestedPathControl = window.createClass({
     getInitialState: function () {
       // Only a parent picked by hand lives in the state. Everything else is
@@ -68,15 +71,18 @@
 
     // Without this the wrapper re-renders the control on `value` changes only,
     // so the path would follow neither the title, the query, nor the select.
+    // Two callers share this method: React passes `nextState`, while Decap's
+    // wrapper binds it and calls it with `nextProps` alone.
     shouldComponentUpdate: function (nextProps, nextState) {
-      return this.state.chosen !== nextState.chosen
-        || this.props.value !== nextProps.value
+      if (nextState && this.state.chosen !== nextState.chosen) return true;
+      return this.props.value !== nextProps.value
         || this.props.entry !== nextProps.entry
         || this.props.queryHits !== nextProps.queryHits
         || this.props.classNameWrapper !== nextProps.classNameWrapper;
     },
 
     componentDidMount: function () {
+      indexFiles[this.props.collection.get('name')] = this.props.collection.getIn(['meta', 'path', 'index_file']);
       // An empty search term matches every entry, so this lists the collection.
       this.props.query(this.props.forID, this.props.collection.get('name'), [this.identifier()], '');
       this.sync();
@@ -109,7 +115,11 @@
 
     parent: function () {
       if (this.state.chosen !== null) return this.state.chosen;
-      return this.isNew() ? this.state.prefill : parentOf(this.metaPath());
+      if (this.isNew()) return this.state.prefill;
+      // Decap mounts one control per locale pane and they share a single
+      // `meta.path`, so the value is the source of truth: reading the entry
+      // instead would make the other pane write the old parent back.
+      return parentOf(this.props.value || this.metaPath());
     },
 
     // `null` on a new entry, where the folder name follows the title. On an
@@ -128,7 +138,9 @@
     },
 
     sync: function () {
-      if (!this.ready()) return;
+      // `i18n: duplicate` disables every pane but the default locale, which
+      // leaves exactly one writer for the shared value.
+      if (this.props.isDisabled || !this.ready()) return;
       var next = join(this.parent(), this.slug());
       // `lastEmitted` guards against a render loop should the value not make it
       // back through the draft.
@@ -143,9 +155,22 @@
       var identifier = this.identifier();
       var parent = this.parent();
       var own = this.metaPath();
+
+      // Moving a page takes its whole subtree along, so the deepest descendant
+      // is what has to fit under the target parent.
+      var ownHeight = 0;
+      if (own) {
+        (props.queryHits || []).forEach(function (hit) {
+          var value = metaPathOf(hit.path, folder);
+          if (value.indexOf(own + '/') === 0) {
+            ownHeight = Math.max(ownHeight, segments(value).length - segments(own).length);
+          }
+        });
+      }
+
       // `meta.path` holds every segment but the index file, so a parent may only
       // be one level shallower than that.
-      var maxSegments = (props.collection.getIn(['nested', 'depth']) || 2) - 2;
+      var maxSegments = (props.collection.getIn(['nested', 'depth']) || 2) - 2 - ownHeight;
 
       var options = (props.queryHits || []).map(function (hit) {
         var value = metaPathOf(hit.path, folder);
@@ -178,6 +203,9 @@
         id: props.forID,
         className: props.classNameWrapper,
         value: this.parent(),
+        // `i18n: duplicate` disables the field outside the default locale, so a
+        // page cannot end up with one parent per language.
+        disabled: props.isDisabled,
         onChange: this.change,
         onFocus: props.setActiveStyle,
         onBlur: props.setInactiveStyle
@@ -190,4 +218,33 @@
   });
 
   CMS.registerWidget('nested_path', NestedPathControl);
+
+  // Moving a page rewrites its slug, but `handlePersistEntry` only navigates
+  // when creating another entry — the editor is left on a URL that no longer
+  // resolves. Send it to where the page now lives.
+  CMS.registerEventListener({
+    name: 'postSave',
+    handler: function (data) {
+      var entry = data && data.entry;
+      if (!entry || typeof entry.getIn !== 'function') return;
+      var metaPath = entry.getIn(['meta', 'path']);
+      if (!metaPath) return;
+
+      var route = ENTRY_ROUTE.exec(currentUrl());
+      if (!route) return;
+      var indexFile = indexFiles[route[1]];
+      if (!indexFile) return;
+
+      var slug = metaPath + '/' + indexFile;
+      var current = route[2];
+      try { current = decodeURIComponent(current); } catch (e) { /* left as is */ }
+      if (current === slug) return;
+
+      // Deferred so Decap finishes its own post-save work first, and `replace`
+      // so the browser's back button does not return to the stale URL.
+      window.setTimeout(function () {
+        window.location.replace('#/collections/' + route[1] + '/entries/' + slug);
+      }, 0);
+    }
+  });
 })();
