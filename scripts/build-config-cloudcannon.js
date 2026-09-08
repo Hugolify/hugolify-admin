@@ -16,15 +16,16 @@
  * @requires path
  */
 
-const { exec } = require('child_process');
+const { execFile } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-// Function to execute a shell command
+// Function to execute a command without invoking a shell (avoids command injection)
 function runCommand(command) {
   return new Promise((resolve, reject) => {
     console.log(`Executing: ${command}`);
-    const process = exec(command);
+    const [cmd, ...args] = command.split(' ');
+    const process = execFile(cmd, args);
 
     process.stdout.on('data', (data) => {
       console.log(data.toString());
