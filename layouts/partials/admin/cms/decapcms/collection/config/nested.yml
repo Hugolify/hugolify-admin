@@ -2,6 +2,8 @@
 {{ if gt $nested 1 }}
 nested: {
   depth: {{ $nested }},
+  subfolders: true,
+  summary: '{{`{{title}}`}}'
 },
-{{ partialCached "admin/cms/decapcms/collection/config/parent.yml" . }}
+{{ partialCached "admin/cms/decapcms/collection/config/parent.yml" . . }}
 {{ end }}
