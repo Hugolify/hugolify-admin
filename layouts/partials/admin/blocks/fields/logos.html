@@ -1,14 +1,13 @@
 {{- $subfields := slice "title" "url" "image_src" -}} 
 {{- $items := dict "items" (dict "name" "logos" "fields" $subfields) -}}
 {{- $layout := dict "layout" (slice "grid" "carousel") -}} 
-{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout -}} 
+{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "carousel" -}} 
 {{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 
   "heading" 
   $items 
-  $ui
-  "carousel" -}}
+  $ui -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
 
