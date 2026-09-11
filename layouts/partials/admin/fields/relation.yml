@@ -22,6 +22,10 @@
   {{- end -}}
 {{- end -}}
 {{- $value_field = cond site.Params.admin.config.id `{{id}}` $value_field -}}
+{{/* Sveltia CMS lists the collection index file (_index.md) among the relation options, exclude it */}}
+{{- if and (eq site.Params.admin.cms "sveltiacms") (not $filters) -}}
+  {{- $filters = `[{ field: 'slug', values: ['_index'], exclude: true }]` -}}
+{{- end -}}
 
 
 {{- $args := dict 
