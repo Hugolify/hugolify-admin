@@ -591,6 +591,8 @@ admin:
       label: Half size?
     is_highlighted:
       label: Is highlighted?
+    is_link:
+      label: Is this a link?
     is_logo:
       hint: Positioned in the center and not cropped
       label: Is logo?

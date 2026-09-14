@@ -591,6 +591,8 @@ admin:
       label: Halv storlek?
     is_highlighted:
       label: Är markerad?
+    is_link:
+      label: Är detta en länk?
     is_logo:
       hint: Placerad i mitten och inte beskuren
       label: Är logotyp?

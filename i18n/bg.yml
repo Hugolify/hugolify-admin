@@ -591,6 +591,8 @@ admin:
       label: Половин размер?
     is_highlighted:
       label: Подчертано ли е?
+    is_link:
+      label: Това е връзка?
     is_logo:
       hint: Позиционирано в центъра и не е изрязано
       label: Лого ли е?

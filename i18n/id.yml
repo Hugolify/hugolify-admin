@@ -591,6 +591,8 @@ admin:
       label: Setengah ukuran?
     is_highlighted:
       label: Disorot?
+    is_link:
+      label: Apakah ini tautan?
     is_logo:
       hint: Diposisikan di tengah dan tidak dipotong
       label: Apakah logo?

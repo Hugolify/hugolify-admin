@@ -591,6 +591,8 @@ admin:
       label: Fél méret?
     is_highlighted:
       label: Kiemelt?
+    is_link:
+      label: Ez egy link?
     is_logo:
       hint: Középre helyezve és nincs levágva
       label: Logó?

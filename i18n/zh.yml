@@ -591,6 +591,8 @@ admin:
       label: 半尺寸?
     is_highlighted:
       label: 已突出显示?
+    is_link:
+      label: 这是链接吗？
     is_logo:
       hint: 居中定位且不裁剪
       label: 是标志?

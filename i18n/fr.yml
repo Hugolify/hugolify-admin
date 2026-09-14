@@ -589,6 +589,8 @@ admin:
       label: Moitié ?
     is_highlighted:
       label: Mis en avant ?
+    is_link:
+      label: Ceci est un lien ?
     is_logo:
       hint: Positionne au centre et n’est pas recadré
       label: Logo ?

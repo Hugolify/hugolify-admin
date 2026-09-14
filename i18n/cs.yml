@@ -591,6 +591,8 @@ admin:
       label: Poloviční velikost?
     is_highlighted:
       label: Je zvýrazněno?
+    is_link:
+      label: Je to odkaz?
     is_logo:
       hint: Umístěno uprostřed a neoříznuto
       label: Je logo?

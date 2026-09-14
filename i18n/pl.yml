@@ -591,6 +591,8 @@ admin:
       label: Połowa rozmiaru?
     is_highlighted:
       label: Czy wyróżnione?
+    is_link:
+      label: Czy to link?
     is_logo:
       hint: Umieszczone na środku i nieprzycinane
       label: Czy logo?

@@ -591,6 +591,8 @@ admin:
       label: Halbe Größe?
     is_highlighted:
       label: Hervorgehoben?
+    is_link:
+      label: Ist das ein Link?
     is_logo:
       hint: In der Mitte positioniert und nicht zugeschnitten
       label: Als Logo?

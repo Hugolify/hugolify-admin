@@ -591,6 +591,8 @@ admin:
       label: 半分のサイズ?
     is_highlighted:
       label: ハイライト?
+    is_link:
+      label: リンクですか？
     is_logo:
       hint: 中央に配置され、トリミングされません
       label: ロゴとして?

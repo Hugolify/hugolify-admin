@@ -591,6 +591,8 @@ admin:
       label: 절반 크기?
     is_highlighted:
       label: 강조?
+    is_link:
+      label: 링크인가요?
     is_logo:
       hint: 중앙에 배치되고 자르지 않음
       label: 로고로?

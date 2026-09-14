@@ -591,6 +591,8 @@ admin:
       label: Halve grootte?
     is_highlighted:
       label: Is gemarkeerd?
+    is_link:
+      label: Is dit een link?
     is_logo:
       hint: Gepositioneerd in het midden en niet bijgesneden
       label: Is logo?

@@ -591,6 +591,8 @@ admin:
       label: आधा आकार?
     is_highlighted:
       label: क्या हाइलाइट किया गया है?
+    is_link:
+      label: क्या यह एक लिंक है?
     is_logo:
       hint: केंद्र में स्थित और क्रॉप नहीं किया गया
       label: क्या लोगो है?

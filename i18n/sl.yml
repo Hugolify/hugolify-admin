@@ -591,6 +591,8 @@ admin:
       label: Polovična velikost?
     is_highlighted:
       label: Je poudarjeno?
+    is_link:
+      label: Je to povezava?
     is_logo:
       hint: Postavljeno na sredino in neobrezano
       label: Je logotip?

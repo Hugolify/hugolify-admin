@@ -591,6 +591,8 @@ admin:
       label: Halv størrelse?
     is_highlighted:
       label: Er fremhevet?
+    is_link:
+      label: Er dette en lenke?
     is_logo:
       hint: Plassert i sentrum og ikke beskåret
       label: Er logo?

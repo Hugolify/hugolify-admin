@@ -587,6 +587,8 @@ admin:
       label: Puolikas?
     is_highlighted:
       label: Korostettu?
+    is_link:
+      label: Onko tämä linkki?
     is_logo:
       hint: Sijoitettu keskelle eikä rajattu
       label: Logo?

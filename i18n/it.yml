@@ -591,6 +591,8 @@ admin:
       label: Mezza dimensione?
     is_highlighted:
       label: Evidenziato?
+    is_link:
+      label: È un link?
     is_logo:
       hint: Posizionato al centro e non ritagliato
       label: Come logo?

@@ -591,6 +591,8 @@ admin:
       label: Yarım boyut mu?
     is_highlighted:
       label: Vurgulandı mı?
+    is_link:
+      label: Bu bir bağlantı mı?
     is_logo:
       hint: Ortada konumlandırılmış ve kırpılmamış
       label: Logo mu?

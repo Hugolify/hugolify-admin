@@ -591,6 +591,8 @@ admin:
       label: ¿Tamaño medio?
     is_highlighted:
       label: ¿Destacado?
+    is_link:
+      label: ¿Es un enlace?
     is_logo:
       hint: Posicionado en el centro y no recortado
       label: ¿Como logo?
