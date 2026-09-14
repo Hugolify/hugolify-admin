@@ -44,6 +44,8 @@ admin:
       label: ニュースレター
     paragraph:
       label: 段落
+    paragraph-list:
+      label: 段落リスト
     pushes:
       label: 通知
     quote:

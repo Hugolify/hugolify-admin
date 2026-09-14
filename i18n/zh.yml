@@ -44,6 +44,8 @@ admin:
       label: 新闻通讯
     paragraph:
       label: 段落
+    paragraph-list:
+      label: 段落列表
     pushes:
       label: 推送
     quote:

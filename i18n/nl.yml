@@ -44,6 +44,8 @@ admin:
       label: Nieuwsbrief
     paragraph:
       label: Paragraaf
+    paragraph-list:
+      label: Paragrafen
     pushes:
       label: Uitgelicht
     quote:

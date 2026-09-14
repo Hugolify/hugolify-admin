@@ -46,6 +46,8 @@ admin:
       label: Uutiskirje
     paragraph:
       label: Kappale
+    paragraph-list:
+      label: Kappaleet
     pushes:
       label: Push-viestit
     quote:

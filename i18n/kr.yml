@@ -44,6 +44,8 @@ admin:
       label: 뉴스레터
     paragraph:
       label: 단락
+    paragraph-list:
+      label: 단락 목록
     pushes:
       label: 알림
     quote:

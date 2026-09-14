@@ -1,0 +1,23 @@
+{{/* Same fields as the `paragraph` block, repeated inside `items`. */}}
+{{- $config := index site.Params.admin.blocks "paragraph-list" -}}
+{{- $notes := cond $config.notes "notes" false -}}
+
+{{- $subfields := slice
+  "surtitle"
+  "title"
+  "text_markdown"
+  $notes
+  "ctas" -}}
+{{- $items := dict "items" (dict "name" "paragraph-list" "fields" $subfields) -}}
+
+{{- $uiFields := site.Params.admin.fields.ui.fields | append "column_simple" -}}
+{{- $ui := dict "ui" $uiFields -}}
+
+{{- $fields := slice
+  "heading"
+  $items
+  $ui -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
+
+{{- return $fields -}}

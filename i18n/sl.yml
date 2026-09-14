@@ -44,6 +44,8 @@ admin:
       label: Novice
     paragraph:
       label: Odstavek
+    paragraph-list:
+      label: Odstavki
     pushes:
       label: Izpostavljeno
     quote:

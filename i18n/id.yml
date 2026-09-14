@@ -44,6 +44,8 @@ admin:
       label: Buletin
     paragraph:
       label: Paragraf
+    paragraph-list:
+      label: Daftar paragraf
     pushes:
       label: Pemberitahuan
     quote:

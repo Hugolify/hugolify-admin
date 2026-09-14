@@ -44,6 +44,8 @@ admin:
       label: Бюлетин
     paragraph:
       label: Параграф
+    paragraph-list:
+      label: Параграфи
     pushes:
       label: Известия
     quote:

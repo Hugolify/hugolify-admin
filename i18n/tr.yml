@@ -44,6 +44,8 @@ admin:
       label: Bülten
     paragraph:
       label: Paragraf
+    paragraph-list:
+      label: Paragraflar
     pushes:
       label: Bildirimler
     quote:

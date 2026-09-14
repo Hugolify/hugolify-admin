@@ -44,6 +44,8 @@ admin:
       label: Hírlevél
     paragraph:
       label: Bekezdés
+    paragraph-list:
+      label: Bekezdések
     pushes:
       label: Értesítések
     quote:

@@ -44,6 +44,8 @@ admin:
       label: न्यूज़लैटर
     paragraph:
       label: अनुच्छेद
+    paragraph-list:
+      label: अनुच्छेद सूची
     pushes:
       label: सूचनाएं
     quote:

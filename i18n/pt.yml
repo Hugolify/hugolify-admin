@@ -44,6 +44,8 @@ admin:
       label: Newsletter
     paragraph:
       label: Parágrafo
+    paragraph-list:
+      label: Parágrafos
     pushes:
       label: Destaques
     quote:

@@ -44,6 +44,8 @@ admin:
       label: Nyhetsbrev
     paragraph:
       label: Stycke
+    paragraph-list:
+      label: Stycken
     pushes:
       label: Push-notiser
     quote:

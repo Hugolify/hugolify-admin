@@ -44,6 +44,8 @@ admin:
       label: Newsletter
     paragraph:
       label: Akapit
+    paragraph-list:
+      label: Akapity
     pushes:
       label: Wyróżnione
     quote:

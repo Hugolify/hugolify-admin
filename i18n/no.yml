@@ -44,6 +44,8 @@ admin:
       label: Nyhetsbrev
     paragraph:
       label: Avsnitt
+    paragraph-list:
+      label: Avsnittsliste
     pushes:
       label: Push-varsler
     quote:
