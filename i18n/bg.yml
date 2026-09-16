@@ -442,7 +442,7 @@ admin:
         ltr: Текст отляво / изображение отдясно
         rtl: Изображение отляво / текст отдясно
     discount:
-      hint: 'Сума на намалението, напр.: 30%'
+      hint: 'Сума на намалението, напр. 30%'
       label: Отстъпка
       pattern: Само стойност (без валута)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Събития
     fax:
       label: Факс
-      hint: 'Международен формат, напр.: +33 1 23 45 67 89'
+      hint: 'Международен формат, напр. +33 1 23 45 67 89'
     featured_image:
       hint: Показва се в резултати от търсене и в преглед на SMS/Съобщения/Социални мрежи
       label: Основно изображение
@@ -475,7 +475,7 @@ admin:
       label: Име
     form:
       accept:
-        hint: 'Само за полета за файл (напр.: .pdf, .doc, .docx)'
+        hint: 'Само за полета за файл (напр. .pdf, .doc, .docx)'
         label: Приемани разширения
       autocomplete:
         label: Автоматично попълване
@@ -513,7 +513,7 @@ admin:
           one: Опция
           other: Опции
       pattern:
-        hint: 'Регулярен израз за валидиране (напр.: [0-9]{5}). Само за полета за въвеждане'
+        hint: 'Регулярен израз за валидиране (напр. [0-9]{5}). Само за полета за въвеждане'
         label: Шаблон
       type:
         hint: Изберете тип поле
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Обръщение
     icon:
-      hint: 'Име на икона (напр.: phone). Вижте https://lucide.dev/ или https://icons.getbootstrap.com/'
+      hint: 'Име на икона (напр. phone). Вижте https://lucide.dev/ или https://icons.getbootstrap.com/'
       label: Икона
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Елемент
         other: Елементи
     keyfeatures:
-      hint: 'напр.: Местоположение, изложение…'
+      hint: 'напр. Местоположение, изложение…'
       label:
         one: ключова характеристика
         other: Ключови характеристики
@@ -689,7 +689,7 @@ admin:
       hint: 'Компресирайте PDF преди изпращане: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Телефонен номер
-      hint: 'Международен формат, напр.: +33 1 23 45 67 89'
+      hint: 'Международен формат, напр. +33 1 23 45 67 89'
     placeholder:
       label: Заместител
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Преса
     price:
       hide: Скрий цена
-      hint: 'напр.: 300000 (за 300 000 лв)'
+      hint: 'напр. 300000 (за 300 000 лв)'
       label: Цена
       sold: Продажна цена
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Подзаглавие
     suffix:
-      hint: 'напр.: %'
+      hint: 'напр. %'
       label: Суфикс
     summary:
       label: Резюме

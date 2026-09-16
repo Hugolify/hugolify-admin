@@ -442,7 +442,7 @@ admin:
         ltr: Texto a la izquierda / imagen a la derecha
         rtl: Imagen a la izquierda / texto a la derecha
     discount:
-      hint: 'Cantidad de la reducción, ej.: 30%'
+      hint: 'Cantidad de la reducción, p. ej. 30%'
       label: Descuento
       pattern: Solo valor (sin moneda)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Eventos
     fax:
       label: Fax
-      hint: 'Formato internacional, ej.: +33 1 23 45 67 89'
+      hint: 'Formato internacional, p. ej. +33 1 23 45 67 89'
     featured_image:
       hint: Se muestra en resultados de búsqueda y en vista previa de SMS/Mensajes/Redes sociales
       label: Imagen principal
@@ -475,7 +475,7 @@ admin:
       label: Nombre
     form:
       accept:
-        hint: 'Solo para campos de archivo (ej.: .pdf, .doc, .docx)'
+        hint: 'Solo para campos de archivo (p. ej. .pdf, .doc, .docx)'
         label: Extensiones aceptadas
       autocomplete:
         label: Autocompletar
@@ -513,7 +513,7 @@ admin:
           one: Opción
           other: Opciones
       pattern:
-        hint: 'Expresión regular de validación (ej.: [0-9]{5}). Solo para campos de entrada'
+        hint: 'Expresión regular de validación (p. ej. [0-9]{5}). Solo para campos de entrada'
         label: Patrón
       type:
         hint: Elegir tipo de campo
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Tratamiento
     icon:
-      hint: 'Nombre del icono (p. ej.: phone). Consulta https://lucide.dev/ o https://icons.getbootstrap.com/'
+      hint: 'Nombre del icono (p. ej. phone). Consulta https://lucide.dev/ o https://icons.getbootstrap.com/'
       label: Icono
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Elemento
         other: Elementos
     keyfeatures:
-      hint: 'ej.: Ubicación, exposición…'
+      hint: 'p. ej. Ubicación, exposición…'
       label:
         one: Característica clave
         other: Características clave
@@ -689,7 +689,7 @@ admin:
       hint: 'Comprimir PDF antes de enviar: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Número de teléfono
-      hint: 'Formato internacional, ej.: +33 1 23 45 67 89'
+      hint: 'Formato internacional, p. ej. +33 1 23 45 67 89'
     placeholder:
       label: Marcador de posición
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Prensa
     price:
       hide: Ocultar precio
-      hint: 'ej.: 300000 (para 300.000 €)'
+      hint: 'p. ej. 300000 (para 300.000 €)'
       label: Precio
       sold: Precio de venta
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Subtítulo
     suffix:
-      hint: 'ej.: %'
+      hint: 'p. ej. %'
       label: Sufijo
     summary:
       label: Resumen

@@ -442,7 +442,7 @@ admin:
         ltr: Szöveg balra / kép jobbra
         rtl: Kép balra / szöveg jobbra
     discount:
-      hint: 'A csökkentés összege, pl.: 30%'
+      hint: 'A csökkentés összege, pl. 30%'
       label: Kedvezmény
       pattern: Csak érték (pénznem nélkül)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Események
     fax:
       label: Fax
-      hint: 'Nemzetközi formátum, pl.: +33 1 23 45 67 89'
+      hint: 'Nemzetközi formátum, pl. +33 1 23 45 67 89'
     featured_image:
       hint: Megjelenik a keresési eredményekben és az SMS/Üzenetek/Közösségi hálózatok előnézetében
       label: Fő kép
@@ -475,7 +475,7 @@ admin:
       label: Keresztnév
     form:
       accept:
-        hint: 'Csak fájl mezőkhöz (pl.: .pdf, .doc, .docx)'
+        hint: 'Csak fájl mezőkhöz (pl. .pdf, .doc, .docx)'
         label: Elfogadott kiterjesztések
       autocomplete:
         label: Automatikus kiegészítés
@@ -513,7 +513,7 @@ admin:
           one: Opció
           other: Opciók
       pattern:
-        hint: 'Ellenőrzési reguláris kifejezés (pl.: [0-9]{5}). Csak beviteli mezőkhöz'
+        hint: 'Ellenőrzési reguláris kifejezés (pl. [0-9]{5}). Csak beviteli mezőkhöz'
         label: Minta
       type:
         hint: Válassza ki a mező típusát
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Megszólítás
     icon:
-      hint: 'Ikon neve (pl.: phone). Lásd https://lucide.dev/ vagy https://icons.getbootstrap.com/'
+      hint: 'Ikon neve (pl. phone). Lásd https://lucide.dev/ vagy https://icons.getbootstrap.com/'
       label: Ikon
     id:
       label: Azonosító
@@ -611,7 +611,7 @@ admin:
         one: Elem
         other: Elemek
     keyfeatures:
-      hint: 'pl.: Helyszín, kitettség…'
+      hint: 'pl. Helyszín, kitettség…'
       label:
         one: kulcsfontosságú jellemző
         other: Kulcsfontosságú jellemzők
@@ -689,7 +689,7 @@ admin:
       hint: 'Tömörítse a PDF-et küldés előtt: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefonszám
-      hint: 'Nemzetközi formátum, pl.: +33 1 23 45 67 89'
+      hint: 'Nemzetközi formátum, pl. +33 1 23 45 67 89'
     placeholder:
       label: Helyőrző
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Sajtó
     price:
       hide: Ár elrejtése
-      hint: 'pl.: 300000 (300 000 Ft-ért)'
+      hint: 'pl. 300000 (300 000 Ft-ért)'
       label: Ár
       sold: Eladási ár
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Alcím
     suffix:
-      hint: 'pl.: %'
+      hint: 'pl. %'
       label: Utótag
     summary:
       label: Összefoglaló

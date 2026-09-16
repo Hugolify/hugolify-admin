@@ -441,7 +441,7 @@ admin:
         ltr: Texte à gauche / image à droite
         rtl: Image à gauche / texte à droite
     discount:
-      hint: 'Montant de la réduction, exemple : 30%'
+      hint: 'Montant de la réduction, p. ex. 30%'
       label: Réduction
       pattern: La valeur seulement (sans la devise)
     document:
@@ -460,7 +460,7 @@ admin:
         other: Évènements
     fax:
       label: Fax
-      hint: 'Format international, ex: +33 1 23 45 67 89'
+      hint: 'Format international, p. ex. +33 1 23 45 67 89'
     featured_image:
       hint: Affiché dans les onglets, les résultats de recherche et l’aperçu des SMS/messages/réseaux sociaux
       label: Image principale
@@ -474,7 +474,7 @@ admin:
       label: Prénom
     form:
       accept:
-        hint: 'Seulement pour les champs file (ex: .pdf, .doc, .docx)'
+        hint: 'Seulement pour les champs file (p. ex. .pdf, .doc, .docx)'
         label: Extensions acceptées
       autocomplete:
         label: Autocomplete
@@ -512,7 +512,7 @@ admin:
           one: Option
           other: Options
       pattern:
-        hint: 'Expression régulière de validation (ex: [0-9]{5}). Seulement pour les champs de saisie'
+        hint: 'Expression régulière de validation (p. ex. [0-9]{5}). Seulement pour les champs de saisie'
         label: Pattern
       type:
         hint: Choix du type de champ
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Titre
     icon:
-      hint: 'Nom de l’icon (ex: phone). Voir https://lucide.dev/ ou https://icons.getbootstrap.com/'
+      hint: 'Nom de l’icon (p. ex. phone). Voir https://lucide.dev/ ou https://icons.getbootstrap.com/'
       label: Icone
     id:
       label: ID
@@ -556,13 +556,14 @@ admin:
         hint: Pour une image qui transmet des informations (laisser vide si image décorative)
         label: Texte alternatif
       filter:
-        hint: Set Linear for picture or screenshot, leave empty to keep default config
-        label: Change filter quality?
+        hint: "Choisir Linear pour une photo ou une capture d'écran, laisser vide pour conserver la configuration par défaut"
+        label: "Modifier la qualité du filtre ?"
         options:
-          box: Simple and fast averaging filter appropriate for downscaling (default)
-          catmullrom: Sharp cubic filter that is faster than the Lanczos filter while providing similar results
+          box: "Filtre de moyenne simple et rapide, adapté à la réduction (par défaut)"
+          catmullrom: "Filtre cubique net, plus rapide que Lanczos pour un résultat comparable"
           Lanczos: High-quality resampling filter for photographic images yielding sharp results
-          linear: Bilinear resampling filter, produces smooth output, faster than cubic filters
+          lanczos: "Filtre de rééchantillonnage haute qualité pour les photos, résultat net"
+          linear: "Filtre de rééchantillonnage bilinéaire, rendu lissé, plus rapide que les filtres cubiques"
       seo:
         label: Image de partage
         hint: Image utilisée pour les réseaux sociaux et les liens
@@ -609,14 +610,14 @@ admin:
         one: Item
         other: Items
     keyfeatures:
-      hint: 'exemple : Localisation, exposition…'
+      hint: 'p. ex. Localisation, exposition…'
       label:
         one: Point clé
         other: Points clés
     label:
       label: Label
     lang:
-      hint: Enter code lang (e.g. fr) if different of the current page language
+      hint: "Saisir le code de langue (p. ex. fr) s'il diffère de celui de la page"
       label: Langue
     lastname:
       label: Nom
@@ -633,6 +634,7 @@ admin:
       label: Légende
     limit:
       label: Limite
+      hint: 'p. ex. 100'
     links:
       label:
         one: Lien
@@ -649,7 +651,7 @@ admin:
     map:
       label: Carte
     markers:
-      hint: 'Coordonnées JSON. ex: {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
+      hint: 'Coordonnées JSON. p. ex. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Marqueurs
     newsletter:
       form:
@@ -689,10 +691,10 @@ admin:
       label: Page parente
     pdf:
       label: PDF
-      hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+      hint: "Compresser le PDF avant l'envoi : https://www.adobe.com/fr/acrobat/online/compress-pdf.html"
     phone:
       label: Téléphone
-      hint: 'Format international, ex: +33 1 23 45 67 89'
+      hint: 'Format international, p. ex. +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     poster:
@@ -704,7 +706,7 @@ admin:
       label: Presse
     price:
       hide: Cacher le prix
-      hint: 'exemple : 300000 (pour 300 000 €)'
+      hint: 'p. ex. 300000 (pour 300 000 €)'
       label: Prix
       sold: Prix vendu
     quote:
@@ -811,14 +813,12 @@ admin:
       hint: Affiche un bouton pour voir plus d’éléments
       label: Plus d’items ?
     show_places:
-      hint: Only if you have places already saved (this will disable the marker below)
+      hint: "Uniquement si des lieux sont déjà enregistrés (cela désactive le marqueur ci-dessous)"
       label: Affiche tous les lieux ?
     slug:
-      hint: Leave empty to automate with the title. **Be carefull to SEO impact.**
+      hint: "Laisser vide pour le générer depuis le titre. **Attention à l'impact SEO.**"
       label: Slug
-      pattern:
-        Contain only lowercase letters, numbers, and hyphens, with no spaces,
-        accents, or special characters
+      pattern: "Uniquement des minuscules, des chiffres et des tirets, sans espace, accent ni caractère spécial"
     socials:
       dailymotion:
         _id: Dailymotion ID
@@ -861,7 +861,7 @@ admin:
     subtitle:
       label: Sous-titre
     suffix:
-      hint: 'exemple : %'
+      hint: 'p. ex. %'
       label: Suffix
     surtitle:
       label: Sur-titre
@@ -886,7 +886,7 @@ admin:
       label: Mise en page et apparence
       hint: Définissez la mise en page, la grille, l’alignement et le thème de ce bloc
     url:
-      hint: 'URL absolue (ex : https://www.example.com)'
+      hint: 'URL absolue (p. ex. https://www.example.com)'
       label: URL
     value:
       label: valeur
@@ -978,12 +978,14 @@ admin:
       label: Bouton
     dailymotion:
       label: Dailymotion
+    details:
+      label: Détails
     figure:
       label: Bloc image
     map:
       label: Carte
     span_lang:
-      label: Language (span)
+      label: "Langue (span)"
     twitch:
       label: Twitch
     twitter:

@@ -442,7 +442,7 @@ admin:
         ltr: Testo a sinistra / immagine a destra
         rtl: Immagine a sinistra / testo a destra
     discount:
-      hint: 'Importo della riduzione, es.: 30%'
+      hint: 'Importo della riduzione, es. 30%'
       label: Sconto
       pattern: Solo valore (senza valuta)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Eventi
     fax:
       label: Fax
-      hint: 'Formato internazionale, es.: +33 1 23 45 67 89'
+      hint: 'Formato internazionale, es. +33 1 23 45 67 89'
     featured_image:
       hint: Visualizzato nei risultati di ricerca e nell’anteprima di SMS/Messaggi/Social network
       label: Immagine principale
@@ -475,7 +475,7 @@ admin:
       label: Nome
     form:
       accept:
-        hint: 'Solo per i campi file (es.: .pdf, .doc, .docx)'
+        hint: 'Solo per i campi file (es. .pdf, .doc, .docx)'
         label: Estensioni accettate
       autocomplete:
         label: Autocompletamento
@@ -513,7 +513,7 @@ admin:
           one: Opzione
           other: Opzioni
       pattern:
-        hint: 'Espressione regolare di validazione (es.: [0-9]{5}). Solo per i campi di inserimento'
+        hint: 'Espressione regolare di validazione (es. [0-9]{5}). Solo per i campi di inserimento'
         label: Pattern
       type:
         hint: Scegli tipo di campo
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Titolo
     icon:
-      hint: 'Nome dell’icona (es.: phone). Vedi https://lucide.dev/ o https://icons.getbootstrap.com/'
+      hint: 'Nome dell’icona (es. phone). Vedi https://lucide.dev/ o https://icons.getbootstrap.com/'
       label: Icona
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Elemento
         other: Elementi
     keyfeatures:
-      hint: 'es.: Posizione, esposizione…'
+      hint: 'es. Posizione, esposizione…'
       label:
         one: Caratteristica chiave
         other: Caratteristiche chiave
@@ -689,7 +689,7 @@ admin:
       hint: 'Comprimi PDF prima dell’invio: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Numero di telefono
-      hint: 'Formato internazionale, es.: +33 1 23 45 67 89'
+      hint: 'Formato internazionale, es. +33 1 23 45 67 89'
     placeholder:
       label: Segnaposto
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Stampa
     price:
       hide: Nascondi prezzo
-      hint: 'es.: 300000 (per 300.000 €)'
+      hint: 'es. 300000 (per 300.000 €)'
       label: Prezzo
       sold: Prezzo di vendita
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Sottotitolo
     suffix:
-      hint: 'es.: %'
+      hint: 'es. %'
       label: Suffisso
     summary:
       label: Riepilogo

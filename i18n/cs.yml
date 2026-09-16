@@ -442,7 +442,7 @@ admin:
         ltr: Text vlevo / obrázek vpravo
         rtl: Obrázek vlevo / text vpravo
     discount:
-      hint: 'Výše slevy, např.: 30%'
+      hint: 'Výše slevy, např. 30%'
       label: Sleva
       pattern: Pouze hodnota (bez měny)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Události
     fax:
       label: Fax
-      hint: 'Mezinárodní formát, např.: +33 1 23 45 67 89'
+      hint: 'Mezinárodní formát, např. +33 1 23 45 67 89'
     featured_image:
       hint: Zobrazeno ve výsledcích vyhledávání a v náhledu SMS/Zpráv/Sociálních sítí
       label: Hlavní obrázek
@@ -475,7 +475,7 @@ admin:
       label: Jméno
     form:
       accept:
-        hint: 'Pouze pro souborová pole (např.: .pdf, .doc, .docx)'
+        hint: 'Pouze pro souborová pole (např. .pdf, .doc, .docx)'
         label: Povolené přípony
       autocomplete:
         label: Automatické dokončování
@@ -513,7 +513,7 @@ admin:
           one: Možnost
           other: Možnosti
       pattern:
-        hint: 'Regulární výraz pro ověření (např.: [0-9]{5}). Pouze pro vstupní pole'
+        hint: 'Regulární výraz pro ověření (např. [0-9]{5}). Pouze pro vstupní pole'
         label: Vzor
       type:
         hint: Vyberte typ pole
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Oslovení
     icon:
-      hint: 'Název ikony (např.: phone). Viz https://lucide.dev/ nebo https://icons.getbootstrap.com/'
+      hint: 'Název ikony (např. phone). Viz https://lucide.dev/ nebo https://icons.getbootstrap.com/'
       label: Ikona
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Položka
         other: Položky
     keyfeatures:
-      hint: 'např.: Poloha, expozice…'
+      hint: 'např. Poloha, expozice…'
       label:
         one: klíčová vlastnost
         other: Klíčové vlastnosti
@@ -689,7 +689,7 @@ admin:
       hint: 'Komprimujte PDF před odesláním: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefonní číslo
-      hint: 'Mezinárodní formát, např.: +33 1 23 45 67 89'
+      hint: 'Mezinárodní formát, např. +33 1 23 45 67 89'
     placeholder:
       label: Zástupný text
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Tisk
     price:
       hide: Skrýt cenu
-      hint: 'např.: 300000 (pro 300 000 Kč)'
+      hint: 'např. 300000 (pro 300 000 Kč)'
       label: Cena
       sold: Prodejní cena
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Podtitul
     suffix:
-      hint: 'např.: %'
+      hint: 'např. %'
       label: Přípona
     summary:
       label: Shrnutí

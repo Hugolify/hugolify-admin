@@ -441,7 +441,7 @@ admin:
         ltr: Text on the left / image on the right
         rtl: Image on the left / text on the right
     discount:
-      hint: 'Amount of the reduction, e.g: 30%'
+      hint: 'Amount of the reduction, e.g. 30%'
       label: Discount
       pattern: Value only (without currency)
     document:
@@ -460,7 +460,7 @@ admin:
         other: Events
     fax:
       label: Fax
-      hint: 'International format, e.g: +33 1 23 45 67 89'
+      hint: 'International format, e.g. +33 1 23 45 67 89'
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
       label: Image principale
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Honorific
     icon:
-      hint: 'Icon name (e.g: phone). See https://lucide.dev/ or https://icons.getbootstrap.com/'
+      hint: 'Icon name (e.g. phone). See https://lucide.dev/ or https://icons.getbootstrap.com/'
       label: Icon
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Item
         other: Items
     keyfeatures:
-      hint: 'e.g: Location, exposure…'
+      hint: 'e.g. Location, exposure…'
       label:
         one: key feature
         other: Key features
@@ -651,7 +651,7 @@ admin:
     map:
       label: Map
     markers:
-      hint: 'JSON coordinates. e.g.: {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
+      hint: 'JSON coordinates. e.g. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Markers
     newsletter:
       form:
@@ -694,7 +694,7 @@ admin:
       hint: 'Compress PDF before sending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telephone Number
-      hint: 'International format, e.g: +33 1 23 45 67 89'
+      hint: 'International format, e.g. +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     poster:
@@ -706,7 +706,7 @@ admin:
       label: Press
     price:
       hide: Hide price
-      hint: 'e.g: 300000 (for 300 000 €)'
+      hint: 'e.g. 300000 (for 300 000 €)'
       label: Price
       sold: Sale price
     quote:
@@ -816,7 +816,7 @@ admin:
       hint: Only if you have places already saved (this will disable the marker below)
       label: Show all registered places?
     slug:
-      hint: Leave empty to automate with the title. **Be careful to SEO impact.**
+      hint: Leave empty to generate it from the title. **Mind the SEO impact.**
       label: Slug
       pattern:
         Contain only lowercase letters, numbers, and hyphens, with no spaces,
@@ -859,7 +859,7 @@ admin:
     subtitle:
       label: Subtitle
     suffix:
-      hint: 'e.g: %'
+      hint: 'e.g. %'
       label: Suffix
     summary:
       label: Summary
@@ -888,7 +888,7 @@ admin:
       label: Layout & appearance
       hint: Set the layout, grid, alignment and theme of this block
     url:
-      hint: Absolute URL (e.g https://www.example.com)
+      hint: Absolute URL (e.g. https://www.example.com)
       label: URL
     value:
       label: Value

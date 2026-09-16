@@ -458,7 +458,7 @@ admin:
         one: Tapahtuma
         other: Tapahtumat
     fax:
-      hint: 'Kansainvälinen muoto, esim: +358 40 123 4567'
+      hint: 'Kansainvälinen muoto, esim. +358 40 123 4567'
       label: Faksi
     featured_image:
       hint:
@@ -475,7 +475,7 @@ admin:
       label: Etunimi
     form:
       accept:
-        hint: 'Vain tiedostokentille (esim.: .pdf, .doc, .docx)'
+        hint: 'Vain tiedostokentille (esim. .pdf, .doc, .docx)'
         label: Hyväksytyt tiedostopäätteet
       autocomplete:
         label: Automaattinen täydennys
@@ -513,7 +513,7 @@ admin:
           one: Vaihtoehto
           other: Vaihtoehdot
       pattern:
-        hint: 'Vahvistuksen säännöllinen lauseke (esim.: [0-9]{5}). Vain syöttökentille'
+        hint: 'Vahvistuksen säännöllinen lauseke (esim. [0-9]{5}). Vain syöttökentille'
         label: Kaava
       type:
         hint: Choose type field
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Puhuttelu
     icon:
-      hint: 'Kuvakkeen nimi (esim.: phone). Katso https://lucide.dev/ tai https://icons.getbootstrap.com/'
+      hint: 'Kuvakkeen nimi (esim. phone). Katso https://lucide.dev/ tai https://icons.getbootstrap.com/'
       label: Kuvake
     id:
       label: ID
@@ -607,7 +607,7 @@ admin:
         one: Kohde
         other: Kohteet
     keyfeatures:
-      hint: 'Esim: Sijainti...'
+      hint: 'esim. Sijainti...'
       label:
         one: Pääominaisuus
         other: Pääominaisuudet
@@ -684,7 +684,7 @@ admin:
       hint: 'Pakkaa PDF-tiedosto ennen lähettämistä: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
       label: PDF
     phone:
-      hint: 'Kansainvälinen muoto, esim: +358 40 123 4567'
+      hint: 'Kansainvälinen muoto, esim. +358 40 123 4567'
       label: Puhelinnumero
     placeholder:
       label: Paikkamerkki
@@ -697,7 +697,7 @@ admin:
       label: Paina
     price:
       hide: Piilota hinta
-      hint: 'Esim: 300000 (300 000 €)'
+      hint: 'esim. 300000 (300 000 €)'
       label: Hinta
       sold: Myyntihinta
     quote:

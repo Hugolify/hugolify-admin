@@ -442,7 +442,7 @@ admin:
         ltr: Tekst links / afbeelding rechts
         rtl: Afbeelding links / tekst rechts
     discount:
-      hint: 'Bedrag van de korting, bijv: 30%'
+      hint: 'Bedrag van de korting, bijv. 30%'
       label: Korting
       pattern: Alleen waarde (zonder valuta)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Evenementen
     fax:
       label: Fax
-      hint: 'Internationaal formaat, bijv: +33 1 23 45 67 89'
+      hint: 'Internationaal formaat, bijv. +33 1 23 45 67 89'
     featured_image:
       hint: Weergegeven in zoekresultaten en in SMS/Berichten/Sociale netwerken voorbeeld
       label: Hoofdafbeelding
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Aanhef
     icon:
-      hint: 'Pictogramnaam (bijv.: phone). Zie https://lucide.dev/ of https://icons.getbootstrap.com/'
+      hint: 'Pictogramnaam (bijv. phone). Zie https://lucide.dev/ of https://icons.getbootstrap.com/'
       label: Pictogram
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Item
         other: Items
     keyfeatures:
-      hint: 'bijv: Locatie, ligging…'
+      hint: 'bijv. Locatie, ligging…'
       label:
         one: hoofdkenmerk
         other: Hoofdkenmerken
@@ -689,7 +689,7 @@ admin:
       hint: 'Comprimeer PDF voor verzending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefoonnummer
-      hint: 'Internationaal formaat, bijv: +33 1 23 45 67 89'
+      hint: 'Internationaal formaat, bijv. +33 1 23 45 67 89'
     placeholder:
       label: Tijdelijke aanduiding
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Pers
     price:
       hide: Prijs verbergen
-      hint: 'bijv: 300000 (voor 300 000 €)'
+      hint: 'bijv. 300000 (voor 300 000 €)'
       label: Prijs
       sold: Verkoopprijs
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Ondertitel
     suffix:
-      hint: 'bijv: %'
+      hint: 'bijv. %'
       label: Achtervoegsel
     summary:
       label: Samenvatting

@@ -442,7 +442,7 @@ admin:
         ltr: Teks di kiri / gambar di kanan
         rtl: Gambar di kiri / teks di kanan
     discount:
-      hint: 'Jumlah pengurangan, mis: 30%'
+      hint: 'Jumlah pengurangan, mis. 30%'
       label: Diskon
       pattern: Hanya nilai (tanpa mata uang)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Acara
     fax:
       label: Faks
-      hint: 'Format internasional, mis: +33 1 23 45 67 89'
+      hint: 'Format internasional, mis. +33 1 23 45 67 89'
     featured_image:
       hint: Ditampilkan di hasil pencarian, dan di pratinjau SMS/Pesan/Jejaring Sosial
       label: Gambar Utama
@@ -475,7 +475,7 @@ admin:
       label: Nama depan
     form:
       accept:
-        hint: 'Hanya untuk bidang file (mis.: .pdf, .doc, .docx)'
+        hint: 'Hanya untuk bidang file (mis. .pdf, .doc, .docx)'
         label: Ekstensi yang diterima
       autocomplete:
         label: Pelengkap Otomatis
@@ -513,7 +513,7 @@ admin:
           one: Opsi
           other: Opsi
       pattern:
-        hint: 'Ekspresi reguler validasi (mis.: [0-9]{5}). Hanya untuk bidang isian'
+        hint: 'Ekspresi reguler validasi (mis. [0-9]{5}). Hanya untuk bidang isian'
         label: Pola
       type:
         hint: Pilih jenis bidang
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Sebutan
     icon:
-      hint: 'Nama ikon (mis.: phone). Lihat https://lucide.dev/ atau https://icons.getbootstrap.com/'
+      hint: 'Nama ikon (mis. phone). Lihat https://lucide.dev/ atau https://icons.getbootstrap.com/'
       label: Ikon
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Item
         other: Item
     keyfeatures:
-      hint: 'mis: Lokasi, paparan…'
+      hint: 'mis. Lokasi, paparan…'
       label:
         one: fitur utama
         other: Fitur Utama
@@ -689,7 +689,7 @@ admin:
       hint: 'Kompres PDF sebelum mengirim: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Nomor Telepon
-      hint: 'Format internasional, mis: +33 1 23 45 67 89'
+      hint: 'Format internasional, mis. +33 1 23 45 67 89'
     placeholder:
       label: Placeholder
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Pers
     price:
       hide: Sembunyikan harga
-      hint: 'mis: 300000 (untuk 300.000 Rp)'
+      hint: 'mis. 300000 (untuk 300.000 Rp)'
       label: Harga
       sold: Harga Jual
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Subjudul
     suffix:
-      hint: 'mis: %'
+      hint: 'mis. %'
       label: Akhiran
     summary:
       label: Ringkasan

@@ -442,7 +442,7 @@ admin:
         ltr: Text till vänster / bild till höger
         rtl: Bild till vänster / text till höger
     discount:
-      hint: 'Rabattens belopp, t.ex: 30%'
+      hint: 'Rabattens belopp, t.ex. 30%'
       label: Rabatt
       pattern: Endast värde (utan valuta)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Evenemang
     fax:
       label: Fax
-      hint: 'Internationellt format, t.ex: +33 1 23 45 67 89'
+      hint: 'Internationellt format, t.ex. +33 1 23 45 67 89'
     featured_image:
       hint: Visas i sökresultat och i förhandsgranskning av SMS/Meddelanden/Sociala nätverk
       label: Huvudbild
@@ -475,7 +475,7 @@ admin:
       label: Förnamn
     form:
       accept:
-        hint: 'Endast för filfält (t.ex.: .pdf, .doc, .docx)'
+        hint: 'Endast för filfält (t.ex. .pdf, .doc, .docx)'
         label: Godkända filändelser
       autocomplete:
         label: Komplettera automatiskt
@@ -513,7 +513,7 @@ admin:
           one: Alternativ
           other: Alternativ
       pattern:
-        hint: 'Reguljärt uttryck för validering (t.ex.: [0-9]{5}). Endast för inmatningsfält'
+        hint: 'Reguljärt uttryck för validering (t.ex. [0-9]{5}). Endast för inmatningsfält'
         label: Mönster
       type:
         hint: Välj fälttyp
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Tilltalsnamn
     icon:
-      hint: 'Ikonnamn (t.ex.: phone). Se https://lucide.dev/ eller https://icons.getbootstrap.com/'
+      hint: 'Ikonnamn (t.ex. phone). Se https://lucide.dev/ eller https://icons.getbootstrap.com/'
       label: Ikon
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Objekt
         other: Objekt
     keyfeatures:
-      hint: 't.ex: Plats, exponering…'
+      hint: 't.ex. Plats, exponering…'
       label:
         one: nyckelfunktion
         other: Nyckelfunktioner
@@ -689,7 +689,7 @@ admin:
       hint: 'Komprimera PDF innan du skickar: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefonnummer
-      hint: 'Internationellt format, t.ex: +33 1 23 45 67 89'
+      hint: 'Internationellt format, t.ex. +33 1 23 45 67 89'
     placeholder:
       label: Platshållare
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Press
     price:
       hide: Dölj pris
-      hint: 't.ex: 300000 (för 300 000 kr)'
+      hint: 't.ex. 300000 (för 300 000 kr)'
       label: Pris
       sold: Försäljningspris
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Undertitel
     suffix:
-      hint: 't.ex: %'
+      hint: 't.ex. %'
       label: Suffix
     summary:
       label: Sammanfattning

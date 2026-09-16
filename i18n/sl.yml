@@ -442,7 +442,7 @@ admin:
         ltr: Besedilo levo / slika desno
         rtl: Slika levo / besedilo desno
     discount:
-      hint: 'Znesek popusta, npr: 30%'
+      hint: 'Znesek popusta, npr. 30%'
       label: Popust
       pattern: Samo vrednost (brez valute)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Dogodki
     fax:
       label: Faks
-      hint: 'Mednarodni format, npr: +33 1 23 45 67 89'
+      hint: 'Mednarodni format, npr. +33 1 23 45 67 89'
     featured_image:
       hint: Prikazano v rezultatih iskanja in v predogledu SMS/Sporočil/Družbenih omrežij
       label: Glavna slika
@@ -475,7 +475,7 @@ admin:
       label: Ime
     form:
       accept:
-        hint: 'Samo za polja z datoteko (npr.: .pdf, .doc, .docx)'
+        hint: 'Samo za polja z datoteko (npr. .pdf, .doc, .docx)'
         label: Sprejete končnice
       autocomplete:
         label: Samodejno izpolnjevanje
@@ -513,7 +513,7 @@ admin:
           one: Možnost
           other: Možnosti
       pattern:
-        hint: 'Regularni izraz za preverjanje (npr.: [0-9]{5}). Samo za vnosna polja'
+        hint: 'Regularni izraz za preverjanje (npr. [0-9]{5}). Samo za vnosna polja'
         label: Vzorec
       type:
         hint: Izberite vrsto polja
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Nagovor
     icon:
-      hint: 'Ime ikone (npr.: phone). Glejte https://lucide.dev/ ali https://icons.getbootstrap.com/'
+      hint: 'Ime ikone (npr. phone). Glejte https://lucide.dev/ ali https://icons.getbootstrap.com/'
       label: Ikona
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Element
         other: Elementi
     keyfeatures:
-      hint: 'npr: Lokacija, izpostavljenost…'
+      hint: 'npr. Lokacija, izpostavljenost…'
       label:
         one: ključna značilnost
         other: Ključne značilnosti
@@ -689,7 +689,7 @@ admin:
       hint: 'Stisnite PDF pred pošiljanjem: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefonska številka
-      hint: 'Mednarodni format, npr: +33 1 23 45 67 89'
+      hint: 'Mednarodni format, npr. +33 1 23 45 67 89'
     placeholder:
       label: Nadomestno besedilo
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Tisk
     price:
       hide: Skrij ceno
-      hint: 'npr: 300000 (za 300 000 €)'
+      hint: 'npr. 300000 (za 300 000 €)'
       label: Cena
       sold: Prodajna cena
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Podnaslov
     suffix:
-      hint: 'npr: %'
+      hint: 'npr. %'
       label: Pripona
     summary:
       label: Povzetek

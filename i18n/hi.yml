@@ -442,7 +442,7 @@ admin:
         ltr: बाईं ओर टेक्स्ट / दाईं ओर छवि
         rtl: बाईं ओर छवि / दाईं ओर टेक्स्ट
     discount:
-      hint: 'कमी की राशि, उदाहरण: 30%'
+      hint: 'कमी की राशि, उदा. 30%'
       label: छूट
       pattern: केवल मान (मुद्रा के बिना)
     document:
@@ -461,7 +461,7 @@ admin:
         other: कार्यक्रम
     fax:
       label: फैक्स
-      hint: 'अंतर्राष्ट्रीय प्रारूप, उदाहरण: +33 1 23 45 67 89'
+      hint: 'अंतर्राष्ट्रीय प्रारूप, उदा. +33 1 23 45 67 89'
     featured_image:
       hint: खोज परिणामों और एसएमएस/संदेश/सोशल नेटवर्क पूर्वावलोकन में प्रदर्शित
       label: मुख्य छवि
@@ -475,7 +475,7 @@ admin:
       label: प्रथम नाम
     form:
       accept:
-        hint: 'केवल फ़ाइल क्षेत्रों के लिए (उदा.: .pdf, .doc, .docx)'
+        hint: 'केवल फ़ाइल क्षेत्रों के लिए (उदा. .pdf, .doc, .docx)'
         label: स्वीकृत एक्सटेंशन
       autocomplete:
         label: स्वतः पूर्ण
@@ -513,7 +513,7 @@ admin:
           one: विकल्प
           other: विकल्प
       pattern:
-        hint: 'सत्यापन के लिए नियमित अभिव्यक्ति (उदा.: [0-9]{5})। केवल इनपुट क्षेत्रों के लिए'
+        hint: 'सत्यापन के लिए नियमित अभिव्यक्ति (उदा. [0-9]{5})। केवल इनपुट क्षेत्रों के लिए'
         label: पैटर्न
       type:
         hint: क्षेत्र प्रकार चुनें
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: सम्मानजनक
     icon:
-      hint: 'आइकन का नाम (उदा.: phone). देखें https://lucide.dev/ या https://icons.getbootstrap.com/'
+      hint: 'आइकन का नाम (उदा. phone). देखें https://lucide.dev/ या https://icons.getbootstrap.com/'
       label: आइकन
     id:
       label: आईडी
@@ -611,7 +611,7 @@ admin:
         one: आइटम
         other: आइटम
     keyfeatures:
-      hint: 'उदाहरण: स्थान, जोखिम…'
+      hint: 'उदा. स्थान, जोखिम…'
       label:
         one: मुख्य विशेषता
         other: मुख्य विशेषताएं
@@ -689,7 +689,7 @@ admin:
       hint: 'भेजने से पहले पीडीएफ को संपीड़ित करें: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: टेलीफोन नंबर
-      hint: 'अंतर्राष्ट्रीय प्रारूप, उदाहरण: +33 1 23 45 67 89'
+      hint: 'अंतर्राष्ट्रीय प्रारूप, उदा. +33 1 23 45 67 89'
     placeholder:
       label: प्लेसहोल्डर
     poster:
@@ -701,7 +701,7 @@ admin:
       label: प्रेस
     price:
       hide: कीमत छिपाएं
-      hint: 'उदाहरण: 300000 (300 000 ₹ के लिए)'
+      hint: 'उदा. 300000 (300 000 ₹ के लिए)'
       label: कीमत
       sold: बिक्री मूल्य
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: उपशीर्षक
     suffix:
-      hint: 'उदाहरण: %'
+      hint: 'उदा. %'
       label: प्रत्यय
     summary:
       label: सारांश

@@ -442,7 +442,7 @@ admin:
         ltr: Metin solda / resim sağda
         rtl: Resim solda / metin sağda
     discount:
-      hint: 'İndirim miktarı, örn: %30'
+      hint: 'İndirim miktarı, örn. %30'
       label: İndirim
       pattern: Sadece değer (para birimi olmadan)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Etkinlikler
     fax:
       label: Faks
-      hint: 'Uluslararası format, örn: +33 1 23 45 67 89'
+      hint: 'Uluslararası format, örn. +33 1 23 45 67 89'
     featured_image:
       hint: Arama sonuçlarında ve SMS/Mesajlar/Sosyal ağ önizlemelerinde görüntülenir
       label: Ana Resim
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Hitap
     icon:
-      hint: 'İkon adı (örn.: phone). Bkz. https://lucide.dev/ veya https://icons.getbootstrap.com/'
+      hint: 'İkon adı (örn. phone). Bkz. https://lucide.dev/ veya https://icons.getbootstrap.com/'
       label: İkon
     id:
       label: Kimlik
@@ -611,7 +611,7 @@ admin:
         one: Öğe
         other: Öğeler
     keyfeatures:
-      hint: 'örn: Konum, maruz kalma…'
+      hint: 'örn. Konum, maruz kalma…'
       label:
         one: ana özellik
         other: Ana özellikler
@@ -689,7 +689,7 @@ admin:
       hint: 'Göndermeden önce PDF''i sıkıştırın: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefon Numarası
-      hint: 'Uluslararası format, örn: +33 1 23 45 67 89'
+      hint: 'Uluslararası format, örn. +33 1 23 45 67 89'
     placeholder:
       label: Yer Tutucu
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Basın
     price:
       hide: Fiyatı gizle
-      hint: 'örn: 300000 (300 000 TL için)'
+      hint: 'örn. 300000 (300 000 TL için)'
       label: Fiyat
       sold: Satış fiyatı
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Alt başlık
     suffix:
-      hint: 'örn: %'
+      hint: 'örn. %'
       label: Sonek
     summary:
       label: Özet

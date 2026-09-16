@@ -442,7 +442,7 @@ admin:
         ltr: Tekst po lewej / obraz po prawej
         rtl: Obraz po lewej / tekst po prawej
     discount:
-      hint: 'Kwota rabatu, np: 30%'
+      hint: 'Kwota rabatu, np. 30%'
       label: Rabat
       pattern: Tylko wartość (bez waluty)
     document:
@@ -461,7 +461,7 @@ admin:
         other: Wydarzenia
     fax:
       label: Faks
-      hint: 'Format międzynarodowy, np: +33 1 23 45 67 89'
+      hint: 'Format międzynarodowy, np. +33 1 23 45 67 89'
     featured_image:
       hint: Wyświetlane w wynikach wyszukiwania i w podglądzie SMS/Wiadomości/Sieci społecznościowych
       label: Obraz główny
@@ -475,7 +475,7 @@ admin:
       label: Imię
     form:
       accept:
-        hint: 'Tylko dla pól plików (np.: .pdf, .doc, .docx)'
+        hint: 'Tylko dla pól plików (np. .pdf, .doc, .docx)'
         label: Akceptowane rozszerzenia
       autocomplete:
         label: Autouzupełnianie
@@ -513,7 +513,7 @@ admin:
           one: Opcja
           other: Opcje
       pattern:
-        hint: 'Wyrażenie regularne do walidacji (np.: [0-9]{5}). Tylko dla pól tekstowych'
+        hint: 'Wyrażenie regularne do walidacji (np. [0-9]{5}). Tylko dla pól tekstowych'
         label: Wzorzec
       type:
         hint: Wybierz typ pola
@@ -544,7 +544,7 @@ admin:
     honorific:
       label: Zwrot grzecznościowy
     icon:
-      hint: 'Nazwa ikony (np.: phone). Zobacz https://lucide.dev/ lub https://icons.getbootstrap.com/'
+      hint: 'Nazwa ikony (np. phone). Zobacz https://lucide.dev/ lub https://icons.getbootstrap.com/'
       label: Ikona
     id:
       label: ID
@@ -611,7 +611,7 @@ admin:
         one: Element
         other: Elementy
     keyfeatures:
-      hint: 'np: Lokalizacja, ekspozycja…'
+      hint: 'np. Lokalizacja, ekspozycja…'
       label:
         one: kluczowa cecha
         other: Kluczowe cechy
@@ -689,7 +689,7 @@ admin:
       hint: 'Skompresuj PDF przed wysłaniem: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Numer telefonu
-      hint: 'Format międzynarodowy, np: +33 1 23 45 67 89'
+      hint: 'Format międzynarodowy, np. +33 1 23 45 67 89'
     placeholder:
       label: Symbol zastępczy
     poster:
@@ -701,7 +701,7 @@ admin:
       label: Prasa
     price:
       hide: Ukryj cenę
-      hint: 'np: 300000 (dla 300 000 €)'
+      hint: 'np. 300000 (dla 300 000 €)'
       label: Cena
       sold: Cena sprzedaży
     quote:
@@ -846,7 +846,7 @@ admin:
     subtitle:
       label: Podtytuł
     suffix:
-      hint: 'np: %'
+      hint: 'np. %'
       label: Sufiks
     summary:
       label: Podsumowanie
