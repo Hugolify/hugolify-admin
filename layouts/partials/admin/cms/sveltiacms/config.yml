@@ -85,6 +85,9 @@ media_libraries:
   {{- end }}
 {{- end }}
 
+output:
+  omit_empty_optional_fields: true
+
 slug:
   encoding: unicode
   clean_accents: false

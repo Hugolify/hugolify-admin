@@ -5,7 +5,6 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.carousel.pagination.label")
-  "default" false
   -}}
 
 {{- $args = merge $args $name }}

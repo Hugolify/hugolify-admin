@@ -2,7 +2,6 @@
   "label" (i18n "admin.fields.limit.label")
   "hint" (i18n "admin.fields.limit.hint")
   "name" "limit"
-  "default" 100
   "i18n" "duplicate"
   -}}
 

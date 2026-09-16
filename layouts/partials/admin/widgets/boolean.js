@@ -95,7 +95,9 @@
   {{ if ne $default "" }}
   default: {{ $default }},
   {{ end }}
+  {{ if not $hidden }}
   required: {{ $required }},
+  {{ end }}
   i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }}
 }
 

@@ -1,4 +1,4 @@
-{{- $itemsFields := slice "prefix" "value_number" "suffix" "limit" "title" "text" -}} 
+{{- $itemsFields := slice "prefix" "value_number" "suffix" "limit" "title" "text" "cta" -}} 
 {{- $items := dict "items" (dict "name" "datas" "fields" $itemsFields) -}} 
 {{- $uiFields := site.Params.admin.fields.ui.fields | append "column" "scrollsnap" -}} 
 {{- $ui := dict "ui" $uiFields -}}

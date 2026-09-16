@@ -5,7 +5,6 @@
 
 {{- $args := dict 
   "label" (i18n "admin.fields.carousel.autoplay.label")
-  "default" true
   -}}
 
 {{- $args = merge $args $name }}
