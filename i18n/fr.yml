@@ -617,7 +617,7 @@ admin:
     label:
       label: Label
     lang:
-      hint: "Saisir le code de langue (p. ex. fr) s'il diffère de celui de la page"
+      hint: "Saisir le code de langue (p. ex. fr) s’il diffère de celui de la page"
       label: Langue
     lastname:
       label: Nom
@@ -816,7 +816,7 @@ admin:
       hint: "Uniquement si des lieux sont déjà enregistrés (cela désactive le marqueur ci-dessous)"
       label: Affiche tous les lieux ?
     slug:
-      hint: "Laisser vide pour le générer depuis le titre. **Attention à l'impact SEO.**"
+      hint: "Laisser vide pour le générer depuis le titre. **Attention à l’impact SEO.**"
       label: Slug
       pattern: "Uniquement des minuscules, des chiffres et des tirets, sans espace, accent ni caractère spécial"
     socials:
