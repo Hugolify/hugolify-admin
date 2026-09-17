@@ -1,6 +1,39 @@
+{{/*
+  Partial to get the options of a select field
+
+  The list always travels through `options`: each field partial resolves its own
+  default and passes it here (see layout.yml, or theme.yml which forwards its
+  raw context). This helper only overrides that default when the field itself
+  carries something better:
+
+  - field (string) name of the field, the options are read from the registry,
+                   site.Params.admin.fields.{field}.options
+  - field (map)    the options written next to the field in a fields list,
+                   under an `options` key: `- theme: {options: [a, b]}`
+
+  Anything else leaves `options` untouched, so a list written inline only ever
+  reaches a select through the partial that forwards it — never through here.
+
+  - field (string or map) raw context of the field
+  - options (slice or dict) default coming from the calling partial
+
+  Returns the options
+*/}}
+
 {{- $options := .options -}}
+
 {{- with .field -}}
-	{{- $options = (index site.Params.admin.fields .).options -}}
+  {{- if reflect.IsMap . -}}
+    {{- with .options -}}
+      {{- $options = . -}}
+    {{- end -}}
+  {{- else if not (reflect.IsSlice .) -}}
+    {{- with index site.Params.admin.fields . -}}
+      {{- with .options -}}
+        {{- $options = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 
 {{- return ($options | default .options) -}}

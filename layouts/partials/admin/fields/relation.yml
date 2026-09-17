@@ -20,6 +20,19 @@
       {{- $value_field = `{{title}}` -}}
     {{- end -}}
   {{- end -}}
+  {{/* Same bug on a nested collection: every entry of it is a bundle, so {{slug}}
+    writes "an-expertise/_index" and the taxonomy term is built on that key.
+    The title resolves whatever the depth, func/GetRealContext (hugolify-theme)
+    looks the page up by anchorized title when the folder name does not match.
+    Taxonomy relations only: the "items" ones of the selected blocks are resolved
+    by path, where the /_index suffix is harmless. */}}
+  {{- if ne $name "items" -}}
+    {{- with index site.Params.admin.collections $collection -}}
+      {{- if .nested -}}
+        {{- $value_field = `{{title}}` -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 {{- $value_field = cond site.Params.admin.config.id `{{id}}` $value_field -}}
 {{/* Sveltia CMS lists the collection index file (_index.md) among the relation options, exclude it */}}
