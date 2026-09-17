@@ -6,6 +6,7 @@
   "hint" (i18n "admin.fields.scrollsnap.hint")
   "name" "scrollsnap"
   "options" $options
+  "i18n" "duplicate"
   -}}
 
 {{ partial "admin/widgets/select.js" $args }}
