@@ -6,6 +6,7 @@
   "name" "grid"
   "required" false
   "options" $options
+  "i18n" "duplicate"
   -}}
 
 {{ partial "admin/widgets/select.js" $args }}

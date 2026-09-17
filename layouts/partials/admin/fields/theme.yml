@@ -4,6 +4,7 @@
   "label" (i18n "admin.fields.theme.label")
   "name" "theme"
   "options" $options
+  "i18n" "duplicate"
   -}}
 
 {{ partial "admin/widgets/select.js" $args }}

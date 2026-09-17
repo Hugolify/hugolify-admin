@@ -6,6 +6,7 @@
   "name" "weight"
   "min" 1
   "value_type" "int"
+  "i18n" "duplicate"
   -}}
 
 {{ partial "admin/widgets/number.js" $args }}

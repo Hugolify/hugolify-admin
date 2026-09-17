@@ -5,6 +5,7 @@
   "label" (i18n "admin.fields.weight.label")
   "name" "weight"
   "options" $options
+  "i18n" "duplicate"
   -}}
 
 {{ partial "admin/widgets/select.js" $args }}
