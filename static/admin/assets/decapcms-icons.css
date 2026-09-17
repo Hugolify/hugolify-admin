@@ -29,6 +29,9 @@ aside [href='#/collections/config'] span::before {
   content: '\F3E5';
 }
 
+aside [href='#/collections/awards'] span::before {
+  content: '\F154';
+}
 aside [href='#/collections/casestudies'] span::before {
   content: '\F194';
 }
