@@ -147,6 +147,10 @@ params:
           - text_markdown
 ```
 
+The look a block starts with is not configured here: it belongs to the theme,
+under `params.blocks.{block}.ui`, so it stays out of the content and a change
+to it reaches the blocks already written.
+
 ## Documentation
 
 <https://www.hugolify.io/docs/cms/admin/>

@@ -158,3 +158,4 @@ Other important params: `branch`, `git`, `repo`, `media.*`, `auth.*`, `blocks.en
 - Widget partials use `.js` extension — they produce text, not actual JS files
 - `transform.Remarshal "yaml"` is used to clean/normalize YAML output
 - The `func/` partials handle cross-cutting concerns like `GetFields`, `GetOptions`, `GetTinaName`, `GetCloudcannonInputsAndStructures`
+- The look a block starts with is **not** configured here: it lives in the theme, under `params.blocks.{block}.ui`, resolved by `func/GetBlockUI.html` of `hugolify-theme`. This module deliberately writes no `default` for those fields — a CMS default is saved to the front matter of every entry, a theme default is not
