@@ -1,6 +1,9 @@
-{{- $args := dict 
+{{/* A person is named the same in every language, the field is only filled once
+  and copied to the other locales. */}}
+{{- $args := dict
   "label" (i18n "admin.fields.lastname.label")
   "name" "lastname"
+  "i18n" "duplicate"
   -}}
 
 {{ partial "admin/widgets/string.js" $args }}

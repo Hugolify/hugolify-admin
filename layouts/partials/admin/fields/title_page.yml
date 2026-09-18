@@ -3,9 +3,18 @@
   {{- $name = dict "name" "title_page" "nameOverride" "title" }}
 {{- end }}
 
-{{- $args := dict 
+{{/* A page title is translated, but a collection whose title is a proper noun
+  asks for something else next to the field: `- title_page: {i18n: duplicate}`.
+  The field is written as a bare string everywhere else, hence the map test. */}}
+{{- $i18n := true }}
+{{- if reflect.IsMap . }}
+  {{- $i18n = .i18n | default true }}
+{{- end }}
+
+{{- $args := dict
   "label" (i18n "admin.fields.title_page.label")
   "hint" (i18n "admin.fields.title_page.hint")
+  "i18n" $i18n
   "required" true
   -}}
 

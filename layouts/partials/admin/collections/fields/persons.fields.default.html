@@ -11,13 +11,14 @@
   {{- $persons_places = dict "relation" (dict "collection" "places" "name" "persons_places" "multiple" true) -}}
 {{- end -}}
 
-{{- return slice 
-  "id" 
-  "is_not_index" 
-  "draft" 
-  "title_page" 
-  "firstname" 
-  "lastname" 
+{{/* The title of a person page is their name, it does not get translated. */}}
+{{- return slice
+  "id"
+  "is_not_index"
+  "draft"
+  (dict "title_page" (dict "i18n" "duplicate"))
+  "firstname"
+  "lastname"
   "description"
   "featured_image" 
   $persons_statutes
