@@ -3,15 +3,22 @@
 {{- $display_fields := .display_fields | default (slice `"title"`) -}}
 {{- $search_fields := .search_fields | default (slice `"title"`) -}}
 {{- $name := .name | default $collection -}}
-{{- $i18n := $collection -}}
+{{- $labelKey := $collection -}}
 {{- if ne .name "items" -}}
-  {{- $i18n = $name -}}
+  {{- $labelKey = $name -}}
 {{- end -}}
 {{- if or (strings.Contains $collection "posts_authors") (strings.Contains $collection "posts_categories") (strings.Contains $collection "posts_tags") -}}
   {{- $collection = replace $collection "posts_" "" -}} 
 {{- end -}}
 {{- $multiple := .multiple | default false -}}
 {{- $required := .required | default false -}}
+{{/* A relation stores a key, never a label: {{slug}} is the file name, shared by
+  every translation of an entry, and the {{title}} below is anchorized into a
+  taxonomy term key that func/GetRealContext (hugolify-theme) resolves to the
+  target page, where the translated label lives. Translating the key breaks that
+  lookup, so the value is duplicated across locales unless a field asks for
+  something else with "i18n". */}}
+{{- $i18n := .i18n | default "duplicate" -}}
 {{- $value_field := `{{slug}}` -}}
 {{/* Decap CMS bug with bundle page (add /_index), we use title for taxonomies */}}
 {{- if eq site.Params.admin.cms "cloudcannon" "decapcms" "netlifycms" "staticcms" -}}
@@ -41,16 +48,17 @@
 {{- end -}}
 
 
-{{- $args := dict 
-  "label" (i18n (print "admin.collections." $i18n ".label"))
-  "label_singular" (i18n (print "admin.collections." $i18n ".label") 1)
-  "hint" (i18n (print "admin.collections." $i18n ".hint"))
+{{- $args := dict
+  "label" (i18n (print "admin.collections." $labelKey ".label"))
+  "label_singular" (i18n (print "admin.collections." $labelKey ".label") 1)
+  "hint" (i18n (print "admin.collections." $labelKey ".hint"))
   "name" $name
   "collection" $collection
   "display_fields" $display_fields
   "search_fields" $search_fields
   "value_field" $value_field
   "filters" $filters
+  "i18n" $i18n
   "multiple" $multiple
   "required" $required
   -}}

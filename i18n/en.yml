@@ -635,6 +635,7 @@ admin:
       label: Legend
     limit:
       label: Limit
+      hint: 'e.g. 100'
     links:
       label:
         one: Link
@@ -839,6 +840,8 @@ admin:
       youtube:
         _id: Youtube ID
         label: Youtube
+    details:
+      label: Details
     sold:
       label: Sold/rent ?
     state:

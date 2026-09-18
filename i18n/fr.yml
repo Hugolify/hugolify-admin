@@ -561,7 +561,6 @@ admin:
         options:
           box: "Filtre de moyenne simple et rapide, adapté à la réduction (par défaut)"
           catmullrom: "Filtre cubique net, plus rapide que Lanczos pour un résultat comparable"
-          Lanczos: High-quality resampling filter for photographic images yielding sharp results
           lanczos: "Filtre de rééchantillonnage haute qualité pour les photos, résultat net"
           linear: "Filtre de rééchantillonnage bilinéaire, rendu lissé, plus rapide que les filtres cubiques"
       seo:
