@@ -1,0 +1,25 @@
+{{/* GetBlockNames
+     Flatten `admin.blocks.enable` into the block names a content file actually writes.
+
+     `selected` is a family, not a block: admin/blocks/types/selected.yml generates one
+     entry per enabled collection, so the CMS writes `type: selected-persons` and the
+     theme's blocks/range.html routes it back to blocks/templates/selected.html. The
+     expansion below mirrors that file — same filter on `.enable`, same two exclusions.
+
+     Returns: slice of strings, e.g. ["alert", "cta", …, "selected-persons", "title-xl"]
+*/}}
+
+{{- $names := slice -}}
+{{- range $block := site.Params.admin.blocks.enable -}}
+  {{- if eq $block "selected" -}}
+    {{- range $collection, $config := site.Params.admin.collections -}}
+      {{- if and $config.enable (ne $collection "config") (ne $collection "indexes") -}}
+        {{- $names = $names | append (print "selected-" $collection) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $names = $names | append $block -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $names -}}

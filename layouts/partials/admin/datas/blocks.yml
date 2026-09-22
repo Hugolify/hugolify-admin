@@ -1,0 +1,38 @@
+{{/*  Default UI of every block, written to data/blocks.yml.
+
+      The theme's func/GetBlockUI reads that file as a layer over
+      params.blocks.<block>.ui, so an integrator sets the look of a block type once
+      from the CMS and it reaches the blocks already written in the content.
+
+      `column`, `layout` and `scrollsnap` are appended to admin.fields.ui.fields because
+      a site-wide default commonly sets them (a grid of 4, a list turned into a grid, a
+      carousel below a breakpoint) while the per-block form keeps a shorter list.
+
+      Not translated: how a block looks is not language content, so the file stays
+      whole instead of being split per locale the way data/footer.yml is.  */}}
+
+{{- $ui := site.Params.admin.fields.ui.fields | default (slice "theme" "grid" "offset" "align") -}}
+{{- $ui = $ui | append "column" "layout" "scrollsnap" -}}
+{{- $names := partial "admin/func/GetBlockNames.html" . -}}
+{
+  label: '{{ i18n "admin.files.blocks" }}',
+  name: 'blocks',
+  file: 'data/blocks.yml',
+  i18n: false,
+  fields: [
+    {{- range $name := $names }}
+      {{- $label := i18n (printf "admin.blocks.%s.label" $name) | default (humanize $name) -}}
+      {{- if strings.HasPrefix $name "selected-" -}}
+        {{- $collection := strings.TrimPrefix "selected-" $name -}}
+        {{- $collection_label := i18n (print "admin.collections." $collection ".label") | default (humanize $collection) -}}
+        {{- $label = i18n "admin.blocks.selected.label" (dict "section" $collection_label) -}}
+      {{- end }}
+      {{ partial "admin/widgets/object.js" (dict
+        "label" $label
+        "name" $name
+        "i18n" false
+        "fields" (slice (dict "ui" $ui))
+      ) }},
+    {{- end }}
+  ]
+}

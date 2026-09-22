@@ -940,6 +940,7 @@ admin:
       label: Zoom
   files:
     banner: Header – Bannière d’information en haut du site
+    blocks: Blocs – Mise en page et apparence par défaut de chaque type de bloc
     credit: Footer – Crédits en bas du site
     footer: Footer – Blocs et informations en bas du site
     nav:
