@@ -2,7 +2,6 @@
   "label" (i18n "admin.fields.count.label")
   "hint" (i18n "admin.fields.count.hint")
   "name" "count"
-  "default" 4
   "min" 1
   "max" 10
   "step" 1
