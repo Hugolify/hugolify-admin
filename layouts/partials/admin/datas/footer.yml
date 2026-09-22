@@ -1,4 +1,5 @@
 {{- $fields := slice "title" "text_area" "cta" "blocks" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "file" "footer" "fields" $fields) -}}
 {
   label: '{{ i18n "admin.files.footer" }}',
   name: 'footer',

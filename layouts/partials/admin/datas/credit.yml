@@ -1,4 +1,5 @@
 {{- $fields := slice "text_markdown" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "file" "credit" "fields" $fields) -}}
 {
   label: '{{ i18n "admin.files.credit" }}',
   name: 'credit',

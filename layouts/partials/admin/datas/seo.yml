@@ -1,4 +1,5 @@
 {{- $fields := slice "title" "description" "image_seo" "twitter" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "file" "seo" "fields" $fields) -}}
 {
   label: '{{ i18n "admin.files.seo.label" }}',
   name: 'seo',

@@ -1,4 +1,5 @@
 {{- $fields := slice "text_markdown" "state" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "file" "banner" "fields" $fields) -}}
 {
   label: '{{ i18n "admin.files.banner" }}',
   name: 'banner',
