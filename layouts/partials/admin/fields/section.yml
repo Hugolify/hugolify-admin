@@ -13,6 +13,7 @@
   "name" "section"
   "options" $collections
   "required" true
+  "i18n" "duplicate"
   -}}
 
 {{ partial "admin/widgets/select.js" $args }}
