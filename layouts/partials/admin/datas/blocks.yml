@@ -9,7 +9,12 @@
       carousel below a breakpoint) while the per-block form keeps a shorter list.
 
       Not translated: how a block looks is not language content, so the file stays
-      whole instead of being split per locale the way data/footer.yml is.  */}}
+      whole instead of being split per locale the way data/footer.yml is.
+
+      A block already carrying a value opens on arrival, the rest stay folded, so the
+      screen says at a glance which of the thirty types the site actually styles. The
+      test matches func/GetBlockUI: a key whose value is empty is one the theme skips,
+      so a block whose fields were all cleared folds back.  */}}
 
 {{- $ui := site.Params.admin.fields.ui.fields | default (slice "theme" "grid" "offset" "align") -}}
 {{- $ui = $ui | append "column" "layout" "scrollsnap" -}}
@@ -26,12 +31,25 @@
         {{- $collection := strings.TrimPrefix "selected-" $name -}}
         {{- $collection_label := i18n (print "admin.collections." $collection ".label") | default (humanize $collection) -}}
         {{- $label = i18n "admin.blocks.selected.label" (dict "section" $collection_label) -}}
+      {{- end -}}
+      {{- $collapsed := true -}}
+      {{- with hugo.Data.blocks -}}
+        {{- with index . $name -}}
+          {{- with .ui -}}
+            {{- if reflect.IsMap . -}}
+              {{- range $value := . -}}
+                {{- if $value -}}{{- $collapsed = false -}}{{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
       {{- end }}
       {{ partial "admin/widgets/object.js" (dict
         "label" $label
         "name" $name
         "i18n" false
-        "fields" (slice (dict "ui" $ui))
+        "collapsed" $collapsed
+        "fields" (slice (dict "ui" (dict "fields" $ui "collapsed" $collapsed)))
       ) }},
     {{- end }}
   ]

@@ -1,11 +1,36 @@
-{{/* HUGOLIFY THEME v2 REQUIRED */}}
-{{- $fields := partial "admin/func/GetFields.html" (dict "field" . "fields" .) -}}
+{{/* HUGOLIFY THEME v2 REQUIRED
+
+     Context — the list of sub-fields, the form every caller used until now:
+
+       - ui:
+         - align
+         - theme
+
+     or a map, to say more than the sub-fields:
+
+       fields    (slice)  the sub-fields, same as the list form
+       collapsed (bool)   folded state, true by default — admin/datas/blocks.yml
+                          opens the blocks that already carry a value
+*/}}
+
+{{- $context := . -}}
+{{- $collapsed := true -}}
+{{- if reflect.IsMap $context -}}
+  {{- if isset $context "collapsed" -}}
+    {{- $collapsed = $context.collapsed -}}
+  {{- end -}}
+  {{- with $context.fields -}}
+    {{- $context = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $fields := partial "admin/func/GetFields.html" (dict "field" $context "fields" $context) -}}
 
 {{- $args := dict
   "label" (i18n "admin.fields.ui.label")
   "hint" (i18n "admin.fields.ui.hint")
   "name" "ui"
-  "collapsed" true
+  "collapsed" $collapsed
   "fields" $fields
   -}}
 
