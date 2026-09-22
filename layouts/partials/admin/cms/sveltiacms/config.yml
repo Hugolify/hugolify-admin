@@ -21,6 +21,7 @@ backend:
   {{- end }}
 {{- end }}
 
+app_title: {{ site.Params.admin.title | default "Hugolify CMS" }}
 display_url: {{ site.BaseURL }}
 
 {{- if site.Params.admin.i18n.locales }}
