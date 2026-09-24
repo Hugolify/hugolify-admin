@@ -175,10 +175,10 @@
       {{ end }}
     }
   },
-  {{- with site.Params.admin.media.media_folder }}
+  {{- with $media_folder }}
   media_folder: '{{ . }}',
   {{- end }}
-  {{- with site.Params.admin.media.public_folder }}
+  {{- with $public_folder }}
   public_folder: '{{ . }}'
   {{- end }}
 }
