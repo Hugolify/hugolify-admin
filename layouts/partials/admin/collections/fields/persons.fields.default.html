@@ -11,12 +11,13 @@
   {{- $persons_places = dict "relation" (dict "collection" "places" "name" "persons_places" "multiple" true) -}}
 {{- end -}}
 
-{{/* The title of a person page is their name, it does not get translated. */}}
+{{/* The title of a person page is their name, it does not get translated, and
+  it is computed from the first and last name wherever the CMS supports it. */}}
 {{- return slice
   "id"
   "is_not_index"
   "draft"
-  (dict "title_page" (dict "i18n" "duplicate"))
+  (dict "title_page" (dict "i18n" "duplicate" "compute" "{{fields.firstname}} {{fields.lastname}}"))
   "firstname"
   "lastname"
   "description"
