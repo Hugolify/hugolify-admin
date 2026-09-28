@@ -1,4 +1,5 @@
-{{- $subfields := slice "surtitle" "title" "text" "cta" "offset" "is_darken" "is_card" "background_color" "color" "image" -}} 
+{{- $itemUi := dict "ui" (slice "align" "offset" "vertical_align" "is_darken" "is_card" "background_color" "color") -}}
+{{- $subfields := slice "surtitle" "title" "text" "cta" "image" "video" $itemUi -}}
 {{- $items := dict "items" (dict "name" "pushes" "fields" $subfields) -}}
 {{- $layout := dict "layout" (slice "grid" "carousel") -}} 
 {{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "column_simple" "scrollsnap" "carousel" -}} 
