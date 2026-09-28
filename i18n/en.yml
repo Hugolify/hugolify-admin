@@ -988,6 +988,8 @@ admin:
       label: Details
     figure:
       label: Image block
+    icon:
+      label: Icon
     map:
       label: Map
     span_lang:

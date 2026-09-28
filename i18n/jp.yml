@@ -969,6 +969,8 @@ admin:
       label: 詳細
     figure:
       label: 図
+    icon:
+      label: アイコン
     map:
       label: 地図
     twitter:

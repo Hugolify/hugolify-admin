@@ -969,6 +969,8 @@ admin:
       label: Details
     figure:
       label: Abbildung
+    icon:
+      label: Symbol
     map:
       label: Karte
     twitter:

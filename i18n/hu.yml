@@ -969,6 +969,8 @@ admin:
       label: Részletek
     figure:
       label: Ábra
+    icon:
+      label: Ikon
     map:
       label: Térkép
     twitter:

@@ -982,6 +982,8 @@ admin:
       label: Détails
     figure:
       label: Bloc image
+    icon:
+      label: Icône
     map:
       label: Carte
     span_lang:

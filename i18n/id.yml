@@ -969,6 +969,8 @@ admin:
       label: Detail
     figure:
       label: Gambar
+    icon:
+      label: Ikon
     map:
       label: Peta
     twitter:

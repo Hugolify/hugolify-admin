@@ -969,6 +969,8 @@ admin:
       label: Podrobnosti
     figure:
       label: Slika
+    icon:
+      label: Ikona
     map:
       label: Zemljevid
     twitter:

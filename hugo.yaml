@@ -286,6 +286,7 @@ params:
         - button
         - details
         - figure
+        - icon
         - map
         - qr
         - span_lang

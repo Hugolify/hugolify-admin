@@ -969,6 +969,8 @@ admin:
       label: विवरण
     figure:
       label: आकृति
+    icon:
+      label: आइकन
     map:
       label: मानचित्र
     span_lang:

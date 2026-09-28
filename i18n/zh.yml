@@ -969,6 +969,8 @@ admin:
       label: 详情
     figure:
       label: 图形
+    icon:
+      label: 图标
     map:
       label: 地图
     twitter:

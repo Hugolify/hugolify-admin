@@ -969,6 +969,8 @@ admin:
       label: Details
     figure:
       label: Kuvio
+    icon:
+      label: Kuvake
     map:
       label: Kartta
     twitter:
