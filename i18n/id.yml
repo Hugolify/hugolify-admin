@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Pengenal yang dikirim bersama formulir: Netlify memakainya untuk mengelompokkan kiriman dan menamai kolom. Sengaja dibagikan di semua bahasa. Jika dikosongkan, nilainya diambil dari label atau dari posisi blok.'
         label: Nama
-        pattern: 'Hanya berisi huruf kecil, angka, dan tanda hubung, tanpa spasi, aksen, atau karakter khusus'
+        pattern: 'Hanya berisi huruf kecil, angka, tanda hubung, dan garis bawah, tanpa spasi, aksen, atau karakter khusus'
       options:
         hint: Hanya untuk bidang pilih
         label:

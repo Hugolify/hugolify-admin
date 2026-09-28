@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Az űrlappal elküldött azonosító: a Netlify ez alapján csoportosítja a beküldéseket és nevezi el az oszlopokat. Szándékosan közös minden nyelv között. Üresen hagyva a címkéből vagy a blokk pozíciójából származik.'
         label: Név
-        pattern: 'Csak kisbetűket, számokat és kötőjeleket tartalmazhat, szóközök, ékezetek vagy speciális karakterek nélkül'
+        pattern: 'Csak kisbetűket, számokat, kötőjeleket és aláhúzásjeleket tartalmazhat, szóközök, ékezetek vagy speciális karakterek nélkül'
       options:
         hint: Csak kiválasztó mezőkhöz
         label:

@@ -505,7 +505,7 @@ admin:
       name:
         hint: 'Identifier sent with the form: Netlify uses it to group submissions and name the columns. Deliberately shared across all languages. Left empty, it is derived from the label or from the block position.'
         label: Name
-        pattern: 'Contain only lowercase letters, numbers, and hyphens, with no spaces, accents, or special characters'
+        pattern: 'Contain only lowercase letters, numbers, hyphens, and underscores, with no spaces, accents, or special characters'
       options:
         hint: Only for select fields
         label:

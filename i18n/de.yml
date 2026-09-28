@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Kennung, die mit dem Formular gesendet wird: Netlify gruppiert damit die Einsendungen und benennt die Spalten. Sie wird bewusst über alle Sprachen hinweg geteilt. Bleibt sie leer, wird sie aus dem Label oder der Blockposition abgeleitet.'
         label: Name
-        pattern: 'Nur Kleinbuchstaben, Zahlen und Bindestriche, ohne Leerzeichen, Akzente oder Sonderzeichen'
+        pattern: 'Nur Kleinbuchstaben, Zahlen, Bindestriche und Unterstriche, ohne Leerzeichen, Akzente oder Sonderzeichen'
       options:
         hint: Nur für Auswahlfelder
         label:

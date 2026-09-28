@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Identificatie die met het formulier wordt verzonden: Netlify groepeert er de inzendingen mee en benoemt de kolommen. Bewust gedeeld over alle talen. Leeg gelaten wordt hij afgeleid van het label of van de positie van het blok.'
         label: Naam
-        pattern: 'Bevat alleen kleine letters, cijfers en koppeltekens, zonder spaties, accenten of speciale tekens'
+        pattern: 'Bevat alleen kleine letters, cijfers, koppeltekens en underscores, zonder spaties, accenten of speciale tekens'
       options:
         hint: Alleen voor selectievelden
         label:

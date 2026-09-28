@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Formla birlikte gönderilen tanımlayıcı: Netlify gönderimleri gruplamak ve sütunları adlandırmak için bunu kullanır. Bilinçli olarak tüm diller arasında paylaşılır. Boş bırakılırsa etiketten veya bloğun konumundan türetilir.'
         label: İsim
-        pattern: 'Sadece küçük harfler, sayılar ve tireler içerir, boşluk, aksan veya özel karakterler içermez'
+        pattern: 'Sadece küçük harfler, sayılar, tireler ve alt çizgiler içerir, boşluk, aksan veya özel karakterler içermez'
       options:
         hint: Sadece seçim alanları için
         label:

@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Identificador enviado con el formulario: Netlify lo usa para agrupar los envíos y nombrar las columnas. Se comparte deliberadamente entre todos los idiomas. Si se deja vacío, se deduce de la etiqueta o de la posición del bloque.'
         label: Nombre
-        pattern: 'Contiene solo letras minúsculas, números y guiones, sin espacios, acentos o caracteres especiales'
+        pattern: 'Contiene solo letras minúsculas, números, guiones y guiones bajos, sin espacios, acentos o caracteres especiales'
       options:
         hint: Solo para campos de selección
         label:

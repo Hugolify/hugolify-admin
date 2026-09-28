@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Identificatore inviato con il modulo: Netlify lo usa per raggruppare gli invii e nominare le colonne. È condiviso volutamente tra tutte le lingue. Se lasciato vuoto, viene dedotto dall’etichetta o dalla posizione del blocco.'
         label: Nome
-        pattern: 'Contiene solo lettere minuscole, numeri e trattini, senza spazi, accenti o caratteri speciali'
+        pattern: 'Contiene solo lettere minuscole, numeri, trattini e trattini bassi, senza spazi, accenti o caratteri speciali'
       options:
         hint: Solo per campi di selezione
         label:

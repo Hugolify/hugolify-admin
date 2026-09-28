@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Identifikátor odesílaný s formulářem: Netlify jej používá k seskupení odeslání a pojmenování sloupců. Záměrně je sdílený mezi všemi jazyky. Pokud zůstane prázdný, odvodí se z popisku nebo z pozice bloku.'
         label: Jméno
-        pattern: 'Obsahuje pouze malá písmena, čísla a pomlčky, bez mezer, diakritiky nebo speciálních znaků'
+        pattern: 'Obsahuje pouze malá písmena, čísla, pomlčky a podtržítka, bez mezer, diakritiky nebo speciálních znaků'
       options:
         hint: Pouze pro výběrová pole
         label:

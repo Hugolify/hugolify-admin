@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Identifikator som sendes med skjemaet: Netlify bruker den til å gruppere innsendinger og navngi kolonnene. Den deles bevisst på tvers av alle språk. Står den tom, utledes den fra etiketten eller fra blokkens posisjon.'
         label: Navn
-        pattern: 'Inneholder kun små bokstaver, tall og bindestreker, uten mellomrom, aksenter eller spesialtegn'
+        pattern: 'Inneholder kun små bokstaver, tall, bindestreker og understreker, uten mellomrom, aksenter eller spesialtegn'
       options:
         hint: Kun for valgfelt
         label:

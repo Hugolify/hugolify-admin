@@ -505,7 +505,7 @@ admin:
       name:
         hint: 'Identifiant envoyé avec le formulaire : Netlify s’en sert pour regrouper les soumissions et nommer les colonnes. Volontairement partagé entre toutes les langues. Laissé vide, il est déduit du label ou de la position du bloc.'
         label: Nom
-        pattern: 'Contient uniquement des lettres minuscules, des chiffres et des tirets, sans espaces, accents ni caractères spéciaux'
+        pattern: 'Contient uniquement des lettres minuscules, des chiffres, des tirets et des tirets bas, sans espaces, accents ni caractères spéciaux'
       options:
         hint: Seulement pour les champs select
         label:

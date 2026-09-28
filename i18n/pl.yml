@@ -506,7 +506,7 @@ admin:
       name:
         hint: 'Identyfikator wysyłany z formularzem: Netlify używa go do grupowania zgłoszeń i nazywania kolumn. Celowo współdzielony przez wszystkie języki. Pozostawiony pusty, jest wyprowadzany z etykiety lub z pozycji bloku.'
         label: Nazwa
-        pattern: 'Zawiera tylko małe litery, cyfry i myślniki, bez spacji, znaków diakrytycznych lub znaków specjalnych'
+        pattern: 'Zawiera tylko małe litery, cyfry, myślniki i podkreślenia, bez spacji, znaków diakrytycznych lub znaków specjalnych'
       options:
         hint: Tylko dla pól wyboru
         label:
