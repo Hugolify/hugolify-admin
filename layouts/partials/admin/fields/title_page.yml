@@ -7,8 +7,10 @@
   asks for something else next to the field: `- title_page: {i18n: duplicate}`.
   The field is written as a bare string everywhere else, hence the map test. */}}
 {{- $i18n := true }}
+{{- $compute := false }}
 {{- if reflect.IsMap . }}
   {{- $i18n = .i18n | default true }}
+  {{- $compute = .compute | default false }}
 {{- end }}
 
 {{- $args := dict
@@ -20,4 +22,15 @@
 
 {{- $args = merge $args $name }}
 
+{{/* A collection can build its title from other fields instead of asking for it,
+  e.g. a person named after their first and last name. Only Sveltia CMS computes
+  a value, every other CMS keeps the plain text input. */}}
+{{- if and $compute (eq site.Params.admin.cms "sveltiacms") }}
+
+{{ partial "admin/widgets/compute.js" (merge $args (dict "value" $compute)) }}
+
+{{- else }}
+
 {{ partial "admin/widgets/string.js" $args }}
+
+{{- end }}
