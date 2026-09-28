@@ -37,18 +37,18 @@
   {{- $max_file_size = (index site.Params.admin.fields $name).media.max_file_size | default site.Params.admin.media.max_file_size }}
 {{- end }}
 
-{{/* Media folder */}}
+{{/* Media folder: only emitted when the field overrides the collection or global one */}}
 {{- if eq site.Params.admin.media.media_folder false }}
   {{- $media_folder = false }}
 {{- else if eq $media_folder false }}
-  {{- $media_folder = (index site.Params.admin.fields $name).media.media_folder | default site.Params.admin.media.media_folder }}
+  {{- $media_folder = (index site.Params.admin.fields $name).media.media_folder | default false }}
 {{- end }}
 
-{{/* Public folder */}}
+{{/* Public folder: only emitted when the field overrides the collection or global one */}}
 {{- if eq site.Params.admin.media.public_folder false }}
   {{- $public_folder = false }}
 {{- else if eq $public_folder false }}
-  {{- $public_folder = (index site.Params.admin.fields $name).media.public_folder | default site.Params.admin.media.public_folder }}
+  {{- $public_folder = (index site.Params.admin.fields $name).media.public_folder | default false }}
 {{- end }}
 
 {{/* CloudCannon */}}

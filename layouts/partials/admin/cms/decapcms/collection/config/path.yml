@@ -1,11 +1,16 @@
 {{- $custom_path := `{{slug}}/_index` -}}
-{{- $media_folder := site.Params.admin.media.media_folder -}}
+{{/* Media and public folders are only emitted when the collection overrides the global ones */}}
+{{- $media_folder := false -}}
+{{- $public_folder := false -}}
 {{- if (index site.Params.admin.collections .) -}}
   {{- with (index site.Params.admin.collections .).path -}}
     {{- $custom_path = . }}
   {{- end -}}
   {{- with (index site.Params.admin.collections .).media_folder -}}
     {{- $media_folder = . }}
+  {{- end -}}
+  {{- with (index site.Params.admin.collections .).public_folder -}}
+    {{- $public_folder = . }}
   {{- end -}}
 {{- else -}}
   {{- $custom_path = . }}
@@ -14,4 +19,7 @@
 path: "{{$custom_path}}",
 {{- with $media_folder }}
 media_folder: "{{ . }}",
+{{- end }}
+{{- with $public_folder }}
+public_folder: "{{ . }}",
 {{- end }}
