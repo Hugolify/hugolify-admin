@@ -69,6 +69,10 @@ admin:
       label:
         one: 著者
         other: 著者
+    awards:
+      label:
+        one: 受賞
+        other: 受賞
     casestudies:
       _description: すべてのケーススタディ
       label:
@@ -144,6 +148,11 @@ admin:
       label:
         one: 人物
         other: 人物
+    persons_awards:
+      _description: すべての受賞
+      label:
+        one: 受賞
+        other: 受賞
     persons_expertises:
       _description: すべての専門分野
       label:

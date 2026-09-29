@@ -71,6 +71,10 @@ admin:
       label:
         one: Tekijä
         other: Tekijät
+    awards:
+      label:
+        one: Palkinto
+        other: Palkinnot
     casestudies:
       _description: Kaikki esimerkkitapaukset
       label:
@@ -146,6 +150,11 @@ admin:
       label:
         one: Henkilö
         other: Henkilöt
+    persons_awards:
+      _description: Kaikki palkinnot
+      label:
+        one: Palkinto
+        other: Palkinnot
     persons_expertises:
       _description: Kaikki erikoisalat
       label:

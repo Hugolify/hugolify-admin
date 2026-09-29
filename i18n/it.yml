@@ -69,6 +69,10 @@ admin:
       label:
         one: Autore
         other: Autori
+    awards:
+      label:
+        one: Premio
+        other: Premi
     casestudies:
       _description: Tutti i casi studio
       label:
@@ -144,6 +148,11 @@ admin:
       label:
         one: Persona
         other: Persone
+    persons_awards:
+      _description: Tutti i premi
+      label:
+        one: Premio
+        other: Premi
     persons_expertises:
       _description: Tutte le competenze
       label:

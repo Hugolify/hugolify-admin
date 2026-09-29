@@ -69,6 +69,10 @@ admin:
       label:
         one: Autor
         other: Autores
+    awards:
+      label:
+        one: Prêmio
+        other: Prêmios
     casestudies:
       _description: Todos os estudos de caso
       label:
@@ -144,6 +148,11 @@ admin:
       label:
         one: Pessoa
         other: Pessoas
+    persons_awards:
+      _description: Todos os prêmios
+      label:
+        one: Prêmio
+        other: Prêmios
     persons_expertises:
       _description: Todas as especialidades
       label:

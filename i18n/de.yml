@@ -69,6 +69,10 @@ admin:
       label:
         one: Autor
         other: Autoren
+    awards:
+      label:
+        one: Auszeichnung
+        other: Auszeichnungen
     casestudies:
       _description: Alle Fallstudien
       label:
@@ -144,6 +148,11 @@ admin:
       label:
         one: Person
         other: Personen
+    persons_awards:
+      _description: Alle Auszeichnungen
+      label:
+        one: Auszeichnung
+        other: Auszeichnungen
     persons_expertises:
       _description: Alle Fachgebiete
       label:

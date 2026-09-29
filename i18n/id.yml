@@ -69,6 +69,10 @@ admin:
       label:
         one: Penulis
         other: Penulis
+    awards:
+      label:
+        one: Penghargaan
+        other: Penghargaan
     casestudies:
       _description: Semua studi kasus
       label:
@@ -144,6 +148,11 @@ admin:
       label:
         one: Orang
         other: Orang
+    persons_awards:
+      _description: Semua penghargaan
+      label:
+        one: Penghargaan
+        other: Penghargaan
     persons_expertises:
       _description: Semua keahlian
       label:
