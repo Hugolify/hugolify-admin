@@ -17,6 +17,7 @@
 {{- $cms := site.Params.admin.cms }}
 
 {{- $default := .default | default "" }}
+{{- $dropdown_threshold := .dropdown_threshold | default 1 }}
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
@@ -174,6 +175,7 @@
   {{ if ne $default "" }}
   default: '{{ $default }}',
   {{ end }}
+  dropdown_threshold: {{ $dropdown_threshold }},
   required: {{ $required }},
   i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }}
 }
