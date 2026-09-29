@@ -798,12 +798,19 @@ admin:
     section:
       hint: Selecione a seção a exibir
       label: Seção
+    selected_parent:
+      hint: São exibidas as páginas filhas das páginas selecionadas aqui
+      label:
+        one: Página pai
+        other: Páginas pai
     selected_source:
       hint: Como os itens a exibir são escolhidos
       label: Origem
       options:
+        children: Filhas de uma página
         selection: Seleção manual
         taxonomies: Filtrar por taxonomia
+        toplevel: Páginas de primeiro nível
     show_more:
       hint: Mostra um botão para ver mais itens
       label: Mostrar mais?

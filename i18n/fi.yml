@@ -794,12 +794,19 @@ admin:
     section:
       hint: Valitse näytettävä osa
       label: Osa
+    selected_parent:
+      hint: Näytetään tässä valittujen sivujen alasivut
+      label:
+        one: Yläsivu
+        other: Yläsivut
     selected_source:
       hint: Miten näytettävät kohteet valitaan
       label: Lähde
       options:
+        children: Sivun alasivut
         selection: Manuaalinen valinta
         taxonomies: Suodata taksonomian mukaan
+        toplevel: Ensimmäisen tason sivut
     show_more:
       hint: Näyttää painikkeen nähdäksesi lisää kohteita
       label: Näytä lisää?

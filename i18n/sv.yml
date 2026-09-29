@@ -798,12 +798,19 @@ admin:
     section:
       hint: Välj avsnitt att visa
       label: Avsnitt
+    selected_parent:
+      hint: Undersidorna till de sidor som väljs här visas
+      label:
+        one: Överordnad sida
+        other: Överordnade sidor
     selected_source:
       hint: Hur objekten som ska visas väljs
       label: Källa
       options:
+        children: Undersidor till en sida
         selection: Manuellt urval
         taxonomies: Filtrera efter taxonomi
+        toplevel: Sidor på första nivån
     show_more:
       hint: Visar en knapp för att se fler objekt
       label: Visa mer?

@@ -1,0 +1,19 @@
+{{/*
+  Relation holding the parents a selected block takes its children from, when its
+  source is "children".
+
+  The labels come from the field itself: the collection ones already label the
+  manual selection sitting next to it, and would not say that the children of the
+  pages picked here are what gets displayed.
+
+  - collection (string) collection holding the parents
+*/}}
+
+{{- $args := dict
+  "collection" .collection
+  "name" "parent"
+  "label_key" "admin.fields.selected_parent"
+  "multiple" false
+  -}}
+
+{{ partial "admin/fields/relation.yml" $args }}

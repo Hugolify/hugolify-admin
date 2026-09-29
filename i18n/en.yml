@@ -804,12 +804,19 @@ admin:
     section:
       hint: Select the section to display
       label: Section
+    selected_parent:
+      hint: The children of the pages selected here are displayed
+      label:
+        one: Parent page
+        other: Parent pages
     selected_source:
       hint: How the items to display are chosen
       label: Source
       options:
+        children: Children of a page
         selection: Manual selection
         taxonomies: Filter by taxonomy
+        toplevel: Top-level pages
     show_more:
       hint: Shows a button to see more items
       label: Show more?

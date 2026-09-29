@@ -798,12 +798,19 @@ admin:
     section:
       hint: Vyberte sekci k zobrazení
       label: Sekce
+    selected_parent:
+      hint: Zobrazí se podřízené stránky zde vybraných stránek
+      label:
+        one: Nadřazená stránka
+        other: Nadřazené stránky
     selected_source:
       hint: Jak se vybírají položky k zobrazení
       label: Zdroj
       options:
+        children: Podřízené stránky
         selection: Ruční výběr
         taxonomies: Filtrovat podle taxonomie
+        toplevel: Stránky první úrovně
     show_more:
       hint: Zobrazí tlačítko pro zobrazení více položek
       label: Zobrazit více?

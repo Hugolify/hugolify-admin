@@ -798,12 +798,19 @@ admin:
     section:
       hint: Pilih bagian yang akan ditampilkan
       label: Bagian
+    selected_parent:
+      hint: Halaman turunan dari halaman yang dipilih di sini akan ditampilkan
+      label:
+        one: Halaman induk
+        other: Halaman induk
     selected_source:
       hint: Cara memilih item yang akan ditampilkan
       label: Sumber
       options:
+        children: Turunan sebuah halaman
         selection: Pilihan manual
         taxonomies: Filter berdasarkan taksonomi
+        toplevel: Halaman tingkat pertama
     show_more:
       hint: Menampilkan tombol untuk melihat lebih banyak item
       label: Tampilkan lebih banyak?

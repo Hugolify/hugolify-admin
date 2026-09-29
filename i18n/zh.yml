@@ -798,12 +798,19 @@ admin:
     section:
       hint: 选择要显示的部分
       label: 部分
+    selected_parent:
+      hint: 显示此处所选页面的子页面
+      label:
+        one: 父级页面
+        other: 父级页面
     selected_source:
       hint: 选择要显示项目的方式
       label: 来源
       options:
+        children: 页面的子页面
         selection: 手动选择
         taxonomies: 按分类筛选
+        toplevel: 第一级页面
     show_more:
       hint: 显示一个按钮以查看更多项目
       label: 显示更多?

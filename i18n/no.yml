@@ -798,12 +798,19 @@ admin:
     section:
       hint: Velg seksjonen som skal vises
       label: Seksjon
+    selected_parent:
+      hint: Undersidene til sidene som velges her vises
+      label:
+        one: Overordnet side
+        other: Overordnede sider
     selected_source:
       hint: Hvordan elementene som skal vises velges
       label: Kilde
       options:
+        children: Undersider av en side
         selection: Manuelt utvalg
         taxonomies: Filtrer etter taksonomi
+        toplevel: Sider på første nivå
     show_more:
       hint: Viser en knapp for å se flere elementer
       label: Vis mer?

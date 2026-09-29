@@ -802,12 +802,19 @@ admin:
     section:
       hint: Choix de la section à afficher
       label: Section
+    selected_parent:
+      hint: Les enfants des pages sélectionnées ici sont affichés
+      label:
+        one: Page parente
+        other: Pages parentes
     selected_source:
       hint: Choix du mode de sélection des éléments à afficher
       label: Source
       options:
+        children: Pages enfants de
         selection: Sélection manuelle
         taxonomies: Filtrer par taxonomie
+        toplevel: Pages de premier niveau
     show_more:
       hint: Affiche un bouton pour voir plus d’éléments
       label: Plus d’items ?

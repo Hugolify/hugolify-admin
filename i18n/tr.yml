@@ -798,12 +798,19 @@ admin:
     section:
       hint: Görüntülenecek bölümü seçin
       label: Bölüm
+    selected_parent:
+      hint: Burada seçilen sayfaların alt sayfaları gösterilir
+      label:
+        one: Üst sayfa
+        other: Üst sayfalar
     selected_source:
       hint: Görüntülenecek öğelerin nasıl seçileceği
       label: Kaynak
       options:
+        children: Bir sayfanın alt sayfaları
         selection: Manuel seçim
         taxonomies: Taksonomiye göre filtrele
+        toplevel: Birinci düzey sayfalar
     show_more:
       hint: Daha fazla öğe görmek için bir düğme gösterir
       label: Daha fazla göster?

@@ -798,12 +798,19 @@ admin:
     section:
       hint: Wybierz sekcję do wyświetlenia
       label: Sekcja
+    selected_parent:
+      hint: Wyświetlane są strony podrzędne wybranych tutaj stron
+      label:
+        one: Strona nadrzędna
+        other: Strony nadrzędne
     selected_source:
       hint: Sposób wyboru elementów do wyświetlenia
       label: Źródło
       options:
+        children: Strony podrzędne
         selection: Wybór ręczny
         taxonomies: Filtruj według taksonomii
+        toplevel: Strony pierwszego poziomu
     show_more:
       hint: Pokazuje przycisk, aby zobaczyć więcej elementów
       label: Pokaż więcej?

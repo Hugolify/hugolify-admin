@@ -1,0 +1,29 @@
+{{/*
+  Partial to get the nesting depth allowed for a collection
+
+  A depth of 1 is a flat collection: every entry sits at the root of its folder.
+  Above 1 the CMS lets the editor build a tree, so a page of the collection can
+  hold children. The collection overrides the site wide default, and both are
+  guarded rather than indexed, as a site ships neither of them by default.
+
+  - . (string) collection name
+
+  Returns an integer
+*/}}
+
+{{- $collection := . -}}
+{{- $depth := 1 -}}
+
+{{- with site.Params.admin.nested -}}
+  {{- $depth = .depth | default $depth -}}
+{{- end -}}
+
+{{- with site.Params.admin.collections -}}
+  {{- with index . $collection -}}
+    {{- with .nested -}}
+      {{- $depth = .depth | default $depth -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $depth -}}

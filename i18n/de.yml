@@ -798,12 +798,19 @@ admin:
     section:
       hint: Anzuzeigende Sektion auswählen
       label: Sektion
+    selected_parent:
+      hint: Es werden die Unterseiten der hier ausgewählten Seiten angezeigt
+      label:
+        one: Übergeordnete Seite
+        other: Übergeordnete Seiten
     selected_source:
       hint: Wie die anzuzeigenden Elemente ausgewählt werden
       label: Quelle
       options:
+        children: Unterseiten einer Seite
         selection: Manuelle Auswahl
         taxonomies: Nach Taxonomie filtern
+        toplevel: Seiten der ersten Ebene
     show_more:
       hint: Zeigt einen Button zum Anzeigen weiterer Elemente
       label: Mehr anzeigen?

@@ -798,12 +798,19 @@ admin:
     section:
       hint: 표시할 섹션 선택
       label: 섹션
+    selected_parent:
+      hint: 여기서 선택한 페이지의 하위 페이지가 표시됩니다
+      label:
+        one: 상위 페이지
+        other: 상위 페이지
     selected_source:
       hint: 표시할 항목을 선택하는 방법
       label: 소스
       options:
+        children: 페이지의 하위 페이지
         selection: 직접 선택
         taxonomies: 분류로 필터링
+        toplevel: 최상위 페이지
     show_more:
       hint: 더 많은 항목을 보기 위한 버튼 표시
       label: 더 보기?

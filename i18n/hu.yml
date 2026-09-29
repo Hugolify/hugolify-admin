@@ -798,12 +798,19 @@ admin:
     section:
       hint: Válassza ki a megjelenítendő szakaszt
       label: Szakasz
+    selected_parent:
+      hint: Az itt kiválasztott oldalak aloldalai jelennek meg
+      label:
+        one: Szülőoldal
+        other: Szülőoldalak
     selected_source:
       hint: Hogyan válasszuk ki a megjelenítendő elemeket
       label: Forrás
       options:
+        children: Egy oldal aloldalai
         selection: Kézi kiválasztás
         taxonomies: Szűrés taxonómia szerint
+        toplevel: Első szintű oldalak
     show_more:
       hint: Megjelenít egy gombot további elemek megtekintéséhez
       label: Több mutatása?

@@ -7,6 +7,13 @@
 {{- if ne .name "items" -}}
   {{- $labelKey = $name -}}
 {{- end -}}
+{{/* A relation is labelled after the collection it points to. A field says where
+  its own labels live instead, with "label_key", when that would not tell what the
+  relation holds: the parent of a selected block, for one. */}}
+{{- $labelPrefix := print "admin.collections." $labelKey -}}
+{{- with .label_key -}}
+  {{- $labelPrefix = . -}}
+{{- end -}}
 {{- if or (strings.Contains $collection "posts_authors") (strings.Contains $collection "posts_categories") (strings.Contains $collection "posts_tags") -}}
   {{- $collection = replace $collection "posts_" "" -}} 
 {{- end -}}
@@ -31,9 +38,9 @@
     writes "an-expertise/_index" and the taxonomy term is built on that key.
     The title resolves whatever the depth, func/GetRealContext (hugolify-theme)
     looks the page up by anchorized title when the folder name does not match.
-    Taxonomy relations only: the "items" ones of the selected blocks are resolved
-    by path, where the /_index suffix is harmless. */}}
-  {{- if ne $name "items" -}}
+    Taxonomy relations only: the "items" and "parent" ones of the selected blocks
+    are resolved by path, where the /_index suffix is harmless. */}}
+  {{- if not (in (slice "items" "parent") $name) -}}
     {{- with index site.Params.admin.collections $collection -}}
       {{- if .nested -}}
         {{- $value_field = `{{title}}` -}}
@@ -49,9 +56,9 @@
 
 
 {{- $args := dict
-  "label" (i18n (print "admin.collections." $labelKey ".label"))
-  "label_singular" (i18n (print "admin.collections." $labelKey ".label") 1)
-  "hint" (i18n (print "admin.collections." $labelKey ".hint"))
+  "label" (i18n (print $labelPrefix ".label"))
+  "label_singular" (i18n (print $labelPrefix ".label") 1)
+  "hint" (i18n (print $labelPrefix ".hint"))
   "name" $name
   "collection" $collection
   "display_fields" $display_fields
