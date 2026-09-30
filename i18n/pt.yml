@@ -413,9 +413,6 @@ admin:
         label: Latitude
       lng:
         label: Longitude
-    count:
-      hint: Itens a exibir
-      label: Contagem
     credit:
       label: Crédito
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Legenda
     limit:
       label: Limite
+      hint: Itens a exibir
     links:
       label:
         one: Link

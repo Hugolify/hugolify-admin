@@ -413,9 +413,6 @@ admin:
         label: Szerokość geograficzna
       lng:
         label: Długość geograficzna
-    count:
-      hint: Elementy do wyświetlenia
-      label: Liczba
     credit:
       label: Źródło
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Legenda
     limit:
       label: Limit
+      hint: Elementy do wyświetlenia
     links:
       label:
         one: Link

@@ -413,9 +413,6 @@ admin:
         label: 纬度
       lng:
         label: 经度
-    count:
-      hint: 要显示的项目
-      label: 计数
     credit:
       label: 署名
     cta:
@@ -643,6 +640,7 @@ admin:
       label: 图例
     limit:
       label: 限制
+      hint: 要显示的项目
     links:
       label:
         one: 链接

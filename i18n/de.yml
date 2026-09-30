@@ -413,9 +413,6 @@ admin:
         label: Breitengrad
       lng:
         label: Längengrad
-    count:
-      hint: Anzuzeigende Elemente
-      label: Anzahl
     credit:
       label: Bildnachweis
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Legende
     limit:
       label: Limit
+      hint: Anzuzeigende Elemente
     links:
       label:
         one: Link

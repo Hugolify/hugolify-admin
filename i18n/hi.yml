@@ -413,9 +413,6 @@ admin:
         label: अक्षांश
       lng:
         label: देशांतर
-    count:
-      hint: प्रदर्शित करने के लिए आइटम
-      label: गिनती
     credit:
       label: क्रेडिट
     cta:
@@ -643,6 +640,7 @@ admin:
       label: किंवदंती
     limit:
       label: सीमा
+      hint: प्रदर्शित करने के लिए आइटम
     links:
       label:
         one: लिंक

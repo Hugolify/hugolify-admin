@@ -413,9 +413,6 @@ admin:
         label: Leveysaste
       lng:
         label: Pituusaste
-    count:
-      hint: Näytettävien kenttien määrä
-      label: Lukumäärä
     credit:
       label: Credit
     cta:
@@ -639,6 +636,7 @@ admin:
       label: Selite
     limit:
       label: Raja
+      hint: Näytettävien kenttien määrä
     links:
       label:
         one: Linkki

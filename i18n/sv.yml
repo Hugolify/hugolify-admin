@@ -413,9 +413,6 @@ admin:
         label: Latitud
       lng:
         label: Longitud
-    count:
-      hint: Objekt att visa
-      label: Antal
     credit:
       label: Kredit
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Legend
     limit:
       label: Gräns
+      hint: Objekt att visa
     links:
       label:
         one: Länk

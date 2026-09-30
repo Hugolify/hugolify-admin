@@ -42,8 +42,9 @@
   {{- $fields = $fields | append $relation -}}
 {{- end -}}
 
-{{- $fields = $fields | append 
-  "show_more" 
+{{- $fields = $fields | append
+  "limit"
+  "show_more"
   $ui -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" $block "fields" $fields) -}}

@@ -413,9 +413,6 @@ admin:
         label: Enlem
       lng:
         label: Boylam
-    count:
-      hint: Gösterilecek öğeler
-      label: Sayı
     credit:
       label: Kredi
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Efsane
     limit:
       label: Sınır
+      hint: Gösterilecek öğeler
     links:
       label:
         one: Bağlantı

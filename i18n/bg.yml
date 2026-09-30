@@ -413,9 +413,6 @@ admin:
         label: Географска ширина
       lng:
         label: Географска дължина
-    count:
-      hint: Елементи за показване
-      label: Брой
     credit:
       label: Кредит
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Легенда
     limit:
       label: Лимит
+      hint: Елементи за показване
     links:
       label:
         one: Връзка

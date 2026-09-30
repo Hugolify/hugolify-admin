@@ -413,9 +413,6 @@ admin:
         label: Zeměpisná šířka
       lng:
         label: Zeměpisná délka
-    count:
-      hint: Položky k zobrazení
-      label: Počet
     credit:
       label: Kredit
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Legenda
     limit:
       label: Limit
+      hint: Položky k zobrazení
     links:
       label:
         one: Odkaz

@@ -413,9 +413,6 @@ admin:
         label: Breedtegraad
       lng:
         label: Lengtegraad
-    count:
-      hint: Items om weer te geven
-      label: Aantal
     credit:
       label: Credit
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Legende
     limit:
       label: Limiet
+      hint: Items om weer te geven
     links:
       label:
         one: Link

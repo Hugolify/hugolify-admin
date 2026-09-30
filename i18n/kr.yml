@@ -413,9 +413,6 @@ admin:
         label: 위도
       lng:
         label: 경도
-    count:
-      hint: 표시할 항목
-      label: 개수
     credit:
       label: 크레딧
     cta:
@@ -643,6 +640,7 @@ admin:
       label: 범례
     limit:
       label: 제한
+      hint: 표시할 항목
     links:
       label:
         one: 링크

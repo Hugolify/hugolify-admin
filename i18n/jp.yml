@@ -413,9 +413,6 @@ admin:
         label: 緯度
       lng:
         label: 経度
-    count:
-      hint: 表示するアイテム
-      label: カウント
     credit:
       label: クレジット
     cta:
@@ -643,6 +640,7 @@ admin:
       label: 凡例
     limit:
       label: 制限
+      hint: 表示するアイテム
     links:
       label:
         one: リンク

@@ -413,9 +413,6 @@ admin:
         label: Szélesség
       lng:
         label: Hosszúság
-    count:
-      hint: Megjelenítendő elemek
-      label: Szám
     credit:
       label: Hitel
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Jelmagyarázat
     limit:
       label: Határ
+      hint: Megjelenítendő elemek
     links:
       label:
         one: Link

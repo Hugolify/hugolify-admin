@@ -1,4 +1,6 @@
-{{- $itemsFields := slice "prefix" "value_number" "suffix" "limit" "title" "text" "cta" -}} 
+{{/* The limit of an item is the maximum of its gauge */}}
+{{- $limit := dict "limit" (dict "hint" (i18n "admin.fields.limit.hint_gauge")) -}}
+{{- $itemsFields := slice "prefix" "value_number" "suffix" $limit "title" "text" "cta" -}}
 {{- $items := dict "items" (dict "name" "datas" "fields" $itemsFields) -}} 
 {{- $uiFields := site.Params.admin.fields.ui.fields | append "column" "scrollsnap" -}} 
 {{- $ui := dict "ui" $uiFields -}}

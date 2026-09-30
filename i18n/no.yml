@@ -413,9 +413,6 @@ admin:
         label: Breddegrad
       lng:
         label: Lengdegrad
-    count:
-      hint: Elementer å vise
-      label: Antall
     credit:
       label: Kreditt
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Legende
     limit:
       label: Grense
+      hint: Elementer å vise
     links:
       label:
         one: Lenke

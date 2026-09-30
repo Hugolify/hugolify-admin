@@ -413,9 +413,6 @@ admin:
         label: Lintang
       lng:
         label: Bujur
-    count:
-      hint: Item untuk ditampilkan
-      label: Jumlah
     credit:
       label: Kredit
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Legenda
     limit:
       label: Batas
+      hint: Item untuk ditampilkan
     links:
       label:
         one: Tautan

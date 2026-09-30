@@ -412,9 +412,6 @@ admin:
         label: Latitude
       lng:
         label: Longitude
-    count:
-      hint: Items to display
-      label: Count
     credit:
       label: Credit
     cta:
@@ -644,7 +641,8 @@ admin:
       label: Legend
     limit:
       label: Limit
-      hint: 'e.g. 100'
+      hint: Items to display
+      hint_gauge: 'e.g. 100'
     links:
       label:
         one: Link

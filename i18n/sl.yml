@@ -413,9 +413,6 @@ admin:
         label: Zemljepisna širina
       lng:
         label: Zemljepisna dolžina
-    count:
-      hint: Elementi za prikaz
-      label: Število
     credit:
       label: Zasluge
     cta:
@@ -643,6 +640,7 @@ admin:
       label: Legenda
     limit:
       label: Omejitev
+      hint: Elementi za prikaz
     links:
       label:
         one: Povezava
