@@ -101,6 +101,7 @@ params:
 
     preview: false
     publish_mode: simple # simple or editorial_workflow
+    skip_ci: true # for sveltia-cms: prefix commits with [skip ci], set false to deploy on each save
 
     # Blocks
     blocks:

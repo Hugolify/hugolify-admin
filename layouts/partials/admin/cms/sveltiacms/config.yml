@@ -4,7 +4,13 @@ backend:
   {{ with site.Params.admin.repo }}
   repo: {{ . }}
   {{ end }}
-  automatic_deployments: {{ site.Params.admin.automatic_deployments | default false }}
+
+  {{- /* skip_ci replaces the deprecated automatic_deployments, still honored as a fallback */}}
+  {{- $skip_ci := not site.Params.admin.automatic_deployments }}
+  {{- if isset site.Params.admin "skip_ci" }}
+    {{- $skip_ci = site.Params.admin.skip_ci }}
+  {{- end }}
+  skip_ci: {{ $skip_ci }}
 
 {{- with site.Params.admin.auth }}
   {{- with .base_url }}
