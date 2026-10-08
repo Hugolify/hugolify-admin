@@ -50,6 +50,8 @@ admin:
       label: Push-notiser
     quote:
       label: Citat
+    reusable:
+      label: Återanvändbart block
     search:
       label: Sök
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Säljare
         other: Säljare
+    reusables:
+      _description: Block som skrivs en gång och visas på så många sidor som behövs
+      label:
+        one: Återanvändbart block
+        other: Blockbibliotek
     services:
       _description: Alla tjänster
       label:
@@ -789,6 +796,12 @@ admin:
       label: Hyra?
     required:
       label: Krävs
+    reusable_item:
+      hint: Välj ett block i biblioteket. Det redigeras där, en gång för alla sidor som visar det
+      label: Block
+    reusable_title:
+      hint: Visas bara i CMS:et, för att hitta blocket när det väljs på en sida
+      label: Namn
     schema_email:
       hint: "Tar med e-postadresser i de strukturerade data. Stäng av för att begränsa automatiserad insamling."
       label: "Publicera e-postadresser?"

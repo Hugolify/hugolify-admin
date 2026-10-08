@@ -154,6 +154,7 @@ params:
         - paragraph-list
         - pushes
         - quote
+        - reusable
         - search
         - selected
         - testimonials
@@ -233,6 +234,9 @@ params:
       quote:
         icon:
           material_icons: format_quote
+      reusable:
+        icon:
+          material_icons: library_books
       search:
         icon:
           material_icons: search

@@ -1,0 +1,11 @@
+{{- $fields := partial "admin/blocks/fields/reusable.html" . -}}
+
+{{- $args := dict
+  "label" (i18n "admin.blocks.reusable.label")
+  "name" "reusable"
+  "collapsed" false
+  "fields" $fields
+  "summary" "{{item}}"
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

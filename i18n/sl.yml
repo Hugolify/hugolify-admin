@@ -50,6 +50,8 @@ admin:
       label: Izpostavljeno
     quote:
       label: Citat
+    reusable:
+      label: Blok za večkratno uporabo
     search:
       label: Iskanje
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Prodajalec
         other: Prodajalci
+    reusables:
+      _description: Bloki, napisani enkrat in prikazani na poljubnem številu strani
+      label:
+        one: Blok za večkratno uporabo
+        other: Knjižnica blokov
     services:
       _description: Vse storitve
       label:
@@ -789,6 +796,12 @@ admin:
       label: Najem?
     required:
       label: Obvezno
+    reusable_item:
+      hint: Izberite blok iz knjižnice. Ureja se tam, enkrat za vse strani, ki ga prikazujejo
+      label: Blok
+    reusable_title:
+      hint: Vidno samo v CMS, da blok najdete, ko ga izbirate na strani
+      label: Ime
     schema_email:
       hint: "V strukturirane podatke vključi e-poštne naslove. Izklopite, da omejite samodejno zbiranje."
       label: "Objavim e-poštne naslove?"

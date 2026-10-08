@@ -52,6 +52,8 @@ admin:
       label: Push-viestit
     quote:
       label: Lainaus
+    reusable:
+      label: Uudelleenkäytettävä lohko
     search:
       label: Search
     selected:
@@ -264,6 +266,11 @@ admin:
       label:
         one: Myyjä
         other: Myyjät
+    reusables:
+      _description: Kerran kirjoitetut lohkot, jotka näytetään niin monella sivulla kuin tarvitaan
+      label:
+        one: Uudelleenkäytettävä lohko
+        other: Lohkokirjasto
     services:
       _description: Kaikki palvelut
       label:
@@ -785,6 +792,12 @@ admin:
       label: Vuokra?
     required:
       label: Vaadittu
+    reusable_item:
+      hint: Valitse lohko kirjastosta. Sitä muokataan siellä, kerran kaikille sivuille, joilla se näkyy
+      label: Lohko
+    reusable_title:
+      hint: Näkyy vain CMS:ssä, jotta lohko löytyy, kun se valitaan sivulle
+      label: Nimi
     schema_email:
       hint: "Sisällyttää sähköpostiosoitteet rakenteiseen dataan. Poista käytöstä rajoittaaksesi automaattista keräämistä."
       label: "Julkaistaanko sähköpostiosoitteet?"

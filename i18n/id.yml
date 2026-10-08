@@ -50,6 +50,8 @@ admin:
       label: Pemberitahuan
     quote:
       label: Kutipan
+    reusable:
+      label: Blok yang dapat digunakan ulang
     search:
       label: Pencarian
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Penjual
         other: Penjual
+    reusables:
+      _description: Blok yang ditulis sekali dan ditampilkan di sebanyak mungkin halaman yang diperlukan
+      label:
+        one: Blok yang dapat digunakan ulang
+        other: Pustaka blok
     services:
       _description: Semua layanan
       label:
@@ -789,6 +796,12 @@ admin:
       label: Sewa?
     required:
       label: Wajib
+    reusable_item:
+      hint: Pilih blok dari pustaka. Blok diedit di sana, sekali untuk semua halaman yang menampilkannya
+      label: Blok
+    reusable_title:
+      hint: Hanya terlihat di CMS, untuk menemukan blok saat memilihnya di halaman
+      label: Nama
     schema_email:
       hint: "Menyertakan alamat email dalam data terstruktur. Matikan untuk membatasi pengumpulan otomatis."
       label: "Publikasikan alamat email?"

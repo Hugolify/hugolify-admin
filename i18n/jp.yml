@@ -50,6 +50,8 @@ admin:
       label: 通知
     quote:
       label: 引用
+    reusable:
+      label: 再利用ブロック
     search:
       label: 検索
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: 売主
         other: 売主
+    reusables:
+      _description: 一度だけ作成し、必要なだけのページに表示するブロック
+      label:
+        one: 再利用ブロック
+        other: ブロックライブラリ
     services:
       _description: すべてのサービス
       label:
@@ -789,6 +796,12 @@ admin:
       label: 賃貸済み?
     required:
       label: 必須
+    reusable_item:
+      hint: ライブラリからブロックを選択します。編集はライブラリで一度行うだけで、表示しているすべてのページに反映されます
+      label: ブロック
+    reusable_title:
+      hint: CMS 内でのみ表示されます。ページでブロックを選ぶときに見つけやすくするための名前です
+      label: 名前
     schema_email:
       hint: "構造化データにメールアドレスを含めます。自動収集を抑えたい場合はオフにしてください。"
       label: "メールアドレスを公開しますか？"

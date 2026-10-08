@@ -50,6 +50,8 @@ admin:
       label: Notifications
     quote:
       label: Citation
+    reusable:
+      label: Bloc réutilisable
     search:
       label: Recherche
     selected:
@@ -260,6 +262,11 @@ admin:
       label:
         one: Vendeur
         other: Vendeurs
+    reusables:
+      _description: Blocs écrits une seule fois et affichés sur autant de pages que nécessaire
+      label:
+        one: Bloc réutilisable
+        other: Bibliothèque de blocs
     services:
       _description: Tous les services
       label:
@@ -793,6 +800,12 @@ admin:
       label: Loué ?
     required:
       label: Requis
+    reusable_item:
+      hint: Choisissez un bloc de la bibliothèque. Il se modifie là-bas, une seule fois pour toutes les pages qui l’affichent
+      label: Bloc
+    reusable_title:
+      hint: Visible uniquement dans le CMS, pour retrouver le bloc au moment de le choisir dans une page
+      label: Nom
     schema_email:
       hint: "Inclut les adresses e-mail dans les données structurées. À désactiver pour limiter la collecte automatisée."
       label: "Publier les adresses e-mail ?"

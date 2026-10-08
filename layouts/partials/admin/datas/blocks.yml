@@ -19,6 +19,9 @@
 {{- $ui := site.Params.admin.fields.ui.fields | default (slice "theme" "grid" "offset" "align") -}}
 {{- $ui = $ui | append "column" "layout" "scrollsnap" -}}
 {{- $names := partial "admin/func/GetBlockNames.html" . -}}
+{{/* The reusable block has no look to default: the blocks of the entry it shows
+     keep their own */}}
+{{- $names = complement (slice "reusable") $names -}}
 {
   label: '{{ i18n "admin.files.blocks" }}',
   name: 'blocks',

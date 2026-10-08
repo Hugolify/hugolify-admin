@@ -50,6 +50,8 @@ admin:
       label: Benachrichtigungen
     quote:
       label: Zitat
+    reusable:
+      label: Wiederverwendbarer Block
     search:
       label: Suche
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Verkäufer
         other: Verkäufer
+    reusables:
+      _description: Einmal geschriebene Blöcke, angezeigt auf beliebig vielen Seiten
+      label:
+        one: Wiederverwendbarer Block
+        other: Blockbibliothek
     services:
       _description: Alle Dienstleistungen
       label:
@@ -789,6 +796,12 @@ admin:
       label: Vermietet?
     required:
       label: Erforderlich
+    reusable_item:
+      hint: Wählen Sie einen Block aus der Bibliothek. Er wird dort bearbeitet, einmal für alle Seiten, die ihn anzeigen
+      label: Block
+    reusable_title:
+      hint: Nur im CMS sichtbar, um den Block bei der Auswahl auf einer Seite wiederzufinden
+      label: Name
     schema_email:
       hint: "Nimmt E-Mail-Adressen in die strukturierten Daten auf. Deaktivieren, um automatisiertes Sammeln zu begrenzen."
       label: "E-Mail-Adressen veröffentlichen?"

@@ -50,6 +50,8 @@ admin:
       label: Uitgelicht
     quote:
       label: Citaat
+    reusable:
+      label: Herbruikbaar blok
     search:
       label: Zoeken
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Verkoper
         other: Verkopers
+    reusables:
+      _description: Blokken die één keer worden geschreven en op zoveel pagina’s als nodig worden getoond
+      label:
+        one: Herbruikbaar blok
+        other: Blokkenbibliotheek
     services:
       _description: Alle diensten
       label:
@@ -789,6 +796,12 @@ admin:
       label: Huren?
     required:
       label: Verplicht
+    reusable_item:
+      hint: Kies een blok uit de bibliotheek. Het wordt daar bewerkt, één keer voor alle pagina’s die het tonen
+      label: Blok
+    reusable_title:
+      hint: Alleen zichtbaar in het CMS, om het blok terug te vinden bij het kiezen op een pagina
+      label: Naam
     schema_email:
       hint: "Neemt e-mailadressen op in de gestructureerde gegevens. Schakel uit om geautomatiseerd verzamelen te beperken."
       label: "E-mailadressen publiceren?"

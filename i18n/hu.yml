@@ -50,6 +50,8 @@ admin:
       label: Értesítések
     quote:
       label: Idézet
+    reusable:
+      label: Újrafelhasználható blokk
     search:
       label: Keresés
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Eladó
         other: Eladók
+    reusables:
+      _description: Egyszer megírt blokkok, amelyek tetszőleges számú oldalon megjelennek
+      label:
+        one: Újrafelhasználható blokk
+        other: Blokkönyvtár
     services:
       _description: Minden szolgáltatás
       label:
@@ -789,6 +796,12 @@ admin:
       label: Bérlés?
     required:
       label: Kötelező
+    reusable_item:
+      hint: Válasszon egy blokkot a könyvtárból. Ott szerkeszthető, egyszer az összes oldalra, amely megjeleníti
+      label: Blokk
+    reusable_title:
+      hint: Csak a CMS-ben látható, hogy megtalálja a blokkot, amikor egy oldalon kiválasztja
+      label: Név
     schema_email:
       hint: "Az e-mail-címeket is beleveszi a strukturált adatokba. Kapcsolja ki az automatikus gyűjtés korlátozásához."
       label: "Közzéteszi az e-mail-címeket?"

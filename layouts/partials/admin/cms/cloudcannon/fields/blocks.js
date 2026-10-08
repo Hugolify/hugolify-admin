@@ -1,9 +1,20 @@
 {{ $blocks := site.Params.admin.blocks.enable }}
 
+{{/* The reusable block needs the block library. The structures are shared by every
+     collection here, so unlike fields/blocks.yml the library itself still offers
+     it: the theme leaves out a reusable block held by an entry */}}
+{{ $library := false }}
+{{ with site.Params.admin.collections.reusables }}
+  {{ $library = .enable }}
+{{ end }}
+{{ if not $library }}
+  {{ $blocks = complement (slice "reusable") $blocks }}
+{{ end }}
+
 {{ if in $blocks "selected" }}
   {{ $blocks = complement (slice "selected") $blocks }}
   {{ range $collection, $value := site.Params.admin.collections -}}
-    {{ if and .enable (ne $collection "config") (ne $collection "indexes") }}
+    {{ if and .enable (ne $collection "config") (ne $collection "indexes") (ne $collection "reusables") }}
       {{ $blocks = $blocks | append (dict "key" "selected" "value" $collection) }}
     {{ end }}
   {{ end }}

@@ -50,6 +50,8 @@ admin:
       label: Bildirimler
     quote:
       label: Alıntı
+    reusable:
+      label: Yeniden kullanılabilir blok
     search:
       label: Arama
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Satıcı
         other: Satıcılar
+    reusables:
+      _description: Bir kez yazılan ve gerektiği kadar sayfada gösterilen bloklar
+      label:
+        one: Yeniden kullanılabilir blok
+        other: Blok kütüphanesi
     services:
       _description: Tüm hizmetler
       label:
@@ -789,6 +796,12 @@ admin:
       label: Kira?
     required:
       label: Gerekli
+    reusable_item:
+      hint: Kütüphaneden bir blok seçin. Blok orada, onu gösteren tüm sayfalar için tek seferde düzenlenir
+      label: Blok
+    reusable_title:
+      hint: Yalnızca CMS’de görünür, bloğu bir sayfada seçerken bulmak için
+      label: Ad
     schema_email:
       hint: "E-posta adreslerini yapılandırılmış verilere ekler. Otomatik toplamayı sınırlamak için kapatın."
       label: "E-posta adresleri yayımlansın mı?"

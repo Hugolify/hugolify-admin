@@ -1,0 +1,30 @@
+{{/*  The block library: blocks written once, displayed on as many pages as needed
+      by the reusable block. hugolify-theme ships the section, headless, and
+      enables the collection.
+
+      No index file, unlike the other collections: the index of the section is
+      the theme's, and one saved from the CMS would take over its build options,
+      publishing the entries as pages. No nesting either, whatever the site sets:
+      the reusable block finds an entry by the slug it stores, the path of the
+      entry in a flat folder.  */}}
+{
+  name: 'reusables',
+  folder: 'content/reusables',
+  label: '{{ i18n "admin.collections.reusables.label" }}',
+  label_singular: '{{ i18n "admin.collections.reusables.label" 1 }}',
+  description: '{{ i18n "admin.collections.reusables._description" }}',
+  i18n: true,
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
+  {{ partial "admin/collections/config/path.yml" . }}
+  {{ partial "admin/collections/config/slug.yml" . }}
+  {{ partial "admin/collections/config/icon.yml" . }}
+  {{ partial "admin/collections/config/filter.yml" . }}
+  {{ partial "admin/collections/config/reorder.yml" . }}
+  {{ partial "admin/collections/config/sortable.yml" . }}
+  {{ partial "admin/collections/config/summary.yml" . }}
+  {{ partial "admin/collections/config/view.yml" . }}
+  {{ partial "admin/collections/config/view_filters.yml" . }}
+  {{ partial "admin/collections/config/view_groups.yml" . }}
+  {{ partial "admin/collections/config/fields.yml" (dict "collection" .) }}
+}

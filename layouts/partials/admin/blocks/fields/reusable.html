@@ -1,0 +1,8 @@
+{{/* The reusable block points to an entry of the block library and nothing more:
+  the blocks of the entry keep their own look, so it takes no ui */}}
+{{- $fields := slice
+  "reusable_item" -}}
+
+{{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
+
+{{- return $fields -}}

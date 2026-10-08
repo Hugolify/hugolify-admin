@@ -37,6 +37,7 @@
 
         {{/* Manual mapping for known divergences */}}
 		    {{- if eq $key "title_page" }}{{ $key = "title" }}{{ end }}
+        {{- if eq $key "reusable_title" }}{{ $key = "title" }}{{ end }}
         {{- if eq $key "featured_image" }}{{ $key = "image" }}{{ end }}  
         {{- if eq $key "is_index" }}{{ $key = "isIndex" }}{{ $default = true }}{{ end }}
         {{- if eq $key "is_not_index" }}{{ $key = "isIndex" }}{{ $default = false }}{{ end }}

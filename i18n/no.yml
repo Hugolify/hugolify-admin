@@ -50,6 +50,8 @@ admin:
       label: Push-varsler
     quote:
       label: Sitat
+    reusable:
+      label: Gjenbrukbar blokk
     search:
       label: Søk
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Selger
         other: Selgere
+    reusables:
+      _description: Blokker som skrives én gang og vises på så mange sider som nødvendig
+      label:
+        one: Gjenbrukbar blokk
+        other: Blokkbibliotek
     services:
       _description: Alle tjenester
       label:
@@ -789,6 +796,12 @@ admin:
       label: Lei?
     required:
       label: Påkrevd
+    reusable_item:
+      hint: Velg en blokk fra biblioteket. Den redigeres der, én gang for alle sidene som viser den
+      label: Blokk
+    reusable_title:
+      hint: Vises bare i CMS-et, for å finne blokken igjen når den velges på en side
+      label: Navn
     schema_email:
       hint: "Tar med e-postadresser i de strukturerte dataene. Slå av for å begrense automatisert innsamling."
       label: "Publisere e-postadresser?"

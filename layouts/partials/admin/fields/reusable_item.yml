@@ -1,0 +1,17 @@
+{{/*
+  Relation holding the entry of the block library a reusable block displays.
+
+  It stores the slug of the entry, which the theme looks the entry up by, and is
+  duplicated across locales like every relation: each translation of a page shows
+  the translation of the same entry.
+*/}}
+
+{{- $args := dict
+  "collection" "reusables"
+  "name" "item"
+  "label_key" "admin.fields.reusable_item"
+  "multiple" false
+  "required" true
+  -}}
+
+{{ partial "admin/fields/relation.yml" $args }}

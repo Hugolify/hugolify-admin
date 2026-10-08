@@ -50,6 +50,8 @@ admin:
       label: 알림
     quote:
       label: 인용
+    reusable:
+      label: 재사용 블록
     search:
       label: 검색
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: 판매자
         other: 판매자
+    reusables:
+      _description: 한 번 작성하여 필요한 만큼 여러 페이지에 표시하는 블록
+      label:
+        one: 재사용 블록
+        other: 블록 라이브러리
     services:
       _description: 모든 서비스
       label:
@@ -789,6 +796,12 @@ admin:
       label: 임대됨?
     required:
       label: 필수
+    reusable_item:
+      hint: 라이브러리에서 블록을 선택하세요. 라이브러리에서 한 번만 편집하면 이 블록을 표시하는 모든 페이지에 반영됩니다
+      label: 블록
+    reusable_title:
+      hint: CMS에서만 표시되며, 페이지에서 블록을 선택할 때 찾기 위한 이름입니다
+      label: 이름
     schema_email:
       hint: "구조화된 데이터에 이메일 주소를 포함합니다. 자동 수집을 줄이려면 끄십시오."
       label: "이메일 주소를 공개할까요?"

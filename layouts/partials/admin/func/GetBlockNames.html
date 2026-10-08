@@ -4,7 +4,7 @@
      `selected` is a family, not a block: admin/blocks/types/selected.yml generates one
      entry per enabled collection, so the CMS writes `type: selected-persons` and the
      theme's blocks/range.html routes it back to blocks/templates/selected.html. The
-     expansion below mirrors that file — same filter on `.enable`, same two exclusions.
+     expansion below mirrors that file: same filter on `.enable`, same three exclusions.
 
      Returns: slice of strings, e.g. ["alert", "cta", …, "selected-persons", "title-xl"]
 */}}
@@ -13,7 +13,7 @@
 {{- range $block := site.Params.admin.blocks.enable -}}
   {{- if eq $block "selected" -}}
     {{- range $collection, $config := site.Params.admin.collections -}}
-      {{- if and $config.enable (ne $collection "config") (ne $collection "indexes") -}}
+      {{- if and $config.enable (ne $collection "config") (ne $collection "indexes") (ne $collection "reusables") -}}
         {{- $names = $names | append (print "selected-" $collection) -}}
       {{- end -}}
     {{- end -}}

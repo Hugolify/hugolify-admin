@@ -1,0 +1,19 @@
+{{/* Name of an entry of the block library. The site never displays it: it is what
+  an editor picks the entry by in a reusable block, and what the file of the entry
+  is named after, hence required. One name for every locale, the slug being shared
+  by the translations of the entry. */}}
+{{- $name := dict "name" "title" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "reusable_title" "nameOverride" "title" }}
+{{- end }}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.reusable_title.label")
+  "hint" (i18n "admin.fields.reusable_title.hint")
+  "i18n" "duplicate"
+  "required" true
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/string.js" $args }}

@@ -50,6 +50,8 @@ admin:
       label: 推送
     quote:
       label: 引用
+    reusable:
+      label: 可复用块
     search:
       label: 搜索
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: 卖家
         other: 卖家
+    reusables:
+      _description: 只需编写一次、即可显示在任意多个页面上的块
+      label:
+        one: 可复用块
+        other: 块库
     services:
       _description: 所有服务
       label:
@@ -789,6 +796,12 @@ admin:
       label: 租赁?
     required:
       label: 必填
+    reusable_item:
+      hint: 从块库中选择一个块。在库中编辑一次，所有显示它的页面都会更新
+      label: 块
+    reusable_title:
+      hint: 仅在 CMS 中显示，便于在页面中选择时找到该块
+      label: 名称
     schema_email:
       hint: "将电子邮件地址包含在结构化数据中。如需减少自动抓取，请关闭。"
       label: "是否发布电子邮件地址？"

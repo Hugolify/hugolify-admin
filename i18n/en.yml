@@ -48,6 +48,8 @@ admin:
       label: Pushes
     quote:
       label: Quote
+    reusable:
+      label: Reusable block
     search:
       label: Search
     selected:
@@ -258,6 +260,11 @@ admin:
       label:
         one: Seller
         other: Sellers
+    reusables:
+      _description: Blocks written once and displayed on as many pages as needed
+      label:
+        one: Reusable block
+        other: Block library
     services:
       _description: All services
       label:
@@ -795,6 +802,12 @@ admin:
       label: Rent?
     required:
       label: Required
+    reusable_item:
+      hint: Pick a block of the library. It is edited there, once for every page displaying it
+      label: Block
+    reusable_title:
+      hint: Only shown in the CMS, to find the block when picking it in a page
+      label: Name
     schema_email:
       hint: "Includes email addresses in the structured data. Turn off to limit automated harvesting."
       label: "Publish email addresses?"

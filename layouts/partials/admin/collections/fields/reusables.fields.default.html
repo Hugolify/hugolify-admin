@@ -1,0 +1,7 @@
+{{/* An entry of the block library is a name and blocks. The blocks field is told
+  the collection it serves, so it leaves the reusable block out: an entry cannot
+  hold one, see fields/blocks.yml */}}
+{{- return slice
+  "id"
+  "reusable_title"
+  (dict "blocks" "reusables") -}}

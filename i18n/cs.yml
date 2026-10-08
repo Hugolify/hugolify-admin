@@ -50,6 +50,8 @@ admin:
       label: Oznámení
     quote:
       label: Citát
+    reusable:
+      label: Opakovaně použitelný blok
     search:
       label: Hledat
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Prodejce
         other: Prodejci
+    reusables:
+      _description: Bloky napsané jednou a zobrazené na libovolném počtu stránek
+      label:
+        one: Opakovaně použitelný blok
+        other: Knihovna bloků
     services:
       _description: Všechny služby
       label:
@@ -789,6 +796,12 @@ admin:
       label: Pronájem?
     required:
       label: Povinné
+    reusable_item:
+      hint: Vyberte blok z knihovny. Upravuje se tam, jednou pro všechny stránky, které ho zobrazují
+      label: Blok
+    reusable_title:
+      hint: Viditelné pouze v CMS, abyste blok našli při jeho výběru na stránce
+      label: Název
     schema_email:
       hint: "Zahrne e-mailové adresy do strukturovaných dat. Vypněte pro omezení automatického sběru."
       label: "Publikovat e-mailové adresy?"

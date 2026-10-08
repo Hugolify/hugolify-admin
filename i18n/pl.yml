@@ -50,6 +50,8 @@ admin:
       label: Wyróżnione
     quote:
       label: Cytat
+    reusable:
+      label: Blok wielokrotnego użytku
     search:
       label: Wyszukiwanie
     selected:
@@ -262,6 +264,11 @@ admin:
       label:
         one: Sprzedawca
         other: Sprzedawcy
+    reusables:
+      _description: Bloki pisane raz i wyświetlane na dowolnej liczbie stron
+      label:
+        one: Blok wielokrotnego użytku
+        other: Biblioteka bloków
     services:
       _description: Wszystkie usługi
       label:
@@ -789,6 +796,12 @@ admin:
       label: Wynajem?
     required:
       label: Wymagane
+    reusable_item:
+      hint: Wybierz blok z biblioteki. Edytuje się go tam, raz dla wszystkich stron, które go wyświetlają
+      label: Blok
+    reusable_title:
+      hint: Widoczna tylko w CMS, aby odnaleźć blok podczas wybierania go na stronie
+      label: Nazwa
     schema_email:
       hint: "Dołącza adresy e-mail do danych strukturalnych. Wyłącz, aby ograniczyć automatyczne zbieranie."
       label: "Publikować adresy e-mail?"

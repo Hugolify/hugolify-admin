@@ -17,8 +17,16 @@
   {{ end }}
 {{ end }}
 
-{{/* Remove "blocks", "body" and false from the list $fields */}}
+{{/* Remove "blocks", "body" and false from the list $fields, "blocks" being also
+     written as a map naming the collection it serves, the block library for one */}}
 {{ $fields = $fields | complement (slice "blocks" "body" false) }}
+{{ $kept := slice }}
+{{ range $fields }}
+  {{ if not (and (reflect.IsMap .) (isset . "blocks")) }}
+    {{ $kept = $kept | append . }}
+  {{ end }}
+{{ end }}
+{{ $fields = $kept }}
 
 {{/* Get selectedField (only first level fields) */}}
 {{ $selectedFields := $fields | uniq }}

@@ -6,6 +6,17 @@
   {{- $blocks = . -}}
 {{- end -}}
 
+{{/* The reusable block displays an entry of the block library, so it needs the
+  library, and an entry of it cannot hold one: the entries would include one
+  another with no end */}}
+{{- $library := false -}}
+{{- with site.Params.admin.collections.reusables -}}
+  {{- $library = .enable -}}
+{{- end -}}
+{{- if or (not $library) (eq $collection "reusables") -}}
+  {{- $blocks = complement (slice "reusable") $blocks -}}
+{{- end -}}
+
 {{- $args := dict 
   "label" (i18n "admin.fields.blocks.label" 2)
   "label_singular" (i18n "admin.fields.blocks.label" 1)
