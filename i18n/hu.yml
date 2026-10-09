@@ -44,6 +44,8 @@ admin:
       label: Hírlevél
     paragraph:
       label: Bekezdés
+    paragraph-list:
+      label: Bekezdések
     pushes:
       label: Értesítések
     quote:
@@ -412,9 +414,6 @@ admin:
         label: Szélesség
       lng:
         label: Hosszúság
-    count:
-      hint: Megjelenítendő elemek
-      label: Szám
     credit:
       label: Hitel
     cta:
@@ -450,7 +449,7 @@ admin:
         ltr: Szöveg balra / kép jobbra
         rtl: Kép balra / szöveg jobbra
     discount:
-      hint: 'A csökkentés összege, pl.: 30%'
+      hint: 'A csökkentés összege, pl. 30%'
       label: Kedvezmény
       pattern: Csak érték (pénznem nélkül)
     document:
@@ -469,7 +468,7 @@ admin:
         other: Események
     fax:
       label: Fax
-      hint: 'Nemzetközi formátum, pl.: +33 1 23 45 67 89'
+      hint: 'Nemzetközi formátum, pl. +33 1 23 45 67 89'
     featured_image:
       hint: Megjelenik a keresési eredményekben és az SMS/Üzenetek/Közösségi hálózatok előnézetében
       label: Fő kép
@@ -483,7 +482,7 @@ admin:
       label: Keresztnév
     form:
       accept:
-        hint: 'Csak fájl mezőkhöz (pl.: .pdf, .doc, .docx)'
+        hint: 'Csak fájl mezőkhöz (pl. .pdf, .doc, .docx)'
         label: Elfogadott kiterjesztések
       autocomplete:
         label: Automatikus kiegészítés
@@ -514,14 +513,14 @@ admin:
       name:
         hint: 'Az űrlappal elküldött azonosító: a Netlify ez alapján csoportosítja a beküldéseket és nevezi el az oszlopokat. Szándékosan közös minden nyelv között. Üresen hagyva a címkéből vagy a blokk pozíciójából származik.'
         label: Név
-        pattern: 'Csak kisbetűket, számokat és kötőjeleket tartalmazhat, szóközök, ékezetek vagy speciális karakterek nélkül'
+        pattern: 'Csak kisbetűket, számokat, kötőjeleket és aláhúzásjeleket tartalmazhat, szóközök, ékezetek vagy speciális karakterek nélkül'
       options:
         hint: Csak kiválasztó mezőkhöz
         label:
           one: Opció
           other: Opciók
       pattern:
-        hint: 'Ellenőrzési reguláris kifejezés (pl.: [0-9]{5}). Csak beviteli mezőkhöz'
+        hint: 'Ellenőrzési reguláris kifejezés (pl. [0-9]{5}). Csak beviteli mezőkhöz'
         label: Minta
       type:
         hint: Válassza ki a mező típusát
@@ -555,7 +554,7 @@ admin:
     honorific:
       label: Megszólítás
     icon:
-      hint: 'Ikon neve (pl.: phone). Lásd https://lucide.dev/ vagy https://icons.getbootstrap.com/'
+      hint: 'Ikon neve (pl. phone). Lásd https://lucide.dev/ vagy https://icons.getbootstrap.com/'
       label: Ikon
     id:
       label: Azonosító
@@ -602,6 +601,8 @@ admin:
       label: Fél méret?
     is_highlighted:
       label: Kiemelt?
+    is_link:
+      label: Ez egy link?
     is_logo:
       hint: Középre helyezve és nincs levágva
       label: Logó?
@@ -620,7 +621,7 @@ admin:
         one: Elem
         other: Elemek
     keyfeatures:
-      hint: 'pl.: Helyszín, kitettség…'
+      hint: 'pl. Helyszín, kitettség…'
       label:
         one: kulcsfontosságú jellemző
         other: Kulcsfontosságú jellemzők
@@ -646,6 +647,7 @@ admin:
       label: Jelmagyarázat
     limit:
       label: Határ
+      hint: Megjelenítendő elemek
     links:
       label:
         one: Link
@@ -689,7 +691,7 @@ admin:
       hint: 'Tömörítse a PDF-et küldés előtt: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefonszám
-      hint: 'Nemzetközi formátum, pl.: +33 1 23 45 67 89'
+      hint: 'Nemzetközi formátum, pl. +33 1 23 45 67 89'
     placeholder:
       label: Helyőrző
     poster:
@@ -701,7 +703,7 @@ admin:
       label: Sajtó
     price:
       hide: Ár elrejtése
-      hint: 'pl.: 300000 (300 000 Ft-ért)'
+      hint: 'pl. 300000 (300 000 Ft-ért)'
       label: Ár
       sold: Eladási ár
     quote:
@@ -819,12 +821,19 @@ admin:
     section:
       hint: Válassza ki a megjelenítendő szakaszt
       label: Szakasz
+    selected_parent:
+      hint: Az itt kiválasztott oldalak aloldalai jelennek meg
+      label:
+        one: Szülőoldal
+        other: Szülőoldalak
     selected_source:
       hint: Hogyan válasszuk ki a megjelenítendő elemeket
       label: Forrás
       options:
+        children: Egy oldal aloldalai
         selection: Kézi kiválasztás
         taxonomies: Szűrés taxonómia szerint
+        toplevel: Első szintű oldalak
     show_more:
       hint: Megjelenít egy gombot további elemek megtekintéséhez
       label: Több mutatása?
@@ -867,7 +876,7 @@ admin:
     subtitle:
       label: Alcím
     suffix:
-      hint: 'pl.: %'
+      hint: 'pl. %'
       label: Utótag
     summary:
       label: Összefoglaló
@@ -990,6 +999,8 @@ admin:
       label: Részletek
     figure:
       label: Ábra
+    icon:
+      label: Ikon
     map:
       label: Térkép
     twitter:

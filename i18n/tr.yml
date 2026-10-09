@@ -44,6 +44,8 @@ admin:
       label: Bülten
     paragraph:
       label: Paragraf
+    paragraph-list:
+      label: Paragraflar
     pushes:
       label: Bildirimler
     quote:
@@ -412,9 +414,6 @@ admin:
         label: Enlem
       lng:
         label: Boylam
-    count:
-      hint: Gösterilecek öğeler
-      label: Sayı
     credit:
       label: Kredi
     cta:
@@ -450,7 +449,7 @@ admin:
         ltr: Metin solda / resim sağda
         rtl: Resim solda / metin sağda
     discount:
-      hint: 'İndirim miktarı, örn: %30'
+      hint: 'İndirim miktarı, örn. %30'
       label: İndirim
       pattern: Sadece değer (para birimi olmadan)
     document:
@@ -469,7 +468,7 @@ admin:
         other: Etkinlikler
     fax:
       label: Faks
-      hint: 'Uluslararası format, örn: +33 1 23 45 67 89'
+      hint: 'Uluslararası format, örn. +33 1 23 45 67 89'
     featured_image:
       hint: Arama sonuçlarında ve SMS/Mesajlar/Sosyal ağ önizlemelerinde görüntülenir
       label: Ana Resim
@@ -514,7 +513,7 @@ admin:
       name:
         hint: 'Formla birlikte gönderilen tanımlayıcı: Netlify gönderimleri gruplamak ve sütunları adlandırmak için bunu kullanır. Bilinçli olarak tüm diller arasında paylaşılır. Boş bırakılırsa etiketten veya bloğun konumundan türetilir.'
         label: İsim
-        pattern: 'Sadece küçük harfler, sayılar ve tireler içerir, boşluk, aksan veya özel karakterler içermez'
+        pattern: 'Sadece küçük harfler, sayılar, tireler ve alt çizgiler içerir, boşluk, aksan veya özel karakterler içermez'
       options:
         hint: Sadece seçim alanları için
         label:
@@ -555,7 +554,7 @@ admin:
     honorific:
       label: Hitap
     icon:
-      hint: 'İkon adı (örn.: phone). Bkz. https://lucide.dev/ veya https://icons.getbootstrap.com/'
+      hint: 'İkon adı (örn. phone). Bkz. https://lucide.dev/ veya https://icons.getbootstrap.com/'
       label: İkon
     id:
       label: Kimlik
@@ -602,6 +601,8 @@ admin:
       label: Yarım boyut mu?
     is_highlighted:
       label: Vurgulandı mı?
+    is_link:
+      label: Bu bir bağlantı mı?
     is_logo:
       hint: Ortada konumlandırılmış ve kırpılmamış
       label: Logo mu?
@@ -620,7 +621,7 @@ admin:
         one: Öğe
         other: Öğeler
     keyfeatures:
-      hint: 'örn: Konum, maruz kalma…'
+      hint: 'örn. Konum, maruz kalma…'
       label:
         one: ana özellik
         other: Ana özellikler
@@ -646,6 +647,7 @@ admin:
       label: Efsane
     limit:
       label: Sınır
+      hint: Gösterilecek öğeler
     links:
       label:
         one: Bağlantı
@@ -689,7 +691,7 @@ admin:
       hint: 'Göndermeden önce PDF''i sıkıştırın: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefon Numarası
-      hint: 'Uluslararası format, örn: +33 1 23 45 67 89'
+      hint: 'Uluslararası format, örn. +33 1 23 45 67 89'
     placeholder:
       label: Yer Tutucu
     poster:
@@ -701,7 +703,7 @@ admin:
       label: Basın
     price:
       hide: Fiyatı gizle
-      hint: 'örn: 300000 (300 000 TL için)'
+      hint: 'örn. 300000 (300 000 TL için)'
       label: Fiyat
       sold: Satış fiyatı
     quote:
@@ -819,12 +821,19 @@ admin:
     section:
       hint: Görüntülenecek bölümü seçin
       label: Bölüm
+    selected_parent:
+      hint: Burada seçilen sayfaların alt sayfaları gösterilir
+      label:
+        one: Üst sayfa
+        other: Üst sayfalar
     selected_source:
       hint: Görüntülenecek öğelerin nasıl seçileceği
       label: Kaynak
       options:
+        children: Bir sayfanın alt sayfaları
         selection: Manuel seçim
         taxonomies: Taksonomiye göre filtrele
+        toplevel: Birinci düzey sayfalar
     show_more:
       hint: Daha fazla öğe görmek için bir düğme gösterir
       label: Daha fazla göster?
@@ -867,7 +876,7 @@ admin:
     subtitle:
       label: Alt başlık
     suffix:
-      hint: 'örn: %'
+      hint: 'örn. %'
       label: Sonek
     summary:
       label: Özet
@@ -990,6 +999,8 @@ admin:
       label: Detaylar
     figure:
       label: Şekil
+    icon:
+      label: Simge
     map:
       label: Harita
     twitter:

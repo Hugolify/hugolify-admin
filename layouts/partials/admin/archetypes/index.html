@@ -12,16 +12,26 @@
     {{- with $fields -}}
       {{- range . -}}
 
-        {{/* Get field key */}}
+        {{/* Get field key
+
+             A map entry reads `- partial: value`, and the front matter key is
+             not always the map key: a relation names itself through `name`, or
+             falls back to the collection it points at. Any other value — an
+             option list, an options map — keys on the map key itself. */}}
         {{- $key := . -}}
         {{- $default := "" -}}
         {{- if reflect.IsMap . -}}
           {{ range $k, $v := . }}
-            {{- with $v.name -}}
-              {{- $key = . -}}
-            {{- else }}
-              {{- $key = $v.collection -}}
-            {{- end }}
+            {{- $key = $k -}}
+            {{- if reflect.IsMap $v -}}
+              {{- with $v.name -}}
+                {{- $key = . -}}
+              {{- else }}
+                {{- with $v.collection -}}
+                  {{- $key = . -}}
+                {{- end }}
+              {{- end }}
+            {{- end -}}
           {{ end }}
         {{- end -}}
 

@@ -1,0 +1,24 @@
+{{/*
+  Collection item
+  ===============
+  Returns the raw (flow style) YAML of a single collection.
+
+  Resolution order:
+    1. `admin/collections/types/{collection}.yml` when that partial exists
+    2. `admin/collections/types/_placeholder.yml` otherwise
+
+  Shared by `admin/collections/index.yml` (flow style, one big document) and
+  `admin/collections/index.remarshal.yml` (block style, remarshal'd per collection).
+
+  Input  : string — collection name
+  Output : string — raw YAML for that collection
+*/}}
+{{- $collection := . -}}
+{{- $file := print "admin/collections/types/" $collection ".yml" -}}
+{{- $out := "" -}}
+{{- if templates.Exists ( printf "partials/%s" $file ) -}}
+  {{- $out = partialCached $file $collection -}}
+{{- else -}}
+  {{- $out = partial "admin/collections/types/_placeholder.yml" $collection -}}
+{{- end -}}
+{{- return $out -}}

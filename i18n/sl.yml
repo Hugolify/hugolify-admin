@@ -44,6 +44,8 @@ admin:
       label: Novice
     paragraph:
       label: Odstavek
+    paragraph-list:
+      label: Odstavki
     pushes:
       label: Izpostavljeno
     quote:
@@ -412,9 +414,6 @@ admin:
         label: Zemljepisna širina
       lng:
         label: Zemljepisna dolžina
-    count:
-      hint: Elementi za prikaz
-      label: Število
     credit:
       label: Zasluge
     cta:
@@ -450,7 +449,7 @@ admin:
         ltr: Besedilo levo / slika desno
         rtl: Slika levo / besedilo desno
     discount:
-      hint: 'Znesek popusta, npr: 30%'
+      hint: 'Znesek popusta, npr. 30%'
       label: Popust
       pattern: Samo vrednost (brez valute)
     document:
@@ -469,7 +468,7 @@ admin:
         other: Dogodki
     fax:
       label: Faks
-      hint: 'Mednarodni format, npr: +33 1 23 45 67 89'
+      hint: 'Mednarodni format, npr. +33 1 23 45 67 89'
     featured_image:
       hint: Prikazano v rezultatih iskanja in v predogledu SMS/Sporočil/Družbenih omrežij
       label: Glavna slika
@@ -483,7 +482,7 @@ admin:
       label: Ime
     form:
       accept:
-        hint: 'Samo za polja z datoteko (npr.: .pdf, .doc, .docx)'
+        hint: 'Samo za polja z datoteko (npr. .pdf, .doc, .docx)'
         label: Sprejete končnice
       autocomplete:
         label: Samodejno izpolnjevanje
@@ -514,14 +513,14 @@ admin:
       name:
         hint: 'Identifikator, poslan z obrazcem: Netlify z njim združuje oddaje in poimenuje stolpce. Namenoma je skupen vsem jezikom. Če ostane prazen, se izpelje iz oznake ali iz položaja bloka.'
         label: Ime
-        pattern: 'Vsebuje samo male črke, številke in pomišljaje, brez presledkov, naglasov ali posebnih znakov'
+        pattern: 'Vsebuje samo male črke, številke, pomišljaje in podčrtaje, brez presledkov, naglasov ali posebnih znakov'
       options:
         hint: Samo za izbirna polja
         label:
           one: Možnost
           other: Možnosti
       pattern:
-        hint: 'Regularni izraz za preverjanje (npr.: [0-9]{5}). Samo za vnosna polja'
+        hint: 'Regularni izraz za preverjanje (npr. [0-9]{5}). Samo za vnosna polja'
         label: Vzorec
       type:
         hint: Izberite vrsto polja
@@ -555,7 +554,7 @@ admin:
     honorific:
       label: Nagovor
     icon:
-      hint: 'Ime ikone (npr.: phone). Glejte https://lucide.dev/ ali https://icons.getbootstrap.com/'
+      hint: 'Ime ikone (npr. phone). Glejte https://lucide.dev/ ali https://icons.getbootstrap.com/'
       label: Ikona
     id:
       label: ID
@@ -602,6 +601,8 @@ admin:
       label: Polovična velikost?
     is_highlighted:
       label: Je poudarjeno?
+    is_link:
+      label: Je to povezava?
     is_logo:
       hint: Postavljeno na sredino in neobrezano
       label: Je logotip?
@@ -620,7 +621,7 @@ admin:
         one: Element
         other: Elementi
     keyfeatures:
-      hint: 'npr: Lokacija, izpostavljenost…'
+      hint: 'npr. Lokacija, izpostavljenost…'
       label:
         one: ključna značilnost
         other: Ključne značilnosti
@@ -646,6 +647,7 @@ admin:
       label: Legenda
     limit:
       label: Omejitev
+      hint: Elementi za prikaz
     links:
       label:
         one: Povezava
@@ -689,7 +691,7 @@ admin:
       hint: 'Stisnite PDF pred pošiljanjem: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefonska številka
-      hint: 'Mednarodni format, npr: +33 1 23 45 67 89'
+      hint: 'Mednarodni format, npr. +33 1 23 45 67 89'
     placeholder:
       label: Nadomestno besedilo
     poster:
@@ -701,7 +703,7 @@ admin:
       label: Tisk
     price:
       hide: Skrij ceno
-      hint: 'npr: 300000 (za 300 000 €)'
+      hint: 'npr. 300000 (za 300 000 €)'
       label: Cena
       sold: Prodajna cena
     quote:
@@ -819,12 +821,19 @@ admin:
     section:
       hint: Izberite razdelek za prikaz
       label: Razdelek
+    selected_parent:
+      hint: Prikažejo se podstrani tukaj izbranih strani
+      label:
+        one: Nadrejena stran
+        other: Nadrejene strani
     selected_source:
       hint: Kako se izberejo elementi za prikaz
       label: Vir
       options:
+        children: Podstrani strani
         selection: Ročni izbor
         taxonomies: Filtriraj po taksonomiji
+        toplevel: Strani prve ravni
     show_more:
       hint: Prikaže gumb za ogled več elementov
       label: Prikaži več?
@@ -867,7 +876,7 @@ admin:
     subtitle:
       label: Podnaslov
     suffix:
-      hint: 'npr: %'
+      hint: 'npr. %'
       label: Pripona
     summary:
       label: Povzetek
@@ -990,6 +999,8 @@ admin:
       label: Podrobnosti
     figure:
       label: Slika
+    icon:
+      label: Ikona
     map:
       label: Zemljevid
     twitter:

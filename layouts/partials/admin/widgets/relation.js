@@ -21,6 +21,7 @@
 
 {{- $collection := .collection | default false }}
 {{- $display_fields := .display_fields | default false }}
+{{- $dropdown_threshold := .dropdown_threshold | default 1 }}
 {{- $filters := .filters | default false }}
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
@@ -144,6 +145,7 @@
   {{ with $multiple }}
   multiple: true,
   {{ end }}
+  dropdown_threshold: {{ $dropdown_threshold }},
   required: {{ $required }},
   i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }}
 }

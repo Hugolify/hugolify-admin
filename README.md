@@ -101,6 +101,7 @@ params:
 
     preview: false
     publish_mode: simple # simple or editorial_workflow
+    skip_ci: true # for sveltia-cms: prefix commits with [skip ci], set false to deploy on each save
 
     # Blocks
     blocks:
@@ -146,6 +147,10 @@ params:
           - title
           - text_markdown
 ```
+
+The look a block starts with is not configured here: it belongs to the theme,
+under `params.blocks.{block}.ui`, so it stays out of the content and a change
+to it reaches the blocks already written.
 
 ## Documentation
 

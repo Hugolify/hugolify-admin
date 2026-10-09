@@ -44,6 +44,8 @@ admin:
       label: Nieuwsbrief
     paragraph:
       label: Paragraaf
+    paragraph-list:
+      label: Paragrafen
     pushes:
       label: Uitgelicht
     quote:
@@ -412,9 +414,6 @@ admin:
         label: Breedtegraad
       lng:
         label: Lengtegraad
-    count:
-      hint: Items om weer te geven
-      label: Aantal
     credit:
       label: Credit
     cta:
@@ -450,7 +449,7 @@ admin:
         ltr: Tekst links / afbeelding rechts
         rtl: Afbeelding links / tekst rechts
     discount:
-      hint: 'Bedrag van de korting, bijv: 30%'
+      hint: 'Bedrag van de korting, bijv. 30%'
       label: Korting
       pattern: Alleen waarde (zonder valuta)
     document:
@@ -469,7 +468,7 @@ admin:
         other: Evenementen
     fax:
       label: Fax
-      hint: 'Internationaal formaat, bijv: +33 1 23 45 67 89'
+      hint: 'Internationaal formaat, bijv. +33 1 23 45 67 89'
     featured_image:
       hint: Weergegeven in zoekresultaten en in SMS/Berichten/Sociale netwerken voorbeeld
       label: Hoofdafbeelding
@@ -514,7 +513,7 @@ admin:
       name:
         hint: 'Identificatie die met het formulier wordt verzonden: Netlify groepeert er de inzendingen mee en benoemt de kolommen. Bewust gedeeld over alle talen. Leeg gelaten wordt hij afgeleid van het label of van de positie van het blok.'
         label: Naam
-        pattern: 'Bevat alleen kleine letters, cijfers en koppeltekens, zonder spaties, accenten of speciale tekens'
+        pattern: 'Bevat alleen kleine letters, cijfers, koppeltekens en underscores, zonder spaties, accenten of speciale tekens'
       options:
         hint: Alleen voor selectievelden
         label:
@@ -555,7 +554,7 @@ admin:
     honorific:
       label: Aanhef
     icon:
-      hint: 'Pictogramnaam (bijv.: phone). Zie https://lucide.dev/ of https://icons.getbootstrap.com/'
+      hint: 'Pictogramnaam (bijv. phone). Zie https://lucide.dev/ of https://icons.getbootstrap.com/'
       label: Pictogram
     id:
       label: ID
@@ -602,6 +601,8 @@ admin:
       label: Halve grootte?
     is_highlighted:
       label: Is gemarkeerd?
+    is_link:
+      label: Is dit een link?
     is_logo:
       hint: Gepositioneerd in het midden en niet bijgesneden
       label: Is logo?
@@ -620,7 +621,7 @@ admin:
         one: Item
         other: Items
     keyfeatures:
-      hint: 'bijv: Locatie, ligging…'
+      hint: 'bijv. Locatie, ligging…'
       label:
         one: hoofdkenmerk
         other: Hoofdkenmerken
@@ -646,6 +647,7 @@ admin:
       label: Legende
     limit:
       label: Limiet
+      hint: Items om weer te geven
     links:
       label:
         one: Link
@@ -689,7 +691,7 @@ admin:
       hint: 'Comprimeer PDF voor verzending: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefoonnummer
-      hint: 'Internationaal formaat, bijv: +33 1 23 45 67 89'
+      hint: 'Internationaal formaat, bijv. +33 1 23 45 67 89'
     placeholder:
       label: Tijdelijke aanduiding
     poster:
@@ -701,7 +703,7 @@ admin:
       label: Pers
     price:
       hide: Prijs verbergen
-      hint: 'bijv: 300000 (voor 300 000 €)'
+      hint: 'bijv. 300000 (voor 300 000 €)'
       label: Prijs
       sold: Verkoopprijs
     quote:
@@ -819,12 +821,19 @@ admin:
     section:
       hint: Selecteer de sectie om weer te geven
       label: Sectie
+    selected_parent:
+      hint: De onderliggende pagina's van de hier geselecteerde pagina's worden weergegeven
+      label:
+        one: Bovenliggende pagina
+        other: Bovenliggende pagina's
     selected_source:
       hint: Hoe de weer te geven items worden gekozen
       label: Bron
       options:
+        children: Onderliggende pagina's
         selection: Handmatige selectie
         taxonomies: Filteren op taxonomie
+        toplevel: Pagina's op het eerste niveau
     show_more:
       hint: Toont een knop om meer items te zien
       label: Meer tonen?
@@ -867,7 +876,7 @@ admin:
     subtitle:
       label: Ondertitel
     suffix:
-      hint: 'bijv: %'
+      hint: 'bijv. %'
       label: Achtervoegsel
     summary:
       label: Samenvatting
@@ -990,6 +999,8 @@ admin:
       label: Details
     figure:
       label: Figuur
+    icon:
+      label: Pictogram
     map:
       label: Kaart
     twitter:

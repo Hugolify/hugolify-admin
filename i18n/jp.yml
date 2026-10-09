@@ -44,6 +44,8 @@ admin:
       label: ニュースレター
     paragraph:
       label: 段落
+    paragraph-list:
+      label: 段落リスト
     pushes:
       label: 通知
     quote:
@@ -412,9 +414,6 @@ admin:
         label: 緯度
       lng:
         label: 経度
-    count:
-      hint: 表示するアイテム
-      label: カウント
     credit:
       label: クレジット
     cta:
@@ -514,7 +513,7 @@ admin:
       name:
         hint: 'フォームと一緒に送信される識別子。Netlify はこれで送信データをまとめ、列名を決めます。意図的にすべての言語で共有されます。空欄の場合はラベルまたはブロックの位置から決まります。'
         label: 名前
-        pattern: '小文字、数字、ハイフンのみを含み、スペース、 アクセント、特殊文字は含まない'
+        pattern: '小文字、数字、ハイフン、アンダースコアのみを含み、スペース、 アクセント、特殊文字は含まない'
       options:
         hint: 選択フィールドのみ
         label:
@@ -602,6 +601,8 @@ admin:
       label: 半分のサイズ?
     is_highlighted:
       label: ハイライト?
+    is_link:
+      label: リンクですか？
     is_logo:
       hint: 中央に配置され、トリミングされません
       label: ロゴとして?
@@ -646,6 +647,7 @@ admin:
       label: 凡例
     limit:
       label: 制限
+      hint: 表示するアイテム
     links:
       label:
         one: リンク
@@ -819,12 +821,19 @@ admin:
     section:
       hint: 表示するセクションを選択
       label: セクション
+    selected_parent:
+      hint: ここで選んだページの子ページが表示されます
+      label:
+        one: 親ページ
+        other: 親ページ
     selected_source:
       hint: 表示する項目の選び方
       label: ソース
       options:
+        children: ページの子ページ
         selection: 手動で選択
         taxonomies: タクソノミーで絞り込む
+        toplevel: 第一階層のページ
     show_more:
       hint: より多くのアイテムを表示するボタンを表示
       label: もっと見る?
@@ -990,6 +999,8 @@ admin:
       label: 詳細
     figure:
       label: 図
+    icon:
+      label: アイコン
     map:
       label: 地図
     twitter:

@@ -44,6 +44,8 @@ admin:
       label: Newsletter
     paragraph:
       label: Paragrafo
+    paragraph-list:
+      label: Paragrafi
     pushes:
       label: Notifiche
     quote:
@@ -412,9 +414,6 @@ admin:
         label: Latitudine
       lng:
         label: Longitudine
-    count:
-      hint: Elementi da visualizzare
-      label: Conteggio
     credit:
       label: Credito
     cta:
@@ -450,7 +449,7 @@ admin:
         ltr: Testo a sinistra / immagine a destra
         rtl: Immagine a sinistra / testo a destra
     discount:
-      hint: 'Importo della riduzione, es.: 30%'
+      hint: 'Importo della riduzione, es. 30%'
       label: Sconto
       pattern: Solo valore (senza valuta)
     document:
@@ -469,7 +468,7 @@ admin:
         other: Eventi
     fax:
       label: Fax
-      hint: 'Formato internazionale, es.: +33 1 23 45 67 89'
+      hint: 'Formato internazionale, es. +33 1 23 45 67 89'
     featured_image:
       hint: Visualizzato nei risultati di ricerca e nell’anteprima di SMS/Messaggi/Social network
       label: Immagine principale
@@ -483,7 +482,7 @@ admin:
       label: Nome
     form:
       accept:
-        hint: 'Solo per i campi file (es.: .pdf, .doc, .docx)'
+        hint: 'Solo per i campi file (es. .pdf, .doc, .docx)'
         label: Estensioni accettate
       autocomplete:
         label: Autocompletamento
@@ -514,14 +513,14 @@ admin:
       name:
         hint: 'Identificatore inviato con il modulo: Netlify lo usa per raggruppare gli invii e nominare le colonne. È condiviso volutamente tra tutte le lingue. Se lasciato vuoto, viene dedotto dall’etichetta o dalla posizione del blocco.'
         label: Nome
-        pattern: 'Contiene solo lettere minuscole, numeri e trattini, senza spazi, accenti o caratteri speciali'
+        pattern: 'Contiene solo lettere minuscole, numeri, trattini e trattini bassi, senza spazi, accenti o caratteri speciali'
       options:
         hint: Solo per campi di selezione
         label:
           one: Opzione
           other: Opzioni
       pattern:
-        hint: 'Espressione regolare di validazione (es.: [0-9]{5}). Solo per i campi di inserimento'
+        hint: 'Espressione regolare di validazione (es. [0-9]{5}). Solo per i campi di inserimento'
         label: Pattern
       type:
         hint: Scegli tipo di campo
@@ -555,7 +554,7 @@ admin:
     honorific:
       label: Titolo
     icon:
-      hint: 'Nome dell’icona (es.: phone). Vedi https://lucide.dev/ o https://icons.getbootstrap.com/'
+      hint: 'Nome dell’icona (es. phone). Vedi https://lucide.dev/ o https://icons.getbootstrap.com/'
       label: Icona
     id:
       label: ID
@@ -602,6 +601,8 @@ admin:
       label: Mezza dimensione?
     is_highlighted:
       label: Evidenziato?
+    is_link:
+      label: È un link?
     is_logo:
       hint: Posizionato al centro e non ritagliato
       label: Come logo?
@@ -620,7 +621,7 @@ admin:
         one: Elemento
         other: Elementi
     keyfeatures:
-      hint: 'es.: Posizione, esposizione…'
+      hint: 'es. Posizione, esposizione…'
       label:
         one: Caratteristica chiave
         other: Caratteristiche chiave
@@ -646,6 +647,7 @@ admin:
       label: Legenda
     limit:
       label: Limite
+      hint: Elementi da visualizzare
     links:
       label:
         one: Link
@@ -689,7 +691,7 @@ admin:
       hint: 'Comprimi PDF prima dell’invio: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Numero di telefono
-      hint: 'Formato internazionale, es.: +33 1 23 45 67 89'
+      hint: 'Formato internazionale, es. +33 1 23 45 67 89'
     placeholder:
       label: Segnaposto
     poster:
@@ -701,7 +703,7 @@ admin:
       label: Stampa
     price:
       hide: Nascondi prezzo
-      hint: 'es.: 300000 (per 300.000 €)'
+      hint: 'es. 300000 (per 300.000 €)'
       label: Prezzo
       sold: Prezzo di vendita
     quote:
@@ -819,12 +821,19 @@ admin:
     section:
       hint: Seleziona la sezione da visualizzare
       label: Sezione
+    selected_parent:
+      hint: Vengono mostrate le pagine figlie delle pagine selezionate qui
+      label:
+        one: Pagina padre
+        other: Pagine padre
     selected_source:
       hint: Come vengono scelti gli elementi da visualizzare
       label: Origine
       options:
+        children: Figlie di una pagina
         selection: Selezione manuale
         taxonomies: Filtra per tassonomia
+        toplevel: Pagine di primo livello
     show_more:
       hint: Mostra un pulsante per vedere più elementi
       label: Mostra di più?
@@ -867,7 +876,7 @@ admin:
     subtitle:
       label: Sottotitolo
     suffix:
-      hint: 'es.: %'
+      hint: 'es. %'
       label: Suffisso
     summary:
       label: Riepilogo
@@ -990,6 +999,8 @@ admin:
       label: Dettagli
     figure:
       label: Figura
+    icon:
+      label: Icona
     map:
       label: Mappa
     twitter:

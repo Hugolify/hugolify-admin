@@ -4,7 +4,13 @@ backend:
   {{ with site.Params.admin.repo }}
   repo: {{ . }}
   {{ end }}
-  automatic_deployments: {{ site.Params.admin.automatic_deployments | default false }}
+
+  {{- /* skip_ci replaces the deprecated automatic_deployments, still honored as a fallback */}}
+  {{- $skip_ci := not site.Params.admin.automatic_deployments }}
+  {{- if isset site.Params.admin "skip_ci" }}
+    {{- $skip_ci = site.Params.admin.skip_ci }}
+  {{- end }}
+  skip_ci: {{ $skip_ci }}
 
 {{- with site.Params.admin.auth }}
   {{- with .base_url }}
@@ -21,6 +27,7 @@ backend:
   {{- end }}
 {{- end }}
 
+app_title: {{ site.Params.admin.title | default "Hugolify CMS" }}
 display_url: {{ site.BaseURL }}
 
 {{- if site.Params.admin.i18n.locales }}
@@ -46,10 +53,11 @@ publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
   {{- $cloud := cond (reflect.IsSlice .) . (slice .) }}
 media_libraries:
   default:
-    {{- with site.Params.admin.media.max_file_size }}
-    max_file_size: '{{ . }}'
-    {{- end }}
-    slugify_filename: {{ $slugify_filename }}
+    config:
+      {{- with site.Params.admin.media.max_file_size }}
+      max_file_size: {{ . | default 1000000 }}
+      {{- end }}
+      slugify_filename: {{ $slugify_filename }}
   {{- if isset site.Params.admin.media "providers" }}
   stock_assets:
     {{- $providers := site.Params.admin.media.providers }}
@@ -84,9 +92,12 @@ media_libraries:
   {{- end }}
 {{- end }}
 
+output:
+  omit_empty_optional_fields: true
+
 slug:
   encoding: unicode
   clean_accents: false
   sanitize_replacement: "-"
 
-{{ partial "admin/func/RemarshalYaml.html" (partial "admin/collections/index.yml" .) }}
+{{ partial "admin/func/RemarshalCollections.html" . }}

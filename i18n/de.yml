@@ -44,6 +44,8 @@ admin:
       label: Newsletter
     paragraph:
       label: Absatz
+    paragraph-list:
+      label: Absätze
     pushes:
       label: Benachrichtigungen
     quote:
@@ -412,9 +414,6 @@ admin:
         label: Breitengrad
       lng:
         label: Längengrad
-    count:
-      hint: Anzuzeigende Elemente
-      label: Anzahl
     credit:
       label: Bildnachweis
     cta:
@@ -450,7 +449,7 @@ admin:
         ltr: Text links / Bild rechts
         rtl: Bild links / Text rechts
     discount:
-      hint: 'Höhe der Ermäßigung, z.B.: 30%'
+      hint: 'Höhe der Ermäßigung, z. B. 30%'
       label: Rabatt
       pattern: Nur Wert (ohne Währung)
     document:
@@ -469,7 +468,7 @@ admin:
         other: Veranstaltungen
     fax:
       label: Fax
-      hint: 'Internationales Format, z.B.: +33 1 23 45 67 89'
+      hint: 'Internationales Format, z. B. +33 1 23 45 67 89'
     featured_image:
       hint: Wird in Suchergebnissen und in SMS/Nachrichten/Sozialen Netzwerken Vorschau angezeigt
       label: Hauptbild
@@ -483,7 +482,7 @@ admin:
       label: Vorname
     form:
       accept:
-        hint: 'Nur für Datei-Felder (z. B.: .pdf, .doc, .docx)'
+        hint: 'Nur für Datei-Felder (z. B. .pdf, .doc, .docx)'
         label: Akzeptierte Dateiendungen
       autocomplete:
         label: Autovervollständigung
@@ -514,14 +513,14 @@ admin:
       name:
         hint: 'Kennung, die mit dem Formular gesendet wird: Netlify gruppiert damit die Einsendungen und benennt die Spalten. Sie wird bewusst über alle Sprachen hinweg geteilt. Bleibt sie leer, wird sie aus dem Label oder der Blockposition abgeleitet.'
         label: Name
-        pattern: 'Nur Kleinbuchstaben, Zahlen und Bindestriche, ohne Leerzeichen, Akzente oder Sonderzeichen'
+        pattern: 'Nur Kleinbuchstaben, Zahlen, Bindestriche und Unterstriche, ohne Leerzeichen, Akzente oder Sonderzeichen'
       options:
         hint: Nur für Auswahlfelder
         label:
           one: Option
           other: Optionen
       pattern:
-        hint: 'Regulärer Ausdruck zur Validierung (z. B.: [0-9]{5}). Nur für Eingabefelder'
+        hint: 'Regulärer Ausdruck zur Validierung (z. B. [0-9]{5}). Nur für Eingabefelder'
         label: Muster
       type:
         hint: Feldtyp wählen
@@ -555,7 +554,7 @@ admin:
     honorific:
       label: Anrede
     icon:
-      hint: 'Icon-Name (z. B.: phone). Siehe https://lucide.dev/ oder https://icons.getbootstrap.com/'
+      hint: 'Icon-Name (z. B. phone). Siehe https://lucide.dev/ oder https://icons.getbootstrap.com/'
       label: Icon
     id:
       label: ID
@@ -602,6 +601,8 @@ admin:
       label: Halbe Größe?
     is_highlighted:
       label: Hervorgehoben?
+    is_link:
+      label: Ist das ein Link?
     is_logo:
       hint: In der Mitte positioniert und nicht zugeschnitten
       label: Als Logo?
@@ -620,14 +621,14 @@ admin:
         one: Element
         other: Elemente
     keyfeatures:
-      hint: 'z.B.: Lage, Ausrichtung…'
+      hint: 'z. B. Lage, Ausrichtung…'
       label:
         one: Hauptmerkmal
         other: Hauptmerkmale
     label:
       label: Bezeichnung
     lang:
-      hint: Sprachcode eingeben (z.B. de), falls abweichend von der aktuellen Seitensprache
+      hint: Sprachcode eingeben (z. B. de), falls abweichend von der aktuellen Seitensprache
       label: Sprache
     lastname:
       label: Nachname
@@ -646,6 +647,7 @@ admin:
       label: Legende
     limit:
       label: Limit
+      hint: Anzuzeigende Elemente
     links:
       label:
         one: Link
@@ -689,7 +691,7 @@ admin:
       hint: 'PDF vor dem Senden komprimieren: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefonnummer
-      hint: 'Internationales Format, z.B.: +33 1 23 45 67 89'
+      hint: 'Internationales Format, z. B. +33 1 23 45 67 89'
     placeholder:
       label: Platzhalter
     poster:
@@ -701,7 +703,7 @@ admin:
       label: Presse
     price:
       hide: Preis verbergen
-      hint: 'z.B.: 300000 (für 300.000 €)'
+      hint: 'z. B. 300000 (für 300.000 €)'
       label: Preis
       sold: Verkaufspreis
     quote:
@@ -819,12 +821,19 @@ admin:
     section:
       hint: Anzuzeigende Sektion auswählen
       label: Sektion
+    selected_parent:
+      hint: Es werden die Unterseiten der hier ausgewählten Seiten angezeigt
+      label:
+        one: Übergeordnete Seite
+        other: Übergeordnete Seiten
     selected_source:
       hint: Wie die anzuzeigenden Elemente ausgewählt werden
       label: Quelle
       options:
+        children: Unterseiten einer Seite
         selection: Manuelle Auswahl
         taxonomies: Nach Taxonomie filtern
+        toplevel: Seiten der ersten Ebene
     show_more:
       hint: Zeigt einen Button zum Anzeigen weiterer Elemente
       label: Mehr anzeigen?
@@ -867,7 +876,7 @@ admin:
     subtitle:
       label: Untertitel
     suffix:
-      hint: 'z.B.: %'
+      hint: 'z. B. %'
       label: Suffix
     summary:
       label: Zusammenfassung
@@ -896,7 +905,7 @@ admin:
       label: Layout & Darstellung
       hint: Layout, Raster, Ausrichtung und Thema dieses Blocks festlegen
     url:
-      hint: Absolute URL (z.B. https://www.example.com)
+      hint: Absolute URL (z. B. https://www.example.com)
       label: URL
     value:
       label: Wert
@@ -990,6 +999,8 @@ admin:
       label: Details
     figure:
       label: Abbildung
+    icon:
+      label: Symbol
     map:
       label: Karte
     twitter:

@@ -1,11 +1,30 @@
 {{- $custom_path := `{{slug}}/_index` -}}
-{{- $media_folder := site.Params.admin.media.media_folder -}}
+
+{{/* Decap, Netlify and Static CMS treat `path` as a switch: specifying it defaults
+  `media_folder` to an empty string, which is their entry relative mode, and uploads
+  then land next to the edited page. The global folder has to be restated here to hold
+  them in place. Sveltia CMS has no such rule, it only goes entry relative on an explicit
+  empty string, so it is left to inherit the root config. */}}
+{{- $media_folder := false -}}
+{{- $public_folder := false -}}
+{{- if ne site.Params.admin.cms "sveltiacms" -}}
+  {{- $media_folder = site.Params.admin.media.media_folder -}}
+  {{/* Their docs never say whether `public_folder` then falls back to the root config or
+    to the collection `media_folder`, and every example of theirs sets the pair together,
+    so both are restated rather than betting on the resolution */}}
+  {{- $public_folder = site.Params.admin.media.public_folder -}}
+{{- end -}}
+
+{{/* A collection setting either folder replaces that one, whatever the CMS */}}
 {{- if (index site.Params.admin.collections .) -}}
   {{- with (index site.Params.admin.collections .).path -}}
     {{- $custom_path = . }}
   {{- end -}}
   {{- with (index site.Params.admin.collections .).media_folder -}}
     {{- $media_folder = . }}
+  {{- end -}}
+  {{- with (index site.Params.admin.collections .).public_folder -}}
+    {{- $public_folder = . }}
   {{- end -}}
 {{- else -}}
   {{- $custom_path = . }}
@@ -14,4 +33,7 @@
 path: "{{$custom_path}}",
 {{- with $media_folder }}
 media_folder: "{{ . }}",
+{{- end }}
+{{- with $public_folder }}
+public_folder: "{{ . }}",
 {{- end }}

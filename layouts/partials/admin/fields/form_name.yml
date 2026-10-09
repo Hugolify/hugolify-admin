@@ -1,4 +1,4 @@
-{{ $regex := "^(|[a-z0-9-]+)$" }}
+{{ $regex := "^(|[a-z0-9_-]+)$" }}
 {{ $message := i18n "admin.fields.form.name.pattern" }}
 {{ $pattern := dict "regex" $regex "message" $message }}
 

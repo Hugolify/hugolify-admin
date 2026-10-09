@@ -1,7 +1,8 @@
-{{- $fields := slice 
-  "heading" 
-  "count" 
-  "limit_simple" 
+{{- $limit := dict "limit" (dict "default" 5 "max" 10 "range" true) -}}
+
+{{- $fields := slice
+  "heading"
+  $limit
   "ctas" 
   "ui" -}}
 

@@ -1,8 +1,10 @@
-{{ if gt site.Params.admin.nested.depth 2 }}
+{{ $nested := (index site.Params.admin.collections .).nested.depth | default site.Params.admin.nested.depth }}
+{{ if gt $nested 2 }}
 meta: {
   path: {
     label: '{{ i18n "admin.fields.parent.label" }}',
-    widget: string,
+    widget: nested_path,
+    i18n: duplicate,
     index_file: _index
   }
 }

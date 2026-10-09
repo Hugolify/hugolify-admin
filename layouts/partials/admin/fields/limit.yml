@@ -1,9 +1,22 @@
-{{- $args := dict 
+{{/*
+  Caps how many items a block shows, the gauge of a data item reads it as its
+  maximum.
+
+  Written as a map in a fields list, the field takes its arguments from there,
+  over the ones below: `dict "limit" (dict "hint" … "default" 5 "max" 10)`.
+*/}}
+
+{{- $args := dict
   "label" (i18n "admin.fields.limit.label")
   "hint" (i18n "admin.fields.limit.hint")
   "name" "limit"
-  "default" 100
+  "min" 1
+  "step" 1
   "i18n" "duplicate"
   -}}
+
+{{- if reflect.IsMap . }}
+  {{- $args = merge $args . }}
+{{- end }}
 
 {{ partial "admin/widgets/number.js" $args }}

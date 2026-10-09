@@ -3,15 +3,29 @@
 {{- $display_fields := .display_fields | default (slice `"title"`) -}}
 {{- $search_fields := .search_fields | default (slice `"title"`) -}}
 {{- $name := .name | default $collection -}}
-{{- $i18n := $collection -}}
+{{- $labelKey := $collection -}}
 {{- if ne .name "items" -}}
-  {{- $i18n = $name -}}
+  {{- $labelKey = $name -}}
+{{- end -}}
+{{/* A relation is labelled after the collection it points to. A field says where
+  its own labels live instead, with "label_key", when that would not tell what the
+  relation holds: the parent of a selected block, for one. */}}
+{{- $labelPrefix := print "admin.collections." $labelKey -}}
+{{- with .label_key -}}
+  {{- $labelPrefix = . -}}
 {{- end -}}
 {{- if or (strings.Contains $collection "posts_authors") (strings.Contains $collection "posts_categories") (strings.Contains $collection "posts_tags") -}}
   {{- $collection = replace $collection "posts_" "" -}} 
 {{- end -}}
 {{- $multiple := .multiple | default false -}}
 {{- $required := .required | default false -}}
+{{/* A relation stores a key, never a label: {{slug}} is the file name, shared by
+  every translation of an entry, and the {{title}} below is anchorized into a
+  taxonomy term key that func/GetRealContext (hugolify-theme) resolves to the
+  target page, where the translated label lives. Translating the key breaks that
+  lookup, so the value is duplicated across locales unless a field asks for
+  something else with "i18n". */}}
+{{- $i18n := .i18n | default "duplicate" -}}
 {{- $value_field := `{{slug}}` -}}
 {{/* Decap CMS builds the slug from the file path, so a branch bundle keeps a
   trailing /_index that breaks the relation on the Hugo side. A taxonomy value is
@@ -27,21 +41,38 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
+  {{/* Same bug on a nested collection: every entry of it is a bundle, so {{slug}}
+    writes "an-expertise/_index" and the taxonomy term is built on that key.
+    The title resolves whatever the depth, func/GetRealContext (hugolify-theme)
+    looks the page up by anchorized title when the folder name does not match.
+    Taxonomy relations only: the "items" and "parent" ones of the selected blocks
+    are resolved by path, where the /_index suffix is harmless. */}}
+  {{- if not (in (slice "items" "parent") $name) -}}
+    {{- with index site.Params.admin.collections $collection -}}
+      {{- if .nested -}}
+        {{- $value_field = `{{title}}` -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 {{- $value_field = cond site.Params.admin.config.id `{{id}}` $value_field -}}
+{{/* Sveltia CMS lists the collection index file (_index.md) among the relation options, exclude it */}}
+{{- if and (eq site.Params.admin.cms "sveltiacms") (not $filters) -}}
+  {{- $filters = `[{ field: 'slug', values: ['_index'], exclude: true }]` -}}
+{{- end -}}
 
 
-{{/* The labels are the collection's, unless the field brings its own. */}}
-{{- $args := dict 
-  "label" (.label | default (i18n (print "admin.collections." $i18n ".label")))
-  "label_singular" (.label_singular | default (i18n (print "admin.collections." $i18n ".label") 1))
-  "hint" (.hint | default (i18n (print "admin.collections." $i18n ".hint")))
+{{- $args := dict
+  "label" (i18n (print $labelPrefix ".label"))
+  "label_singular" (i18n (print $labelPrefix ".label") 1)
+  "hint" (i18n (print $labelPrefix ".hint"))
   "name" $name
   "collection" $collection
   "display_fields" $display_fields
   "search_fields" $search_fields
   "value_field" $value_field
   "filters" $filters
+  "i18n" $i18n
   "multiple" $multiple
   "required" $required
   -}}

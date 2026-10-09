@@ -46,6 +46,8 @@ admin:
       label: Uutiskirje
     paragraph:
       label: Kappale
+    paragraph-list:
+      label: Kappaleet
     pushes:
       label: Push-viestit
     quote:
@@ -412,9 +414,6 @@ admin:
         label: Leveysaste
       lng:
         label: Pituusaste
-    count:
-      hint: Näytettävien kenttien määrä
-      label: Lukumäärä
     credit:
       label: Credit
     cta:
@@ -466,7 +465,7 @@ admin:
         one: Tapahtuma
         other: Tapahtumat
     fax:
-      hint: 'Kansainvälinen muoto, esim: +358 40 123 4567'
+      hint: 'Kansainvälinen muoto, esim. +358 40 123 4567'
       label: Faksi
     featured_image:
       hint:
@@ -483,7 +482,7 @@ admin:
       label: Etunimi
     form:
       accept:
-        hint: 'Vain tiedostokentille (esim.: .pdf, .doc, .docx)'
+        hint: 'Vain tiedostokentille (esim. .pdf, .doc, .docx)'
         label: Hyväksytyt tiedostopäätteet
       autocomplete:
         label: Automaattinen täydennys
@@ -514,14 +513,14 @@ admin:
       name:
         hint: 'Lomakkeen mukana lähetettävä tunniste: Netlify ryhmittelee sillä lähetykset ja nimeää sarakkeet. Se on tarkoituksella jaettu kaikkien kielten kesken. Jos se jätetään tyhjäksi, se johdetaan otsikosta tai lohkon sijainnista.'
         label: Nimi
-        pattern: 'Sisältää vain pieniä kirjaimia, numeroita ja väliviivoja, ei välilyöntejä, aksentteja tai erikoismerkkejä.'
+        pattern: 'Sisältää vain pieniä kirjaimia, numeroita, väliviivoja ja alaviivoja, ei välilyöntejä, aksentteja tai erikoismerkkejä.'
       options:
         hint: Vain valituille kentille
         label:
           one: Vaihtoehto
           other: Vaihtoehdot
       pattern:
-        hint: 'Vahvistuksen säännöllinen lauseke (esim.: [0-9]{5}). Vain syöttökentille'
+        hint: 'Vahvistuksen säännöllinen lauseke (esim. [0-9]{5}). Vain syöttökentille'
         label: Kaava
       type:
         hint: Choose type field
@@ -555,7 +554,7 @@ admin:
     honorific:
       label: Puhuttelu
     icon:
-      hint: 'Kuvakkeen nimi (esim.: phone). Katso https://lucide.dev/ tai https://icons.getbootstrap.com/'
+      hint: 'Kuvakkeen nimi (esim. phone). Katso https://lucide.dev/ tai https://icons.getbootstrap.com/'
       label: Kuvake
     id:
       label: ID
@@ -598,6 +597,8 @@ admin:
       label: Puolikas?
     is_highlighted:
       label: Korostettu?
+    is_link:
+      label: Onko tämä linkki?
     is_logo:
       hint: Sijoitettu keskelle eikä rajattu
       label: Logo?
@@ -616,7 +617,7 @@ admin:
         one: Kohde
         other: Kohteet
     keyfeatures:
-      hint: 'Esim: Sijainti...'
+      hint: 'esim. Sijainti...'
       label:
         one: Pääominaisuus
         other: Pääominaisuudet
@@ -642,6 +643,7 @@ admin:
       label: Selite
     limit:
       label: Raja
+      hint: Näytettävien kenttien määrä
     links:
       label:
         one: Linkki
@@ -684,7 +686,7 @@ admin:
       hint: 'Pakkaa PDF-tiedosto ennen lähettämistä: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
       label: PDF
     phone:
-      hint: 'Kansainvälinen muoto, esim: +358 40 123 4567'
+      hint: 'Kansainvälinen muoto, esim. +358 40 123 4567'
       label: Puhelinnumero
     placeholder:
       label: Paikkamerkki
@@ -697,7 +699,7 @@ admin:
       label: Paina
     price:
       hide: Piilota hinta
-      hint: 'Esim: 300000 (300 000 €)'
+      hint: 'esim. 300000 (300 000 €)'
       label: Hinta
       sold: Myyntihinta
     quote:
@@ -815,12 +817,19 @@ admin:
     section:
       hint: Valitse näytettävä osa
       label: Osa
+    selected_parent:
+      hint: Näytetään tässä valittujen sivujen alasivut
+      label:
+        one: Yläsivu
+        other: Yläsivut
     selected_source:
       hint: Miten näytettävät kohteet valitaan
       label: Lähde
       options:
+        children: Sivun alasivut
         selection: Manuaalinen valinta
         taxonomies: Suodata taksonomian mukaan
+        toplevel: Ensimmäisen tason sivut
     show_more:
       hint: Näyttää painikkeen nähdäksesi lisää kohteita
       label: Näytä lisää?
@@ -990,6 +999,8 @@ admin:
       label: Details
     figure:
       label: Kuvio
+    icon:
+      label: Kuvake
     map:
       label: Kartta
     twitter:

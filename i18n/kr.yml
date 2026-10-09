@@ -44,6 +44,8 @@ admin:
       label: 뉴스레터
     paragraph:
       label: 단락
+    paragraph-list:
+      label: 단락 목록
     pushes:
       label: 알림
     quote:
@@ -412,9 +414,6 @@ admin:
         label: 위도
       lng:
         label: 경도
-    count:
-      hint: 표시할 항목
-      label: 개수
     credit:
       label: 크레딧
     cta:
@@ -514,7 +513,7 @@ admin:
       name:
         hint: '폼과 함께 전송되는 식별자입니다. Netlify는 이 값으로 제출을 묶고 열 이름을 정합니다. 의도적으로 모든 언어에서 공유됩니다. 비워두면 레이블 또는 블록 위치에서 결정됩니다.'
         label: 이름
-        pattern: '소문자, 숫자 및 하이픈만 포함하며 공백, 악센트 또는 특수 문자는 포함하지 않음'
+        pattern: '소문자, 숫자, 하이픈 및 밑줄만 포함하며 공백, 악센트 또는 특수 문자는 포함하지 않음'
       options:
         hint: 선택 필드만
         label:
@@ -602,6 +601,8 @@ admin:
       label: 절반 크기?
     is_highlighted:
       label: 강조?
+    is_link:
+      label: 링크인가요?
     is_logo:
       hint: 중앙에 배치되고 자르지 않음
       label: 로고로?
@@ -646,6 +647,7 @@ admin:
       label: 범례
     limit:
       label: 제한
+      hint: 표시할 항목
     links:
       label:
         one: 링크
@@ -819,12 +821,19 @@ admin:
     section:
       hint: 표시할 섹션 선택
       label: 섹션
+    selected_parent:
+      hint: 여기서 선택한 페이지의 하위 페이지가 표시됩니다
+      label:
+        one: 상위 페이지
+        other: 상위 페이지
     selected_source:
       hint: 표시할 항목을 선택하는 방법
       label: 소스
       options:
+        children: 페이지의 하위 페이지
         selection: 직접 선택
         taxonomies: 분류로 필터링
+        toplevel: 최상위 페이지
     show_more:
       hint: 더 많은 항목을 보기 위한 버튼 표시
       label: 더 보기?
@@ -990,6 +999,8 @@ admin:
       label: 세부 정보
     figure:
       label: 그림
+    icon:
+      label: 아이콘
     map:
       label: 지도
     twitter:

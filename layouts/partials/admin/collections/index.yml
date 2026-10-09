@@ -1,12 +1,7 @@
 collections: [
   {{- range $collection, $value := site.Params.admin.collections }}
-    {{- if .enable -}}
-      {{- $file := print "admin/collections/types/" $collection ".yml" -}}
-      {{- if templates.Exists ( printf "partials/%s" $file ) }}
-        {{ partialCached $file $collection }},
-      {{- else -}}
-        {{ partial "admin/collections/types/_placeholder.yml" $collection }},
-      {{ end -}}
+    {{- if .enable }}
+      {{ partial "admin/collections/item.yml" $collection }},
     {{- end -}}
   {{- end }}
 ]

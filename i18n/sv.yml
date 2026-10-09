@@ -44,6 +44,8 @@ admin:
       label: Nyhetsbrev
     paragraph:
       label: Stycke
+    paragraph-list:
+      label: Stycken
     pushes:
       label: Push-notiser
     quote:
@@ -412,9 +414,6 @@ admin:
         label: Latitud
       lng:
         label: Longitud
-    count:
-      hint: Objekt att visa
-      label: Antal
     credit:
       label: Kredit
     cta:
@@ -450,7 +449,7 @@ admin:
         ltr: Text till vänster / bild till höger
         rtl: Bild till vänster / text till höger
     discount:
-      hint: 'Rabattens belopp, t.ex: 30%'
+      hint: 'Rabattens belopp, t.ex. 30%'
       label: Rabatt
       pattern: Endast värde (utan valuta)
     document:
@@ -469,7 +468,7 @@ admin:
         other: Evenemang
     fax:
       label: Fax
-      hint: 'Internationellt format, t.ex: +33 1 23 45 67 89'
+      hint: 'Internationellt format, t.ex. +33 1 23 45 67 89'
     featured_image:
       hint: Visas i sökresultat och i förhandsgranskning av SMS/Meddelanden/Sociala nätverk
       label: Huvudbild
@@ -483,7 +482,7 @@ admin:
       label: Förnamn
     form:
       accept:
-        hint: 'Endast för filfält (t.ex.: .pdf, .doc, .docx)'
+        hint: 'Endast för filfält (t.ex. .pdf, .doc, .docx)'
         label: Godkända filändelser
       autocomplete:
         label: Komplettera automatiskt
@@ -514,14 +513,14 @@ admin:
       name:
         hint: 'Identifierare som skickas med formuläret: Netlify använder den för att gruppera inskickningar och namnge kolumnerna. Den delas medvetet mellan alla språk. Lämnas den tom härleds den från etiketten eller från blockets position.'
         label: Namn
-        pattern: 'Innehåller endast gemener, siffror och bindestreck, utan mellanslag, accenter eller specialtecken'
+        pattern: 'Innehåller endast gemener, siffror, bindestreck och understreck, utan mellanslag, accenter eller specialtecken'
       options:
         hint: Endast för valfält
         label:
           one: Alternativ
           other: Alternativ
       pattern:
-        hint: 'Reguljärt uttryck för validering (t.ex.: [0-9]{5}). Endast för inmatningsfält'
+        hint: 'Reguljärt uttryck för validering (t.ex. [0-9]{5}). Endast för inmatningsfält'
         label: Mönster
       type:
         hint: Välj fälttyp
@@ -555,7 +554,7 @@ admin:
     honorific:
       label: Tilltalsnamn
     icon:
-      hint: 'Ikonnamn (t.ex.: phone). Se https://lucide.dev/ eller https://icons.getbootstrap.com/'
+      hint: 'Ikonnamn (t.ex. phone). Se https://lucide.dev/ eller https://icons.getbootstrap.com/'
       label: Ikon
     id:
       label: ID
@@ -602,6 +601,8 @@ admin:
       label: Halv storlek?
     is_highlighted:
       label: Är markerad?
+    is_link:
+      label: Är detta en länk?
     is_logo:
       hint: Placerad i mitten och inte beskuren
       label: Är logotyp?
@@ -620,7 +621,7 @@ admin:
         one: Objekt
         other: Objekt
     keyfeatures:
-      hint: 't.ex: Plats, exponering…'
+      hint: 't.ex. Plats, exponering…'
       label:
         one: nyckelfunktion
         other: Nyckelfunktioner
@@ -646,6 +647,7 @@ admin:
       label: Legend
     limit:
       label: Gräns
+      hint: Objekt att visa
     links:
       label:
         one: Länk
@@ -689,7 +691,7 @@ admin:
       hint: 'Komprimera PDF innan du skickar: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefonnummer
-      hint: 'Internationellt format, t.ex: +33 1 23 45 67 89'
+      hint: 'Internationellt format, t.ex. +33 1 23 45 67 89'
     placeholder:
       label: Platshållare
     poster:
@@ -701,7 +703,7 @@ admin:
       label: Press
     price:
       hide: Dölj pris
-      hint: 't.ex: 300000 (för 300 000 kr)'
+      hint: 't.ex. 300000 (för 300 000 kr)'
       label: Pris
       sold: Försäljningspris
     quote:
@@ -819,12 +821,19 @@ admin:
     section:
       hint: Välj avsnitt att visa
       label: Avsnitt
+    selected_parent:
+      hint: Undersidorna till de sidor som väljs här visas
+      label:
+        one: Överordnad sida
+        other: Överordnade sidor
     selected_source:
       hint: Hur objekten som ska visas väljs
       label: Källa
       options:
+        children: Undersidor till en sida
         selection: Manuellt urval
         taxonomies: Filtrera efter taxonomi
+        toplevel: Sidor på första nivån
     show_more:
       hint: Visar en knapp för att se fler objekt
       label: Visa mer?
@@ -867,7 +876,7 @@ admin:
     subtitle:
       label: Undertitel
     suffix:
-      hint: 't.ex: %'
+      hint: 't.ex. %'
       label: Suffix
     summary:
       label: Sammanfattning
@@ -990,6 +999,8 @@ admin:
       label: Detaljer
     figure:
       label: Figur
+    icon:
+      label: Ikon
     map:
       label: Karta
     twitter:

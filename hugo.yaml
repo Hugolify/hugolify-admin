@@ -151,6 +151,7 @@ params:
         - map
         - newsletter
         - paragraph
+        - paragraph-list
         - pushes
         - quote
         - search
@@ -222,6 +223,10 @@ params:
         icon:
           material_icons: subject
         notes: false
+      paragraph-list:
+        icon:
+          material_icons: format_list_bulleted
+        notes: false
       pushes:
         icon:
           material_icons: panorama_wide_angle
@@ -281,6 +286,7 @@ params:
         - button
         - details
         - figure
+        - icon
         - map
         - qr
         - span_lang

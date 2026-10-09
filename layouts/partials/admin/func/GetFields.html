@@ -21,6 +21,17 @@
     {{- end }}
   {{- end }}
 {{- end -}}
+{{- with .file -}}
+  {{/* `admin.files` ships no defaults, so guard every step rather than index nil */}}
+  {{- $name := . -}}
+  {{- with site.Params.admin.files -}}
+    {{- with index . $name -}}
+      {{- with .fields -}}
+        {{- $fields = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- with .shortcode -}}
   {{- $fields = (index site.Params.admin.shortcodes .).fields -}}
 {{- end -}}

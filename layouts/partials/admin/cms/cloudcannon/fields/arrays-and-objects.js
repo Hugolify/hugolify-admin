@@ -29,9 +29,11 @@
           {{ with $fields }}
           value: {
             {{ range . }}
-              {{- $file := print "admin/fields/" . ".yml" }}
+              {{/* A field written as a map carries its own arguments, like in _range.yml */}}
+              {{- $sub := partial "admin/func/GetFieldNameValues.html" . }}
+              {{- $file := print "admin/fields/" $sub.field ".yml" }}
               {{- if templates.Exists ( printf "partials/%s" $file ) }}
-                {{- $r := partial $file . }}
+                {{- $r := partial $file (cond (not $sub.values) $sub.field $sub.values) }}
                 {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $r) }}
                 {{- range $k, $v := $datas }}
                   "{{ $k }}": null,

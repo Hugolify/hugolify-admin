@@ -44,6 +44,8 @@ admin:
       label: Newsletter
     paragraph:
       label: Parágrafo
+    paragraph-list:
+      label: Parágrafos
     pushes:
       label: Destaques
     quote:
@@ -412,9 +414,6 @@ admin:
         label: Latitude
       lng:
         label: Longitude
-    count:
-      hint: Itens a exibir
-      label: Contagem
     credit:
       label: Crédito
     cta:
@@ -450,7 +449,7 @@ admin:
         ltr: Texto à esquerda / imagem à direita
         rtl: Imagem à esquerda / texto à direita
     discount:
-      hint: 'Valor da redução, ex: 30%'
+      hint: 'Valor da redução, ex. 30%'
       label: Desconto
       pattern: Apenas valor (sem moeda)
     document:
@@ -469,7 +468,7 @@ admin:
         other: Eventos
     fax:
       label: Fax
-      hint: 'Formato internacional, ex: +33 1 23 45 67 89'
+      hint: 'Formato internacional, ex. +33 1 23 45 67 89'
     featured_image:
       hint: Exibido nos resultados de pesquisa e na visualização de SMS/Mensagens/Redes sociais
       label: Imagem principal
@@ -483,7 +482,7 @@ admin:
       label: Nome
     form:
       accept:
-        hint: 'Apenas para campos de arquivo (ex.: .pdf, .doc, .docx)'
+        hint: 'Apenas para campos de arquivo (ex. .pdf, .doc, .docx)'
         label: Extensões aceitas
       autocomplete:
         label: Preenchimento automático
@@ -514,14 +513,14 @@ admin:
       name:
         hint: 'Identificador enviado com o formulário: o Netlify o usa para agrupar os envios e nomear as colunas. É compartilhado propositalmente entre todos os idiomas. Se ficar vazio, é deduzido do rótulo ou da posição do bloco.'
         label: Nome
-        pattern: 'Contém apenas letras minúsculas, números e hífens, sem espaços, acentos ou caracteres especiais'
+        pattern: 'Contém apenas letras minúsculas, números, hífens e sublinhados, sem espaços, acentos ou caracteres especiais'
       options:
         hint: Apenas para campos de seleção
         label:
           one: Opção
           other: Opções
       pattern:
-        hint: 'Expressão regular de validação (ex.: [0-9]{5}). Apenas para campos de entrada'
+        hint: 'Expressão regular de validação (ex. [0-9]{5}). Apenas para campos de entrada'
         label: Padrão
       type:
         hint: Escolha o tipo de campo
@@ -555,7 +554,7 @@ admin:
     honorific:
       label: Pronome de tratamento
     icon:
-      hint: 'Nome do ícone (ex.: phone). Ver https://lucide.dev/ ou https://icons.getbootstrap.com/'
+      hint: 'Nome do ícone (ex. phone). Ver https://lucide.dev/ ou https://icons.getbootstrap.com/'
       label: Ícone
     id:
       label: ID
@@ -602,6 +601,8 @@ admin:
       label: Tamanho médio?
     is_highlighted:
       label: Está destacado?
+    is_link:
+      label: Isto é um link?
     is_logo:
       hint: Posicionado no centro e não cortado
       label: É logotipo?
@@ -620,7 +621,7 @@ admin:
         one: Item
         other: Itens
     keyfeatures:
-      hint: 'ex: Localização, exposição…'
+      hint: 'ex. Localização, exposição…'
       label:
         one: característica principal
         other: Características principais
@@ -646,6 +647,7 @@ admin:
       label: Legenda
     limit:
       label: Limite
+      hint: Itens a exibir
     links:
       label:
         one: Link
@@ -689,7 +691,7 @@ admin:
       hint: 'Comprima o PDF antes de enviar: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Número de telefone
-      hint: 'Formato internacional, ex: +33 1 23 45 67 89'
+      hint: 'Formato internacional, ex. +33 1 23 45 67 89'
     placeholder:
       label: Espaço reservado
     poster:
@@ -701,7 +703,7 @@ admin:
       label: Imprensa
     price:
       hide: Ocultar preço
-      hint: 'ex: 300000 (para 300 000 €)'
+      hint: 'ex. 300000 (para 300 000 €)'
       label: Preço
       sold: Preço de venda
     quote:
@@ -819,12 +821,19 @@ admin:
     section:
       hint: Selecione a seção a exibir
       label: Seção
+    selected_parent:
+      hint: São exibidas as páginas filhas das páginas selecionadas aqui
+      label:
+        one: Página pai
+        other: Páginas pai
     selected_source:
       hint: Como os itens a exibir são escolhidos
       label: Origem
       options:
+        children: Filhas de uma página
         selection: Seleção manual
         taxonomies: Filtrar por taxonomia
+        toplevel: Páginas de primeiro nível
     show_more:
       hint: Mostra um botão para ver mais itens
       label: Mostrar mais?
@@ -867,7 +876,7 @@ admin:
     subtitle:
       label: Subtítulo
     suffix:
-      hint: 'ex: %'
+      hint: 'ex. %'
       label: Sufixo
     summary:
       label: Resumo
@@ -990,6 +999,8 @@ admin:
       label: Detalhes
     figure:
       label: Figura
+    icon:
+      label: Ícone
     map:
       label: Mapa
     twitter:

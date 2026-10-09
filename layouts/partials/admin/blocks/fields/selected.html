@@ -3,32 +3,49 @@
 
 {{- $section := dict "section-hidden" $collection  -}} 
 {{- $layout := dict "layout" (slice "carousel" "grid" "list") -}} 
-{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "scrollsnap" -}} 
+{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "scrollsnap" "carousel" -}} 
 {{- $ui := dict "ui" $uiFields -}}
 
 {{/* Taxonomies of the section, used to filter the pages when source is "taxonomies" */}}
 {{- $taxonomies := partial "admin/func/GetTaxonomies.html" $collection -}}
 
-{{/* Without taxonomy, the manual selection is the only source, so it is required */}}
-{{- $relation := dict "relation" (dict "collection" $collection "name" "items" "multiple" true "required" (not $taxonomies)) -}} 
+{{/* A nested collection holds a tree, so a block can take the children of one of
+  its pages, the sub-expertises of an expertise for one, or the first level of the
+  tree: the sources "children" and "toplevel" are offered to those collections only */}}
+{{- $nested := gt (partial "admin/func/GetNestedDepth.html" $collection) 1 -}}
+
+{{/* Sources the section can offer, the manual selection always being one of them */}}
+{{- $sources := slice "selection" -}}
+{{- if $taxonomies -}}
+  {{- $sources = $sources | append "taxonomies" -}}
+{{- end -}}
+{{- if $nested -}}
+  {{- $sources = $sources | append "children" "toplevel" -}}
+{{- end -}}
+
+{{/* Without another source, the manual selection is the only one, so it is required */}}
+{{- $relation := dict "relation" (dict "collection" $collection "name" "items" "multiple" true "required" (eq (len $sources) 1)) -}} 
 
 {{- $fields := slice 
   "heading"
   $section -}}
 
-{{- if $taxonomies -}}
-  {{- $fields = $fields | append "selected_source" $relation -}}
+{{- if gt (len $sources) 1 -}}
+  {{- $fields = $fields | append (dict "selected_source" (dict "options" $sources)) $relation -}}
   {{- range $taxonomies -}}
     {{- $fields = $fields | append (dict "relation" (dict "collection" .collection "name" .name "multiple" true)) -}}
+  {{- end -}}
+  {{- if $nested -}}
+    {{- $fields = $fields | append (dict "selected_parent" (dict "collection" $collection)) -}}
   {{- end -}}
 {{- else -}}
   {{- $fields = $fields | append $relation -}}
 {{- end -}}
 
-{{- $fields = $fields | append 
-  "show_more" 
-  $ui 
-  "carousel" -}}
+{{- $fields = $fields | append
+  "limit"
+  "show_more"
+  $ui -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" $block "fields" $fields) -}}
 

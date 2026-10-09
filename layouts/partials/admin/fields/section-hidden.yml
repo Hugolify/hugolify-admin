@@ -12,6 +12,7 @@
   "label" "section"
   "default" $collection
   "hidden" true
+  "i18n" "duplicate"
   -}}
 
 {{- $args = merge $args $name }}

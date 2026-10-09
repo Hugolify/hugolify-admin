@@ -1,1 +1,1 @@
-{{/* Not supported */}}
+{{ partial "admin/cms/decapcms/collection/config/nested.yml" . }}

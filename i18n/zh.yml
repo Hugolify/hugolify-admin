@@ -44,6 +44,8 @@ admin:
       label: 新闻通讯
     paragraph:
       label: 段落
+    paragraph-list:
+      label: 段落列表
     pushes:
       label: 推送
     quote:
@@ -412,9 +414,6 @@ admin:
         label: 纬度
       lng:
         label: 经度
-    count:
-      hint: 要显示的项目
-      label: 计数
     credit:
       label: 署名
     cta:
@@ -514,7 +513,7 @@ admin:
       name:
         hint: '随表单一起发送的标识符：Netlify 用它来归组提交数据并命名列。该值有意在所有语言之间共享。留空时将根据标签或区块位置推导。'
         label: 名称
-        pattern: '仅包含小写字母、数字和连字符,不含空格、 重音符号或特殊字符'
+        pattern: '仅包含小写字母、数字、连字符和下划线,不含空格、 重音符号或特殊字符'
       options:
         hint: 仅用于选择字段
         label:
@@ -602,6 +601,8 @@ admin:
       label: 半尺寸?
     is_highlighted:
       label: 已突出显示?
+    is_link:
+      label: 这是链接吗？
     is_logo:
       hint: 居中定位且不裁剪
       label: 是标志?
@@ -646,6 +647,7 @@ admin:
       label: 图例
     limit:
       label: 限制
+      hint: 要显示的项目
     links:
       label:
         one: 链接
@@ -819,12 +821,19 @@ admin:
     section:
       hint: 选择要显示的部分
       label: 部分
+    selected_parent:
+      hint: 显示此处所选页面的子页面
+      label:
+        one: 父级页面
+        other: 父级页面
     selected_source:
       hint: 选择要显示项目的方式
       label: 来源
       options:
+        children: 页面的子页面
         selection: 手动选择
         taxonomies: 按分类筛选
+        toplevel: 第一级页面
     show_more:
       hint: 显示一个按钮以查看更多项目
       label: 显示更多?
@@ -990,6 +999,8 @@ admin:
       label: 详情
     figure:
       label: 图形
+    icon:
+      label: 图标
     map:
       label: 地图
     twitter:

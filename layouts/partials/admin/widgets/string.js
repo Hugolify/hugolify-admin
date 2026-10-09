@@ -116,7 +116,9 @@
   {{ if ne $default "" }}
   default: {{ $default }},
   {{ end }}
+  {{ if not $hidden }}
   required: {{ $required }},
+  {{ end }}
   {{ with $pattern }}
   pattern: [
     '{{ replace .regex "\\" "\\\\" }}',

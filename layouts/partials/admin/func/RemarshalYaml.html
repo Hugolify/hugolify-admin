@@ -22,7 +22,7 @@
 
   Fix
   ---
-  After remarshal, three regex patterns are applied to restore plain `[]`:
+  After remarshal, four regex patterns are applied to restore plain `[]`:
 
     Pattern 1 — anchor definition with value on the next line:
       editor_components: &anchorN
@@ -35,7 +35,13 @@
       editor_components: &anchor *anchor
       → editor_components: []
 
-    Pattern 3 — standalone alias reference:
+    Pattern 3 — anchor definition left with no value at all:
+      editor_components: &anchorN
+      <blank line>
+      → editor_components: []
+      Runs after 1 and 2, so it only ever sees the leftovers.
+
+    Pattern 4 — standalone alias reference:
       editor_components: *anchor
       → editor_components: []
 
@@ -44,8 +50,12 @@
   Replace any direct call to `transform.Remarshal "yaml"` that produces
   YAML containing repeated `editor_components: []` fields:
 
-    {{- $yaml := partial "admin/func/RemarshalYaml.html" (partial "admin/collections/index.yml" .) -}}
+    {{- $yaml := partial "admin/func/RemarshalYaml.html" (partial "admin/collections/item.yml" $collection) -}}
     {{ $yaml }}
+
+  Feed it one collection at a time, never the whole `collections:` list: Hugo's
+  YAML decoder rejects big documents with "too many YAML aliases for non-scalar
+  nodes". See `admin/func/RemarshalCollections.html` for the details.
 
   Input  : string — raw YAML-like content to be remarshal'd
   Output : string — normalized YAML with anchors resolved
@@ -55,6 +65,8 @@
 {{- $yaml = replaceRE `(editor_components: )&\S+ *\n\s*\[\]` "${1}[]" $yaml -}}
 {{/* Pattern 2: self-referencing anchor + alias on same line */}}
 {{- $yaml = replaceRE `(editor_components: )&\S+ \*\S+` "${1}[]" $yaml -}}
-{{/* Pattern 3: standalone alias reference */}}
+{{/* Pattern 3: anchor definition with an empty value */}}
+{{- $yaml = replaceRE `(?m)(editor_components: )&\S+ *$` "${1}[]" $yaml -}}
+{{/* Pattern 4: standalone alias reference */}}
 {{- $yaml = replaceRE `(editor_components: )\*\S+` "${1}[]" $yaml -}}
 {{- return $yaml -}}

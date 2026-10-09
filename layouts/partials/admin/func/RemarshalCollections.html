@@ -1,0 +1,45 @@
+{{/*
+  RemarshalCollections
+  ====================
+  Same collections as `admin/collections/index.yml`, but emitted as block YAML,
+  with `transform.Remarshal` applied to **each collection separately**.
+
+  Why not remarshal the whole list at once
+  ----------------------------------------
+  Hugo guards its YAML decoder against the Billion Laughs attack
+  (`parser/metadecoders.validateAliasLimitForCollections`). That guard counts
+  map/slice nodes by the address of a temporary variable instead of the address
+  of the collection itself, so the counter is shared between unrelated nodes and
+  a large alias-free document trips it just as an aliased one would:
+
+    error calling Remarshal: too many YAML aliases for non-scalar nodes
+
+  Above 10 KB the budget is 10000, and a full admin config (every collection
+  carrying the whole `blocks` field) blows past it. Remarshalling one collection
+  at a time keeps each call far below the budget — the counter is reset on every
+  call — and the concatenated collections are the same document the single call used
+  to produce.
+
+  Usage
+  -----
+    {{ partial "admin/func/RemarshalCollections.html" . }}
+
+  Input  : page context (unused, kept for symmetry with `index.yml`)
+  Output : string — `collections:` followed by one block YAML item per collection
+*/}}
+{{- $collections := slice -}}
+{{- range $collection, $value := site.Params.admin.collections -}}
+  {{- if .enable -}}
+    {{/* Keep the `collections: [...]` wrapper: it is what makes Hugo detect the
+         input as YAML (a bare `{...}` is read as JSON), and it makes the
+         remarshal'd output a ready-to-use block sequence item. */}}
+    {{- $raw := printf "collections: [%s]" (partial "admin/collections/collection.yml" $collection) -}}
+    {{- $yaml := partial "admin/func/RemarshalYaml.html" $raw | strings.TrimSpace -}}
+    {{- with $yaml -}}
+      {{- $collections = $collections | append (. | strings.TrimPrefix "collections:" | strings.TrimPrefix "\n") -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{/* Returned, never printed: this is an `.html` template, so writing the YAML
+     through an output action here would HTML-escape quotes and ampersands. */}}
+{{- return printf "collections:\n%s\n" (delimit $collections "\n") -}}
