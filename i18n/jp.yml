@@ -70,6 +70,7 @@ admin:
         one: 著者
         other: 著者
     awards:
+      _description: すべての受賞
       label:
         one: 受賞
         other: 受賞
@@ -543,6 +544,9 @@ admin:
         large: 大
         medium: 中
         small: 小
+    head_office:
+      hint: "住所と連絡先が組織のものとなる拠点。下で入力する場合は空欄のままにします。"
+      label: "本社"
     heading:
       label: 見出し
     hero:
@@ -636,6 +640,9 @@ admin:
         list: リスト
     legal:
       label: 法的
+    legal_name:
+      hint: "登記上の名称。サイトのタイトルと異なる場合のみ入力します。"
+      label: "正式名称"
     legend:
       label: 凡例
     limit:
@@ -675,20 +682,8 @@ admin:
         end: 終了
         start: 開始
     organization:
-      hint: "構造化データに公開する組織の情報：名称・ロゴ・住所・連絡先。"
+      hint: "構造化データに公開する組織の情報。名称・ロゴ・SNSプロフィールはサイトから取得します：サイトのタイトル、ヘッダーのロゴ、SNSメニュー。"
       label: "組織"
-    organization_type:
-      options:
-        Organization: "組織（汎用）"
-        Corporation: "企業"
-        LocalBusiness: "地域ビジネス"
-        ProfessionalService: "専門サービス"
-        LegalService: "法務サービス"
-        MedicalOrganization: "医療機関"
-        EducationalOrganization: "教育機関"
-        NGO: "NGO・非営利団体"
-      hint: "構造化データ用の組織タイプ: Organization, LocalBusiness, ProfessionalService, LegalService… 場所に設定すると、その場所は組織の拠点になります。空のままなら単なる所在地として扱われます。"
-      label: schema.org のタイプ
     parent:
       label: 親ページ
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "構造化データにメールアドレスを含めます。自動収集を抑えたい場合はオフにしてください。"
       label: "メールアドレスを公開しますか？"
+    schema:
+      hint: "このページが構造化データでどう記述されるか。"
+      label: "構造化データ"
+    schema_type:
+      options:
+        Organization: "組織（汎用）"
+        Corporation: "企業"
+        LocalBusiness: "地域ビジネス"
+        ProfessionalService: "専門サービス"
+        LegalService: "法務サービス"
+        MedicalOrganization: "医療機関"
+        EducationalOrganization: "教育機関"
+        NGO: "NGO・非営利団体"
+        Place: "場所（汎用）"
+        LandmarksOrHistoricalBuildings: "名所・歴史的建造物"
+        TouristAttraction: "観光名所"
+        CivicStructure: "公共施設"
+        Accommodation: "宿泊施設"
+        Residence: "住居"
+      hint: "エンティティの schema.org タイプ。Organization のサブタイプなら拠点、Place のサブタイプなら単なる場所として扱われます。"
+      label: "schema.org のタイプ"
     scrollsnap:
       hint: 項目が横スクロールする画面サイズ
       label: 横スクロール

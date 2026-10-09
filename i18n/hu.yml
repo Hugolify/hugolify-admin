@@ -70,6 +70,7 @@ admin:
         one: Szerző
         other: Szerzők
     awards:
+      _description: Minden díj
       label:
         one: Díj
         other: Díjak
@@ -543,6 +544,9 @@ admin:
         large: Nagy
         medium: Közepes
         small: Kicsi
+    head_office:
+      hint: "Az a hely, amelynek címe és elérhetősége a szervezeté. Hagyja üresen, ha alább adja meg őket."
+      label: "Székhely"
     heading:
       label: Címsor
     hero:
@@ -636,6 +640,9 @@ admin:
         list: Lista
     legal:
       label: Jogi
+    legal_name:
+      hint: "A bejegyzett név, csak ha eltér a webhely címétől."
+      label: "Hivatalos név"
     legend:
       label: Jelmagyarázat
     limit:
@@ -675,20 +682,8 @@ admin:
         end: Vége
         start: Kezdés
     organization:
-      hint: "A szervezet azonosítása a strukturált adatokban: név, logó, cím és kapcsolat."
+      hint: "A szervezet azonosítása a strukturált adatokban. A név, a logó és a közösségi profilok a webhelyről származnak: a címéből, a fejléc logójából és a közösségi menüből."
       label: "Szervezet"
-    organization_type:
-      options:
-        Organization: "Szervezet (általános)"
-        Corporation: "Vállalat"
-        LocalBusiness: "Helyi vállalkozás"
-        ProfessionalService: "Szakmai szolgáltatás"
-        LegalService: "Jogi szolgáltatás"
-        MedicalOrganization: "Egészségügyi szervezet"
-        EducationalOrganization: "Oktatási intézmény"
-        NGO: "NGO / egyesület"
-      hint: "A szervezet típusa a strukturált adatokhoz: Organization, LocalBusiness, ProfessionalService, LegalService… Egy helyszínnél a kitöltése a szervezet irodájává teszi; üresen hagyva a helyszín pusztán egy hely marad."
-      label: Schema.org típus
     parent:
       label: Szülő oldal
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "Az e-mail-címeket is beleveszi a strukturált adatokba. Kapcsolja ki az automatikus gyűjtés korlátozásához."
       label: "Közzéteszi az e-mail-címeket?"
+    schema:
+      hint: "Hogyan írja le magát ez az oldal a strukturált adatokban."
+      label: "Strukturált adatok"
+    schema_type:
+      options:
+        Organization: "Szervezet (általános)"
+        Corporation: "Vállalat"
+        LocalBusiness: "Helyi vállalkozás"
+        ProfessionalService: "Szakmai szolgáltatás"
+        LegalService: "Jogi szolgáltatás"
+        MedicalOrganization: "Egészségügyi szervezet"
+        EducationalOrganization: "Oktatási intézmény"
+        NGO: "NGO / egyesület"
+        Place: "Helyszín (általános)"
+        LandmarksOrHistoricalBuildings: "Nevezetesség vagy műemlék"
+        TouristAttraction: "Turisztikai látványosság"
+        CivicStructure: "Középület"
+        Accommodation: "Szállás"
+        Residence: "Lakóhely"
+      hint: "Az entitás schema.org típusa. Egy Organization altípus irodává teszi a helyszínt; egy Place altípus helyszínként hagyja."
+      label: "Schema.org típus"
     scrollsnap:
       hint: Képernyőméretek, ahol az elemek oldalirányban görgethetők
       label: Vízszintes görgetés

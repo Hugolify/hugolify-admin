@@ -70,6 +70,7 @@ admin:
         one: Penulis
         other: Penulis
     awards:
+      _description: Semua penghargaan
       label:
         one: Penghargaan
         other: Penghargaan
@@ -543,6 +544,9 @@ admin:
         large: Besar
         medium: Sedang
         small: Kecil
+    head_office:
+      hint: "Tempat yang alamat dan kontaknya adalah milik badan usaha. Kosongkan untuk mengisinya di bawah."
+      label: "Kantor pusat"
     heading:
       label: Judul
     hero:
@@ -636,6 +640,9 @@ admin:
         list: Daftar
     legal:
       label: Hukum
+    legal_name:
+      hint: "Nama terdaftar, hanya jika berbeda dari judul situs."
+      label: "Nama resmi"
     legend:
       label: Legenda
     limit:
@@ -675,20 +682,8 @@ admin:
         end: Akhir
         start: Awal
     organization:
-      hint: "Identitas badan usaha dalam data terstruktur: nama, logo, alamat, dan kontak."
+      hint: "Identitas badan usaha dalam data terstruktur. Nama, logo, dan profil media sosial diambil dari situs: judulnya, logo header, dan menu media sosial."
       label: "Organisasi"
-    organization_type:
-      options:
-        Organization: "Organisasi (umum)"
-        Corporation: "Perusahaan"
-        LocalBusiness: "Bisnis lokal"
-        ProfessionalService: "Layanan profesional"
-        LegalService: "Layanan hukum"
-        MedicalOrganization: "Organisasi medis"
-        EducationalOrganization: "Lembaga pendidikan"
-        NGO: "LSM / organisasi nirlaba"
-      hint: "Tipe organisasi untuk data terstruktur: Organization, LocalBusiness, ProfessionalService, LegalService… Pada sebuah lokasi, mengisinya menjadikan lokasi tersebut kantor organisasi; jika dikosongkan, lokasi tetap sekadar tempat."
-      label: Tipe schema.org
     parent:
       label: Halaman Induk
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "Menyertakan alamat email dalam data terstruktur. Matikan untuk membatasi pengumpulan otomatis."
       label: "Publikasikan alamat email?"
+    schema:
+      hint: "Bagaimana halaman ini menggambarkan dirinya dalam data terstruktur."
+      label: "Data terstruktur"
+    schema_type:
+      options:
+        Organization: "Organisasi (umum)"
+        Corporation: "Perusahaan"
+        LocalBusiness: "Bisnis lokal"
+        ProfessionalService: "Layanan profesional"
+        LegalService: "Layanan hukum"
+        MedicalOrganization: "Organisasi medis"
+        EducationalOrganization: "Lembaga pendidikan"
+        NGO: "LSM / organisasi nirlaba"
+        Place: "Tempat (umum)"
+        LandmarksOrHistoricalBuildings: "Landmark atau bangunan bersejarah"
+        TouristAttraction: "Objek wisata"
+        CivicStructure: "Bangunan publik"
+        Accommodation: "Akomodasi"
+        Residence: "Kediaman"
+      hint: "Tipe schema.org entitas. Subtipe Organization menjadikan lokasi sebagai kantor; subtipe Place membiarkannya sebagai tempat."
+      label: "Tipe schema.org"
     scrollsnap:
       hint: Ukuran layar saat item bergulir ke samping
       label: Gulir horizontal

@@ -70,6 +70,7 @@ admin:
         one: Автор
         other: Автори
     awards:
+      _description: Всички награди
       label:
         one: Награда
         other: Награди
@@ -543,6 +544,9 @@ admin:
         large: Голям
         medium: Среден
         small: Малък
+    head_office:
+      hint: "Мястото, чиито адрес и контакти са тези на структурата. Оставете празно, за да ги попълните по-долу."
+      label: "Седалище"
     heading:
       label: Заглавие
     hero:
@@ -636,6 +640,9 @@ admin:
         list: Списък
     legal:
       label: Правен
+    legal_name:
+      hint: "Регистрираното наименование, само ако се различава от заглавието на сайта."
+      label: "Юридическо наименование"
     legend:
       label: Легенда
     limit:
@@ -675,20 +682,8 @@ admin:
         end: Край
         start: Начало
     organization:
-      hint: "Идентичност на структурата в структурираните данни: име, лого, адрес и контакти."
+      hint: "Идентичност на структурата в структурираните данни. Името, логото и профилите в социалните мрежи идват от сайта: заглавието му, логото в заглавната част и менюто на социалните мрежи."
       label: "Организация"
-    organization_type:
-      options:
-        Organization: "Организация (обща)"
-        Corporation: "Дружество"
-        LocalBusiness: "Местен бизнес"
-        ProfessionalService: "Професионална услуга"
-        LegalService: "Правна услуга"
-        MedicalOrganization: "Медицинска организация"
-        EducationalOrganization: "Учебно заведение"
-        NGO: "НПО / сдружение"
-      hint: "Тип на организацията за структурираните данни: Organization, LocalBusiness, ProfessionalService, LegalService… В контекста на място: попълването го прави офис на организацията; оставено празно, мястото си остава просто местоположение."
-      label: Тип schema.org
     parent:
       label: Родителска страница
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "Включва имейл адресите в структурираните данни. Изключете, за да ограничите автоматичното събиране."
       label: "Публикуване на имейл адресите?"
+    schema:
+      hint: "Как тази страница се описва в структурираните данни."
+      label: "Структурирани данни"
+    schema_type:
+      options:
+        Organization: "Организация (обща)"
+        Corporation: "Дружество"
+        LocalBusiness: "Местен бизнес"
+        ProfessionalService: "Професионална услуга"
+        LegalService: "Правна услуга"
+        MedicalOrganization: "Медицинска организация"
+        EducationalOrganization: "Учебно заведение"
+        NGO: "НПО / сдружение"
+        Place: "Място (общо)"
+        LandmarksOrHistoricalBuildings: "Забележителност или историческа сграда"
+        TouristAttraction: "Туристическа атракция"
+        CivicStructure: "Обществена сграда"
+        Accommodation: "Настаняване"
+        Residence: "Жилище"
+      hint: "Тип schema.org на обекта. Подтип на Organization прави мястото офис на структурата; подтип на Place го оставя обикновено място."
+      label: "Тип schema.org"
     scrollsnap:
       hint: Размери на екрана, при които елементите се превъртат настрани
       label: Хоризонтално превъртане

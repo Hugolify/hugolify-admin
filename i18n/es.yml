@@ -70,6 +70,7 @@ admin:
         one: Autor
         other: Autores
     awards:
+      _description: Todos los premios
       label:
         one: Premio
         other: Premios
@@ -543,6 +544,9 @@ admin:
         large: Grande
         medium: Mediano
         small: Pequeño
+    head_office:
+      hint: "El lugar cuya dirección y contacto son los de la entidad. Déjelo vacío para rellenarlos más abajo."
+      label: "Sede"
     heading:
       label: Encabezado
     hero:
@@ -636,6 +640,9 @@ admin:
         list: Lista
     legal:
       label: Legal
+    legal_name:
+      hint: "Nombre registrado, solo si difiere del título del sitio."
+      label: "Razón social"
     legend:
       label: Leyenda
     limit:
@@ -675,20 +682,8 @@ admin:
         end: Final
         start: Inicio
     organization:
-      hint: "Identidad de la entidad publicada en los datos estructurados: nombre, logotipo, dirección y contacto."
+      hint: "Identidad de la entidad publicada en los datos estructurados. El nombre, el logotipo y los perfiles sociales proceden del sitio: su título, el logotipo de la cabecera y el menú social."
       label: "Organización"
-    organization_type:
-      options:
-        Organization: "Organización (genérica)"
-        Corporation: "Sociedad"
-        LocalBusiness: "Negocio local"
-        ProfessionalService: "Servicio profesional"
-        LegalService: "Servicio jurídico"
-        MedicalOrganization: "Organización médica"
-        EducationalOrganization: "Centro educativo"
-        NGO: "ONG / asociación"
-      hint: "Tipo de organización para los datos estructurados: Organization, LocalBusiness, ProfessionalService, LegalService… En un lugar, rellenarlo lo convierte en una oficina de la organización; si se deja vacío, el lugar sigue siendo una simple ubicación."
-      label: Tipo schema.org
     parent:
       label: Página padre
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "Incluye las direcciones de correo en los datos estructurados. Desactívalo para limitar la recolección automatizada."
       label: "¿Publicar las direcciones de correo?"
+    schema:
+      hint: "Cómo se describe esta página en los datos estructurados."
+      label: "Datos estructurados"
+    schema_type:
+      options:
+        Organization: "Organización (genérica)"
+        Corporation: "Sociedad"
+        LocalBusiness: "Negocio local"
+        ProfessionalService: "Servicio profesional"
+        LegalService: "Servicio jurídico"
+        MedicalOrganization: "Organización médica"
+        EducationalOrganization: "Centro educativo"
+        NGO: "ONG / asociación"
+        Place: "Lugar (genérico)"
+        LandmarksOrHistoricalBuildings: "Monumento o edificio histórico"
+        TouristAttraction: "Atracción turística"
+        CivicStructure: "Edificio público"
+        Accommodation: "Alojamiento"
+        Residence: "Residencia"
+      hint: "Tipo schema.org de la entidad. Un subtipo de Organization convierte el lugar en una oficina; un subtipo de Place lo deja como ubicación."
+      label: "Tipo schema.org"
     scrollsnap:
       hint: Tamaños de pantalla en los que los elementos se desplazan lateralmente
       label: Desplazamiento horizontal

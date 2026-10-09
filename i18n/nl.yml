@@ -70,6 +70,7 @@ admin:
         one: Auteur
         other: Auteurs
     awards:
+      _description: Alle onderscheidingen
       label:
         one: Onderscheiding
         other: Onderscheidingen
@@ -543,6 +544,9 @@ admin:
         large: Groot
         medium: Gemiddeld
         small: Klein
+    head_office:
+      hint: "De plaats waarvan het adres en de contactgegevens die van de organisatie zijn. Laat leeg om ze hieronder in te vullen."
+      label: "Hoofdkantoor"
     heading:
       label: Kop
     hero:
@@ -636,6 +640,9 @@ admin:
         list: Lijst
     legal:
       label: Juridisch
+    legal_name:
+      hint: "Geregistreerde naam, alleen als die afwijkt van de titel van de site."
+      label: "Statutaire naam"
     legend:
       label: Legende
     limit:
@@ -675,20 +682,8 @@ admin:
         end: Einde
         start: Begin
     organization:
-      hint: "Identiteit van de organisatie in de gestructureerde gegevens: naam, logo, adres en contact."
+      hint: "Identiteit van de organisatie in de gestructureerde gegevens. Naam, logo en sociale profielen komen van de site: de titel, het logo in de header en het sociale menu."
       label: "Organisatie"
-    organization_type:
-      options:
-        Organization: "Organisatie (algemeen)"
-        Corporation: "Onderneming"
-        LocalBusiness: "Lokaal bedrijf"
-        ProfessionalService: "Professionele dienst"
-        LegalService: "Juridische dienst"
-        MedicalOrganization: "Medische organisatie"
-        EducationalOrganization: "Onderwijsinstelling"
-        NGO: "Ngo / vereniging"
-      hint: "Organisatietype voor gestructureerde gegevens: Organization, LocalBusiness, ProfessionalService, LegalService… Bij een locatie maakt een ingevulde waarde er een vestiging van de organisatie van; leeg gelaten blijft het een gewone locatie."
-      label: Schema.org-type
     parent:
       label: Bovenliggende pagina
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "Neemt e-mailadressen op in de gestructureerde gegevens. Schakel uit om geautomatiseerd verzamelen te beperken."
       label: "E-mailadressen publiceren?"
+    schema:
+      hint: "Hoe deze pagina zichzelf beschrijft in de gestructureerde gegevens."
+      label: "Gestructureerde gegevens"
+    schema_type:
+      options:
+        Organization: "Organisatie (algemeen)"
+        Corporation: "Onderneming"
+        LocalBusiness: "Lokaal bedrijf"
+        ProfessionalService: "Professionele dienst"
+        LegalService: "Juridische dienst"
+        MedicalOrganization: "Medische organisatie"
+        EducationalOrganization: "Onderwijsinstelling"
+        NGO: "Ngo / vereniging"
+        Place: "Locatie (algemeen)"
+        LandmarksOrHistoricalBuildings: "Monument of historisch gebouw"
+        TouristAttraction: "Toeristische attractie"
+        CivicStructure: "Openbaar gebouw"
+        Accommodation: "Accommodatie"
+        Residence: "Woning"
+      hint: "Schema.org-type van de entiteit. Een Organization-subtype maakt van de locatie een vestiging; een Place-subtype laat het een locatie."
+      label: "Schema.org-type"
     scrollsnap:
       hint: Schermformaten waarop de items zijwaarts scrollen
       label: Horizontaal scrollen

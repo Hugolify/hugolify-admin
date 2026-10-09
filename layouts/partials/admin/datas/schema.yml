@@ -1,0 +1,11 @@
+{{- $fields := slice "organization" "schema_email" -}}
+{
+  label: '{{ i18n "admin.files.schema" }}',
+  name: 'schema',
+  file: 'data/schema.yml',
+  {{/* Not translated, unlike the other files of the collection: an
+       organization is a single entity — one address, one phone, one @id — and
+       nothing in this file varies from one language to the next. What does,
+       the description, comes from data/seo.yml. */}}
+  {{- partial "admin/fields/_fields.yml" $fields -}}
+}

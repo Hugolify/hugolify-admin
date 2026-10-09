@@ -70,6 +70,7 @@ admin:
         one: Autor
         other: Autorzy
     awards:
+      _description: Wszystkie nagrody
       label:
         one: Nagroda
         other: Nagrody
@@ -543,6 +544,9 @@ admin:
         large: Duży
         medium: Średni
         small: Mały
+    head_office:
+      hint: "Miejsce, którego adres i dane kontaktowe są danymi podmiotu. Pozostaw puste, aby uzupełnić je poniżej."
+      label: "Siedziba"
     heading:
       label: Nagłówek
     hero:
@@ -636,6 +640,9 @@ admin:
         list: Lista
     legal:
       label: Prawne
+    legal_name:
+      hint: "Nazwa rejestrowa, tylko jeśli różni się od tytułu strony."
+      label: "Nazwa prawna"
     legend:
       label: Legenda
     limit:
@@ -675,20 +682,8 @@ admin:
         end: Koniec
         start: Początek
     organization:
-      hint: "Tożsamość podmiotu w danych strukturalnych: nazwa, logo, adres i kontakt."
+      hint: "Tożsamość podmiotu w danych strukturalnych. Nazwa, logo i profile społecznościowe pochodzą ze strony: jej tytułu, logo w nagłówku i menu społecznościowego."
       label: "Organizacja"
-    organization_type:
-      options:
-        Organization: "Organizacja (ogólna)"
-        Corporation: "Spółka"
-        LocalBusiness: "Firma lokalna"
-        ProfessionalService: "Usługa profesjonalna"
-        LegalService: "Usługa prawna"
-        MedicalOrganization: "Organizacja medyczna"
-        EducationalOrganization: "Placówka edukacyjna"
-        NGO: "NGO / stowarzyszenie"
-      hint: "Typ organizacji dla danych strukturalnych: Organization, LocalBusiness, ProfessionalService, LegalService… W przypadku miejsca wypełnienie czyni z niego biuro organizacji; pozostawione puste, miejsce pozostaje zwykłą lokalizacją."
-      label: Typ schema.org
     parent:
       label: Strona nadrzędna
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "Dołącza adresy e-mail do danych strukturalnych. Wyłącz, aby ograniczyć automatyczne zbieranie."
       label: "Publikować adresy e-mail?"
+    schema:
+      hint: "Jak ta strona opisuje się w danych strukturalnych."
+      label: "Dane strukturalne"
+    schema_type:
+      options:
+        Organization: "Organizacja (ogólna)"
+        Corporation: "Spółka"
+        LocalBusiness: "Firma lokalna"
+        ProfessionalService: "Usługa profesjonalna"
+        LegalService: "Usługa prawna"
+        MedicalOrganization: "Organizacja medyczna"
+        EducationalOrganization: "Placówka edukacyjna"
+        NGO: "NGO / stowarzyszenie"
+        Place: "Miejsce (ogólne)"
+        LandmarksOrHistoricalBuildings: "Zabytek lub budynek historyczny"
+        TouristAttraction: "Atrakcja turystyczna"
+        CivicStructure: "Budynek publiczny"
+        Accommodation: "Zakwaterowanie"
+        Residence: "Rezydencja"
+      hint: "Typ schema.org encji. Podtyp Organization czyni z miejsca biuro; podtyp Place pozostawia je zwykłą lokalizacją."
+      label: "Typ schema.org"
     scrollsnap:
       hint: Rozmiary ekranu, na których elementy przewijają się w poziomie
       label: Przewijanie poziome

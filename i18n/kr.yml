@@ -70,6 +70,7 @@ admin:
         one: 저자
         other: 저자
     awards:
+      _description: 모든 수상
       label:
         one: 수상
         other: 수상
@@ -543,6 +544,9 @@ admin:
         large: 큰
         medium: 중간
         small: 작은
+    head_office:
+      hint: "주소와 연락처가 조직의 것인 장소. 아래에 직접 입력하려면 비워 두세요."
+      label: "본사"
     heading:
       label: 제목
     hero:
@@ -636,6 +640,9 @@ admin:
         list: 목록
     legal:
       label: 법적
+    legal_name:
+      hint: "등록된 이름. 사이트 제목과 다를 때만 입력하세요."
+      label: "법인명"
     legend:
       label: 범례
     limit:
@@ -675,20 +682,8 @@ admin:
         end: 끝
         start: 시작
     organization:
-      hint: "구조화된 데이터에 게시되는 조직 정보: 이름, 로고, 주소 및 연락처."
+      hint: "구조화된 데이터에 게시되는 조직 정보. 이름, 로고, 소셜 프로필은 사이트에서 가져옵니다: 사이트 제목, 헤더 로고, 소셜 메뉴."
       label: "조직"
-    organization_type:
-      options:
-        Organization: "조직 (일반)"
-        Corporation: "회사"
-        LocalBusiness: "지역 사업체"
-        ProfessionalService: "전문 서비스"
-        LegalService: "법률 서비스"
-        MedicalOrganization: "의료 기관"
-        EducationalOrganization: "교육 기관"
-        NGO: "NGO / 비영리 단체"
-      hint: "구조화된 데이터용 조직 유형: Organization, LocalBusiness, ProfessionalService, LegalService… 장소에 값을 지정하면 해당 장소가 조직의 사무소가 됩니다. 비워 두면 단순한 위치로 유지됩니다."
-      label: schema.org 유형
     parent:
       label: 상위 페이지
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "구조화된 데이터에 이메일 주소를 포함합니다. 자동 수집을 줄이려면 끄십시오."
       label: "이메일 주소를 공개할까요?"
+    schema:
+      hint: "이 페이지가 구조화된 데이터에서 스스로를 설명하는 방식입니다."
+      label: "구조화된 데이터"
+    schema_type:
+      options:
+        Organization: "조직 (일반)"
+        Corporation: "회사"
+        LocalBusiness: "지역 사업체"
+        ProfessionalService: "전문 서비스"
+        LegalService: "법률 서비스"
+        MedicalOrganization: "의료 기관"
+        EducationalOrganization: "교육 기관"
+        NGO: "NGO / 비영리 단체"
+        Place: "장소 (일반)"
+        LandmarksOrHistoricalBuildings: "랜드마크 또는 역사적 건물"
+        TouristAttraction: "관광 명소"
+        CivicStructure: "공공 건축물"
+        Accommodation: "숙박 시설"
+        Residence: "주거지"
+      hint: "엔터티의 schema.org 유형. Organization 하위 유형이면 사무소가 되고, Place 하위 유형이면 장소로 남습니다."
+      label: "schema.org 유형"
     scrollsnap:
       hint: 항목이 가로로 스크롤되는 화면 크기
       label: 가로 스크롤

@@ -70,6 +70,7 @@ admin:
         one: लेखक
         other: लेखक
     awards:
+      _description: सभी पुरस्कार
       label:
         one: पुरस्कार
         other: पुरस्कार
@@ -543,6 +544,9 @@ admin:
         large: बड़ा
         medium: मध्यम
         small: छोटा
+    head_office:
+      hint: "वह स्थान जिसका पता और संपर्क संस्था के हैं। नीचे भरने के लिए खाली छोड़ें।"
+      label: "मुख्यालय"
     heading:
       label: शीर्षक
     hero:
@@ -636,6 +640,9 @@ admin:
         list: सूची
     legal:
       label: कानूनी
+    legal_name:
+      hint: "पंजीकृत नाम, केवल तभी जब वह साइट के शीर्षक से अलग हो।"
+      label: "कानूनी नाम"
     legend:
       label: किंवदंती
     limit:
@@ -675,20 +682,8 @@ admin:
         end: अंत
         start: प्रारंभ
     organization:
-      hint: "संरचित डेटा में प्रकाशित संस्था की पहचान: नाम, लोगो, पता और संपर्क।"
+      hint: "संरचित डेटा में प्रकाशित संस्था की पहचान। नाम, लोगो और सोशल प्रोफ़ाइल साइट से आते हैं: उसका शीर्षक, हेडर का लोगो और सोशल मेनू।"
       label: "संगठन"
-    organization_type:
-      options:
-        Organization: "संगठन (सामान्य)"
-        Corporation: "कंपनी"
-        LocalBusiness: "स्थानीय व्यवसाय"
-        ProfessionalService: "व्यावसायिक सेवा"
-        LegalService: "विधिक सेवा"
-        MedicalOrganization: "चिकित्सा संगठन"
-        EducationalOrganization: "शैक्षणिक संस्थान"
-        NGO: "एनजीओ / संस्था"
-      hint: "संरचित डेटा के लिए संगठन का प्रकार: Organization, LocalBusiness, ProfessionalService, LegalService… किसी स्थान पर इसे भरने से वह संगठन का कार्यालय बन जाता है; खाली छोड़ने पर वह केवल एक स्थान रहता है."
-      label: Schema.org प्रकार
     parent:
       label: मूल पृष्ठ
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "संरचित डेटा में ईमेल पते शामिल करता है। स्वचालित संग्रहण सीमित करने के लिए बंद करें।"
       label: "ईमेल पते प्रकाशित करें?"
+    schema:
+      hint: "यह पृष्ठ संरचित डेटा में स्वयं का वर्णन कैसे करता है."
+      label: "संरचित डेटा"
+    schema_type:
+      options:
+        Organization: "संगठन (सामान्य)"
+        Corporation: "कंपनी"
+        LocalBusiness: "स्थानीय व्यवसाय"
+        ProfessionalService: "व्यावसायिक सेवा"
+        LegalService: "विधिक सेवा"
+        MedicalOrganization: "चिकित्सा संगठन"
+        EducationalOrganization: "शैक्षणिक संस्थान"
+        NGO: "एनजीओ / संस्था"
+        Place: "स्थान (सामान्य)"
+        LandmarksOrHistoricalBuildings: "स्मारक या ऐतिहासिक भवन"
+        TouristAttraction: "पर्यटन स्थल"
+        CivicStructure: "सार्वजनिक भवन"
+        Accommodation: "आवास"
+        Residence: "निवास"
+      hint: "इकाई का schema.org प्रकार. Organization का उपप्रकार स्थान को कार्यालय बनाता है; Place का उपप्रकार उसे स्थान ही रखता है."
+      label: "Schema.org प्रकार"
     scrollsnap:
       hint: स्क्रीन आकार जहाँ आइटम बगल में स्क्रॉल होते हैं
       label: क्षैतिज स्क्रॉल

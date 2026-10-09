@@ -1,0 +1,9 @@
+{{/* Registered name of the organization, published as legalName, when it
+     differs from the site title, which stays its name. */}}
+{{- $args := dict 
+  "label" (i18n "admin.fields.legal_name.label")
+  "hint" (i18n "admin.fields.legal_name.hint")
+  "name" "legal_name"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

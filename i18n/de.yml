@@ -70,6 +70,7 @@ admin:
         one: Autor
         other: Autoren
     awards:
+      _description: Alle Auszeichnungen
       label:
         one: Auszeichnung
         other: Auszeichnungen
@@ -543,6 +544,9 @@ admin:
         large: Groß
         medium: Mittel
         small: Klein
+    head_office:
+      hint: "Der Ort, dessen Adresse und Kontakt die des Unternehmens sind. Leer lassen, um sie unten einzutragen."
+      label: "Hauptsitz"
     heading:
       label: Überschrift
     hero:
@@ -636,6 +640,9 @@ admin:
         list: Liste
     legal:
       label: Rechtliches
+    legal_name:
+      hint: "Eingetragener Name, nur wenn er vom Titel der Website abweicht."
+      label: "Firmierung"
     legend:
       label: Legende
     limit:
@@ -675,20 +682,8 @@ admin:
         end: Ende
         start: Anfang
     organization:
-      hint: "Identität des Unternehmens in den strukturierten Daten: Name, Logo, Adresse und Kontakt."
+      hint: "Identität des Unternehmens in den strukturierten Daten. Name, Logo und Social-Media-Profile stammen von der Website: ihr Titel, das Logo im Header und das Social-Menü."
       label: "Organisation"
-    organization_type:
-      options:
-        Organization: "Organisation (allgemein)"
-        Corporation: "Unternehmen"
-        LocalBusiness: "Lokales Unternehmen"
-        ProfessionalService: "Professionelle Dienstleistung"
-        LegalService: "Rechtsdienstleistung"
-        MedicalOrganization: "Medizinische Einrichtung"
-        EducationalOrganization: "Bildungseinrichtung"
-        NGO: "NRO / Verein"
-      hint: "Organisationstyp für strukturierte Daten: Organization, LocalBusiness, ProfessionalService, LegalService… Bei einem Ort macht ein ausgefüllter Wert daraus eine Niederlassung der Organisation; leer bleibt der Ort ein reiner Standort."
-      label: Schema.org-Typ
     parent:
       label: Übergeordnete Seite
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "Nimmt E-Mail-Adressen in die strukturierten Daten auf. Deaktivieren, um automatisiertes Sammeln zu begrenzen."
       label: "E-Mail-Adressen veröffentlichen?"
+    schema:
+      hint: "Wie sich diese Seite in den strukturierten Daten beschreibt."
+      label: "Strukturierte Daten"
+    schema_type:
+      options:
+        Organization: "Organisation (allgemein)"
+        Corporation: "Unternehmen"
+        LocalBusiness: "Lokales Unternehmen"
+        ProfessionalService: "Professionelle Dienstleistung"
+        LegalService: "Rechtsdienstleistung"
+        MedicalOrganization: "Medizinische Einrichtung"
+        EducationalOrganization: "Bildungseinrichtung"
+        NGO: "NRO / Verein"
+        Place: "Ort (allgemein)"
+        LandmarksOrHistoricalBuildings: "Wahrzeichen oder historisches Gebäude"
+        TouristAttraction: "Sehenswürdigkeit"
+        CivicStructure: "Öffentliches Gebäude"
+        Accommodation: "Unterkunft"
+        Residence: "Wohnsitz"
+      hint: "Schema.org-Typ der Entität. Ein Organization-Subtyp macht den Ort zu einer Niederlassung; ein Place-Subtyp belässt ihn als Standort."
+      label: "Schema.org-Typ"
     scrollsnap:
       hint: Bildschirmgrößen, auf denen die Elemente seitlich scrollen
       label: Horizontales Scrollen

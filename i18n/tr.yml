@@ -70,6 +70,7 @@ admin:
         one: Yazar
         other: Yazarlar
     awards:
+      _description: Tüm ödüller
       label:
         one: Ödül
         other: Ödüller
@@ -543,6 +544,9 @@ admin:
         large: Büyük
         medium: Orta
         small: Küçük
+    head_office:
+      hint: "Adresi ve iletişim bilgileri kuruluşa ait olan yer. Aşağıda doldurmak için boş bırakın."
+      label: "Merkez ofis"
     heading:
       label: Başlık
     hero:
@@ -636,6 +640,9 @@ admin:
         list: Liste
     legal:
       label: Yasal
+    legal_name:
+      hint: "Tescilli ad, yalnızca site başlığından farklıysa."
+      label: "Ticari unvan"
     legend:
       label: Efsane
     limit:
@@ -675,20 +682,8 @@ admin:
         end: Son
         start: Başlangıç
     organization:
-      hint: "Yapılandırılmış verilerde yayımlanan kuruluş kimliği: ad, logo, adres ve iletişim."
+      hint: "Yapılandırılmış verilerde yayımlanan kuruluş kimliği. Ad, logo ve sosyal profiller siteden alınır: sitenin başlığı, üst bilgideki logo ve sosyal menü."
       label: "Kuruluş"
-    organization_type:
-      options:
-        Organization: "Kuruluş (genel)"
-        Corporation: "Şirket"
-        LocalBusiness: "Yerel işletme"
-        ProfessionalService: "Profesyonel hizmet"
-        LegalService: "Hukuki hizmet"
-        MedicalOrganization: "Sağlık kuruluşu"
-        EducationalOrganization: "Eğitim kurumu"
-        NGO: "STK / dernek"
-      hint: "Yapılandırılmış veriler için kuruluş türü: Organization, LocalBusiness, ProfessionalService, LegalService… Bir yer için doldurulduğunda o yer kuruluşun bir ofisi olur; boş bırakılırsa yalnızca bir konum olarak kalır."
-      label: Schema.org türü
     parent:
       label: Üst sayfa
     pdf:
@@ -792,6 +787,27 @@ admin:
     schema_email:
       hint: "E-posta adreslerini yapılandırılmış verilere ekler. Otomatik toplamayı sınırlamak için kapatın."
       label: "E-posta adresleri yayımlansın mı?"
+    schema:
+      hint: "Bu sayfanın yapılandırılmış verilerde kendini nasıl tanımladığı."
+      label: "Yapılandırılmış veriler"
+    schema_type:
+      options:
+        Organization: "Kuruluş (genel)"
+        Corporation: "Şirket"
+        LocalBusiness: "Yerel işletme"
+        ProfessionalService: "Profesyonel hizmet"
+        LegalService: "Hukuki hizmet"
+        MedicalOrganization: "Sağlık kuruluşu"
+        EducationalOrganization: "Eğitim kurumu"
+        NGO: "STK / dernek"
+        Place: "Yer (genel)"
+        LandmarksOrHistoricalBuildings: "Simge yapı veya tarihi bina"
+        TouristAttraction: "Turistik cazibe"
+        CivicStructure: "Kamu yapısı"
+        Accommodation: "Konaklama"
+        Residence: "Konut"
+      hint: "Varlığın schema.org türü. Organization alt türü yeri bir ofis yapar; Place alt türü onu konum olarak bırakır."
+      label: "Schema.org türü"
     scrollsnap:
       hint: Öğelerin yana kaydığı ekran boyutları
       label: Yatay kaydırma

@@ -1,0 +1,14 @@
+{
+  name: 'awards',
+  folder: 'content/awards',
+  label: '{{ i18n "admin.collections.awards.label" }}',
+  label_singular: '{{ i18n "admin.collections.awards.label" 1 }}',
+  description: '{{ i18n "admin.collections.awards._description" }}',
+  i18n: true,
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
+  {{ partial "admin/collections/config/path.yml" . }}
+  {{ partial "admin/collections/config/slug.yml" . }}
+
+  {{ partial "admin/collections/types/_default.yml" . }}
+}
