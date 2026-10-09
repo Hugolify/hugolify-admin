@@ -7,6 +7,8 @@
     - preview    (string)  required  — JS template literal body (e.g. `<div>${obj.text}</div>`)
     - paired     (bool)    optional  — paired shortcode like {{< details >}}...{{< /details >}}
     - positional (bool)    optional  — positional arg like {{< twitch 123 >}}
+    - selfClosing (bool)   optional  — self-closed like {{< qr text="..." />}}, required by
+                                       shortcodes that use .Inner (e.g. Hugo's built-in qr)
 
   Fields are auto-loaded from admin/shortcodes/fields/{shortcode}.html.
   Field names and widget types are auto-extracted via GetDecapFieldMeta.html.
@@ -17,6 +19,7 @@
 {{- $preview := .preview -}}
 {{- $paired := .paired | default false -}}
 {{- $positional := .positional | default false -}}
+{{- $selfClosing := .selfClosing | default false -}}
 
 {{- /* Load the field key list from the shortcode's fields definition file. */ -}}
 {{- $fieldKeys := partialCached (printf "admin/shortcodes/fields/%s.html" $shortcode) $shortcode $shortcode -}}
@@ -53,7 +56,7 @@ CMS.registerEditorComponent({
   ],
 
   {{/* Pattern to detect and parse the shortcode in the markdown editor.
-         - Default:    captures all named args as a single group: {{< name (...) >}}
+         - Default:    captures all named args as a single group: {{< name (...) >}} or {{< name (...) />}}
          - Positional: captures a single word value:             {{< name (\S+) >}}
          - Paired:     captures named args + inner content:      {{< name (...) >}}...{{< /name >}} */}}
   {{- if $paired }}
@@ -61,7 +64,7 @@ CMS.registerEditorComponent({
   {{- else if $positional }}
   pattern: /{{ print "{{< " $shortcode " (\\S+) >}}" | safeHTML }}/,
   {{- else }}
-  pattern: /{{ print "{{< " $shortcode "(?=[\\s>])([\\s\\S]*?)>}}" | safeHTML }}/,
+  pattern: /{{ print "{{< " $shortcode "(?=[\\s>])([\\s\\S]*?)\\/?>}}" | safeHTML }}/,
   {{- end }}
 
   {{/* Parse the shortcode string back into a field object for the editor.
@@ -97,10 +100,11 @@ CMS.registerEditorComponent({
   {{/* Serialize the editor field object back into a Hugo shortcode string.
          - Positional: outputs the single value directly after the shortcode name.
          - Named args: appends each non-empty field as key="value".
-         - Paired shortcodes wrap the inner content between opening and closing tags. */}}
+         - Paired shortcodes wrap the inner content between opening and closing tags.
+         - Self-closing shortcodes end with />}} instead of >}}. */}}
   toBlock: function (obj) {
     const open = '{{`{{<` | safeHTML }}';
-    const close = '{{`>}}` | safeHTML }}';
+    const close = '{{ if $selfClosing }}{{`/>}}` | safeHTML }}{{ else }}{{`>}}` | safeHTML }}{{ end }}';
     {{ if $positional -}}
     return open + ' {{ $shortcode }} ' + (obj.{{ (index $fieldMetas 0).name }} || '') + ' ' + close;
     {{- else -}}
