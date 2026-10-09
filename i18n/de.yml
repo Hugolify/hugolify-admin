@@ -545,6 +545,9 @@ admin:
         large: Groß
         medium: Mittel
         small: Klein
+    head_office:
+      hint: "Der Ort, dessen Adresse und Kontakt die des Unternehmens sind. Leer lassen, um sie unten einzutragen."
+      label: "Hauptsitz"
     heading:
       label: Überschrift
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Liste
     legal:
       label: Rechtliches
+    legal_name:
+      hint: "Eingetragener Name, nur wenn er vom Titel der Website abweicht."
+      label: "Firmierung"
     legend:
       label: Legende
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Ende
         start: Anfang
     organization:
-      hint: "Identität des Unternehmens in den strukturierten Daten: Name, Logo, Adresse und Kontakt."
+      hint: "Identität des Unternehmens in den strukturierten Daten. Name, Logo und Social-Media-Profile stammen von der Website: ihr Titel, das Logo im Header und das Social-Menü."
       label: "Organisation"
     parent:
       label: Übergeordnete Seite

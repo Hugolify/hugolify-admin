@@ -545,6 +545,9 @@ admin:
         large: 大
         medium: 中
         small: 小
+    head_office:
+      hint: "住所と連絡先が組織のものとなる拠点。下で入力する場合は空欄のままにします。"
+      label: "本社"
     heading:
       label: 見出し
     hero:
@@ -636,6 +639,9 @@ admin:
         list: リスト
     legal:
       label: 法的
+    legal_name:
+      hint: "登記上の名称。サイトのタイトルと異なる場合のみ入力します。"
+      label: "正式名称"
     legend:
       label: 凡例
     limit:
@@ -674,7 +680,7 @@ admin:
         end: 終了
         start: 開始
     organization:
-      hint: "構造化データに公開する組織の情報：名称・ロゴ・住所・連絡先。"
+      hint: "構造化データに公開する組織の情報。名称・ロゴ・SNSプロフィールはサイトから取得します：サイトのタイトル、ヘッダーのロゴ、SNSメニュー。"
       label: "組織"
     parent:
       label: 親ページ

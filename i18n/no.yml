@@ -545,6 +545,9 @@ admin:
         large: Stor
         medium: Medium
         small: Liten
+    head_office:
+      hint: "Stedet der adressen og kontaktinformasjonen er organisasjonens. La stå tomt for å fylle dem ut nedenfor."
+      label: "Hovedkontor"
     heading:
       label: Overskrift
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Liste
     legal:
       label: Juridisk
+    legal_name:
+      hint: "Registrert navn, bare hvis det er forskjellig fra nettstedets tittel."
+      label: "Juridisk navn"
     legend:
       label: Legende
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Slutt
         start: Start
     organization:
-      hint: "Organisasjonens identitet i de strukturerte dataene: navn, logo, adresse og kontakt."
+      hint: "Organisasjonens identitet i de strukturerte dataene. Navn, logo og sosiale profiler hentes fra nettstedet: tittelen, logoen i toppen og den sosiale menyen."
       label: "Organisasjon"
     parent:
       label: Foreldreside

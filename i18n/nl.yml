@@ -545,6 +545,9 @@ admin:
         large: Groot
         medium: Gemiddeld
         small: Klein
+    head_office:
+      hint: "De plaats waarvan het adres en de contactgegevens die van de organisatie zijn. Laat leeg om ze hieronder in te vullen."
+      label: "Hoofdkantoor"
     heading:
       label: Kop
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Lijst
     legal:
       label: Juridisch
+    legal_name:
+      hint: "Geregistreerde naam, alleen als die afwijkt van de titel van de site."
+      label: "Statutaire naam"
     legend:
       label: Legende
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Einde
         start: Begin
     organization:
-      hint: "Identiteit van de organisatie in de gestructureerde gegevens: naam, logo, adres en contact."
+      hint: "Identiteit van de organisatie in de gestructureerde gegevens. Naam, logo en sociale profielen komen van de site: de titel, het logo in de header en het sociale menu."
       label: "Organisatie"
     parent:
       label: Bovenliggende pagina

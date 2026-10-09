@@ -31,10 +31,11 @@
 {{- $value_field = cond site.Params.admin.config.id `{{id}}` $value_field -}}
 
 
+{{/* The labels are the collection's, unless the field brings its own. */}}
 {{- $args := dict 
-  "label" (i18n (print "admin.collections." $i18n ".label"))
-  "label_singular" (i18n (print "admin.collections." $i18n ".label") 1)
-  "hint" (i18n (print "admin.collections." $i18n ".hint"))
+  "label" (.label | default (i18n (print "admin.collections." $i18n ".label")))
+  "label_singular" (.label_singular | default (i18n (print "admin.collections." $i18n ".label") 1))
+  "hint" (.hint | default (i18n (print "admin.collections." $i18n ".hint")))
   "name" $name
   "collection" $collection
   "display_fields" $display_fields

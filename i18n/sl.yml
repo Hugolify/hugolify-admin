@@ -545,6 +545,9 @@ admin:
         large: Veliko
         medium: Srednje
         small: Majhno
+    head_office:
+      hint: "Kraj, katerega naslov in kontakt sta naslov in kontakt organizacije. Pustite prazno, da ju vnesete spodaj."
+      label: "Sedež"
     heading:
       label: Naslov
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Seznam
     legal:
       label: Pravno
+    legal_name:
+      hint: "Registrirano ime, samo če se razlikuje od naslova spletnega mesta."
+      label: "Uradno ime"
     legend:
       label: Legenda
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Konec
         start: Začetek
     organization:
-      hint: "Identiteta organizacije v strukturiranih podatkih: ime, logotip, naslov in kontakt."
+      hint: "Identiteta organizacije v strukturiranih podatkih. Ime, logotip in družbeni profili so vzeti s spletnega mesta: njegov naslov, logotip v glavi in meni družbenih omrežij."
       label: "Organizacija"
     parent:
       label: Nadrejena stran

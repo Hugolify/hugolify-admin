@@ -3,11 +3,9 @@
   label: '{{ i18n "admin.files.schema" }}',
   name: 'schema',
   file: 'data/schema.yml',
-  {{/* Translated like every other file of the collection. An organization is
-       a single entity all the same — one address, one phone, one @id — so a
-       locale only needs to carry what it actually changes: the theme falls
-       back on the default language for the rest, through
-       func/GetSchemaData.html. */}}
-  i18n: true,
+  {{/* Not translated, unlike the other files of the collection: an
+       organization is a single entity — one address, one phone, one @id — and
+       nothing in this file varies from one language to the next. What does,
+       the description, comes from data/seo.yml. */}}
   {{- partial "admin/fields/_fields.yml" $fields -}}
 }

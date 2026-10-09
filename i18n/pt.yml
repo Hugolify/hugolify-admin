@@ -545,6 +545,9 @@ admin:
         large: Grande
         medium: Médio
         small: Pequeno
+    head_office:
+      hint: "O local cuja morada e contacto são os da entidade. Deixe vazio para os preencher abaixo."
+      label: "Sede"
     heading:
       label: Cabeçalho
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Lista
     legal:
       label: Legal
+    legal_name:
+      hint: "Nome registado, apenas se for diferente do título do site."
+      label: "Denominação social"
     legend:
       label: Legenda
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Fim
         start: Início
     organization:
-      hint: "Identidade da entidade publicada nos dados estruturados: nome, logótipo, morada e contacto."
+      hint: "Identidade da entidade publicada nos dados estruturados. O nome, o logótipo e os perfis sociais vêm do site: o título, o logótipo do cabeçalho e o menu social."
       label: "Organização"
     parent:
       label: Página pai

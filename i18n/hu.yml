@@ -545,6 +545,9 @@ admin:
         large: Nagy
         medium: Közepes
         small: Kicsi
+    head_office:
+      hint: "Az a hely, amelynek címe és elérhetősége a szervezeté. Hagyja üresen, ha alább adja meg őket."
+      label: "Székhely"
     heading:
       label: Címsor
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Lista
     legal:
       label: Jogi
+    legal_name:
+      hint: "A bejegyzett név, csak ha eltér a webhely címétől."
+      label: "Hivatalos név"
     legend:
       label: Jelmagyarázat
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Vége
         start: Kezdés
     organization:
-      hint: "A szervezet azonosítása a strukturált adatokban: név, logó, cím és kapcsolat."
+      hint: "A szervezet azonosítása a strukturált adatokban. A név, a logó és a közösségi profilok a webhelyről származnak: a címéből, a fejléc logójából és a közösségi menüből."
       label: "Szervezet"
     parent:
       label: Szülő oldal

@@ -545,6 +545,9 @@ admin:
         large: Large
         medium: Medium
         small: Small
+    head_office:
+      hint: "Le lieu dont l’adresse et le contact sont ceux de la structure. Laissez vide pour les saisir ci-dessous."
+      label: "Siège"
     heading:
       label: En-tête
     hero:
@@ -635,6 +638,9 @@ admin:
         list: Liste
     legal:
       label: Légale
+    legal_name:
+      hint: "Nom déclaré, seulement s’il diffère du titre du site."
+      label: "Raison sociale"
     legend:
       label: Légende
     limit:
@@ -677,7 +683,7 @@ admin:
         end: End
         start: Start
     organization:
-      hint: "Identité de la structure publiée dans les données structurées : nom, logo, adresse et contact."
+      hint: "Identité de la structure publiée dans les données structurées. Le nom, le logo et les profils sociaux viennent du site : son titre, le logo de l’en-tête et le menu des réseaux sociaux."
       label: "Organisation"
     parent:
       label: Page parente

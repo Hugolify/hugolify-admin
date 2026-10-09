@@ -545,6 +545,9 @@ admin:
         large: Suuri
         medium: Keskikokoinen
         small: Pieni
+    head_office:
+      hint: "Paikka, jonka osoite ja yhteystiedot ovat organisaation. Jätä tyhjäksi ja täytä ne alla."
+      label: "Pääkonttori"
     heading:
       label: Otsikko
     hero:
@@ -632,6 +635,9 @@ admin:
         list: Lista
     legal:
       label: Lakisääteinen
+    legal_name:
+      hint: "Rekisteröity nimi, vain jos se poikkeaa sivuston otsikosta."
+      label: "Virallinen nimi"
     legend:
       label: Selite
     limit:
@@ -670,7 +676,7 @@ admin:
         end: Loppu
         start: Alku
     organization:
-      hint: "Organisaation tiedot rakenteisessa datassa: nimi, logo, osoite ja yhteystiedot."
+      hint: "Organisaation tiedot rakenteisessa datassa. Nimi, logo ja some-profiilit tulevat sivustolta: sen otsikosta, ylätunnisteen logosta ja somevalikosta."
       label: "Organisaatio"
     parent:
       label: Ylätason sivu

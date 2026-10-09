@@ -545,6 +545,9 @@ admin:
         large: 大
         medium: 中
         small: 小
+    head_office:
+      hint: "以其地址和联系方式作为机构信息的地点。留空则在下方填写。"
+      label: "总部"
     heading:
       label: 标题
     hero:
@@ -636,6 +639,9 @@ admin:
         list: 列表
     legal:
       label: 法律
+    legal_name:
+      hint: "注册名称，仅在与网站标题不同时填写。"
+      label: "法定名称"
     legend:
       label: 图例
     limit:
@@ -674,7 +680,7 @@ admin:
         end: 结束
         start: 开始
     organization:
-      hint: "在结构化数据中发布的机构信息：名称、标识、地址和联系方式。"
+      hint: "在结构化数据中发布的机构信息。名称、标识和社交账号取自网站：网站标题、页眉标识和社交菜单。"
       label: "组织"
     parent:
       label: 父页面

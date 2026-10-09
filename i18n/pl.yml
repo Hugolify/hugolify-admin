@@ -545,6 +545,9 @@ admin:
         large: Duży
         medium: Średni
         small: Mały
+    head_office:
+      hint: "Miejsce, którego adres i dane kontaktowe są danymi podmiotu. Pozostaw puste, aby uzupełnić je poniżej."
+      label: "Siedziba"
     heading:
       label: Nagłówek
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Lista
     legal:
       label: Prawne
+    legal_name:
+      hint: "Nazwa rejestrowa, tylko jeśli różni się od tytułu strony."
+      label: "Nazwa prawna"
     legend:
       label: Legenda
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Koniec
         start: Początek
     organization:
-      hint: "Tożsamość podmiotu w danych strukturalnych: nazwa, logo, adres i kontakt."
+      hint: "Tożsamość podmiotu w danych strukturalnych. Nazwa, logo i profile społecznościowe pochodzą ze strony: jej tytułu, logo w nagłówku i menu społecznościowego."
       label: "Organizacja"
     parent:
       label: Strona nadrzędna

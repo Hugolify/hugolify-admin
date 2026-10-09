@@ -545,6 +545,9 @@ admin:
         large: Grande
         medium: Mediano
         small: Pequeño
+    head_office:
+      hint: "El lugar cuya dirección y contacto son los de la entidad. Déjelo vacío para rellenarlos más abajo."
+      label: "Sede"
     heading:
       label: Encabezado
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Lista
     legal:
       label: Legal
+    legal_name:
+      hint: "Nombre registrado, solo si difiere del título del sitio."
+      label: "Razón social"
     legend:
       label: Leyenda
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Final
         start: Inicio
     organization:
-      hint: "Identidad de la entidad publicada en los datos estructurados: nombre, logotipo, dirección y contacto."
+      hint: "Identidad de la entidad publicada en los datos estructurados. El nombre, el logotipo y los perfiles sociales proceden del sitio: su título, el logotipo de la cabecera y el menú social."
       label: "Organización"
     parent:
       label: Página padre

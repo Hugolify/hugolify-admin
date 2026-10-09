@@ -545,6 +545,9 @@ admin:
         large: Büyük
         medium: Orta
         small: Küçük
+    head_office:
+      hint: "Adresi ve iletişim bilgileri kuruluşa ait olan yer. Aşağıda doldurmak için boş bırakın."
+      label: "Merkez ofis"
     heading:
       label: Başlık
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Liste
     legal:
       label: Yasal
+    legal_name:
+      hint: "Tescilli ad, yalnızca site başlığından farklıysa."
+      label: "Ticari unvan"
     legend:
       label: Efsane
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Son
         start: Başlangıç
     organization:
-      hint: "Yapılandırılmış verilerde yayımlanan kuruluş kimliği: ad, logo, adres ve iletişim."
+      hint: "Yapılandırılmış verilerde yayımlanan kuruluş kimliği. Ad, logo ve sosyal profiller siteden alınır: sitenin başlığı, üst bilgideki logo ve sosyal menü."
       label: "Kuruluş"
     parent:
       label: Üst sayfa

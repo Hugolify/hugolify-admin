@@ -1,0 +1,13 @@
+{{/* Head office of the organization, among the places.
+
+     Stored as `place`, the key of a place: the theme reads the address, the
+     coordinates and the contact of that place rather than having them typed
+     twice, see func/GetSchemaOrganization.html. */}}
+{{- partial "admin/fields/relation.yml" (dict
+  "collection" "places"
+  "name" "place"
+  "multiple" false
+  "label" (i18n "admin.fields.head_office.label")
+  "label_singular" (i18n "admin.fields.head_office.label")
+  "hint" (i18n "admin.fields.head_office.hint")
+) -}}

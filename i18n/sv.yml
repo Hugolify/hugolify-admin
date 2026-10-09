@@ -545,6 +545,9 @@ admin:
         large: Stor
         medium: Medium
         small: Liten
+    head_office:
+      hint: "Platsen vars adress och kontaktuppgifter är organisationens. Lämna tomt för att fylla i dem nedan."
+      label: "Huvudkontor"
     heading:
       label: Rubrik
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Lista
     legal:
       label: Juridisk
+    legal_name:
+      hint: "Registrerat namn, endast om det skiljer sig från webbplatsens titel."
+      label: "Firmanamn"
     legend:
       label: Legend
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Slut
         start: Start
     organization:
-      hint: "Organisationens identitet i de strukturerade data: namn, logotyp, adress och kontakt."
+      hint: "Organisationens identitet i de strukturerade data. Namn, logotyp och sociala profiler hämtas från webbplatsen: dess titel, logotypen i sidhuvudet och den sociala menyn."
       label: "Organisation"
     parent:
       label: Föräldrasida

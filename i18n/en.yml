@@ -545,6 +545,9 @@ admin:
         large: Large
         medium: Medium
         small: Small
+    head_office:
+      hint: "The place whose address and contact are the company's. Leave empty to fill them in below."
+      label: "Head office"
     heading:
       label: Heading
     hero:
@@ -637,6 +640,9 @@ admin:
         list: List
     legal:
       label: Legal
+    legal_name:
+      hint: "Registered name, only if it differs from the site title."
+      label: "Legal name"
     legend:
       label: Legend
     limit:
@@ -679,7 +685,7 @@ admin:
         end: End
         start: Start
     organization:
-      hint: "Identity of the company published in the structured data: name, logo, address and contact."
+      hint: "Identity of the company published in the structured data. Its name, logo and social profiles come from the site: its title, the header logo and the social menu."
       label: "Organization"
     parent:
       label: Parent page

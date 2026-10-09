@@ -545,6 +545,9 @@ admin:
         large: Velký
         medium: Střední
         small: Malý
+    head_office:
+      hint: "Místo, jehož adresa a kontakt jsou adresou a kontaktem subjektu. Nechte prázdné a vyplňte je níže."
+      label: "Sídlo"
     heading:
       label: Nadpis
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Seznam
     legal:
       label: Právní
+    legal_name:
+      hint: "Zapsaný název, pouze pokud se liší od názvu webu."
+      label: "Právní název"
     legend:
       label: Legenda
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Konec
         start: Začátek
     organization:
-      hint: "Identita subjektu ve strukturovaných datech: název, logo, adresa a kontakt."
+      hint: "Identita subjektu ve strukturovaných datech. Název, logo a profily na sociálních sítích se přebírají z webu: jeho název, logo v záhlaví a menu sociálních sítí."
       label: "Organizace"
     parent:
       label: Nadřazená stránka

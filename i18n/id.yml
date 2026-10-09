@@ -545,6 +545,9 @@ admin:
         large: Besar
         medium: Sedang
         small: Kecil
+    head_office:
+      hint: "Tempat yang alamat dan kontaknya adalah milik badan usaha. Kosongkan untuk mengisinya di bawah."
+      label: "Kantor pusat"
     heading:
       label: Judul
     hero:
@@ -636,6 +639,9 @@ admin:
         list: Daftar
     legal:
       label: Hukum
+    legal_name:
+      hint: "Nama terdaftar, hanya jika berbeda dari judul situs."
+      label: "Nama resmi"
     legend:
       label: Legenda
     limit:
@@ -674,7 +680,7 @@ admin:
         end: Akhir
         start: Awal
     organization:
-      hint: "Identitas badan usaha dalam data terstruktur: nama, logo, alamat, dan kontak."
+      hint: "Identitas badan usaha dalam data terstruktur. Nama, logo, dan profil media sosial diambil dari situs: judulnya, logo header, dan menu media sosial."
       label: "Organisasi"
     parent:
       label: Halaman Induk

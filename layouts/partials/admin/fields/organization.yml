@@ -1,9 +1,18 @@
-{{- $fields := slice 
-  "name" 
-  "schema_type" 
-  "image" 
-  (dict "address" (dict "is_schema_only" true)) 
-  (dict "contact" (dict "fields" (slice "email" "phone" "fax" "socials"))) -}}
+{{/* The organization behind the site, for the structured data.
+
+     Only what the site does not know already: its name is the site title,
+     its logo the header one, its social profiles the links of the social
+     menu, its description the SEO one — see func/GetSchemaOrganization.html
+     in the theme. The head office, when the site has places, lends its
+     address and contact; the fields below are for a site without one.
+*/}}
+{{- $fields := slice "schema_type" "legal_name" -}}
+{{- if site.Params.admin.collections.places.enable -}}
+  {{- $fields = $fields | append "head_office" -}}
+{{- end -}}
+{{- $fields = $fields | append
+  (dict "address" (dict "is_schema_only" true))
+  (dict "contact" (dict "fields" (slice "email" "phone" "fax"))) -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 
 {{- $args := dict 
