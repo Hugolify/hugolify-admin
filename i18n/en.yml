@@ -545,7 +545,7 @@ admin:
         medium: Medium
         small: Small
     head_office:
-      hint: "The place whose address and contact are the company's. Leave empty to fill them in below."
+      hint: "The place whose address and contact are the company’s. Leave empty to fill them in below."
       label: "Head office"
     heading:
       label: Heading
