@@ -1,6 +1,10 @@
+{{/* Only when the site defines `collection_groups`: CloudCannon wants a heading
+     on each group, so the default order of `admin/func/GetCollections.html`
+     is not sent. The resolved groups expand `*` and leave out the collections
+     that are unknown or disabled. */}}
 {{ with site.Params.admin.collection_groups }}
 collection_groups: [
-  {{- range . }}
+  {{- range partial "admin/func/GetCollections.html" . }}
     {
       heading: '{{ .heading }}',
       collections: [

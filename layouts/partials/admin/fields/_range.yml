@@ -1,4 +1,8 @@
 {{- if . }}
+  {{/* CloudCannon keys written so far: `_inputs` is a map, so two fields giving
+       the same key (a plain and a computed title_page, say) would break the
+       YAML. The first one wins. */}}
+  {{- $keys := slice }}
   {{- range . }}
     {{- $f := partial "admin/func/GetFieldNameValues.html" . }}
     {{- with $f.field }}
@@ -11,13 +15,16 @@
           {{- if eq site.Params.admin.cms "cloudcannon" }}
             {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $r) }}
             {{- range $k, $v := $datas }}
-              {{- $newV := dict }}
-              {{- range $sk, $sv := $v }}
-                {{- if ne $sk "fields" }}
-                  {{- $newV = merge $newV (dict $sk $sv) }}
+              {{- if not (in $keys $k) }}
+                {{- $keys = $keys | append $k }}
+                {{- $newV := dict }}
+                {{- range $sk, $sv := $v }}
+                  {{- if ne $sk "fields" }}
+                    {{- $newV = merge $newV (dict $sk $sv) }}
+                  {{- end }}
                 {{- end }}
+                "{{ $k }}": {{ $newV | jsonify }},
               {{- end }}
-              "{{ $k }}": {{ $newV | jsonify }},
             {{- end }}
           {{/* Others */}}
           {{- else }}

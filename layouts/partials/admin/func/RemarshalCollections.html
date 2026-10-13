@@ -1,8 +1,16 @@
 {{/*
   RemarshalCollections
   ====================
-  Same collections as `admin/collections/index.yml`, but emitted as block YAML,
-  with `transform.Remarshal` applied to **each collection separately**.
+  Same collections as `admin/collections/index.yml`, in the order of
+  `admin/func/GetCollections.html`, but emitted as block YAML, with
+  `transform.Remarshal` applied to **each collection separately**.
+
+  Dividers
+  --------
+  With Sveltia CMS, a `divider: true` item separates two groups of collections.
+  Decap, Netlify and Static CMS would reject an item without a name, so they get
+  the order alone. A divider goes through the same remarshal as a collection,
+  so it comes out with the same indentation.
 
   Why not remarshal the whole list at once
   ----------------------------------------
@@ -27,17 +35,28 @@
   Input  : page context (unused, kept for symmetry with `index.yml`)
   Output : string — `collections:` followed by one block YAML item per collection
 */}}
+{{- $dividers := eq site.Params.admin.cms "sveltiacms" -}}
+
+{{/* Raw (flow style) items, group after group */}}
+{{- $items := slice -}}
+{{- range $index, $group := partial "admin/func/GetCollections.html" . -}}
+  {{- if and $dividers (gt $index 0) -}}
+    {{- $items = $items | append "{ divider: true }" -}}
+  {{- end -}}
+  {{- range $group.collections -}}
+    {{- $items = $items | append (partial "admin/collections/collection.yml" .) -}}
+  {{- end -}}
+{{- end -}}
+
 {{- $collections := slice -}}
-{{- range $collection, $value := site.Params.admin.collections -}}
-  {{- if .enable -}}
-    {{/* Keep the `collections: [...]` wrapper: it is what makes Hugo detect the
-         input as YAML (a bare `{...}` is read as JSON), and it makes the
-         remarshal'd output a ready-to-use block sequence item. */}}
-    {{- $raw := printf "collections: [%s]" (partial "admin/collections/collection.yml" $collection) -}}
-    {{- $yaml := partial "admin/func/RemarshalYaml.html" $raw | strings.TrimSpace -}}
-    {{- with $yaml -}}
-      {{- $collections = $collections | append (. | strings.TrimPrefix "collections:" | strings.TrimPrefix "\n") -}}
-    {{- end -}}
+{{- range $items -}}
+  {{/* Keep the `collections: [...]` wrapper: it is what makes Hugo detect the
+       input as YAML (a bare `{...}` is read as JSON), and it makes the
+       remarshal'd output a ready-to-use block sequence item. */}}
+  {{- $raw := printf "collections: [%s]" . -}}
+  {{- $yaml := partial "admin/func/RemarshalYaml.html" $raw | strings.TrimSpace -}}
+  {{- with $yaml -}}
+    {{- $collections = $collections | append (. | strings.TrimPrefix "collections:" | strings.TrimPrefix "\n") -}}
   {{- end -}}
 {{- end -}}
 {{/* Returned, never printed: this is an `.html` template, so writing the YAML

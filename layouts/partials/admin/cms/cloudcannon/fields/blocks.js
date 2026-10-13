@@ -56,7 +56,8 @@
 
             {{- $file := print "admin/fields/" $field ".yml" }}
             {{- if templates.Exists ( printf "partials/%s" $file ) }}
-              {{- $r := partial $file $values }}
+              {{/* A field without values gets its own name, like in _range.yml */}}
+              {{- $r := partial $file (cond (not $values) $field $values) }}
               {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $r) }}
               {{- range $k, $v := $datas }}
                 {{ if $v.hidden }}

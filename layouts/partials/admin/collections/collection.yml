@@ -8,7 +8,7 @@
     2. `admin/collections/types/_placeholder.yml` otherwise
 
   Shared by `admin/collections/index.yml` (flow style, one big document) and
-  `admin/collections/index.remarshal.yml` (block style, remarshal'd per collection).
+  `admin/func/RemarshalCollections.html` (block style, remarshal'd per collection).
 
   Input  : string — collection name
   Output : string — raw YAML for that collection

@@ -1,0 +1,119 @@
+{{/*
+  GetCollections
+  ==============
+  Returns the enabled collections, grouped and ordered as the CMS lists them.
+
+  Why the order has to be given
+  -----------------------------
+  `site.Params.admin.collections` is a map, merged from every module that ships
+  a collection, and a Go template ranges over a map in sorted key order. The
+  order the collections were declared in is lost as soon as Hugo loads the
+  config, so `admin.collection_groups` gives it explicitly:
+
+    admin:
+      collection_groups:
+        - heading: Content          # read by CloudCannon only
+          collections: [pages, indexes]
+        - heading: News
+          collections: [posts, posts_categories, posts_tags]
+        - heading: Other
+          collections: ['*']
+        - heading: Settings
+          collections: [config]
+
+  Rules
+  -----
+  - Groups, and the collections of each group, come in the order listed.
+  - `'*'` stands for every enabled collection that no group names, in
+    alphabetical order. Quote it in YAML: a bare `*` starts an alias.
+  - Without `'*'`, the collections that no group names form one last group:
+    an enabled collection never disappears (`enable: false` hides one).
+  - A disabled collection is skipped, an unknown name is skipped with a
+    warning, and a collection listed twice keeps its first place.
+  - A group left empty is dropped, so a CMS drawing a divider between two
+    groups never draws two in a row.
+
+  Default
+  -------
+  Without `collection_groups`: pages and indexes, then the other collections,
+  then config. It lives here rather than in `hugo.yaml` because CloudCannon
+  only receives groups when the site defines them, as it wants a heading on
+  each one.
+
+  Usage
+  -----
+    {{ range partial "admin/func/GetCollections.html" . }}
+      {{ range .collections }}…{{ end }}
+    {{ end }}
+
+  Input  : unused
+  Output : slice of dict, each with `heading` (string, empty when not set) and
+           `collections` (slice of collection names)
+*/}}
+{{- $all := site.Params.admin.collections -}}
+
+{{/* Enabled collections, in alphabetical order */}}
+{{- $enabled := slice -}}
+{{- range $name, $value := $all -}}
+  {{- if $value.enable -}}
+    {{- $enabled = $enabled | append $name -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $layout := site.Params.admin.collection_groups | default (slice
+  (dict "collections" (slice "pages" "indexes"))
+  (dict "collections" (slice "*"))
+  (dict "collections" (slice "config"))
+) -}}
+
+{{/* First pass: the names given explicitly, which `*` leaves out */}}
+{{- $named := slice -}}
+{{- range $layout -}}
+  {{- $names := .collections | default (slice) -}}
+  {{- range cond (reflect.IsSlice $names) $names (slice $names) -}}
+    {{- if ne . "*" -}}
+      {{- if not (index $all .) -}}
+        {{- warnidf "admin-collection-groups" "admin.collection_groups: %q is not a collection, skipped" . -}}
+      {{- end -}}
+      {{- $named = $named | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $others := slice -}}
+{{- range $enabled -}}
+  {{- if not (in $named .) -}}
+    {{- $others = $others | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Second pass: each group, with `*` replaced by the other collections */}}
+{{- $groups := slice -}}
+{{- $placed := slice -}}
+{{- range $group := $layout -}}
+  {{- $names := .collections | default (slice) -}}
+  {{- $collections := slice -}}
+  {{- range cond (reflect.IsSlice $names) $names (slice $names) -}}
+    {{- range cond (eq . "*") $others (slice .) -}}
+      {{- if and (in $enabled .) (not (in $placed .)) -}}
+        {{- $collections = $collections | append . -}}
+        {{- $placed = $placed | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $collections -}}
+    {{- $groups = $groups | append (dict "heading" ($group.heading | default "") "collections" .) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* No `*`: the collections no group names come last */}}
+{{- $rest := slice -}}
+{{- range $enabled -}}
+  {{- if not (in $placed .) -}}
+    {{- $rest = $rest | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- with $rest -}}
+  {{- $groups = $groups | append (dict "heading" "" "collections" .) -}}
+{{- end -}}
+
+{{- return $groups -}}

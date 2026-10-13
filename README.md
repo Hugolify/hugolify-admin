@@ -46,7 +46,7 @@ node scripts/build-config-cloudcannon.js
 or
 
 ```bash
-node scripts/build-config-pages.js
+node scripts/build-config-pagescms.js
 ```
 
 ## Params
@@ -138,6 +138,16 @@ params:
           - title_page
           - description
           - body
+
+    # Collections order, by group (Sveltia CMS draws a divider between two groups)
+    # Default: pages and indexes, then the other collections, then config
+    collection_groups:
+      - heading: Content # read by CloudCannon only
+        collections: [pages, indexes]
+      - heading: Other
+        collections: ['*'] # every enabled collection that no group names
+      - heading: Settings
+        collections: [config]
 
     # Fields
     fields:

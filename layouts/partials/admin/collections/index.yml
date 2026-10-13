@@ -1,7 +1,9 @@
+{{/* Flow style list, in the order of `admin/func/GetCollections.html`. No
+     divider: Pages CMS and Tina have none. */}}
 collections: [
-  {{- range $collection, $value := site.Params.admin.collections }}
-    {{- if .enable }}
-      {{ partial "admin/collections/item.yml" $collection }},
+  {{- range partial "admin/func/GetCollections.html" . }}
+    {{- range .collections }}
+      {{ partial "admin/collections/collection.yml" . }},
     {{- end -}}
   {{- end }}
 ]

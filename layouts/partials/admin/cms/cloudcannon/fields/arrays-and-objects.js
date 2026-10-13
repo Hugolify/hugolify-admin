@@ -1,12 +1,19 @@
+{{/* Structure keys written so far: `_structures` is a map, and several blocks
+     ask for the same structure (the same ui fields, say). The key spells out
+     the fields, so the first one wins. */}}
+{{ $keys := slice }}
 {{ range . }}
 
   {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
   {{ $nameField := partial "admin/func/GetRealFieldName.html" . }}
+  {{- if in $keys $nameField -}}{{- continue -}}{{- end -}}
+  {{ $keys = $keys | append $nameField }}
 
   {{/* Get field file */}}
   {{ $file := print "admin/fields/" $f.field ".yml" }}
   {{ if templates.Exists (printf "partials/%s" $file) }}
-    {{ $file = partial $file $f.values }}
+    {{/* A field without values gets its own name, like in _range.yml */}}
+    {{ $file = partial $file (cond (not $f.values) $f.field $f.values) }}
   {{ end }}
 
   {{/* Get datas from file */}}
