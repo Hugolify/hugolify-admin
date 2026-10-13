@@ -504,6 +504,10 @@ admin:
           state: राज्य
           street_address: सड़क का पता
           tel: दूरभाष
+      checkboxes:
+        label:
+          one: चेकबॉक्स
+          other: चेकबॉक्स
       full:
         label: पूर्ण चौड़ाई क्षेत्र?
       hiddens:

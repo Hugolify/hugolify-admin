@@ -504,6 +504,10 @@ admin:
           state: Stato
           street_address: Via
           tel: Telefono
+      checkboxes:
+        label:
+          one: Casella di controllo
+          other: Caselle di controllo
       full:
         label: Campo a larghezza intera?
       hiddens:

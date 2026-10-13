@@ -1,0 +1,21 @@
+{{- $name := dict "name" "checkboxes" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "form_checkboxes" "nameOverride" "checkboxes" }}
+{{- end }}
+
+{{- $fields := slice
+  "label"
+  "name"
+  "value"
+  "is_required" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.form.checkboxes.label" 2)
+  "label_singular" (i18n "admin.fields.form.checkboxes.label" 1)
+  "fields" $fields
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/list.js" $args }}

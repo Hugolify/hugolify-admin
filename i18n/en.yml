@@ -498,6 +498,10 @@ admin:
           state: State
           street_address: Street
           tel: Tel
+      checkboxes:
+        label:
+          one: Checkbox
+          other: Checkboxes
       full:
         label: Full width field?
       hiddens:

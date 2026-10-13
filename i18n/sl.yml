@@ -504,6 +504,10 @@ admin:
           state: Regija
           street_address: Ulica
           tel: Telefon
+      checkboxes:
+        label:
+          one: Potrditveno polje
+          other: Potrditvena polja
       full:
         label: Polje polne širine?
       hiddens:

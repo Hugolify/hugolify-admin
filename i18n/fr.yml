@@ -498,6 +498,10 @@ admin:
           state: État
           street_address: Rue
           tel: Tel
+      checkboxes:
+        label:
+          one: Case à cocher
+          other: Cases à cocher
       full:
         label: Champ en pleine largeur ?
       hiddens:

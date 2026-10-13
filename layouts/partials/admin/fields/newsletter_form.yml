@@ -6,6 +6,7 @@
 {{- $fields := slice 
   "url"
   "submit"
+  "form_checkboxes"
   "form_hiddens" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 

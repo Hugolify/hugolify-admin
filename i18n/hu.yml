@@ -504,6 +504,10 @@ admin:
           state: Állam
           street_address: Utcai cím
           tel: Tel
+      checkboxes:
+        label:
+          one: Jelölőnégyzet
+          other: Jelölőnégyzetek
       full:
         label: Teljes szélességű mező?
       hiddens:

@@ -504,6 +504,10 @@ admin:
           state: Staat
           street_address: Straat
           tel: Telefoon
+      checkboxes:
+        label:
+          one: Selectievakje
+          other: Selectievakjes
       full:
         label: Veld met volledige breedte?
       hiddens:

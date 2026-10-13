@@ -504,6 +504,10 @@ admin:
           state: Województwo
           street_address: Ulica
           tel: Telefon
+      checkboxes:
+        label:
+          one: Pole wyboru
+          other: Pola wyboru
       full:
         label: Pole pełnej szerokości?
       hiddens:

@@ -504,6 +504,10 @@ admin:
           state: Stat
           street_address: Gatuadress
           tel: Tel
+      checkboxes:
+        label:
+          one: Kryssruta
+          other: Kryssrutor
       full:
         label: Fullbreddsfält?
       hiddens:

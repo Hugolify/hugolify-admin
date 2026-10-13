@@ -504,6 +504,10 @@ admin:
           state: Estado
           street_address: Calle
           tel: Teléfono
+      checkboxes:
+        label:
+          one: Casilla
+          other: Casillas
       full:
         label: ¿Campo de ancho completo?
       hiddens:

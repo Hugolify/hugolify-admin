@@ -504,6 +504,10 @@ admin:
           state: Stát
           street_address: Ulice
           tel: Tel
+      checkboxes:
+        label:
+          one: Zaškrtávací pole
+          other: Zaškrtávací pole
       full:
         label: Pole na celou šířku?
       hiddens:

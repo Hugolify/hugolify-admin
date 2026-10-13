@@ -504,6 +504,10 @@ admin:
           state: Tila
           street_address: Katuosoite
           tel: Puh.
+      checkboxes:
+        label:
+          one: Valintaruutu
+          other: Valintaruudut
       full:
         label: Täyden leveyden kenttä
       hiddens:

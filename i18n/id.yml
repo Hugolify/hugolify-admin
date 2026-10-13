@@ -504,6 +504,10 @@ admin:
           state: Negara Bagian
           street_address: Alamat Jalan
           tel: Telp
+      checkboxes:
+        label:
+          one: Kotak centang
+          other: Kotak centang
       full:
         label: Bidang lebar penuh?
       hiddens:

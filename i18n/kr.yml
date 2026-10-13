@@ -504,6 +504,10 @@ admin:
           state: 주
           street_address: 거리
           tel: 전화번호
+      checkboxes:
+        label:
+          one: 체크박스
+          other: 체크박스
       full:
         label: 전체 너비 필드?
       hiddens:

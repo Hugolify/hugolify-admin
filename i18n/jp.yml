@@ -504,6 +504,10 @@ admin:
           state: 都道府県
           street_address: 番地
           tel: 電話番号
+      checkboxes:
+        label:
+          one: チェックボックス
+          other: チェックボックス
       full:
         label: 全幅フィールド?
       hiddens:

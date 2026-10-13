@@ -504,6 +504,10 @@ admin:
           state: Bundesland
           street_address: Straße
           tel: Telefon
+      checkboxes:
+        label:
+          one: Checkbox
+          other: Checkboxen
       full:
         label: Feld in voller Breite?
       hiddens:

@@ -504,6 +504,10 @@ admin:
           state: Eyalet
           street_address: Sokak adresi
           tel: Tel
+      checkboxes:
+        label:
+          one: Onay kutusu
+          other: Onay kutuları
       full:
         label: Tam genişlikte alan mı?
       hiddens:

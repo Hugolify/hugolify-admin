@@ -504,6 +504,10 @@ admin:
           state: 州/省
           street_address: 街道地址
           tel: 电话
+      checkboxes:
+        label:
+          one: 复选框
+          other: 复选框
       full:
         label: 全宽字段?
       hiddens:

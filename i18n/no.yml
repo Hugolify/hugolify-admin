@@ -504,6 +504,10 @@ admin:
           state: Stat
           street_address: Gateadresse
           tel: Tlf
+      checkboxes:
+        label:
+          one: Avkrysningsboks
+          other: Avkrysningsbokser
       full:
         label: Fullbreddefelt?
       hiddens:

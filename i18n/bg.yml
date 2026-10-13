@@ -504,6 +504,10 @@ admin:
           state: Щат
           street_address: Адрес на улица
           tel: Тел
+      checkboxes:
+        label:
+          one: Отметка
+          other: Отметки
       full:
         label: Поле с пълна ширина?
       hiddens:
