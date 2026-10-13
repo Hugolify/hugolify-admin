@@ -50,7 +50,7 @@
   Replace any direct call to `transform.Remarshal "yaml"` that produces
   YAML containing repeated `editor_components: []` fields:
 
-    {{- $yaml := partial "admin/func/RemarshalYaml.html" (partial "admin/collections/item.yml" $collection) -}}
+    {{- $yaml := partial "admin/func/RemarshalYaml.html" (partial "admin/collections/collection.yml" $collection) -}}
     {{ $yaml }}
 
   Feed it one collection at a time, never the whole `collections:` list: Hugo's

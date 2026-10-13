@@ -30,7 +30,7 @@ i18n:
 {{- end }}
 
 local_backend: {{ site.Params.admin.local_backend | default true }}
-locale: {{ site.Params.admin.locale | default (index site.Languages 0) | default "en" }}
+locale: {{ site.Params.admin.locale | default site.Language.Lang | default "en" }}
 logo: 
   src: "./assets/logo.svg"
   show_in_header: true
