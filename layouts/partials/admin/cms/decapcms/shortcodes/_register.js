@@ -100,6 +100,8 @@ CMS.registerEditorComponent({
   {{/* Serialize the editor field object back into a Hugo shortcode string.
          - Positional: outputs the single value directly after the shortcode name.
          - Named args: appends each non-empty field as key="value".
+         - Boolean fields are written unquoted (key=true) so Hugo reads them as booleans;
+           calling .includes() on a JS boolean would throw and silently drop the save.
          - Paired shortcodes wrap the inner content between opening and closing tags.
          - Self-closing shortcodes end with />}} instead of >}}. */}}
   toBlock: function (obj) {
@@ -110,7 +112,11 @@ CMS.registerEditorComponent({
     {{- else -}}
     let shortcode = open + ' {{ $shortcode }}';
     {{- range $fieldMetasNamed }}
-    if (obj.{{ .name }}) { const _v{{ .name }} = obj.{{ .name }}; shortcode += ' {{ .name }}=' + (_v{{ .name }}.includes('"') ? '`' + _v{{ .name }} + '`' : '"' + _v{{ .name }} + '"'); }
+    {{- if eq .widget "boolean" }}
+    if (obj.{{ .name }}) { shortcode += ' {{ .name }}=true'; }
+    {{- else }}
+    if (obj.{{ .name }}) { const _v{{ .name }} = String(obj.{{ .name }}); shortcode += ' {{ .name }}=' + (_v{{ .name }}.includes('"') ? '`' + _v{{ .name }} + '`' : '"' + _v{{ .name }} + '"'); }
+    {{- end }}
     {{- end }}
     shortcode += ' ' + close;
     {{ if $paired -}}
