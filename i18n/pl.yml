@@ -434,6 +434,11 @@ admin:
         Wyświetlane w zakładkach, wynikach wyszukiwania i w podglądzie SMS/Wiadomości/Sieci
         społecznościowych
       label: Opis
+    details:
+      summary:
+        hint: 'Widoczny tytuł elementu, zawsze wyświetlany (np. pytanie w FAQ)'
+      title:
+        hint: 'Niewyświetlany na stronie: atrybut title dla dostępności. Widoczny tytuł wpisz w polu Podsumowanie'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Pole pełnej szerokości?
       hiddens:
+        hint: 'Wysyłane z formularzem, ale niewyświetlane (np. ID listy lub tag wymagany przez usługę newslettera)'
         label:
           one: Pole ukryte
           other: Pola ukryte

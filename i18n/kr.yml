@@ -434,6 +434,11 @@ admin:
         탭, 검색 결과 및 SMS/메시지/소셜 네트워크
         미리보기에 표시됩니다
       label: 설명
+    details:
+      summary:
+        hint: '항목의 표시 제목으로 항상 표시됩니다 (예: FAQ의 질문)'
+      title:
+        hint: '페이지에 표시되지 않음: 접근성을 위한 title 속성입니다. 표시 제목은 요약 필드에 입력하세요'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: 전체 너비 필드?
       hiddens:
+        hint: '화면에 표시되지 않고 양식과 함께 전송됩니다 (예: 뉴스레터 서비스에서 요구하는 리스트 ID 또는 태그)'
         label:
           one: 숨김 필드
           other: 숨김 필드

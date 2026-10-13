@@ -432,6 +432,11 @@ admin:
         Näytetään välilehdissä, hakutuloksissa ja tekstiviestien/viestien/sosiaalisten
         verkostojen esikatselussa.
       label: Kuvaus
+    details:
+      summary:
+        hint: 'Kohteen näkyvä otsikko, aina näkyvissä (esim. kysymys FAQ-osiossa)'
+      title:
+        hint: 'Ei näytetä sivulla: title-attribuutti saavutettavuutta varten. Näkyvä otsikko kirjoitetaan Summary-kenttään'
     diagnostic:
       epd:
         hint: Energiatehokkuuden diagnostiikka (DPE)
@@ -502,6 +507,7 @@ admin:
       full:
         label: Täyden leveyden kenttä
       hiddens:
+        hint: 'Lähetetään lomakkeen mukana näyttämättä (esim. uutiskirjepalvelun vaatima listan tunniste tai tagi)'
         label:
           one: Piilotettu kenttä
           other: Piilotetut kentät

@@ -434,6 +434,11 @@ admin:
         Weergegeven in tabbladen, zoekresultaten en in SMS/Berichten/Sociale netwerken
         voorbeeld
       label: Beschrijving
+    details:
+      summary:
+        hint: 'Zichtbare titel van het item, altijd getoond (bv.: de vraag in een FAQ)'
+      title:
+        hint: 'Niet getoond op de pagina: title-attribuut voor toegankelijkheid. De zichtbare titel hoort in het veld Samenvatting'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Veld met volledige breedte?
       hiddens:
+        hint: 'Worden met het formulier verzonden zonder te worden weergegeven (bv.: lijst-ID of tag die de nieuwsbriefdienst vereist)'
         label:
           one: Verborgen veld
           other: Verborgen velden

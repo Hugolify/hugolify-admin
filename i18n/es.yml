@@ -434,6 +434,11 @@ admin:
         Se muestra en pestañas, resultados de búsqueda y en vista previa de
         SMS/Mensajes/Redes sociales
       label: Descripción
+    details:
+      summary:
+        hint: 'Título visible del elemento, siempre mostrado (p. ej. la pregunta en una FAQ)'
+      title:
+        hint: 'No se muestra en la página: atributo title usado para la accesibilidad. El título visible se escribe en el campo Resumen'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: ¿Campo de ancho completo?
       hiddens:
+        hint: 'Se envían con el formulario sin mostrarse (p. ej. ID de lista o etiqueta que requiere el servicio de newsletter)'
         label:
           one: Campo oculto
           other: Campos ocultos

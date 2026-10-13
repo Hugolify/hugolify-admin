@@ -434,6 +434,11 @@ admin:
         Visualizzato nelle schede, nei risultati di ricerca e nell’anteprima di
         SMS/Messaggi/Social network
       label: Descrizione
+    details:
+      summary:
+        hint: 'Titolo visibile dell’elemento, sempre mostrato (es. la domanda in una FAQ)'
+      title:
+        hint: 'Non mostrato nella pagina: attributo title usato per l’accessibilità. Il titolo visibile va nel campo Riepilogo'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Campo a larghezza intera?
       hiddens:
+        hint: 'Inviati con il modulo senza essere visualizzati (es. ID della lista o tag richiesto dal servizio di newsletter)'
         label:
           one: Campo nascosto
           other: Campi nascosti

@@ -434,6 +434,11 @@ admin:
         Megjelenik a lapokon, a keresési eredményekben és az SMS/Üzenetek/Közösségi hálózatok előnézetében
         előnézet
       label: Leírás
+    details:
+      summary:
+        hint: 'Az elem látható címe, mindig megjelenik (pl. a kérdés egy GYIK-ben)'
+      title:
+        hint: 'Nem jelenik meg az oldalon: title attribútum az akadálymentességhez. A látható cím az Összefoglaló mezőbe kerül'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Teljes szélességű mező?
       hiddens:
+        hint: 'Az űrlappal együtt kerülnek elküldésre, de nem jelennek meg (pl. a hírlevélszolgáltatás által kért listaazonosító vagy címke)'
         label:
           one: Rejtett mező
           other: Rejtett mezők

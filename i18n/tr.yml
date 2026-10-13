@@ -434,6 +434,11 @@ admin:
         Sekmelerde, arama sonuçlarında ve SMS/Mesajlar/Sosyal ağ önizlemelerinde görüntülenir
         önizleme
       label: Açıklama
+    details:
+      summary:
+        hint: 'Öğenin görünen başlığı, her zaman gösterilir (ör.: SSS içindeki soru)'
+      title:
+        hint: 'Sayfada gösterilmez: erişilebilirlik için title niteliği. Görünen başlık Özet alanına yazılır'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Tam genişlikte alan mı?
       hiddens:
+        hint: 'Görüntülenmeden formla birlikte gönderilir (ör.: bülten hizmetinin istediği liste kimliği veya etiket)'
         label:
           one: Gizli alan
           other: Gizli alanlar

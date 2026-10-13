@@ -434,6 +434,11 @@ admin:
         タブ、検索結果、SMS/メッセージ/ソーシャルネットワークの
         プレビューに表示されます
       label: 説明
+    details:
+      summary:
+        hint: '項目の表示タイトル、常に表示されます (例: FAQ の質問)'
+      title:
+        hint: 'ページには表示されません: アクセシビリティ用の title 属性です。表示タイトルは「概要」に入力してください'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: 全幅フィールド?
       hiddens:
+        hint: 'フォームと一緒に送信されますが、表示されません (例: ニュースレターサービスが必要とするリスト ID やタグ)'
         label:
           one: 非表示フィールド
           other: 非表示フィールド

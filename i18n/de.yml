@@ -434,6 +434,11 @@ admin:
         Wird in Tabs, Suchergebnissen und in SMS/Nachrichten/Sozialen Netzwerken
         Vorschau angezeigt
       label: Beschreibung
+    details:
+      summary:
+        hint: 'Sichtbarer Titel des Elements, immer angezeigt (z. B. die Frage in einer FAQ)'
+      title:
+        hint: 'Nicht auf der Seite angezeigt: title-Attribut für die Barrierefreiheit. Der sichtbare Titel gehört in das Feld Zusammenfassung'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Feld in voller Breite?
       hiddens:
+        hint: 'Werden mit dem Formular gesendet, ohne angezeigt zu werden (z. B. Listen-ID oder Tag, die der Newsletter-Dienst verlangt)'
         label:
           one: Verstecktes Feld
           other: Versteckte Felder

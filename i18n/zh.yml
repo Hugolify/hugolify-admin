@@ -434,6 +434,11 @@ admin:
         显示在标签页、搜索结果和短信/消息/社交网络
         预览中
       label: 描述
+    details:
+      summary:
+        hint: '条目的可见标题，始终显示（例如：FAQ 中的问题）'
+      title:
+        hint: '不在页面上显示：用于无障碍的 title 属性。可见标题请填写在“摘要”字段中'
     diagnostic:
       epd:
         label: 千瓦时
@@ -502,6 +507,7 @@ admin:
       full:
         label: 全宽字段?
       hiddens:
+        hint: '随表单一起提交但不显示（例如：新闻通讯服务要求的列表 ID 或标签）'
         label:
           one: 隐藏字段
           other: 隐藏字段

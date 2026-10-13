@@ -434,6 +434,11 @@ admin:
         Ditampilkan di tab, hasil pencarian, dan di pratinjau SMS/Pesan/Jejaring Sosial
         pratinjau
       label: Deskripsi
+    details:
+      summary:
+        hint: 'Judul yang terlihat dari item, selalu ditampilkan (mis. pertanyaan dalam FAQ)'
+      title:
+        hint: 'Tidak ditampilkan di halaman: atribut title untuk aksesibilitas. Judul yang terlihat diisi di bidang Ringkasan'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Bidang lebar penuh?
       hiddens:
+        hint: 'Dikirim bersama formulir tanpa ditampilkan (mis. ID daftar atau tag yang diperlukan layanan newsletter)'
         label:
           one: Bidang Tersembunyi
           other: Bidang Tersembunyi

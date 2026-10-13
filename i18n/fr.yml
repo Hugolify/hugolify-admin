@@ -501,6 +501,7 @@ admin:
       full:
         label: Champ en pleine largeur ?
       hiddens:
+        hint: 'Envoyés avec le formulaire sans être affichés (p. ex. identifiant de liste ou tag demandé par le service de newsletter)'
         label:
           one: Champ caché
           other: Champs cachés
@@ -868,6 +869,10 @@ admin:
         label: Youtube
     details:
       label: Détails
+      summary:
+        hint: 'Titre visible de l’élément, toujours affiché (p. ex. la question dans une FAQ)'
+      title:
+        hint: 'Non affiché dans la page : attribut title utilisé pour l’accessibilité. Le titre visible se saisit dans le champ Résumé'
     sold:
       label: Vendu/loué ?
     summary:

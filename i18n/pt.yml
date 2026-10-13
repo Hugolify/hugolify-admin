@@ -434,6 +434,11 @@ admin:
         Exibido em abas, resultados de pesquisa e na visualização de SMS/Mensagens/Redes
         sociais
       label: Descrição
+    details:
+      summary:
+        hint: 'Título visível do item, sempre exibido (ex. a pergunta numa FAQ)'
+      title:
+        hint: 'Não exibido na página: atributo title usado para acessibilidade. O título visível vai no campo Resumo'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Campo de largura total?
       hiddens:
+        hint: 'Enviados com o formulário sem serem exibidos (ex. ID da lista ou tag exigida pelo serviço de newsletter)'
         label:
           one: Campo oculto
           other: Campos ocultos

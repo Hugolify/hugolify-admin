@@ -1,7 +1,7 @@
 {{- $fields := slice 
   "name" 
-  "title" 
-  "summary" 
+  "details_title"
+  "details_summary"
   "contents" -}}
   
 {{- $fields = partial "admin/func/GetFields.html" (dict "shortcode" . "fields" $fields) -}}

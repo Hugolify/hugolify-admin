@@ -434,6 +434,11 @@ admin:
         Visas i flikar, sökresultat och i förhandsgranskning av SMS/Meddelanden/Sociala nätverk
         förhandsgranskning
       label: Beskrivning
+    details:
+      summary:
+        hint: 'Synlig titel för objektet, visas alltid (t.ex. frågan i en FAQ)'
+      title:
+        hint: 'Visas inte på sidan: title-attribut för tillgänglighet. Den synliga titeln skrivs i fältet Sammanfattning'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Fullbreddsfält?
       hiddens:
+        hint: 'Skickas med formuläret utan att visas (t.ex. list-ID eller tagg som nyhetsbrevstjänsten kräver)'
         label:
           one: Dolt fält
           other: Dolda fält

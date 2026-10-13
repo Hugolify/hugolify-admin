@@ -434,6 +434,11 @@ admin:
         Zobrazeno na kartách, ve výsledcích vyhledávání a v náhledu SMS/Zpráv/Sociálních sítí
         náhled
       label: Popis
+    details:
+      summary:
+        hint: 'Viditelný titulek položky, vždy zobrazený (např. otázka v FAQ)'
+      title:
+        hint: 'Nezobrazuje se na stránce: atribut title pro přístupnost. Viditelný titulek patří do pole Shrnutí'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Pole na celou šířku?
       hiddens:
+        hint: 'Odesílají se s formulářem, ale nezobrazují se (např. ID seznamu nebo štítek vyžadovaný službou pro newsletter)'
         label:
           one: Skryté pole
           other: Skrytá pole

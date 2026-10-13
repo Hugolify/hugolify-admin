@@ -434,6 +434,11 @@ admin:
         Vises i faner, søkeresultater og i forhåndsvisning av SMS/Meldinger/Sosiale nettverk
         forhåndsvisning
       label: Beskrivelse
+    details:
+      summary:
+        hint: 'Synlig tittel for elementet, alltid vist (f.eks. spørsmålet i en FAQ)'
+      title:
+        hint: 'Vises ikke på siden: title-attributt for tilgjengelighet. Den synlige tittelen skrives i feltet Sammendrag'
     diagnostic:
       epd:
         label: Kwh
@@ -502,6 +507,7 @@ admin:
       full:
         label: Fullbreddefelt?
       hiddens:
+        hint: 'Sendes med skjemaet uten å vises (f.eks. liste-ID eller tagg som nyhetsbrevtjenesten krever)'
         label:
           one: Skjult felt
           other: Skjulte felt

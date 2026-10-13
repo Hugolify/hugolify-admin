@@ -501,6 +501,7 @@ admin:
       full:
         label: Full width field?
       hiddens:
+        hint: 'Sent with the form without being displayed (ex: list ID or tag required by the newsletter service)'
         label:
           one: Hidden field
           other: Hidden fields
@@ -872,6 +873,10 @@ admin:
         label: Youtube
     details:
       label: Details
+      summary:
+        hint: 'Visible title of the item, always displayed (ex: the question in a FAQ)'
+      title:
+        hint: 'Not displayed on the page: title attribute used for accessibility. The visible title goes in the Summary field'
     sold:
       label: Sold/rent ?
     state:
