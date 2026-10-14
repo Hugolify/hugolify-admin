@@ -67,7 +67,7 @@
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
-{{ $name }}: {
+'{{ $name }}': {
   label: '{{ $label }}',
   {{ with $label_singular }}
   singular_name: '{{ . }}',

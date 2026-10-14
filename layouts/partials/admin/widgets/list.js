@@ -39,7 +39,7 @@
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
-{{ cond $nameOverride $nameOverride $name }}: {
+'{{ cond $nameOverride $nameOverride $name }}': {
   label: '{{ $label }}',
   {{ with $label_singular }}
   singular_name: '{{ . }}',
@@ -73,13 +73,16 @@
     {{ with $widget_icon }}
     icon: '{{ . }}',
     {{ end }}
+    {{/* Entries in braces: `[key: title]` is a list of maps in YAML only, and the
+      JSON conversion of the config collection rejects it. The summary becomes a
+      CloudCannon template, `{{ title }}` written `{title}` */}}
     text: [
       {{ with $summary }}
-      key: {{ replace (replace . "{{" "{") "}}" "}" }}
+      { template: '{{ replaceRE `\{\{\s*(?:fields\.)?([^\s|}]+)[^}]*\}\}` `{${1}}` . }}' }
       {{ else }}
-      key: 'title',
-      key: 'name',
-      key: 'text'
+      { key: 'title' },
+      { key: 'name' },
+      { key: 'text' }
       {{ end }}
     ],
   }

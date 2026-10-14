@@ -38,7 +38,7 @@
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
-{{ $name }}: {
+'{{ $name }}': {
   label: '{{ $label }}',
   type: '{{ cond $multiple "multiselect" "select" }}',
   options: {

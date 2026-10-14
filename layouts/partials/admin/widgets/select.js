@@ -32,7 +32,7 @@
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
 
-{{ $name }}: {
+'{{ $name }}': {
   label: '{{ $label }}',
   {{ with $hint }}
   comment: '{{ . }}',
