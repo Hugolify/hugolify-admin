@@ -9,6 +9,14 @@
     - positional (bool)    optional  — positional arg like {{< twitch 123 >}}
     - selfClosing (bool)   optional  — self-closed like {{< qr text="..." />}}, required by
                                        shortcodes that use .Inner (e.g. Hugo's built-in qr)
+    - mode       (string)  optional  — Sveltia editing mode: "block" (default), "dialog" (compact
+                                       inline chip that opens a dialog when clicked) or "inline"
+                                       (in-text control; requires exactly one field). Ignored
+                                       by Decap CMS, which doesn't support these options.
+    - summary    (string)  optional  — Sveltia placeholder template for the "dialog" mode chip,
+                                       e.g. "{{text}}". Falls back to the first String/Text
+                                       field value, then to the component label. Ignored by
+                                       Decap CMS.
 
   Fields are auto-loaded from admin/shortcodes/fields/{shortcode}.html.
   Field names and widget types are auto-extracted via GetDecapFieldMeta.html.
@@ -20,6 +28,8 @@
 {{- $paired := .paired | default false -}}
 {{- $positional := .positional | default false -}}
 {{- $selfClosing := .selfClosing | default false -}}
+{{- $mode := .mode -}}
+{{- $summary := .summary -}}
 
 {{- /* Load the field key list from the shortcode's fields definition file. */ -}}
 {{- $fieldKeys := partialCached (printf "admin/shortcodes/fields/%s.html" $shortcode) $shortcode $shortcode -}}
@@ -48,6 +58,8 @@
 CMS.registerEditorComponent({
   id: '{{ $shortcode }}',
   label: '{{ $label }}',
+  {{ if $mode }}mode: '{{ $mode }}',{{ end }}
+  {{ if $summary }}summary: '{{ $summary }}',{{ end }}
   {{/* Render each field widget definition for the CMS editor form. */}}
   fields: [
     {{- range $fieldKeys }}
