@@ -16,21 +16,22 @@
 
 ## Install
 
-Edit `config/_default/module.yaml` to install the `hugolify-admin` module:
+Edit `config/_default/module.yaml` to install the `hugolify-admin` module. The `/v2` suffix is required, and it runs with `hugolify-theme/v2`:
 
 ```yml
 imports:
-  - path: github.com/hugolify/hugolify-admin
+  - path: github.com/hugolify/hugolify-admin/v2
 ```
 
 E.g: Hugolify setting for a [blog](https://www.hugolify.io/tutorials/how-to-create-a-blog-with-hugo-and-decap-cms-using-hugolify/)
 
 ```yml
 imports:
-  - path: github.com/hugolify/hugolify-posts-categories
-  - path: github.com/hugolify/hugolify-posts
-  - path: github.com/hugolify/hugolify-theme
-  - path: github.com/hugolify/hugolify-admin
+  - path: github.com/hugolify/hugolify-theme-posts-categories/v2
+  - path: github.com/hugolify/hugolify-theme-posts/v2
+  - path: github.com/hugolify/hugolify-theme/v2
+  - path: github.com/hugolify/hugolify-theme-design-system
+  - path: github.com/hugolify/hugolify-admin/v2
 ```
 
 ## Build Pages CMS and Cloudcannon config files
@@ -73,14 +74,14 @@ params:
     media:
       media_folder: '/assets/images/uploads'
       public_folder: '/images/uploads'
-      audio_max_file_size: 700000 # 700ko
+      audio_max_file_size: 1000000 # 1Mo
       max_file_size: 700000 # 700ko
       pdf_max_file_size: 5000000 # 5Mo
       specific_filter: false # set true to add a selected filter by image
       video_max_file_size: 5000000 # 5Mo
 
       # Cloud asset config (optional)
-      config:
+      cloud:
         name: # cloudinary or uploadcare
         cloud_name: # for cloudinary
         api_key: # for cloudinary
@@ -89,7 +90,7 @@ params:
       providers: # for sveltia-cms
 
     nested:
-      depth: 5 # set minimum 2
+      depth: 1 # 1 (default) keeps collections flat, 2 and up shows them as a folder tree
 
     # Auth
     auth:
@@ -113,7 +114,7 @@ params:
         - faq
         - figure
         - form
-        - information
+        - informations
         - images
         - latest
         - paragraph
