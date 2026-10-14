@@ -1,0 +1,27 @@
+{{/* Sveltia CMS takes a list of names, or the object of Static CMS once a field
+  sorts the list by default. It ignores the default sort of Decap CMS, and takes
+  no label */}}
+{{- with partial "admin/func/GetViewFields.html" (dict "collection" . "option" "sortable_fields") -}}
+  {{- $default := first 1 (where . "default_sort" "!=" "") -}}
+  {{- if $default }}
+sortable_fields: {
+  fields: [
+    {{- range . }}
+      {{ .field | jsonify }},
+    {{- end }}
+  ],
+  {{- range $default }}
+  default: {
+    field: {{ .field | jsonify }},
+    direction: {{ cond (eq .default_sort "desc") "descending" "ascending" }}
+  },
+  {{- end }}
+},
+  {{- else }}
+sortable_fields: [
+  {{- range . }}
+    {{ .field | jsonify }},
+  {{- end }}
+],
+  {{- end }}
+{{- end -}}

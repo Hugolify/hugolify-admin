@@ -66,10 +66,10 @@
     {{ end }}
     {{/* Entries in braces: `[key: title]` is a list of maps in YAML only, and the
       JSON conversion of the config collection rejects it. The summary becomes a
-      CloudCannon template, `{{ title }}` written `{title}` */}}
+      CloudCannon template */}}
     text: [
       {{ with $summary }}
-      { template: '{{ replaceRE `\{\{\s*(?:fields\.)?([^\s|}]+)[^}]*\}\}` `{${1}}` . }}' }
+      { template: '{{ partial "admin/func/GetCloudcannonTemplate.html" . }}' }
       {{ else }}
       { key: 'title' },
       { key: 'name' },

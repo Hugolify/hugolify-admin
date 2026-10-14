@@ -1,0 +1,30 @@
+{{/*
+  GetThumbnail
+  ============
+  Returns the image an entry list shows beside each entry, read from
+  `params.admin.collections.{collection}.thumbnail`:
+
+    thumbnail: image.src             # a field, in dot notation
+    thumbnail: [image.src, logo]     # fields tried in turn
+    thumbnail: false                 # no image
+
+  Left undefined, a collection with `featured_image` gets `image.src`: that
+  field is an `image` object holding the file in `src`, which a CMS looking
+  for an Image field at the root of the entry would not find.
+
+  Input  : string — collection name
+  Output : `false` when turned off, else a slice of key paths, empty when the
+           CMS should keep its own guess
+*/}}
+{{- $config := index site.Params.admin.collections . -}}
+{{- $thumbnail := slice -}}
+{{- if isset $config "thumbnail" -}}
+  {{- with $config.thumbnail -}}
+    {{- $thumbnail = cond (reflect.IsSlice .) . (slice .) -}}
+  {{- else -}}
+    {{- $thumbnail = false -}}
+  {{- end -}}
+{{- else if in (partial "admin/func/GetFieldsCollection.html" .) "featured_image" -}}
+  {{- $thumbnail = slice "image.src" -}}
+{{- end -}}
+{{- return $thumbnail -}}

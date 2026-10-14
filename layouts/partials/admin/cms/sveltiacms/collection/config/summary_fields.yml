@@ -1,0 +1,15 @@
+{{/* Sveltia CMS reads `summary_fields` as an alias, but only as a list of names:
+  `table_columns` is written instead, as it takes a label. The entry summary is
+  `summary` in the alias, `_summary` here */}}
+{{- with partial "admin/func/GetViewFields.html" (dict "collection" . "option" "summary_fields") -}}
+table_columns: [
+  {{- range . }}
+    {{- $field := cond (eq .field "summary") "_summary" .field }}
+    {{- if .label }}
+    { field: {{ $field | jsonify }}, label: {{ .label | jsonify }} },
+    {{- else }}
+    {{ $field | jsonify }},
+    {{- end }}
+  {{- end }}
+],
+{{- end -}}

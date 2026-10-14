@@ -1,11 +1,12 @@
+{{/* A pattern keeps its type: a boolean matches a boolean field */}}
 {{ $view_filters := (index site.Params.admin.collections .).view_filters }}
 {{ if $view_filters }}
 view_filters: [
   {{ range $view_filters }}
     {
-      label: "{{ .label }}",
-      field: "{{ .field }}",
-      pattern: "{{ replace .pattern "\\" "\\\\" }}"
+      label: {{ .label | jsonify }},
+      field: {{ .field | jsonify }},
+      pattern: {{ .pattern | jsonify }}
     },
   {{ end }}
 ],

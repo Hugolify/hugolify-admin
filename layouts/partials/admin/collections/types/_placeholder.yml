@@ -9,9 +9,9 @@
   {{- with $description }}
   description: '{{ . }}',
   {{- end }}
-  create: true,
-  editor: { preview: {{ site.Params.admin.preview | default false }} },
   i18n: true,
+  {{ partial "admin/collections/config/create.yml" . }}
+  {{ partial "admin/collections/config/preview.yml" . }}
   {{ partial "admin/collections/config/path.yml" . }}
   {{ partial "admin/collections/config/slug.yml" . }}
 

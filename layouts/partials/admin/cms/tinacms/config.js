@@ -13,8 +13,18 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+{{- $collections = replace $collections "collections: [" "collections: withAllowedActions([" 1 | strings.TrimSpace | printf "%s)" -}}
 
 import { defineConfig } from "tinacms";
+
+// A collection gets `allowedActions` at its root, as its `ui` key already holds
+// the filename: move it into `ui`
+const withAllowedActions = (collections) =>
+  collections.map(({ allowedActions, ...collection }) =>
+    allowedActions
+      ? { ...collection, ui: { ...collection.ui, allowedActions } }
+      : collection
+  );
 
 export default defineConfig({
   branch: "{{ site.Params.admin.branch | default "main" }}",

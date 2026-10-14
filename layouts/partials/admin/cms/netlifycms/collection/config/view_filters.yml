@@ -1,1 +1,1 @@
-{{ partialCached "admin/cms/decapcms/collection/config/view_filters.yml" . }}
+{{ partial "admin/cms/decapcms/collection/config/view_filters.yml" . }}

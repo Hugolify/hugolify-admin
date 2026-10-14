@@ -1,4 +1,4 @@
-{{ $exclude := (index site.Params.admin.collections .).exclude }}
-{{ with $exclude }}
-exclude: [ {{ delimit . `, ` }} ],
-{{ end }}
+{{/* File names Pages CMS leaves out of the collection, e.g. `_index.md` */}}
+{{- with (index site.Params.admin.collections .).exclude }}
+exclude: {{ . | jsonify }},
+{{- end -}}

@@ -1,0 +1,4 @@
+{{/* Pages CMS allows creating entries unless an operation turns it off */}}
+{{- if eq (index site.Params.admin.collections .).create false }}
+operations: { create: false },
+{{- end -}}

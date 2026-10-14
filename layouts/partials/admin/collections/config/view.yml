@@ -1,3 +1,6 @@
+{{- with (index site.Params.admin.collections .).view -}}
+  {{- warnf "hugolify-admin: collection %q sets `view`, built in v2 from `summary_fields`, `sortable_fields` and `nested`" $ -}}
+{{- end -}}
 {{- $cms := site.Params.admin.cms | default "decapcms" -}}
 {{- $file := print "admin/cms/" $cms "/collection/config/view.yml" -}}
 {{- if templates.Exists ( printf "partials/%s" $file ) -}}

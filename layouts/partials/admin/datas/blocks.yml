@@ -19,12 +19,21 @@
 {{- $ui := site.Params.admin.fields.ui.fields | default (slice "theme" "grid" "offset" "align") -}}
 {{- $ui = $ui | append "column" "layout" "scrollsnap" -}}
 {{- $names := partial "admin/func/GetBlockNames.html" . -}}
+{{/* CloudCannon takes its inputs as a map, as admin/fields/_fields.yml writes
+     them: its object widget gives a `name: {…}` pair, not a list item */}}
+{{- $cloudcannon := eq site.Params.admin.cms "cloudcannon" -}}
 {
   label: '{{ i18n "admin.files.blocks" }}',
   name: 'blocks',
   file: 'data/blocks.yml',
   i18n: false,
+  {{- if $cloudcannon }}
+  options: {
+  subtype: 'object',
+  _inputs: {
+  {{- else }}
   fields: [
+  {{- end }}
     {{- range $name := $names }}
       {{- $label := i18n (printf "admin.blocks.%s.label" $name) | default (humanize $name) -}}
       {{- if strings.HasPrefix $name "selected-" -}}
@@ -52,5 +61,10 @@
         "fields" (slice (dict "ui" (dict "fields" $ui "collapsed" $collapsed)))
       ) }},
     {{- end }}
+  {{- if $cloudcannon }}
+  }
+  }
+  {{- else }}
   ]
+  {{- end }}
 }

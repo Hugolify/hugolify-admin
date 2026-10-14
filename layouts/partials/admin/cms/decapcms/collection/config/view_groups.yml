@@ -3,10 +3,10 @@
 view_groups: [
   {{ range $view_groups }}
     {
-      label: "{{ .label }}",
-      field: "{{ .field }}",
+      label: {{ .label | jsonify }},
+      field: {{ .field | jsonify }},
       {{ with .pattern }}
-      pattern: "{{ replace . "\\" "\\\\" }}"
+      pattern: {{ . | jsonify }}
       {{ end }}
     },
   {{ end }}

@@ -1,0 +1,8 @@
+{{/* Netlify CMS takes field names alone, without label or default sort */}}
+{{- with partial "admin/func/GetViewFields.html" (dict "collection" . "option" "sortable_fields") -}}
+sortable_fields: [
+  {{- range . }}
+    {{ .field | jsonify }},
+  {{- end }}
+],
+{{- end -}}

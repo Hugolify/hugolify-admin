@@ -1,24 +1,42 @@
-{{ $view := (index site.Params.admin.collections .).view }}
-{{ with $view }}
-view: {
-{{ with .fields }}
-  fields: [ {{ delimit . `, ` }} ],
+{{/* Pages CMS keeps every option of the entry list in `view`, built here from the
+  options the other CMS share:
+
+  - `summary_fields` → `fields`. Pages CMS has no entry summary: `summary`
+    becomes `title`, the field it links to the entry by default
+  - `sortable_fields` → `sort`, and `default` for the field sorting the list by
+    default. The commit metadata is left out, as it is no field of the entry
+  - `nested` → the tree layout. An entry of a nested collection is a branch
+    bundle, so the `_index.md` of a folder is its node
+
+  A `label` is dropped: Pages CMS heads a column with the label of its field. */}}
+{{ $view := newScratch }}
+
+{{ $fields := slice }}
+{{ range partial "admin/func/GetViewFields.html" (dict "collection" . "option" "summary_fields") }}
+  {{ $fields = $fields | append (cond (eq .field "summary") "title" .field) }}
 {{ end }}
-{{ with .sort }}
-  sort: [ {{ delimit . `, ` }} ],
+{{ with $fields }}
+  {{ $view.Set "fields" . }}
 {{ end }}
-{{ with .layout }}
-  layout: "{{ . }}",
-{{ end }}
-{{ with .node }}
-  node: {
-  {{ with .filename }}
-    filename: "{{ . }}",
+
+{{ $sort := slice }}
+{{ range partial "admin/func/GetViewFields.html" (dict "collection" . "option" "sortable_fields") }}
+  {{ if not (in (slice "commit_date" "commit_author") .field) }}
+    {{ $sort = $sort | append .field }}
+    {{ if and .default_sort (not ($view.Get "default")) }}
+      {{ $view.Set "default" (dict "sort" .field "order" .default_sort) }}
+    {{ end }}
   {{ end }}
-  {{ with .hideDirs }}
-    hideDirs: "{{ . }}"
-  {{ end }}
-  }
 {{ end }}
-},
+{{ with $sort }}
+  {{ $view.Set "sort" . }}
+{{ end }}
+
+{{ if gt (partial "admin/func/GetNestedDepth.html" .) 1 }}
+  {{ $view.Set "layout" "tree" }}
+  {{ $view.Set "node" (dict "filename" "_index.md" "hideDirs" "nodes") }}
+{{ end }}
+
+{{ with $view.Values }}
+view: {{ . | jsonify }},
 {{ end }}

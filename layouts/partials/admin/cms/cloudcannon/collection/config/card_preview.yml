@@ -1,10 +1,31 @@
-{{ $card_preview := dict 
-  "text" (dict "key" "title")
+{{/* The card of an entry reads the options the other CMS share: its text comes
+  from `summary`, falling back to the title, and its image from `thumbnail`,
+  its fields tried in turn. `card_preview` overrides any part of it */}}
+{{ $config := index site.Params.admin.collections . }}
+
+{{ $text := dict "key" "title" }}
+{{ with $config.summary }}
+  {{ $text = slice (dict "template" (partial "admin/func/GetCloudcannonTemplate.html" .)) $text }}
+{{ end }}
+
+{{ $image := dict "key" "image.src" }}
+{{ $thumbnail := partial "admin/func/GetThumbnail.html" . }}
+{{ if eq $thumbnail false }}
+  {{ $image = false }}
+{{ else if $thumbnail }}
+  {{ $image = slice }}
+  {{ range $thumbnail }}
+    {{ $image = $image | append (dict "key" .) }}
+  {{ end }}
+{{ end }}
+
+{{ $card_preview := dict
+  "text" $text
   "subtext" (dict "key" "description")
-  "gallery" (dict "image" (dict "key" "image.src"))
+  "gallery" (dict "image" $image)
 }}
 
-{{ with (index site.Params.admin.collections .).card_preview }}
+{{ with $config.card_preview }}
 	{{ $card_preview = merge $card_preview . }}
 {{ end }}
 

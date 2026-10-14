@@ -1,0 +1,20 @@
+{{/* Decap CMS takes a label and a default sort on each field */}}
+{{- with partial "admin/func/GetViewFields.html" (dict "collection" . "option" "sortable_fields") -}}
+sortable_fields: [
+  {{- range . }}
+    {{- if or .label .default_sort }}
+    {
+      field: {{ .field | jsonify }},
+      {{- with .label }}
+      label: {{ . | jsonify }},
+      {{- end }}
+      {{- with .default_sort }}
+      default_sort: {{ . }},
+      {{- end }}
+    },
+    {{- else }}
+    {{ .field | jsonify }},
+    {{- end }}
+  {{- end }}
+],
+{{- end -}}

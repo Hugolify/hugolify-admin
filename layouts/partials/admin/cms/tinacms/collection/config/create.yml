@@ -1,6 +1,6 @@
-ui: {
-  allowedActions: {
-    create: {{ (index site.Params.admin.collections .).create | default true }},
-    createNestedFolder: false,
-  },
+{{/* Written at the root of the collection, as path.yml writes the `ui` key and a
+  second one would replace it: config.js moves it into `ui` */}}
+allowedActions: {
+  create: {{ (index site.Params.admin.collections .).create | default true }},
+  createNestedFolder: false,
 },

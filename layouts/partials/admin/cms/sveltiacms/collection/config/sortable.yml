@@ -1,1 +1,0 @@
-{{ partial "admin/cms/decapcms/collection/config/sortable.yml" . }}

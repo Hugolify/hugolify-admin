@@ -46,7 +46,7 @@
       {{ end }}
 
       {
-        label: {{ $block_label }},
+        label: {{ $block_label | jsonify }},
         value: {
           type: '{{ $block_key }}',
           {{ range $fields }}
@@ -74,14 +74,14 @@
         {{ end }}
         preview: {
           text: [
-            key: heading.title,
-            key: title,
-            {{ $block_label }}
+            { key: heading.title },
+            { key: title },
+            {{ $block_label | jsonify }}
           ],
           {{ with $block_hint }}
           subtext: [
-            key: {{ $block_key }}_description,
-            {{ . }}
+            { key: {{ $block_key }}_description },
+            {{ . | jsonify }}
           ],
           {{ end }}
           {{ with $block_icon }}

@@ -1,0 +1,7 @@
+{{/* Without it, Sveltia CMS looks for an Image field at the root of the entry */}}
+{{- $thumbnail := partial "admin/func/GetThumbnail.html" . -}}
+{{- if eq $thumbnail false }}
+thumbnail: false,
+{{- else if $thumbnail }}
+thumbnail: {{ cond (eq (len $thumbnail) 1) (index $thumbnail 0) $thumbnail | jsonify }},
+{{- end -}}

@@ -1,0 +1,16 @@
+{{/* Static CMS takes an object, the default sort set apart, and no label */}}
+{{- with partial "admin/func/GetViewFields.html" (dict "collection" . "option" "sortable_fields") -}}
+sortable_fields: {
+  fields: [
+    {{- range . }}
+      {{ .field | jsonify }},
+    {{- end }}
+  ],
+  {{- range first 1 (where . "default_sort" "!=" "") }}
+  default: {
+    field: {{ .field | jsonify }},
+    direction: {{ cond (eq .default_sort "desc") "Descending" "Ascending" }}
+  },
+  {{- end }}
+},
+{{- end -}}

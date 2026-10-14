@@ -1,0 +1,8 @@
+{{/* Static CMS heads a column with the label of its field, so a `label` is dropped */}}
+{{- with partial "admin/func/GetViewFields.html" (dict "collection" . "option" "summary_fields") -}}
+summary_fields: [
+  {{- range . }}
+    {{ .field | jsonify }},
+  {{- end }}
+],
+{{- end -}}

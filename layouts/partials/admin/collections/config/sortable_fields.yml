@@ -1,0 +1,8 @@
+{{- with (index site.Params.admin.collections .).sortable -}}
+  {{- warnf "hugolify-admin: collection %q sets `sortable`, replaced by the `sortable_fields` list in v2" $ -}}
+{{- end -}}
+{{- $cms := site.Params.admin.cms | default "decapcms" -}}
+{{- $file := print "admin/cms/" $cms "/collection/config/sortable_fields.yml" -}}
+{{- if templates.Exists ( printf "partials/%s" $file ) -}}
+  {{ partial $file . }}
+{{- end -}}

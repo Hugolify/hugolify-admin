@@ -1,0 +1,44 @@
+{{/*
+  GetViewFields
+  =============
+  Returns the fields a collection lists for its entry list, read from
+  `params.admin.collections.{collection}`:
+
+  - `summary_fields`  the columns of the table view
+  - `sortable_fields` the fields of the Sort menu
+
+  An item is a field name, or a map when it needs more than its name:
+
+    summary_fields:
+      - summary                # the entry summary, as in Static CMS
+      - lastname
+      - field: contact.email   # a nested field, in dot notation
+        label: Email           # replaces the label of the field
+    sortable_fields:
+      - field: date
+        default_sort: desc     # sorts the list by default: asc (or true), desc
+      - title
+
+  Each CMS writes them its own way, in `admin/cms/{cms}/collection/config/`.
+
+  Input  : dict with `collection` (string) and `option` (string)
+  Output : slice of dict, each with `field`, `label` (empty when not set) and
+           `default_sort` (`asc`, `desc`, or empty). Empty when the option is
+           not set.
+*/}}
+{{- $items := slice -}}
+{{- range index (index site.Params.admin.collections .collection) .option -}}
+  {{- if reflect.IsMap . -}}
+    {{- $item := . -}}
+    {{- with .field -}}
+      {{- $default_sort := "" -}}
+      {{- with $item.default_sort -}}
+        {{- $default_sort = cond (eq . "desc") "desc" "asc" -}}
+      {{- end -}}
+      {{- $items = $items | append (dict "field" . "label" ($item.label | default "") "default_sort" $default_sort) -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $items = $items | append (dict "field" . "label" "" "default_sort" "") -}}
+  {{- end -}}
+{{- end -}}
+{{- return $items -}}

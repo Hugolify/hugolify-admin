@@ -1,0 +1,16 @@
+{{/*
+  GetCloudcannonTemplate
+  ======================
+  Turns a summary template of Decap CMS into a template of CloudCannon:
+
+    {{title}} - {{date | date('YYYY-MM-DD')}}  →  {title} - {date}
+    {{fields.title}}                            →  {title}
+
+  CloudCannon names a field in single braces, without the `fields.` prefix.
+  The transformations after a pipe are dropped, as the two CMS do not share
+  their names: the field shows as it is stored.
+
+  Input  : string — summary template
+  Output : string — CloudCannon template
+*/}}
+{{- return replaceRE `\{\{\s*(?:fields\.)?([^\s|}]+)[^}]*\}\}` `{${1}}` . -}}

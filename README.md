@@ -139,6 +139,15 @@ params:
           - description
           - body
 
+      posts:
+        # Sort menu, and the field the list opens sorted by
+        sortable_fields:
+          - field: date
+            default_sort: desc # asc (or true) or desc
+          - title
+        # Columns of the table view (Sveltia CMS, Static CMS, Pages CMS)
+        summary_fields: [summary, date, draft]
+
     # Collections order, by group (Sveltia CMS draws a divider between two groups)
     # Default: pages and indexes, then the other collections, then config
     collection_groups:

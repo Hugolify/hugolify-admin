@@ -1,3 +1,0 @@
-{{- with (index site.Params.admin.collections .).sortable -}}
-sortable_fields: {{ . }},
-{{- end -}}

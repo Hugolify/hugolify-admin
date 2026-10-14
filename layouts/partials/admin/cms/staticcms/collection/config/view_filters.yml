@@ -1,1 +1,15 @@
-{{ partialCached "admin/cms/decapcms/collection/config/view_filters.yml" . }}
+{{/* Static CMS takes an object, and a `name` on each filter, derived from its label */}}
+{{- with (index site.Params.admin.collections .).view_filters }}
+view_filters: {
+  filters: [
+    {{- range . }}
+    {
+      name: {{ .label | urlize | jsonify }},
+      label: {{ .label | jsonify }},
+      field: {{ .field | jsonify }},
+      pattern: {{ .pattern | jsonify }}
+    },
+    {{- end }}
+  ]
+},
+{{- end -}}
