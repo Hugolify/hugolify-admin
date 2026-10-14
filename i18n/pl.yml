@@ -134,6 +134,11 @@ admin:
       label:
         one: Miejsce
         other: Miejsca
+    jobs_statutes:
+      _description: Wszystkie statusy
+      label:
+        one: Status
+        other: Statusy
     jobs_tags:
       _description: Wszystkie tagi ofert pracy
       label:

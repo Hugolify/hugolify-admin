@@ -134,6 +134,11 @@ admin:
       label:
         one: 장소
         other: 장소
+    jobs_statutes:
+      _description: 모든 상태
+      label:
+        one: 상태
+        other: 상태
     jobs_tags:
       _description: 모든 제품 태그
       label:

@@ -134,6 +134,11 @@ admin:
       label:
         one: 場所
         other: 場所
+    jobs_statutes:
+      _description: すべてのステータス
+      label:
+        one: ステータス
+        other: ステータス
     jobs_tags:
       _description: すべての製品タグ
       label:

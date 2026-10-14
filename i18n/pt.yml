@@ -134,6 +134,11 @@ admin:
       label:
         one: Local
         other: Locais
+    jobs_statutes:
+      _description: Todos os estatutos
+      label:
+        one: Estatuto
+        other: Estatutos
     jobs_tags:
       _description: Todas as tags de vagas
       label:

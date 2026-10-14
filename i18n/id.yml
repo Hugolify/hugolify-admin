@@ -134,6 +134,11 @@ admin:
       label:
         one: Tempat
         other: Tempat
+    jobs_statutes:
+      _description: Semua status
+      label:
+        one: Status
+        other: Status
     jobs_tags:
       _description: Semua tag produk
       label:

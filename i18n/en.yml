@@ -130,6 +130,11 @@ admin:
       label:
         one: Place
         other: Places
+    jobs_statutes:
+      _description: All statuses
+      label:
+        one: Status
+        other: Statuses
     jobs_tags:
       _description: All products tags
       label:

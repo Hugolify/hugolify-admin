@@ -134,6 +134,11 @@ admin:
       label:
         one: Sted
         other: Steder
+    jobs_statutes:
+      _description: Alle statuser
+      label:
+        one: Status
+        other: Statuser
     jobs_tags:
       _description: Alle produkttagger
       label:

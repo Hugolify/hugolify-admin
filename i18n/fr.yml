@@ -132,6 +132,11 @@ admin:
       label:
         one: Lieu
         other: Lieux
+    jobs_statutes:
+      _description: Tous les statuts
+      label:
+        one: Statut
+        other: Statuts
     jobs_tags:
       _description: Tous les tags produits
       label:

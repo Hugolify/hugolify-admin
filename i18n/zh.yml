@@ -134,6 +134,11 @@ admin:
       label:
         one: 地点
         other: 地点
+    jobs_statutes:
+      _description: 所有状态
+      label:
+        one: 状态
+        other: 状态
     jobs_tags:
       _description: 所有职位标签
       label:

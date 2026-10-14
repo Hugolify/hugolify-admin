@@ -134,6 +134,11 @@ admin:
       label:
         one: Locatie
         other: Locaties
+    jobs_statutes:
+      _description: Alle statussen
+      label:
+        one: Status
+        other: Statussen
     jobs_tags:
       _description: Alle vacaturetags
       label:

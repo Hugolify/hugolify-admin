@@ -134,6 +134,11 @@ admin:
       label:
         one: Yer
         other: Yerler
+    jobs_statutes:
+      _description: Tüm statüler
+      label:
+        one: Statü
+        other: Statüler
     jobs_tags:
       _description: Tüm ürün etiketleri
       label:

@@ -134,6 +134,11 @@ admin:
       label:
         one: Ort
         other: Orte
+    jobs_statutes:
+      _description: Alle Status
+      label:
+        one: Status
+        other: Status
     jobs_tags:
       _description: Alle Produkt-Tags
       label:

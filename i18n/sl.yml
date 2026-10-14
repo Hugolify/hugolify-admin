@@ -134,6 +134,11 @@ admin:
       label:
         one: Mesto
         other: Mesta
+    jobs_statutes:
+      _description: Vsi statusi
+      label:
+        one: Status
+        other: Statusi
     jobs_tags:
       _description: Vse oznake delovnih mest
       label:

@@ -134,6 +134,11 @@ admin:
       label:
         one: Hely
         other: Helyek
+    jobs_statutes:
+      _description: Minden státusz
+      label:
+        one: Státusz
+        other: Státuszok
     jobs_tags:
       _description: Minden termékcímke
       label:

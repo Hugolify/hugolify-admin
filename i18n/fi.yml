@@ -136,6 +136,11 @@ admin:
       label:
         one: Paikka
         other: Paikat
+    jobs_statutes:
+      _description: Kaikki tilat
+      label:
+        one: Tila
+        other: Tilat
     jobs_tags:
       _description: Kaikki tuotetunnisteet
       label:

@@ -134,6 +134,11 @@ admin:
       label:
         one: Luogo
         other: Luoghi
+    jobs_statutes:
+      _description: Tutti gli status
+      label:
+        one: Status
+        other: Status
     jobs_tags:
       _description: Tutti i tag dei prodotti
       label:

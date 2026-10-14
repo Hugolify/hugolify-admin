@@ -134,6 +134,11 @@ admin:
       label:
         one: Място
         other: Места
+    jobs_statutes:
+      _description: Всички статути
+      label:
+        one: Статут
+        other: Статути
     jobs_tags:
       _description: Всички етикети на продукти
       label:

@@ -134,6 +134,11 @@ admin:
       label:
         one: स्थान
         other: स्थान
+    jobs_statutes:
+      _description: सभी स्थितियाँ
+      label:
+        one: स्थिति
+        other: स्थितियाँ
     jobs_tags:
       _description: सभी उत्पाद टैग
       label:

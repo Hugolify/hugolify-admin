@@ -134,6 +134,11 @@ admin:
       label:
         one: Plats
         other: Platser
+    jobs_statutes:
+      _description: Alla statusar
+      label:
+        one: Status
+        other: Statusar
     jobs_tags:
       _description: Alla produkttaggar
       label:

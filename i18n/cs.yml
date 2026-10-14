@@ -134,6 +134,11 @@ admin:
       label:
         one: Místo
         other: Místa
+    jobs_statutes:
+      _description: Všechny statusy
+      label:
+        one: Status
+        other: Statusy
     jobs_tags:
       _description: Všechny štítky produktů
       label:
