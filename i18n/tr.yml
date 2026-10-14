@@ -2,8 +2,6 @@ admin:
   blocks:
     alert:
       label: Uyarı
-    alert_block:
-      label: Uyarı bloğu
     audio:
       label: Ses
     chart:
@@ -62,8 +60,6 @@ admin:
       label: Başlık
     video:
       label: Video
-    vimeo:
-      label: Vimeo
   collections:
     authors:
       label:
@@ -299,6 +295,7 @@ admin:
       zipcode:
         label: Posta Kodu
     align:
+      hint: Metin hizalaması
       label: Hizalama
       options:
         center: Orta
@@ -410,6 +407,8 @@ admin:
       label:
         one: İletişim
         other: İletişimler
+    contents:
+      label: İçerikler
     controls:
       label: Kontroller
     coordinates:
@@ -440,6 +439,7 @@ admin:
         önizleme
       label: Açıklama
     details:
+      label: Detaylar
       summary:
         hint: 'Öğenin görünen başlığı, her zaman gösterilir (ör.: SSS içindeki soru)'
       title:
@@ -488,6 +488,8 @@ admin:
         other: Ücretler
     figure:
       label: Şekil
+    file:
+      label: Dosya
     firstname:
       label: Ad
     form:
@@ -552,6 +554,7 @@ admin:
     gallery:
       label: Galeri
     grid:
+      hint: Yatay boyut (mobil hariç)
       label: Izgara
       options:
         container: Konteyner
@@ -648,6 +651,7 @@ admin:
     lastname:
       label: Soyad
     layout:
+      hint: Görüntüleme türü (liste, karusel, ızgara)
       label: Düzen
       options:
         carousel: Karusel
@@ -663,6 +667,7 @@ admin:
     limit:
       label: Sınır
       hint: Gösterilecek öğeler
+      hint_gauge: örn. 100
     links:
       label:
         one: Bağlantı
@@ -678,6 +683,9 @@ admin:
       label: İsim
     map:
       label: Harita
+    markers:
+      hint: 'JSON koordinatları. örn. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
+      label: İşaretçiler
     newsletter:
       form:
         label: Form
@@ -691,6 +699,7 @@ admin:
         one: Teklif
         other: Teklifler
     offset:
+      hint: Yatay konum (mobil hariç)
       label: Ofset
       options:
         center: Orta
@@ -862,15 +871,23 @@ admin:
         Sadece küçük harfler, sayılar ve tireler içerir, boşluk,
         aksan veya özel karakterler içermez
     socials:
+      dailymotion:
+        _id: Dailymotion Kimliği
+        label: Dailymotion
       label:
         one: Sosyal
         other: Sosyaller
       platform: Platform
+      twitch:
+        _id: Twitch Kimliği
+        label: Twitch
       twitter:
+        _id: Twitter Kimliği
         label: Twitter/X
         hint: Kullanıcı adı
-    twitch:
-      label: Twitch
+      youtube:
+        _id: Youtube Kimliği
+        label: Youtube
     sold:
       label: Satıldı/kiralandı?
     state:
@@ -975,6 +992,7 @@ admin:
       label: Yakınlaştır
   files:
     banner: Sitenin üst kısmındaki bilgi afişi
+    blocks: Bloklar – Her blok türünün varsayılan düzeni ve görünümü
     credit: Sitenin alt kısmındaki krediler
     footer: Sitenin alt kısmındaki bilgi metni
     nav:
@@ -1000,6 +1018,8 @@ admin:
   shortcodes:
     alert:
       label: Uyarı
+    alert_block:
+      label: Uyarı bloğu
     badge:
       label: Rozet
     blank_link:
@@ -1019,13 +1039,14 @@ admin:
     map:
       label: Harita
     twitter:
-      _id: Twitter Kimliği
       label: Twitter / X
-      user: Twitter kullanıcı adı
     span_lang:
       label: Span lang
+    twitch:
+      label: Twitch
     video:
       label: Video
+    vimeo:
+      label: Vimeo
     youtube:
-      _id: Youtube Kimliği
       label: Youtube

@@ -328,8 +328,8 @@ admin:
       label: Badge
     blocks:
       label:
-        one: Bloc
-        other: Blocs
+        one: Block
+        other: Blocks
     body:
       label: Body
     breakpoints:
@@ -482,6 +482,8 @@ admin:
         other: Fees
     figure:
       label: Figure
+    file:
+      label: File
     firstname:
       label: Firstname
     form:

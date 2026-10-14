@@ -2,8 +2,6 @@ admin:
   blocks:
     alert:
       label: 알림
-    alert_block:
-      label: 알림 블록
     audio:
       label: 오디오
     chart:
@@ -62,8 +60,6 @@ admin:
       label: 제목
     video:
       label: 동영상
-    vimeo:
-      label: Vimeo
   collections:
     authors:
       label:
@@ -299,6 +295,7 @@ admin:
       zipcode:
         label: 우편번호
     align:
+      hint: 텍스트 정렬
       label: 정렬
       options:
         center: 가운데
@@ -410,6 +407,8 @@ admin:
       label:
         one: 연락처
         other: 연락처
+    contents:
+      label: 콘텐츠
     controls:
       label: 컨트롤
     coordinates:
@@ -440,6 +439,7 @@ admin:
         미리보기에 표시됩니다
       label: 설명
     details:
+      label: 세부 정보
       summary:
         hint: '항목의 표시 제목으로 항상 표시됩니다 (예: FAQ의 질문)'
       title:
@@ -488,6 +488,8 @@ admin:
         other: 수수료
     figure:
       label: 그림
+    file:
+      label: 파일
     firstname:
       label: 이름
     form:
@@ -552,6 +554,7 @@ admin:
     gallery:
       label: 갤러리
     grid:
+      hint: 가로 크기 (모바일 제외)
       label: 그리드
       options:
         container: 컨테이너
@@ -648,6 +651,7 @@ admin:
     lastname:
       label: 성
     layout:
+      hint: 표시 유형 (목록, 캐러셀, 그리드)
       label: 레이아웃
       options:
         carousel: 캐러셀
@@ -663,6 +667,7 @@ admin:
     limit:
       label: 제한
       hint: 표시할 항목
+      hint_gauge: '예: 100'
     links:
       label:
         one: 링크
@@ -678,6 +683,9 @@ admin:
       label: 이름
     map:
       label: 지도
+    markers:
+      hint: 'JSON 좌표. 예: {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
+      label: 마커
     newsletter:
       form:
         label: 양식
@@ -691,6 +699,7 @@ admin:
         one: 제안
         other: 제안
     offset:
+      hint: 가로 위치 (모바일 제외)
       label: 오프셋
       options:
         center: 가운데
@@ -862,15 +871,23 @@ admin:
         소문자, 숫자 및 하이픈만 포함하며 공백,
         악센트 또는 특수 문자는 포함하지 않음
     socials:
+      dailymotion:
+        _id: Dailymotion ID
+        label: Dailymotion
       label:
         one: 소셜
         other: 소셜
       platform: 플랫폼
+      twitch:
+        _id: Twitch ID
+        label: Twitch
       twitter:
+        _id: Twitter ID
         label: Twitter/X
         hint: 사용자 이름
-    twitch:
-      label: Twitch
+      youtube:
+        _id: Youtube ID
+        label: Youtube
     sold:
       label: 판매됨/임대됨?
     state:
@@ -975,6 +992,7 @@ admin:
       label: 줌
   files:
     banner: 사이트 상단의 정보 배너
+    blocks: 블록 – 각 블록 유형의 기본 레이아웃 및 모양
     credit: 사이트 하단의 크레딧
     footer: 사이트 하단의 정보 텍스트
     nav:
@@ -1000,6 +1018,8 @@ admin:
   shortcodes:
     alert:
       label: 알림
+    alert_block:
+      label: 알림 블록
     badge:
       label: 배지
     blank_link:
@@ -1019,13 +1039,14 @@ admin:
     map:
       label: 지도
     twitter:
-      _id: Twitter ID
       label: Twitter / X
-      user: Twitter 사용자 이름
     span_lang:
       label: Span lang
+    twitch:
+      label: Twitch
     video:
       label: Video
+    vimeo:
+      label: Vimeo
     youtube:
-      _id: Youtube ID
       label: Youtube

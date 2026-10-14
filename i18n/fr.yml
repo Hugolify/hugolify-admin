@@ -482,6 +482,8 @@ admin:
         other: Honoraires
     figure:
       label: Figure
+    file:
+      label: Fichier
     firstname:
       label: Prénom
     form:
