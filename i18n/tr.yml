@@ -280,6 +280,12 @@ admin:
         one: Etiket
         other: Etiketler
   fields:
+    abbr:
+      label: Kısaltma
+    abbreviations:
+      label:
+        one: Kısaltma
+        other: Kısaltmalar
     address:
       city:
         label: Şehir
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Yakınlaştır
   files:
+    abbr:
+      label: Kısaltmalar
     banner: Sitenin üst kısmındaki bilgi afişi
     blocks: Bloklar – Her blok türünün varsayılan düzeni ve görünümü
     credit: Sitenin alt kısmındaki krediler
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: Yıl
   shortcodes:
+    abbr:
+      label: Kısaltma
     alert:
       label: Uyarı
     alert_block:

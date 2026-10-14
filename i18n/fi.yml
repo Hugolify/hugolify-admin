@@ -282,6 +282,12 @@ admin:
         one: Tunniste
         other: Tunnisteet
   fields:
+    abbr:
+      label: Lyhenne
+    abbreviations:
+      label:
+        one: Lyhenne
+        other: Lyhenteet
     address:
       city:
         label: Kaupunki
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Lähennä
   files:
+    abbr:
+      label: Lyhenteet
     banner: Tietopalkki sivuston yläosassa
     blocks: Lohkot – Kunkin lohkotyypin oletusasettelu ja -ulkoasu
     credit: Tekijätiedot sivuston alaosassa
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: Vuosi
   shortcodes:
+    abbr:
+      label: Lyhenne
     alert:
       label: Hälytys
     alert_block:

@@ -280,6 +280,12 @@ admin:
         one: Tag
         other: Tags
   fields:
+    abbr:
+      label: Afkorting
+    abbreviations:
+      label:
+        one: Afkorting
+        other: Afkortingen
     address:
       city:
         label: Stad
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Zoom
   files:
+    abbr:
+      label: Afkortingen
     banner: Informatiebanner bovenaan de site
     blocks: Blokken – Standaardopmaak en -weergave van elk bloktype
     credit: Credits onderaan de site
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: Jaar
   shortcodes:
+    abbr:
+      label: Afkorting
     alert:
       label: Waarschuwing
     alert_block:

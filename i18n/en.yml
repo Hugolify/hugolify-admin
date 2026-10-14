@@ -280,6 +280,12 @@ admin:
         one: Tag
         other: Tags
   fields:
+    abbr:
+      label: Abbreviation
+    abbreviations:
+      label:
+        one: Abbreviation
+        other: Abbreviations
     address:
       city:
         label: City
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Zoom
   files:
+    abbr:
+      label: Abbreviations
     banner: Header – Information banner at the top of the site
     blocks: Blocks – Default layout and appearance of each block type
     credit: Footer – Credits at the bottom of the site
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: Year
   shortcodes:
+    abbr:
+      label: Abbreviation
     alert:
       label: Alert
     alert_block:

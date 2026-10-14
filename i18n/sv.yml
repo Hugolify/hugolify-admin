@@ -280,6 +280,12 @@ admin:
         one: Tagg
         other: Taggar
   fields:
+    abbr:
+      label: Förkortning
+    abbreviations:
+      label:
+        one: Förkortning
+        other: Förkortningar
     address:
       city:
         label: Stad
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Zoom
   files:
+    abbr:
+      label: Förkortningar
     banner: Informationsbanner högst upp på webbplatsen
     blocks: Block – Standardlayout och utseende för varje blocktyp
     credit: Krediter längst ner på webbplatsen
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: År
   shortcodes:
+    abbr:
+      label: Förkortning
     alert:
       label: Varning
     alert_block:

@@ -280,6 +280,12 @@ admin:
         one: Tag
         other: Tagi
   fields:
+    abbr:
+      label: Skrót
+    abbreviations:
+      label:
+        one: Skrót
+        other: Skróty
     address:
       city:
         label: Miasto
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Powiększenie
   files:
+    abbr:
+      label: Skróty
     banner: Baner informacyjny u góry strony
     blocks: Bloki – Domyślny układ i wygląd każdego typu bloku
     credit: Kredyty u dołu strony
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: Rok
   shortcodes:
+    abbr:
+      label: Skrót
     alert:
       label: Alert
     alert_block:

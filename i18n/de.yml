@@ -280,6 +280,12 @@ admin:
         one: Tag
         other: Tags
   fields:
+    abbr:
+      label: Abkürzung
+    abbreviations:
+      label:
+        one: Abkürzung
+        other: Abkürzungen
     address:
       city:
         label: Stadt
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Zoom
   files:
+    abbr:
+      label: Abkürzungen
     banner: Informationsbanner oben auf der Website
     blocks: Blöcke – Standardlayout und -erscheinungsbild jedes Blocktyps
     credit: Credits unten auf der Website
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: Jahr
   shortcodes:
+    abbr:
+      label: Abkürzung
     alert:
       label: Warnung
     alert_block:

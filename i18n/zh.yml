@@ -280,6 +280,12 @@ admin:
         one: 标签
         other: 标签
   fields:
+    abbr:
+      label: 缩写
+    abbreviations:
+      label:
+        one: 缩写
+        other: 缩写
     address:
       city:
         label: 城市
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: 缩放
   files:
+    abbr:
+      label: 缩写
     banner: 网站顶部的信息横幅
     blocks: 块 – 每种块类型的默认布局和外观
     credit: 网站底部的鸣谢
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: 年份
   shortcodes:
+    abbr:
+      label: 缩写
     alert:
       label: 警报
     alert_block:

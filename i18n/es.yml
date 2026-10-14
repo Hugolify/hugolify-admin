@@ -280,6 +280,12 @@ admin:
         one: Etiqueta
         other: Etiquetas
   fields:
+    abbr:
+      label: Abreviatura
+    abbreviations:
+      label:
+        one: Abreviatura
+        other: Abreviaturas
     address:
       city:
         label: Ciudad
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Zoom
   files:
+    abbr:
+      label: Abreviaturas
     banner: Banner de información en la parte superior del sitio
     blocks: Bloques – Diseño y apariencia predeterminados de cada tipo de bloque
     credit: Créditos en la parte inferior del sitio
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: Año
   shortcodes:
+    abbr:
+      label: Abreviatura
     alert:
       label: Alerta
     alert_block:

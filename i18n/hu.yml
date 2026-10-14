@@ -280,6 +280,12 @@ admin:
         one: Címke
         other: Címkék
   fields:
+    abbr:
+      label: Rövidítés
+    abbreviations:
+      label:
+        one: Rövidítés
+        other: Rövidítések
     address:
       city:
         label: Város
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Nagyítás
   files:
+    abbr:
+      label: Rövidítések
     banner: Információs banner az oldal tetején
     blocks: Blokkok – Az egyes blokktípusok alapértelmezett elrendezése és megjelenése
     credit: Kreditek az oldal alján
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: Év
   shortcodes:
+    abbr:
+      label: Rövidítés
     alert:
       label: Figyelmeztetés
     alert_block:

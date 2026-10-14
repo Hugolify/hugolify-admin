@@ -280,6 +280,12 @@ admin:
         one: टैग
         other: टैग
   fields:
+    abbr:
+      label: संक्षिप्त
+    abbreviations:
+      label:
+        one: संक्षिप्त
+        other: संक्षिप्त
     address:
       city:
         label: शहर
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: ज़ूम
   files:
+    abbr:
+      label: संक्षिप्त
     banner: साइट के शीर्ष पर सूचना बैनर
     blocks: ब्लॉक – प्रत्येक ब्लॉक प्रकार का डिफ़ॉल्ट लेआउट और रूप
     credit: साइट के नीचे क्रेडिट
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: वर्ष
   shortcodes:
+    abbr:
+      label: संक्षिप्त
     alert:
       label: चेतावनी
     alert_block:

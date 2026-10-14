@@ -280,6 +280,12 @@ admin:
         one: Етикет
         other: Етикети
   fields:
+    abbr:
+      label: Съкращение
+    abbreviations:
+      label:
+        one: Съкращение
+        other: Съкращения
     address:
       city:
         label: Град
@@ -991,6 +997,8 @@ admin:
     zoom:
       label: Увеличение
   files:
+    abbr:
+      label: Съкращения
     banner: Информационен банер в горната част на сайта
     blocks: Блокове – Оформление и външен вид по подразбиране на всеки тип блок
     credit: Кредити в долната част на сайта
@@ -1016,6 +1024,8 @@ admin:
   group:
     year: Година
   shortcodes:
+    abbr:
+      label: Съкращение
     alert:
       label: Сигнал
     alert_block:

@@ -295,6 +295,7 @@ params:
         - video
         - vimeo
         - youtube
+        - abbr
 
     # Widgets
     widgets:
