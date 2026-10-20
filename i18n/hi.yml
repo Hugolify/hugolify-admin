@@ -673,8 +673,7 @@ admin:
         one: लिंक
         other: लिंक
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'केवल डिफ़ॉल्ट भाषा में भरें; बहुभाषी साइट पर प्रत्येक भाषा के लिए एक अनुभाग जोड़ें। दस्तावेज़: https://llmstxt.org/'
     location:
       label: स्थान
     loop:
@@ -995,6 +994,8 @@ admin:
     blocks: ब्लॉक – प्रत्येक ब्लॉक प्रकार का डिफ़ॉल्ट लेआउट और रूप
     credit: साइट के नीचे क्रेडिट
     footer: साइट के नीचे सूचना पाठ
+    llms: 'GEO – भाषा मॉडल के लिए साइट इंडेक्स (llms.txt)'
+    llms_full: 'GEO – भाषा मॉडल के लिए साइट का पूरा पाठ (llms-full.txt)'
     nav:
       footer:
         primary: "फ़ुटर – प्राथमिक नेविगेशन"
@@ -1011,7 +1012,7 @@ admin:
       social: सोशल नेविगेशन
     schema: "संरचित डेटा – संगठन और schema.org"
     seo:
-      label: वैश्विक एसईओ
+      label: 'SEO – खोज इंजनों के लिए साइट मेटाडेटा'
       title: वेबसाइट का नाम
   group:
     year: वर्ष

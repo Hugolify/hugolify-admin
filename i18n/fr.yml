@@ -665,8 +665,7 @@ admin:
         one: Lien
         other: Liens
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'À remplir dans la langue par défaut uniquement. Documentation : https://llmstxt.org/'
     location:
       label: Lieu
     loop:
@@ -989,6 +988,8 @@ admin:
     blocks: Blocs – Mise en page et apparence par défaut de chaque type de bloc
     credit: Footer – Crédits en bas du site
     footer: Footer – Blocs et informations en bas du site
+    llms: 'Référencement – GEO, index du site pour les modèles de langage (llms.txt)'
+    llms_full: 'Référencement – GEO, texte complet du site pour les modèles de langage (llms-full.txt)'
     nav:
       footer:
         primary: "Footer – Navigation principale"
@@ -1005,7 +1006,7 @@ admin:
       social: Navigation réseaux sociaux
     schema: "Données structurées – Organisation et schema.org"
     seo:
-      label: Référencement – SEO (Search Engine Optimization) global
+      label: 'Référencement – SEO, métadonnées du site pour les moteurs de recherche'
       title: Nom du site
   group:
     year: Année

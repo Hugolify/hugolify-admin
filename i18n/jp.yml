@@ -673,8 +673,7 @@ admin:
         one: リンク
         other: リンク
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'デフォルト言語でのみ入力してください。多言語サイトでは、言語ごとにセクションを追加します。ドキュメント: https://llmstxt.org/'
     location:
       label: 場所
     loop:
@@ -995,6 +994,8 @@ admin:
     blocks: ブロック – 各ブロックタイプのデフォルトのレイアウトと外観
     credit: サイト下部のクレジット
     footer: サイト下部の情報テキスト
+    llms: 'GEO – 言語モデル向けサイトインデックス (llms.txt)'
+    llms_full: 'GEO – 言語モデル向けサイト全文 (llms-full.txt)'
     nav:
       footer:
         primary: "フッター – プライマリナビゲーション"
@@ -1011,7 +1012,7 @@ admin:
       social: ソーシャルナビゲーション
     schema: "構造化データ – 組織と schema.org"
     seo:
-      label: グローバルSEO
+      label: 'SEO – 検索エンジン向けサイトメタデータ'
       title: ウェブサイト名
   group:
     year: 年

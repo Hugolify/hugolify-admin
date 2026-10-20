@@ -673,8 +673,7 @@ admin:
         one: Povezava
         other: Povezave
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Izpolnite samo v privzetem jeziku; na večjezičnem spletnem mestu dodajte en razdelek za vsak jezik. Dokumentacija: https://llmstxt.org/'
     location:
       label: Lokacija
     loop:
@@ -995,6 +994,8 @@ admin:
     blocks: Bloki – Privzeta postavitev in videz vsake vrste bloka
     credit: Zasluge na dnu strani
     footer: Informacijsko besedilo na dnu strani
+    llms: 'GEO – Kazalo spletnega mesta za jezikovne modele (llms.txt)'
+    llms_full: 'GEO – Celotno besedilo spletnega mesta za jezikovne modele (llms-full.txt)'
     nav:
       footer:
         primary: "Noga – Primarna navigacija"
@@ -1011,7 +1012,7 @@ admin:
       social: Družbena navigacija
     schema: "Strukturirani podatki – Organizacija in schema.org"
     seo:
-      label: Globalni SEO
+      label: 'SEO – Metapodatki spletnega mesta za iskalnike'
       title: Ime spletne strani
   group:
     year: Leto

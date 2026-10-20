@@ -1,0 +1,17 @@
+{{/*  Body of /llms.txt (https://llmstxt.org/), the index of the site for
+      language models. The theme's content/llms.md renders it at the root of
+      the site; left empty, no file is published.
+
+      Not translated: agents look for one file, at the root, so every language
+      goes in it. Decap CMS ignores `i18n: false` in the translated config
+      collection and nests the body under its default locale: the theme's
+      func/GetUntranslatedData.html reads both shapes.  */}}
+{{- $fields := slice "llms" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "file" "llms" "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.files.llms" }}',
+  name: 'llms',
+  file: 'data/llms.yml',
+  i18n: false,
+  {{- partial "admin/fields/_fields.yml" $fields -}}
+}

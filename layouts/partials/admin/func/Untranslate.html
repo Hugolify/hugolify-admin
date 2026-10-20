@@ -1,0 +1,16 @@
+{{/*
+  Untranslate
+  ===========
+  Marks every field of a config file as not translated, nested ones included.
+
+  A file such as data/schema.yml or data/blocks.yml holds one value for the
+  whole site, but its fields are shared with translated entries, where most of
+  them are `i18n: true` or 'duplicate': each widget writes its own setting,
+  whatever the file says. Decap CMS reads them field by field inside the
+  translated config collection, and would ask for each one in every language.
+  This rewrites them all to false.
+
+  Input  : string, fields as a field or widget partial writes them
+  Output : string, the same with every i18n set to false
+*/}}
+{{- return safeHTML (replaceRE `(i18n"?\s*:\s*)(true|'duplicate'|"duplicate"|'translate'|"translate")` "${1}false" .) -}}

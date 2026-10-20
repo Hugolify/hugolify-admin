@@ -53,13 +53,13 @@
           {{- end -}}
         {{- end -}}
       {{- end }}
-      {{ partial "admin/widgets/object.js" (dict
+      {{ partial "admin/func/Untranslate.html" (partial "admin/widgets/object.js" (dict
         "label" $label
         "name" $name
         "i18n" false
         "collapsed" $collapsed
         "fields" (slice (dict "ui" (dict "fields" $ui "collapsed" $collapsed)))
-      ) }},
+      )) }},
     {{- end }}
   {{- if $cloudcannon }}
   }
