@@ -95,6 +95,7 @@ params:
     # Auth
     auth:
       app_id: # The Client ID provided by Gitea/GitLab
+      auth_type: # pkce for GitLab with app_id (Decap and Sveltia CMS)
       api_root: # API URL of your Gitea/GitLab instance
       auth_endpoint: # Auth endpoint of your Gitea/GitLab instance
       base_url: # Root URL of your Gitea/GitLab instance
@@ -148,6 +149,9 @@ params:
           - title
         # Columns of the table view (Sveltia CMS, Static CMS, Pages CMS)
         summary_fields: [summary, date, draft]
+        # Edit many entries at once in a table (Sveltia CMS): on by default, off under
+        # editorial_workflow or preview. false, or the fields to show
+        bulk_edit: [title, draft]
 
     # Collections order, by group (Sveltia CMS draws a divider between two groups)
     # Default: pages and indexes, then the other collections, then config

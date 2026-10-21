@@ -1,5 +1,9 @@
-{{- $subfields := slice "quote" "author" -}} 
-{{- $items := dict "items" (dict "name" "testimonials" "fields" $subfields) -}}
+{{- $subfields := slice "quote" "author" -}}
+{{/* The photo of the author, unless the site takes it out of the author fields:
+  Sveltia CMS rejects a thumbnail that names no Image subfield */}}
+{{- $author := partial "admin/func/GetFields.html" (dict "field" "author" "fields" (slice "image_simple")) -}}
+{{- $thumbnail := cond (in $author "image_simple") "author.image.src" false -}}
+{{- $items := dict "items" (dict "name" "testimonials" "fields" $subfields "thumbnail" $thumbnail) -}}
 {{- $layout := dict "layout" (slice "grid" "carousel") -}} 
 {{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "scrollsnap" "carousel" -}} 
 {{- $ui := dict "ui" $uiFields -}}
