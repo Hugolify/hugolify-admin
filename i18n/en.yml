@@ -827,6 +827,9 @@ admin:
         sale: Sale
     reference:
       label: Reference
+    rel:
+      hint: "Value of the link rel attribute. «me» marks a profile of the same identity (Mastodon / IndieWeb verification). Leave empty to omit it."
+      label: Rel
     rent:
       label: Rent?
     required:

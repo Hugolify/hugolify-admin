@@ -833,6 +833,9 @@ admin:
         sale: Eladás
     reference:
       label: Referencia
+    rel:
+      hint: "A link rel attribútumának értéke. A „me” ugyanazon személy profilját jelöli (Mastodon / IndieWeb igazolás). Hagyd üresen a kihagyáshoz."
+      label: Rel
     rent:
       label: Bérlés?
     required:

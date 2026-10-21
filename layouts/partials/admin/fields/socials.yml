@@ -1,6 +1,13 @@
+{{/*
+  `socials` list: platform, url and optional rel.
+
+  The `rel` key is opt-in per entry: `me` marks the profile as the
+  same identity (Mastodon / IndieWeb cross-verification).
+*/}}
 {{- $fields := slice 
   "socials_platform" 
-  "url" -}}
+  "url"
+  "rel" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 
 {{- $args := dict 

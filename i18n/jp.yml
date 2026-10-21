@@ -833,6 +833,9 @@ admin:
         sale: 売買
     reference:
       label: 参照
+    rel:
+      hint: "リンクのrel属性の値。「me」は同じ人物のプロフィールを示します（Mastodon / IndieWeb認証）。追加しない場合は空欄のままにします。"
+      label: Rel
     rent:
       label: 賃貸済み?
     required:

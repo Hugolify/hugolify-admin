@@ -825,6 +825,9 @@ admin:
         sale: Vente
     reference:
       label: Reference
+    rel:
+      hint: "Valeur de l'attribut rel du lien. «me» signale un profil de la même identité (vérification Mastodon / IndieWeb). Laisser vide pour ne pas l'ajouter."
+      label: Rel
     rent:
       label: Loué ?
     required:

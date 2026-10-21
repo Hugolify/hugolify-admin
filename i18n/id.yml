@@ -833,6 +833,9 @@ admin:
         sale: Jual
     reference:
       label: Referensi
+    rel:
+      hint: "Nilai atribut rel tautan. «me» menandai profil dari identitas yang sama (verifikasi Mastodon / IndieWeb). Biarkan kosong untuk menghilangkannya."
+      label: Rel
     rent:
       label: Sewa?
     required:

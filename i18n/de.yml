@@ -833,6 +833,9 @@ admin:
         sale: Verkauf
     reference:
       label: Referenz
+    rel:
+      hint: "Wert des rel-Attributs des Links. „me“ kennzeichnet ein Profil derselben Identität (Mastodon-/IndieWeb-Verifizierung). Leer lassen, um es wegzulassen."
+      label: Rel
     rent:
       label: Vermietet?
     required:
