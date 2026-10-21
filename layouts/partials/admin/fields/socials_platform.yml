@@ -1,16 +1,19 @@
 
-{{- $options := slice "facebook" 
+{{- $options := slice "bluesky" 
+  "facebook" 
   "github" 
+  "gitlab" 
   "google" 
   "instagram" 
   "linkedin" 
   "mastodon" 
+  "peertube" 
   "pinterest" 
   "threads" 
   "tiktok" 
   "twitch" 
-  "twitter" 
   "vimeo" 
+  "x" 
   "youtube" }}
 {{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
