@@ -19,6 +19,9 @@ backend:
   {{- with .app_id }}
   app_id: {{ . }}
   {{- end }}
+  {{- with .auth_type }}
+  auth_type: {{ . }}
+  {{- end }}
   {{- with .api_root }}
   api_root: {{ . }}
   {{- end }}
@@ -39,7 +42,9 @@ i18n:
 
 local_backend: {{ site.Params.admin.local_backend | default true }}
 locale: {{ site.Params.admin.locale | default site.Language.Lang | default "en" }}
-logo_url: ./assets/logo-picto.svg
+logo:
+  src: ./assets/logo-picto.svg
+  show_in_header: true
 {{- with site.Params.admin.media.media_folder }}
 media_folder: {{ . }}
 {{- end }}

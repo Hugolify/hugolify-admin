@@ -12,6 +12,9 @@ backend:
   {{- with .app_id }}
   app_id: {{ . }}
   {{- end }}
+  {{- with .auth_type }}
+  auth_type: {{ . }}
+  {{- end }}
   {{- with .api_root }}
   api_root: {{ . }}
   {{- end }}
