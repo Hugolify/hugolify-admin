@@ -89,6 +89,13 @@ params:
         tabs: # for uploadcare
       providers: # for sveltia-cms
 
+      # Conversion on upload (Sveltia CMS): HEIC photos from phones become WebP.
+      # Add raster_image to convert every image, or set false to turn it off
+      transformations:
+        heic:
+          width: 2560
+          height: 2560
+
     nested:
       depth: 1 # 1 (default) keeps collections flat, 2 and up shows them as a folder tree
 
@@ -102,7 +109,7 @@ params:
       netlify_identity: true # Add Netlify identity
 
     preview: false
-    publish_mode: simple # simple or editorial_workflow
+    publish_mode: simple # simple or editorial_workflow, preview or an object with Sveltia CMS
     skip_ci: true # for sveltia-cms: prefix commits with [skip ci], set false to deploy on each save
 
     # Blocks

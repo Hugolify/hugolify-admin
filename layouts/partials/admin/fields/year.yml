@@ -1,6 +1,7 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.year")
   "name" "year"
+  "min" 0
   "step" 1
   -}}
 

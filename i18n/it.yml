@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Un messaggio in evidenza, come un’informazione o un avviso
       label: Avviso
     audio:
+      _description: Un lettore audio
       label: Audio
     chart:
+      _description: Un grafico creato dai tuoi dati
       label: Grafico
     comparison:
+      _description: Offerte o piani messi a confronto
       label: Confronto
     cta:
+      _description: Pulsanti verso altre pagine
       label: Invito all’azione
     datas:
+      _description: Cifre chiave, con o senza indicatori
       label: Dati
     editorial:
+      _description: Un testo con un’immagine accanto
       label: Editoriale
     embed:
+      _description: Contenuto incorporato da un altro sito
       label: Incorpora
     faq:
+      _description: Domande la cui risposta si apre al clic
       label: FAQ
     figure:
+      _description: Un’immagine con didascalia e crediti
       label: Figura
     form:
+      _description: Un modulo di contatto con i campi che preferisci
       label: Modulo
     gallery:
+      _description: Immagini che si aprono a schermo intero
       label: Galleria
     images:
+      _description: Immagini su una o due colonne
       label: Immagini
     informations:
+      _description: Schede con un’icona o un’immagine, un titolo e un testo
       label: Informazioni
     instagram:
+      _description: Gli ultimi post di un account Instagram
       label: Instagram
     latest:
+      _description: Gli ultimi contenuti di una sezione, come le notizie
       label: Ultimi elementi
     location:
       label: Posizione
     logos:
+      _description: Una fila di loghi con i loro link
       label: Loghi
     map:
+      _description: Una mappa con un indicatore o le tue sedi
       label: Mappa
     newsletter:
+      _description: Un modulo di iscrizione alla newsletter
       label: Newsletter
     paragraph:
+      _description: Un testo con un titolo e dei pulsanti
       label: Paragrafo
     paragraph-list:
+      _description: Più testi affiancati
       label: Paragrafi
     pushes:
+      _description: Schede con un’immagine o un video che portano ad altre pagine
       label: Notifiche
     quote:
+      _description: Una citazione e il suo autore
       label: Citazione
     search:
+      _description: Un campo di ricerca nel sito
       label: Ricerca
     selected:
+      _description: Contenuti scelti uno per uno, nell’ordine che preferisci
       label: Selezione {{ .section }}
     testimonials:
+      _description: Testimonianze in griglia o in carosello
       label: Testimonianze
     timeline:
+      _description: Tappe o date lungo una linea del tempo
       label: Cronologia
     title:
+      _description: Un titolo con occhiello e un testo
       label: Titolo
     video:
+      _description: Un lettore video
       label: Video
   collections:
     authors:

@@ -2,6 +2,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.instagram.label")
+  "description" (i18n "admin.blocks.instagram._description")
   "name" "instagram"
   "collapsed" false
   "fields" $fields

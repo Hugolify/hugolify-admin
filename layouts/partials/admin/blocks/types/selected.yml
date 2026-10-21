@@ -10,6 +10,7 @@
 
     {{- $args := dict 
       "label" (i18n "admin.blocks.selected.label" (dict "section" $collection_name))
+      "description" (i18n "admin.blocks.selected._description" (dict "section" $collection_name))
       "name" (print "selected-" $collection)
       "collapsed" false
       "fields" $fields

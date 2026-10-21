@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Ett framhävt meddelande, till exempel information eller en varning
       label: Varning
     audio:
+      _description: En ljudspelare
       label: Ljud
     chart:
+      _description: Ett diagram byggt på dina data
       label: Diagram
     comparison:
+      _description: Erbjudanden eller abonnemang jämförda sida vid sida
       label: Jämförelse
     cta:
+      _description: Knappar till andra sidor
       label: Uppmaning till handling
     datas:
+      _description: Nyckeltal, med eller utan mätare
       label: Data
     editorial:
+      _description: En text med en bild bredvid
       label: Redaktionellt
     embed:
+      _description: Inbäddat innehåll från en annan webbplats
       label: Bädda in
     faq:
+      _description: Frågor vars svar öppnas med ett klick
       label: FAQ
     figure:
+      _description: En bild med bildtext och upphov
       label: Figur
     form:
+      _description: Ett kontaktformulär med valfria fält
       label: Formulär
     gallery:
+      _description: Bilder som öppnas i helskärm
       label: Galleri
     images:
+      _description: Bilder i en eller två kolumner
       label: Bilder
     informations:
+      _description: Kort med en ikon eller en bild, en rubrik och en text
       label: Information
     instagram:
+      _description: De senaste inläggen från ett Instagram-konto
       label: Instagram
     latest:
+      _description: De senaste posterna i en sektion, till exempel nyheter
       label: Senaste objekt
     location:
       label: Plats
     logos:
+      _description: En rad logotyper med länkar
       label: Logotyper
     map:
+      _description: En karta med en markör eller dina platser
       label: Karta
     newsletter:
+      _description: Ett anmälningsformulär för nyhetsbrevet
       label: Nyhetsbrev
     paragraph:
+      _description: En text med en rubrik och knappar
       label: Stycke
     paragraph-list:
+      _description: Flera texter sida vid sida
       label: Stycken
     pushes:
+      _description: Kort med en bild eller en video som leder till andra sidor
       label: Push-notiser
     quote:
+      _description: Ett citat och dess upphovsperson
       label: Citat
     search:
+      _description: Ett sökfält för webbplatsen
       label: Sök
     selected:
+      _description: Poster som valts en och en, i den ordning du vill
       label: Urval {{ .section }}
     testimonials:
+      _description: Vittnesmål i rutnät eller karusell
       label: Vittnesmål
     timeline:
+      _description: Steg eller datum längs en tidslinje
       label: Tidslinje
     title:
+      _description: En rubrik med överrubrik och text
       label: Titel
     video:
+      _description: En videospelare
       label: Video
   collections:
     authors:

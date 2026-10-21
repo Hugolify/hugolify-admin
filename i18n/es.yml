@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Un mensaje destacado, como una información o una advertencia
       label: Alerta
     audio:
+      _description: Un reproductor de audio
       label: Audio
     chart:
+      _description: Un gráfico creado con tus datos
       label: Gráfico
     comparison:
+      _description: Ofertas o planes comparados uno al lado del otro
       label: Comparación
     cta:
+      _description: Botones que llevan a otras páginas
       label: Llamada a la acción
     datas:
+      _description: Cifras clave, con o sin indicadores
       label: Datos
     editorial:
+      _description: Un texto con una imagen al lado
       label: Editorial
     embed:
+      _description: Contenido incrustado desde otro sitio
       label: Insertar
     faq:
+      _description: Preguntas cuya respuesta se abre al hacer clic
       label: FAQ
     figure:
+      _description: Una imagen con su pie de foto y su crédito
       label: Figura
     form:
+      _description: Un formulario de contacto con los campos que elijas
       label: Formulario
     gallery:
+      _description: Imágenes que se abren a pantalla completa
       label: Galería
     images:
+      _description: Imágenes en una o dos columnas
       label: Imágenes
     informations:
+      _description: Tarjetas con un icono o una imagen, un título y un texto
       label: Informaciones
     instagram:
+      _description: Las últimas publicaciones de una cuenta de Instagram
       label: Instagram
     latest:
+      _description: Las últimas entradas de una sección, como las noticias
       label: Últimos elementos
     location:
       label: Ubicación
     logos:
+      _description: Una fila de logotipos con sus enlaces
       label: Logos
     map:
+      _description: Un mapa con un marcador o tus lugares
       label: Mapa
     newsletter:
+      _description: Un formulario de suscripción al boletín
       label: Newsletter
     paragraph:
+      _description: Un texto con un título y botones
       label: Párrafo
     paragraph-list:
+      _description: Varios textos uno al lado del otro
       label: Párrafos
     pushes:
+      _description: Tarjetas con una imagen o un vídeo que llevan a otras páginas
       label: Notificaciones
     quote:
+      _description: Una cita y su autor
       label: Cita
     search:
+      _description: Un campo de búsqueda del sitio
       label: Búsqueda
     selected:
+      _description: Entradas elegidas una a una, en el orden que quieras
       label: Selección {{ .section }}
     testimonials:
+      _description: Testimonios en cuadrícula o en carrusel
       label: Testimonios
     timeline:
+      _description: Etapas o fechas a lo largo de una línea de tiempo
       label: Cronología
     title:
+      _description: Un título con antetítulo y un texto
       label: Título
     video:
+      _description: Un reproductor de vídeo
       label: Vídeo
   collections:
     authors:

@@ -2,6 +2,7 @@
 
 {{- $args := dict
 "label" (i18n "admin.blocks.comparison.label")
+"description" (i18n "admin.blocks.comparison._description")
 "name" "comparison"
 "collapsed" false
 "fields" $fields

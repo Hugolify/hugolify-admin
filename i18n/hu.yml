@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Kiemelt üzenet, például tájékoztatás vagy figyelmeztetés
       label: Figyelmeztetés
     audio:
+      _description: Hanglejátszó
       label: Hang
     chart:
+      _description: Az adataiból készült diagram
       label: Diagram
     comparison:
+      _description: Egymás mellett összehasonlított ajánlatok vagy csomagok
       label: Összehasonlítás
     cta:
+      _description: Más oldalakra vezető gombok
       label: Cselekvésre ösztönzés
     datas:
+      _description: Kulcsszámok mérőkkel vagy anélkül
       label: Adatok
     editorial:
+      _description: Szöveg mellette egy képpel
       label: Szerkesztői
     embed:
+      _description: Másik webhelyről beágyazott tartalom
       label: Beágyazás
     faq:
+      _description: Kérdések, amelyek válasza kattintásra nyílik meg
       label: GYIK
     figure:
+      _description: Kép képaláírással és forrásmegjelöléssel
       label: Ábra
     form:
+      _description: Kapcsolatfelvételi űrlap tetszőleges mezőkkel
       label: Űrlap
     gallery:
+      _description: Teljes képernyőn megnyíló képek
       label: Galéria
     images:
+      _description: Képek egy vagy két oszlopban
       label: Képek
     informations:
+      _description: Kártyák ikonnal vagy képpel, címmel és szöveggel
       label: Információk
     instagram:
+      _description: Egy Instagram-fiók legfrissebb bejegyzései
       label: Instagram
     latest:
+      _description: Egy rovat legújabb tartalmai, például a hírek
       label: Legújabb elemek
     location:
       label: Helyszín
     logos:
+      _description: Logók sora hivatkozásokkal
       label: Logók
     map:
+      _description: Térkép jelölővel vagy a helyszíneivel
       label: Térkép
     newsletter:
+      _description: Hírlevél-feliratkozási űrlap
       label: Hírlevél
     paragraph:
+      _description: Szöveg címmel és gombokkal
       label: Bekezdés
     paragraph-list:
+      _description: Több szöveg egymás mellett
       label: Bekezdések
     pushes:
+      _description: Képes vagy videós kártyák, amelyek más oldalakra vezetnek
       label: Értesítések
     quote:
+      _description: Idézet és szerzője
       label: Idézet
     search:
+      _description: A webhely keresőmezője
       label: Keresés
     selected:
+      _description: Egyenként kiválasztott tartalmak, tetszőleges sorrendben
       label: Kiválasztás {{ .section }}
     testimonials:
+      _description: Ajánlások rácsban vagy körhintában
       label: Ajánlások
     timeline:
+      _description: Lépések vagy dátumok egy idővonalon
       label: Idővonal
     title:
+      _description: Címsor felcímmel és szöveggel
       label: Cím
     video:
+      _description: Videólejátszó
       label: Videó
   collections:
     authors:

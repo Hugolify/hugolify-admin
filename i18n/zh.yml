@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: 醒目的消息，例如通知或警告
       label: 警报
     audio:
+      _description: 音频播放器
       label: 音频
     chart:
+      _description: 根据您的数据生成的图表
       label: 图表
     comparison:
+      _description: 并排比较的方案或套餐
       label: 比较
     cta:
+      _description: 链接到其他页面的按钮
       label: 行动号召
     datas:
+      _description: 关键数据，可带或不带仪表
       label: 数据
     editorial:
+      _description: 旁边配有图片的文本
       label: 编辑
     embed:
+      _description: 嵌入自其他网站的内容
       label: 嵌入
     faq:
+      _description: 点击后展开答案的问题
       label: 常见问题
     figure:
+      _description: 带说明和署名的图片
       label: 图形
     form:
+      _description: 字段可自选的联系表单
       label: 表单
     gallery:
+      _description: 可全屏打开的图片
       label: 画廊
     images:
+      _description: 单列或双列排列的图片
       label: 图片
     informations:
+      _description: 带图标或图片、标题和文本的卡片
       label: 信息
     instagram:
+      _description: Instagram 账号的最新帖子
       label: Instagram
     latest:
+      _description: 某个栏目的最新内容，例如新闻
       label: 最新项目
     location:
       label: 位置
     logos:
+      _description: 带链接的一排标志
       label: 标志
     map:
+      _description: 带标记或显示您的地点的地图
       label: 地图
     newsletter:
+      _description: 订阅简报的表单
       label: 新闻通讯
     paragraph:
+      _description: 带标题和按钮的文本
       label: 段落
     paragraph-list:
+      _description: 并排的多段文本
       label: 段落列表
     pushes:
+      _description: 带图片或视频、链接到其他页面的卡片
       label: 推送
     quote:
+      _description: 一段引言及其作者
       label: 引用
     search:
+      _description: 站内搜索框
       label: 搜索
     selected:
+      _description: 逐个挑选并按您的顺序排列的内容
       label: 选择 {{ .section }}
     testimonials:
+      _description: 以网格或轮播展示的推荐
       label: 推荐
     timeline:
+      _description: 沿时间线排列的步骤或日期
       label: 时间线
     title:
+      _description: 带眉题和文本的标题
       label: 标题
     video:
+      _description: 视频播放器
       label: 视频
   collections:
     authors:

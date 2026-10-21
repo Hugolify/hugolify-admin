@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Открояващо се съобщение, например информация или предупреждение
       label: Сигнал
     audio:
+      _description: Аудио плейър
       label: Аудио
     chart:
+      _description: Диаграма, създадена от вашите данни
       label: Диаграма
     comparison:
+      _description: Оферти или планове, сравнени един до друг
       label: Сравнение
     cta:
+      _description: Бутони, водещи към други страници
       label: Призив за действие
     datas:
+      _description: Ключови числа, със или без индикатори
       label: Данни
     editorial:
+      _description: Текст с изображение до него
       label: Редакционен
     embed:
+      _description: Съдържание, вградено от друг сайт
       label: Вграждане
     faq:
+      _description: Въпроси, чийто отговор се отваря с клик
       label: ЧЗВ
     figure:
+      _description: Изображение с надпис и автор
       label: Фигура
     form:
+      _description: Форма за контакт с полета по ваш избор
       label: Форма
     gallery:
+      _description: Изображения, които се отварят на цял екран
       label: Галерия
     images:
+      _description: Изображения в една или две колони
       label: Изображения
     informations:
+      _description: Карти с икона или изображение, заглавие и текст
       label: Информация
     instagram:
+      _description: Най-новите публикации от профил в Instagram
       label: Instagram
     latest:
+      _description: Най-новите записи от раздел, например новини
       label: Най-нови елементи
     location:
       label: Местоположение
     logos:
+      _description: Редица лога с връзки
       label: Логота
     map:
+      _description: Карта с маркер или вашите места
       label: Карта
     newsletter:
+      _description: Форма за абонамент за бюлетин
       label: Бюлетин
     paragraph:
+      _description: Текст със заглавие и бутони
       label: Параграф
     paragraph-list:
+      _description: Няколко текста един до друг
       label: Параграфи
     pushes:
+      _description: Карти с изображение или видео, водещи към други страници
       label: Известия
     quote:
+      _description: Цитат и неговият автор
       label: Цитат
     search:
+      _description: Поле за търсене в сайта
       label: Търсене
     selected:
+      _description: Записи, избрани един по един, в желания ред
       label: Избор {{ .section }}
     testimonials:
+      _description: Отзиви в мрежа или въртележка
       label: Отзиви
     timeline:
+      _description: Етапи или дати по времева линия
       label: Времева линия
     title:
+      _description: Заглавие с надзаглавие и текст
       label: Заглавие
     video:
+      _description: Видео плейър
       label: Видео
   collections:
     authors:

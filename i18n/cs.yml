@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Zvýrazněná zpráva, například informace nebo varování
       label: Upozornění
     audio:
+      _description: Přehrávač zvuku
       label: Zvuk
     chart:
+      _description: Graf sestavený z vašich dat
       label: Graf
     comparison:
+      _description: Nabídky nebo tarify porovnané vedle sebe
       label: Porovnání
     cta:
+      _description: Tlačítka vedoucí na jiné stránky
       label: Výzva k akci
     datas:
+      _description: Klíčová čísla, s ukazateli nebo bez nich
       label: Data
     editorial:
+      _description: Text s obrázkem vedle
       label: Redakční
     embed:
+      _description: Obsah vložený z jiného webu
       label: Vložit
     faq:
+      _description: Otázky, jejichž odpověď se otevře kliknutím
       label: FAQ
     figure:
+      _description: Obrázek s popiskem a autorem
       label: Obrázek
     form:
+      _description: Kontaktní formulář s poli podle vašeho výběru
       label: Formulář
     gallery:
+      _description: Obrázky, které se otevřou na celou obrazovku
       label: Galerie
     images:
+      _description: Obrázky v jednom nebo dvou sloupcích
       label: Obrázky
     informations:
+      _description: Karty s ikonou nebo obrázkem, nadpisem a textem
       label: Informace
     instagram:
+      _description: Nejnovější příspěvky z účtu na Instagramu
       label: Instagram
     latest:
+      _description: Nejnovější položky sekce, například aktuality
       label: Nejnovější položky
     location:
       label: Poloha
     logos:
+      _description: Řada log s odkazy
       label: Loga
     map:
+      _description: Mapa se značkou nebo vašimi místy
       label: Mapa
     newsletter:
+      _description: Formulář pro přihlášení k newsletteru
       label: Newsletter
     paragraph:
+      _description: Text s nadpisem a tlačítky
       label: Odstavec
     paragraph-list:
+      _description: Několik textů vedle sebe
       label: Odstavce
     pushes:
+      _description: Karty s obrázkem nebo videem vedoucí na jiné stránky
       label: Oznámení
     quote:
+      _description: Citát a jeho autor
       label: Citát
     search:
+      _description: Vyhledávací pole webu
       label: Hledat
     selected:
+      _description: Položky vybrané jednotlivě, v pořadí podle vás
       label: Výběr {{ .section }}
     testimonials:
+      _description: Reference v mřížce nebo v karuselu
       label: Reference
     timeline:
+      _description: Kroky nebo data na časové ose
       label: Časová osa
     title:
+      _description: Nadpis s nadtitulkem a textem
       label: Titulek
     video:
+      _description: Přehrávač videa
       label: Video
   collections:
     authors:

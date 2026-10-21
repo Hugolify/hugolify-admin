@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: एक प्रमुख संदेश, जैसे कोई जानकारी या चेतावनी
       label: चेतावनी
     audio:
+      _description: एक ऑडियो प्लेयर
       label: ऑडियो
     chart:
+      _description: आपके डेटा से बना एक चार्ट
       label: चार्ट
     comparison:
+      _description: साथ-साथ तुलना किए गए ऑफ़र या प्लान
       label: तुलना
     cta:
+      _description: दूसरे पेजों पर ले जाने वाले बटन
       label: कॉल टू एक्शन
     datas:
+      _description: मुख्य आंकड़े, गेज के साथ या बिना
       label: डेटा
     editorial:
+      _description: बगल में चित्र के साथ एक टेक्स्ट
       label: संपादकीय
     embed:
+      _description: किसी दूसरी साइट से एम्बेड की गई सामग्री
       label: एम्बेड
     faq:
+      _description: ऐसे प्रश्न जिनका उत्तर क्लिक करने पर खुलता है
       label: सामान्य प्रश्न
     figure:
+      _description: कैप्शन और क्रेडिट के साथ एक चित्र
       label: आकृति
     form:
+      _description: आपकी पसंद के फ़ील्ड वाला एक संपर्क फ़ॉर्म
       label: फॉर्म
     gallery:
+      _description: पूरी स्क्रीन पर खुलने वाले चित्र
       label: गैलरी
     images:
+      _description: एक या दो कॉलम में चित्र
       label: चित्र
     informations:
+      _description: आइकन या चित्र, शीर्षक और टेक्स्ट वाले कार्ड
       label: जानकारी
     instagram:
+      _description: किसी Instagram खाते की नवीनतम पोस्ट
       label: इंस्टाग्राम
     latest:
+      _description: किसी अनुभाग की नवीनतम प्रविष्टियाँ, जैसे समाचार
       label: नवीनतम आइटम
     location:
       label: स्थान
     logos:
+      _description: लिंक के साथ लोगो की एक पंक्ति
       label: लोगो
     map:
+      _description: मार्कर या आपके स्थानों वाला एक नक्शा
       label: मानचित्र
     newsletter:
+      _description: न्यूज़लेटर साइनअप फ़ॉर्म
       label: न्यूज़लैटर
     paragraph:
+      _description: शीर्षक और बटन के साथ एक टेक्स्ट
       label: अनुच्छेद
     paragraph-list:
+      _description: साथ-साथ कई टेक्स्ट
       label: अनुच्छेद सूची
     pushes:
+      _description: चित्र या वीडियो वाले कार्ड, जो दूसरे पेजों पर ले जाते हैं
       label: सूचनाएं
     quote:
+      _description: एक उद्धरण और उसका लेखक
       label: उद्धरण
     search:
+      _description: साइट के लिए एक खोज फ़ील्ड
       label: खोज
     selected:
+      _description: एक-एक करके, आपके चुने क्रम में चुनी गई प्रविष्टियाँ
       label: चयन {{ .section }}
     testimonials:
+      _description: ग्रिड या कैरोसेल में प्रशंसापत्र
       label: प्रशंसापत्र
     timeline:
+      _description: समयरेखा पर चरण या तिथियाँ
       label: समयरेखा
     title:
+      _description: ऊपरी शीर्षक और टेक्स्ट के साथ एक शीर्षक
       label: शीर्षक
     video:
+      _description: एक वीडियो प्लेयर
       label: वीडियो
   collections:
     authors:

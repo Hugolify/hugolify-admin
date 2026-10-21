@@ -2,6 +2,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.video.label")
+  "description" (i18n "admin.blocks.video._description")
   "name" "video"
   "collapsed" false
   "fields" $fields

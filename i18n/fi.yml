@@ -1,66 +1,95 @@
 admin:
   blocks:
     alert:
+      _description: Korostettu viesti, kuten tiedote tai varoitus
       label: Hälytys
     audio:
+      _description: Äänisoitin
       label: Ääni
     chart:
+      _description: Tiedoistasi koottu kaavio
       label: Kaavio
     comparison:
+      _description: Tarjoukset tai paketit rinnakkain vertailtuina
       label: Vertailu
     cta:
+      _description: Painikkeita muille sivuille
       label: Toimintakehotus
     datas:
+      _description: Tunnuslukuja mittareilla tai ilman
       label: Tiedot
     editorial:
+      _description: Teksti, jonka vieressä on kuva
       label: Pääkirjoitus
     embed:
+      _description: Toiselta sivustolta upotettu sisältö
       label: Upotus
     faq:
+      _description: Kysymyksiä, joiden vastaus avautuu napsauttamalla
       label: UKK
     figure:
+      _description: Kuva kuvatekstin ja tekijätietojen kanssa
       label: Kuvio
     form:
+      _description: Yhteydenottolomake valitsemillasi kentillä
       label: Lomake
     gallery:
+      _description: Kuvia, jotka avautuvat koko näytölle
       label: Galleria
     images:
+      _description: Kuvia yhdessä tai kahdessa sarakkeessa
       label:
         one: Kuva
         other: Kuvat
     informations:
+      _description: Kortteja, joissa on kuvake tai kuva, otsikko ja teksti
       label: Tiedot
     instagram:
+      _description: Instagram-tilin uusimmat julkaisut
       label: Instagram
     latest:
+      _description: Osion uusimmat sisällöt, kuten uutiset
       label: Viimeisimmät kohteet
     location:
       label: Sijainti
     logos:
+      _description: Rivi logoja linkkeineen
       label: Logot
     map:
+      _description: Kartta merkillä tai toimipaikoillasi
       label: Kartta
     newsletter:
+      _description: Uutiskirjeen tilauslomake
       label: Uutiskirje
     paragraph:
+      _description: Teksti otsikolla ja painikkeilla
       label: Kappale
     paragraph-list:
+      _description: Useita tekstejä rinnakkain
       label: Kappaleet
     pushes:
+      _description: Kortteja kuvalla tai videolla, jotka vievät muille sivuille
       label: Push-viestit
     quote:
+      _description: Lainaus ja sen kirjoittaja
       label: Lainaus
     search:
+      _description: Sivuston hakukenttä
       label: Search
     selected:
+      _description: Yksitellen valittuja sisältöjä haluamassasi järjestyksessä
       label: Valinta {{ .section }}
     testimonials:
+      _description: Asiakaspalautteita ruudukkona tai karusellina
       label: Asiakaspalautteet
     timeline:
+      _description: Vaiheita tai päivämääriä aikajanalla
       label: Aikajana
     title:
+      _description: Otsikko yläotsikolla ja tekstillä
       label: Otsikko
     video:
+      _description: Videosoitin
       label: Video
   collections:
     authors:

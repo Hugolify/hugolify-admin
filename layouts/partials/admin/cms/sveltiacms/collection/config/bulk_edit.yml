@@ -3,7 +3,11 @@
   bulk edit is committed to the branch directly and would bypass the review.
   `admin.bulk_edit` sets it for every collection, the collection for itself:
   `false` turns it off, a list picks the columns, e.g. [title, draft] */}}
-{{- $bulk_edit := not (in (slice "editorial_workflow" "preview") site.Params.admin.publish_mode) -}}
+{{- $publish_mode := site.Params.admin.publish_mode -}}
+{{- if reflect.IsMap $publish_mode -}}
+  {{- $publish_mode = $publish_mode.type -}}
+{{- end -}}
+{{- $bulk_edit := not (in (slice "editorial_workflow" "preview") $publish_mode) -}}
 {{- if isset site.Params.admin "bulk_edit" -}}
   {{- $bulk_edit = site.Params.admin.bulk_edit -}}
 {{- end -}}

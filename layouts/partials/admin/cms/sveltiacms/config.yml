@@ -51,30 +51,49 @@ media_folder: {{ . }}
 {{- with site.Params.admin.media.public_folder }}
 public_folder: {{ . }}
 {{- end }}
-publish_mode: {{ site.Params.admin.publish_mode | default "simple"  }}
+{{- /* A mode, or an object with `type`, `stages`, `direct_publish`… */}}
+publish_mode: {{ site.Params.admin.publish_mode | default "simple" | jsonify }}
 
-{{- with site.Params.admin.media.cloud }}
-  {{- $slugify_filename := site.Params.admin.media.slugify_filename | default false }}
-  {{- $cloud := cond (reflect.IsSlice .) . (slice .) }}
+{{- /* Upload options shared by the default storage and the cloud services but
+  Cloudinary, written with or without a cloud service. The Asset Library takes
+  any file a field accepts, so its limit is the largest of the field limits */}}
+{{- $media := site.Params.admin.media }}
+{{- $all := dict }}
+{{- $max_file_size := 0 }}
+{{- range $key, $value := $media }}
+  {{- if and (strings.HasSuffix $key "max_file_size") (gt $value $max_file_size) }}
+    {{- $max_file_size = $value }}
+  {{- end }}
+{{- end }}
+{{- with $max_file_size }}
+  {{- $all = merge $all (dict "max_file_size" .) }}
+{{- end }}
+{{- with $media.slugify_filename }}
+  {{- $all = merge $all (dict "slugify_filename" true) }}
+{{- end }}
+{{- with $media.transformations }}
+  {{- $all = merge $all (dict "transformations" .) }}
+{{- end }}
+
+{{- if or $all (isset $media "providers") $media.cloud }}
 media_libraries:
-  default:
-    config:
-      {{- with site.Params.admin.media.max_file_size }}
-      max_file_size: {{ . | default 1000000 }}
-      {{- end }}
-      slugify_filename: {{ $slugify_filename }}
-  {{- if isset site.Params.admin.media "providers" }}
+  {{- with $all }}
+  all: {{ . | jsonify }}
+  {{- end }}
+  {{- if isset $media "providers" }}
   stock_assets:
-    {{- $providers := site.Params.admin.media.providers }}
+    {{- $providers := $media.providers }}
     {{- if eq $providers false }}
     providers: []
     {{- else }}
-    providers: 
+    providers:
       {{- range $providers }}
       - {{ . }}
       {{- end }}
     {{- end }}
   {{- end }}
+  {{- with $media.cloud }}
+  {{- $cloud := cond (reflect.IsSlice .) . (slice .) }}
   {{- range $cloud }}
   {{ .name }}:
     config:
@@ -94,6 +113,7 @@ media_libraries:
     settings:
       autoFilename: true
     {{- end }}
+  {{- end }}
   {{- end }}
 {{- end }}
 

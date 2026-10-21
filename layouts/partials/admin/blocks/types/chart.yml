@@ -2,6 +2,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.chart.label")
+  "description" (i18n "admin.blocks.chart._description")
   "name" "chart"
   "collapsed" false
   "fields" $fields

@@ -2,6 +2,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.editorial.label")
+  "description" (i18n "admin.blocks.editorial._description")
   "name" "editorial"
   "collapsed" false
   "fields" $fields

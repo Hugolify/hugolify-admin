@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Bilgi veya uyarı gibi öne çıkan bir mesaj
       label: Uyarı
     audio:
+      _description: Bir ses oynatıcı
       label: Ses
     chart:
+      _description: Verilerinizden oluşturulan bir grafik
       label: Grafik
     comparison:
+      _description: Yan yana karşılaştırılan teklifler veya planlar
       label: Karşılaştırma
     cta:
+      _description: Diğer sayfalara giden düğmeler
       label: Eylem Çağrısı
     datas:
+      _description: Göstergeli veya göstergesiz temel rakamlar
       label: Veriler
     editorial:
+      _description: Yanında görsel bulunan bir metin
       label: Editöryal
     embed:
+      _description: Başka bir siteden yerleştirilmiş içerik
       label: Gömülü
     faq:
+      _description: Cevabı tıklayınca açılan sorular
       label: SSS
     figure:
+      _description: Açıklaması ve kaynağıyla bir görsel
       label: Şekil
     form:
+      _description: Seçtiğiniz alanlara sahip bir iletişim formu
       label: Form
     gallery:
+      _description: Tam ekran açılan görseller
       label: Galeri
     images:
+      _description: Bir veya iki sütunda görseller
       label: Görseller
     informations:
+      _description: Simge veya görsel, başlık ve metin içeren kartlar
       label: Bilgiler
     instagram:
+      _description: Bir Instagram hesabının en son gönderileri
       label: Instagram
     latest:
+      _description: Bir bölümün en son içerikleri, örneğin haberler
       label: Son Öğeler
     location:
       label: Konum
     logos:
+      _description: Bağlantılarıyla bir logo dizisi
       label: Logolar
     map:
+      _description: İşaretçili veya konumlarınızı gösteren bir harita
       label: Harita
     newsletter:
+      _description: Bülten kayıt formu
       label: Bülten
     paragraph:
+      _description: Başlık ve düğmeler içeren bir metin
       label: Paragraf
     paragraph-list:
+      _description: Yan yana birkaç metin
       label: Paragraflar
     pushes:
+      _description: Diğer sayfalara yönlendiren, görsel veya videolu kartlar
       label: Bildirimler
     quote:
+      _description: Bir alıntı ve yazarı
       label: Alıntı
     search:
+      _description: Site için bir arama alanı
       label: Arama
     selected:
+      _description: Tek tek, istediğiniz sırayla seçilen içerikler
       label: Seçim {{ .section }}
     testimonials:
+      _description: Izgara veya kaydırıcı şeklinde referanslar
       label: Referanslar
     timeline:
+      _description: Bir zaman çizelgesi boyunca adımlar veya tarihler
       label: Zaman Çizelgesi
     title:
+      _description: Üst başlık ve metin içeren bir başlık
       label: Başlık
     video:
+      _description: Bir video oynatıcı
       label: Video
   collections:
     authors:

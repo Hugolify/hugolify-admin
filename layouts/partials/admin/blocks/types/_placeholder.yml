@@ -4,6 +4,7 @@
 
 {{- $args := dict 
   "label" $label
+  "description" (i18n (print "admin.blocks." . "._description"))
   "name" $name
   "collapsed" false
   "fields" $fields

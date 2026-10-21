@@ -49,6 +49,12 @@ params:
       public_folder: '/images/uploads'
       max_file_size: 700000 # 700ko
       specific_filter: false # set true to add a selected filter by image
+      # Conversion on upload, Sveltia CMS only. HEIC photos from phones, which only
+      # Safari displays, become WebP; add raster_image to convert every image
+      transformations:
+        heic:
+          width: 2560
+          height: 2560
       # Audio
       audio_max_file_size: 1000000 # 1Mo
       audio_folders: false # set true to active

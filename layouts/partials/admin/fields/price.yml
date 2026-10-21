@@ -3,6 +3,7 @@
   "hint" (i18n "admin.fields.price.hint")
   "name" "price"
   "i18n" "duplicate"
+  "min" 0
   "value_type" "float"
   -}}
 
