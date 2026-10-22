@@ -5,6 +5,7 @@
 {{ partial "admin/collections/config/filter.yml" . }}
 {{ partial "admin/collections/config/exclude.yml" . }}
 {{ partial "admin/collections/config/reorder.yml" . }}
+{{ partial "admin/collections/config/bulk_edit.yml" . }}
 {{ partial "admin/collections/config/sortable_fields.yml" . }}
 {{ partial "admin/collections/config/summary.yml" . }}
 {{ partial "admin/collections/config/summary_fields.yml" . }}

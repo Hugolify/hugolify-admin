@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Een opvallend bericht, zoals informatie of een waarschuwing
       label: Waarschuwing
     audio:
+      _description: Een audiospeler
       label: Audio
     chart:
+      _description: Een grafiek op basis van je gegevens
       label: Grafiek
     comparison:
+      _description: Aanbiedingen of abonnementen naast elkaar vergeleken
       label: Vergelijking
     cta:
+      _description: Knoppen naar andere pagina’s
       label: Call to action
     datas:
+      _description: Kerncijfers, met of zonder meters
       label: Gegevens
     editorial:
+      _description: Een tekst met een afbeelding ernaast
       label: Redactioneel
     embed:
+      _description: Ingesloten inhoud van een andere site
       label: Insluiten
     faq:
+      _description: Vragen waarvan het antwoord opent bij een klik
       label: FAQ
     figure:
+      _description: Een afbeelding met bijschrift en bronvermelding
       label: Figuur
     form:
+      _description: Een contactformulier met velden naar keuze
       label: Formulier
     gallery:
+      _description: Afbeeldingen die schermvullend openen
       label: Galerij
     images:
+      _description: Afbeeldingen in één of twee kolommen
       label: Afbeeldingen
     informations:
+      _description: Kaarten met een pictogram of afbeelding, een titel en een tekst
       label: Informatie
     instagram:
+      _description: De nieuwste berichten van een Instagram-account
       label: Instagram
     latest:
+      _description: De nieuwste items van een sectie, zoals nieuws
       label: Nieuwste items
     location:
       label: Locatie
     logos:
+      _description: Een rij logo’s met hun links
       label: Logo’s
     map:
+      _description: Een kaart met een markering of je locaties
       label: Kaart
     newsletter:
+      _description: Een aanmeldformulier voor de nieuwsbrief
       label: Nieuwsbrief
     paragraph:
+      _description: Een tekst met een titel en knoppen
       label: Paragraaf
     paragraph-list:
+      _description: Meerdere teksten naast elkaar
       label: Paragrafen
     pushes:
+      _description: Kaarten met een afbeelding of video die naar andere pagina’s leiden
       label: Uitgelicht
     quote:
+      _description: Een citaat en de auteur ervan
       label: Citaat
     search:
+      _description: Een zoekveld voor de site
       label: Zoeken
     selected:
+      _description: Items die één voor één gekozen zijn, in de volgorde die je wilt
       label: Selectie {{ .section }}
     testimonials:
+      _description: Getuigenissen in een raster of carrousel
       label: Getuigenissen
     timeline:
+      _description: Stappen of data langs een tijdlijn
       label: Tijdlijn
     title:
+      _description: Een kop met een bovenkop en een tekst
       label: Titel
     video:
+      _description: Een videospeler
       label: Video
   collections:
     authors:
@@ -810,6 +839,9 @@ admin:
         sale: Verkoop
     reference:
       label: Referentie
+    rel:
+      hint: "Waarde van het rel-attribuut van de link. «me» markeert een profiel van dezelfde identiteit (Mastodon / IndieWeb-verificatie). Laat leeg om weg te laten."
+      label: Rel
     rent:
       label: Huren?
     required:

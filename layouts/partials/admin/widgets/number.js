@@ -21,8 +21,9 @@
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
-{{- $max := .max | default false }}
-{{- $min := .min | default false }}
+{{/* 0 is a bound like any other, which `default` would drop */}}
+{{- $max := cond (isset . "max") .max false }}
+{{- $min := cond (isset . "min") .min false }}
 {{- $name := .name | default "noname" }}
 {{- $nameOverride := .nameOverride | default false }}
 {{- $range := .range | default false }}
@@ -40,11 +41,11 @@
   {{ end }}
   type: '{{ cond $range "range" "number" }}',
   options: {
-    {{ with $min }}
-    min: {{ . }},
+    {{ if ne $min false }}
+    min: {{ $min }},
     {{ end }}
-    {{ with $max }}
-    max: {{ . }},
+    {{ if ne $max false }}
+    max: {{ $max }},
     {{ end }}
     {{ with $step }}
     step: {{ . }},
@@ -67,11 +68,11 @@
   default: {{ $default }},
   {{ end }}
   options: {
-    {{ with $min }}
-    min: {{ . }},
+    {{ if ne $min false }}
+    min: {{ $min }},
     {{ end }}
-    {{ with $max }}
-    max: {{ . }},
+    {{ if ne $max false }}
+    max: {{ $max }},
     {{ end }}
     {{ with $step }}
     step: {{ . }}
@@ -91,11 +92,11 @@
   {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
   type: 'number',
   ui: {
-    {{ with $min }}
-    min: {{ . }},
+    {{ if ne $min false }}
+    min: {{ $min }},
     {{ end }}
-    {{ with $max }}
-    max: {{ . }},
+    {{ if ne $max false }}
+    max: {{ $max }},
     {{ end }}
     {{ with $step }}
     step: {{ . }}
@@ -118,11 +119,11 @@
   default: {{ $default }},
   {{ end }}
   required: {{ $required }},
-  {{ with $min }}
-  min: {{ . }},
+  {{ if ne $min false }}
+  min: {{ $min }},
   {{ end }}
-  {{ with $max }}
-  max: {{ . }},
+  {{ if ne $max false }}
+  max: {{ $max }},
   {{ end }}
   {{ with $step }}
   step: {{ . }},

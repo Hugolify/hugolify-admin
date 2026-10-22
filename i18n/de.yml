@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Eine hervorgehobene Meldung, etwa ein Hinweis oder eine Warnung
       label: Warnung
     audio:
+      _description: Ein Audioplayer
       label: Audio
     chart:
+      _description: Ein Diagramm aus Ihren Daten
       label: Diagramm
     comparison:
+      _description: Angebote oder Tarife im direkten Vergleich
       label: Vergleich
     cta:
+      _description: Schaltflächen zu anderen Seiten
       label: Handlungsaufforderung
     datas:
+      _description: Kennzahlen, mit oder ohne Anzeige
       label: Daten
     editorial:
+      _description: Ein Text mit einem Bild daneben
       label: Redaktionell
     embed:
+      _description: Von einer anderen Website eingebundener Inhalt
       label: Einbetten
     faq:
+      _description: Fragen, deren Antwort sich per Klick öffnet
       label: FAQ
     figure:
+      _description: Ein Bild mit Bildunterschrift und Bildnachweis
       label: Abbildung
     form:
+      _description: Ein Kontaktformular mit Feldern Ihrer Wahl
       label: Formular
     gallery:
+      _description: Bilder, die sich im Vollbild öffnen
       label: Galerie
     images:
+      _description: Bilder in einer oder zwei Spalten
       label: Bilder
     informations:
+      _description: Karten mit Symbol oder Bild, Titel und Text
       label: Informationen
     instagram:
+      _description: Die neuesten Beiträge eines Instagram-Kontos
       label: Instagram
     latest:
+      _description: Die neuesten Einträge eines Bereichs, etwa Neuigkeiten
       label: Neueste Elemente
     location:
       label: Standort
     logos:
+      _description: Eine Reihe von Logos mit Links
       label: Logos
     map:
+      _description: Eine Karte mit Markierung oder Ihren Standorten
       label: Karte
     newsletter:
+      _description: Ein Formular zur Newsletter-Anmeldung
       label: Newsletter
     paragraph:
+      _description: Ein Text mit Titel und Schaltflächen
       label: Absatz
     paragraph-list:
+      _description: Mehrere Texte nebeneinander
       label: Absätze
     pushes:
+      _description: Karten mit Bild oder Video, die zu anderen Seiten führen
       label: Benachrichtigungen
     quote:
+      _description: Ein Zitat und sein Urheber
       label: Zitat
     search:
+      _description: Ein Suchfeld für die Website
       label: Suche
     selected:
+      _description: Einzeln ausgewählte Einträge in Ihrer Reihenfolge
       label: Auswahl {{ .section }}
     testimonials:
+      _description: Erfahrungsberichte als Raster oder Karussell
       label: Erfahrungsberichte
     timeline:
+      _description: Etappen oder Daten entlang einer Zeitleiste
       label: Zeitleiste
     title:
+      _description: Eine Überschrift mit Dachzeile und Text
       label: Titel
     video:
+      _description: Ein Videoplayer
       label: Video
   collections:
     authors:
@@ -810,6 +839,9 @@ admin:
         sale: Verkauf
     reference:
       label: Referenz
+    rel:
+      hint: "Wert des rel-Attributs des Links. „me“ kennzeichnet ein Profil derselben Identität (Mastodon-/IndieWeb-Verifizierung). Leer lassen, um es wegzulassen."
+      label: Rel
     rent:
       label: Vermietet?
     required:

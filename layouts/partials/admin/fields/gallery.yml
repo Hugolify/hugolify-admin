@@ -11,6 +11,7 @@
   "label" (i18n "admin.fields.gallery.label")
   "name" "gallery"
   "fields" $fields
+  "thumbnail" (cond (in $fields "image_src") "src" false)
   -}}
 
 {{ partial "admin/widgets/list.js" $args }}

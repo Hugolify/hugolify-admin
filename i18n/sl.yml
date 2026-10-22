@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Poudarjeno sporočilo, na primer obvestilo ali opozorilo
       label: Opozorilo
     audio:
+      _description: Predvajalnik zvoka
       label: Avdio
     chart:
+      _description: Graf, sestavljen iz vaših podatkov
       label: Grafikon
     comparison:
+      _description: Ponudbe ali paketi, primerjani drug ob drugem
       label: Primerjava
     cta:
+      _description: Gumbi, ki vodijo na druge strani
       label: Poziv k dejanju
     datas:
+      _description: Ključne številke, z merilniki ali brez njih
       label: Podatki
     editorial:
+      _description: Besedilo s sliko ob strani
       label: Uredniški
     embed:
+      _description: Vsebina, vdelana z drugega spletnega mesta
       label: Vdelava
     faq:
+      _description: Vprašanja, katerih odgovor se odpre ob kliku
       label: Pogosta vprašanja
     figure:
+      _description: Slika z napisom in avtorjem
       label: Slika
     form:
+      _description: Kontaktni obrazec s polji po vaši izbiri
       label: Obrazec
     gallery:
+      _description: Slike, ki se odprejo čez cel zaslon
       label: Galerija
     images:
+      _description: Slike v enem ali dveh stolpcih
       label: Slike
     informations:
+      _description: Kartice z ikono ali sliko, naslovom in besedilom
       label: Informacije
     instagram:
+      _description: Najnovejše objave računa na Instagramu
       label: Instagram
     latest:
+      _description: Najnovejši vnosi rubrike, na primer novice
       label: Najnovejši elementi
     location:
       label: Lokacija
     logos:
+      _description: Vrsta logotipov s povezavami
       label: Logotipi
     map:
+      _description: Zemljevid z oznako ali vašimi lokacijami
       label: Zemljevid
     newsletter:
+      _description: Obrazec za prijavo na e-novice
       label: Novice
     paragraph:
+      _description: Besedilo z naslovom in gumbi
       label: Odstavek
     paragraph-list:
+      _description: Več besedil drug ob drugem
       label: Odstavki
     pushes:
+      _description: Kartice s sliko ali videom, ki vodijo na druge strani
       label: Izpostavljeno
     quote:
+      _description: Citat in njegov avtor
       label: Citat
     search:
+      _description: Iskalno polje spletnega mesta
       label: Iskanje
     selected:
+      _description: Vnosi, izbrani enega za drugim, v želenem vrstnem redu
       label: Izbor {{ .section }}
     testimonials:
+      _description: Mnenja v mreži ali vrtiljaku
       label: Mnenja
     timeline:
+      _description: Koraki ali datumi na časovnici
       label: Časovnica
     title:
+      _description: Naslov z nadnaslovom in besedilom
       label: Naslov
     video:
+      _description: Predvajalnik videa
       label: Video
   collections:
     authors:
@@ -810,6 +839,9 @@ admin:
         sale: Prodaja
     reference:
       label: Referenca
+    rel:
+      hint: "Vrednost atributa rel povezave. „me“ označuje profil iste identitete (preverjanje Mastodon / IndieWeb). Pustite prazno, če ga ne želite."
+      label: Rel
     rent:
       label: Najem?
     required:

@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: お知らせや警告などの強調メッセージ
       label: アラート
     audio:
+      _description: オーディオプレーヤー
       label: オーディオ
     chart:
+      _description: データから作成するグラフ
       label: チャート
     comparison:
+      _description: プランや料金を並べて比較
       label: 比較
     cta:
+      _description: 他のページへのボタン
       label: 行動喚起
     datas:
+      _description: ゲージ付きまたはなしの主要な数値
       label: データ
     editorial:
+      _description: 横に画像を配置したテキスト
       label: 編集
     embed:
+      _description: 他のサイトから埋め込んだコンテンツ
       label: 埋め込み
     faq:
+      _description: クリックで回答が開く質問
       label: よくある質問
     figure:
+      _description: キャプションとクレジット付きの画像
       label: 図
     form:
+      _description: 項目を自由に選べるお問い合わせフォーム
       label: フォーム
     gallery:
+      _description: 全画面で開く画像
       label: ギャラリー
     images:
+      _description: 1列または2列の画像
       label: 画像
     informations:
+      _description: アイコンまたは画像、タイトル、テキストのカード
       label: 情報
     instagram:
+      _description: Instagramアカウントの最新投稿
       label: Instagram
     latest:
+      _description: ニュースなど、セクションの最新エントリー
       label: 最新アイテム
     location:
       label: 場所
     logos:
+      _description: リンク付きのロゴの列
       label: ロゴ
     map:
+      _description: マーカーや拠点を表示する地図
       label: 地図
     newsletter:
+      _description: ニュースレターの登録フォーム
       label: ニュースレター
     paragraph:
+      _description: タイトルとボタン付きのテキスト
       label: 段落
     paragraph-list:
+      _description: 横に並べた複数のテキスト
       label: 段落リスト
     pushes:
+      _description: 他のページへ誘導する画像または動画のカード
       label: 通知
     quote:
+      _description: 引用とその著者
       label: 引用
     search:
+      _description: サイト内検索フィールド
       label: 検索
     selected:
+      _description: 1件ずつ選び、好きな順に並べたエントリー
       label: 選択 {{ .section }}
     testimonials:
+      _description: グリッドまたはカルーセルのお客様の声
       label: お客様の声
     timeline:
+      _description: タイムライン上のステップや日付
       label: タイムライン
     title:
+      _description: 上見出しとテキスト付きの見出し
       label: タイトル
     video:
+      _description: ビデオプレーヤー
       label: 動画
   collections:
     authors:
@@ -810,6 +839,9 @@ admin:
         sale: 売買
     reference:
       label: 参照
+    rel:
+      hint: "リンクのrel属性の値。「me」は同じ人物のプロフィールを示します（Mastodon / IndieWeb認証）。追加しない場合は空欄のままにします。"
+      label: Rel
     rent:
       label: 賃貸済み?
     required:

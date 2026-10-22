@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Wyróżniony komunikat, np. informacja lub ostrzeżenie
       label: Alert
     audio:
+      _description: Odtwarzacz audio
       label: Audio
     chart:
+      _description: Wykres utworzony z Twoich danych
       label: Wykres
     comparison:
+      _description: Oferty lub plany porównane obok siebie
       label: Porównanie
     cta:
+      _description: Przyciski prowadzące do innych stron
       label: Wezwanie do działania
     datas:
+      _description: Kluczowe liczby, ze wskaźnikami lub bez
       label: Dane
     editorial:
+      _description: Tekst z obrazem obok
       label: Redakcyjny
     embed:
+      _description: Treść osadzona z innej strony
       label: Osadzenie
     faq:
+      _description: Pytania, których odpowiedź otwiera się po kliknięciu
       label: FAQ
     figure:
+      _description: Obraz z podpisem i autorem
       label: Figura
     form:
+      _description: Formularz kontaktowy z wybranymi polami
       label: Formularz
     gallery:
+      _description: Obrazy otwierane na pełnym ekranie
       label: Galeria
     images:
+      _description: Obrazy w jednej lub dwóch kolumnach
       label: Obrazy
     informations:
+      _description: Karty z ikoną lub obrazem, tytułem i tekstem
       label: Informacje
     instagram:
+      _description: Najnowsze posty z konta na Instagramie
       label: Instagram
     latest:
+      _description: Najnowsze wpisy z sekcji, np. aktualności
       label: Najnowsze elementy
     location:
       label: Lokalizacja
     logos:
+      _description: Rząd logotypów z linkami
       label: Logotypy
     map:
+      _description: Mapa ze znacznikiem lub Twoimi lokalizacjami
       label: Mapa
     newsletter:
+      _description: Formularz zapisu do newslettera
       label: Newsletter
     paragraph:
+      _description: Tekst z tytułem i przyciskami
       label: Akapit
     paragraph-list:
+      _description: Kilka tekstów obok siebie
       label: Akapity
     pushes:
+      _description: Karty z obrazem lub filmem prowadzące do innych stron
       label: Wyróżnione
     quote:
+      _description: Cytat i jego autor
       label: Cytat
     search:
+      _description: Pole wyszukiwania w witrynie
       label: Wyszukiwanie
     selected:
+      _description: Wpisy wybrane pojedynczo, w wybranej kolejności
       label: Wybór {{ .section }}
     testimonials:
+      _description: Referencje w siatce lub karuzeli
       label: Referencje
     timeline:
+      _description: Etapy lub daty na osi czasu
       label: Oś czasu
     title:
+      _description: Nagłówek z nadtytułem i tekstem
       label: Tytuł
     video:
+      _description: Odtwarzacz wideo
       label: Wideo
   collections:
     authors:
@@ -810,6 +839,9 @@ admin:
         sale: Sprzedaż
     reference:
       label: Referencja
+    rel:
+      hint: "Wartość atrybutu rel linku. „me” oznacza profil tej samej tożsamości (weryfikacja Mastodon / IndieWeb). Pozostaw puste, aby pominąć."
+      label: Rel
     rent:
       label: Wynajem?
     required:

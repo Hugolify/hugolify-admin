@@ -1,0 +1,35 @@
+{{/* Decap, Netlify and Static CMS resolve media per collection, and the root config is not
+  enough to hold them in place, for two reasons:
+  - `path` is a switch: specifying it defaults `media_folder` to an empty string, which is
+    their entry relative mode, and uploads then land next to the edited page.
+  - an opened entry only loads the folders declared on its collection or on its fields, and
+    its media library lists nothing else. A collection without its own folder then misses
+    the global images as soon as one of its fields declares a folder (audio, video…).
+  The global folders are therefore restated here. Sveltia CMS has neither rule, it only goes
+  entry relative on an explicit empty string, so it is left to inherit the root config. */}}
+{{- $media_folder := false -}}
+{{- $public_folder := false -}}
+{{- if ne site.Params.admin.cms "sveltiacms" -}}
+  {{- $media_folder = site.Params.admin.media.media_folder -}}
+  {{/* Their docs never say whether `public_folder` then falls back to the root config or
+    to the collection `media_folder`, and every example of theirs sets the pair together,
+    so both are restated rather than betting on the resolution */}}
+  {{- $public_folder = site.Params.admin.media.public_folder -}}
+{{- end -}}
+
+{{/* A collection setting either folder replaces that one, whatever the CMS */}}
+{{- with (index site.Params.admin.collections .) -}}
+  {{- with .media_folder -}}
+    {{- $media_folder = . }}
+  {{- end -}}
+  {{- with .public_folder -}}
+    {{- $public_folder = . }}
+  {{- end -}}
+{{- end -}}
+
+{{- with $media_folder }}
+media_folder: "{{ . }}",
+{{- end }}
+{{- with $public_folder }}
+public_folder: "{{ . }}",
+{{- end }}

@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: A highlighted message, such as information or a warning
       label: Alert
     audio:
+      _description: An audio player
       label: Audio
     chart:
+      _description: A chart built from your data
       label: Chart
     comparison:
+      _description: Offers or plans compared side by side
       label: Comparison
     cta:
+      _description: Buttons leading to other pages
       label: Call to action
     datas:
+      _description: Key figures, with or without gauges
       label: Datas
     editorial:
+      _description: A text with an image beside it
       label: Editorial
     embed:
+      _description: Content embedded from another site
       label: Embed
     faq:
+      _description: Questions whose answer opens on click
       label: FAQ
     figure:
+      _description: An image with its caption and credit
       label: Figure
     form:
+      _description: A contact form with the fields of your choice
       label: Form
     gallery:
+      _description: Images that open full screen
       label: Gallery
     images:
+      _description: Images in one or two columns
       label: Images
     informations:
+      _description: Cards with an icon or an image, a title and a text
       label: Informations
     instagram:
+      _description: The latest posts of an Instagram account
       label: Instagram
     latest:
+      _description: The latest entries of a section, such as news
       label: Latest items
     location:
       label: Location
     logos:
+      _description: A row of logos, with their links
       label: Logos
     map:
+      _description: A map with a marker or your places
       label: Map
     newsletter:
+      _description: A newsletter signup form
       label: Newsletter
     paragraph:
+      _description: A text with a title and buttons
       label: Paragraph
     paragraph-list:
+      _description: Several texts side by side
       label: Paragraphs
     pushes:
+      _description: Cards with an image or a video, leading to other pages
       label: Pushes
     quote:
+      _description: A quote and its author
       label: Quote
     search:
+      _description: A search field for the site
       label: Search
     selected:
+      _description: Entries picked one by one, in the order you choose
       label: Selection {{ .section }}
     testimonials:
+      _description: Testimonials in a grid or a carousel
       label: Testimonials
     timeline:
+      _description: Steps or dates along a timeline
       label: Timeline
     title:
+      _description: A heading with a surtitle and a text
       label: Title
     video:
+      _description: A video player
       label: Video
   collections:
     authors:
@@ -804,6 +833,9 @@ admin:
         sale: Sale
     reference:
       label: Reference
+    rel:
+      hint: "Value of the link rel attribute. «me» marks a profile of the same identity (Mastodon / IndieWeb verification). Leave empty to omit it."
+      label: Rel
     rent:
       label: Rent?
     required:

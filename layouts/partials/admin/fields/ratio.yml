@@ -3,6 +3,7 @@
   "hint" (i18n "admin.fields.ratio.hint")
   "name" "ratio"
   "i18n" "duplicate"
+  "min" 0
   "value_type" "float"
   -}}
 

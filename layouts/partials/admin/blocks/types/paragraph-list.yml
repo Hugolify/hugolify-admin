@@ -2,6 +2,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.paragraph-list.label")
+  "description" (i18n "admin.blocks.paragraph-list._description")
   "name" "paragraph-list"
   "collapsed" false
   "fields" $fields

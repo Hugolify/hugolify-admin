@@ -14,6 +14,7 @@
   - nameOverride (string)
   - required (boolean)
   - summary (string)
+  - thumbnail (string) Sveltia CMS only, Image subfield shown beside a folded item, e.g. 'src'
 */}}
 
 {{- $cms := site.Params.admin.cms }}
@@ -31,6 +32,7 @@
 {{- $min := .min | default false }}
 {{- $required := .required | default false }}
 {{- $summary := .summary | default false }}
+{{- $thumbnail := .thumbnail | default false }}
 
 {{/* Icon */}}
 {{- $library := printf "site.Params.admin.%s.icon" $cms }}
@@ -177,6 +179,9 @@
   i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }},
   {{ with $summary }}
   summary: '{{ . }}',
+  {{ end }}
+  {{ if and $thumbnail (eq $cms "sveltiacms") }}
+  thumbnail: '{{ $thumbnail }}',
   {{ end }}
   {{ partial "admin/fields/_fields.yml" $fields }}
 }

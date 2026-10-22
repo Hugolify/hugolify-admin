@@ -2,6 +2,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.search.label")
+  "description" (i18n "admin.blocks.search._description")
   "name" "search"
   "collapsed" false
   "fields" $fields

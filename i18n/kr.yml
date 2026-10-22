@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: 안내나 경고 같은 강조 메시지
       label: 알림
     audio:
+      _description: 오디오 플레이어
       label: 오디오
     chart:
+      _description: 데이터로 만든 차트
       label: 차트
     comparison:
+      _description: 나란히 비교한 상품이나 요금제
       label: 비교
     cta:
+      _description: 다른 페이지로 이동하는 버튼
       label: 행동 유도
     datas:
+      _description: 게이지가 있거나 없는 주요 수치
       label: 데이터
     editorial:
+      _description: 옆에 이미지가 있는 텍스트
       label: 편집
     embed:
+      _description: 다른 사이트에서 삽입한 콘텐츠
       label: 임베드
     faq:
+      _description: 클릭하면 답변이 열리는 질문
       label: 자주 묻는 질문
     figure:
+      _description: 캡션과 출처가 있는 이미지
       label: 그림
     form:
+      _description: 원하는 필드로 구성한 문의 양식
       label: 양식
     gallery:
+      _description: 전체 화면으로 열리는 이미지
       label: 갤러리
     images:
+      _description: 한 열 또는 두 열의 이미지
       label: 이미지
     informations:
+      _description: 아이콘이나 이미지, 제목, 텍스트가 있는 카드
       label: 정보
     instagram:
+      _description: Instagram 계정의 최신 게시물
       label: Instagram
     latest:
+      _description: 뉴스 등 섹션의 최신 항목
       label: 최신 항목
     location:
       label: 위치
     logos:
+      _description: 링크가 있는 로고 목록
       label: 로고
     map:
+      _description: 마커나 사업장을 표시하는 지도
       label: 지도
     newsletter:
+      _description: 뉴스레터 구독 양식
       label: 뉴스레터
     paragraph:
+      _description: 제목과 버튼이 있는 텍스트
       label: 단락
     paragraph-list:
+      _description: 나란히 놓인 여러 텍스트
       label: 단락 목록
     pushes:
+      _description: 다른 페이지로 연결되는 이미지나 동영상 카드
       label: 알림
     quote:
+      _description: 인용문과 작성자
       label: 인용
     search:
+      _description: 사이트 검색 필드
       label: 검색
     selected:
+      _description: 하나씩 골라 원하는 순서로 배치한 항목
       label: 선택 {{ .section }}
     testimonials:
+      _description: 그리드나 캐러셀 형태의 후기
       label: 후기
     timeline:
+      _description: 타임라인을 따라 놓인 단계나 날짜
       label: 타임라인
     title:
+      _description: 윗제목과 텍스트가 있는 제목
       label: 제목
     video:
+      _description: 비디오 플레이어
       label: 동영상
   collections:
     authors:
@@ -810,6 +839,9 @@ admin:
         sale: 판매
     reference:
       label: 참조
+    rel:
+      hint: "링크의 rel 속성 값. «me»는 동일한 신원의 프로필을 나타냅니다(Mastodon / IndieWeb 확인). 추가하지 않으려면 비워 두세요."
+      label: Rel
     rent:
       label: 임대됨?
     required:

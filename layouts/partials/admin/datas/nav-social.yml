@@ -1,1 +1,7 @@
-{{- partial "admin/datas/_nav.yml" (dict "nav" "social") -}}
+{{/*
+  `social` nav data file (data/menu/social.yml).
+
+  Uses the dedicated `social_links` field schema (title, url, blank, rel)
+  instead of the generic `links` field used by the other nav data files.
+*/}}
+{{- partial "admin/datas/_nav.yml" (dict "nav" "social" "fields" (slice "social_links")) -}}

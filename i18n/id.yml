@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: Pesan yang ditonjolkan, seperti informasi atau peringatan
       label: Peringatan
     audio:
+      _description: Pemutar audio
       label: Audio
     chart:
+      _description: Grafik yang dibuat dari data Anda
       label: Grafik
     comparison:
+      _description: Penawaran atau paket yang dibandingkan berdampingan
       label: Perbandingan
     cta:
+      _description: Tombol menuju halaman lain
       label: Ajakan Bertindak
     datas:
+      _description: Angka utama, dengan atau tanpa pengukur
       label: Data
     editorial:
+      _description: Teks dengan gambar di sampingnya
       label: Editorial
     embed:
+      _description: Konten yang disematkan dari situs lain
       label: Sematkan
     faq:
+      _description: Pertanyaan yang jawabannya terbuka saat diklik
       label: FAQ
     figure:
+      _description: Gambar dengan keterangan dan kreditnya
       label: Gambar
     form:
+      _description: Formulir kontak dengan kolom pilihan Anda
       label: Formulir
     gallery:
+      _description: Gambar yang terbuka dalam layar penuh
       label: Galeri
     images:
+      _description: Gambar dalam satu atau dua kolom
       label: Gambar
     informations:
+      _description: Kartu dengan ikon atau gambar, judul, dan teks
       label: Informasi
     instagram:
+      _description: Postingan terbaru dari akun Instagram
       label: Instagram
     latest:
+      _description: Entri terbaru dari sebuah bagian, seperti berita
       label: Item Terbaru
     location:
       label: Lokasi
     logos:
+      _description: Deretan logo beserta tautannya
       label: Logo
     map:
+      _description: Peta dengan penanda atau lokasi Anda
       label: Peta
     newsletter:
+      _description: Formulir pendaftaran buletin
       label: Buletin
     paragraph:
+      _description: Teks dengan judul dan tombol
       label: Paragraf
     paragraph-list:
+      _description: Beberapa teks berdampingan
       label: Daftar paragraf
     pushes:
+      _description: Kartu dengan gambar atau video yang menuju halaman lain
       label: Pemberitahuan
     quote:
+      _description: Kutipan dan penulisnya
       label: Kutipan
     search:
+      _description: Kolom pencarian situs
       label: Pencarian
     selected:
+      _description: Entri yang dipilih satu per satu, sesuai urutan Anda
       label: Pilihan {{ .section }}
     testimonials:
+      _description: Testimoni dalam bentuk kisi atau carousel
       label: Testimoni
     timeline:
+      _description: Tahapan atau tanggal di sepanjang linimasa
       label: Linimasa
     title:
+      _description: Judul dengan subjudul atas dan teks
       label: Judul
     video:
+      _description: Pemutar video
       label: Video
   collections:
     authors:
@@ -810,6 +839,9 @@ admin:
         sale: Jual
     reference:
       label: Referensi
+    rel:
+      hint: "Nilai atribut rel tautan. «me» menandai profil dari identitas yang sama (verifikasi Mastodon / IndieWeb). Biarkan kosong untuk menghilangkannya."
+      label: Rel
     rent:
       label: Sewa?
     required:

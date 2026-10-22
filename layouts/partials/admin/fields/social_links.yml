@@ -1,0 +1,24 @@
+{{/*
+  Social menu links field: title, url, blank and optional rel.
+
+  The generic `links` field (title, url, blank, highlighted, sublinks)
+  does not fit a social menu, so the `social` nav data file uses this
+  dedicated schema, including the `rel` key (overridable per link;
+  rel=me is added automatically by the theme).
+  Fields are passed directly to the widget: no GetFields params lookup.
+*/}}
+{{- $fields := slice
+  "title"
+  "url"
+  "is_blank"
+  "rel" -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.links.label" 2)
+  "label_singular" (i18n "admin.fields.links.label" 1)
+  "name" "links"
+  "collapsed" false
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/list.js" $args }}

@@ -2,6 +2,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.gallery.label")
+  "description" (i18n "admin.blocks.gallery._description")
   "name" "gallery"
   "collapsed" false
   "fields" $fields

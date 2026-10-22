@@ -1,0 +1,24 @@
+{{/* On by default: the table only offers the simple top-level fields (draft,
+  title, date, weight, slug…). Off by default under a review workflow, as a
+  bulk edit is committed to the branch directly and would bypass the review.
+  `admin.bulk_edit` sets it for every collection, the collection for itself:
+  `false` turns it off, a list picks the columns, e.g. [title, draft] */}}
+{{- $publish_mode := site.Params.admin.publish_mode -}}
+{{- if reflect.IsMap $publish_mode -}}
+  {{- $publish_mode = $publish_mode.type -}}
+{{- end -}}
+{{- $bulk_edit := not (in (slice "editorial_workflow" "preview") $publish_mode) -}}
+{{- if isset site.Params.admin "bulk_edit" -}}
+  {{- $bulk_edit = site.Params.admin.bulk_edit -}}
+{{- end -}}
+{{- with index site.Params.admin.collections . -}}
+  {{- if isset . "bulk_edit" -}}
+    {{- $bulk_edit = .bulk_edit -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if reflect.IsSlice $bulk_edit }}
+bulk_edit: { fields: {{ $bulk_edit | jsonify }} },
+{{- else if $bulk_edit }}
+bulk_edit: true,
+{{- end -}}

@@ -2,6 +2,7 @@
 
 {{- $args := dict 
   "label" (i18n "admin.blocks.audio.label")
+  "description" (i18n "admin.blocks.audio._description")
   "name" "audio"
   "collapsed" false
   "fields" $fields

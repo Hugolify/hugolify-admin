@@ -1,64 +1,93 @@
 admin:
   blocks:
     alert:
+      _description: En fremhevet melding, for eksempel informasjon eller en advarsel
       label: Varsel
     audio:
+      _description: En lydspiller
       label: Lyd
     chart:
+      _description: Et diagram laget av dine data
       label: Diagram
     comparison:
+      _description: Tilbud eller abonnementer sammenlignet side om side
       label: Sammenligning
     cta:
+      _description: Knapper til andre sider
       label: Oppfordring til handling
     datas:
+      _description: Nøkkeltall, med eller uten målere
       label: Data
     editorial:
+      _description: En tekst med et bilde ved siden av
       label: Redaksjonelt
     embed:
+      _description: Innhold bygget inn fra et annet nettsted
       label: Bygg inn
     faq:
+      _description: Spørsmål der svaret åpnes med et klikk
       label: FAQ
     figure:
+      _description: Et bilde med bildetekst og kreditering
       label: Figur
     form:
+      _description: Et kontaktskjema med felt etter eget valg
       label: Skjema
     gallery:
+      _description: Bilder som åpnes i fullskjerm
       label: Galleri
     images:
+      _description: Bilder i én eller to kolonner
       label: Bilder
     informations:
+      _description: Kort med et ikon eller et bilde, en tittel og en tekst
       label: Informasjon
     instagram:
+      _description: De nyeste innleggene fra en Instagram-konto
       label: Instagram
     latest:
+      _description: De nyeste oppføringene i en seksjon, for eksempel nyheter
       label: Siste elementer
     location:
       label: Plassering
     logos:
+      _description: En rad med logoer og lenker
       label: Logoer
     map:
+      _description: Et kart med en markør eller dine steder
       label: Kart
     newsletter:
+      _description: Et påmeldingsskjema for nyhetsbrevet
       label: Nyhetsbrev
     paragraph:
+      _description: En tekst med en tittel og knapper
       label: Avsnitt
     paragraph-list:
+      _description: Flere tekster side om side
       label: Avsnittsliste
     pushes:
+      _description: Kort med et bilde eller en video som leder til andre sider
       label: Push-varsler
     quote:
+      _description: Et sitat og opphavspersonen
       label: Sitat
     search:
+      _description: Et søkefelt for nettstedet
       label: Søk
     selected:
+      _description: Oppføringer valgt én etter én, i den rekkefølgen du vil
       label: Utvalg {{ .section }}
     testimonials:
+      _description: Attester i rutenett eller karusell
       label: Attester
     timeline:
+      _description: Trinn eller datoer langs en tidslinje
       label: Tidslinje
     title:
+      _description: En overskrift med stikktittel og tekst
       label: Tittel
     video:
+      _description: En videospiller
       label: Video
   collections:
     authors:
@@ -810,6 +839,9 @@ admin:
         sale: Salg
     reference:
       label: Referanse
+    rel:
+      hint: "Verdien til lenkens rel-attributt. «me» markerer en profil med samme identitet (Mastodon / IndieWeb-verifisering). La stå tom for å utelate."
+      label: Rel
     rent:
       label: Lei?
     required:

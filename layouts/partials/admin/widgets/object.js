@@ -2,6 +2,7 @@
   Partial to generate a object widget
   
   - collapsed (boolean)
+  - description (string) Sveltia CMS only, for a block type: shown in the menu of the Add button
   - fields (array) required
   - hidden (boolean)
   - hint (string)
@@ -17,6 +18,7 @@
 {{- $cms := site.Params.admin.cms }}
 
 {{- $collapsed := .collapsed | default true }}
+{{- $description := .description | default false }}
 {{- $fields := .fields | default slice -}}
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
@@ -114,6 +116,9 @@
   label: '{{ $label }}',
   {{ with $label_singular }}
   label_singular: '{{ . }}',
+  {{ end }}
+  {{ if and $description (eq $cms "sveltiacms") }}
+  description: {{ $description | jsonify }},
   {{ end }}
   {{ with $hint }}
   hint: '{{ . }}',

@@ -13,6 +13,7 @@
   "label_singular" (i18n "admin.fields.images.label" 1)
   "name" "images"
   "fields" $fields
+  "thumbnail" (cond (in $fields "image_src") "src" false)
   -}}
 
 {{ partial "admin/widgets/list.js" $args }}
