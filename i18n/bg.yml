@@ -833,6 +833,9 @@ admin:
         sale: Продажба
     reference:
       label: Референция
+    rel:
+      hint: "Стойност на атрибута rel на връзката. «me» означава профил на същата идентичност (проверка Mastodon / IndieWeb). Оставете празно, за да не се добавя."
+      label: Rel
     rent:
       label: Наем?
     required:

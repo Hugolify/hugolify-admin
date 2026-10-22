@@ -833,6 +833,9 @@ admin:
         sale: बिक्री
     reference:
       label: संदर्भ
+    rel:
+      hint: "लिंक के rel एट्रिब्यूट का मान। «me» उसी पहचान के प्रोफ़ाइल को दर्शाता है (Mastodon / IndieWeb सत्यापन)। छोड़ने के लिए खाली रखें।"
+      label: Rel
     rent:
       label: किराया?
     required:

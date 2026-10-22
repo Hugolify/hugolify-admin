@@ -1,0 +1,14 @@
+{{/*
+  `rel` field: opt-in value for the HTML `rel` attribute of a link.
+
+  Free-form input: `me` marks the target as the same identity
+  (Mastodon / IndieWeb cross-verification); leave empty to omit the
+  attribute.
+*/}}
+{{- $args := dict
+  "label" (i18n "admin.fields.rel.label")
+  "hint" (i18n "admin.fields.rel.hint")
+  "name" "rel"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

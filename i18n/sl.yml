@@ -833,6 +833,9 @@ admin:
         sale: Prodaja
     reference:
       label: Referenca
+    rel:
+      hint: "Vrednost atributa rel povezave. „me“ označuje profil iste identitete (preverjanje Mastodon / IndieWeb). Pustite prazno, če ga ne želite."
+      label: Rel
     rent:
       label: Najem?
     required:

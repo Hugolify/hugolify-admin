@@ -833,6 +833,9 @@ admin:
         sale: 판매
     reference:
       label: 참조
+    rel:
+      hint: "링크의 rel 속성 값. «me»는 동일한 신원의 프로필을 나타냅니다(Mastodon / IndieWeb 확인). 추가하지 않으려면 비워 두세요."
+      label: Rel
     rent:
       label: 임대됨?
     required:

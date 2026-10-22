@@ -3,7 +3,8 @@
   "url" 
   "lang" 
   "is_blank" 
-  "is_link"  -}}
+  "is_link"
+  "rel"  -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 
 {{- $args := dict 

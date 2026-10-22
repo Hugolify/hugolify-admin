@@ -1,15 +1,26 @@
+{{/*
+  `platform` select for the socials lists (contact socials).
 
-{{- $options := slice "facebook" 
+  Profile-type networks only (person profiles with a URL); invite or
+  workspace links (Discord, Slack, WhatsApp) are deliberately excluded.
+  Slugs must match the Simple Icons brand slugs (hugolify-theme-icons):
+  `x`, not `twitter` — a wrong slug renders without its icon in v2.
+*/}}
+{{- $options := slice "bluesky" 
+  "facebook" 
   "github" 
+  "gitlab" 
   "google" 
   "instagram" 
   "linkedin" 
+  "mastodon" 
+  "peertube" 
   "pinterest" 
   "threads" 
   "tiktok" 
   "twitch" 
-  "twitter" 
   "vimeo" 
+  "x" 
   "youtube" }}
 {{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 

@@ -833,6 +833,9 @@ admin:
         sale: Verkoop
     reference:
       label: Referentie
+    rel:
+      hint: "Waarde van het rel-attribuut van de link. «me» markeert een profiel van dezelfde identiteit (Mastodon / IndieWeb-verificatie). Laat leeg om weg te laten."
+      label: Rel
     rent:
       label: Huren?
     required:

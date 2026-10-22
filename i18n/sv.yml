@@ -833,6 +833,9 @@ admin:
         sale: Försäljning
     reference:
       label: Referens
+    rel:
+      hint: "Värdet på länkens rel-attribut. «me» markerar en profil med samma identitet (Mastodon-/IndieWeb-verifiering). Lämna tomt för att utelämna."
+      label: Rel
     rent:
       label: Hyra?
     required:

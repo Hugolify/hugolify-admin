@@ -833,6 +833,9 @@ admin:
         sale: Prodej
     reference:
       label: Reference
+    rel:
+      hint: "Hodnota atributu rel odkazu. „me“ označuje profil téže identity (ověření Mastodon / IndieWeb). Ponechte prázdné, chcete-li atribut vynechat."
+      label: Rel
     rent:
       label: Pronájem?
     required:

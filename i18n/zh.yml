@@ -833,6 +833,9 @@ admin:
         sale: 销售
     reference:
       label: 参考
+    rel:
+      hint: "链接 rel 属性的值。「me」表示同一身份的资料（Mastodon / IndieWeb 验证）。留空则不添加。"
+      label: Rel
     rent:
       label: 租赁?
     required:

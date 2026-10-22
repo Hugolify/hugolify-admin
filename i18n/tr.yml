@@ -833,6 +833,9 @@ admin:
         sale: Satış
     reference:
       label: Referans
+    rel:
+      hint: "Bağlantının rel özniteliğinin değeri. «me» aynı kimliğe ait bir profili belirtir (Mastodon / IndieWeb doğrulaması). Atlamak için boş bırakın."
+      label: Rel
     rent:
       label: Kira?
     required:

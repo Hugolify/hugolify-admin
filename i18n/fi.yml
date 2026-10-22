@@ -829,6 +829,9 @@ admin:
         sale: Myynti
     reference:
       label: Viite
+    rel:
+      hint: "Linkin rel-attribuutin arvo. «me» merkitsee saman identiteetin profiilin (Mastodon / IndieWeb -varmennus). Jätä tyhjäksi ohittaaksesi."
+      label: Rel
     rent:
       label: Vuokra?
     required:

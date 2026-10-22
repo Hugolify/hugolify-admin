@@ -833,6 +833,9 @@ admin:
         sale: Salg
     reference:
       label: Referanse
+    rel:
+      hint: "Verdien til lenkens rel-attributt. «me» markerer en profil med samme identitet (Mastodon / IndieWeb-verifisering). La stå tom for å utelate."
+      label: Rel
     rent:
       label: Lei?
     required:
