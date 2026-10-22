@@ -309,6 +309,12 @@ admin:
         one: 태그
         other: 태그
   fields:
+    abbr:
+      label: 약어
+    abbreviations:
+      label:
+        one: 약어
+        other: 약어
     address:
       city:
         label: 도시
@@ -1023,6 +1029,8 @@ admin:
     zoom:
       label: 줌
   files:
+    abbr:
+      label: 약어
     banner: 사이트 상단의 정보 배너
     blocks: 블록 – 각 블록 유형의 기본 레이아웃 및 모양
     credit: 사이트 하단의 크레딧
@@ -1048,6 +1056,8 @@ admin:
   group:
     year: 년
   shortcodes:
+    abbr:
+      label: 약어
     alert:
       label: 알림
     alert_block:

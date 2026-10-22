@@ -309,6 +309,12 @@ admin:
         one: Oznaka
         other: Oznake
   fields:
+    abbr:
+      label: Okrajšava
+    abbreviations:
+      label:
+        one: Okrajšava
+        other: Okrajšave
     address:
       city:
         label: Mesto
@@ -1023,6 +1029,8 @@ admin:
     zoom:
       label: Povečava
   files:
+    abbr:
+      label: Okrajšave
     banner: Informacijski pasica na vrhu strani
     blocks: Bloki – Privzeta postavitev in videz vsake vrste bloka
     credit: Zasluge na dnu strani
@@ -1048,6 +1056,8 @@ admin:
   group:
     year: Leto
   shortcodes:
+    abbr:
+      label: Okrajšava
     alert:
       label: Opozorilo
     alert_block:
