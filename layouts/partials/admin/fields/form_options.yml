@@ -1,6 +1,6 @@
-{{- $name := dict "name" "items" }}
+{{- $name := dict "name" "options" }}
 {{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
-  {{- $name = dict "name" "form_options" "nameOverride" "items" }}
+  {{- $name = dict "name" "form_options" "nameOverride" "options" }}
 {{- end }}
 
 {{- $fields := slice 
