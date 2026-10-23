@@ -57,10 +57,15 @@
   YAML decoder rejects big documents with "too many YAML aliases for non-scalar
   nodes". See `admin/func/RemarshalCollections.html` for the details.
 
+  Apostrophes
+  -----------
+  Before remarshal, straight apostrophes inside words become `’`, otherwise
+  they would end the single-quoted strings. See `admin/func/CurlyApostrophes.html`.
+
   Input  : string — raw YAML-like content to be remarshal'd
   Output : string — normalized YAML with anchors resolved
 */}}
-{{- $yaml := transform.Remarshal "yaml" . -}}
+{{- $yaml := transform.Remarshal "yaml" (partial "admin/func/CurlyApostrophes.html" .) -}}
 {{/* Pattern 1: anchor definition + value on next line */}}
 {{- $yaml = replaceRE `(editor_components: )&\S+ *\n\s*\[\]` "${1}[]" $yaml -}}
 {{/* Pattern 2: self-referencing anchor + alias on same line */}}

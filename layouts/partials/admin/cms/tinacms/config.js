@@ -1,4 +1,4 @@
-{{- $collections := partialCached "admin/collections/index.yml" . -}}
+{{- $collections := partialCached "admin/collections/index.yml" . | partial "admin/func/CurlyApostrophes.html" -}}
 
 {{- $sliceCompatibity := slice 
   (dict "folder:" "path:") 

@@ -12,17 +12,17 @@ _snippets_imports:
       - hugo_figure
 
 {{/* Custom Snippets */}}
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/shortcodes.js" .) }}
+{{ partial "admin/func/RemarshalYaml.html" (partial "admin/cms/cloudcannon/shortcodes.js" .) }}
 
 {{/* Collections */}}
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/index.html" .) }}
+{{ partial "admin/func/RemarshalYaml.html" (partial "admin/cms/cloudcannon/collection/index.html" .) }}
 
 {{/* Collections Group */}}
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/collection/group.html" .) }}
+{{ partial "admin/func/RemarshalYaml.html" (partial "admin/cms/cloudcannon/collection/group.html" .) }}
 
 {{/* Inputs */}}
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/inputs.js" $fields.selectedInputs) }}
+{{ partial "admin/func/RemarshalYaml.html" (partial "admin/cms/cloudcannon/inputs.js" $fields.selectedInputs) }}
 
 {{/* Structures */}}
-{{ transform.Remarshal "yaml" (partial "admin/cms/cloudcannon/structures.js" (dict "context" . "structures" $fields.structures)) }}
+{{ partial "admin/func/RemarshalYaml.html" (partial "admin/cms/cloudcannon/structures.js" (dict "context" . "structures" $fields.structures)) }}
 

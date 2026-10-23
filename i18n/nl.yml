@@ -396,7 +396,7 @@ admin:
       params:
         label: Parameters
       permove:
-        hint: Aantal dia's om te verplaatsen
+        hint: Aantal dia’s om te verplaatsen
         label: Per verplaatsing
       perpage:
         hint: Aantal dia’s om weer te geven
@@ -878,18 +878,18 @@ admin:
       hint: Selecteer de sectie om weer te geven
       label: Sectie
     selected_parent:
-      hint: De onderliggende pagina's van de hier geselecteerde pagina's worden weergegeven
+      hint: De onderliggende pagina’s van de hier geselecteerde pagina’s worden weergegeven
       label:
         one: Bovenliggende pagina
-        other: Bovenliggende pagina's
+        other: Bovenliggende pagina’s
     selected_source:
       hint: Hoe de weer te geven items worden gekozen
       label: Bron
       options:
-        children: Onderliggende pagina's
+        children: Onderliggende pagina’s
         selection: Handmatige selectie
         taxonomies: Filteren op taxonomie
-        toplevel: Pagina's op het eerste niveau
+        toplevel: Pagina’s op het eerste niveau
     show_more:
       hint: Toont een knop om meer items te zien
       label: Meer tonen?

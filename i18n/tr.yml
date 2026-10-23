@@ -452,7 +452,7 @@ admin:
     cta:
       label:
         one: CTA
-        other: CTA'lar
+        other: CTA’lar
     datas:
       label:
         one: Veri
@@ -741,7 +741,7 @@ admin:
       label: Üst sayfa
     pdf:
       label: PDF
-      hint: 'Göndermeden önce PDF''i sıkıştırın: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
+      hint: 'Göndermeden önce PDF’i sıkıştırın: https://www.adobe.com/fr/acrobat/online/compress-pdf.html'
     phone:
       label: Telefon Numarası
       hint: 'Uluslararası format, örn. +33 1 23 45 67 89'

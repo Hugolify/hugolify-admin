@@ -98,6 +98,8 @@ All user-facing labels come from `i18n/` files. Keys follow the pattern:
 - `admin.blocks.{block}.label`
 - `admin.collections.{collection}.label`
 
+Write apostrophes as `’`, never `'`: templates print i18n strings inside single quotes (`label: '{{ $label }}'`), so a straight one ends the string. `func/CurlyApostrophes.html` curls them as a safety net (for a site overriding a key too) wherever generated text is parsed: `RemarshalYaml`, `ConvertJSObjectToJson` and the Tina config. Send any new YAML output through `RemarshalYaml` rather than `transform.Remarshal`.
+
 ## CMS supported
 
 | CMS | Status | Config file |

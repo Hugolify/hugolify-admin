@@ -1,0 +1,37 @@
+{{/*
+  CurlyApostrophes
+  ================
+  Turns the straight apostrophes inside words into typographic ones (`’`), in
+  generated config text that is about to be parsed.
+
+  Problem
+  -------
+  Templates print text inside single quotes (`hint: '{{ . }}'`), so a straight
+  apostrophe coming from an i18n string, ours or a site override, ends the
+  string early:
+
+    hint: 'Valeur de l'attribut rel du lien',
+    → ',' or '}' must be specified
+
+  Fix
+  ---
+  A quote that opens or closes a string always has a space, a bracket, a comma
+  or a colon on one side, never a letter or a digit on both. So any `'` between
+  two of them is text, whatever the format (YAML flow, JS object), and can
+  safely become `’`, the spelling the i18n files already use.
+
+  The replacement runs twice: matches cannot overlap, so a single pass leaves
+  every other apostrophe of `rock'n'roll`.
+
+  Usage
+  -----
+  Call it wherever generated text is parsed or printed as code:
+
+    {{- $text = partial "admin/func/CurlyApostrophes.html" $text -}}
+
+  Input  : string — raw YAML-like or JS-like content
+  Output : string — the same content with apostrophes inside words curled
+*/}}
+{{- $apostrophe := `([\pL\pN])'([\pL\pN])` -}}
+{{- $text := replaceRE $apostrophe "${1}’${2}" . -}}
+{{- return replaceRE $apostrophe "${1}’${2}" $text -}}

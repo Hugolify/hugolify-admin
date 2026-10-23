@@ -3,8 +3,8 @@
   turning it into valid JSON so it can be unmarshaled into a real map.
 */}}
 
-{{/* 1. Remove leading/trailing whitespace */}}
-{{ $file := . | strings.TrimSpace }}
+{{/* 1. Curl the apostrophes inside words (they would end the quoted strings) and remove leading/trailing whitespace */}}
+{{ $file := partial "admin/func/CurlyApostrophes.html" . | strings.TrimSpace }}
 
 {{/* 2. Escape specific HTML characters */}}
 {{ $file = replace $file `"[\*]"` `` }}

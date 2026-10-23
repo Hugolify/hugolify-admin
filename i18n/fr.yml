@@ -607,7 +607,7 @@ admin:
         hint: Pour une image qui transmet des informations (laisser vide si image décorative)
         label: Texte alternatif
       filter:
-        hint: "Choisir Linear pour une photo ou une capture d'écran, laisser vide pour conserver la configuration par défaut"
+        hint: "Choisir Linear pour une photo ou une capture d’écran, laisser vide pour conserver la configuration par défaut"
         label: "Modifier la qualité du filtre ?"
         options:
           box: "Filtre de moyenne simple et rapide, adapté à la réduction (par défaut)"
@@ -733,7 +733,7 @@ admin:
       label: Page parente
     pdf:
       label: PDF
-      hint: "Compresser le PDF avant l'envoi : https://www.adobe.com/fr/acrobat/online/compress-pdf.html"
+      hint: "Compresser le PDF avant l’envoi : https://www.adobe.com/fr/acrobat/online/compress-pdf.html"
     phone:
       label: Téléphone
       hint: 'Format international, p. ex. +33 1 23 45 67 89'
@@ -826,7 +826,7 @@ admin:
     reference:
       label: Reference
     rel:
-      hint: "Valeur de l'attribut rel du lien. «me» signale un profil de la même identité (vérification Mastodon / IndieWeb). Laisser vide pour ne pas l'ajouter."
+      hint: "Valeur de l’attribut rel du lien. «me» signale un profil de la même identité (vérification Mastodon / IndieWeb). Laisser vide pour ne pas l’ajouter."
       label: Rel
     rent:
       label: Loué ?

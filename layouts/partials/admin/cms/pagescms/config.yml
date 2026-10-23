@@ -21,4 +21,4 @@ settings:
   {{- end }}
 {{- end }}
 
-{{ transform.Remarshal "yaml" $collections }}
+{{ partial "admin/func/RemarshalYaml.html" $collections }}
