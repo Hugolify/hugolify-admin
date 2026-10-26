@@ -731,8 +731,7 @@ admin:
         one: 링크
         other: 링크
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: '기본 언어로만 입력하세요. 다국어 사이트에서는 언어별로 섹션을 하나씩 추가하세요. 문서: https://llmstxt.org/'
     location:
       label: 위치
     loop:
@@ -1080,6 +1079,8 @@ admin:
     blocks: 블록 – 각 블록 유형의 기본 레이아웃 및 모양
     credit: 사이트 하단의 크레딧
     footer: 사이트 하단의 정보 텍스트
+    llms: 'GEO – 언어 모델용 사이트 색인 (llms.txt)'
+    llms_full: 'GEO – 언어 모델용 사이트 전체 텍스트 (llms-full.txt)'
     nav:
       footer:
         primary: "푸터 – 기본 내비게이션"
@@ -1097,7 +1098,7 @@ admin:
     organization: "조직 – 기본 정보, 지점, 수상 내역"
     schema: "구조화된 데이터 – schema.org"
     seo:
-      label: 글로벌 SEO
+      label: 'SEO – 검색 엔진용 사이트 메타데이터'
       title: 웹사이트 이름
   group:
     year: 년

@@ -1,0 +1,12 @@
+{{/*  Body of /llms-full.txt, the full text of the site for language models.
+      Same as data/llms.yml: written at the root by the theme, nothing when
+      empty, and not translated.  */}}
+{{- $fields := slice "llms" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "file" "llms-full" "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.files.llms_full" }}',
+  name: 'llms-full',
+  file: 'data/llms-full.yml',
+  i18n: false,
+  {{- partial "admin/fields/_fields.yml" $fields -}}
+}

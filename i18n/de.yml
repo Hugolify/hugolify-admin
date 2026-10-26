@@ -731,8 +731,7 @@ admin:
         one: Link
         other: Links
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Nur in der Standardsprache ausfüllen; auf einer mehrsprachigen Website einen Abschnitt pro Sprache hinzufügen. Dokumentation: https://llmstxt.org/'
     location:
       label: Standort
     loop:
@@ -1080,6 +1079,8 @@ admin:
     blocks: Blöcke – Standardlayout und -erscheinungsbild jedes Blocktyps
     credit: Credits unten auf der Website
     footer: Informationstext unten auf der Website
+    llms: 'GEO – Website-Index für Sprachmodelle (llms.txt)'
+    llms_full: 'GEO – Volltext der Website für Sprachmodelle (llms-full.txt)'
     nav:
       footer:
         primary: "Fußzeile – Primäre Navigation"
@@ -1097,7 +1098,7 @@ admin:
     organization: "Organisation – Identität, Standorte und Auszeichnungen"
     schema: "Strukturierte Daten – schema.org"
     seo:
-      label: Globales SEO
+      label: 'SEO – Website-Metadaten für Suchmaschinen'
       title: Website-Name
   group:
     year: Jahr

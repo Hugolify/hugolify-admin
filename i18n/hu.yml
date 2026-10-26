@@ -731,8 +731,7 @@ admin:
         one: Link
         other: Linkek
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Csak az alapértelmezett nyelven töltse ki; többnyelvű webhelyen nyelvenként egy szakaszt adjon hozzá. Dokumentáció: https://llmstxt.org/'
     location:
       label: Helyszín
     loop:
@@ -1080,6 +1079,8 @@ admin:
     blocks: Blokkok – Az egyes blokktípusok alapértelmezett elrendezése és megjelenése
     credit: Kreditek az oldal alján
     footer: Információs szöveg az oldal alján
+    llms: 'GEO – Webhelyindex nyelvi modellek számára (llms.txt)'
+    llms_full: 'GEO – A webhely teljes szövege nyelvi modellek számára (llms-full.txt)'
     nav:
       footer:
         primary: "Lábléc – Elsődleges navigáció"
@@ -1097,7 +1098,7 @@ admin:
     organization: "Szervezet – Azonosító adatok, telephelyek és díjak"
     schema: "Strukturált adatok – schema.org"
     seo:
-      label: Globális SEO
+      label: 'SEO – A webhely metaadatai keresőmotorok számára'
       title: Weboldal neve
   group:
     year: Év

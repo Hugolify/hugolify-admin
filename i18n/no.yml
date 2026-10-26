@@ -731,8 +731,7 @@ admin:
         one: Lenke
         other: Lenker
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Fyll ut bare på standardspråket; på et flerspråklig nettsted legger du til én seksjon per språk. Dokumentasjon: https://llmstxt.org/'
     location:
       label: Plassering
     loop:
@@ -1080,6 +1079,8 @@ admin:
     blocks: Blokker – Standard oppsett og utseende for hver blokktype
     credit: Kreditter nederst på siden
     footer: Informasjonstekst nederst på siden
+    llms: 'GEO – Nettstedsindeks for språkmodeller (llms.txt)'
+    llms_full: 'GEO – Full tekst av nettstedet for språkmodeller (llms-full.txt)'
     nav:
       footer:
         primary: "Bunntekst – Primærnavigasjon"
@@ -1097,7 +1098,7 @@ admin:
     organization: "Organisasjon – Identitet, steder og utmerkelser"
     schema: "Strukturerte data – schema.org"
     seo:
-      label: Global SEO
+      label: 'SEO – Nettstedets metadata for søkemotorer'
       title: Nettstednavn
   group:
     year: År

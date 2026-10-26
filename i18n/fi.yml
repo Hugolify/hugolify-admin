@@ -727,8 +727,7 @@ admin:
         one: Linkki
         other: Linkit
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Täytä vain oletuskielellä; monikielisellä sivustolla lisää yksi osio kutakin kieltä kohden. Dokumentaatio: https://llmstxt.org/'
     location:
       label: Sijainti
     loop:
@@ -1080,6 +1079,8 @@ admin:
     blocks: Lohkot – Kunkin lohkotyypin oletusasettelu ja -ulkoasu
     credit: Tekijätiedot sivuston alaosassa
     footer: Tietopalkki sivuston alaosassa
+    llms: 'GEO – Sivuston hakemisto kielimalleille (llms.txt)'
+    llms_full: 'GEO – Sivuston koko teksti kielimalleille (llms-full.txt)'
     nav:
       footer:
         primary: "Alatunniste – Ensisijainen navigaatio"
@@ -1097,7 +1098,7 @@ admin:
     organization: "Organisaatio – Tunnistetiedot, toimipaikat ja palkinnot"
     schema: "Rakenteinen data – schema.org"
     seo:
-      label: Yleinen SEO
+      label: 'SEO – Sivuston metatiedot hakukoneille'
       title: Verkkosivun nimi
   group:
     year: Vuosi

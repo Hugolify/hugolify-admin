@@ -731,8 +731,7 @@ admin:
         one: Link
         other: Linki
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Wypełnij tylko w języku domyślnym; w witrynie wielojęzycznej dodaj jedną sekcję na język. Dokumentacja: https://llmstxt.org/'
     location:
       label: Lokalizacja
     loop:
@@ -1080,6 +1079,8 @@ admin:
     blocks: Bloki – Domyślny układ i wygląd każdego typu bloku
     credit: Kredyty u dołu strony
     footer: Tekst informacyjny u dołu strony
+    llms: 'GEO – Indeks witryny dla modeli językowych (llms.txt)'
+    llms_full: 'GEO – Pełny tekst witryny dla modeli językowych (llms-full.txt)'
     nav:
       footer:
         primary: "Stopka – Nawigacja główna"
@@ -1097,7 +1098,7 @@ admin:
     organization: "Organizacja – Tożsamość, lokalizacje i wyróżnienia"
     schema: "Dane strukturalne – schema.org"
     seo:
-      label: Globalne SEO
+      label: 'SEO – Metadane witryny dla wyszukiwarek'
       title: Nazwa witryny
   group:
     year: Rok

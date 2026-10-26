@@ -731,8 +731,7 @@ admin:
         one: Länk
         other: Länkar
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Fyll i endast på standardspråket; på en flerspråkig webbplats, lägg till ett avsnitt per språk. Dokumentation: https://llmstxt.org/'
     location:
       label: Plats
     loop:
@@ -1080,6 +1079,8 @@ admin:
     blocks: Block – Standardlayout och utseende för varje blocktyp
     credit: Krediter längst ner på webbplatsen
     footer: Informationstext längst ner på webbplatsen
+    llms: 'GEO – Webbplatsindex för språkmodeller (llms.txt)'
+    llms_full: 'GEO – Webbplatsens fullständiga text för språkmodeller (llms-full.txt)'
     nav:
       footer:
         primary: "Sidfot – Primär navigering"
@@ -1097,7 +1098,7 @@ admin:
     organization: "Organisation – Identitet, platser och utmärkelser"
     schema: "Strukturerade data – schema.org"
     seo:
-      label: Global SEO
+      label: 'SEO – Webbplatsens metadata för sökmotorer'
       title: Webbplatsnamn
   group:
     year: År

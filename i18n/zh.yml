@@ -731,8 +731,7 @@ admin:
         one: 链接
         other: 链接
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: '仅在默认语言中填写；多语言网站请为每种语言添加一个章节。文档：https://llmstxt.org/'
     location:
       label: 位置
     loop:
@@ -1080,6 +1079,8 @@ admin:
     blocks: 块 – 每种块类型的默认布局和外观
     credit: 网站底部的鸣谢
     footer: 网站底部的信息文本
+    llms: 'GEO – 面向语言模型的网站索引 (llms.txt)'
+    llms_full: 'GEO – 面向语言模型的网站全文 (llms-full.txt)'
     nav:
       footer:
         primary: "页脚 – 主导航"
@@ -1097,7 +1098,7 @@ admin:
     organization: "组织 – 基本信息、办公地点与奖项"
     schema: "结构化数据 – schema.org"
     seo:
-      label: 全局SEO
+      label: 'SEO – 面向搜索引擎的网站元数据'
       title: 网站名称
   group:
     year: 年份
