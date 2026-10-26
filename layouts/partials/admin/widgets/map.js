@@ -6,6 +6,7 @@
   - i18n (boolean or string)
   - label (string) required
   - name (string) required
+  - required (boolean)
 */}}
 
 {{- $cms := site.Params.admin.cms }}
@@ -15,6 +16,7 @@
 {{- $i18n := .i18n | default true }}
 {{- $label := .label | default "nolabel" }}
 {{- $name := .name | default "noname" }}
+{{- $required := .required | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -46,6 +48,7 @@
   {{ with $default }}
   default: '{{ . }}',
   {{ end }}
+  required: {{ $required }},
   widget: 'map',
   i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }}
 }
