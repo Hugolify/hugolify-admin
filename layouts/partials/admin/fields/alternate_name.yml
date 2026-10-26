@@ -1,0 +1,15 @@
+{{/* Other names of the organization — a shorter one, an acronym, a former
+     one — published as alternateName on the organization and on the WebSite,
+     which Google reads to name the site in its results. */}}
+{{- $fields := slice "name" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.alternate_name.label" 2)
+  "label_singular" (i18n "admin.fields.alternate_name.label" 1)
+  "hint" (i18n "admin.fields.alternate_name.hint")
+  "name" "alternate_name"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/list.js" $args }}

@@ -1,0 +1,11 @@
+{{/* Contact page of the organization, among the pages. Stored as
+     `contact_page`, the key of a page: the theme types it ContactPage and
+     describes each office there, see func/GetSchemaOffices.html. Left empty,
+     the /contact page. Labelled as a field of the organization, not after the
+     pages collection. */}}
+{{- partial "admin/fields/relation.yml" (dict
+  "collection" "pages"
+  "name" "contact_page"
+  "multiple" false
+  "label_key" "admin.fields.contact_page"
+) -}}

@@ -1,0 +1,9 @@
+{{/* Tax identifier of the organization, published as taxID: the SIREN in
+     France. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.tax_id.label")
+  "hint" (i18n "admin.fields.tax_id.hint")
+  "name" "tax_id"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

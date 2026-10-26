@@ -315,8 +315,8 @@ admin:
       country:
         label: Land
       country_code:
-        hint: "Ländercode nach ISO 3166-1 alpha-2 (FR, ES, BE…), für die strukturierten Daten. Das Feld Land bleibt die angezeigte Bezeichnung."
-        label: "Ländercode"
+        hint: "In der Sprache der Seite angezeigt und in den strukturierten Daten als ISO-Code (FR, ES, BE …) veröffentlicht."
+        label: "Land"
         pattern: "Zwei Buchstaben, Code nach ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Adresse
       street:
@@ -330,6 +330,16 @@ admin:
         center: Zentriert
         end: Ende
         start: Anfang
+    alternate_name:
+      hint: "Weitere Namen des Unternehmens — eine Kurzform, ein Kürzel, ein früherer Name. Suchmaschinen können einen davon anstelle des Website-Titels anzeigen."
+      label:
+        one: "Alternativer Name"
+        other: "Alternative Namen"
+    area_served:
+      hint: "Wo sie tätig ist, unverändert in den strukturierten Daten veröffentlicht: Ländercodes (FR, DE), Regionen, Worldwide…"
+      label:
+        one: "Tätigkeitsgebiet"
+        other: "Tätigkeitsgebiete"
     arguments:
       label:
         one: Argument
@@ -348,6 +358,11 @@ admin:
       label: Autor
     autoplay:
       label: Autoplay
+    awards:
+      hint: "Seine Auszeichnungen und Rankings (z. B. Chambers Global 2026), in den strukturierten Daten veröffentlicht."
+      label:
+        one: "Auszeichnung"
+        other: "Auszeichnungen"
     background:
       label: Mit Hintergrund?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Kontakt
         other: Kontakte
+    contact_page:
+      hint: "Die Seite, die die Standorte vorstellt: Jeder wird dort in den strukturierten Daten beschrieben. Leer lassen für die Seite /contact."
+      label: "Kontaktseite"
     contents:
       label: Inhalte
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Daten
         other: Daten
     date:
+      expiry:
+        hint: "Die Seite verschwindet bei der ersten Veröffentlichung nach diesem Datum von der Website; bei einer Stellenanzeige kennt auch Google Jobs ihr Ende."
+        label: "Ablaufdatum"
+      founded:
+        hint: "Ein Jahr (1924) oder ein vollständiges Datum (1924-03-01)."
+        label: "Gründungsdatum"
+        pattern: "Ein Jahr (1924) oder ein Datum (1924-03-01)."
       from: Von
       label: Datum
       sale: Verkaufsdatum
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Sprachcode eingeben (z. B. de), falls abweichend von der aktuellen Seitensprache
       label: Sprache
+    languages:
+      hint: "Die Sprachen, in denen die Person arbeitet, in den strukturierten Daten veröffentlicht."
+      hint_organization: "Die Arbeitssprachen der Organisation, in den strukturierten Daten veröffentlicht. Leer gelassen: die Sprachen der Website."
+      label: "Sprachen"
     lastname:
       label: Nachname
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Notiz
         other: Notizen
+    number_of_employees:
+      hint: "Die Zahl der Beschäftigten, in den strukturierten Daten veröffentlicht: eine Zahl (200) oder eine Spanne (150-250)."
+      label: "Mitarbeiterzahl"
+      pattern: "Eine Zahl (200) oder eine Spanne (150-250)."
     offer:
       label:
         one: Angebot
@@ -735,8 +768,11 @@ admin:
         end: Ende
         start: Anfang
     organization:
-      hint: "Identität des Unternehmens in den strukturierten Daten. Name, Logo und Social-Media-Profile stammen von der Website: ihr Titel, das Logo im Header und das Social-Menü."
+      hint: "Wie das Unternehmen in den strukturierten Daten beschrieben wird: sein schema.org-Typ, ein für Suchmaschinen lesbares Logo, seine Profile auf anderen Websites. Seine Identität – Firmierung, Hauptsitz, Auszeichnungen… – wird unter Konfigurationen › Organisation festgelegt."
       label: "Organisation"
+    other_places:
+      hint: "Die weiteren Standorte des Unternehmens: Ihre Adresse kommt zu der des Hauptsitzes hinzu."
+      label: "Weitere Standorte"
     parent:
       label: Übergeordnete Seite
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Platzhalter
     poster:
       label: Poster
-      hint: Platzhalterbild für Video
+      hint: "Vorschaubild des Videos, auch sein Thumbnail in den Suchergebnissen."
     prefix:
       label: Präfix
     press:
@@ -840,12 +876,20 @@ admin:
       label: Vermietet?
     required:
       label: Erforderlich
+    same_as:
+      hint: "Seiten, die das Unternehmen auf anderen Websites beschreiben: ein Profil bei Chambers oder Legal 500, Wikipedia, Wikidata… Sie helfen Suchmaschinen, es zu erkennen. Die Social-Media-Profile kommen aus dem Social-Media-Menü."
+      label:
+        one: "Externes Profil"
+        other: "Externe Profile"
     schema_email:
       hint: "Nimmt E-Mail-Adressen in die strukturierten Daten auf. Deaktivieren, um automatisiertes Sammeln zu begrenzen."
       label: "E-Mail-Adressen veröffentlichen?"
     schema:
       hint: "Wie sich diese Seite in den strukturierten Daten beschreibt."
       label: "Strukturierte Daten"
+    schema_logo:
+      hint: "Für Suchmaschinen, wenn das Logo im Header ein SVG oder klein ist: ein PNG oder JPG von mindestens 112 × 112 px, das auf weißem Hintergrund gut lesbar ist. Leer lassen, um das Logo im Header zu verwenden."
+      label: "Logo für Suchmaschinen"
     schema_type:
       options:
         Organization: "Organisation (allgemein)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Nur wenn Sie bereits gespeicherte Orte haben (dies deaktiviert den Marker unten)
       label: Alle registrierten Orte anzeigen?
+    slogan:
+      hint: "Der Slogan des Unternehmens, in den strukturierten Daten veröffentlicht."
+      label: "Slogan"
     slug:
       hint: Leer lassen für automatische Generierung aus dem Titel. **Vorsicht bei SEO-Auswirkungen.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Zusammenfassung
     surtitle:
       label: Übertitel
+    tax_id:
+      hint: "Steuerliche Kennung des Unternehmens (in Frankreich die SIREN-Nummer)."
+      label: "Steuernummer"
     text:
       label: Text
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Wert
+    vat_id:
+      hint: "Umsatzsteuer-Identifikationsnummer, z. B. DE123456789."
+      label: "USt-IdNr."
     vertical_align:
       hint: Vertikale Ausrichtung des Textes
       label: Vertikale Ausrichtung
@@ -1041,7 +1094,8 @@ admin:
       primary: Primäre Navigation
       secondary: Sekundäre Navigation
       social: Soziale Netzwerke Navigation
-    schema: "Strukturierte Daten – Organisation und schema.org"
+    organization: "Organisation – Identität, Standorte und Auszeichnungen"
+    schema: "Strukturierte Daten – schema.org"
     seo:
       label: Globales SEO
       title: Website-Name

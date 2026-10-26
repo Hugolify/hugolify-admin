@@ -1,0 +1,11 @@
+{{/* The other places of the organization, besides its head office, in
+     data/organization.yml. Stored as `places`, the keys of places: the
+     structured data lists their address after the head office one, see
+     func/GetSchemaOrganization.html in the theme. Labelled as a field of the
+     organization, not after the places collection. */}}
+{{- partial "admin/fields/relation.yml" (dict
+  "collection" "places"
+  "name" "places"
+  "multiple" true
+  "label_key" "admin.fields.other_places"
+) -}}

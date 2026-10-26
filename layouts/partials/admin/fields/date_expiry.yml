@@ -1,0 +1,13 @@
+{{/* Expiry date of an entry. Named like the other dates of the admin, but
+     stored as `expiryDate`, Hugo's own key: the page leaves the site at the
+     first build after it, with nothing to configure. A job offer also tells
+     Google Jobs when it ends, its validThrough. The same date in every
+     language. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.date.expiry.label")
+  "hint" (i18n "admin.fields.date.expiry.hint")
+  "name" "expiryDate"
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/datetime.js" $args }}

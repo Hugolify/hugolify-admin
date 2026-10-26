@@ -1,0 +1,16 @@
+{{/* Founding date of the organization, stored as `date_founded` and
+     published as foundingDate: a year, all a founding date often comes down
+     to, or a full date. A string rather than a date picker, which would make
+     a day up. */}}
+{{ $regex := "^[0-9]{4}(-[0-9]{2}){0,2}$" }}
+{{ $message := i18n "admin.fields.date.founded.pattern" }}
+{{ $pattern := dict "regex" $regex "message" $message }}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.date.founded.label")
+  "hint" (i18n "admin.fields.date.founded.hint")
+  "name" "date_founded"
+  "pattern" $pattern
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

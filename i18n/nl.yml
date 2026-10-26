@@ -315,8 +315,8 @@ admin:
       country:
         label: Land
       country_code:
-        hint: "ISO 3166-1 alpha-2-landcode (FR, ES, BE…), gebruikt door de gestructureerde gegevens. Het veld Land blijft het getoonde label."
-        label: "Landcode"
+        hint: "Getoond in de taal van de pagina en als ISO-code (FR, ES, BE…) gepubliceerd in de gestructureerde gegevens."
+        label: "Land"
         pattern: "Twee letters, een ISO 3166-1 alpha-2-code (FR, ES, BE…)."
       label: Adres
       street:
@@ -330,6 +330,16 @@ admin:
         center: Midden
         end: Einde
         start: Begin
+    alternate_name:
+      hint: "Andere namen van de organisatie: een kortere, een afkorting, een vroegere naam. Zoekmachines kunnen er een van tonen in plaats van de titel van de site."
+      label:
+        one: "Alternatieve naam"
+        other: "Alternatieve namen"
+    area_served:
+      hint: "Waar ze actief is, ongewijzigd gepubliceerd in de gestructureerde gegevens: landcodes (FR, DE), regio’s, Worldwide…"
+      label:
+        one: "Werkgebied"
+        other: "Werkgebieden"
     arguments:
       label:
         one: Argument
@@ -348,6 +358,11 @@ admin:
       label: Auteur
     autoplay:
       label: Automatisch afspelen
+    awards:
+      hint: "Haar onderscheidingen en rankings (bijv. Chambers Global 2026), gepubliceerd in de gestructureerde gegevens."
+      label:
+        one: "Onderscheiding"
+        other: "Onderscheidingen"
     background:
       label: Met achtergrond?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Contact
         other: Contacten
+    contact_page:
+      hint: "De pagina die de vestigingen voorstelt: elke vestiging wordt daar beschreven in de gestructureerde gegevens. Laat leeg voor de pagina /contact."
+      label: "Contactpagina"
     contents:
       label: Inhoud
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Gegeven
         other: Gegevens
     date:
+      expiry:
+        hint: "De pagina verdwijnt van de site bij de eerste publicatie na deze datum; bij een vacature weet ook Google Jobs wanneer ze afloopt."
+        label: "Vervaldatum"
+      founded:
+        hint: "Een jaar (1924) of een volledige datum (1924-03-01)."
+        label: "Oprichtingsdatum"
+        pattern: "Een jaar (1924) of een datum (1924-03-01)."
       from: Van
       label: Datum
       sale: Verkoopdatum
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Voer taalcode in (bijv. nl) als deze verschilt van de huidige paginataal
       label: Taal
+    languages:
+      hint: "De talen waarin de persoon werkt, gepubliceerd in de gestructureerde gegevens."
+      hint_organization: "De werktalen van de organisatie, gepubliceerd in de gestructureerde gegevens. Leeg gelaten: de talen van de site."
+      label: "Talen"
     lastname:
       label: Achternaam
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Notitie
         other: Notities
+    number_of_employees:
+      hint: "Het personeelsbestand van de organisatie, gepubliceerd in de gestructureerde gegevens: een getal (200) of een bereik (150-250)."
+      label: "Aantal medewerkers"
+      pattern: "Een getal (200) of een bereik (150-250)."
     offer:
       label:
         one: Aanbieding
@@ -735,8 +768,11 @@ admin:
         end: Einde
         start: Begin
     organization:
-      hint: "Identiteit van de organisatie in de gestructureerde gegevens. Naam, logo en sociale profielen komen van de site: de titel, het logo in de header en het sociale menu."
+      hint: "Hoe de organisatie wordt beschreven in de gestructureerde gegevens: haar schema.org-type, een logo dat zoekmachines kunnen lezen, haar profielen op andere sites. Haar identiteit — statutaire naam, hoofdkantoor, onderscheidingen… — stel je in onder Configuraties › Organisatie."
       label: "Organisatie"
+    other_places:
+      hint: "De andere vestigingen van de organisatie: hun adres komt bij dat van het hoofdkantoor."
+      label: "Andere vestigingen"
     parent:
       label: Bovenliggende pagina
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Tijdelijke aanduiding
     poster:
       label: Poster
-      hint: Tijdelijke aanduiding afbeelding voor video
+      hint: "Voorbeeldafbeelding van de video, ook de thumbnail in zoekresultaten."
     prefix:
       label: Voorvoegsel
     press:
@@ -840,12 +876,20 @@ admin:
       label: Huren?
     required:
       label: Verplicht
+    same_as:
+      hint: "Pagina’s die de organisatie op andere sites beschrijven: een profiel bij Chambers of Legal 500, Wikipedia, Wikidata… Ze helpen zoekmachines haar te herkennen. De sociale profielen komen uit het sociale menu."
+      label:
+        one: "Extern profiel"
+        other: "Externe profielen"
     schema_email:
       hint: "Neemt e-mailadressen op in de gestructureerde gegevens. Schakel uit om geautomatiseerd verzamelen te beperken."
       label: "E-mailadressen publiceren?"
     schema:
       hint: "Hoe deze pagina zichzelf beschrijft in de gestructureerde gegevens."
       label: "Gestructureerde gegevens"
+    schema_logo:
+      hint: "Voor zoekmachines, als het logo in de header een SVG of klein is: een PNG of JPG van minstens 112 × 112 px die goed leesbaar is op een witte achtergrond. Laat leeg om het logo in de header te gebruiken."
+      label: "Logo voor zoekmachines"
     schema_type:
       options:
         Organization: "Organisatie (algemeen)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Alleen als u al locaties hebt opgeslagen (dit schakelt de onderstaande markering uit)
       label: Alle geregistreerde locaties tonen?
+    slogan:
+      hint: "De slogan van de organisatie, gepubliceerd in de gestructureerde gegevens."
+      label: "Slogan"
     slug:
       hint: Laat leeg om te automatiseren met de titel. **Let op SEO-impact.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Samenvatting
     surtitle:
       label: Boventitel
+    tax_id:
+      hint: "Fiscaal nummer van de organisatie (in Frankrijk het SIREN-nummer)."
+      label: "Fiscaal nummer"
     text:
       label: Tekst
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Waarde
+    vat_id:
+      hint: "Btw-identificatienummer, bijv. NL123456789B01."
+      label: "Btw-nummer"
     vertical_align:
       hint: Verticale uitlijning van de tekst
       label: Verticale uitlijning
@@ -1041,7 +1094,8 @@ admin:
       primary: Primaire navigatie
       secondary: Secundaire navigatie
       social: Sociale navigatie
-    schema: "Gestructureerde gegevens – Organisatie en schema.org"
+    organization: "Organisatie – Identiteit, vestigingen en onderscheidingen"
+    schema: "Gestructureerde gegevens – schema.org"
     seo:
       label: Algemene SEO
       title: Websitenaam

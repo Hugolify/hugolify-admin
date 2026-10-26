@@ -1,0 +1,15 @@
+{{/* Pages about the organization on other sites — a directory, a ranking,
+     an encyclopedia — published as sameAs next to the social profiles, which
+     come from the social menu. */}}
+{{- $fields := slice "url" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.same_as.label" 2)
+  "label_singular" (i18n "admin.fields.same_as.label" 1)
+  "hint" (i18n "admin.fields.same_as.hint")
+  "name" "same_as"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/list.js" $args }}

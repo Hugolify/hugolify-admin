@@ -317,8 +317,8 @@ admin:
       country:
         label: Maa
       country_code:
-        hint: "Maan ISO 3166-1 alpha-2 -koodi (FR, ES, BE…), jota rakenteinen data käyttää. Maa-kenttä pysyy näytettävänä nimenä."
-        label: "Maakoodi"
+        hint: "Näytetään sivun kielellä ja julkaistaan ISO-koodina (FR, ES, BE…) rakenteisessa datassa."
+        label: "Maa"
         pattern: "Kaksi kirjainta, ISO 3166-1 alpha-2 -koodi (FR, ES, BE…)."
       label: Osoite
       street:
@@ -332,6 +332,16 @@ admin:
         center: Keski
         end: Loppu
         start: Alku
+    alternate_name:
+      hint: "Organisaation muut nimet: lyhyempi nimi, lyhenne, aiempi nimi. Hakukoneet voivat näyttää jonkin niistä sivuston otsikon sijaan."
+      label:
+        one: "Vaihtoehtoinen nimi"
+        other: "Vaihtoehtoiset nimet"
+    area_served:
+      hint: "Missä organisaatio toimii, julkaistaan sellaisenaan rakenteisessa datassa: maakoodit (FR, DE), alueet, Worldwide…"
+      label:
+        one: "Toiminta-alue"
+        other: "Toiminta-alueet"
     arguments:
       label:
         one: Perustelu
@@ -348,6 +358,11 @@ admin:
       label: Tekijä
     autoplay:
       label: Automaattinen käynnistys
+    awards:
+      hint: "Organisaation palkinnot ja rankingit (esim. Chambers Global 2026), julkaistaan rakenteisessa datassa."
+      label:
+        one: "Palkinto"
+        other: "Palkinnot"
     background:
       label: Taustan kanssa?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Yhteystieto
         other: Yhteystiedot
+    contact_page:
+      hint: "Sivu, joka esittelee toimipaikat: jokainen kuvataan siellä rakenteisessa datassa. Jätä tyhjäksi, niin käytetään sivua /contact."
+      label: "Yhteystietosivu"
     contents:
       label: Sisällöt
     controls:
@@ -456,6 +474,13 @@ admin:
     datas:
       label: Tiedot
     date:
+      expiry:
+        hint: "Sivu poistuu sivustolta ensimmäisessä julkaisussa tämän päivän jälkeen; työpaikkailmoituksen päättymispäivän tietää myös Google Jobs."
+        label: "Vanhenemispäivä"
+      founded:
+        hint: "Vuosi (1924) tai täydellinen päivämäärä (1924-03-01)."
+        label: "Perustamispäivä"
+        pattern: "Vuosi (1924) tai päivämäärä (1924-03-01)."
       from: Alkaen
       label: Päivämäärä
       sale: Myynnin pvm
@@ -673,6 +698,10 @@ admin:
     lang:
       hint: Syötä koodin kieli (esim. fr), jos se on eri kuin nykyisen sivun kieli
       label: Kieli
+    languages:
+      hint: "Kielet, joilla henkilö työskentelee, julkaistaan rakenteisessa datassa."
+      hint_organization: "Organisaation työkielet, julkaistaan rakenteisessa datassa. Tyhjänä: sivuston kielet."
+      label: "Kielet"
     lastname:
       label: Sukunimi
     layout:
@@ -719,6 +748,10 @@ admin:
       label:
         one: Note
         other: Notes
+    number_of_employees:
+      hint: "Organisaation henkilöstömäärä, julkaistaan rakenteisessa datassa: luku (200) tai vaihteluväli (150-250)."
+      label: "Henkilöstömäärä"
+      pattern: "Luku (200) tai vaihteluväli (150-250)."
     offer:
       label:
         one: Tarjous
@@ -731,8 +764,11 @@ admin:
         end: Loppu
         start: Alku
     organization:
-      hint: "Organisaation tiedot rakenteisessa datassa. Nimi, logo ja some-profiilit tulevat sivustolta: sen otsikosta, ylätunnisteen logosta ja somevalikosta."
+      hint: "Miten organisaatio kuvataan rakenteisessa datassa: sen schema.org-tyyppi, hakukoneiden luettavissa oleva logo, sen profiilit muilla sivustoilla. Sen tunnistetiedot — virallinen nimi, pääkonttori, palkinnot… — asetetaan kohdassa Asetus › Organisaatio."
       label: "Organisaatio"
+    other_places:
+      hint: "Organisaation muut toimipaikat: niiden osoite lisätään pääkonttorin osoitteen perään."
+      label: "Muut toimipaikat"
     parent:
       label: Ylätason sivu
     pdf:
@@ -745,7 +781,7 @@ admin:
       label: Paikkamerkki
     poster:
       label: Poster
-      hint: Placehoster image for video
+      hint: "Videon esikatselukuva, myös sen pikkukuva hakutuloksissa."
     prefix:
       label: Etuliite
     press:
@@ -836,12 +872,20 @@ admin:
       label: Vuokra?
     required:
       label: Vaadittu
+    same_as:
+      hint: "Sivut, jotka kuvaavat organisaatiota muilla sivustoilla: Chambers- tai Legal 500 -profiili, Wikipedia, Wikidata… Ne auttavat hakukoneita tunnistamaan sen. Some-profiilit tulevat somevalikosta."
+      label:
+        one: "Ulkoinen profiili"
+        other: "Ulkoiset profiilit"
     schema_email:
       hint: "Sisällyttää sähköpostiosoitteet rakenteiseen dataan. Poista käytöstä rajoittaaksesi automaattista keräämistä."
       label: "Julkaistaanko sähköpostiosoitteet?"
     schema:
       hint: "Miten tämä sivu kuvaa itsensä rakenteisessa datassa."
       label: "Rakenteinen data"
+    schema_logo:
+      hint: "Hakukoneille, jos ylätunnisteen logo on SVG tai pieni: vähintään 112 × 112 px:n PNG tai JPG, joka erottuu hyvin valkoisella taustalla. Jätä tyhjäksi, niin käytetään ylätunnisteen logoa."
+      label: "Logo hakukoneille"
     schema_type:
       options:
         Organization: "Organisaatio (yleinen)"
@@ -894,6 +938,9 @@ admin:
         Vain jos sinulla on jo tallennettuja paikkoja (tämä poistaa alla olevan
         merkin käytöstä)
       label: Näytä kaikki rekisteröidyt paikat?
+    slogan:
+      hint: "Organisaation iskulause, julkaistaan rakenteisessa datassa."
+      label: "Iskulause"
     slug:
       hint:
         Jätä tyhjäksi, jos haluat automatisoida otsikon kanssa. **Ole varovainen
@@ -946,6 +993,9 @@ admin:
       label: Summary
     surtitle:
       label: Alaotsikko
+    tax_id:
+      hint: "Organisaation verotunniste (Ranskassa SIREN-numero)."
+      label: "Verotunniste"
     text:
       label: Teksti
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: Verkko-osoite
     value:
       label: Arvo
+    vat_id:
+      hint: "ALV-tunniste, esim. FI12345678."
+      label: "ALV-tunniste"
     vertical_align:
       hint: Tekstin pystysuuntainen tasaus
       label: Pystytasaus
@@ -1041,7 +1094,8 @@ admin:
       primary: Ensisijainen navigaatio
       secondary: Toissijainen navigaatio
       social: Sosiaalisen median navigaatio
-    schema: "Rakenteinen data – Organisaatio ja schema.org"
+    organization: "Organisaatio – Tunnistetiedot, toimipaikat ja palkinnot"
+    schema: "Rakenteinen data – schema.org"
     seo:
       label: Yleinen SEO
       title: Verkkosivun nimi

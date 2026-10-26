@@ -1,0 +1,8 @@
+{{/* VAT number of the organization, published as vatID. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.vat_id.label")
+  "hint" (i18n "admin.fields.vat_id.hint")
+  "name" "vat_id"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

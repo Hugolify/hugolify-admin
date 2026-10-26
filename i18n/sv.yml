@@ -315,8 +315,8 @@ admin:
       country:
         label: Land
       country_code:
-        hint: "Landskod enligt ISO 3166-1 alpha-2 (FR, ES, BE…), används av strukturerade data. Fältet Land förblir den visade etiketten."
-        label: "Landskod"
+        hint: "Visas på sidans språk och publiceras som ISO-kod (FR, ES, BE …) i de strukturerade data."
+        label: "Land"
         pattern: "Två bokstäver, en ISO 3166-1 alpha-2-kod (FR, ES, BE…)."
       label: Adress
       street:
@@ -330,6 +330,16 @@ admin:
         center: Centrera
         end: Slut
         start: Start
+    alternate_name:
+      hint: "Andra namn som organisationen använder: ett kortare namn, en förkortning, ett tidigare namn. Sökmotorer kan visa ett av dem i stället för webbplatsens titel."
+      label:
+        one: "Alternativt namn"
+        other: "Alternativa namn"
+    area_served:
+      hint: "Var organisationen är verksam, publicerat oförändrat i de strukturerade data: landskoder (FR, DE), regioner, Worldwide …"
+      label:
+        one: "Verksamhetsområde"
+        other: "Verksamhetsområden"
     arguments:
       label:
         one: Argument
@@ -348,6 +358,11 @@ admin:
       label: Författare
     autoplay:
       label: Autouppspelning
+    awards:
+      hint: "Organisationens utmärkelser och rankningar (t.ex. Chambers Global 2026), publicerade i de strukturerade data."
+      label:
+        one: "Utmärkelse"
+        other: "Utmärkelser"
     background:
       label: Med bakgrund?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Kontakt
         other: Kontakter
+    contact_page:
+      hint: "Sidan som presenterar kontoren: vart och ett beskrivs där i de strukturerade data. Lämna tomt för sidan /contact."
+      label: "Kontaktsida"
     contents:
       label: Innehåll
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Data
         other: Data
     date:
+      expiry:
+        hint: "Sidan försvinner från webbplatsen vid första publiceringen efter detta datum; för en jobbannons vet även Google Jobs när den löper ut."
+        label: "Utgångsdatum"
+      founded:
+        hint: "Ett år (1924) eller ett fullständigt datum (1924-03-01)."
+        label: "Grundandedatum"
+        pattern: "Ett år (1924) eller ett datum (1924-03-01)."
       from: Från
       label: Datum
       sale: Försäljningsdatum
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Ange språkkod (t.ex. fr) om den skiljer sig från aktuell sidspråk
       label: Språk
+    languages:
+      hint: "Språken personen arbetar på, publicerade i de strukturerade data."
+      hint_organization: "Organisationens arbetsspråk, publicerade i de strukturerade data. Lämnas fältet tomt: webbplatsens språk."
+      label: "Språk"
     lastname:
       label: Efternamn
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Anteckning
         other: Anteckningar
+    number_of_employees:
+      hint: "Antalet personer i organisationen, publicerat i de strukturerade data: ett tal (200) eller ett intervall (150-250)."
+      label: "Antal anställda"
+      pattern: "Ett tal (200) eller ett intervall (150-250)."
     offer:
       label:
         one: Erbjudande
@@ -735,8 +768,11 @@ admin:
         end: Slut
         start: Start
     organization:
-      hint: "Organisationens identitet i de strukturerade data. Namn, logotyp och sociala profiler hämtas från webbplatsen: dess titel, logotypen i sidhuvudet och den sociala menyn."
+      hint: "Hur organisationen beskrivs i de strukturerade data: dess schema.org-typ, en logotyp som sökmotorer kan läsa, dess profiler på andra webbplatser. Dess identitet – juridiskt namn, huvudkontor, utmärkelser … – anges under Konfig › Organisation."
       label: "Organisation"
+    other_places:
+      hint: "Organisationens övriga platser: deras adress läggs till huvudkontorets."
+      label: "Övriga platser"
     parent:
       label: Föräldrasida
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Platshållare
     poster:
       label: Affisch
-      hint: Affischbild för video
+      hint: "Omslagsbild för videon, även dess miniatyr i sökresultaten."
     prefix:
       label: Prefix
     press:
@@ -840,12 +876,20 @@ admin:
       label: Hyra?
     required:
       label: Krävs
+    same_as:
+      hint: "Sidor som beskriver organisationen på andra webbplatser: en profil hos Chambers eller Legal 500, Wikipedia, Wikidata… De hjälper sökmotorer att känna igen den. De sociala profilerna hämtas från den sociala menyn."
+      label:
+        one: "Extern profil"
+        other: "Externa profiler"
     schema_email:
       hint: "Tar med e-postadresser i de strukturerade data. Stäng av för att begränsa automatiserad insamling."
       label: "Publicera e-postadresser?"
     schema:
       hint: "Hur den här sidan beskriver sig själv i de strukturerade data."
       label: "Strukturerade data"
+    schema_logo:
+      hint: "För sökmotorer, när logotypen i sidhuvudet är en SVG eller är liten: en PNG eller JPG på minst 112 × 112 px som syns tydligt mot vit bakgrund. Lämna tomt för att använda logotypen i sidhuvudet."
+      label: "Logotyp för sökmotorer"
     schema_type:
       options:
         Organization: "Organisation (generisk)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Endast om du har platser redan sparade (detta inaktiverar markören nedan)
       label: Visa alla registrerade platser?
+    slogan:
+      hint: "Organisationens slogan, publicerad i de strukturerade data."
+      label: "Slogan"
     slug:
       hint: Lämna tomt för att automatisera med titeln. **Var försiktig med SEO-påverkan.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Sammanfattning
     surtitle:
       label: Övertitel
+    tax_id:
+      hint: "Organisationens skatteidentifierare (i Frankrike SIREN-numret)."
+      label: "Skatte-ID"
     text:
       label: Text
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Värde
+    vat_id:
+      hint: "Momsregistreringsnummer, t.ex. SE123456789001."
+      label: "Momsnummer"
     vertical_align:
       hint: Vertikal justering av texten
       label: Vertikal justering
@@ -1041,7 +1094,8 @@ admin:
       primary: Primär navigering
       secondary: Sekundär navigering
       social: Social navigering
-    schema: "Strukturerade data – Organisation och schema.org"
+    organization: "Organisation – Identitet, platser och utmärkelser"
+    schema: "Strukturerade data – schema.org"
     seo:
       label: Global SEO
       title: Webbplatsnamn

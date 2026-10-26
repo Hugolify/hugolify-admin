@@ -1,0 +1,15 @@
+{{/* Areas the organization serves, published as typed as areaServed:
+     schema.org takes plain text — a country code (FR), a region,
+     "Worldwide" — which is the form an SEO audit usually asks for. */}}
+{{- $fields := slice "name" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.area_served.label" 2)
+  "label_singular" (i18n "admin.fields.area_served.label" 1)
+  "hint" (i18n "admin.fields.area_served.hint")
+  "name" "area_served"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/list.js" $args }}

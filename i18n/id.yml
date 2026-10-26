@@ -315,8 +315,8 @@ admin:
       country:
         label: Negara
       country_code:
-        hint: "Kode negara ISO 3166-1 alpha-2 (FR, ES, BE…), dipakai oleh data terstruktur. Kolom Negara tetap menjadi label yang ditampilkan."
-        label: "Kode negara"
+        hint: "Ditampilkan dalam bahasa halaman, dan dipublikasikan sebagai kode ISO (FR, ES, BE…) dalam data terstruktur."
+        label: "Negara"
         pattern: "Dua huruf, kode ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Alamat
       street:
@@ -330,6 +330,16 @@ admin:
         center: Tengah
         end: Akhir
         start: Awal
+    alternate_name:
+      hint: "Nama lain badan usaha: yang lebih pendek, singkatan, nama sebelumnya. Mesin pencari dapat menampilkan salah satunya sebagai pengganti judul situs."
+      label:
+        one: "Nama alternatif"
+        other: "Nama alternatif"
+    area_served:
+      hint: "Tempat organisasi beroperasi, dipublikasikan apa adanya dalam data terstruktur: kode negara (FR, DE), wilayah, Worldwide…"
+      label:
+        one: "Wilayah layanan"
+        other: "Wilayah layanan"
     arguments:
       label:
         one: Argumen
@@ -348,6 +358,11 @@ admin:
       label: Penulis
     autoplay:
       label: Putar Otomatis
+    awards:
+      hint: "Penghargaan dan peringkatnya (mis. Chambers Global 2026), dipublikasikan dalam data terstruktur."
+      label:
+        one: "Penghargaan"
+        other: "Penghargaan"
     background:
       label: Dengan latar belakang?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Kontak
         other: Kontak
+    contact_page:
+      hint: "Halaman yang menampilkan lokasi: masing-masing dijelaskan di sana dalam data terstruktur. Kosongkan untuk memakai halaman /contact."
+      label: "Halaman kontak"
     contents:
       label: Konten
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Data
         other: Data
     date:
+      expiry:
+        hint: "Halaman hilang dari situs pada publikasi pertama setelah tanggal ini; untuk lowongan kerja, Google Jobs juga mengetahui kapan berakhirnya."
+        label: "Tanggal kedaluwarsa"
+      founded:
+        hint: "Tahun (1924) atau tanggal lengkap (1924-03-01)."
+        label: "Tanggal pendirian"
+        pattern: "Tahun (1924) atau tanggal (1924-03-01)."
       from: Dari
       label: Tanggal
       sale: Tanggal Penjualan
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Masukkan kode bahasa (mis. fr) jika berbeda dari bahasa halaman saat ini
       label: Bahasa
+    languages:
+      hint: "Bahasa yang digunakan orang tersebut dalam bekerja, dipublikasikan dalam data terstruktur."
+      hint_organization: "Bahasa kerja badan usaha, dipublikasikan dalam data terstruktur. Jika kosong: bahasa situs."
+      label: "Bahasa"
     lastname:
       label: Nama belakang
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Catatan
         other: Catatan
+    number_of_employees:
+      hint: "Jumlah orang dalam badan usaha, dipublikasikan dalam data terstruktur: sebuah angka (200) atau rentang (150-250)."
+      label: "Jumlah karyawan"
+      pattern: "Sebuah angka (200) atau rentang (150-250)."
     offer:
       label:
         one: Penawaran
@@ -735,8 +768,11 @@ admin:
         end: Akhir
         start: Awal
     organization:
-      hint: "Identitas badan usaha dalam data terstruktur. Nama, logo, dan profil media sosial diambil dari situs: judulnya, logo header, dan menu media sosial."
+      hint: "Cara badan usaha dijelaskan dalam data terstruktur: tipe schema.org-nya, logo yang dapat dibaca mesin pencari, profilnya di situs lain. Identitasnya — nama resmi, kantor pusat, penghargaan… — diatur di Konfigurasi › Organisasi."
       label: "Organisasi"
+    other_places:
+      hint: "Lokasi lain badan usaha: alamatnya ditambahkan setelah alamat kantor pusat."
+      label: "Lokasi lain"
     parent:
       label: Halaman Induk
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Placeholder
     poster:
       label: Poster
-      hint: Gambar poster untuk video
+      hint: "Gambar sampul video, sekaligus thumbnail-nya di hasil penelusuran."
     prefix:
       label: Awalan
     press:
@@ -840,12 +876,20 @@ admin:
       label: Sewa?
     required:
       label: Wajib
+    same_as:
+      hint: "Halaman yang menjelaskan badan usaha di situs lain: profil Chambers atau Legal 500, Wikipedia, Wikidata… Membantu mesin pencari mengenalinya. Profil media sosial diambil dari menu media sosial."
+      label:
+        one: "Profil eksternal"
+        other: "Profil eksternal"
     schema_email:
       hint: "Menyertakan alamat email dalam data terstruktur. Matikan untuk membatasi pengumpulan otomatis."
       label: "Publikasikan alamat email?"
     schema:
       hint: "Bagaimana halaman ini menggambarkan dirinya dalam data terstruktur."
       label: "Data terstruktur"
+    schema_logo:
+      hint: "Untuk mesin pencari, jika logo header berupa SVG atau berukuran kecil: PNG atau JPG minimal 112 × 112 px yang terbaca jelas di latar putih. Kosongkan untuk memakai logo header."
+      label: "Logo untuk mesin pencari"
     schema_type:
       options:
         Organization: "Organisasi (umum)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Hanya jika Anda memiliki tempat yang sudah disimpan (ini akan menonaktifkan penanda di bawah)
       label: Tampilkan semua tempat terdaftar?
+    slogan:
+      hint: "Slogan badan usaha, dipublikasikan dalam data terstruktur."
+      label: "Slogan"
     slug:
       hint: Biarkan kosong untuk mengotomatiskan dengan judul. **Hati-hati dengan dampak SEO.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Ringkasan
     surtitle:
       label: Judul Atas
+    tax_id:
+      hint: "Nomor identifikasi pajak badan usaha (di Prancis: nomor SIREN)."
+      label: "Nomor pajak"
     text:
       label: Teks
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Nilai
+    vat_id:
+      hint: "Nomor PPN, mis. FR12345678901."
+      label: "Nomor PPN"
     vertical_align:
       hint: Penjajaran vertikal teks
       label: Penjajaran vertikal
@@ -1041,7 +1094,8 @@ admin:
       primary: Navigasi Utama
       secondary: Navigasi Sekunder
       social: Navigasi Sosial
-    schema: "Data terstruktur – Organisasi dan schema.org"
+    organization: "Organisasi – Identitas, lokasi, dan penghargaan"
+    schema: "Data terstruktur – schema.org"
     seo:
       label: SEO Global
       title: Nama Situs Web

@@ -1,12 +1,38 @@
-{{ $regex := "^[A-Za-z]{2}$" }}
-{{ $message := i18n "admin.fields.address.country_code.pattern" }}
-{{ $pattern := dict "regex" $regex "message" $message }}
+{{/* Country of an address, stored as its ISO 3166-1 alpha-2 code (FR, ES,
+     BE…) — what schema.org reads as the addressCountry — and shown under
+     its name in the language of the page. The theme lists and names the
+     countries, see func/GetNamedOptions.html; without it, the code is
+     typed in. Duplicated rather than translated: a country has one code. */}}
+{{- $select := partial "admin/func/GetNamedOptions.html" (dict
+  "field" .
+  "codes" "func/GetCountryCodes.html"
+  "name" "func/GetCountryName.html"
+) -}}
 
-{{- $args := dict 
-  "label" (i18n "admin.fields.address.country_code.label")
-  "hint" (i18n "admin.fields.address.country_code.hint")
-  "name" "country_code"
-  "pattern" $pattern
-  -}}
+{{- $label := i18n "admin.fields.address.country_code.label" -}}
+{{- $hint := i18n "admin.fields.address.country_code.hint" -}}
 
-{{ partial "admin/widgets/string.js" $args }}
+{{- if $select.options -}}
+  {{- $args := dict
+    "label" $label
+    "hint" $hint
+    "name" "country_code"
+    "options" $select.options
+    "label_options" $select.labels
+    "i18n" "duplicate"
+    -}}
+
+  {{ partial "admin/widgets/select.js" $args }}
+{{- else -}}
+  {{- $regex := "^[A-Za-z]{2}$" -}}
+  {{- $message := i18n "admin.fields.address.country_code.pattern" -}}
+
+  {{- $args := dict
+    "label" $label
+    "hint" $hint
+    "name" "country_code"
+    "pattern" (dict "regex" $regex "message" $message)
+    -}}
+
+  {{ partial "admin/widgets/string.js" $args }}
+{{- end -}}

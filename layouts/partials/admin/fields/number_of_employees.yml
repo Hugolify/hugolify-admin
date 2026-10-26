@@ -1,0 +1,16 @@
+{{/* Headcount of the organization, stored as `number_of_employees` and
+     published as numberOfEmployees: a number, or a range when it moves
+     (150-250). A string rather than a number field, which would refuse the
+     range. */}}
+{{ $regex := "^[1-9][0-9]*(-[1-9][0-9]*)?$" }}
+{{ $message := i18n "admin.fields.number_of_employees.pattern" }}
+{{ $pattern := dict "regex" $regex "message" $message }}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.number_of_employees.label")
+  "hint" (i18n "admin.fields.number_of_employees.hint")
+  "name" "number_of_employees"
+  "pattern" $pattern
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

@@ -315,8 +315,8 @@ admin:
       country:
         label: 국가
       country_code:
-        hint: "ISO 3166-1 alpha-2 국가 코드(FR, ES, BE…). 구조화된 데이터에 사용됩니다. 위의 국가 필드는 표시용 이름으로 유지됩니다."
-        label: "국가 코드"
+        hint: "페이지 언어로 표시되며, 구조화된 데이터에는 ISO 코드(FR, ES, BE 등)로 게시됩니다."
+        label: "국가"
         pattern: "두 글자의 ISO 3166-1 alpha-2 코드 (FR, ES, BE…)."
       label: 주소
       street:
@@ -330,6 +330,16 @@ admin:
         center: 가운데
         end: 끝
         start: 시작
+    alternate_name:
+      hint: "조직의 다른 이름(짧은 이름, 약칭, 이전 이름 등). 검색엔진이 사이트 제목 대신 표시할 수 있습니다."
+      label:
+        one: "다른 이름"
+        other: "다른 이름"
+    area_served:
+      hint: "활동하는 지역으로, 구조화된 데이터에 입력한 그대로 게시됩니다: 국가 코드(FR, DE), 지역, Worldwide 등."
+      label:
+        one: "서비스 지역"
+        other: "서비스 지역"
     arguments:
       label:
         one: 인수
@@ -348,6 +358,11 @@ admin:
       label: 저자
     autoplay:
       label: 자동 재생
+    awards:
+      hint: "조직의 수상 내역과 순위(예: Chambers Global 2026)로, 구조화된 데이터에 게시됩니다."
+      label:
+        one: "수상 내역"
+        other: "수상 내역"
     background:
       label: 배경 있음?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: 연락처
         other: 연락처
+    contact_page:
+      hint: "지점을 소개하는 페이지로, 각 지점이 구조화된 데이터로 설명됩니다. 비워 두면 /contact 페이지를 사용합니다."
+      label: "연락처 페이지"
     contents:
       label: 콘텐츠
     controls:
@@ -458,6 +476,13 @@ admin:
         one: 데이터
         other: 데이터
     date:
+      expiry:
+        hint: "이 날짜 이후 첫 게시 때 페이지가 사이트에서 사라집니다. 채용 공고라면 Google 채용정보에도 종료일이 전달됩니다."
+        label: "만료일"
+      founded:
+        hint: "연도(1924) 또는 전체 날짜(1924-03-01)."
+        label: "설립일"
+        pattern: "연도(1924) 또는 날짜(1924-03-01)를 입력하세요."
       from: 시작일
       label: 날짜
       sale: 판매일
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: '현재 페이지 언어와 다른 경우 언어 코드 입력 (예: ko)'
       label: 언어
+    languages:
+      hint: "그 사람이 업무에 사용하는 언어로, 구조화된 데이터에 게시됩니다."
+      hint_organization: "조직의 업무 언어로, 구조화된 데이터에 게시됩니다. 비워 두면 사이트의 언어가 사용됩니다."
+      label: "언어"
     lastname:
       label: 성
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: 노트
         other: 노트
+    number_of_employees:
+      hint: "조직의 인원으로, 구조화된 데이터에 게시됩니다. 숫자(200) 또는 범위(150-250)로 입력하세요."
+      label: "직원 수"
+      pattern: "숫자(200) 또는 범위(150-250)를 입력하세요."
     offer:
       label:
         one: 제안
@@ -735,8 +768,11 @@ admin:
         end: 끝
         start: 시작
     organization:
-      hint: "구조화된 데이터에 게시되는 조직 정보. 이름, 로고, 소셜 프로필은 사이트에서 가져옵니다: 사이트 제목, 헤더 로고, 소셜 메뉴."
+      hint: "구조화된 데이터에서 조직을 설명하는 방식: schema.org 유형, 검색엔진이 읽을 수 있는 로고, 다른 사이트의 프로필. 정식 명칭, 본사, 수상 내역 등 기본 정보는 설정 › 조직에서 설정합니다."
       label: "조직"
+    other_places:
+      hint: "조직의 다른 지점. 해당 주소가 본사 주소에 추가됩니다."
+      label: "기타 지점"
     parent:
       label: 상위 페이지
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: 플레이스홀더
     poster:
       label: 포스터
-      hint: 동영상용 플레이스홀더 이미지
+      hint: "동영상의 대표 이미지로, 검색 결과의 썸네일로도 사용됩니다."
     prefix:
       label: 접두사
     press:
@@ -840,12 +876,20 @@ admin:
       label: 임대됨?
     required:
       label: 필수
+    same_as:
+      hint: "다른 사이트에서 조직을 소개하는 페이지(Chambers 또는 Legal 500 프로필, 위키백과, 위키데이터 등). 검색엔진이 조직을 식별하는 데 도움이 됩니다. 소셜 프로필은 소셜 메뉴에서 가져옵니다."
+      label:
+        one: "외부 프로필"
+        other: "외부 프로필"
     schema_email:
       hint: "구조화된 데이터에 이메일 주소를 포함합니다. 자동 수집을 줄이려면 끄십시오."
       label: "이메일 주소를 공개할까요?"
     schema:
       hint: "이 페이지가 구조화된 데이터에서 스스로를 설명하는 방식입니다."
       label: "구조화된 데이터"
+    schema_logo:
+      hint: "헤더 로고가 SVG이거나 작은 경우 검색엔진용 로고: 흰색 배경에서도 잘 보이는 112 × 112 px 이상의 PNG 또는 JPG. 비워 두면 헤더 로고를 사용합니다."
+      label: "검색엔진용 로고"
     schema_type:
       options:
         Organization: "조직 (일반)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: 이미 저장된 장소가 있는 경우에만 (아래 마커가 비활성화됩니다)
       label: 등록된 모든 장소 표시?
+    slogan:
+      hint: "조직의 슬로건으로, 구조화된 데이터에 게시됩니다."
+      label: "슬로건"
     slug:
       hint: 제목으로 자동화하려면 비워 두세요. **SEO 영향에 주의하세요.**
       label: 슬러그
@@ -946,6 +993,9 @@ admin:
       label: 요약
     surtitle:
       label: 상위 제목
+    tax_id:
+      hint: "조직의 세금 식별 번호(프랑스에서는 SIREN 번호)."
+      label: "세금 식별 번호"
     text:
       label: 텍스트
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: 값
+    vat_id:
+      hint: "부가가치세(VAT) 번호, 예: FR12345678901"
+      label: "VAT 번호"
     vertical_align:
       hint: 텍스트의 수직 정렬
       label: 수직 정렬
@@ -1041,7 +1094,8 @@ admin:
       primary: 기본 내비게이션
       secondary: 보조 내비게이션
       social: 소셜 내비게이션
-    schema: "구조화된 데이터 – 조직 및 schema.org"
+    organization: "조직 – 기본 정보, 지점, 수상 내역"
+    schema: "구조화된 데이터 – schema.org"
     seo:
       label: 글로벌 SEO
       title: 웹사이트 이름

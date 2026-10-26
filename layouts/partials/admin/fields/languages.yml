@@ -1,0 +1,31 @@
+{{/* Languages a person or the organization works in, stored as codes (de,
+     eu, zh) and published as knowsLanguage, which schema.org wants as codes.
+     The theme lists and names them, see func/GetNamedOptions.html.
+     Duplicated rather than translated: a person speaks the same languages
+     in every language of the site.
+
+     A map context may carry its own hint: the organization one says the
+     languages of the site stand in when the field is left empty.
+*/}}
+{{- $select := partial "admin/func/GetNamedOptions.html" (dict
+  "field" .
+  "codes" "func/GetLanguageCodes.html"
+  "name" "func/GetLanguageName.html"
+) -}}
+
+{{- $hint := i18n "admin.fields.languages.hint" -}}
+{{- if reflect.IsMap . -}}
+  {{- with .hint -}}{{- $hint = . -}}{{- end -}}
+{{- end -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.languages.label")
+  "hint" $hint
+  "name" "languages"
+  "options" $select.options
+  "label_options" $select.labels
+  "multiple" true
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

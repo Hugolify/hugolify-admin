@@ -1,16 +1,9 @@
-{{/* Postal address.
-
-     Params: {map} optional
-       is_schema_only (bool) the address is never rendered, only published as
-                      structured data. Drops the country name, which exists for
-                      the visible <address>; the schema reads country_code.
+{{/* Postal address. Its country is a single select, stored as an ISO
+     code and shown under its name in the language of the page, see
+     country_code.yml. The free `country` an address held before is still
+     read by the theme where the content keeps it, and a site wanting the
+     field back adds it to its fields list.
 */}}
-{{- $is_schema_only := false -}}
-{{- if reflect.IsMap . -}}
-  {{- with .is_schema_only -}}
-    {{- $is_schema_only = true -}}
-  {{- end -}}
-{{- end -}}
 
 {{- $pin := cond (or (eq site.Params.admin.cms "decapcms") (eq site.Params.admin.cms "sveltiacms")) "location" "coordinates" -}}
 
@@ -18,9 +11,6 @@
   "street" 
   "zipcode" 
   "city" -}}
-{{- if not $is_schema_only -}}
-  {{- $fields = $fields | append "country" -}}
-{{- end -}}
 {{- $fields = $fields | append "country_code" $pin -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}

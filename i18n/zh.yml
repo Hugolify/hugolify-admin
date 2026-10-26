@@ -315,8 +315,8 @@ admin:
       country:
         label: 国家
       country_code:
-        hint: "ISO 3166-1 alpha-2 国家代码（FR, ES, BE…），供结构化数据使用。上方的「国家」字段仍是显示用名称。"
-        label: "国家代码"
+        hint: "以页面语言显示，并以 ISO 代码（FR、ES、BE 等）发布在结构化数据中。"
+        label: "国家"
         pattern: "两个字母的 ISO 3166-1 alpha-2 代码（FR、ES、BE…）。"
       label: 地址
       street:
@@ -330,6 +330,16 @@ admin:
         center: 居中
         end: 结束
         start: 开始
+    alternate_name:
+      hint: "机构的其他名称（简称、缩写、旧称等）。搜索引擎可能会用其中之一代替网站标题显示。"
+      label:
+        one: "别名"
+        other: "别名"
+    area_served:
+      hint: "机构开展业务的区域，按原样发布在结构化数据中：国家代码（FR、DE）、地区、Worldwide 等。"
+      label:
+        one: "服务区域"
+        other: "服务区域"
     arguments:
       label:
         one: 参数
@@ -348,6 +358,11 @@ admin:
       label: 作者
     autoplay:
       label: 自动播放
+    awards:
+      hint: "机构获得的奖项和排名（例如 Chambers Global 2026），发布在结构化数据中。"
+      label:
+        one: "奖项"
+        other: "奖项"
     background:
       label: 带背景?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: 联系人
         other: 联系人
+    contact_page:
+      hint: "介绍各办公地点的页面：每个地点都会在其中以结构化数据描述。留空则使用 /contact 页面。"
+      label: "联系页面"
     contents:
       label: 内容
     controls:
@@ -458,6 +476,13 @@ admin:
         one: 数据
         other: 数据
     date:
+      expiry:
+        hint: "此日期之后的首次发布时，页面将从网站下线；如为招聘职位，Google 招聘也会知道其截止时间。"
+        label: "截止日期"
+      founded:
+        hint: "年份（1924）或完整日期（1924-03-01）。"
+        label: "成立日期"
+        pattern: "请输入年份（1924）或日期（1924-03-01）。"
       from: 从
       label: 日期
       sale: 销售日期
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: 如果与当前页面语言不同,请输入语言代码(例如 zh)
       label: 语言
+    languages:
+      hint: "此人工作中使用的语言，发布在结构化数据中。"
+      hint_organization: "机构的工作语言，发布在结构化数据中。留空则使用网站的语言。"
+      label: "语言"
     lastname:
       label: 姓氏
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: 注释
         other: 注释
+    number_of_employees:
+      hint: "机构的人数，发布在结构化数据中：一个数字（200）或一个范围（150-250）。"
+      label: "员工人数"
+      pattern: "请输入一个数字（200）或一个范围（150-250）。"
     offer:
       label:
         one: 优惠
@@ -735,8 +768,11 @@ admin:
         end: 结束
         start: 开始
     organization:
-      hint: "在结构化数据中发布的机构信息。名称、标识和社交账号取自网站：网站标题、页眉标识和社交菜单。"
+      hint: "机构在结构化数据中的描述方式：schema.org 类型、搜索引擎可读取的标识、在其他网站上的资料页。法定名称、总部、奖项等基本信息在「配置 › 组织」中设置。"
       label: "组织"
+    other_places:
+      hint: "机构的其他办公地点，其地址将列在总部地址之后。"
+      label: "其他办公地点"
     parent:
       label: 父页面
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: 占位符
     poster:
       label: 海报
-      hint: 视频的占位符图片
+      hint: "视频的封面图，也用作搜索结果中的缩略图。"
     prefix:
       label: 前缀
     press:
@@ -840,12 +876,20 @@ admin:
       label: 租赁?
     required:
       label: 必填
+    same_as:
+      hint: "在其他网站上介绍机构的页面：Chambers 或 Legal 500 资料页、维基百科、维基数据等，可帮助搜索引擎识别机构。社交账号取自社交菜单。"
+      label:
+        one: "外部资料页"
+        other: "外部资料页"
     schema_email:
       hint: "将电子邮件地址包含在结构化数据中。如需减少自动抓取，请关闭。"
       label: "是否发布电子邮件地址？"
     schema:
       hint: "本页面在结构化数据中的自我描述方式。"
       label: "结构化数据"
+    schema_logo:
+      hint: "当页眉标识为 SVG 或尺寸较小时供搜索引擎使用：不小于 112 × 112 px、在白色背景上清晰可辨的 PNG 或 JPG。留空则使用页眉标识。"
+      label: "搜索引擎标识"
     schema_type:
       options:
         Organization: "组织（通用）"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: 仅当您已保存地点时(这将禁用下面的标记)
       label: 显示所有已注册的地点?
+    slogan:
+      hint: "机构的口号，发布在结构化数据中。"
+      label: "口号"
     slug:
       hint: 留空以使用标题自动生成。**注意SEO影响。**
       label: 别名
@@ -946,6 +993,9 @@ admin:
       label: 摘要
     surtitle:
       label: 上标题
+    tax_id:
+      hint: "机构的税务识别号（在法国为 SIREN 号码）。"
+      label: "税务识别号"
     text:
       label: 文本
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: 值
+    vat_id:
+      hint: "增值税号，例如 FR12345678901。"
+      label: "增值税号"
     vertical_align:
       hint: 文本的垂直对齐
       label: 垂直对齐
@@ -1041,7 +1094,8 @@ admin:
       primary: 主导航
       secondary: 次导航
       social: 社交导航
-    schema: "结构化数据 – 组织与 schema.org"
+    organization: "组织 – 基本信息、办公地点与奖项"
+    schema: "结构化数据 – schema.org"
     seo:
       label: 全局SEO
       title: 网站名称

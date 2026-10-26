@@ -315,8 +315,8 @@ admin:
       country:
         label: Država
       country_code:
-        hint: "Koda države po ISO 3166-1 alpha-2 (FR, ES, BE…), ki jo uporabljajo strukturirani podatki. Polje Država ostane prikazana oznaka."
-        label: "Koda države"
+        hint: "Prikazano v jeziku strani in objavljeno kot koda ISO (FR, ES, BE…) v strukturiranih podatkih."
+        label: "Država"
         pattern: "Dve črki, koda ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Naslov
       street:
@@ -330,6 +330,16 @@ admin:
         center: Sredina
         end: Konec
         start: Začetek
+    alternate_name:
+      hint: "Druga imena organizacije: krajše, kratica, nekdanje ime. Iskalniki lahko prikažejo eno od njih namesto naslova spletnega mesta."
+      label:
+        one: "Nadomestno ime"
+        other: "Nadomestna imena"
+    area_served:
+      hint: "Kje deluje, objavljeno nespremenjeno v strukturiranih podatkih: kode držav (FR, DE), regije, Worldwide…"
+      label:
+        one: "Območje delovanja"
+        other: "Območja delovanja"
     arguments:
       label:
         one: Argument
@@ -348,6 +358,11 @@ admin:
       label: Avtor
     autoplay:
       label: Samodejno predvajanje
+    awards:
+      hint: "Njena priznanja in uvrstitve (npr. Chambers Global 2026), objavljeni v strukturiranih podatkih."
+      label:
+        one: "Priznanje"
+        other: "Priznanja"
     background:
       label: S ozadjem?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Stik
         other: Stiki
+    contact_page:
+      hint: "Stran, ki predstavlja lokacije: vsaka je tam opisana v strukturiranih podatkih. Pustite prazno za stran /contact."
+      label: "Kontaktna stran"
     contents:
       label: Vsebine
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Podatek
         other: Podatki
     date:
+      expiry:
+        hint: "Stran izgine s spletnega mesta ob prvi objavi po tem datumu; pri zaposlitveni ponudbi njen konec pozna tudi Google Jobs."
+        label: "Datum poteka"
+      founded:
+        hint: "Leto (1924) ali celoten datum (1924-03-01)."
+        label: "Datum ustanovitve"
+        pattern: "Leto (1924) ali datum (1924-03-01)."
       from: Od
       label: Datum
       sale: Datum prodaje
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Vnesite kodo jezika (npr. sl), če se razlikuje od jezika trenutne strani
       label: Jezik
+    languages:
+      hint: "Jeziki, v katerih oseba dela, objavljeni v strukturiranih podatkih."
+      hint_organization: "Delovni jeziki organizacije, objavljeni v strukturiranih podatkih. Če je prazno: jeziki spletnega mesta."
+      label: "Jeziki"
     lastname:
       label: Priimek
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Opomba
         other: Opombe
+    number_of_employees:
+      hint: "Število ljudi v organizaciji, objavljeno v strukturiranih podatkih: število (200) ali razpon (150-250)."
+      label: "Število zaposlenih"
+      pattern: "Število (200) ali razpon (150-250)."
     offer:
       label:
         one: Ponudba
@@ -735,8 +768,11 @@ admin:
         end: Konec
         start: Začetek
     organization:
-      hint: "Identiteta organizacije v strukturiranih podatkih. Ime, logotip in družbeni profili so vzeti s spletnega mesta: njegov naslov, logotip v glavi in meni družbenih omrežij."
+      hint: "Kako je organizacija opisana v strukturiranih podatkih: njen tip schema.org, logotip, ki ga iskalniki lahko preberejo, njeni profili na drugih spletnih mestih. Njena identiteta — firma, sedež, priznanja… — se nastavi v Konfiguracije › Organizacija."
       label: "Organizacija"
+    other_places:
+      hint: "Druge lokacije organizacije: njihov naslov se doda naslovu sedeža."
+      label: "Druge lokacije"
     parent:
       label: Nadrejena stran
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Nadomestno besedilo
     poster:
       label: Plakat
-      hint: Nadomestna slika za video
+      hint: "Naslovna slika videa, hkrati njegova sličica v rezultatih iskanja."
     prefix:
       label: Predpona
     press:
@@ -840,12 +876,20 @@ admin:
       label: Najem?
     required:
       label: Obvezno
+    same_as:
+      hint: "Strani, ki organizacijo opisujejo na drugih spletnih mestih: profil pri Chambers ali Legal 500, Wikipedija, Wikipodatki… Iskalnikom pomagajo, da jo prepoznajo. Družbeni profili so vzeti iz menija družbenih omrežij."
+      label:
+        one: "Zunanji profil"
+        other: "Zunanji profili"
     schema_email:
       hint: "V strukturirane podatke vključi e-poštne naslove. Izklopite, da omejite samodejno zbiranje."
       label: "Objavim e-poštne naslove?"
     schema:
       hint: "Kako se ta stran opiše v strukturiranih podatkih."
       label: "Strukturirani podatki"
+    schema_logo:
+      hint: "Za iskalnike, kadar je logotip v glavi SVG ali je majhen: PNG ali JPG velikosti vsaj 112 × 112 px, dobro berljiv na beli podlagi. Pustite prazno, da se uporabi logotip iz glave."
+      label: "Logotip za iskalnike"
     schema_type:
       options:
         Organization: "Organizacija (splošna)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Samo če imate že shranjena mesta (to bo onemogočilo spodnji označevalec)
       label: Prikaži vsa registrirana mesta?
+    slogan:
+      hint: "Slogan organizacije, objavljen v strukturiranih podatkih."
+      label: "Slogan"
     slug:
       hint: Pustite prazno za samodejno izpolnitev z naslovom. **Pazite na vpliv na SEO.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Povzetek
     surtitle:
       label: Nadnaslov
+    tax_id:
+      hint: "Davčna številka organizacije (v Franciji številka SIREN)."
+      label: "Davčna številka"
     text:
       label: Besedilo
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Vrednost
+    vat_id:
+      hint: "Identifikacijska številka za DDV, npr. SI12345678."
+      label: "ID za DDV"
     vertical_align:
       hint: Navpična poravnava besedila
       label: Navpična poravnava
@@ -1041,7 +1094,8 @@ admin:
       primary: Primarna navigacija
       secondary: Sekundarna navigacija
       social: Družbena navigacija
-    schema: "Strukturirani podatki – Organizacija in schema.org"
+    organization: "Organizacija – Identiteta, lokacije in priznanja"
+    schema: "Strukturirani podatki – schema.org"
     seo:
       label: Globalni SEO
       title: Ime spletne strani

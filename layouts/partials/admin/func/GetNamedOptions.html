@@ -1,0 +1,44 @@
+{{/*
+  Partial to get the options of a select whose values are codes the theme
+  lists and names — languages, countries — so the select and the pages
+  cannot drift apart: the codes sorted by their name in the language of the
+  admin, and the table of those names the select labels them with (see
+  widgets/select.js, label_options).
+
+  Without the theme, there are no codes, unless the site lists some for the
+  field (see GetOptions.html); a code with no name is its own name.
+
+  - field (string or map) raw context of the field, see GetOptions.html
+  - codes (string) the theme partial listing the codes,
+                   e.g. "func/GetCountryCodes.html"
+  - name (string) the theme partial naming a code,
+                  e.g. "func/GetCountryName.html"
+
+  Returns a map
+  - options (slice) the codes, sorted by name
+  - labels (map) the name of each code, keyed the way select.js looks an
+                 option up: dashes turned into underscores
+*/}}
+
+{{- $codes := slice -}}
+{{- if templates.Exists (printf "partials/%s" .codes) -}}
+  {{- $codes = partial .codes -}}
+{{- end -}}
+{{- $codes = partial "admin/func/GetOptions.html" (dict "field" .field "options" $codes) -}}
+
+{{- $naming := templates.Exists (printf "partials/%s" .name) -}}
+{{- $named := slice -}}
+{{- $labels := dict -}}
+{{- range $codes -}}
+  {{- $name := . -}}
+  {{- if $naming -}}{{- $name = partial $.name . -}}{{- end -}}
+  {{- $named = $named | append (dict "code" . "name" $name) -}}
+  {{- $labels = merge $labels (dict (replace . "-" "_") $name) -}}
+{{- end -}}
+
+{{- $options := slice -}}
+{{- range sort $named "name" -}}
+  {{- $options = $options | append .code -}}
+{{- end -}}
+
+{{- return (dict "options" $options "labels" $labels) -}}

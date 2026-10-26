@@ -315,8 +315,8 @@ admin:
       country:
         label: Kraj
       country_code:
-        hint: "Kod kraju ISO 3166-1 alpha-2 (FR, ES, BE…), używany przez dane strukturalne. Pole Kraj pozostaje wyświetlaną etykietą."
-        label: "Kod kraju"
+        hint: "Wyświetlany w języku strony i publikowany jako kod ISO (FR, ES, BE…) w danych strukturalnych."
+        label: "Kraj"
         pattern: "Dwie litery, kod ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Adres
       street:
@@ -330,6 +330,16 @@ admin:
         center: Środek
         end: Koniec
         start: Początek
+    alternate_name:
+      hint: "Inne nazwy podmiotu: krótsza, skrót, dawna nazwa. Wyszukiwarki mogą wyświetlić jedną z nich zamiast tytułu strony."
+      label:
+        one: "Nazwa alternatywna"
+        other: "Nazwy alternatywne"
+    area_served:
+      hint: "Gdzie działa, publikowane w niezmienionej formie w danych strukturalnych: kody krajów (FR, DE), regiony, Worldwide…"
+      label:
+        one: "Obszar działania"
+        other: "Obszary działania"
     arguments:
       label:
         one: Argument
@@ -348,6 +358,11 @@ admin:
       label: Autor
     autoplay:
       label: Autoodtwarzanie
+    awards:
+      hint: "Jego wyróżnienia i rankingi (np. Chambers Global 2026), publikowane w danych strukturalnych."
+      label:
+        one: "Wyróżnienie"
+        other: "Wyróżnienia"
     background:
       label: Z tłem?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Kontakt
         other: Kontakty
+    contact_page:
+      hint: "Strona prezentująca lokalizacje: każda jest tam opisana w danych strukturalnych. Pozostaw puste, aby użyć strony /contact."
+      label: "Strona kontaktowa"
     contents:
       label: Treści
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Dana
         other: Dane
     date:
+      expiry:
+        hint: "Strona znika z witryny przy pierwszej publikacji po tej dacie; w przypadku oferty pracy Google Jobs również zna datę jej zakończenia."
+        label: "Data wygaśnięcia"
+      founded:
+        hint: "Rok (1924) lub pełna data (1924-03-01)."
+        label: "Data założenia"
+        pattern: "Rok (1924) lub data (1924-03-01)."
       from: Od
       label: Data
       sale: Data sprzedaży
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Wprowadź kod języka (np. pl), jeśli różni się od języka bieżącej strony
       label: Język
+    languages:
+      hint: "Języki, w których pracuje dana osoba, publikowane w danych strukturalnych."
+      hint_organization: "Języki robocze podmiotu, publikowane w danych strukturalnych. Puste: języki witryny."
+      label: "Języki"
     lastname:
       label: Nazwisko
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Notatka
         other: Notatki
+    number_of_employees:
+      hint: "Liczba osób w podmiocie, publikowana w danych strukturalnych: liczba (200) lub przedział (150-250)."
+      label: "Liczba pracowników"
+      pattern: "Liczba (200) lub przedział (150-250)."
     offer:
       label:
         one: Oferta
@@ -735,8 +768,11 @@ admin:
         end: Koniec
         start: Początek
     organization:
-      hint: "Tożsamość podmiotu w danych strukturalnych. Nazwa, logo i profile społecznościowe pochodzą ze strony: jej tytułu, logo w nagłówku i menu społecznościowego."
+      hint: "Jak podmiot jest opisany w danych strukturalnych: jego typ schema.org, logo czytelne dla wyszukiwarek, jego profile w innych serwisach. Jego tożsamość — nazwa prawna, siedziba, wyróżnienia… — ustawia się w Konfiguracje › Organizacja."
       label: "Organizacja"
+    other_places:
+      hint: "Pozostałe lokalizacje podmiotu: ich adres jest dodawany do adresu siedziby."
+      label: "Inne lokalizacje"
     parent:
       label: Strona nadrzędna
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Symbol zastępczy
     poster:
       label: Plakat
-      hint: Obraz zastępczy dla wideo
+      hint: "Obraz poglądowy filmu, także jego miniatura w wynikach wyszukiwania."
     prefix:
       label: Prefiks
     press:
@@ -840,12 +876,20 @@ admin:
       label: Wynajem?
     required:
       label: Wymagane
+    same_as:
+      hint: "Strony opisujące podmiot w innych serwisach: profil w Chambers lub Legal 500, Wikipedia, Wikidata… Pomagają wyszukiwarkom go rozpoznać. Profile społecznościowe pochodzą z menu społecznościowego."
+      label:
+        one: "Profil zewnętrzny"
+        other: "Profile zewnętrzne"
     schema_email:
       hint: "Dołącza adresy e-mail do danych strukturalnych. Wyłącz, aby ograniczyć automatyczne zbieranie."
       label: "Publikować adresy e-mail?"
     schema:
       hint: "Jak ta strona opisuje się w danych strukturalnych."
       label: "Dane strukturalne"
+    schema_logo:
+      hint: "Dla wyszukiwarek, gdy logo w nagłówku jest plikiem SVG lub jest małe: PNG lub JPG o wymiarach co najmniej 112 × 112 px, czytelny na białym tle. Pozostaw puste, aby użyć logo z nagłówka."
+      label: "Logo dla wyszukiwarek"
     schema_type:
       options:
         Organization: "Organizacja (ogólna)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Tylko jeśli masz już zapisane miejsca (spowoduje to wyłączenie znacznika poniżej)
       label: Pokaż wszystkie zarejestrowane miejsca?
+    slogan:
+      hint: "Hasło podmiotu, publikowane w danych strukturalnych."
+      label: "Slogan"
     slug:
       hint: Pozostaw puste, aby automatycznie wypełnić tytułem. **Uważaj na wpływ na SEO.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Podsumowanie
     surtitle:
       label: Nadtytuł
+    tax_id:
+      hint: "Identyfikator podatkowy podmiotu (we Francji numer SIREN)."
+      label: "Identyfikator podatkowy"
     text:
       label: Tekst
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Wartość
+    vat_id:
+      hint: "Numer VAT UE, np. PL1234567890."
+      label: "Numer VAT"
     vertical_align:
       hint: Wyrównanie pionowe tekstu
       label: Wyrównanie pionowe
@@ -1041,7 +1094,8 @@ admin:
       primary: Nawigacja główna
       secondary: Nawigacja drugorzędna
       social: Nawigacja społecznościowa
-    schema: "Dane strukturalne – Organizacja i schema.org"
+    organization: "Organizacja – Tożsamość, lokalizacje i wyróżnienia"
+    schema: "Dane strukturalne – schema.org"
     seo:
       label: Globalne SEO
       title: Nazwa witryny

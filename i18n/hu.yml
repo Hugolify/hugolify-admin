@@ -315,8 +315,8 @@ admin:
       country:
         label: Ország
       country_code:
-        hint: "Az ország ISO 3166-1 alpha-2 kódja (FR, ES, BE…), a strukturált adatokhoz. Az Ország mező marad a megjelenített felirat."
-        label: "Országkód"
+        hint: "Az oldal nyelvén jelenik meg, a strukturált adatokban pedig ISO-kódként (FR, ES, BE…) kerül közzétételre."
+        label: "Ország"
         pattern: "Két betű, ISO 3166-1 alpha-2 kód (FR, ES, BE…)."
       label: Cím
       street:
@@ -330,6 +330,16 @@ admin:
         center: Közép
         end: Vége
         start: Kezdés
+    alternate_name:
+      hint: "A szervezet további nevei: rövidebb név, rövidítés, korábbi név. A keresőmotorok ezek egyikét is megjeleníthetik a webhely címe helyett."
+      label:
+        one: "Alternatív név"
+        other: "Alternatív nevek"
+    area_served:
+      hint: "Ahol tevékenykedik, változatlanul közzétéve a strukturált adatokban: országkódok (FR, DE), régiók, Worldwide…"
+      label:
+        one: "Működési terület"
+        other: "Működési területek"
     arguments:
       label:
         one: Érv
@@ -348,6 +358,11 @@ admin:
       label: Szerző
     autoplay:
       label: Automatikus lejátszás
+    awards:
+      hint: "A szervezet díjai és rangsorolásai (pl. Chambers Global 2026), a strukturált adatokban közzétéve."
+      label:
+        one: "Díj"
+        other: "Díjak"
     background:
       label: Háttérrel?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Kapcsolat
         other: Kapcsolatok
+    contact_page:
+      hint: "Az oldal, amely bemutatja a telephelyeket: mindegyiket ott írják le a strukturált adatokban. Hagyja üresen a /contact oldalhoz."
+      label: "Kapcsolat oldal"
     contents:
       label: Tartalmak
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Adat
         other: Adatok
     date:
+      expiry:
+        hint: "Az oldal az e dátum utáni első közzétételkor eltűnik a webhelyről; álláshirdetésnél a Google Jobs is tudja, mikor jár le."
+        label: "Lejárati dátum"
+      founded:
+        hint: "Egy év (1924) vagy teljes dátum (1924-03-01)."
+        label: "Alapítás dátuma"
+        pattern: "Egy év (1924) vagy dátum (1924-03-01)."
       from: Tól
       label: Dátum
       sale: Eladás dátuma
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Adja meg a nyelvkódot (pl. fr), ha eltér az aktuális oldal nyelvétől
       label: Nyelv
+    languages:
+      hint: "Azok a nyelvek, amelyeken a személy dolgozik, a strukturált adatokban közzétéve."
+      hint_organization: "A szervezet munkanyelvei, a strukturált adatokban közzétéve. Üresen hagyva: a webhely nyelvei."
+      label: "Nyelvek"
     lastname:
       label: Vezetéknév
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Jegyzet
         other: Jegyzetek
+    number_of_employees:
+      hint: "A szervezet létszáma, a strukturált adatokban közzétéve: egy szám (200) vagy egy tartomány (150-250)."
+      label: "Létszám"
+      pattern: "Egy szám (200) vagy egy tartomány (150-250)."
     offer:
       label:
         one: Ajánlat
@@ -735,8 +768,11 @@ admin:
         end: Vége
         start: Kezdés
     organization:
-      hint: "A szervezet azonosítása a strukturált adatokban. A név, a logó és a közösségi profilok a webhelyről származnak: a címéből, a fejléc logójából és a közösségi menüből."
+      hint: "Hogyan írják le a szervezetet a strukturált adatokban: schema.org-típusa, a keresőmotorok által olvasható logója, más webhelyeken lévő profiljai. Azonosító adatai — cégnév, székhely, díjak… — itt állíthatók be: Konfig › Szervezet."
       label: "Szervezet"
+    other_places:
+      hint: "A szervezet további telephelyei: címük a székhely címe mellé kerül."
+      label: "További telephelyek"
     parent:
       label: Szülő oldal
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Helyőrző
     poster:
       label: Poszter
-      hint: Poszterkép videóhoz
+      hint: "A videó borítóképe, egyben a bélyegképe a keresési találatokban."
     prefix:
       label: Előtag
     press:
@@ -840,12 +876,20 @@ admin:
       label: Bérlés?
     required:
       label: Kötelező
+    same_as:
+      hint: "Oldalak, amelyek más webhelyeken írják le a szervezetet: Chambers- vagy Legal 500-profil, Wikipédia, Wikidata… Segítenek a keresőmotoroknak felismerni. A közösségi profilok a közösségi menüből származnak."
+      label:
+        one: "Külső profil"
+        other: "Külső profilok"
     schema_email:
       hint: "Az e-mail-címeket is beleveszi a strukturált adatokba. Kapcsolja ki az automatikus gyűjtés korlátozásához."
       label: "Közzéteszi az e-mail-címeket?"
     schema:
       hint: "Hogyan írja le magát ez az oldal a strukturált adatokban."
       label: "Strukturált adatok"
+    schema_logo:
+      hint: "Keresőmotorok számára, ha a fejléc logója SVG vagy kicsi: legalább 112 × 112 px-es PNG vagy JPG, amely fehér háttéren is jól olvasható. Hagyja üresen a fejléc logójának használatához."
+      label: "Logó keresőmotoroknak"
     schema_type:
       options:
         Organization: "Szervezet (általános)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Csak akkor, ha már vannak mentett helyei (ez letiltja az alábbi jelölőt)
       label: Összes regisztrált hely megjelenítése?
+    slogan:
+      hint: "A szervezet szlogenje, a strukturált adatokban közzétéve."
+      label: "Szlogen"
     slug:
       hint: Hagyja üresen a címmel való automatizáláshoz. **Ügyeljen a SEO hatásra.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Összefoglaló
     surtitle:
       label: Főcím
+    tax_id:
+      hint: "A szervezet adóazonosítója (Franciaországban a SIREN-szám)."
+      label: "Adószám"
     text:
       label: Szöveg
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Érték
+    vat_id:
+      hint: "Közösségi adószám, pl. HU12345678."
+      label: "Közösségi adószám"
     vertical_align:
       hint: A szöveg függőleges igazítása
       label: Függőleges igazítás
@@ -1041,7 +1094,8 @@ admin:
       primary: Elsődleges navigáció
       secondary: Másodlagos navigáció
       social: Közösségi navigáció
-    schema: "Strukturált adatok – Szervezet és schema.org"
+    organization: "Szervezet – Azonosító adatok, telephelyek és díjak"
+    schema: "Strukturált adatok – schema.org"
     seo:
       label: Globális SEO
       title: Weboldal neve

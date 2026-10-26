@@ -315,8 +315,8 @@ admin:
       country:
         label: Country
       country_code:
-        hint: "ISO 3166-1 alpha-2 country code (FR, ES, BE…), used by the structured data. The Country field above stays the displayed label."
-        label: "Country code"
+        hint: "Shown in the language of the page, and published as its ISO code (FR, ES, BE…) in the structured data."
+        label: "Country"
         pattern: "Two letters, an ISO 3166-1 alpha-2 code (FR, ES, BE…)."
       label: Address
       street:
@@ -330,6 +330,16 @@ admin:
         center: Center
         end: End
         start: Start
+    alternate_name:
+      hint: "Other names the organization goes by — a shorter one, an acronym, a former one. Search engines may show one of them instead of the site title."
+      label:
+        one: "Alternate name"
+        other: "Alternate names"
+    area_served:
+      hint: "Where it works, published as typed in the structured data: country codes (FR, DE), regions, Worldwide…"
+      label:
+        one: "Area served"
+        other: "Areas served"
     arguments:
       label:
         one: Argument
@@ -348,6 +358,11 @@ admin:
       label: Author
     autoplay:
       label: Autoplay
+    awards:
+      hint: "Its distinctions and rankings (e.g. Chambers Global 2026), published in the structured data."
+      label:
+        one: "Award"
+        other: "Awards"
     background:
       label: With a background?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Contact
         other: Contacts
+    contact_page:
+      hint: "The page presenting the offices: each one is described there in the structured data. Leave empty for the /contact page."
+      label: "Contact page"
     contents:
       label: Contents
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Data
         other: Datas
     date:
+      expiry:
+        hint: "The page leaves the site at the first publication after this date; a job offer also tells Google Jobs when it ends."
+        label: "Expiry date"
+      founded:
+        hint: "A year (1924) or a full date (1924-03-01)."
+        label: "Founding date"
+        pattern: "A year (1924) or a date (1924-03-01)."
       from: From
       label: Date
       sale: Sale date
@@ -671,6 +696,10 @@ admin:
     lang:
       hint: Enter code lang (e.g. fr) if different of the current page language
       label: Language
+    languages:
+      hint: "The languages this person works in, published in the structured data."
+      hint_organization: "The languages it works in, published in the structured data. Left empty, the languages of the site."
+      label: "Languages"
     lastname:
       label: Lastname
     layout:
@@ -717,6 +746,10 @@ admin:
       label:
         one: Note
         other: Notes
+    number_of_employees:
+      hint: "Its headcount, published in the structured data: a number (200) or a range (150-250)."
+      label: "Number of employees"
+      pattern: "A number (200) or a range (150-250)."
     offer:
       label:
         one: Offer
@@ -729,8 +762,11 @@ admin:
         end: End
         start: Start
     organization:
-      hint: "Identity of the company published in the structured data. Its name, logo and social profiles come from the site: its title, the header logo and the social menu."
+      hint: "How the organization is described in the structured data: its schema.org type, a logo search engines can read, its profiles on other sites. Its identity — legal name, head office, awards… — is set in Config › Organization."
       label: "Organization"
+    other_places:
+      hint: "The other places of the organization: their address is added to the head office one."
+      label: "Other locations"
     parent:
       label: Parent page
     pdf:
@@ -743,7 +779,7 @@ admin:
       label: Placeholder
     poster:
       label: Poster
-      hint: Placehoster image for video
+      hint: "Cover image of the video, also its thumbnail in search results."
     prefix:
       label: Prefix
     press:
@@ -834,12 +870,20 @@ admin:
       label: Rent?
     required:
       label: Required
+    same_as:
+      hint: "Pages that describe the organization on other sites: a Chambers or Legal 500 profile, Wikipedia, Wikidata… They help search engines recognize it. The social profiles come from the social menu."
+      label:
+        one: "External profile"
+        other: "External profiles"
     schema_email:
       hint: "Includes email addresses in the structured data. Turn off to limit automated harvesting."
       label: "Publish email addresses?"
     schema:
       hint: "How this page describes itself in the structured data."
       label: "Structured data"
+    schema_logo:
+      hint: "For search engines, when the header logo is an SVG or is small: a PNG or JPG of at least 112 × 112 px that reads well on a white background. Leave empty to use the header logo."
+      label: "Logo for search engines"
     schema_type:
       options:
         Organization: "Organization (generic)"
@@ -890,6 +934,9 @@ admin:
     show_places:
       hint: Only if you have places already saved (this will disable the marker below)
       label: Show all registered places?
+    slogan:
+      hint: "The organization’s tagline, published in the structured data."
+      label: "Slogan"
     slug:
       hint: Leave empty to generate it from the title. **Mind the SEO impact.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Summary
     surtitle:
       label: Surtitle
+    tax_id:
+      hint: "Tax identifier of the organization (the SIREN number in France)."
+      label: "Tax ID"
     text:
       label: Text
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Value
+    vat_id:
+      hint: "Intra-community VAT number, e.g. FR12345678901."
+      label: "VAT number"
     vertical_align:
       hint: Vertical text alignment
       label: Vertical alignment
@@ -1041,7 +1094,8 @@ admin:
       primary: Primary navigation
       secondary: Secondary navigation
       social: Socials navigation
-    schema: "Structured data – Organization and schema.org"
+    organization: "Organization – Identity, locations and awards"
+    schema: "Structured data – schema.org"
     seo:
       label: Global SEO (Search Engine Optimization)
       title: Website name

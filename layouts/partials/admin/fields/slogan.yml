@@ -1,0 +1,9 @@
+{{/* Slogan of the organization, per language, published as slogan in the
+     structured data. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.slogan.label")
+  "hint" (i18n "admin.fields.slogan.hint")
+  "name" "slogan"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

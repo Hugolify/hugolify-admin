@@ -315,8 +315,8 @@ admin:
       country:
         label: Ülke
       country_code:
-        hint: "ISO 3166-1 alpha-2 ülke kodu (FR, ES, BE…), yapılandırılmış veriler tarafından kullanılır. Yukarıdaki Ülke alanı görüntülenen etiket olarak kalır."
-        label: "Ülke kodu"
+        hint: "Sayfanın dilinde gösterilir ve yapılandırılmış verilerde ISO kodu (FR, ES, BE…) olarak yayımlanır."
+        label: "Ülke"
         pattern: "İki harf, ISO 3166-1 alpha-2 kodu (FR, ES, BE…)."
       label: Adres
       street:
@@ -330,6 +330,16 @@ admin:
         center: Orta
         end: Son
         start: Başlangıç
+    alternate_name:
+      hint: "Kuruluşun diğer adları: daha kısa bir ad, bir kısaltma, eski bir ad. Arama motorları site başlığı yerine bunlardan birini gösterebilir."
+      label:
+        one: "Alternatif ad"
+        other: "Alternatif adlar"
+    area_served:
+      hint: "Kuruluşun faaliyet gösterdiği yerler, yapılandırılmış verilerde yazıldığı gibi yayımlanır: ülke kodları (FR, DE), bölgeler, Worldwide…"
+      label:
+        one: "Hizmet bölgesi"
+        other: "Hizmet bölgeleri"
     arguments:
       label:
         one: Argüman
@@ -348,6 +358,11 @@ admin:
       label: Yazar
     autoplay:
       label: Otomatik Oynat
+    awards:
+      hint: "Kuruluşun ödülleri ve sıralamaları (ör. Chambers Global 2026), yapılandırılmış verilerde yayımlanır."
+      label:
+        one: "Ödül"
+        other: "Ödüller"
     background:
       label: Arka planlı mı?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: İletişim
         other: İletişimler
+    contact_page:
+      hint: "Ofisleri tanıtan sayfa: her biri orada yapılandırılmış verilerde açıklanır. /contact sayfası için boş bırakın."
+      label: "İletişim sayfası"
     contents:
       label: İçerikler
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Veri
         other: Veriler
     date:
+      expiry:
+        hint: "Sayfa, bu tarihten sonraki ilk yayında siteden kalkar; iş ilanlarında Google İş İlanları da bitiş tarihini bilir."
+        label: "Son geçerlilik tarihi"
+      founded:
+        hint: "Bir yıl (1924) veya tam bir tarih (1924-03-01)."
+        label: "Kuruluş tarihi"
+        pattern: "Bir yıl (1924) veya bir tarih (1924-03-01) girin."
       from: Başlangıç
       label: Tarih
       sale: Satış tarihi
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Geçerli sayfa dilinden farklıysa dil kodunu girin (örn. tr)
       label: Dil
+    languages:
+      hint: "Kişinin çalıştığı diller, yapılandırılmış verilerde yayımlanır."
+      hint_organization: "Kuruluşun çalışma dilleri, yapılandırılmış verilerde yayımlanır. Boş bırakılırsa: sitenin dilleri."
+      label: "Diller"
     lastname:
       label: Soyad
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Not
         other: Notlar
+    number_of_employees:
+      hint: "Kuruluştaki kişi sayısı, yapılandırılmış verilerde yayımlanır: bir sayı (200) veya bir aralık (150-250)."
+      label: "Çalışan sayısı"
+      pattern: "Bir sayı (200) veya bir aralık (150-250)."
     offer:
       label:
         one: Teklif
@@ -735,8 +768,11 @@ admin:
         end: Son
         start: Başlangıç
     organization:
-      hint: "Yapılandırılmış verilerde yayımlanan kuruluş kimliği. Ad, logo ve sosyal profiller siteden alınır: sitenin başlığı, üst bilgideki logo ve sosyal menü."
+      hint: "Kuruluşun yapılandırılmış verilerde nasıl tanımlandığı: schema.org türü, arama motorlarının okuyabildiği bir logo, diğer sitelerdeki profilleri. Kimliği — ticari unvan, merkez ofis, ödüller… — Yapılandırma › Kuruluş bölümünde ayarlanır."
       label: "Kuruluş"
+    other_places:
+      hint: "Kuruluşun diğer yerleri: adresleri merkez ofisin adresine eklenir."
+      label: "Diğer yerler"
     parent:
       label: Üst sayfa
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Yer Tutucu
     poster:
       label: Poster
-      hint: Video için poster resmi
+      hint: "Videonun kapak görseli, arama sonuçlarındaki küçük resmi olarak da kullanılır."
     prefix:
       label: Önek
     press:
@@ -840,12 +876,20 @@ admin:
       label: Kira?
     required:
       label: Gerekli
+    same_as:
+      hint: "Kuruluşu başka sitelerde tanıtan sayfalar: Chambers veya Legal 500 profili, Vikipedi, Vikiveri… Arama motorlarının onu tanımasına yardımcı olur. Sosyal profiller sosyal menüden alınır."
+      label:
+        one: "Harici profil"
+        other: "Harici profiller"
     schema_email:
       hint: "E-posta adreslerini yapılandırılmış verilere ekler. Otomatik toplamayı sınırlamak için kapatın."
       label: "E-posta adresleri yayımlansın mı?"
     schema:
       hint: "Bu sayfanın yapılandırılmış verilerde kendini nasıl tanımladığı."
       label: "Yapılandırılmış veriler"
+    schema_logo:
+      hint: "Başlıktaki logo SVG veya küçükse arama motorları için: beyaz arka planda okunaklı, en az 112 × 112 px boyutunda bir PNG veya JPG. Başlık logosunu kullanmak için boş bırakın."
+      label: "Arama motorları için logo"
     schema_type:
       options:
         Organization: "Kuruluş (genel)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Sadece zaten kayıtlı yerleriniz varsa (bu aşağıdaki işaretçiyi devre dışı bırakır)
       label: Tüm kayıtlı yerleri göster?
+    slogan:
+      hint: "Kuruluşun sloganı, yapılandırılmış verilerde yayımlanır."
+      label: "Slogan"
     slug:
       hint: Başlıkla otomatikleştirmek için boş bırakın. **SEO etkisine dikkat edin.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Özet
     surtitle:
       label: Üst başlık
+    tax_id:
+      hint: "Kuruluşun vergi kimlik numarası (Fransa'da SIREN numarası)."
+      label: "Vergi kimlik numarası"
     text:
       label: Metin
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Değer
+    vat_id:
+      hint: "KDV numarası, ör. FR12345678901."
+      label: "KDV numarası"
     vertical_align:
       hint: Metnin dikey hizalaması
       label: Dikey hizalama
@@ -1041,7 +1094,8 @@ admin:
       primary: Birincil navigasyon
       secondary: İkincil navigasyon
       social: Sosyal navigasyon
-    schema: "Yapılandırılmış veriler – Kuruluş ve schema.org"
+    organization: "Kuruluş – Kimlik, yerler ve ödüller"
+    schema: "Yapılandırılmış veriler – schema.org"
     seo:
       label: Küresel SEO
       title: Web sitesi adı

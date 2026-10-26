@@ -1,0 +1,30 @@
+{{/* Distinctions of the organization, stored as `awards` in
+     data/organization.yml, and published as award in its structured data.
+     Picked among the awards of the site when it has the collection — the
+     theme gives their title in each language — typed in otherwise, named the
+     way they are awarded, which no translation changes. */}}
+{{- if site.Params.admin.collections.awards.enable -}}
+
+{{- partial "admin/fields/relation.yml" (dict
+  "collection" "awards"
+  "name" "awards"
+  "multiple" true
+  "label_key" "admin.fields.awards"
+) -}}
+
+{{- else -}}
+
+{{- $fields := slice "title" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.awards.label" 2)
+  "label_singular" (i18n "admin.fields.awards.label" 1)
+  "hint" (i18n "admin.fields.awards.hint")
+  "name" "awards"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/list.js" $args }}
+
+{{- end -}}

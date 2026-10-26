@@ -315,8 +315,8 @@ admin:
       country:
         label: Land
       country_code:
-        hint: "Landkode etter ISO 3166-1 alpha-2 (FR, ES, BE…), brukt av de strukturerte dataene. Feltet Land forblir den viste teksten."
-        label: "Landkode"
+        hint: "Vises på sidens språk og publiseres som ISO-kode (FR, ES, BE …) i de strukturerte dataene."
+        label: "Land"
         pattern: "To bokstaver, en ISO 3166-1 alpha-2-kode (FR, ES, BE…)."
       label: Adresse
       street:
@@ -330,6 +330,16 @@ admin:
         center: Midtstill
         end: Slutt
         start: Start
+    alternate_name:
+      hint: "Andre navn organisasjonen bruker: et kortere navn, en forkortelse, et tidligere navn. Søkemotorer kan vise ett av dem i stedet for tittelen på nettstedet."
+      label:
+        one: "Alternativt navn"
+        other: "Alternative navn"
+    area_served:
+      hint: "Hvor organisasjonen er virksom, publisert uendret i de strukturerte dataene: landkoder (FR, DE), regioner, Worldwide …"
+      label:
+        one: "Virkeområde"
+        other: "Virkeområder"
     arguments:
       label:
         one: Argument
@@ -348,6 +358,11 @@ admin:
       label: Forfatter
     autoplay:
       label: Autoplay
+    awards:
+      hint: "Organisasjonens utmerkelser og rangeringer (f.eks. Chambers Global 2026), publisert i de strukturerte dataene."
+      label:
+        one: "Utmerkelse"
+        other: "Utmerkelser"
     background:
       label: Med bakgrunn?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Kontakt
         other: Kontakter
+    contact_page:
+      hint: "Siden som presenterer kontorene: hvert av dem beskrives der i de strukturerte dataene. La stå tomt for siden /contact."
+      label: "Kontaktside"
     contents:
       label: Innhold
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Data
         other: Data
     date:
+      expiry:
+        hint: "Siden forsvinner fra nettstedet ved første publisering etter denne datoen; for en stillingsannonse vet også Google Jobs når den utløper."
+        label: "Utløpsdato"
+      founded:
+        hint: "Et årstall (1924) eller en fullstendig dato (1924-03-01)."
+        label: "Stiftelsesdato"
+        pattern: "Et årstall (1924) eller en dato (1924-03-01)."
       from: Fra
       label: Dato
       sale: Salgsdato
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Skriv inn språkkode (f.eks. fr) hvis forskjellig fra gjeldende sidespråk
       label: Språk
+    languages:
+      hint: "Språkene personen arbeider på, publisert i de strukturerte dataene."
+      hint_organization: "Organisasjonens arbeidsspråk, publisert i de strukturerte dataene. Står feltet tomt: nettstedets språk."
+      label: "Språk"
     lastname:
       label: Etternavn
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Note
         other: Noter
+    number_of_employees:
+      hint: "Antall personer i organisasjonen, publisert i de strukturerte dataene: et tall (200) eller et intervall (150-250)."
+      label: "Antall ansatte"
+      pattern: "Et tall (200) eller et intervall (150-250)."
     offer:
       label:
         one: Tilbud
@@ -735,8 +768,11 @@ admin:
         end: Slutt
         start: Start
     organization:
-      hint: "Organisasjonens identitet i de strukturerte dataene. Navn, logo og sosiale profiler hentes fra nettstedet: tittelen, logoen i toppen og den sosiale menyen."
+      hint: "Hvordan organisasjonen beskrives i de strukturerte dataene: schema.org-typen, en logo søkemotorer kan lese, profilene på andre nettsteder. Identiteten – juridisk navn, hovedkontor, utmerkelser … – angis under Konfig › Organisasjon."
       label: "Organisasjon"
+    other_places:
+      hint: "Organisasjonens øvrige steder: adressen deres legges til hovedkontorets."
+      label: "Andre steder"
     parent:
       label: Foreldreside
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Plassholder
     poster:
       label: Plakat
-      hint: Plakatbilde for video
+      hint: "Forsidebilde for videoen, også miniatyrbildet i søkeresultatene."
     prefix:
       label: Prefiks
     press:
@@ -840,12 +876,20 @@ admin:
       label: Lei?
     required:
       label: Påkrevd
+    same_as:
+      hint: "Sider som beskriver organisasjonen på andre nettsteder: en profil hos Chambers eller Legal 500, Wikipedia, Wikidata… De hjelper søkemotorer å kjenne den igjen. De sosiale profilene hentes fra den sosiale menyen."
+      label:
+        one: "Ekstern profil"
+        other: "Eksterne profiler"
     schema_email:
       hint: "Tar med e-postadresser i de strukturerte dataene. Slå av for å begrense automatisert innsamling."
       label: "Publisere e-postadresser?"
     schema:
       hint: "Hvordan denne siden beskriver seg selv i de strukturerte dataene."
       label: "Strukturerte data"
+    schema_logo:
+      hint: "For søkemotorer, når logoen i toppen er en SVG eller liten: en PNG eller JPG på minst 112 × 112 px som er lett å lese på hvit bakgrunn. La stå tomt for å bruke logoen i toppen."
+      label: "Logo for søkemotorer"
     schema_type:
       options:
         Organization: "Organisasjon (generisk)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Kun hvis du har steder allerede lagret (dette vil deaktivere markøren nedenfor)
       label: Vis alle registrerte steder?
+    slogan:
+      hint: "Organisasjonens slagord, publisert i de strukturerte dataene."
+      label: "Slagord"
     slug:
       hint: La stå tomt for å automatisere med tittelen. **Vær forsiktig med SEO-påvirkning.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Sammendrag
     surtitle:
       label: Overtittel
+    tax_id:
+      hint: "Organisasjonens skatteidentifikator (i Frankrike SIREN-nummeret)."
+      label: "Skatte-ID"
     text:
       label: Tekst
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Verdi
+    vat_id:
+      hint: "MVA-nummer, f.eks. NO123456789MVA."
+      label: "MVA-nummer"
     vertical_align:
       hint: Vertikal justering av teksten
       label: Vertikal justering
@@ -1041,7 +1094,8 @@ admin:
       primary: Primærnavigasjon
       secondary: Sekundærnavigasjon
       social: Sosial navigasjon
-    schema: "Strukturerte data – Organisasjon og schema.org"
+    organization: "Organisasjon – Identitet, steder og utmerkelser"
+    schema: "Strukturerte data – schema.org"
     seo:
       label: Global SEO
       title: Nettstednavn

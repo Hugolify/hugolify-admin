@@ -6,7 +6,8 @@
   - hint (string)
   - i18n (boolean or string)
   - label (string) required
-  - label_options (string)
+  - label_options (string or map) the i18n prefix of the option labels, or
+    the labels themselves, keyed by option (dashes turned into underscores)
   - multiple (boolean)
   - name (string) required
   - nameOverride (string)
@@ -49,7 +50,7 @@
       {{- $option_name = replace $option_name "-" "_" }}
       {{- $label_option := i18n (print "admin.fields." $name ".options." $option_name) }}
       {{- with $label_options }}
-        {{- $label_option = i18n (print . "." $option_name) }}
+        {{- if reflect.IsMap . }}{{ $label_option = index . $option_name }}{{ else }}{{ $label_option = i18n (print . "." $option_name) }}{{ end }}
       {{- end }}
       {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
       { 
@@ -88,7 +89,7 @@
       {{- $option_name = replace $option_name "-" "_" }}
       {{- $label_option := i18n (print "admin.fields." $name ".options." $option_name) }}
       {{- with $label_options }}
-        {{- $label_option = i18n (print . "." $option_name) }}
+        {{- if reflect.IsMap . }}{{ $label_option = index . $option_name }}{{ else }}{{ $label_option = i18n (print . "." $option_name) }}{{ end }}
       {{- end }}
       {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
       { 
@@ -126,7 +127,7 @@
     {{- $option_name = replace $option_name "-" "_" }}
     {{- $label_option := i18n (print "admin.fields." $name ".options." $option_name) }}
     {{- with $label_options }}
-      {{- $label_option = i18n (print . "." $option_name) }}
+      {{- if reflect.IsMap . }}{{ $label_option = index . $option_name }}{{ else }}{{ $label_option = i18n (print . "." $option_name) }}{{ end }}
     {{- end }}
     {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
     { 
@@ -159,7 +160,7 @@
     {{- $option_name = replace $option_name "-" "_" }}
     {{- $label_option := i18n (print "admin.fields." $name ".options." $option_name) }}
     {{- with $label_options }}
-      {{- $label_option = i18n (print . "." $option_name) }}
+      {{- if reflect.IsMap . }}{{ $label_option = index . $option_name }}{{ else }}{{ $label_option = i18n (print . "." $option_name) }}{{ end }}
     {{- end }}
     {{- $value := cond (eq (printf "%T" $v) "string") (print "'" . "'") . }}
     { 

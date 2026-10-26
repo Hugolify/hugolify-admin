@@ -315,8 +315,8 @@ admin:
       country:
         label: Země
       country_code:
-        hint: "Kód země podle ISO 3166-1 alpha-2 (FR, ES, BE…), používaný strukturovanými daty. Pole Země zůstává zobrazovaným popiskem."
-        label: "Kód země"
+        hint: "Zobrazuje se v jazyce stránky a ve strukturovaných datech se zveřejňuje jako kód ISO (FR, ES, BE…)."
+        label: "Země"
         pattern: "Dvě písmena, kód ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Adresa
       street:
@@ -330,6 +330,16 @@ admin:
         center: Střed
         end: Konec
         start: Začátek
+    alternate_name:
+      hint: "Další názvy subjektu: kratší, zkratka, dřívější název. Vyhledávače mohou některý z nich zobrazit místo názvu webu."
+      label:
+        one: "Alternativní název"
+        other: "Alternativní názvy"
+    area_served:
+      hint: "Kde působí, zveřejněno beze změny ve strukturovaných datech: kódy zemí (FR, DE), regiony, Worldwide…"
+      label:
+        one: "Oblast působnosti"
+        other: "Oblasti působnosti"
     arguments:
       label:
         one: Argument
@@ -348,6 +358,11 @@ admin:
       label: Autor
     autoplay:
       label: Automatické přehrávání
+    awards:
+      hint: "Jeho ocenění a umístění v žebříčcích (např. Chambers Global 2026), zveřejněná ve strukturovaných datech."
+      label:
+        one: "Ocenění"
+        other: "Ocenění"
     background:
       label: S pozadím?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Kontakt
         other: Kontakty
+    contact_page:
+      hint: "Stránka představující pobočky: každá je na ní popsána ve strukturovaných datech. Nechte prázdné pro stránku /contact."
+      label: "Kontaktní stránka"
     contents:
       label: Obsah
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Data
         other: Data
     date:
+      expiry:
+        hint: "Stránka zmizí z webu při prvním zveřejnění po tomto datu; u pracovní nabídky zná její konec i Google Jobs."
+        label: "Datum vypršení"
+      founded:
+        hint: "Rok (1924) nebo celé datum (1924-03-01)."
+        label: "Datum založení"
+        pattern: "Rok (1924) nebo datum (1924-03-01)."
       from: Od
       label: Datum
       sale: Datum prodeje
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Zadejte kód jazyka (např. fr), pokud se liší od aktuálního jazyka stránky
       label: Jazyk
+    languages:
+      hint: "Jazyky, ve kterých osoba pracuje, zveřejněné ve strukturovaných datech."
+      hint_organization: "Pracovní jazyky subjektu, zveřejněné ve strukturovaných datech. Ponecháno prázdné: jazyky webu."
+      label: "Jazyky"
     lastname:
       label: Příjmení
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Poznámka
         other: Poznámky
+    number_of_employees:
+      hint: "Počet lidí v subjektu, zveřejněný ve strukturovaných datech: číslo (200) nebo rozpětí (150-250)."
+      label: "Počet zaměstnanců"
+      pattern: "Číslo (200) nebo rozpětí (150-250)."
     offer:
       label:
         one: Nabídka
@@ -735,8 +768,11 @@ admin:
         end: Konec
         start: Začátek
     organization:
-      hint: "Identita subjektu ve strukturovaných datech. Název, logo a profily na sociálních sítích se přebírají z webu: jeho název, logo v záhlaví a menu sociálních sítí."
+      hint: "Jak je subjekt popsán ve strukturovaných datech: jeho typ schema.org, logo čitelné pro vyhledávače, jeho profily na jiných webech. Jeho identita — obchodní firma, sídlo, ocenění… — se nastavuje v Konfigurace › Organizace."
       label: "Organizace"
+    other_places:
+      hint: "Další místa subjektu: jejich adresa se přidá k adrese sídla."
+      label: "Další pobočky"
     parent:
       label: Nadřazená stránka
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Zástupný text
     poster:
       label: Plakát
-      hint: Plakátový obrázek pro video
+      hint: "Úvodní obrázek videa, zároveň jeho náhled ve výsledcích vyhledávání."
     prefix:
       label: Předpona
     press:
@@ -840,12 +876,20 @@ admin:
       label: Pronájem?
     required:
       label: Povinné
+    same_as:
+      hint: "Stránky, které subjekt popisují na jiných webech: profil v Chambers nebo Legal 500, Wikipedie, Wikidata… Pomáhají vyhledávačům ho rozpoznat. Profily na sociálních sítích se přebírají z menu sociálních sítí."
+      label:
+        one: "Externí profil"
+        other: "Externí profily"
     schema_email:
       hint: "Zahrne e-mailové adresy do strukturovaných dat. Vypněte pro omezení automatického sběru."
       label: "Publikovat e-mailové adresy?"
     schema:
       hint: "Jak se tato stránka popisuje ve strukturovaných datech."
       label: "Strukturovaná data"
+    schema_logo:
+      hint: "Pro vyhledávače, pokud je logo v záhlaví ve formátu SVG nebo je malé: PNG nebo JPG o velikosti alespoň 112 × 112 px, dobře čitelné na bílém pozadí. Nechte prázdné a použije se logo ze záhlaví."
+      label: "Logo pro vyhledávače"
     schema_type:
       options:
         Organization: "Organizace (obecná)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Pouze pokud již máte uložená místa (toto deaktivuje značku níže)
       label: Zobrazit všechna registrovaná místa?
+    slogan:
+      hint: "Slogan subjektu, zveřejněný ve strukturovaných datech."
+      label: "Slogan"
     slug:
       hint: Nechte prázdné pro automatizaci s titulkem. **Pozor na dopad na SEO.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Shrnutí
     surtitle:
       label: Nadnadpis
+    tax_id:
+      hint: "Daňový identifikátor subjektu (ve Francii číslo SIREN)."
+      label: "Daňové identifikační číslo"
     text:
       label: Text
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Hodnota
+    vat_id:
+      hint: "DIČ pro DPH v EU, např. CZ12345678."
+      label: "DIČ"
     vertical_align:
       hint: Vertikální zarovnání textu
       label: Vertikální zarovnání
@@ -1041,7 +1094,8 @@ admin:
       primary: Primární navigace
       secondary: Sekundární navigace
       social: Sociální navigace
-    schema: "Strukturovaná data – Organizace a schema.org"
+    organization: "Organizace – Identita, pobočky a ocenění"
+    schema: "Strukturovaná data – schema.org"
     seo:
       label: Globální SEO
       title: Název webové stránky

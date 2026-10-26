@@ -1,0 +1,31 @@
+{{/* The organization behind the site, in data/organization.yml.
+
+     Its identity, which any part of the site can show — a block listing its
+     awards, the footer listing its places — and which its structured data
+     publishes, see func/GetSchemaOrganization.html in the theme. Its name is
+     the site title. Not translated: one legal name, one head office, one set
+     of distinctions; what varies, the description and the slogan, is in
+     data/seo.yml. The head office lends its address and contact, the fields
+     right below it are for a site without one.
+*/}}
+{{- $places := site.Params.admin.collections.places.enable -}}
+{{- $fields := slice "legal_name" "alternate_name" "date_founded" "number_of_employees"
+  (dict "languages" (dict "hint" (i18n "admin.fields.languages.hint_organization")))
+  "area_served" -}}
+{{- if $places -}}
+  {{- $fields = $fields | append "head_office" -}}
+{{- end -}}
+{{- $fields = $fields | append
+  "address"
+  (dict "contact" (dict "fields" (slice "email" "phone" "fax"))) -}}
+{{- if $places -}}
+  {{- $fields = $fields | append "other_places" -}}
+{{- end -}}
+{{- $fields = $fields | append "awards" "vat_id" "tax_id" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "file" "organization" "fields" $fields) -}}
+{
+  label: '{{ i18n "admin.files.organization" }}',
+  name: 'organization',
+  file: 'data/organization.yml',
+  {{- partial "admin/fields/_fields.yml" $fields -}}
+}

@@ -315,8 +315,8 @@ admin:
       country:
         label: 国
       country_code:
-        hint: "ISO 3166-1 alpha-2 の国コード（FR, ES, BE…）。構造化データで使われます。上の「国」欄は表示用の名称のままです。"
-        label: "国コード"
+        hint: "ページの言語で表示され、構造化データには ISO コード（FR、ES、BE など）で掲載されます。"
+        label: "国"
         pattern: "2 文字の ISO 3166-1 alpha-2 コード（FR, ES, BE…）。"
       label: 住所
       street:
@@ -330,6 +330,16 @@ admin:
         center: 中央
         end: 終了
         start: 開始
+    alternate_name:
+      hint: "組織の別名（短い名称、略称、旧称など）。検索エンジンがサイトのタイトルの代わりに表示することがあります。"
+      label:
+        one: "別名"
+        other: "別名"
+    area_served:
+      hint: "活動する地域。構造化データに入力どおり掲載されます：国コード（FR、DE）、地域、Worldwide など。"
+      label:
+        one: "対応地域"
+        other: "対応地域"
     arguments:
       label:
         one: 引数
@@ -348,6 +358,11 @@ admin:
       label: 著者
     autoplay:
       label: 自動再生
+    awards:
+      hint: "組織の受賞歴やランキング（例：Chambers Global 2026）。構造化データに掲載されます。"
+      label:
+        one: "受賞歴"
+        other: "受賞歴"
     background:
       label: 背景あり?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: 連絡先
         other: 連絡先
+    contact_page:
+      hint: "拠点を紹介するページ。各拠点がそこで構造化データとして記述されます。空欄の場合は /contact ページを使用します。"
+      label: "お問い合わせページ"
     contents:
       label: コンテンツ
     controls:
@@ -458,6 +476,13 @@ admin:
         one: データ
         other: データ
     date:
+      expiry:
+        hint: "この日付以降の最初の公開時にページがサイトから削除されます。求人の場合は、Google しごと検索にも終了日が伝わります。"
+        label: "掲載終了日"
+      founded:
+        hint: "年（1924）または完全な日付（1924-03-01）。"
+        label: "設立日"
+        pattern: "年（1924）または日付（1924-03-01）を入力してください。"
       from: 開始日
       label: 日付
       sale: 販売日
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: 現在のページの言語と異なる場合は言語コードを入力（例：ja）
       label: 言語
+    languages:
+      hint: "その人が仕事で使う言語。構造化データに掲載されます。"
+      hint_organization: "組織の業務言語。構造化データに掲載されます。空欄の場合はサイトの言語になります。"
+      label: "言語"
     lastname:
       label: 姓
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: ノート
         other: ノート
+    number_of_employees:
+      hint: "組織の人数。構造化データに掲載されます。数値（200）または範囲（150-250）で入力します。"
+      label: "従業員数"
+      pattern: "数値（200）または範囲（150-250）を入力してください。"
     offer:
       label:
         one: オファー
@@ -735,8 +768,11 @@ admin:
         end: 終了
         start: 開始
     organization:
-      hint: "構造化データに公開する組織の情報。名称・ロゴ・SNSプロフィールはサイトから取得します：サイトのタイトル、ヘッダーのロゴ、SNSメニュー。"
+      hint: "構造化データで組織をどう記述するか：schema.org のタイプ、検索エンジンが読めるロゴ、他サイトのプロフィール。正式名称・本社・受賞歴などの基本情報は「設定 › 組織」で設定します。"
       label: "組織"
+    other_places:
+      hint: "組織のその他の拠点。その住所が本社の住所に追加されます。"
+      label: "その他の拠点"
     parent:
       label: 親ページ
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: プレースホルダー
     poster:
       label: ポスター
-      hint: 動画のプレースホルダー画像
+      hint: "動画のカバー画像。検索結果のサムネイルにも使われます。"
     prefix:
       label: プレフィックス
     press:
@@ -840,12 +876,20 @@ admin:
       label: 賃貸済み?
     required:
       label: 必須
+    same_as:
+      hint: "他のサイトで組織を紹介しているページ（Chambers や Legal 500 のプロフィール、Wikipedia、Wikidata など）。検索エンジンが組織を識別する助けになります。ソーシャルプロフィールはソーシャルメニューから取得されます。"
+      label:
+        one: "外部プロフィール"
+        other: "外部プロフィール"
     schema_email:
       hint: "構造化データにメールアドレスを含めます。自動収集を抑えたい場合はオフにしてください。"
       label: "メールアドレスを公開しますか？"
     schema:
       hint: "このページが構造化データでどう記述されるか。"
       label: "構造化データ"
+    schema_logo:
+      hint: "ヘッダーのロゴが SVG または小さい場合の検索エンジン用ロゴ：白い背景でも見やすい、112 × 112 px 以上の PNG または JPG。空欄の場合はヘッダーのロゴを使用します。"
+      label: "検索エンジン用ロゴ"
     schema_type:
       options:
         Organization: "組織（汎用）"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: すでに保存された場所がある場合のみ（これにより下のマーカーが無効になります）
       label: すべての登録された場所を表示?
+    slogan:
+      hint: "組織のスローガン。構造化データに掲載されます。"
+      label: "スローガン"
     slug:
       hint: タイトルから自動生成する場合は空白のまま。**SEOへの影響に注意してください。**
       label: スラッグ
@@ -946,6 +993,9 @@ admin:
       label: 概要
     surtitle:
       label: 上位タイトル
+    tax_id:
+      hint: "組織の税務上の識別番号（フランスでは SIREN 番号）。"
+      label: "税務識別番号"
     text:
       label: テキスト
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: 値
+    vat_id:
+      hint: "付加価値税（VAT）番号。例：FR12345678901"
+      label: "VAT 番号"
     vertical_align:
       hint: テキストの垂直方向の配置
       label: 垂直方向の配置
@@ -1041,7 +1094,8 @@ admin:
       primary: プライマリナビゲーション
       secondary: セカンダリナビゲーション
       social: ソーシャルナビゲーション
-    schema: "構造化データ – 組織と schema.org"
+    organization: "組織 – 基本情報・拠点・受賞歴"
+    schema: "構造化データ – schema.org"
     seo:
       label: グローバルSEO
       title: ウェブサイト名

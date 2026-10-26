@@ -315,8 +315,8 @@ admin:
       country:
         label: Paese
       country_code:
-        hint: "Codice paese ISO 3166-1 alpha-2 (FR, ES, BE…), usato dai dati strutturati. Il campo Paese resta l’etichetta visualizzata."
-        label: "Codice paese"
+        hint: "Mostrato nella lingua della pagina e pubblicato come codice ISO (FR, ES, BE…) nei dati strutturati."
+        label: "Paese"
         pattern: "Due lettere, codice ISO 3166-1 alpha-2 (FR, ES, BE…)."
       label: Indirizzo
       street:
@@ -330,6 +330,16 @@ admin:
         center: Centro
         end: Fine
         start: Inizio
+    alternate_name:
+      hint: "Altri nomi della struttura: uno più breve, una sigla, un nome precedente. I motori di ricerca possono mostrarne uno al posto del titolo del sito."
+      label:
+        one: "Nome alternativo"
+        other: "Nomi alternativi"
+    area_served:
+      hint: "Dove opera, pubblicato così com’è nei dati strutturati: codici paese (FR, DE), regioni, Worldwide…"
+      label:
+        one: "Area di attività"
+        other: "Aree di attività"
     arguments:
       label:
         one: Argomento
@@ -348,6 +358,11 @@ admin:
       label: Autore
     autoplay:
       label: Riproduzione automatica
+    awards:
+      hint: "I suoi riconoscimenti e le sue classifiche (ad es. Chambers Global 2026), pubblicati nei dati strutturati."
+      label:
+        one: "Riconoscimento"
+        other: "Riconoscimenti"
     background:
       label: Con sfondo?
     background_color:
@@ -436,6 +451,9 @@ admin:
       label:
         one: Contatto
         other: Contatti
+    contact_page:
+      hint: "La pagina che presenta le sedi: ognuna vi è descritta nei dati strutturati. Lasciare vuoto per la pagina /contact."
+      label: "Pagina contatti"
     contents:
       label: Contenuti
     controls:
@@ -458,6 +476,13 @@ admin:
         one: Dato
         other: Dati
     date:
+      expiry:
+        hint: "La pagina scompare dal sito alla prima pubblicazione successiva a questa data; per un’offerta di lavoro, anche Google Jobs ne conosce la fine."
+        label: "Data di scadenza"
+      founded:
+        hint: "Un anno (1924) o una data completa (1924-03-01)."
+        label: "Data di fondazione"
+        pattern: "Un anno (1924) o una data (1924-03-01)."
       from: Da
       label: Data
       sale: Data di vendita
@@ -677,6 +702,10 @@ admin:
     lang:
       hint: Inserisci codice lingua (es. it) se diverso dalla lingua della pagina corrente
       label: Lingua
+    languages:
+      hint: "Le lingue in cui lavora la persona, pubblicate nei dati strutturati."
+      hint_organization: "Le lingue di lavoro della struttura, pubblicate nei dati strutturati. Se vuoto: le lingue del sito."
+      label: "Lingue"
     lastname:
       label: Cognome
     layout:
@@ -723,6 +752,10 @@ admin:
       label:
         one: Nota
         other: Note
+    number_of_employees:
+      hint: "L’organico della struttura, pubblicato nei dati strutturati: un numero (200) o un intervallo (150-250)."
+      label: "Numero di dipendenti"
+      pattern: "Un numero (200) o un intervallo (150-250)."
     offer:
       label:
         one: Offerta
@@ -735,8 +768,11 @@ admin:
         end: Fine
         start: Inizio
     organization:
-      hint: "Identità della struttura pubblicata nei dati strutturati. Il nome, il logo e i profili social provengono dal sito: il titolo, il logo dell’intestazione e il menu social."
+      hint: "Come la struttura è descritta nei dati strutturati: il suo tipo schema.org, un logo leggibile dai motori di ricerca, i suoi profili su altri siti. La sua identità — ragione sociale, sede, riconoscimenti… — si imposta in Configurazioni › Organizzazione."
       label: "Organizzazione"
+    other_places:
+      hint: "Le altre sedi della struttura: il loro indirizzo si aggiunge a quello della sede principale."
+      label: "Altre sedi"
     parent:
       label: Pagina padre
     pdf:
@@ -749,7 +785,7 @@ admin:
       label: Segnaposto
     poster:
       label: Poster
-      hint: Immagine segnaposto per video
+      hint: "Immagine di presentazione del video, anche la sua miniatura nei risultati di ricerca."
     prefix:
       label: Prefisso
     press:
@@ -840,12 +876,20 @@ admin:
       label: Affittato?
     required:
       label: Richiesto
+    same_as:
+      hint: "Pagine che descrivono la struttura su altri siti: scheda Chambers o Legal 500, Wikipedia, Wikidata… Aiutano i motori di ricerca a riconoscerla. I profili social provengono dal menu social."
+      label:
+        one: "Profilo esterno"
+        other: "Profili esterni"
     schema_email:
       hint: "Include gli indirizzi e-mail nei dati strutturati. Disattiva per limitare la raccolta automatizzata."
       label: "Pubblicare gli indirizzi e-mail?"
     schema:
       hint: "Come questa pagina si descrive nei dati strutturati."
       label: "Dati strutturati"
+    schema_logo:
+      hint: "Per i motori di ricerca, quando il logo dell’intestazione è un SVG o è piccolo: un PNG o JPG di almeno 112 × 112 px, leggibile su sfondo bianco. Lasciare vuoto per usare il logo dell’intestazione."
+      label: "Logo per i motori di ricerca"
     schema_type:
       options:
         Organization: "Organizzazione (generica)"
@@ -896,6 +940,9 @@ admin:
     show_places:
       hint: Solo se hai già luoghi salvati (questo disabiliterà il marcatore sotto)
       label: Mostra tutti i luoghi registrati?
+    slogan:
+      hint: "Lo slogan della struttura, pubblicato nei dati strutturati."
+      label: "Slogan"
     slug:
       hint: Lascia vuoto per automatizzare con il titolo. **Attenzione all’impatto SEO.**
       label: Slug
@@ -946,6 +993,9 @@ admin:
       label: Riepilogo
     surtitle:
       label: Sopratitolo
+    tax_id:
+      hint: "Identificativo fiscale della struttura (in Francia il numero SIREN)."
+      label: "Codice fiscale"
     text:
       label: Testo
     theme:
@@ -973,6 +1023,9 @@ admin:
       label: URL
     value:
       label: Valore
+    vat_id:
+      hint: "Partita IVA intracomunitaria, ad es. IT12345678901."
+      label: "Partita IVA"
     vertical_align:
       hint: Allineamento verticale del testo
       label: Allineamento verticale
@@ -1041,7 +1094,8 @@ admin:
       primary: Navigazione primaria
       secondary: Navigazione secondaria
       social: Navigazione social
-    schema: "Dati strutturati – Organizzazione e schema.org"
+    organization: "Organizzazione – Identità, sedi e riconoscimenti"
+    schema: "Dati strutturati – schema.org"
     seo:
       label: SEO globale
       title: Nome del sito web

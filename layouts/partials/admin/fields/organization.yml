@@ -1,18 +1,12 @@
-{{/* The organization behind the site, for the structured data.
-
-     Only what the site does not know already: its name is the site title,
-     its logo the header one, its social profiles the links of the social
-     menu, its description the SEO one — see func/GetSchemaOrganization.html
-     in the theme. The head office, when the site has places, lends its
-     address and contact; the fields below are for a site without one.
+{{/* How the organization behind the site is described in the structured
+     data, in data/schema.yml: its schema.org type, a logo search engines can
+     read when the header one is an SVG, its profiles on other sites. Its
+     identity — legal name, head office, distinctions… — is in
+     data/organization.yml, see admin/datas/organization.yml; its name, its
+     social profiles, its description and slogan come from the site — see
+     func/GetSchemaOrganization.html in the theme.
 */}}
-{{- $fields := slice "schema_type" "legal_name" -}}
-{{- if site.Params.admin.collections.places.enable -}}
-  {{- $fields = $fields | append "head_office" -}}
-{{- end -}}
-{{- $fields = $fields | append
-  (dict "address" (dict "is_schema_only" true))
-  (dict "contact" (dict "fields" (slice "email" "phone" "fax"))) -}}
+{{- $fields := slice "schema_type" "schema_logo" "same_as" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 
 {{- $args := dict 

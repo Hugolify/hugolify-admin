@@ -317,10 +317,10 @@ admin:
       country:
         label: Pays
       country_code:
-        hint: "Code ISO 3166-1 alpha-2 du pays (FR, ES, BE…), utilisé par les données structurées. Le champ Pays reste le libellé affiché."
-        label: "Code pays"
+        hint: "Affiché dans la langue de la page, et publié en code ISO (FR, ES, BE…) dans les données structurées."
+        label: "Pays"
         pattern: "Deux lettres, code ISO 3166-1 alpha-2 (FR, ES, BE…)."
-      label: Addresse
+      label: Adresse
       street:
         label: Rue
       zipcode:
@@ -332,6 +332,16 @@ admin:
         center: Center
         end: End
         start: Start
+    alternate_name:
+      hint: "Les autres noms de la structure — plus court, sigle, ancien nom. Les moteurs de recherche peuvent en afficher un à la place du titre du site."
+      label:
+        one: "Nom alternatif"
+        other: "Noms alternatifs"
+    area_served:
+      hint: "Là où elle intervient, publié tel quel dans les données structurées : codes pays (FR, DE), régions, Worldwide…"
+      label:
+        one: "Zone d’intervention"
+        other: "Zones d’intervention"
     arguments:
       label:
         one: Argument
@@ -350,6 +360,11 @@ admin:
       label: Auteur
     autoplay:
       label: Autoplay
+    awards:
+      hint: "Ses distinctions et classements (p. ex. Chambers Global 2026), publiés dans les données structurées."
+      label:
+        one: "Distinction"
+        other: "Distinctions"
     background:
       label: Avec un fond différent ?
     background_color:
@@ -438,6 +453,9 @@ admin:
       label:
         one: Contact
         other: Contacts
+    contact_page:
+      hint: "La page qui présente les bureaux : chacun y est décrit dans les données structurées. Laissez vide pour la page /contact."
+      label: "Page contact"
     contents:
       label: Contenu
     controls:
@@ -460,6 +478,13 @@ admin:
         one: Donnée
         other: Données
     date:
+      expiry:
+        hint: "La page disparaît du site à la première publication qui suit cette date ; pour une offre d’emploi, Google Jobs connaît aussi sa date de fin."
+        label: "Date d’expiration"
+      founded:
+        hint: "Une année (1924) ou une date complète (1924-03-01)."
+        label: "Date de création"
+        pattern: "Une année (1924) ou une date (1924-03-01)."
       from: À partir du
       label: Date
       sale: Date de vente
@@ -669,6 +694,10 @@ admin:
     lang:
       hint: "Saisir le code de langue (p. ex. fr) s’il diffère de celui de la page"
       label: Langue
+    languages:
+      hint: "Les langues dans lesquelles la personne travaille, publiées dans les données structurées."
+      hint_organization: "Les langues de travail de la structure, publiées dans les données structurées. Laissé vide : les langues du site."
+      label: "Langues"
     lastname:
       label: Nom
     layout:
@@ -715,6 +744,10 @@ admin:
       label:
         one: Note
         other: Notes
+    number_of_employees:
+      hint: "Le nombre de personnes de la structure, publié dans les données structurées : un nombre (200) ou une fourchette (150-250)."
+      label: "Effectif"
+      pattern: "Un nombre (200) ou une fourchette (150-250)."
     offer:
       label:
         one: Offre
@@ -727,8 +760,11 @@ admin:
         end: End
         start: Start
     organization:
-      hint: "Identité de la structure publiée dans les données structurées. Le nom, le logo et les profils sociaux viennent du site : son titre, le logo de l’en-tête et le menu des réseaux sociaux."
+      hint: "Comment la structure est décrite dans les données structurées : son type schema.org, un logo lisible par les moteurs de recherche, ses profils sur d’autres sites. Son identité — raison sociale, siège, distinctions… — se règle dans Config › Organisation."
       label: "Organisation"
+    other_places:
+      hint: "Les autres lieux de la structure : leur adresse s’ajoute à celle du siège."
+      label: "Autres implantations"
     parent:
       label: Page parente
     pdf:
@@ -741,7 +777,7 @@ admin:
       label: Placeholder
     poster:
       label: Poster
-      hint: Image de présentation pour la vidéo
+      hint: "Image de présentation de la vidéo, aussi sa vignette dans les résultats de recherche."
     prefix:
       label: Prefix
     press:
@@ -832,12 +868,20 @@ admin:
       label: Loué ?
     required:
       label: Requis
+    same_as:
+      hint: "Pages qui décrivent la structure sur d’autres sites : fiche Chambers ou Legal 500, Wikipédia, Wikidata… Elles aident les moteurs de recherche à la reconnaître. Les réseaux sociaux viennent du menu des réseaux sociaux."
+      label:
+        one: "Profil externe"
+        other: "Profils externes"
     schema_email:
       hint: "Inclut les adresses e-mail dans les données structurées. À désactiver pour limiter la collecte automatisée."
       label: "Publier les adresses e-mail ?"
     schema:
       hint: "Comment cette page est décrite dans les données structurées."
       label: "Données structurées"
+    schema_logo:
+      hint: "Pour les moteurs de recherche, quand le logo de l’en-tête est un SVG ou de petite taille : un PNG ou un JPG d’au moins 112 × 112 px, lisible sur fond blanc. Laissez vide pour utiliser le logo de l’en-tête."
+      label: "Logo pour les moteurs de recherche"
     schema_type:
       options:
         Organization: "Organisation (générique)"
@@ -888,6 +932,9 @@ admin:
     show_places:
       hint: "Uniquement si des lieux sont déjà enregistrés (cela désactive le marqueur ci-dessous)"
       label: Affiche tous les lieux ?
+    slogan:
+      hint: "La signature de la structure, publiée dans les données structurées."
+      label: "Slogan"
     slug:
       hint: "Laisser vide pour le générer depuis le titre. **Attention à l’impact SEO.**"
       label: Slug
@@ -942,6 +989,9 @@ admin:
       label: Suffix
     surtitle:
       label: Sur-titre
+    tax_id:
+      hint: "Identifiant fiscal de la structure (le numéro SIREN en France)."
+      label: "Identifiant fiscal"
     text:
       label: Texte
     theme:
@@ -967,6 +1017,9 @@ admin:
       label: URL
     value:
       label: valeur
+    vat_id:
+      hint: "Numéro de TVA intracommunautaire, p. ex. FR12345678901."
+      label: "N° de TVA"
     vertical_align:
       hint: Alignement vertical du texte
       label: Alignement vertical
@@ -1035,7 +1088,8 @@ admin:
       primary: Navigation principale
       secondary: Navigation secondaire
       social: Navigation réseaux sociaux
-    schema: "Données structurées – Organisation et schema.org"
+    organization: "Organisation – Identité, implantations et distinctions"
+    schema: "Données structurées – schema.org"
     seo:
       label: Référencement – SEO (Search Engine Optimization) global
       title: Nom du site

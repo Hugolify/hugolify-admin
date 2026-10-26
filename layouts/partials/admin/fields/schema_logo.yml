@@ -1,0 +1,11 @@
+{{/* Logo of the organization for the structured data, stored as `logo`, when
+     the header one does not suit search engines: an SVG, or under the
+     112 × 112 px Google asks for. Left empty, the theme publishes the header
+     logo. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.schema_logo.label")
+  "hint" (i18n "admin.fields.schema_logo.hint")
+  "name" "logo"
+  -}}
+
+{{ partial "admin/widgets/image.js" $args }}
