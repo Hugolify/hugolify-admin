@@ -6,7 +6,9 @@
      the site title. Not translated: one legal name, one head office, one set
      of distinctions; what varies, the description and the slogan, is in
      data/seo.yml. The head office lends its address and contact, the fields
-     right below it are for a site without one.
+     right below it are for a site without one. Decap keys the file by
+     language all the same, as it ignores i18n at the file level: the theme
+     reads both shapes, see func/GetUntranslatedData.html.
 */}}
 {{- $places := site.Params.admin.collections.places.enable -}}
 {{- $fields := slice "legal_name" "alternate_name" "date_founded" "number_of_employees"

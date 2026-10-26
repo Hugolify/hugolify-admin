@@ -34,6 +34,12 @@
   {{- else }}
   fields: [
   {{- end }}
+    {{- /* What the file already holds, flat or keyed by language as Decap
+           saves it — the theme reads it either way. */ -}}
+    {{- $saved := hugo.Data.blocks -}}
+    {{- if templates.Exists "partials/func/GetUntranslatedData.html" -}}
+      {{- $saved = partial "func/GetUntranslatedData.html" "blocks" -}}
+    {{- end -}}
     {{- range $name := $names }}
       {{- $label := i18n (printf "admin.blocks.%s.label" $name) | default (humanize $name) -}}
       {{- if strings.HasPrefix $name "selected-" -}}
@@ -42,7 +48,7 @@
         {{- $label = i18n "admin.blocks.selected.label" (dict "section" $collection_label) -}}
       {{- end -}}
       {{- $collapsed := true -}}
-      {{- with hugo.Data.blocks -}}
+      {{- with $saved -}}
         {{- with index . $name -}}
           {{- with .ui -}}
             {{- if reflect.IsMap . -}}
