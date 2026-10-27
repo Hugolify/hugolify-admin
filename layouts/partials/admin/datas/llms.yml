@@ -1,7 +1,6 @@
 {{/*  Body of /llms.txt (https://llmstxt.org/), the index of the site for
-      language models. The theme renders it at the root of the site, once the
-      site's content/llms.md turns the format on (see hugolify-template); left
-      empty, no file is published.
+      language models. The theme writes it at the root of the site, see
+      commons/llms.html; left empty, no file is published.
 
       Not translated: agents look for one file, at the root, so every language
       goes in it. Decap CMS ignores `i18n: false` in the translated config
