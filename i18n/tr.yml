@@ -933,6 +933,18 @@ admin:
         selection: Manuel seçim
         taxonomies: Taksonomiye göre filtrele
         toplevel: Birinci düzey sayfalar
+    seo:
+      label: "SEO – Arama motoru optimizasyonu"
+      hint: "İsteğe bağlı. Sayfanın başlığını, açıklamasını ve görselini arama sonuçlarında ve bağlantı önizlemelerinde değiştirir; sayfanın kendisini değiştirmez."
+      title:
+        label: "SEO başlığı"
+        hint: "Tarayıcı sekmesinde, arama sonuçlarında ve bağlantı önizlemelerinde görünen başlık; ardından site adı eklenir: toplamda yaklaşık 60 karakter. Sayfa başlığını kullanmak için boş bırakın."
+      description:
+        label: "SEO açıklaması"
+        hint: "Arama sonuçlarında ve bağlantı önizlemelerinde başlığın altında görünen metin, yaklaşık 150–160 karakter. Sayfa açıklamasını kullanmak için boş bırakın."
+      image:
+        label: "Paylaşım görseli"
+        hint: "Sosyal ağlarda ve mesajlaşma uygulamalarında önizleme görseli, 1200 × 630 px olarak kırpılır. Ana resmi kullanmak için boş bırakın."
     show_more:
       hint: Daha fazla öğe görmek için bir düğme gösterir
       label: Daha fazla göster?

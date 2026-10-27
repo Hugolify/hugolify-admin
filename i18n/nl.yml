@@ -933,6 +933,18 @@ admin:
         selection: Handmatige selectie
         taxonomies: Filteren op taxonomie
         toplevel: Pagina’s op het eerste niveau
+    seo:
+      label: "SEO – Zoekmachineoptimalisatie"
+      hint: "Optioneel. Vervangt de titel, beschrijving en afbeelding van de pagina in zoekresultaten en linkvoorbeelden, zonder de pagina zelf te wijzigen."
+      title:
+        label: "SEO-titel"
+        hint: "Titel van het tabblad, de zoekresultaten en de linkvoorbeelden, gevolgd door de naam van de site: in totaal ongeveer 60 tekens. Leeg laten om de paginatitel te gebruiken."
+      description:
+        label: "SEO-beschrijving"
+        hint: "Tekst onder de titel in zoekresultaten en linkvoorbeelden, ongeveer 150 tot 160 tekens. Leeg laten om de paginabeschrijving te gebruiken."
+      image:
+        label: "Deelafbeelding"
+        hint: "Afbeelding van de voorbeelden op sociale netwerken en in berichtenapps, bijgesneden tot 1200 × 630 px. Leeg laten om de hoofdafbeelding te gebruiken."
     show_more:
       hint: Toont een knop om meer items te zien
       label: Meer tonen?

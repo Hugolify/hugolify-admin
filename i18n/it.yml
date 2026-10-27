@@ -933,6 +933,18 @@ admin:
         selection: Selezione manuale
         taxonomies: Filtra per tassonomia
         toplevel: Pagine di primo livello
+    seo:
+      label: "SEO – Ottimizzazione per i motori di ricerca"
+      hint: "Facoltativo. Sostituisce titolo, descrizione e immagine della pagina nei risultati di ricerca e nelle anteprime dei link, senza modificare la pagina."
+      title:
+        label: "Titolo SEO"
+        hint: "Titolo della scheda, dei risultati di ricerca e delle anteprime, seguito dal nome del sito: circa 60 caratteri in tutto. Lasciare vuoto per usare il titolo della pagina."
+      description:
+        label: "Descrizione SEO"
+        hint: "Testo sotto il titolo nei risultati di ricerca e nelle anteprime dei link, circa 150-160 caratteri. Lasciare vuoto per usare la descrizione della pagina."
+      image:
+        label: "Immagine di condivisione"
+        hint: "Immagine delle anteprime su social network e app di messaggistica, ritagliata a 1200 × 630 px. Lasciare vuoto per usare l’immagine principale."
     show_more:
       hint: Mostra un pulsante per vedere più elementi
       label: Mostra di più?

@@ -933,6 +933,18 @@ admin:
         selection: Pilihan manual
         taxonomies: Filter berdasarkan taksonomi
         toplevel: Halaman tingkat pertama
+    seo:
+      label: "SEO – Optimasi mesin pencari"
+      hint: "Opsional. Menggantikan judul, deskripsi, dan gambar halaman di hasil pencarian dan pratinjau tautan, tanpa mengubah halaman itu sendiri."
+      title:
+        label: "Judul SEO"
+        hint: "Judul tab browser, hasil pencarian, dan pratinjau tautan, diikuti nama situs: sekitar 60 karakter secara keseluruhan. Biarkan kosong untuk memakai judul halaman."
+      description:
+        label: "Deskripsi SEO"
+        hint: "Teks di bawah judul pada hasil pencarian dan pratinjau tautan, sekitar 150–160 karakter. Biarkan kosong untuk memakai deskripsi halaman."
+      image:
+        label: "Gambar berbagi"
+        hint: "Gambar pratinjau di jejaring sosial dan aplikasi pesan, dipotong menjadi 1200 × 630 px. Biarkan kosong untuk memakai gambar utama."
     show_more:
       hint: Menampilkan tombol untuk melihat lebih banyak item
       label: Tampilkan lebih banyak?

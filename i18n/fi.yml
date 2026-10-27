@@ -929,6 +929,18 @@ admin:
         selection: Manuaalinen valinta
         taxonomies: Suodata taksonomian mukaan
         toplevel: Ensimmäisen tason sivut
+    seo:
+      label: "SEO – Hakukoneoptimointi"
+      hint: "Valinnainen. Korvaa sivun otsikon, kuvauksen ja kuvan hakutuloksissa ja linkkien esikatseluissa muuttamatta itse sivua."
+      title:
+        label: "SEO-otsikko"
+        hint: "Selaimen välilehden, hakutulosten ja linkkien esikatselujen otsikko, jonka perään lisätään sivuston nimi: yhteensä noin 60 merkkiä. Jätä tyhjäksi, niin käytetään sivun otsikkoa."
+      description:
+        label: "SEO-kuvaus"
+        hint: "Otsikon alla näkyvä teksti hakutuloksissa ja linkkien esikatseluissa, noin 150–160 merkkiä. Jätä tyhjäksi, niin käytetään sivun kuvausta."
+      image:
+        label: "Jaettava kuva"
+        hint: "Kuva esikatseluissa sosiaalisessa mediassa ja viestisovelluksissa, rajattuna kokoon 1200 × 630 px. Jätä tyhjäksi, niin käytetään pääkuvaa."
     show_more:
       hint: Näyttää painikkeen nähdäksesi lisää kohteita
       label: Näytä lisää?

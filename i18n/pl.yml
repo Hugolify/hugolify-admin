@@ -933,6 +933,18 @@ admin:
         selection: Wybór ręczny
         taxonomies: Filtruj według taksonomii
         toplevel: Strony pierwszego poziomu
+    seo:
+      label: "SEO – Optymalizacja pod wyszukiwarki"
+      hint: "Opcjonalne. Zastępuje tytuł, opis i obraz strony w wynikach wyszukiwania i podglądach linków, bez zmiany samej strony."
+      title:
+        label: "Tytuł SEO"
+        hint: "Tytuł karty przeglądarki, wyników wyszukiwania i podglądów linków, po którym dodawana jest nazwa witryny: łącznie około 60 znaków. Pozostaw puste, aby użyć tytułu strony."
+      description:
+        label: "Opis SEO"
+        hint: "Tekst pod tytułem w wynikach wyszukiwania i podglądach linków, około 150–160 znaków. Pozostaw puste, aby użyć opisu strony."
+      image:
+        label: "Obraz do udostępniania"
+        hint: "Obraz podglądów w sieciach społecznościowych i komunikatorach, przycięty do 1200 × 630 px. Pozostaw puste, aby użyć obrazu głównego."
     show_more:
       hint: Pokazuje przycisk, aby zobaczyć więcej elementów
       label: Pokaż więcej?

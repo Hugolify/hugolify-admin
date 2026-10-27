@@ -933,6 +933,18 @@ admin:
         selection: Manuellt urval
         taxonomies: Filtrera efter taxonomi
         toplevel: Sidor på första nivån
+    seo:
+      label: "SEO – Sökmotoroptimering"
+      hint: "Valfritt. Ersätter sidans titel, beskrivning och bild i sökresultat och länkförhandsvisningar, utan att ändra själva sidan."
+      title:
+        label: "SEO-titel"
+        hint: "Titel i webbläsarfliken, sökresultaten och länkförhandsvisningarna, följd av webbplatsens namn: cirka 60 tecken totalt. Lämna tomt för att använda sidans titel."
+      description:
+        label: "SEO-beskrivning"
+        hint: "Text under titeln i sökresultat och länkförhandsvisningar, cirka 150 till 160 tecken. Lämna tomt för att använda sidans beskrivning."
+      image:
+        label: "Delningsbild"
+        hint: "Bild i förhandsvisningar på sociala nätverk och i meddelandeappar, beskuren till 1200 × 630 px. Lämna tomt för att använda huvudbilden."
     show_more:
       hint: Visar en knapp för att se fler objekt
       label: Visa mer?

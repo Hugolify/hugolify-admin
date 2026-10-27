@@ -1,0 +1,9 @@
+{{/* Title of the page in the browser tab and the search results, see
+     head/seo.html in the theme: the site name is added after it. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.seo.title.label")
+  "hint" (i18n "admin.fields.seo.title.hint")
+  "name" "title"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}
