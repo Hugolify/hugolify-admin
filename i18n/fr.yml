@@ -728,8 +728,7 @@ admin:
         one: Lien
         other: Liens
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'À remplir dans la langue par défaut uniquement. Documentation : https://llmstxt.org/'
     location:
       label: Lieu
     loop:
@@ -931,6 +930,18 @@ admin:
         selection: Sélection manuelle
         taxonomies: Filtrer par taxonomie
         toplevel: Pages de premier niveau
+    seo:
+      label: "Référencement – SEO"
+      hint: "Facultatif. Remplace le titre, la description et l’image de la page dans les résultats de recherche et les aperçus de partage, sans rien changer à la page elle-même."
+      title:
+        label: "Titre SEO"
+        hint: "Titre de l’onglet, des résultats de recherche et des aperçus de partage, suivi du nom du site : 60 caractères environ au total. Laisser vide pour reprendre le titre de la page."
+      description:
+        label: "Description SEO"
+        hint: "Texte affiché sous le titre dans les résultats de recherche et les aperçus de partage, 150 à 160 caractères environ. Laisser vide pour reprendre la description de la page."
+      image:
+        label: "Image de partage"
+        hint: "Image des aperçus sur les réseaux sociaux et les messageries, recadrée au format 1200 × 630 px. Laisser vide pour reprendre l’image principale."
     show_more:
       hint: Affiche un bouton pour voir plus d’éléments
       label: Plus d’items ?
@@ -1086,6 +1097,8 @@ admin:
     blocks: Blocs – Mise en page et apparence par défaut de chaque type de bloc
     credit: Footer – Crédits en bas du site
     footer: Footer – Blocs et informations en bas du site
+    llms: 'Référencement – GEO, index du site pour les modèles de langage (llms.txt)'
+    llms_full: 'Référencement – GEO, texte complet du site pour les modèles de langage (llms-full.txt)'
     nav:
       footer:
         primary: "Footer – Navigation principale"
@@ -1103,7 +1116,7 @@ admin:
     organization: "Organisation – Identité, implantations et distinctions"
     schema: "Données structurées – schema.org"
     seo:
-      label: Référencement – SEO (Search Engine Optimization) global
+      label: 'Référencement – SEO, métadonnées du site pour les moteurs de recherche'
       title: Nom du site
   group:
     year: Année

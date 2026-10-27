@@ -736,8 +736,7 @@ admin:
         one: Povezava
         other: Povezave
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Izpolnite samo v privzetem jeziku. Dokumentacija: https://llmstxt.org/'
     location:
       label: Lokacija
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: Ročni izbor
         taxonomies: Filtriraj po taksonomiji
         toplevel: Strani prve ravni
+    seo:
+      label: "SEO – Optimizacija za iskalnike"
+      hint: "Neobvezno. Nadomesti naslov, opis in sliko strani v rezultatih iskanja in predogledih povezav, ne da bi spremenilo samo stran."
+      title:
+        label: "Naslov SEO"
+        hint: "Naslov zavihka brskalnika, rezultatov iskanja in predogledov povezav, ki mu sledi ime spletnega mesta: skupaj približno 60 znakov. Pustite prazno, da se uporabi naslov strani."
+      description:
+        label: "Opis SEO"
+        hint: "Besedilo pod naslovom v rezultatih iskanja in predogledih povezav, približno 150 do 160 znakov. Pustite prazno, da se uporabi opis strani."
+      image:
+        label: "Slika za deljenje"
+        hint: "Slika predogledov na družbenih omrežjih in v aplikacijah za sporočanje, obrezana na 1200 × 630 px. Pustite prazno, da se uporabi glavna slika."
     show_more:
       hint: Prikaže gumb za ogled več elementov
       label: Prikaži več?
@@ -1092,6 +1103,8 @@ admin:
     blocks: Bloki – Privzeta postavitev in videz vsake vrste bloka
     credit: Zasluge na dnu strani
     footer: Informacijsko besedilo na dnu strani
+    llms: 'GEO – Kazalo spletnega mesta za jezikovne modele (llms.txt)'
+    llms_full: 'GEO – Celotno besedilo spletnega mesta za jezikovne modele (llms-full.txt)'
     nav:
       footer:
         primary: "Noga – Primarna navigacija"
@@ -1109,7 +1122,7 @@ admin:
     organization: "Organizacija – Identiteta, lokacije in priznanja"
     schema: "Strukturirani podatki – schema.org"
     seo:
-      label: Globalni SEO
+      label: 'SEO – Metapodatki spletnega mesta za iskalnike'
       title: Ime spletne strani
   group:
     year: Leto

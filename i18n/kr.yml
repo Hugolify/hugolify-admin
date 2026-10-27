@@ -736,8 +736,7 @@ admin:
         one: 링크
         other: 링크
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: '기본 언어로만 입력하세요. 문서: https://llmstxt.org/'
     location:
       label: 위치
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: 직접 선택
         taxonomies: 분류로 필터링
         toplevel: 최상위 페이지
+    seo:
+      label: "SEO – 검색 엔진 최적화"
+      hint: "선택 사항. 검색 결과와 링크 미리보기에서 페이지의 제목, 설명, 이미지를 대체하며 페이지 자체는 바뀌지 않습니다."
+      title:
+        label: "SEO 제목"
+        hint: "브라우저 탭, 검색 결과, 링크 미리보기에 표시되는 제목으로 뒤에 사이트 이름이 붙습니다. 전체 약 30자. 비워 두면 페이지 제목을 사용합니다."
+      description:
+        label: "SEO 설명"
+        hint: "검색 결과와 링크 미리보기에서 제목 아래에 표시되는 텍스트, 약 80자. 비워 두면 페이지 설명을 사용합니다."
+      image:
+        label: "공유 이미지"
+        hint: "소셜 네트워크와 메신저 미리보기 이미지로, 1200 × 630 px로 잘립니다. 비워 두면 주요 이미지를 사용합니다."
     show_more:
       hint: 더 많은 항목을 보기 위한 버튼 표시
       label: 더 보기?
@@ -1092,6 +1103,8 @@ admin:
     blocks: 블록 – 각 블록 유형의 기본 레이아웃 및 모양
     credit: 사이트 하단의 크레딧
     footer: 사이트 하단의 정보 텍스트
+    llms: 'GEO – 언어 모델용 사이트 색인 (llms.txt)'
+    llms_full: 'GEO – 언어 모델용 사이트 전체 텍스트 (llms-full.txt)'
     nav:
       footer:
         primary: "푸터 – 기본 내비게이션"
@@ -1109,7 +1122,7 @@ admin:
     organization: "조직 – 기본 정보, 지점, 수상 내역"
     schema: "구조화된 데이터 – schema.org"
     seo:
-      label: 글로벌 SEO
+      label: 'SEO – 검색 엔진용 사이트 메타데이터'
       title: 웹사이트 이름
   group:
     year: 년

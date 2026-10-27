@@ -1,0 +1,20 @@
+{{/* Search and sharing overrides of a page.
+
+     Read as seo.title, seo.description and seo.image by head/seo.html and
+     func/GetSchemaWebPage.html in the theme, each one standing in for the
+     title, description and featured image of the page. Placed just before the
+     slug, which comes last in the collections. The slug stays out of it: Hugo
+     only reads it at the root of the front matter.
+*/}}
+{{- $fields := slice "seo_title" "seo_description" "seo_image" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.seo.label")
+  "hint" (i18n "admin.fields.seo.hint")
+  "name" "seo"
+  "collapsed" true
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

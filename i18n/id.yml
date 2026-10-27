@@ -736,8 +736,7 @@ admin:
         one: Tautan
         other: Tautan
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Isi hanya dalam bahasa default. Dokumentasi: https://llmstxt.org/'
     location:
       label: Lokasi
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: Pilihan manual
         taxonomies: Filter berdasarkan taksonomi
         toplevel: Halaman tingkat pertama
+    seo:
+      label: "SEO – Optimasi mesin pencari"
+      hint: "Opsional. Menggantikan judul, deskripsi, dan gambar halaman di hasil pencarian dan pratinjau tautan, tanpa mengubah halaman itu sendiri."
+      title:
+        label: "Judul SEO"
+        hint: "Judul tab browser, hasil pencarian, dan pratinjau tautan, diikuti nama situs: sekitar 60 karakter secara keseluruhan. Biarkan kosong untuk memakai judul halaman."
+      description:
+        label: "Deskripsi SEO"
+        hint: "Teks di bawah judul pada hasil pencarian dan pratinjau tautan, sekitar 150–160 karakter. Biarkan kosong untuk memakai deskripsi halaman."
+      image:
+        label: "Gambar berbagi"
+        hint: "Gambar pratinjau di jejaring sosial dan aplikasi pesan, dipotong menjadi 1200 × 630 px. Biarkan kosong untuk memakai gambar utama."
     show_more:
       hint: Menampilkan tombol untuk melihat lebih banyak item
       label: Tampilkan lebih banyak?
@@ -1092,6 +1103,8 @@ admin:
     blocks: Blok – Tata letak dan tampilan bawaan setiap jenis blok
     credit: Kredit di bagian bawah situs
     footer: Teks informasi di bagian bawah situs
+    llms: 'GEO – Indeks situs untuk model bahasa (llms.txt)'
+    llms_full: 'GEO – Teks lengkap situs untuk model bahasa (llms-full.txt)'
     nav:
       footer:
         primary: "Footer – Navigasi Utama"
@@ -1109,7 +1122,7 @@ admin:
     organization: "Organisasi – Identitas, lokasi, dan penghargaan"
     schema: "Data terstruktur – schema.org"
     seo:
-      label: SEO Global
+      label: 'SEO – Metadata situs untuk mesin pencari'
       title: Nama Situs Web
   group:
     year: Tahun

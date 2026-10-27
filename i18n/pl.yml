@@ -736,8 +736,7 @@ admin:
         one: Link
         other: Linki
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Wypełnij tylko w języku domyślnym. Dokumentacja: https://llmstxt.org/'
     location:
       label: Lokalizacja
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: Wybór ręczny
         taxonomies: Filtruj według taksonomii
         toplevel: Strony pierwszego poziomu
+    seo:
+      label: "SEO – Optymalizacja pod wyszukiwarki"
+      hint: "Opcjonalne. Zastępuje tytuł, opis i obraz strony w wynikach wyszukiwania i podglądach linków, bez zmiany samej strony."
+      title:
+        label: "Tytuł SEO"
+        hint: "Tytuł karty przeglądarki, wyników wyszukiwania i podglądów linków, po którym dodawana jest nazwa witryny: łącznie około 60 znaków. Pozostaw puste, aby użyć tytułu strony."
+      description:
+        label: "Opis SEO"
+        hint: "Tekst pod tytułem w wynikach wyszukiwania i podglądach linków, około 150–160 znaków. Pozostaw puste, aby użyć opisu strony."
+      image:
+        label: "Obraz do udostępniania"
+        hint: "Obraz podglądów w sieciach społecznościowych i komunikatorach, przycięty do 1200 × 630 px. Pozostaw puste, aby użyć obrazu głównego."
     show_more:
       hint: Pokazuje przycisk, aby zobaczyć więcej elementów
       label: Pokaż więcej?
@@ -1092,6 +1103,8 @@ admin:
     blocks: Bloki – Domyślny układ i wygląd każdego typu bloku
     credit: Kredyty u dołu strony
     footer: Tekst informacyjny u dołu strony
+    llms: 'GEO – Indeks witryny dla modeli językowych (llms.txt)'
+    llms_full: 'GEO – Pełny tekst witryny dla modeli językowych (llms-full.txt)'
     nav:
       footer:
         primary: "Stopka – Nawigacja główna"
@@ -1109,7 +1122,7 @@ admin:
     organization: "Organizacja – Tożsamość, lokalizacje i wyróżnienia"
     schema: "Dane strukturalne – schema.org"
     seo:
-      label: Globalne SEO
+      label: 'SEO – Metadane witryny dla wyszukiwarek'
       title: Nazwa witryny
   group:
     year: Rok

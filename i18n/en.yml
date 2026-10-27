@@ -730,8 +730,7 @@ admin:
         one: Link
         other: Links
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Fill it in the default language only. Documentation: https://llmstxt.org/'
     location:
       label: Location
     loop:
@@ -933,6 +932,18 @@ admin:
         selection: Manual selection
         taxonomies: Filter by taxonomy
         toplevel: Top-level pages
+    seo:
+      label: "SEO – Search engine optimization"
+      hint: "Optional. Overrides the title, description and image of the page in search results and link previews, without changing the page itself."
+      title:
+        label: "SEO title"
+        hint: "Title of the browser tab, search results and link previews, followed by the site name: about 60 characters in all. Leave empty to use the page title."
+      description:
+        label: "SEO description"
+        hint: "Text shown under the title in search results and link previews, about 150 to 160 characters. Leave empty to use the page description."
+      image:
+        label: "Sharing image"
+        hint: "Image of the previews on social networks and messaging apps, cropped to 1200 × 630 px. Leave empty to use the featured image."
     show_more:
       hint: Shows a button to see more items
       label: Show more?
@@ -1092,6 +1103,8 @@ admin:
     blocks: Blocks – Default layout and appearance of each block type
     credit: Footer – Credits at the bottom of the site
     footer: Footer – Blocks and information text at the bottom of the site
+    llms: 'GEO – Site index for language models (llms.txt)'
+    llms_full: 'GEO – Full text of the site for language models (llms-full.txt)'
     nav:
       footer:
         primary: "Footer – Primary navigation"
@@ -1109,7 +1122,7 @@ admin:
     organization: "Organization – Identity, locations and awards"
     schema: "Structured data – schema.org"
     seo:
-      label: Global SEO (Search Engine Optimization)
+      label: 'SEO – Site metadata for search engines'
       title: Website name
   group:
     year: Year

@@ -736,8 +736,7 @@ admin:
         one: 链接
         other: 链接
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: '仅在默认语言中填写。文档：https://llmstxt.org/'
     location:
       label: 位置
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: 手动选择
         taxonomies: 按分类筛选
         toplevel: 第一级页面
+    seo:
+      label: "SEO – 搜索引擎优化"
+      hint: "可选。在搜索结果和链接预览中替换页面的标题、描述和图片，不改变页面本身。"
+      title:
+        label: "SEO 标题"
+        hint: "显示在浏览器标签页、搜索结果和链接预览中的标题，后面会加上网站名称：总计约 30 个汉字。留空则使用页面标题。"
+      description:
+        label: "SEO 描述"
+        hint: "在搜索结果和链接预览中显示于标题下方的文字，约 80 个汉字。留空则使用页面描述。"
+      image:
+        label: "分享图片"
+        hint: "社交网络和即时通讯应用预览中的图片，裁剪为 1200 × 630 px。留空则使用主图。"
     show_more:
       hint: 显示一个按钮以查看更多项目
       label: 显示更多?
@@ -1092,6 +1103,8 @@ admin:
     blocks: 块 – 每种块类型的默认布局和外观
     credit: 网站底部的鸣谢
     footer: 网站底部的信息文本
+    llms: 'GEO – 面向语言模型的网站索引 (llms.txt)'
+    llms_full: 'GEO – 面向语言模型的网站全文 (llms-full.txt)'
     nav:
       footer:
         primary: "页脚 – 主导航"
@@ -1109,7 +1122,7 @@ admin:
     organization: "组织 – 基本信息、办公地点与奖项"
     schema: "结构化数据 – schema.org"
     seo:
-      label: 全局SEO
+      label: 'SEO – 面向搜索引擎的网站元数据'
       title: 网站名称
   group:
     year: 年份

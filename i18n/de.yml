@@ -736,8 +736,7 @@ admin:
         one: Link
         other: Links
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Nur in der Standardsprache ausfüllen. Dokumentation: https://llmstxt.org/'
     location:
       label: Standort
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: Manuelle Auswahl
         taxonomies: Nach Taxonomie filtern
         toplevel: Seiten der ersten Ebene
+    seo:
+      label: "SEO – Suchmaschinenoptimierung"
+      hint: "Optional. Ersetzt Titel, Beschreibung und Bild der Seite in Suchergebnissen und Linkvorschauen, ohne die Seite selbst zu ändern."
+      title:
+        label: "SEO-Titel"
+        hint: "Titel im Browser-Tab, in Suchergebnissen und Linkvorschauen, gefolgt vom Namen der Website: insgesamt etwa 60 Zeichen. Leer lassen, um den Seitentitel zu verwenden."
+      description:
+        label: "SEO-Beschreibung"
+        hint: "Text unter dem Titel in Suchergebnissen und Linkvorschauen, etwa 150 bis 160 Zeichen. Leer lassen, um die Seitenbeschreibung zu verwenden."
+      image:
+        label: "Vorschaubild"
+        hint: "Bild der Vorschau in sozialen Netzwerken und Messengern, zugeschnitten auf 1200 × 630 px. Leer lassen, um das Hauptbild zu verwenden."
     show_more:
       hint: Zeigt einen Button zum Anzeigen weiterer Elemente
       label: Mehr anzeigen?
@@ -1092,6 +1103,8 @@ admin:
     blocks: Blöcke – Standardlayout und -erscheinungsbild jedes Blocktyps
     credit: Credits unten auf der Website
     footer: Informationstext unten auf der Website
+    llms: 'GEO – Website-Index für Sprachmodelle (llms.txt)'
+    llms_full: 'GEO – Volltext der Website für Sprachmodelle (llms-full.txt)'
     nav:
       footer:
         primary: "Fußzeile – Primäre Navigation"
@@ -1109,7 +1122,7 @@ admin:
     organization: "Organisation – Identität, Standorte und Auszeichnungen"
     schema: "Strukturierte Daten – schema.org"
     seo:
-      label: Globales SEO
+      label: 'SEO – Website-Metadaten für Suchmaschinen'
       title: Website-Name
   group:
     year: Jahr

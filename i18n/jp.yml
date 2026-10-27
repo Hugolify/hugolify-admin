@@ -736,8 +736,7 @@ admin:
         one: リンク
         other: リンク
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'デフォルト言語でのみ入力してください。ドキュメント: https://llmstxt.org/'
     location:
       label: 場所
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: 手動で選択
         taxonomies: タクソノミーで絞り込む
         toplevel: 第一階層のページ
+    seo:
+      label: "SEO – 検索エンジン最適化"
+      hint: "任意。検索結果とリンクのプレビューで、ページのタイトル・説明・画像を置き換えます。ページ自体は変わりません。"
+      title:
+        label: "SEOタイトル"
+        hint: "ブラウザのタブ、検索結果、リンクのプレビューに表示されるタイトル。後ろにサイト名が付きます（合計で全角約30文字）。空欄の場合はページのタイトルを使用します。"
+      description:
+        label: "SEO説明文"
+        hint: "検索結果とリンクのプレビューでタイトルの下に表示されるテキスト。全角約120文字。空欄の場合はページの説明を使用します。"
+      image:
+        label: "シェア画像"
+        hint: "SNSやメッセージアプリのプレビュー画像。1200 × 630 px にトリミングされます。空欄の場合はメイン画像を使用します。"
     show_more:
       hint: より多くのアイテムを表示するボタンを表示
       label: もっと見る?
@@ -1092,6 +1103,8 @@ admin:
     blocks: ブロック – 各ブロックタイプのデフォルトのレイアウトと外観
     credit: サイト下部のクレジット
     footer: サイト下部の情報テキスト
+    llms: 'GEO – 言語モデル向けサイトインデックス (llms.txt)'
+    llms_full: 'GEO – 言語モデル向けサイト全文 (llms-full.txt)'
     nav:
       footer:
         primary: "フッター – プライマリナビゲーション"
@@ -1109,7 +1122,7 @@ admin:
     organization: "組織 – 基本情報・拠点・受賞歴"
     schema: "構造化データ – schema.org"
     seo:
-      label: グローバルSEO
+      label: 'SEO – 検索エンジン向けサイトメタデータ'
       title: ウェブサイト名
   group:
     year: 年

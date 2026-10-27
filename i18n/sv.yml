@@ -736,8 +736,7 @@ admin:
         one: Länk
         other: Länkar
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Fyll i endast på standardspråket. Dokumentation: https://llmstxt.org/'
     location:
       label: Plats
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: Manuellt urval
         taxonomies: Filtrera efter taxonomi
         toplevel: Sidor på första nivån
+    seo:
+      label: "SEO – Sökmotoroptimering"
+      hint: "Valfritt. Ersätter sidans titel, beskrivning och bild i sökresultat och länkförhandsvisningar, utan att ändra själva sidan."
+      title:
+        label: "SEO-titel"
+        hint: "Titel i webbläsarfliken, sökresultaten och länkförhandsvisningarna, följd av webbplatsens namn: cirka 60 tecken totalt. Lämna tomt för att använda sidans titel."
+      description:
+        label: "SEO-beskrivning"
+        hint: "Text under titeln i sökresultat och länkförhandsvisningar, cirka 150 till 160 tecken. Lämna tomt för att använda sidans beskrivning."
+      image:
+        label: "Delningsbild"
+        hint: "Bild i förhandsvisningar på sociala nätverk och i meddelandeappar, beskuren till 1200 × 630 px. Lämna tomt för att använda huvudbilden."
     show_more:
       hint: Visar en knapp för att se fler objekt
       label: Visa mer?
@@ -1092,6 +1103,8 @@ admin:
     blocks: Block – Standardlayout och utseende för varje blocktyp
     credit: Krediter längst ner på webbplatsen
     footer: Informationstext längst ner på webbplatsen
+    llms: 'GEO – Webbplatsindex för språkmodeller (llms.txt)'
+    llms_full: 'GEO – Webbplatsens fullständiga text för språkmodeller (llms-full.txt)'
     nav:
       footer:
         primary: "Sidfot – Primär navigering"
@@ -1109,7 +1122,7 @@ admin:
     organization: "Organisation – Identitet, platser och utmärkelser"
     schema: "Strukturerade data – schema.org"
     seo:
-      label: Global SEO
+      label: 'SEO – Webbplatsens metadata för sökmotorer'
       title: Webbplatsnamn
   group:
     year: År

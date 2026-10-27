@@ -732,8 +732,7 @@ admin:
         one: Linkki
         other: Linkit
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Täytä vain oletuskielellä. Dokumentaatio: https://llmstxt.org/'
     location:
       label: Sijainti
     loop:
@@ -935,6 +934,18 @@ admin:
         selection: Manuaalinen valinta
         taxonomies: Suodata taksonomian mukaan
         toplevel: Ensimmäisen tason sivut
+    seo:
+      label: "SEO – Hakukoneoptimointi"
+      hint: "Valinnainen. Korvaa sivun otsikon, kuvauksen ja kuvan hakutuloksissa ja linkkien esikatseluissa muuttamatta itse sivua."
+      title:
+        label: "SEO-otsikko"
+        hint: "Selaimen välilehden, hakutulosten ja linkkien esikatselujen otsikko, jonka perään lisätään sivuston nimi: yhteensä noin 60 merkkiä. Jätä tyhjäksi, niin käytetään sivun otsikkoa."
+      description:
+        label: "SEO-kuvaus"
+        hint: "Otsikon alla näkyvä teksti hakutuloksissa ja linkkien esikatseluissa, noin 150–160 merkkiä. Jätä tyhjäksi, niin käytetään sivun kuvausta."
+      image:
+        label: "Jaettava kuva"
+        hint: "Kuva esikatseluissa sosiaalisessa mediassa ja viestisovelluksissa, rajattuna kokoon 1200 × 630 px. Jätä tyhjäksi, niin käytetään pääkuvaa."
     show_more:
       hint: Näyttää painikkeen nähdäksesi lisää kohteita
       label: Näytä lisää?
@@ -1092,6 +1103,8 @@ admin:
     blocks: Lohkot – Kunkin lohkotyypin oletusasettelu ja -ulkoasu
     credit: Tekijätiedot sivuston alaosassa
     footer: Tietopalkki sivuston alaosassa
+    llms: 'GEO – Sivuston hakemisto kielimalleille (llms.txt)'
+    llms_full: 'GEO – Sivuston koko teksti kielimalleille (llms-full.txt)'
     nav:
       footer:
         primary: "Alatunniste – Ensisijainen navigaatio"
@@ -1109,7 +1122,7 @@ admin:
     organization: "Organisaatio – Tunnistetiedot, toimipaikat ja palkinnot"
     schema: "Rakenteinen data – schema.org"
     seo:
-      label: Yleinen SEO
+      label: 'SEO – Sivuston metatiedot hakukoneille'
       title: Verkkosivun nimi
   group:
     year: Vuosi

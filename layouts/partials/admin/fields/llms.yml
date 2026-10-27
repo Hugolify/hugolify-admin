@@ -3,8 +3,10 @@
   {{- $name = dict "name" "llms_body" "nameOverride" "body" }}
 {{- end }}
 
-{{- $args := dict 
-  "label" (i18n "admin.fields.llms.label")
+{{/* Shared by data/llms.yml and data/llms-full.yml, whose file label tells
+     them apart */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.body.label")
   "hint" (i18n "admin.fields.llms.hint")
   "i18n" false
   "minimal" (site.Params.admin.fields.llms.minimal | default false)

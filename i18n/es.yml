@@ -736,8 +736,7 @@ admin:
         one: Enlace
         other: Enlaces
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Rellenar solo en el idioma predeterminado. Documentación: https://llmstxt.org/'
     location:
       label: Ubicación
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: Selección manual
         taxonomies: Filtrar por taxonomía
         toplevel: Páginas de primer nivel
+    seo:
+      label: "SEO – Posicionamiento en buscadores"
+      hint: "Opcional. Sustituye el título, la descripción y la imagen de la página en los resultados de búsqueda y las vistas previas de enlaces, sin cambiar la página."
+      title:
+        label: "Título SEO"
+        hint: "Título de la pestaña, de los resultados de búsqueda y de las vistas previas, seguido del nombre del sitio: unos 60 caracteres en total. Dejar vacío para usar el título de la página."
+      description:
+        label: "Descripción SEO"
+        hint: "Texto bajo el título en los resultados de búsqueda y las vistas previas de enlaces, unos 150 a 160 caracteres. Dejar vacío para usar la descripción de la página."
+      image:
+        label: "Imagen para compartir"
+        hint: "Imagen de las vistas previas en redes sociales y mensajería, recortada a 1200 × 630 px. Dejar vacío para usar la imagen principal."
     show_more:
       hint: Muestra un botón para ver más elementos
       label: ¿Mostrar más?
@@ -1092,6 +1103,8 @@ admin:
     blocks: Bloques – Diseño y apariencia predeterminados de cada tipo de bloque
     credit: Créditos en la parte inferior del sitio
     footer: Texto informativo en la parte inferior del sitio
+    llms: 'GEO – Índice del sitio para modelos de lenguaje (llms.txt)'
+    llms_full: 'GEO – Texto completo del sitio para modelos de lenguaje (llms-full.txt)'
     nav:
       footer:
         primary: "Pie de página – Navegación primaria"
@@ -1109,7 +1122,7 @@ admin:
     organization: "Organización – Identidad, sedes y distinciones"
     schema: "Datos estructurados – schema.org"
     seo:
-      label: SEO global
+      label: 'SEO – Metadatos del sitio para buscadores'
       title: Nombre del sitio web
   group:
     year: Año

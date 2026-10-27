@@ -736,8 +736,7 @@ admin:
         one: Odkaz
         other: Odkazy
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Vyplňte pouze ve výchozím jazyce. Dokumentace: https://llmstxt.org/'
     location:
       label: Poloha
     loop:
@@ -939,6 +938,18 @@ admin:
         selection: Ruční výběr
         taxonomies: Filtrovat podle taxonomie
         toplevel: Stránky první úrovně
+    seo:
+      label: "SEO – Optimalizace pro vyhledávače"
+      hint: "Volitelné. Nahrazuje titulek, popis a obrázek stránky ve výsledcích vyhledávání a náhledech odkazů, aniž by se změnila samotná stránka."
+      title:
+        label: "SEO titulek"
+        hint: "Titulek karty prohlížeče, výsledků vyhledávání a náhledů odkazů, za kterým následuje název webu: celkem asi 60 znaků. Ponechte prázdné pro použití názvu stránky."
+      description:
+        label: "SEO popis"
+        hint: "Text pod titulkem ve výsledcích vyhledávání a náhledech odkazů, asi 150 až 160 znaků. Ponechte prázdné pro použití popisu stránky."
+      image:
+        label: "Sdílený obrázek"
+        hint: "Obrázek náhledů na sociálních sítích a v aplikacích pro zasílání zpráv, oříznutý na 1200 × 630 px. Ponechte prázdné pro použití hlavního obrázku."
     show_more:
       hint: Zobrazí tlačítko pro zobrazení více položek
       label: Zobrazit více?
@@ -1092,6 +1103,8 @@ admin:
     blocks: Bloky – Výchozí rozložení a vzhled každého typu bloku
     credit: Kredity v dolní části webu
     footer: Informační text v dolní části webu
+    llms: 'GEO – Rejstřík webu pro jazykové modely (llms.txt)'
+    llms_full: 'GEO – Úplný text webu pro jazykové modely (llms-full.txt)'
     nav:
       footer:
         primary: "Zápatí – Primární navigace"
@@ -1109,7 +1122,7 @@ admin:
     organization: "Organizace – Identita, pobočky a ocenění"
     schema: "Strukturovaná data – schema.org"
     seo:
-      label: Globální SEO
+      label: 'SEO – Metadata webu pro vyhledávače'
       title: Název webové stránky
   group:
     year: Rok
