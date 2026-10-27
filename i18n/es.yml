@@ -731,7 +731,7 @@ admin:
         one: Enlace
         other: Enlaces
     llms:
-      hint: 'Rellenar solo en el idioma predeterminado; en un sitio multilingüe, añadir una sección por idioma. Documentación: https://llmstxt.org/'
+      hint: 'Rellenar solo en el idioma predeterminado. Documentación: https://llmstxt.org/'
     location:
       label: Ubicación
     loop:

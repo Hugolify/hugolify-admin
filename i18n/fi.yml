@@ -727,7 +727,7 @@ admin:
         one: Linkki
         other: Linkit
     llms:
-      hint: 'Täytä vain oletuskielellä; monikielisellä sivustolla lisää yksi osio kutakin kieltä kohden. Dokumentaatio: https://llmstxt.org/'
+      hint: 'Täytä vain oletuskielellä. Dokumentaatio: https://llmstxt.org/'
     location:
       label: Sijainti
     loop:

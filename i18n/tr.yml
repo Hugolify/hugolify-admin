@@ -731,7 +731,7 @@ admin:
         one: Bağlantı
         other: Bağlantılar
     llms:
-      hint: 'Yalnızca varsayılan dilde doldurun; çok dilli bir sitede her dil için bir bölüm ekleyin. Belgeler: https://llmstxt.org/'
+      hint: 'Yalnızca varsayılan dilde doldurun. Belgeler: https://llmstxt.org/'
     location:
       label: Konum
     loop:

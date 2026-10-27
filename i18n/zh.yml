@@ -731,7 +731,7 @@ admin:
         one: 链接
         other: 链接
     llms:
-      hint: '仅在默认语言中填写；多语言网站请为每种语言添加一个章节。文档：https://llmstxt.org/'
+      hint: '仅在默认语言中填写。文档：https://llmstxt.org/'
     location:
       label: 位置
     loop:

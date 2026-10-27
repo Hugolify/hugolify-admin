@@ -731,7 +731,7 @@ admin:
         one: リンク
         other: リンク
     llms:
-      hint: 'デフォルト言語でのみ入力してください。多言語サイトでは、言語ごとにセクションを追加します。ドキュメント: https://llmstxt.org/'
+      hint: 'デフォルト言語でのみ入力してください。ドキュメント: https://llmstxt.org/'
     location:
       label: 場所
     loop:

@@ -731,7 +731,7 @@ admin:
         one: 링크
         other: 링크
     llms:
-      hint: '기본 언어로만 입력하세요. 다국어 사이트에서는 언어별로 섹션을 하나씩 추가하세요. 문서: https://llmstxt.org/'
+      hint: '기본 언어로만 입력하세요. 문서: https://llmstxt.org/'
     location:
       label: 위치
     loop:

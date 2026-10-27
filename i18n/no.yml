@@ -731,7 +731,7 @@ admin:
         one: Lenke
         other: Lenker
     llms:
-      hint: 'Fyll ut bare på standardspråket; på et flerspråklig nettsted legger du til én seksjon per språk. Dokumentasjon: https://llmstxt.org/'
+      hint: 'Fyll ut bare på standardspråket. Dokumentasjon: https://llmstxt.org/'
     location:
       label: Plassering
     loop:

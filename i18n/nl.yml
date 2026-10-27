@@ -731,7 +731,7 @@ admin:
         one: Link
         other: Links
     llms:
-      hint: 'Alleen in de standaardtaal invullen; op een meertalige site één sectie per taal toevoegen. Documentatie: https://llmstxt.org/'
+      hint: 'Alleen in de standaardtaal invullen. Documentatie: https://llmstxt.org/'
     location:
       label: Locatie
     loop:

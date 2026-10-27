@@ -731,7 +731,7 @@ admin:
         one: Länk
         other: Länkar
     llms:
-      hint: 'Fyll i endast på standardspråket; på en flerspråkig webbplats, lägg till ett avsnitt per språk. Dokumentation: https://llmstxt.org/'
+      hint: 'Fyll i endast på standardspråket. Dokumentation: https://llmstxt.org/'
     location:
       label: Plats
     loop:

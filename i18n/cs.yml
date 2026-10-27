@@ -731,7 +731,7 @@ admin:
         one: Odkaz
         other: Odkazy
     llms:
-      hint: 'Vyplňte pouze ve výchozím jazyce; na vícejazyčném webu přidejte jednu sekci pro každý jazyk. Dokumentace: https://llmstxt.org/'
+      hint: 'Vyplňte pouze ve výchozím jazyce. Dokumentace: https://llmstxt.org/'
     location:
       label: Poloha
     loop:

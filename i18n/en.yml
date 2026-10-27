@@ -725,7 +725,7 @@ admin:
         one: Link
         other: Links
     llms:
-      hint: 'Fill it in the default language only; on a multilingual site, add one section per language. Documentation: https://llmstxt.org/'
+      hint: 'Fill it in the default language only. Documentation: https://llmstxt.org/'
     location:
       label: Location
     loop:

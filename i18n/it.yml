@@ -731,7 +731,7 @@ admin:
         one: Link
         other: Link
     llms:
-      hint: 'Compilare solo nella lingua predefinita; su un sito multilingue, aggiungere una sezione per lingua. Documentazione: https://llmstxt.org/'
+      hint: 'Compilare solo nella lingua predefinita. Documentazione: https://llmstxt.org/'
     location:
       label: Posizione
     loop:

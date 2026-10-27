@@ -731,7 +731,7 @@ admin:
         one: Tautan
         other: Tautan
     llms:
-      hint: 'Isi hanya dalam bahasa default; di situs multibahasa, tambahkan satu bagian per bahasa. Dokumentasi: https://llmstxt.org/'
+      hint: 'Isi hanya dalam bahasa default. Dokumentasi: https://llmstxt.org/'
     location:
       label: Lokasi
     loop:

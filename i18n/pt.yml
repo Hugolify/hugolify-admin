@@ -731,7 +731,7 @@ admin:
         one: Link
         other: Links
     llms:
-      hint: 'Preencher apenas no idioma padrão; em um site multilíngue, adicionar uma seção por idioma. Documentação: https://llmstxt.org/'
+      hint: 'Preencher apenas no idioma padrão. Documentação: https://llmstxt.org/'
     location:
       label: Localização
     loop:

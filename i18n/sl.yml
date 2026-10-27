@@ -731,7 +731,7 @@ admin:
         one: Povezava
         other: Povezave
     llms:
-      hint: 'Izpolnite samo v privzetem jeziku; na večjezičnem spletnem mestu dodajte en razdelek za vsak jezik. Dokumentacija: https://llmstxt.org/'
+      hint: 'Izpolnite samo v privzetem jeziku. Dokumentacija: https://llmstxt.org/'
     location:
       label: Lokacija
     loop:

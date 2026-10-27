@@ -731,7 +731,7 @@ admin:
         one: Link
         other: Linki
     llms:
-      hint: 'Wypełnij tylko w języku domyślnym; w witrynie wielojęzycznej dodaj jedną sekcję na język. Dokumentacja: https://llmstxt.org/'
+      hint: 'Wypełnij tylko w języku domyślnym. Dokumentacja: https://llmstxt.org/'
     location:
       label: Lokalizacja
     loop:

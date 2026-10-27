@@ -731,7 +731,7 @@ admin:
         one: Link
         other: Linkek
     llms:
-      hint: 'Csak az alapértelmezett nyelven töltse ki; többnyelvű webhelyen nyelvenként egy szakaszt adjon hozzá. Dokumentáció: https://llmstxt.org/'
+      hint: 'Csak az alapértelmezett nyelven töltse ki. Dokumentáció: https://llmstxt.org/'
     location:
       label: Helyszín
     loop:
