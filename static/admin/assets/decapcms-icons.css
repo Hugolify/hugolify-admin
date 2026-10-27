@@ -28,6 +28,9 @@ aside [href='#/collections/indexes'] span::before {
 aside [href='#/collections/config'] span::before {
   content: '\F3E5';
 }
+aside [href='#/collections/menus'] span::before {
+  content: '\F479';
+}
 
 aside [href='#/collections/awards'] span::before {
   content: '\F154';
