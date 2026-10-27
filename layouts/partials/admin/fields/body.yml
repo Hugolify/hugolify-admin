@@ -1,6 +1,9 @@
 {{- $args := dict 
   "label" (i18n "admin.fields.body.label")
   "name" "body"
+  "minimal" (site.Params.admin.fields.body.minimal | default true)
+  "buttons" (site.Params.admin.fields.body.buttons | default false)
+  "modes" (site.Params.admin.fields.body.modes | default "['rich_text']")
   "editor_components" true
   -}}
 
