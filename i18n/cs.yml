@@ -731,8 +731,7 @@ admin:
         one: Odkaz
         other: Odkazy
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Vyplňte pouze ve výchozím jazyce. Dokumentace: https://llmstxt.org/'
     location:
       label: Poloha
     loop:
@@ -1087,6 +1086,8 @@ admin:
     blocks: Bloky – Výchozí rozložení a vzhled každého typu bloku
     credit: Kredity v dolní části webu
     footer: Informační text v dolní části webu
+    llms: 'GEO – Rejstřík webu pro jazykové modely (llms.txt)'
+    llms_full: 'GEO – Úplný text webu pro jazykové modely (llms-full.txt)'
     nav:
       footer:
         primary: "Zápatí – Primární navigace"
@@ -1104,7 +1105,7 @@ admin:
     organization: "Organizace – Identita, pobočky a ocenění"
     schema: "Strukturovaná data – schema.org"
     seo:
-      label: Globální SEO
+      label: 'SEO – Metadata webu pro vyhledávače'
       title: Název webové stránky
   group:
     year: Rok

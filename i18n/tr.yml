@@ -731,8 +731,7 @@ admin:
         one: Bağlantı
         other: Bağlantılar
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Yalnızca varsayılan dilde doldurun. Belgeler: https://llmstxt.org/'
     location:
       label: Konum
     loop:
@@ -1087,6 +1086,8 @@ admin:
     blocks: Bloklar – Her blok türünün varsayılan düzeni ve görünümü
     credit: Sitenin alt kısmındaki krediler
     footer: Sitenin alt kısmındaki bilgi metni
+    llms: 'GEO – Dil modelleri için site dizini (llms.txt)'
+    llms_full: 'GEO – Dil modelleri için sitenin tam metni (llms-full.txt)'
     nav:
       footer:
         primary: "Alt bilgi – Birincil navigasyon"
@@ -1104,7 +1105,7 @@ admin:
     organization: "Kuruluş – Kimlik, yerler ve ödüller"
     schema: "Yapılandırılmış veriler – schema.org"
     seo:
-      label: Küresel SEO
+      label: 'SEO – Arama motorları için site meta verileri'
       title: Web sitesi adı
   group:
     year: Yıl

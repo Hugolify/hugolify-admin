@@ -725,8 +725,7 @@ admin:
         one: Link
         other: Links
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Fill it in the default language only. Documentation: https://llmstxt.org/'
     location:
       label: Location
     loop:
@@ -1087,6 +1086,8 @@ admin:
     blocks: Blocks – Default layout and appearance of each block type
     credit: Footer – Credits at the bottom of the site
     footer: Footer – Blocks and information text at the bottom of the site
+    llms: 'GEO – Site index for language models (llms.txt)'
+    llms_full: 'GEO – Full text of the site for language models (llms-full.txt)'
     nav:
       footer:
         primary: "Footer – Primary navigation"
@@ -1104,7 +1105,7 @@ admin:
     organization: "Organization – Identity, locations and awards"
     schema: "Structured data – schema.org"
     seo:
-      label: Global SEO (Search Engine Optimization)
+      label: 'SEO – Site metadata for search engines'
       title: Website name
   group:
     year: Year

@@ -731,8 +731,7 @@ admin:
         one: Link
         other: Links
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Alleen in de standaardtaal invullen. Documentatie: https://llmstxt.org/'
     location:
       label: Locatie
     loop:
@@ -1087,6 +1086,8 @@ admin:
     blocks: Blokken – Standaardopmaak en -weergave van elk bloktype
     credit: Credits onderaan de site
     footer: Informatietekst onderaan de site
+    llms: 'GEO – Site-index voor taalmodellen (llms.txt)'
+    llms_full: 'GEO – Volledige tekst van de site voor taalmodellen (llms-full.txt)'
     nav:
       footer:
         primary: "Voettekst – Primaire navigatie"
@@ -1104,7 +1105,7 @@ admin:
     organization: "Organisatie – Identiteit, vestigingen en onderscheidingen"
     schema: "Gestructureerde gegevens – schema.org"
     seo:
-      label: Algemene SEO
+      label: 'SEO – Sitemetadata voor zoekmachines'
       title: Websitenaam
   group:
     year: Jaar

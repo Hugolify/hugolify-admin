@@ -731,8 +731,7 @@ admin:
         one: Tautan
         other: Tautan
     llms:
-      label: LLMS
-      hint: 'Documentation: https://llmstxt.org/'
+      hint: 'Isi hanya dalam bahasa default. Dokumentasi: https://llmstxt.org/'
     location:
       label: Lokasi
     loop:
@@ -1087,6 +1086,8 @@ admin:
     blocks: Blok – Tata letak dan tampilan bawaan setiap jenis blok
     credit: Kredit di bagian bawah situs
     footer: Teks informasi di bagian bawah situs
+    llms: 'GEO – Indeks situs untuk model bahasa (llms.txt)'
+    llms_full: 'GEO – Teks lengkap situs untuk model bahasa (llms-full.txt)'
     nav:
       footer:
         primary: "Footer – Navigasi Utama"
@@ -1104,7 +1105,7 @@ admin:
     organization: "Organisasi – Identitas, lokasi, dan penghargaan"
     schema: "Data terstruktur – schema.org"
     seo:
-      label: SEO Global
+      label: 'SEO – Metadata situs untuk mesin pencari'
       title: Nama Situs Web
   group:
     year: Tahun
