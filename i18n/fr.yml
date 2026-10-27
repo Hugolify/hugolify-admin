@@ -926,6 +926,18 @@ admin:
         selection: Sélection manuelle
         taxonomies: Filtrer par taxonomie
         toplevel: Pages de premier niveau
+    seo:
+      label: "Référencement – SEO"
+      hint: "Facultatif. Remplace le titre, la description et l’image de la page dans les résultats de recherche et les aperçus de partage, sans rien changer à la page elle-même."
+      title:
+        label: "Titre SEO"
+        hint: "Titre de l’onglet, des résultats de recherche et des aperçus de partage, suivi du nom du site : 60 caractères environ au total. Laisser vide pour reprendre le titre de la page."
+      description:
+        label: "Description SEO"
+        hint: "Texte affiché sous le titre dans les résultats de recherche et les aperçus de partage, 150 à 160 caractères environ. Laisser vide pour reprendre la description de la page."
+      image:
+        label: "Image de partage"
+        hint: "Image des aperçus sur les réseaux sociaux et les messageries, recadrée au format 1200 × 630 px. Laisser vide pour reprendre l’image principale."
     show_more:
       hint: Affiche un bouton pour voir plus d’éléments
       label: Plus d’items ?

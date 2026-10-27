@@ -928,6 +928,18 @@ admin:
         selection: Manual selection
         taxonomies: Filter by taxonomy
         toplevel: Top-level pages
+    seo:
+      label: "SEO – Search engine optimization"
+      hint: "Optional. Overrides the title, description and image of the page in search results and link previews, without changing the page itself."
+      title:
+        label: "SEO title"
+        hint: "Title of the browser tab, search results and link previews, followed by the site name: about 60 characters in all. Leave empty to use the page title."
+      description:
+        label: "SEO description"
+        hint: "Text shown under the title in search results and link previews, about 150 to 160 characters. Leave empty to use the page description."
+      image:
+        label: "Sharing image"
+        hint: "Image of the previews on social networks and messaging apps, cropped to 1200 × 630 px. Leave empty to use the featured image."
     show_more:
       hint: Shows a button to see more items
       label: Show more?

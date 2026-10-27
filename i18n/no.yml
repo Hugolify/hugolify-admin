@@ -934,6 +934,18 @@ admin:
         selection: Manuelt utvalg
         taxonomies: Filtrer etter taksonomi
         toplevel: Sider på første nivå
+    seo:
+      label: "SEO – Søkemotoroptimalisering"
+      hint: "Valgfritt. Erstatter sidens tittel, beskrivelse og bilde i søkeresultater og lenkeforhåndsvisninger, uten å endre selve siden."
+      title:
+        label: "SEO-tittel"
+        hint: "Tittel i nettleserfanen, søkeresultatene og lenkeforhåndsvisningene, etterfulgt av nettstedets navn: rundt 60 tegn totalt. La stå tomt for å bruke sidetittelen."
+      description:
+        label: "SEO-beskrivelse"
+        hint: "Tekst under tittelen i søkeresultater og lenkeforhåndsvisninger, rundt 150 til 160 tegn. La stå tomt for å bruke sidebeskrivelsen."
+      image:
+        label: "Delingsbilde"
+        hint: "Bilde i forhåndsvisninger på sosiale nettverk og i meldingsapper, beskåret til 1200 × 630 px. La stå tomt for å bruke hovedbildet."
     show_more:
       hint: Viser en knapp for å se flere elementer
       label: Vis mer?

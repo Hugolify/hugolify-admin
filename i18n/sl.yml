@@ -934,6 +934,18 @@ admin:
         selection: Ročni izbor
         taxonomies: Filtriraj po taksonomiji
         toplevel: Strani prve ravni
+    seo:
+      label: "SEO – Optimizacija za iskalnike"
+      hint: "Neobvezno. Nadomesti naslov, opis in sliko strani v rezultatih iskanja in predogledih povezav, ne da bi spremenilo samo stran."
+      title:
+        label: "Naslov SEO"
+        hint: "Naslov zavihka brskalnika, rezultatov iskanja in predogledov povezav, ki mu sledi ime spletnega mesta: skupaj približno 60 znakov. Pustite prazno, da se uporabi naslov strani."
+      description:
+        label: "Opis SEO"
+        hint: "Besedilo pod naslovom v rezultatih iskanja in predogledih povezav, približno 150 do 160 znakov. Pustite prazno, da se uporabi opis strani."
+      image:
+        label: "Slika za deljenje"
+        hint: "Slika predogledov na družbenih omrežjih in v aplikacijah za sporočanje, obrezana na 1200 × 630 px. Pustite prazno, da se uporabi glavna slika."
     show_more:
       hint: Prikaže gumb za ogled več elementov
       label: Prikaži več?

@@ -934,6 +934,18 @@ admin:
         selection: 手动选择
         taxonomies: 按分类筛选
         toplevel: 第一级页面
+    seo:
+      label: "SEO – 搜索引擎优化"
+      hint: "可选。在搜索结果和链接预览中替换页面的标题、描述和图片，不改变页面本身。"
+      title:
+        label: "SEO 标题"
+        hint: "显示在浏览器标签页、搜索结果和链接预览中的标题，后面会加上网站名称：总计约 30 个汉字。留空则使用页面标题。"
+      description:
+        label: "SEO 描述"
+        hint: "在搜索结果和链接预览中显示于标题下方的文字，约 80 个汉字。留空则使用页面描述。"
+      image:
+        label: "分享图片"
+        hint: "社交网络和即时通讯应用预览中的图片，裁剪为 1200 × 630 px。留空则使用主图。"
     show_more:
       hint: 显示一个按钮以查看更多项目
       label: 显示更多?

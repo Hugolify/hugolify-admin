@@ -934,6 +934,18 @@ admin:
         selection: Seleção manual
         taxonomies: Filtrar por taxonomia
         toplevel: Páginas de primeiro nível
+    seo:
+      label: "SEO – Otimização para motores de busca"
+      hint: "Opcional. Substitui o título, a descrição e a imagem da página nos resultados de pesquisa e nas pré-visualizações de ligações, sem alterar a página."
+      title:
+        label: "Título SEO"
+        hint: "Título do separador, dos resultados de pesquisa e das pré-visualizações, seguido do nome do site: cerca de 60 caracteres no total. Deixar vazio para usar o título da página."
+      description:
+        label: "Descrição SEO"
+        hint: "Texto sob o título nos resultados de pesquisa e nas pré-visualizações de ligações, cerca de 150 a 160 caracteres. Deixar vazio para usar a descrição da página."
+      image:
+        label: "Imagem de partilha"
+        hint: "Imagem das pré-visualizações nas redes sociais e aplicações de mensagens, recortada para 1200 × 630 px. Deixar vazio para usar a imagem principal."
     show_more:
       hint: Mostra um botão para ver mais itens
       label: Mostrar mais?

@@ -934,6 +934,18 @@ admin:
         selection: Kézi kiválasztás
         taxonomies: Szűrés taxonómia szerint
         toplevel: Első szintű oldalak
+    seo:
+      label: "SEO – Keresőoptimalizálás"
+      hint: "Nem kötelező. Lecseréli az oldal címét, leírását és képét a keresési találatokban és a linkelőnézetekben, magát az oldalt nem módosítja."
+      title:
+        label: "SEO-cím"
+        hint: "A böngészőlap, a keresési találatok és a linkelőnézetek címe, utána a webhely neve: összesen kb. 60 karakter. Hagyja üresen az oldal címének használatához."
+      description:
+        label: "SEO-leírás"
+        hint: "A cím alatt megjelenő szöveg a keresési találatokban és a linkelőnézetekben, kb. 150–160 karakter. Hagyja üresen az oldal leírásának használatához."
+      image:
+        label: "Megosztott kép"
+        hint: "A közösségi hálózatokon és üzenetküldőkben megjelenő előnézet képe, 1200 × 630 px-re vágva. Hagyja üresen a fő kép használatához."
     show_more:
       hint: Megjelenít egy gombot további elemek megtekintéséhez
       label: Több mutatása?

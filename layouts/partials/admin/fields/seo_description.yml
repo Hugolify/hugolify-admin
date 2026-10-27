@@ -1,0 +1,9 @@
+{{/* Description of the page in the search results and link previews, see
+     head/seo.html and func/GetSchemaWebPage.html in the theme. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.seo.description.label")
+  "hint" (i18n "admin.fields.seo.description.hint")
+  "name" "description"
+  -}}
+
+{{ partial "admin/widgets/text.js" $args }}

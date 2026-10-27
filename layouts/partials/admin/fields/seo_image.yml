@@ -1,0 +1,17 @@
+{{/* Sharing image of a page, a plain path as head/seo.html reads seo.image.
+     Unlike image_seo, the site wide one of data/seo.yml, it keeps the default
+     media folder: an upload there is a resource, which the theme crops to the
+     share format, where a file in static/ is published as is. */}}
+{{- $name := dict "name" "image" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "seo_image" "nameOverride" "image" }}
+{{- end }}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.seo.image.label")
+  "hint" (i18n "admin.fields.seo.image.hint")
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/image.js" $args }}
