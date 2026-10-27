@@ -169,6 +169,11 @@ admin:
       label:
         one: タグ
         other: タグ
+    menus:
+      _description: すべてのメニュー
+      label:
+        one: メニュー
+        other: メニュー
     pages:
       _description: すべてのページ
       label:

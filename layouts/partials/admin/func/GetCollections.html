@@ -19,7 +19,7 @@
         - heading: Other
           collections: ['*']
         - heading: Settings
-          collections: [config]
+          collections: [menus, config]
 
   Rules
   -----
@@ -36,9 +36,9 @@
   Default
   -------
   Without `collection_groups`: pages and indexes, then the other collections,
-  then config. It lives here rather than in `hugo.yaml` because CloudCannon
-  only receives groups when the site defines them, as it wants a heading on
-  each one.
+  then menus and config. It lives here rather than in `hugo.yaml` because
+  CloudCannon only receives groups when the site defines them, as it wants a
+  heading on each one.
 
   Usage
   -----
@@ -63,7 +63,7 @@
 {{- $layout := site.Params.admin.collection_groups | default (slice
   (dict "collections" (slice "pages" "indexes"))
   (dict "collections" (slice "*"))
-  (dict "collections" (slice "config"))
+  (dict "collections" (slice "menus" "config"))
 ) -}}
 
 {{/* First pass: the names given explicitly, which `*` leaves out */}}

@@ -169,6 +169,11 @@ admin:
       label:
         one: टैग
         other: टैग
+    menus:
+      _description: सभी मेनू
+      label:
+        one: मेनू
+        other: मेनू
     pages:
       _description: सभी पृष्ठ
       label:

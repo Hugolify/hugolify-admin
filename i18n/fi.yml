@@ -171,6 +171,11 @@ admin:
       label:
         one: Tunniste
         other: Tunnisteet
+    menus:
+      _description: Kaikki valikot
+      label:
+        one: Valikko
+        other: Valikot
     pages:
       _description: Kaikki sivut
       label:

@@ -169,6 +169,11 @@ admin:
       label:
         one: Tag
         other: Tag
+    menus:
+      _description: Semua menu
+      label:
+        one: Menu
+        other: Menu
     pages:
       _description: Semua halaman
       label:

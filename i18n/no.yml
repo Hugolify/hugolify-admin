@@ -169,6 +169,11 @@ admin:
       label:
         one: Tagg
         other: Tagger
+    menus:
+      _description: Alle menyer
+      label:
+        one: Meny
+        other: Menyer
     pages:
       _description: Alle sider
       label:

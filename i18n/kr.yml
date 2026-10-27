@@ -169,6 +169,11 @@ admin:
       label:
         one: 태그
         other: 태그
+    menus:
+      _description: 모든 메뉴
+      label:
+        one: 메뉴
+        other: 메뉴
     pages:
       _description: 모든 페이지
       label:
