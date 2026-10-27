@@ -118,6 +118,15 @@ params:
           sveltiacms: schema # legacy
         nested:
           depth: 2
+      menus:
+        enable: true
+        icon:
+          bootstrap_icons: list
+          iconoir: menu
+          lucide: menu
+          material_icons: menu
+          material_symbols: menu
+          sveltiacms: menu # legacy
       pages:
         enable: true
         icon:
