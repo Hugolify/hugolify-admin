@@ -132,11 +132,15 @@ params:
 
     # Collections
     collections:
-      # Collections (except config, indexes and pages) are automatically added based on Hugo modules config, but you can hide a collection if needed.
+      # Collections (except config, indexes, menus and pages) are automatically added based on Hugo modules config, but you can hide a collection if needed.
       config:
         enable: true
+        files: [banner, footer, credit, blocks, seo] # data files, in this order
       indexes:
         enable: true
+      menus:
+        enable: true
+        files: [nav-header-primary, nav-footer-primary, nav-legal, nav-social] # data/menu/ files, in this order
       pages:
         enable: true
 
@@ -161,14 +165,14 @@ params:
         bulk_edit: [title, draft]
 
     # Collections order, by group (Sveltia CMS draws a divider between two groups)
-    # Default: pages and indexes, then the other collections, then config
+    # Default: pages and indexes, then the other collections, then menus and config
     collection_groups:
       - heading: Content # read by CloudCannon only
         collections: [pages, indexes]
       - heading: Other
         collections: ['*'] # every enabled collection that no group names
       - heading: Settings
-        collections: [config]
+        collections: [menus, config]
 
     # Fields
     fields:

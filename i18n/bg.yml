@@ -169,6 +169,11 @@ admin:
       label:
         one: Етикет
         other: Етикети
+    menus:
+      _description: Всички менюта
+      label:
+        one: Меню
+        other: Менюта
     pages:
       _description: Всички страници
       label:

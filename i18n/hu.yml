@@ -169,6 +169,11 @@ admin:
       label:
         one: Címke
         other: Címkék
+    menus:
+      _description: Minden menü
+      label:
+        one: Menü
+        other: Menük
     pages:
       _description: Minden oldal
       label:

@@ -169,6 +169,11 @@ admin:
       label:
         one: Tag
         other: Tagi
+    menus:
+      _description: Wszystkie menu
+      label:
+        one: Menu
+        other: Menu
     pages:
       _description: Wszystkie strony
       label:

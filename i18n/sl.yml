@@ -169,6 +169,11 @@ admin:
       label:
         one: Oznaka
         other: Oznake
+    menus:
+      _description: Vsi meniji
+      label:
+        one: Meni
+        other: Meniji
     pages:
       _description: Vse strani
       label:

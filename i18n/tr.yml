@@ -169,6 +169,11 @@ admin:
       label:
         one: Etiket
         other: Etiketler
+    menus:
+      _description: Tüm menüler
+      label:
+        one: Menü
+        other: Menüler
     pages:
       _description: Tüm sayfalar
       label:

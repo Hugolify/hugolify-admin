@@ -3,7 +3,7 @@
 {{ if in $blocks "selected" }}
   {{ $blocks = complement (slice "selected") $blocks }}
   {{ range $collection, $value := site.Params.admin.collections -}}
-    {{ if and .enable (ne $collection "config") (ne $collection "indexes") }}
+    {{ if and .enable (ne $collection "config") (ne $collection "indexes") (ne $collection "menus") }}
       {{ $blocks = $blocks | append (dict "key" "selected" "value" $collection) }}
     {{ end }}
   {{ end }}

@@ -169,6 +169,11 @@ admin:
       label:
         one: 标签
         other: 标签
+    menus:
+      _description: 所有菜单
+      label:
+        one: 菜单
+        other: 菜单
     pages:
       _description: 所有页面
       label:
