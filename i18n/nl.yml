@@ -1034,6 +1034,9 @@ admin:
         end: Einde
         start: Begin
     video:
+      description:
+        label: "Beschrijving"
+        hint: "Waar de video over gaat, voor zoekmachines."
       embed:
         label: Video embed
       id:
@@ -1050,6 +1053,10 @@ admin:
       platform:
         label: Platform
         hint: Het platform waarop de video zich bevindt
+      title:
+        label: "Titel"
+        hint: "Naam van de video, voorgelezen door schermlezers en getoond door zoekmachines. Maximaal 60 tekens."
+        pattern: "Maximaal 60 tekens"
       webm:
         label: WEBM
         hint: WEBM videobestand

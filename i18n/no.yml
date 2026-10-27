@@ -1034,6 +1034,9 @@ admin:
         end: Slutt
         start: Start
     video:
+      description:
+        label: "Beskrivelse"
+        hint: "Hva videoen handler om, for søkemotorer."
       embed:
         label: Innebygd video
       id:
@@ -1050,6 +1053,10 @@ admin:
       platform:
         label: Plattform
         hint: Plattformen videoen befinner seg på
+      title:
+        label: "Tittel"
+        hint: "Navnet på videoen, lest opp av skjermlesere og vist av søkemotorer. Maks 60 tegn."
+        pattern: "Maks 60 tegn"
       webm:
         label: WEBM
         hint: WEBM-videofil

@@ -1034,6 +1034,9 @@ admin:
         end: Konec
         start: Začátek
     video:
+      description:
+        label: "Popis"
+        hint: "O čem video je, pro vyhledávače."
       embed:
         label: Vložené video
       id:
@@ -1050,6 +1053,10 @@ admin:
       platform:
         label: Platforma
         hint: Platforma, kde se video nachází
+      title:
+        label: "Název"
+        hint: "Název videa, který čtou čtečky obrazovky a zobrazují vyhledávače. Nejvýše 60 znaků."
+        pattern: "Nejvýše 60 znaků"
       webm:
         label: WEBM
         hint: Video soubor WEBM

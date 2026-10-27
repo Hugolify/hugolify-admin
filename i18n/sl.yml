@@ -1034,6 +1034,9 @@ admin:
         end: Konec
         start: Začetek
     video:
+      description:
+        label: "Opis"
+        hint: "O čem govori videoposnetek, za iskalnike."
       embed:
         label: Vdelan video
       id:
@@ -1050,6 +1053,10 @@ admin:
       platform:
         label: Platforma
         hint: Platforma, kjer se nahaja video
+      title:
+        label: "Naslov"
+        hint: "Ime videoposnetka, ki ga preberejo bralniki zaslona in prikažejo iskalniki. Največ 60 znakov."
+        pattern: "Največ 60 znakov"
       webm:
         label: WEBM
         hint: Video datoteka WEBM

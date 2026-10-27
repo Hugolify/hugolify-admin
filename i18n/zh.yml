@@ -1034,6 +1034,9 @@ admin:
         end: 结束
         start: 开始
     video:
+      description:
+        label: "描述"
+        hint: "视频内容简介，供搜索引擎使用。"
       embed:
         label: 嵌入视频
       id:
@@ -1050,6 +1053,10 @@ admin:
       platform:
         label: 平台
         hint: 视频所在的平台
+      title:
+        label: "标题"
+        hint: "视频名称，由屏幕阅读器朗读并在搜索引擎中显示。最多 60 个字符。"
+        pattern: "最多 60 个字符"
       webm:
         label: WEBM
         hint: WEBM视频文件

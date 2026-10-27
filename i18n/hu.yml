@@ -1034,6 +1034,9 @@ admin:
         end: Vége
         start: Kezdés
     video:
+      description:
+        label: "Leírás"
+        hint: "Miről szól a videó, a keresőmotorok számára."
       embed:
         label: Beágyazott videó
       id:
@@ -1050,6 +1053,10 @@ admin:
       platform:
         label: Platform
         hint: A platform, ahol a videó található
+      title:
+        label: "Cím"
+        hint: "A videó neve, amelyet a képernyőolvasók felolvasnak és a keresőmotorok megjelenítenek. Legfeljebb 60 karakter."
+        pattern: "Legfeljebb 60 karakter"
       webm:
         label: WEBM
         hint: WEBM videofájl

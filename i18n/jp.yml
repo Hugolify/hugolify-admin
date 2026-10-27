@@ -1034,6 +1034,9 @@ admin:
         end: 終了
         start: 開始
     video:
+      description:
+        label: "説明"
+        hint: "動画の内容（検索エンジン向け）。"
       embed:
         label: 埋め込み動画
       id:
@@ -1050,6 +1053,10 @@ admin:
       platform:
         label: プラットフォーム
         hint: 動画があるプラットフォーム
+      title:
+        label: "タイトル"
+        hint: "動画の名前。スクリーンリーダーが読み上げ、検索エンジンに表示されます。60文字以内。"
+        pattern: "60文字以内"
       webm:
         label: WEBM
         hint: WEBM動画ファイル

@@ -1034,6 +1034,9 @@ admin:
         end: Akhir
         start: Awal
     video:
+      description:
+        label: "Deskripsi"
+        hint: "Tentang apa video ini, untuk mesin pencari."
       embed:
         label: Video embed
       id:
@@ -1050,6 +1053,10 @@ admin:
       platform:
         label: Platform
         hint: Platform tempat video berada
+      title:
+        label: "Judul"
+        hint: "Nama video, dibacakan oleh pembaca layar dan ditampilkan oleh mesin pencari. Maksimal 60 karakter."
+        pattern: "Maksimal 60 karakter"
       webm:
         label: WEBM
         hint: File video WEBM

@@ -1,0 +1,9 @@
+{{/* What the video is about: the description of its VideoObject, see
+     func/GetSchemaVideo.html in the theme. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.video.description.label")
+  "hint" (i18n "admin.fields.video.description.hint")
+  "name" "description"
+  -}}
+
+{{ partial "admin/widgets/text.js" $args }}

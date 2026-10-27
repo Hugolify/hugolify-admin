@@ -1034,6 +1034,9 @@ admin:
         end: Fine
         start: Inizio
     video:
+      description:
+        label: "Descrizione"
+        hint: "Di cosa parla il video, per i motori di ricerca."
       embed:
         label: Video embed
       id:
@@ -1050,6 +1053,10 @@ admin:
       platform:
         label: Piattaforma
         hint: La piattaforma in cui si trova il video
+      title:
+        label: "Titolo"
+        hint: "Nome del video, letto dagli screen reader e mostrato dai motori di ricerca. Massimo 60 caratteri."
+        pattern: "Massimo 60 caratteri"
       webm:
         label: WEBM
         hint: File video WEBM
