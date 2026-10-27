@@ -1,0 +1,11 @@
+{{/* Name of the video: the aria-label of its player, and the name of its
+     VideoObject, see func/GetSchemaVideo.html in the theme. 60 characters
+     at most. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.video.title.label")
+  "hint" (i18n "admin.fields.video.title.hint")
+  "name" "title"
+  "pattern" (dict "regex" "^.{0,60}$" "message" (i18n "admin.fields.video.title.pattern"))
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

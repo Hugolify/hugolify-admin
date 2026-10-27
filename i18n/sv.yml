@@ -1033,6 +1033,9 @@ admin:
         end: Slut
         start: Start
     video:
+      description:
+        label: "Beskrivning"
+        hint: "Vad videon handlar om, för sökmotorer."
       embed:
         label: Inbäddad video
       id:
@@ -1049,6 +1052,10 @@ admin:
       platform:
         label: Plattform
         hint: Plattformen där videon finns
+      title:
+        label: "Titel"
+        hint: "Videons namn, som läses upp av skärmläsare och visas av sökmotorer. Högst 60 tecken."
+        pattern: "Högst 60 tecken"
       webm:
         label: WEBM
         hint: WEBM-videofil

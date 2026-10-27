@@ -1033,6 +1033,9 @@ admin:
         end: Son
         start: Başlangıç
     video:
+      description:
+        label: "Açıklama"
+        hint: "Videonun konusu, arama motorları için."
       embed:
         label: Gömülü video
       id:
@@ -1049,6 +1052,10 @@ admin:
       platform:
         label: Platform
         hint: Videonun bulunduğu platform
+      title:
+        label: "Başlık"
+        hint: "Ekran okuyucuların seslendirdiği ve arama motorlarının gösterdiği video adı. En fazla 60 karakter."
+        pattern: "En fazla 60 karakter"
       webm:
         label: WEBM
         hint: WEBM video dosyası

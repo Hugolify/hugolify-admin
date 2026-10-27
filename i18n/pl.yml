@@ -1033,6 +1033,9 @@ admin:
         end: Koniec
         start: Początek
     video:
+      description:
+        label: "Opis"
+        hint: "O czym jest film, dla wyszukiwarek."
       embed:
         label: Osadzone wideo
       id:
@@ -1049,6 +1052,10 @@ admin:
       platform:
         label: Platforma
         hint: Platforma, na której znajduje się wideo
+      title:
+        label: "Tytuł"
+        hint: "Nazwa filmu, odczytywana przez czytniki ekranu i wyświetlana przez wyszukiwarki. Maksymalnie 60 znaków."
+        pattern: "Maksymalnie 60 znaków"
       webm:
         label: WEBM
         hint: Plik wideo WEBM

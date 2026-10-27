@@ -1033,6 +1033,9 @@ admin:
         end: 끝
         start: 시작
     video:
+      description:
+        label: "설명"
+        hint: "검색 엔진을 위한 동영상 내용 설명입니다."
       embed:
         label: 임베드 비디오
       id:
@@ -1049,6 +1052,10 @@ admin:
       platform:
         label: 플랫폼
         hint: 비디오가 위치한 플랫폼
+      title:
+        label: "제목"
+        hint: "스크린 리더가 읽고 검색 엔진에 표시되는 동영상 이름입니다. 최대 60자."
+        pattern: "최대 60자"
       webm:
         label: WEBM
         hint: WEBM 동영상 파일

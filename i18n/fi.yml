@@ -1033,6 +1033,9 @@ admin:
         end: Loppu
         start: Alku
     video:
+      description:
+        label: "Kuvaus"
+        hint: "Mitä video käsittelee, hakukoneille."
       embed:
         label: Upotettu video
       id:
@@ -1049,6 +1052,10 @@ admin:
       platform:
         label: Alusta
         hint: Alusta, jolla video sijaitsee
+      title:
+        label: "Otsikko"
+        hint: "Videon nimi, jonka ruudunlukijat lukevat ja hakukoneet näyttävät. Enintään 60 merkkiä."
+        pattern: "Enintään 60 merkkiä"
       webm:
         label: WEBM
         hint: Video (WEBM)

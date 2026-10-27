@@ -29,6 +29,8 @@
 {{- $fields = $fields | append "controls" -}}
 {{- $fields = $fields | append "autoplay" -}}
 {{- $fields = $fields | append "loop" -}}
+{{- $fields = $fields | append "video_title" -}}
+{{- $fields = $fields | append "video_description" -}}
 {{- $fields = $fields | append "legend" -}}
 {{- $fields = $fields | append "transcription" -}}
 
