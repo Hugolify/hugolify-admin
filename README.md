@@ -135,12 +135,12 @@ params:
       # Collections (except config, indexes, menus and pages) are automatically added based on Hugo modules config, but you can hide a collection if needed.
       config:
         enable: true
-        files: [banner, footer, credit, blocks, seo] # data files, in this order
+        files: [banner, footer, credit, organization, schema, seo, llms, llms-full] # default, admin/datas/{name}.yml in this order
       indexes:
         enable: true
       menus:
         enable: true
-        files: [nav-header-primary, nav-footer-primary, nav-legal, nav-social] # data/menu/ files, in this order
+        files: [nav-header-primary, nav-header-secondary, nav-footer-primary, nav-footer-secondary, nav-legal, nav-social] # default, admin/datas/{name}.yml in this order
       pages:
         enable: true
 
