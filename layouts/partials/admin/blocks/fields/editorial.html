@@ -1,5 +1,5 @@
 {{- $notes := cond site.Params.admin.blocks.editorial.notes "notes" false -}}
-{{- $uiFields := site.Params.admin.fields.ui.fields | append "direction" -}}
+{{- $uiFields := site.Params.admin.fields.ui.fields | append "direction" "ratio" -}}
 {{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 

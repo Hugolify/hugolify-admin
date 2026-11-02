@@ -1,7 +1,10 @@
-{{- $fields := slice 
-  "heading" 
-  "figure" 
-  "ui" -}}
+{{- $uiFields := site.Params.admin.fields.ui.fields | append "ratio" -}}
+{{- $ui := dict "ui" $uiFields -}}
+
+{{- $fields := slice
+  "heading"
+  "figure"
+  $ui -}}
 
 {{- $fields = partial "admin/func/GetFields.html" (dict "block" . "fields" $fields) -}}
 
