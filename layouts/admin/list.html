@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Hugolify - Content Manager</title>
+    {{- /* Absolute config URL: without it the CMS fetches config.yml relative to the page, i.e. /config.yml when /admin is served without a trailing slash (Netlify 200 rewrite) */ -}}
+    {{- with site.GetPage "/admin/config" }}
+      {{- with .OutputFormats.Get "admin_config_yml" }}
+        <link href="{{ .RelPermalink }}" type="text/yaml" rel="cms-config-url" />
+      {{- end }}
+    {{- end }}
     {{- with site.Params.admin.cms }}
       {{- $file := print "admin/cms/" . "/styles.html" -}}
       {{- if templates.Exists ( printf "partials/%s" $file ) }}
