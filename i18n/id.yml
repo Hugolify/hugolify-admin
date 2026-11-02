@@ -556,6 +556,7 @@ admin:
         hint: 'Hanya untuk bidang file (mis. .pdf, .doc, .docx)'
         label: Ekstensi yang diterima
       autocomplete:
+        hint: 'Memberi tahu browser data tersimpan mana yang disarankan untuk mengisi bidang'
         label: Pelengkap Otomatis
         options:
           city: Kota
@@ -587,7 +588,7 @@ admin:
           other: Bidang
       label: Formulir
       name:
-        hint: 'Pengenal yang dikirim bersama formulir: Netlify memakainya untuk mengelompokkan kiriman dan menamai kolom. Sengaja dibagikan di semua bahasa. Jika dikosongkan, nilainya diambil dari label atau dari posisi blok.'
+        hint: 'Pengenal yang dikirim bersama formulir. Pada situs multibahasa, nilainya harus sama di semua bahasa.'
         label: Nama
         pattern: 'Hanya berisi huruf kecil, angka, tanda hubung, dan garis bawah, tanpa spasi, aksen, atau karakter khusus'
       options:

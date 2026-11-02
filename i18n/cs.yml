@@ -556,6 +556,7 @@ admin:
         hint: 'Pouze pro souborová pole (např. .pdf, .doc, .docx)'
         label: Povolené přípony
       autocomplete:
+        hint: 'Určuje, jaká uložená data má prohlížeč nabídnout k vyplnění pole'
         label: Automatické dokončování
         options:
           city: Město
@@ -587,7 +588,7 @@ admin:
           other: Pole
       label: Formulář
       name:
-        hint: 'Identifikátor odesílaný s formulářem: Netlify jej používá k seskupení odeslání a pojmenování sloupců. Záměrně je sdílený mezi všemi jazyky. Pokud zůstane prázdný, odvodí se z popisku nebo z pozice bloku.'
+        hint: 'Identifikátor odesílaný s formulářem. Na vícejazyčném webu musí být ve všech jazycích stejný.'
         label: Jméno
         pattern: 'Obsahuje pouze malá písmena, čísla, pomlčky a podtržítka, bez mezer, diakritiky nebo speciálních znaků'
       options:

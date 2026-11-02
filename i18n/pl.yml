@@ -556,6 +556,7 @@ admin:
         hint: 'Tylko dla pól plików (np. .pdf, .doc, .docx)'
         label: Akceptowane rozszerzenia
       autocomplete:
+        hint: 'Wskazuje przeglądarce, jakie zapisane dane zaproponować do wypełnienia pola'
         label: Autouzupełnianie
         options:
           city: Miasto
@@ -587,7 +588,7 @@ admin:
           other: Pola
       label: Formularz
       name:
-        hint: 'Identyfikator wysyłany z formularzem: Netlify używa go do grupowania zgłoszeń i nazywania kolumn. Celowo współdzielony przez wszystkie języki. Pozostawiony pusty, jest wyprowadzany z etykiety lub z pozycji bloku.'
+        hint: 'Identyfikator wysyłany z formularzem. Na stronie wielojęzycznej musi być identyczny we wszystkich językach.'
         label: Nazwa
         pattern: 'Zawiera tylko małe litery, cyfry, myślniki i podkreślenia, bez spacji, znaków diakrytycznych lub znaków specjalnych'
       options:

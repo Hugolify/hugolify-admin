@@ -556,6 +556,7 @@ admin:
         hint: 'Vain tiedostokentille (esim. .pdf, .doc, .docx)'
         label: Hyväksytyt tiedostopäätteet
       autocomplete:
+        hint: 'Kertoo selaimelle, mitä tallennettuja tietoja ehdotetaan kentän täyttämiseen'
         label: Automaattinen täydennys
         options:
           city: Kaupunki
@@ -587,7 +588,7 @@ admin:
           other: Kentät
       label: Lomake
       name:
-        hint: 'Lomakkeen mukana lähetettävä tunniste: Netlify ryhmittelee sillä lähetykset ja nimeää sarakkeet. Se on tarkoituksella jaettu kaikkien kielten kesken. Jos se jätetään tyhjäksi, se johdetaan otsikosta tai lohkon sijainnista.'
+        hint: 'Lomakkeen mukana lähetettävä tunniste. Monikielisellä sivustolla sen on oltava sama kaikilla kielillä.'
         label: Nimi
         pattern: 'Sisältää vain pieniä kirjaimia, numeroita, väliviivoja ja alaviivoja, ei välilyöntejä, aksentteja tai erikoismerkkejä.'
       options:

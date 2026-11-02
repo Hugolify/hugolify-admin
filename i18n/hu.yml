@@ -556,6 +556,7 @@ admin:
         hint: 'Csak fájl mezőkhöz (pl. .pdf, .doc, .docx)'
         label: Elfogadott kiterjesztések
       autocomplete:
+        hint: 'Megadja a böngészőnek, milyen mentett adatokat ajánljon fel a mező kitöltéséhez'
         label: Automatikus kiegészítés
         options:
           city: Város
@@ -587,7 +588,7 @@ admin:
           other: Mezők
       label: Űrlap
       name:
-        hint: 'Az űrlappal elküldött azonosító: a Netlify ez alapján csoportosítja a beküldéseket és nevezi el az oszlopokat. Szándékosan közös minden nyelv között. Üresen hagyva a címkéből vagy a blokk pozíciójából származik.'
+        hint: 'Az űrlappal elküldött azonosító. Többnyelvű webhelyen minden nyelven azonosnak kell lennie.'
         label: Név
         pattern: 'Csak kisbetűket, számokat, kötőjeleket és aláhúzásjeleket tartalmazhat, szóközök, ékezetek vagy speciális karakterek nélkül'
       options:

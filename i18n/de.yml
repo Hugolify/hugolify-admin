@@ -556,6 +556,7 @@ admin:
         hint: 'Nur für Datei-Felder (z. B. .pdf, .doc, .docx)'
         label: Akzeptierte Dateiendungen
       autocomplete:
+        hint: 'Gibt dem Browser an, welche gespeicherten Daten zum Vorausfüllen des Felds vorgeschlagen werden'
         label: Autovervollständigung
         options:
           city: Stadt
@@ -587,7 +588,7 @@ admin:
           other: Felder
       label: Formular
       name:
-        hint: 'Kennung, die mit dem Formular gesendet wird: Netlify gruppiert damit die Einsendungen und benennt die Spalten. Sie wird bewusst über alle Sprachen hinweg geteilt. Bleibt sie leer, wird sie aus dem Label oder der Blockposition abgeleitet.'
+        hint: 'Kennung, die mit dem Formular gesendet wird. Auf einer mehrsprachigen Website muss sie in allen Sprachen identisch sein.'
         label: Name
         pattern: 'Nur Kleinbuchstaben, Zahlen, Bindestriche und Unterstriche, ohne Leerzeichen, Akzente oder Sonderzeichen'
       options:

@@ -550,6 +550,7 @@ admin:
         hint: 'Only for file fields (ex: .pdf, .doc, .docx)'
         label: Accepted extensions
       autocomplete:
+        hint: 'Tells the browser which saved data to suggest to prefill the field'
         label: Autocomplete
         options:
           city: City
@@ -581,7 +582,7 @@ admin:
           other: Fields
       label: Form
       name:
-        hint: 'Identifier sent with the form: Netlify uses it to group submissions and name the columns. Deliberately shared across all languages. Left empty, it is derived from the label or from the block position.'
+        hint: 'Identifier sent with the form. On a multilingual site, it must be identical in all languages.'
         label: Name
         pattern: 'Contain only lowercase letters, numbers, hyphens, and underscores, with no spaces, accents, or special characters'
       options:

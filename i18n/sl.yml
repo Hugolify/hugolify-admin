@@ -556,6 +556,7 @@ admin:
         hint: 'Samo za polja z datoteko (npr. .pdf, .doc, .docx)'
         label: Sprejete končnice
       autocomplete:
+        hint: 'Brskalniku pove, katere shranjene podatke naj predlaga za izpolnitev polja'
         label: Samodejno izpolnjevanje
         options:
           city: Mesto
@@ -587,7 +588,7 @@ admin:
           other: Polja
       label: Obrazec
       name:
-        hint: 'Identifikator, poslan z obrazcem: Netlify z njim združuje oddaje in poimenuje stolpce. Namenoma je skupen vsem jezikom. Če ostane prazen, se izpelje iz oznake ali iz položaja bloka.'
+        hint: 'Identifikator, poslan z obrazcem. Na večjezičnem spletnem mestu mora biti enak v vseh jezikih.'
         label: Ime
         pattern: 'Vsebuje samo male črke, številke, pomišljaje in podčrtaje, brez presledkov, naglasov ali posebnih znakov'
       options:

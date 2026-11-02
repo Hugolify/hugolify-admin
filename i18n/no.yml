@@ -556,6 +556,7 @@ admin:
         hint: 'Kun for filfelt (f.eks. .pdf, .doc, .docx)'
         label: Godkjente filtyper
       autocomplete:
+        hint: 'Forteller nettleseren hvilke lagrede data som skal foreslås for å fylle ut feltet'
         label: Autofullfør
         options:
           city: By
@@ -587,7 +588,7 @@ admin:
           other: Felt
       label: Skjema
       name:
-        hint: 'Identifikator som sendes med skjemaet: Netlify bruker den til å gruppere innsendinger og navngi kolonnene. Den deles bevisst på tvers av alle språk. Står den tom, utledes den fra etiketten eller fra blokkens posisjon.'
+        hint: 'Identifikator som sendes med skjemaet. På et flerspråklig nettsted må den være lik på alle språk.'
         label: Navn
         pattern: 'Inneholder kun små bokstaver, tall, bindestreker og understreker, uten mellomrom, aksenter eller spesialtegn'
       options:

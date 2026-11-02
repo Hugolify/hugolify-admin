@@ -556,6 +556,7 @@ admin:
         hint: 'Alleen voor bestandsvelden (bv.: .pdf, .doc, .docx)'
         label: Geaccepteerde extensies
       autocomplete:
+        hint: 'Geeft de browser aan welke opgeslagen gegevens worden voorgesteld om het veld in te vullen'
         label: Automatisch aanvullen
         options:
           city: Stad
@@ -587,7 +588,7 @@ admin:
           other: Velden
       label: Formulier
       name:
-        hint: 'Identificatie die met het formulier wordt verzonden: Netlify groepeert er de inzendingen mee en benoemt de kolommen. Bewust gedeeld over alle talen. Leeg gelaten wordt hij afgeleid van het label of van de positie van het blok.'
+        hint: 'Identificatie die met het formulier wordt verzonden. Op een meertalige site moet hij in alle talen identiek zijn.'
         label: Naam
         pattern: 'Bevat alleen kleine letters, cijfers, koppeltekens en underscores, zonder spaties, accenten of speciale tekens'
       options:

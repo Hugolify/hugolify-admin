@@ -550,6 +550,7 @@ admin:
         hint: 'Seulement pour les champs file (p. ex. .pdf, .doc, .docx)'
         label: Extensions acceptées
       autocomplete:
+        hint: 'Indique au navigateur quelles données enregistrées proposer pour préremplir le champ'
         label: Autocomplete
         options:
           city: Ville
@@ -581,7 +582,7 @@ admin:
           other: Champs
       label: Formulaire
       name:
-        hint: 'Identifiant envoyé avec le formulaire : Netlify s’en sert pour regrouper les soumissions et nommer les colonnes. Volontairement partagé entre toutes les langues. Laissé vide, il est déduit du label ou de la position du bloc.'
+        hint: 'Identifiant envoyé avec le formulaire. Sur un site multilingue, il doit être identique dans toutes les langues.'
         label: Nom
         pattern: 'Contient uniquement des lettres minuscules, des chiffres, des tirets et des tirets bas, sans espaces, accents ni caractères spéciaux'
       options:

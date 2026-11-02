@@ -556,6 +556,7 @@ admin:
         hint: 'Endast för filfält (t.ex. .pdf, .doc, .docx)'
         label: Godkända filändelser
       autocomplete:
+        hint: 'Talar om för webbläsaren vilka sparade uppgifter som ska föreslås för att fylla i fältet'
         label: Komplettera automatiskt
         options:
           city: Stad
@@ -587,7 +588,7 @@ admin:
           other: Fält
       label: Formulär
       name:
-        hint: 'Identifierare som skickas med formuläret: Netlify använder den för att gruppera inskickningar och namnge kolumnerna. Den delas medvetet mellan alla språk. Lämnas den tom härleds den från etiketten eller från blockets position.'
+        hint: 'Identifierare som skickas med formuläret. På en flerspråkig webbplats måste den vara identisk på alla språk.'
         label: Namn
         pattern: 'Innehåller endast gemener, siffror, bindestreck och understreck, utan mellanslag, accenter eller specialtecken'
       options:
