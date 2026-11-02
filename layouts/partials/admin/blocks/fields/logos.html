@@ -1,7 +1,10 @@
 {{- $subfields := slice "title" "url" "image_src" -}} 
 {{- $items := dict "items" (dict "name" "logos" "fields" $subfields "thumbnail" "src") -}}
-{{- $layout := dict "layout" (slice "grid" "carousel") -}} 
-{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "scrollsnap" "carousel" -}} 
+{{- $layouts := partial "admin/func/GetLayouts.html" (slice "grid" "carousel") -}}
+{{- $uiFields := site.Params.admin.fields.ui.fields | append (dict "layout" $layouts) "scrollsnap" -}}
+{{- if in $layouts "carousel" -}}
+  {{- $uiFields = $uiFields | append "carousel" -}}
+{{- end -}}
 {{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 

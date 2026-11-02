@@ -1,0 +1,19 @@
+{{/*
+  Partial to get the layouts a block offers
+
+  The carousel layout needs Splide, whose JS and CSS the styling modules load
+  only with params.carousel: it is offered unless the site sets params.carousel
+  to false. A block without a layout falls back to its grid.
+
+  - . (slice) layouts of the block
+
+  Returns a slice
+*/}}
+
+{{- $layouts := . -}}
+
+{{- if eq site.Params.carousel false -}}
+  {{- $layouts = complement (slice "carousel") $layouts -}}
+{{- end -}}
+
+{{- return $layouts -}}

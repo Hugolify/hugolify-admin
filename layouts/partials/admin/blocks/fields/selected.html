@@ -2,8 +2,11 @@
 {{- $block := print "selected-" . -}}
 
 {{- $section := dict "section-hidden" $collection  -}} 
-{{- $layout := dict "layout" (slice "carousel" "grid" "list") -}} 
-{{- $uiFields := site.Params.admin.fields.ui.fields | append $layout "scrollsnap" "carousel" -}} 
+{{- $layouts := partial "admin/func/GetLayouts.html" (slice "carousel" "grid" "list") -}}
+{{- $uiFields := site.Params.admin.fields.ui.fields | append (dict "layout" $layouts) "scrollsnap" -}}
+{{- if in $layouts "carousel" -}}
+  {{- $uiFields = $uiFields | append "carousel" -}}
+{{- end -}}
 {{- $ui := dict "ui" $uiFields -}}
 
 {{/* Taxonomies of the section, used to filter the pages when source is "taxonomies" */}}

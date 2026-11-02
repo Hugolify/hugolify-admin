@@ -1,5 +1,8 @@
-{{- $layout := dict "layout" (slice "grid" "carousel") -}} 
-{{- $uiFields := site.Params.admin.fields.ui.fields | append "column" "scrollsnap" "ratio" $layout "carousel" -}} 
+{{- $layouts := partial "admin/func/GetLayouts.html" (slice "grid" "carousel") -}}
+{{- $uiFields := site.Params.admin.fields.ui.fields | append "column" "scrollsnap" "ratio" (dict "layout" $layouts) -}}
+{{- if in $layouts "carousel" -}}
+  {{- $uiFields = $uiFields | append "carousel" -}}
+{{- end -}}
 {{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 
