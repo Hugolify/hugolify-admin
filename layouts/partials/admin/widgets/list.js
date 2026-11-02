@@ -2,7 +2,10 @@
   Partial to generate a list widget
   
   - collapsed (boolean)
-  - fields (array) required
+  - field (string or map) Decap, Netlify, Static and Sveltia CMS, replaces fields: a single
+    field, repeated, so the list stores its values rather than objects, e.g. "text_area" for
+    an array of strings. The other CMS take it as the only item of fields
+  - fields (array) required, unless field is given
   - hidden (boolean)
   - hint (string)
   - i18n (boolean or string)
@@ -20,7 +23,11 @@
 {{- $cms := site.Params.admin.cms }}
 
 {{- $collapsed := .collapsed | default true }}
+{{- $field := .field | default false }}
 {{- $fields := .fields | default slice }}
+{{- if and $field (not $fields) }}
+  {{- $fields = slice $field }}
+{{- end }}
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
@@ -183,7 +190,12 @@
   {{ if and $thumbnail (eq $cms "sveltiacms") }}
   thumbnail: '{{ $thumbnail }}',
   {{ end }}
+  {{ with $field }}
+  {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
+  field: {{ partial (print "admin/fields/" $f.field ".yml") (cond (not $f.values) $f.field $f.values) }}
+  {{ else }}
   {{ partial "admin/fields/_fields.yml" $fields }}
+  {{ end }}
 }
 
 {{ end }}
