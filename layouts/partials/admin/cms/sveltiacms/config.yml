@@ -38,6 +38,12 @@ i18n:
   structure: multiple_files
   locales: {{ site.Params.admin.i18n.locales }}
   default_locale: {{ site.Params.admin.i18n.default_locale }}
+  {{- /* Locales a new entry starts with: `default`, `all` or a list. Once set,
+    the editor menu enables the others, and enabling one copies the default
+    locale's content into it, blocks included, with its texts left empty */}}
+  {{- with site.Params.admin.i18n.initial_locales }}
+  initial_locales: {{ cond (reflect.IsSlice .) (jsonify .) . }}
+  {{- end }}
 {{- end }}
 
 local_backend: {{ site.Params.admin.local_backend | default true }}
