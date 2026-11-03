@@ -8,6 +8,7 @@
   "minimal" (site.Params.admin.fields.title_markdown.minimal | default true)
   "buttons" (site.Params.admin.fields.title_markdown.buttons | default "['bold', 'italic']")
   "modes" (site.Params.admin.fields.title_markdown.modes | default "['rich_text']")
+  "editor_components" (site.Params.admin.fields.title_markdown.editor_components | default false)
   -}}
 
 {{- $args = merge $args $name }}

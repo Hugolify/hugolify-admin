@@ -4,6 +4,7 @@
   "minimal" (site.Params.admin.fields.quote.minimal | default true)
   "buttons" (site.Params.admin.fields.quote.buttons | default "['bold', 'italic','link']")
   "modes" (site.Params.admin.fields.quote.modes | default "['rich_text']")
+  "editor_components" (site.Params.admin.fields.quote.editor_components | default false)
   -}}
 
 {{ partial "admin/widgets/markdown.js" $args }}

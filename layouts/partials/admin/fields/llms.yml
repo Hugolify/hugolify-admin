@@ -11,6 +11,7 @@
   "i18n" false
   "minimal" (site.Params.admin.fields.llms.minimal | default false)
   "modes" (site.Params.admin.fields.llms.modes | default "['raw']")
+  "editor_components" (site.Params.admin.fields.llms.editor_components | default false)
   -}}
 
 {{- $args = merge $args $name }}

@@ -4,6 +4,7 @@
   "minimal" (site.Params.admin.fields.credit.minimal | default true)
   "buttons" (site.Params.admin.fields.credit.buttons | default "['link']")
   "modes" (site.Params.admin.fields.credit.modes | default "['rich_text']")
+  "editor_components" (site.Params.admin.fields.credit.editor_components | default false)
   -}}
 
 {{ partial "admin/widgets/markdown.js" $args }}
