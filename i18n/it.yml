@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Modulo
+    no_index:
+      hint: "Chiede ai motori di ricerca di non indicizzare questa pagina né seguirne i link, e la esclude dalla sitemap e dalla ricerca del sito. La pagina resta online."
+      label: "Non indicizzare"
     notes:
       hint: 'Per collegare una parola del testo a una nota, aggiungere "[\\*]". Le note e "[\\*]" sono collegati dal loro ordine.'
       label:

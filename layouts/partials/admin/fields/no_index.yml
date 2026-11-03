@@ -1,0 +1,15 @@
+{{/* Asks search engines not to index a page.
+
+     Read as noIndex by head/robots.html in the theme, which writes a noindex
+     robots meta for it, by func/SetSearchBody.html, which keeps it out of the
+     site search, and by sitemap.xml, which leaves it out. Placed after the
+     slug, last in the collections. No default: a CMS default would be saved
+     to the front matter of every entry.
+*/}}
+{{- $args := dict
+  "label" (i18n "admin.fields.no_index.label")
+  "hint" (i18n "admin.fields.no_index.hint")
+  "name" "noIndex"
+  -}}
+
+{{ partial "admin/widgets/boolean.js" $args }}

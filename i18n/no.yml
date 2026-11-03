@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Skjema
+    no_index:
+      hint: "Ber søkemotorer om ikke å indeksere denne siden eller følge lenkene på den, og holder den utenfor nettstedskartet og søket på nettstedet. Siden forblir på nett."
+      label: "Ikke indekser"
     notes:
       hint: 'For å lenke et ord i teksten til en note, legg til "[\*]" bak det. Noter og "[\*]" er lenket av deres rekkefølge.'
       label:

@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Formulario
+    no_index:
+      hint: "Pide a los motores de búsqueda que no indexen esta página ni sigan sus enlaces, y la excluye del sitemap y de la búsqueda del sitio. La página sigue en línea."
+      label: "No indexar"
     notes:
       hint: 'Para vincular una palabra del texto a una nota, agregar "[\\*]". Las notas y "[\\*]" están vinculadas por su orden.'
       label:

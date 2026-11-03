@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Formulär
+    no_index:
+      hint: "Ber sökmotorer att inte indexera den här sidan eller följa dess länkar, och utesluter den från webbplatskartan och sökningen på webbplatsen. Sidan ligger kvar online."
+      label: "Indexera inte"
     notes:
       hint: 'För att länka ett ord i texten till en anteckning, lägg till "[\*]" efter det. Anteckningar och "[\*]" länkas av deras ordning.'
       label:

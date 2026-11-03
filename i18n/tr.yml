@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Form
+    no_index:
+      hint: "Arama motorlarından bu sayfayı dizine eklememelerini ve bağlantılarını izlememelerini ister, sayfayı site haritasından ve site içi aramadan çıkarır. Sayfa yayında kalır."
+      label: "Dizine ekleme"
     notes:
       hint: 'Metindeki bir kelimeyi bir nota bağlamak için sonuna "[\*]" ekleyin. Notlar ve "[\*]" sıralarına göre bağlanır.'
       label:

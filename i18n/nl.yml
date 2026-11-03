@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Formulier
+    no_index:
+      hint: "Vraagt zoekmachines deze pagina niet te indexeren en haar links niet te volgen, en haalt haar uit de sitemap en de zoekfunctie van de site. De pagina blijft online."
+      label: "Niet indexeren"
     notes:
       hint: 'Om een woord in de tekst aan een notitie te koppelen, voeg het achtervoegsel "[\\*]" toe. Notities en "[\\*]" zijn gekoppeld door hun volgorde.'
       label:

@@ -746,6 +746,9 @@ admin:
     newsletter:
       form:
         label: Form
+    no_index:
+      hint: "Asks search engines not to index this page or follow its links, and leaves it out of the sitemap and the site search. The page stays online."
+      label: "Do not index"
     notes:
       hint: 'To link a word in the text to a note, suffix it with "[\*]". Notes and "[\*]" are linked by their order.'
       label:

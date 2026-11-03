@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Formulir
+    no_index:
+      hint: "Meminta mesin pencari untuk tidak mengindeks halaman ini atau mengikuti tautannya, serta mengeluarkannya dari sitemap dan pencarian situs. Halaman tetap online."
+      label: "Jangan indeks"
     notes:
       hint: 'Untuk menautkan kata dalam teks ke catatan, tambahkan "[\*]" di belakangnya. Catatan dan "[\*]" ditautkan berdasarkan urutannya.'
       label:

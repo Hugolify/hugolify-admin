@@ -748,6 +748,9 @@ admin:
     newsletter:
       form:
         label: Lomake
+    no_index:
+      hint: "Pyytää hakukoneita olemaan indeksoimatta tätä sivua ja seuraamatta sen linkkejä, ja jättää sen pois sivustokartasta ja sivuston hausta. Sivu pysyy verkossa."
+      label: "Älä indeksoi"
     notes:
       hint: 'To link a word in the text to a note, suffix it with "[\*]". Notes and "[\*]" are linked by their order.'
       label:

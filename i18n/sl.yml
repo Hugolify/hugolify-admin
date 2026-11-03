@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Obrazec
+    no_index:
+      hint: "Prosi iskalnike, naj te strani ne indeksirajo in ne sledijo njenim povezavam, ter jo izloči iz zemljevida spletnega mesta in iskanja po spletnem mestu. Stran ostane objavljena."
+      label: "Ne indeksiraj"
     notes:
       hint: 'Če želite povezati besedo v besedilu z opombo, ji dodajte pripono "[\\*]". Opombe in "[\\*]" so povezane po vrstnem redu.'
       label:

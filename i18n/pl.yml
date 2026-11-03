@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Formularz
+    no_index:
+      hint: "Prosi wyszukiwarki, by nie indeksowały tej strony ani nie podążały za jej linkami, oraz usuwa ją z mapy witryny i z wyszukiwarki serwisu. Strona pozostaje online."
+      label: "Nie indeksuj"
     notes:
       hint: 'Aby połączyć słowo w tekście z notatką, dodaj do niego sufiks "[\\*]". Notatki i "[\\*]" są połączone według kolejności.'
       label:

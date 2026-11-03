@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Formular
+    no_index:
+      hint: "Bittet Suchmaschinen, diese Seite nicht zu indexieren und ihren Links nicht zu folgen, und nimmt sie aus der Sitemap und der Website-Suche. Die Seite bleibt online."
+      label: "Nicht indexieren"
     notes:
       hint: 'Um ein Wort im Text mit einer Notiz zu verknüpfen, fügen Sie "[\\*]" hinzu. Notizen und "[\\*]" sind durch ihre Reihenfolge verknüpft.'
       label:

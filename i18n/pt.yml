@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Formulário
+    no_index:
+      hint: "Pede aos motores de busca que não indexem esta página nem sigam os seus links, e retira-a do sitemap e da pesquisa do site. A página continua online."
+      label: "Não indexar"
     notes:
       hint: 'Para vincular uma palavra no texto a uma nota, adicione o sufixo "[\\*]". Notas e "[\\*]" são vinculados por sua ordem.'
       label:

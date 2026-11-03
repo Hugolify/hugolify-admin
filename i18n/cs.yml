@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Formulář
+    no_index:
+      hint: "Požádá vyhledávače, aby tuto stránku neindexovaly a nesledovaly její odkazy, a vyřadí ji ze sitemapy a z vyhledávání na webu. Stránka zůstává online."
+      label: "Neindexovat"
     notes:
       hint: 'Chcete-li propojit slovo v textu s poznámkou, přidejte za něj "[\*]". Poznámky a "[\*]" jsou propojeny podle jejich pořadí.'
       label:

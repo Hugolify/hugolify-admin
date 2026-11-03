@@ -752,6 +752,9 @@ admin:
     newsletter:
       form:
         label: Űrlap
+    no_index:
+      hint: "Arra kéri a keresőmotorokat, hogy ne indexeljék ezt az oldalt és ne kövessék a hivatkozásait, továbbá kihagyja az oldaltérképből és a webhely keresőjéből. Az oldal elérhető marad."
+      label: "Ne indexelje"
     notes:
       hint: 'Egy szó jegyzethez való kapcsolásához a szövegben, illessze utána a "[\*]" jelet. A jegyzetek és a "[\*]" sorrendjük alapján kapcsolódnak.'
       label:
