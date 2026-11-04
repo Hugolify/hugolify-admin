@@ -527,6 +527,17 @@ admin:
         other: Belge
     draft:
       label: Taslak
+    education:
+      category:
+        label: Tür
+        options:
+          certificate: Sertifika
+          degree: Diploma
+      label:
+        one: Eğitim
+        other: Eğitim
+      school: Eğitim kurumu
+      title: Ad
     email:
       label: E-posta
     embed:

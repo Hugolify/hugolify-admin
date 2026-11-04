@@ -527,6 +527,17 @@ admin:
         other: Документи
     draft:
       label: Чернова
+    education:
+      category:
+        label: Вид
+        options:
+          certificate: Сертификат
+          degree: Диплома
+      label:
+        one: Диплома
+        other: Образование
+      school: Учебно заведение
+      title: Наименование
     email:
       label: Имейл
     embed:

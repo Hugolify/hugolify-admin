@@ -527,6 +527,17 @@ admin:
         other: Dokumenti
     draft:
       label: Osnutek
+    education:
+      category:
+        label: Vrsta
+        options:
+          certificate: Certifikat
+          degree: Diploma
+      label:
+        one: Izobrazba
+        other: Izobrazba
+      school: Izobraževalna ustanova
+      title: Naziv
     email:
       label: E-pošta
     embed:

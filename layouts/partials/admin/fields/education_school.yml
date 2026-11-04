@@ -1,0 +1,8 @@
+{{/* School of an education entry, the one that awarded the degree: published
+     as alumniOf, and as the organization recognizing the credential. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.education.school")
+  "name" "school"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

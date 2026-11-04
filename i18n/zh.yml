@@ -527,6 +527,17 @@ admin:
         other: 文档
     draft:
       label: 草稿
+    education:
+      category:
+        label: 类型
+        options:
+          certificate: 证书
+          degree: 学位
+      label:
+        one: 教育背景
+        other: 教育背景
+      school: 教育机构
+      title: 名称
     email:
       label: 电子邮件
     embed:

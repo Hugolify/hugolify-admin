@@ -527,6 +527,17 @@ admin:
         other: Documenten
     draft:
       label: Concept
+    education:
+      category:
+        label: Type
+        options:
+          certificate: Certificaat
+          degree: Diploma
+      label:
+        one: Opleiding
+        other: Opleidingen
+      school: Onderwijsinstelling
+      title: Naam
     email:
       label: E-mail
     embed:

@@ -525,6 +525,17 @@ admin:
         other: Asiakirjat
     draft:
       label: Luonnos
+    education:
+      category:
+        label: Tyyppi
+        options:
+          certificate: Sertifikaatti
+          degree: Tutkinto
+      label:
+        one: Koulutus
+        other: Koulutukset
+      school: Oppilaitos
+      title: Nimi
     email:
       label: Sähköposti
     embed:

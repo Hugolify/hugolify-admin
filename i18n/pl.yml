@@ -527,6 +527,17 @@ admin:
         other: Dokumenty
     draft:
       label: Wersja robocza
+    education:
+      category:
+        label: Typ
+        options:
+          certificate: Certyfikat
+          degree: Dyplom
+      label:
+        one: Wykształcenie
+        other: Wykształcenie
+      school: Placówka edukacyjna
+      title: Nazwa
     email:
       label: E-mail
     embed:

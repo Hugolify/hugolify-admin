@@ -527,6 +527,17 @@ admin:
         other: Dokumentumok
     draft:
       label: Piszkozat
+    education:
+      category:
+        label: Típus
+        options:
+          certificate: Tanúsítvány
+          degree: Oklevél
+      label:
+        one: Végzettség
+        other: Tanulmányok
+      school: Oktatási intézmény
+      title: Megnevezés
     email:
       label: E-mail
     embed:

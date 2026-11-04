@@ -521,6 +521,17 @@ admin:
         other: Documents
     draft:
       label: Brouillon
+    education:
+      category:
+        label: Type
+        options:
+          certificate: Certificat
+          degree: Diplôme
+      label:
+        one: Formation
+        other: Formations
+      school: Établissement
+      title: Intitulé
     email:
       label: Email
     embed:

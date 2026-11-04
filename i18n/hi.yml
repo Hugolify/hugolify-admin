@@ -527,6 +527,17 @@ admin:
         other: दस्तावेज़
     draft:
       label: मसौदा
+    education:
+      category:
+        label: प्रकार
+        options:
+          certificate: प्रमाणपत्र
+          degree: डिग्री
+      label:
+        one: शिक्षा
+        other: शिक्षा
+      school: शैक्षणिक संस्थान
+      title: शीर्षक
     email:
       label: ईमेल
     embed:

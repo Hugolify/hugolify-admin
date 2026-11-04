@@ -1,0 +1,8 @@
+{{/* Title of an education entry, the degree or certificate as awarded:
+     published as the name of the credential. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.education.title")
+  "name" "title"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

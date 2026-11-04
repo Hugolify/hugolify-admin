@@ -521,6 +521,17 @@ admin:
         other: Documents
     draft:
       label: Draft
+    education:
+      category:
+        label: Type
+        options:
+          certificate: Certificate
+          degree: Degree
+      label:
+        one: Degree
+        other: Education
+      school: School
+      title: Title
     email:
       label: Email
     embed:

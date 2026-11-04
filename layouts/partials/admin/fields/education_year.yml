@@ -1,0 +1,17 @@
+{{/* Year an education entry was completed, the same in every language. */}}
+{{- $name := dict "name" "year" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "education_year" "nameOverride" "year" }}
+{{- end }}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.year")
+  "i18n" "duplicate"
+  "min" 1900
+  "max" 2100
+  "step" 1
+  -}}
+
+{{- $args = merge $args $name }}
+
+{{ partial "admin/widgets/number.js" $args }}

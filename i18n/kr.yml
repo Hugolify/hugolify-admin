@@ -527,6 +527,17 @@ admin:
         other: 문서
     draft:
       label: 초안
+    education:
+      category:
+        label: 유형
+        options:
+          certificate: 수료증
+          degree: 학위
+      label:
+        one: 학력
+        other: 학력
+      school: 교육 기관
+      title: 명칭
     email:
       label: 이메일
     embed:

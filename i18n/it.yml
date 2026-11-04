@@ -527,6 +527,17 @@ admin:
         other: Documenti
     draft:
       label: Bozza
+    education:
+      category:
+        label: Tipo
+        options:
+          certificate: Certificato
+          degree: Titolo di studio
+      label:
+        one: Titolo di studio
+        other: Formazione
+      school: Istituto scolastico
+      title: Denominazione
     email:
       label: Email
     embed:

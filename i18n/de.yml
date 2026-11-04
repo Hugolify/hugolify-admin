@@ -527,6 +527,17 @@ admin:
         other: Dokumente
     draft:
       label: Entwurf
+    education:
+      category:
+        label: Art
+        options:
+          certificate: Zertifikat
+          degree: Abschluss
+      label:
+        one: Abschluss
+        other: Ausbildung
+      school: Bildungseinrichtung
+      title: Bezeichnung
     email:
       label: E-Mail
     embed:

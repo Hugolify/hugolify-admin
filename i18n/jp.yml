@@ -527,6 +527,17 @@ admin:
         other: ドキュメント
     draft:
       label: 下書き
+    education:
+      category:
+        label: 種類
+        options:
+          certificate: 証明書
+          degree: 学位
+      label:
+        one: 学歴
+        other: 学歴
+      school: 教育機関
+      title: 名称
     email:
       label: メールアドレス
     embed:
