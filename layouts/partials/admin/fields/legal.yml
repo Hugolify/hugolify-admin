@@ -1,6 +1,12 @@
-{{- $args := dict 
+{{/* Fine print under a form's submit button, or a real estate's legal notice.
+     Both are markdownified by the theme, so a link (privacy policy…) renders. */}}
+{{- $args := dict
   "label" (i18n "admin.fields.legal.label")
   "name" "legal"
+  "minimal" (site.Params.admin.fields.legal.minimal | default true)
+  "buttons" (site.Params.admin.fields.legal.buttons | default "['bold', 'italic', 'link']")
+  "modes" (site.Params.admin.fields.legal.modes | default "['rich_text']")
+  "editor_components" (site.Params.admin.fields.legal.editor_components | default false)
   -}}
 
-{{ partial "admin/widgets/text.js" $args }}
+{{ partial "admin/widgets/markdown.js" $args }}
