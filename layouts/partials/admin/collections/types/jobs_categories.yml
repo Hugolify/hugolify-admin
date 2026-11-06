@@ -1,6 +1,6 @@
 {
-  name: jobs_categories,
-  folder: content/jobs_categories,
+  name: 'jobs_categories',
+  folder: 'content/jobs_categories',
   label: '{{ i18n "admin.collections.jobs_categories.label" }}',
   label_singular: '{{ i18n "admin.collections.jobs_categories.label" 1 }}',
   description: '{{ i18n "admin.collections.jobs_categories._description" }}',
