@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Yalnızca dosya alanları için (ör.: .pdf, .doc, .docx)'
         label: Kabul edilen uzantılar
+      action:
+        hint: 'Netlify Forms veya tüm site için tanımlı gönderim URL’si için boş bırakın. Aksi halde bu formun gönderildiği tam URL, önceliklidir (ör.: Brevo için https://xxxx.sibforms.com/serve/…, Formspree için https://formspree.io/f/xxxx)'
+        label: Gönderim URL’si
       autocomplete:
         hint: 'Tarayıcıya alanı doldurmak için hangi kayıtlı verileri önereceğini belirtir'
         label: Otomatik Tamamlama
@@ -598,10 +601,13 @@ admin:
           one: Alan
           other: Alanlar
       label: Form
+      maxlength:
+        hint: 'Yalnızca giriş alanları ve metin alanları için (ör.: 500)'
+        label: Azami karakter sayısı
       name:
         hint: 'Formla birlikte gönderilen tanımlayıcı. Çok dilli bir sitede tüm dillerde aynı olmalıdır.'
         label: İsim
-        pattern: 'Sadece küçük harfler, sayılar, tireler ve alt çizgiler içerir, boşluk, aksan veya özel karakterler içermez'
+        pattern: 'Sadece harfler, sayılar, tireler ve alt çizgiler içerir, boşluk, aksan veya özel karakterler içermez'
       options:
         hint: Sadece seçim alanları için
         label:

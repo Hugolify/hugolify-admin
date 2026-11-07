@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Kun for filfelt (f.eks. .pdf, .doc, .docx)'
         label: Godkjente filtyper
+      action:
+        hint: 'La stå tomt for Netlify Forms eller mottaker-URL-en for hele nettstedet. Ellers den fullstendige URL-en skjemaet sendes til, som går foran (f.eks. https://xxxx.sibforms.com/serve/… for Brevo, https://formspree.io/f/xxxx for Formspree)'
+        label: Mottaker-URL
       autocomplete:
         hint: 'Forteller nettleseren hvilke lagrede data som skal foreslås for å fylle ut feltet'
         label: Autofullfør
@@ -598,10 +601,13 @@ admin:
           one: Felt
           other: Felt
       label: Skjema
+      maxlength:
+        hint: 'Kun for inndatafelt og tekstområder (f.eks. 500)'
+        label: Maksimalt antall tegn
       name:
         hint: 'Identifikator som sendes med skjemaet. På et flerspråklig nettsted må den være lik på alle språk.'
         label: Navn
-        pattern: 'Inneholder kun små bokstaver, tall, bindestreker og understreker, uten mellomrom, aksenter eller spesialtegn'
+        pattern: 'Inneholder kun bokstaver, tall, bindestreker og understreker, uten mellomrom, aksenter eller spesialtegn'
       options:
         hint: Kun for valgfelt
         label:

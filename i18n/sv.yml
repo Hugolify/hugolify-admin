@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Endast för filfält (t.ex. .pdf, .doc, .docx)'
         label: Godkända filändelser
+      action:
+        hint: 'Lämna tomt för Netlify Forms eller mottagar-URL:en för hela webbplatsen. Annars den fullständiga URL som formuläret skickas till, som har företräde (t.ex. https://xxxx.sibforms.com/serve/… för Brevo, https://formspree.io/f/xxxx för Formspree)'
+        label: Mottagar-URL
       autocomplete:
         hint: 'Talar om för webbläsaren vilka sparade uppgifter som ska föreslås för att fylla i fältet'
         label: Komplettera automatiskt
@@ -598,10 +601,13 @@ admin:
           one: Fält
           other: Fält
       label: Formulär
+      maxlength:
+        hint: 'Endast för inmatningsfält och textområden (t.ex. 500)'
+        label: Maximalt antal tecken
       name:
         hint: 'Identifierare som skickas med formuläret. På en flerspråkig webbplats måste den vara identisk på alla språk.'
         label: Namn
-        pattern: 'Innehåller endast gemener, siffror, bindestreck och understreck, utan mellanslag, accenter eller specialtecken'
+        pattern: 'Innehåller endast bokstäver, siffror, bindestreck och understreck, utan mellanslag, accenter eller specialtecken'
       options:
         hint: Endast för valfält
         label:

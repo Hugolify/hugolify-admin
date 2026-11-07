@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Tylko dla pól plików (np. .pdf, .doc, .docx)'
         label: Akceptowane rozszerzenia
+      action:
+        hint: 'Pozostaw puste dla Netlify Forms lub adresu wysyłki ustawionego dla całej witryny. W przeciwnym razie pełny adres URL, na który wysyłany jest ten formularz, z pierwszeństwem (np. https://xxxx.sibforms.com/serve/… dla Brevo, https://formspree.io/f/xxxx dla Formspree)'
+        label: Adres URL wysyłki
       autocomplete:
         hint: 'Wskazuje przeglądarce, jakie zapisane dane zaproponować do wypełnienia pola'
         label: Autouzupełnianie
@@ -598,10 +601,13 @@ admin:
           one: Pole
           other: Pola
       label: Formularz
+      maxlength:
+        hint: 'Tylko dla pól tekstowych i obszarów tekstu (np. 500)'
+        label: Maksymalna liczba znaków
       name:
         hint: 'Identyfikator wysyłany z formularzem. Na stronie wielojęzycznej musi być identyczny we wszystkich językach.'
         label: Nazwa
-        pattern: 'Zawiera tylko małe litery, cyfry, myślniki i podkreślenia, bez spacji, znaków diakrytycznych lub znaków specjalnych'
+        pattern: 'Zawiera tylko litery, cyfry, myślniki i podkreślenia, bez spacji, znaków diakrytycznych lub znaków specjalnych'
       options:
         hint: Tylko dla pól wyboru
         label:

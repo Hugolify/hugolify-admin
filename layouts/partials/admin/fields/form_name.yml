@@ -1,4 +1,6 @@
-{{ $regex := "^(|[a-z0-9_-]+)$" }}
+{{- /* Upper case allowed: the field names go out as written, and some services
+       expect them so (Brevo: NOM, EMAIL…) */}}
+{{ $regex := "^(|[A-Za-z0-9_-]+)$" }}
 {{ $message := i18n "admin.fields.form.name.pattern" }}
 {{ $pattern := dict "regex" $regex "message" $message }}
 

@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Csak fájl mezőkhöz (pl. .pdf, .doc, .docx)'
         label: Elfogadott kiterjesztések
+      action:
+        hint: 'Hagyja üresen a Netlify Formshoz vagy a teljes webhelyre beállított küldési címhez. Egyébként a teljes URL, ahová az űrlap elküldésre kerül, elsőbbséggel (pl. https://xxxx.sibforms.com/serve/… a Brevóhoz, https://formspree.io/f/xxxx a Formspree-hez)'
+        label: Cél URL
       autocomplete:
         hint: 'Megadja a böngészőnek, milyen mentett adatokat ajánljon fel a mező kitöltéséhez'
         label: Automatikus kiegészítés
@@ -598,10 +601,13 @@ admin:
           one: Mező
           other: Mezők
       label: Űrlap
+      maxlength:
+        hint: 'Csak beviteli mezőkhöz és szövegterületekhez (pl. 500)'
+        label: Karakterek maximális száma
       name:
         hint: 'Az űrlappal elküldött azonosító. Többnyelvű webhelyen minden nyelven azonosnak kell lennie.'
         label: Név
-        pattern: 'Csak kisbetűket, számokat, kötőjeleket és aláhúzásjeleket tartalmazhat, szóközök, ékezetek vagy speciális karakterek nélkül'
+        pattern: 'Csak betűket, számokat, kötőjeleket és aláhúzásjeleket tartalmazhat, szóközök, ékezetek vagy speciális karakterek nélkül'
       options:
         hint: Csak kiválasztó mezőkhöz
         label:

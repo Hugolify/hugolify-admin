@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Solo para campos de archivo (p. ej. .pdf, .doc, .docx)'
         label: Extensiones aceptadas
+      action:
+        hint: 'Dejar vacío para Netlify Forms o la URL de envío definida para todo el sitio. Si no, la URL completa a la que se envía este formulario, con prioridad (p. ej. https://xxxx.sibforms.com/serve/… para Brevo, https://formspree.io/f/xxxx para Formspree)'
+        label: URL de envío
       autocomplete:
         hint: 'Indica al navegador qué datos guardados sugerir para rellenar el campo'
         label: Autocompletar
@@ -598,10 +601,13 @@ admin:
           one: Campo
           other: Campos
       label: Formulario
+      maxlength:
+        hint: 'Solo para campos de entrada y áreas de texto (p. ej. 500)'
+        label: Número máximo de caracteres
       name:
         hint: 'Identificador enviado con el formulario. En un sitio multilingüe, debe ser idéntico en todos los idiomas.'
         label: Nombre
-        pattern: 'Contiene solo letras minúsculas, números, guiones y guiones bajos, sin espacios, acentos o caracteres especiales'
+        pattern: 'Contiene solo letras, números, guiones y guiones bajos, sin espacios, acentos o caracteres especiales'
       options:
         hint: Solo para campos de selección
         label:

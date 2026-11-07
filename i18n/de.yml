@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Nur für Datei-Felder (z. B. .pdf, .doc, .docx)'
         label: Akzeptierte Dateiendungen
+      action:
+        hint: 'Leer lassen für Netlify Forms oder die für die ganze Website festgelegte Ziel-URL. Sonst die vollständige URL, an die dieses Formular gesendet wird, mit Vorrang (z. B. https://xxxx.sibforms.com/serve/… für Brevo, https://formspree.io/f/xxxx für Formspree)'
+        label: Ziel-URL
       autocomplete:
         hint: 'Gibt dem Browser an, welche gespeicherten Daten zum Vorausfüllen des Felds vorgeschlagen werden'
         label: Autovervollständigung
@@ -598,10 +601,13 @@ admin:
           one: Feld
           other: Felder
       label: Formular
+      maxlength:
+        hint: 'Nur für Eingabefelder und Textbereiche (z. B. 500)'
+        label: Maximale Zeichenanzahl
       name:
         hint: 'Kennung, die mit dem Formular gesendet wird. Auf einer mehrsprachigen Website muss sie in allen Sprachen identisch sein.'
         label: Name
-        pattern: 'Nur Kleinbuchstaben, Zahlen, Bindestriche und Unterstriche, ohne Leerzeichen, Akzente oder Sonderzeichen'
+        pattern: 'Nur Buchstaben, Zahlen, Bindestriche und Unterstriche, ohne Leerzeichen, Akzente oder Sonderzeichen'
       options:
         hint: Nur für Auswahlfelder
         label:

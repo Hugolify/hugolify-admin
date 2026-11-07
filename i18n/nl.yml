@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Alleen voor bestandsvelden (bv.: .pdf, .doc, .docx)'
         label: Geaccepteerde extensies
+      action:
+        hint: 'Leeg laten voor Netlify Forms of de verzend-URL van de hele site. Anders de volledige URL waarnaar dit formulier wordt verzonden, met voorrang (bv.: https://xxxx.sibforms.com/serve/… voor Brevo, https://formspree.io/f/xxxx voor Formspree)'
+        label: Verzend-URL
       autocomplete:
         hint: 'Geeft de browser aan welke opgeslagen gegevens worden voorgesteld om het veld in te vullen'
         label: Automatisch aanvullen
@@ -598,10 +601,13 @@ admin:
           one: Veld
           other: Velden
       label: Formulier
+      maxlength:
+        hint: 'Alleen voor invoervelden en tekstvakken (bv.: 500)'
+        label: Maximaal aantal tekens
       name:
         hint: 'Identificatie die met het formulier wordt verzonden. Op een meertalige site moet hij in alle talen identiek zijn.'
         label: Naam
-        pattern: 'Bevat alleen kleine letters, cijfers, koppeltekens en underscores, zonder spaties, accenten of speciale tekens'
+        pattern: 'Bevat alleen letters, cijfers, koppeltekens en underscores, zonder spaties, accenten of speciale tekens'
       options:
         hint: Alleen voor selectievelden
         label:

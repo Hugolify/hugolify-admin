@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Pouze pro souborová pole (např. .pdf, .doc, .docx)'
         label: Povolené přípony
+      action:
+        hint: 'Ponechte prázdné pro Netlify Forms nebo adresu odesílání nastavenou pro celý web. Jinak úplná URL, na kterou se tento formulář odesílá, s přednostní platností (např. https://xxxx.sibforms.com/serve/… pro Brevo, https://formspree.io/f/xxxx pro Formspree)'
+        label: Cílová URL
       autocomplete:
         hint: 'Určuje, jaká uložená data má prohlížeč nabídnout k vyplnění pole'
         label: Automatické dokončování
@@ -598,10 +601,13 @@ admin:
           one: Pole
           other: Pole
       label: Formulář
+      maxlength:
+        hint: 'Pouze pro vstupní pole a textové oblasti (např. 500)'
+        label: Maximální počet znaků
       name:
         hint: 'Identifikátor odesílaný s formulářem. Na vícejazyčném webu musí být ve všech jazycích stejný.'
         label: Jméno
-        pattern: 'Obsahuje pouze malá písmena, čísla, pomlčky a podtržítka, bez mezer, diakritiky nebo speciálních znaků'
+        pattern: 'Obsahuje pouze písmena, čísla, pomlčky a podtržítka, bez mezer, diakritiky nebo speciálních znaků'
       options:
         hint: Pouze pro výběrová pole
         label:

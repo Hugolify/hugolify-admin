@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Samo za polja z datoteko (npr. .pdf, .doc, .docx)'
         label: Sprejete končnice
+      action:
+        hint: 'Pustite prazno za Netlify Forms ali naslov za pošiljanje, nastavljen za celotno spletno mesto. Sicer celoten URL, na katerega se pošlje obrazec, s prednostjo (npr. https://xxxx.sibforms.com/serve/… za Brevo, https://formspree.io/f/xxxx za Formspree)'
+        label: Ciljni URL
       autocomplete:
         hint: 'Brskalniku pove, katere shranjene podatke naj predlaga za izpolnitev polja'
         label: Samodejno izpolnjevanje
@@ -598,10 +601,13 @@ admin:
           one: Polje
           other: Polja
       label: Obrazec
+      maxlength:
+        hint: 'Samo za vnosna polja in besedilna polja (npr. 500)'
+        label: Največje število znakov
       name:
         hint: 'Identifikator, poslan z obrazcem. Na večjezičnem spletnem mestu mora biti enak v vseh jezikih.'
         label: Ime
-        pattern: 'Vsebuje samo male črke, številke, pomišljaje in podčrtaje, brez presledkov, naglasov ali posebnih znakov'
+        pattern: 'Vsebuje samo črke, številke, pomišljaje in podčrtaje, brez presledkov, naglasov ali posebnih znakov'
       options:
         hint: Samo za izbirna polja
         label:

@@ -566,6 +566,9 @@ admin:
       accept:
         hint: '仅适用于文件字段（例如：.pdf、.doc、.docx）'
         label: 允许的扩展名
+      action:
+        hint: '使用 Netlify Forms 或全站提交地址时留空。否则填写此表单的完整提交 URL，优先于全站设置（例如：Brevo 为 https://xxxx.sibforms.com/serve/…，Formspree 为 https://formspree.io/f/xxxx）'
+        label: 提交地址
       autocomplete:
         hint: '告诉浏览器建议使用哪些已保存的数据来填写此字段'
         label: 自动完成
@@ -598,10 +601,13 @@ admin:
           one: 字段
           other: 字段
       label: 表单
+      maxlength:
+        hint: '仅适用于输入字段和文本区域（例如：500）'
+        label: 最大字符数
       name:
         hint: '随表单一起发送的标识符。在多语言网站中，所有语言的值必须相同。'
         label: 名称
-        pattern: '仅包含小写字母、数字、连字符和下划线,不含空格、 重音符号或特殊字符'
+        pattern: '仅包含字母、数字、连字符和下划线,不含空格、 重音符号或特殊字符'
       options:
         hint: 仅用于选择字段
         label:

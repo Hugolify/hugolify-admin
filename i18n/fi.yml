@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'Vain tiedostokentille (esim. .pdf, .doc, .docx)'
         label: Hyväksytyt tiedostopäätteet
+      action:
+        hint: 'Jätä tyhjäksi, jos käytät Netlify Formsia tai koko sivustolle määritettyä osoitetta. Muuten täydellinen URL, johon lomake lähetetään, ensisijaisena (esim. https://xxxx.sibforms.com/serve/… Brevolle, https://formspree.io/f/xxxx Formspreelle)'
+        label: Vastaanotto-URL
       autocomplete:
         hint: 'Kertoo selaimelle, mitä tallennettuja tietoja ehdotetaan kentän täyttämiseen'
         label: Automaattinen täydennys
@@ -598,10 +601,13 @@ admin:
           one: Kenttä
           other: Kentät
       label: Lomake
+      maxlength:
+        hint: 'Vain syöttökentille ja tekstialueille (esim. 500)'
+        label: Merkkien enimmäismäärä
       name:
         hint: 'Lomakkeen mukana lähetettävä tunniste. Monikielisellä sivustolla sen on oltava sama kaikilla kielillä.'
         label: Nimi
-        pattern: 'Sisältää vain pieniä kirjaimia, numeroita, väliviivoja ja alaviivoja, ei välilyöntejä, aksentteja tai erikoismerkkejä.'
+        pattern: 'Sisältää vain kirjaimia, numeroita, väliviivoja ja alaviivoja, ei välilyöntejä, aksentteja tai erikoismerkkejä.'
       options:
         hint: Vain valituille kentille
         label:

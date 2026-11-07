@@ -560,6 +560,9 @@ admin:
       accept:
         hint: 'Only for file fields (ex: .pdf, .doc, .docx)'
         label: Accepted extensions
+      action:
+        hint: 'Leave empty for Netlify Forms or the site-wide endpoint. Otherwise, the full URL this form is sent to, which takes precedence (ex: https://xxxx.sibforms.com/serve/… for Brevo, https://formspree.io/f/xxxx for Formspree)'
+        label: Endpoint URL
       autocomplete:
         hint: 'Tells the browser which saved data to suggest to prefill the field'
         label: Autocomplete
@@ -592,10 +595,13 @@ admin:
           one: Field
           other: Fields
       label: Form
+      maxlength:
+        hint: 'Only for input fields and text areas (ex: 500)'
+        label: Maximum length
       name:
         hint: 'Identifier sent with the form. On a multilingual site, it must be identical in all languages.'
         label: Name
-        pattern: 'Contain only lowercase letters, numbers, hyphens, and underscores, with no spaces, accents, or special characters'
+        pattern: 'Contain only letters, numbers, hyphens, and underscores, with no spaces, accents, or special characters'
       options:
         hint: Only for select fields
         label:

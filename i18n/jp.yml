@@ -566,6 +566,9 @@ admin:
       accept:
         hint: 'ファイル項目のみ (例: .pdf, .doc, .docx)'
         label: 許可する拡張子
+      action:
+        hint: 'Netlify Forms またはサイト全体の送信先を使う場合は空欄にします。それ以外は、このフォームの送信先の完全な URL で、こちらが優先されます (例: Brevo は https://xxxx.sibforms.com/serve/…、Formspree は https://formspree.io/f/xxxx)'
+        label: 送信先URL
       autocomplete:
         hint: 'ブラウザが項目の自動入力に提案する保存済みデータを指定します'
         label: オートコンプリート
@@ -598,10 +601,13 @@ admin:
           one: フィールド
           other: フィールド
       label: フォーム
+      maxlength:
+        hint: '入力項目とテキストエリアのみ (例: 500)'
+        label: 最大文字数
       name:
         hint: 'フォームと一緒に送信される識別子。多言語サイトでは、すべての言語で同じ値にする必要があります。'
         label: 名前
-        pattern: '小文字、数字、ハイフン、アンダースコアのみを含み、スペース、 アクセント、特殊文字は含まない'
+        pattern: '英字、数字、ハイフン、アンダースコアのみを含み、スペース、アクセント、特殊文字は含まない'
       options:
         hint: 選択フィールドのみ
         label:
