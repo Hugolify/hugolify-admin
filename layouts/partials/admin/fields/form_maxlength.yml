@@ -1,0 +1,15 @@
+{{- $name := dict "name" "maxlength" }}
+{{- if eq site.Params.admin.cms "tinacms" }}
+  {{- $name = dict "name" "form_maxlength" "nameOverride" "maxlength" }}
+{{- end }}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.form.maxlength.label")
+  "hint" (i18n "admin.fields.form.maxlength.hint")
+  "min" 1
+  "step" 1
+  -}}
+
+{{- $args = merge $args $name -}}
+
+{{ partial "admin/widgets/number.js" $args }}

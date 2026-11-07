@@ -10,8 +10,9 @@
   "form_options" 
   "form_value" 
   "form_accept" 
-  "form_pattern" 
-  "is_required" 
+  "form_pattern"
+  "form_maxlength"
+  "is_required"
   "is_form_full" 
   "placeholder" 
   "form_autocomplete" -}}
