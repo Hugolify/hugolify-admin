@@ -17,4 +17,27 @@
 
 {{- $args = merge $args $name }}
 
+{{- /* Sibling fields shown for each source, hiding the others (Decap and
+  Sveltia CMS, see the toggle option of widgets/select.js). The block computes
+  them from its sources; params.admin.fields.selected_source.toggle lays a map
+  over them, or false shows every field */}}
+{{- $toggle := false }}
+{{- if reflect.IsMap . }}
+  {{- $toggle = .toggle | default false }}
+{{- end }}
+{{- with site.Params.admin.fields }}
+  {{- with index . "selected_source" }}
+    {{- if isset . "toggle" }}
+      {{- if reflect.IsMap .toggle }}
+        {{- $toggle = merge ($toggle | default dict) .toggle }}
+      {{- else if not .toggle }}
+        {{- $toggle = false }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- with $toggle }}
+  {{- $args = merge $args (dict "toggle" .) }}
+{{- end }}
+
 {{ partial "admin/widgets/select.js" $args }}

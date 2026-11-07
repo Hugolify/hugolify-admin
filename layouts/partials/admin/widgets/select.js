@@ -13,6 +13,11 @@
   - nameOverride (string)
   - options (array or object) required
   - required (boolean)
+  - toggle (map) Decap and Sveltia CMS only: option value → names of the
+    sibling fields shown for it, the others listed being hidden (see the
+    select_toggle widgets in cms/decapcms/widgets/ and cms/sveltiacms/widgets/).
+    The empty key ('') applies while the field has no value. Ignored with
+    `multiple`.
 */}}
 
 {{- $cms := site.Params.admin.cms }}
@@ -29,6 +34,7 @@
 {{- $nameOverride := .nameOverride | default false }}
 {{- $options := .options | default false }}
 {{- $required := .required | default false }}
+{{- $toggle := and (in (slice "decapcms" "sveltiacms") $cms) (not $multiple) (.toggle | default false) }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -149,7 +155,7 @@
   hint: '{{ . }}',
   {{ end }}
   name: '{{ $name }}',
-  widget: 'select',
+  widget: '{{ if $toggle }}select_toggle{{ else }}select{{ end }}',
   {{ with $options }}
   options: [
   {{- range $k, $v := . }}
@@ -170,6 +176,9 @@
   {{ end }}
   ],
   {{ end }}
+  {{- with $toggle }}
+  toggle: {{ . | jsonify }},
+  {{- end }}
   {{ with $multiple }}
   multiple: true,
   {{ end }}

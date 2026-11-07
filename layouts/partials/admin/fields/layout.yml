@@ -1,4 +1,8 @@
+{{- /* Context: the layouts of a block (slice), as the form of a block passes
+  them; or the same choice as a map, {options: […]}, which hides no field, as
+  admin/datas/blocks.yml gives it; anything else offers the grid alone */ -}}
 {{- $options := . -}}
+{{- $ownLayouts := reflect.IsSlice . -}}
 {{- if not (reflect.IsSlice $options) -}}
   {{- $options = slice "grid" -}}
 {{- end -}}
@@ -16,6 +20,28 @@
   "options" $options
   "i18n" "duplicate"
   -}}
+
+{{- /* Sibling fields that only apply to some layouts, from
+  params.admin.fields.layout.toggle (Decap and Sveltia CMS, see the toggle
+  option of widgets/select.js): choosing a layout reveals the fields that
+  override the defaults of data/blocks.yml. Only in the form of a block, which
+  passes its layouts, and only for the layouts it offers: the blocks data file,
+  where those defaults are set, shows every field */}}
+{{- $toggle := dict }}
+{{- with and $ownLayouts site.Params.admin.fields }}
+  {{- with index . "layout" }}
+    {{- if reflect.IsMap .toggle }}
+      {{- range $layout, $fields := .toggle }}
+        {{- if or (eq $layout "") (in $options $layout) }}
+          {{- $toggle = merge $toggle (dict $layout $fields) }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- with $toggle }}
+  {{- $args = merge $args (dict "toggle" .) }}
+{{- end }}
 
 {{- $args = merge $args $name }}
 

@@ -34,7 +34,20 @@
   $section -}}
 
 {{- if gt (len $sources) 1 -}}
-  {{- $fields = $fields | append (dict "selected_source" (dict "options" $sources)) $relation -}}
+  {{/* Fields shown for each source, the CMS that can hide the others; a source
+    left out, "toplevel", shows none of them */}}
+  {{- $toggle := dict "selection" (slice "items") -}}
+  {{- if $taxonomies -}}
+    {{- $names := slice -}}
+    {{- range $taxonomies -}}
+      {{- $names = $names | append .name -}}
+    {{- end -}}
+    {{- $toggle = merge $toggle (dict "taxonomies" $names) -}}
+  {{- end -}}
+  {{- if $nested -}}
+    {{- $toggle = merge $toggle (dict "children" (slice "parent")) -}}
+  {{- end -}}
+  {{- $fields = $fields | append (dict "selected_source" (dict "options" $sources "toggle" $toggle)) $relation -}}
   {{- range $taxonomies -}}
     {{- $fields = $fields | append (dict "relation" (dict "collection" .collection "name" .name "multiple" true)) -}}
   {{- end -}}
