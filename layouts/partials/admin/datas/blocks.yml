@@ -8,6 +8,12 @@
       a site-wide default commonly sets them (a grid of 4, a list turned into a grid, a
       carousel below a breakpoint) while the per-block form keeps a shorter list.
 
+      `layout` offers the layouts of the block type, and the carousel settings come
+      along when the carousel is one of them, both read from the form of the block
+      (func/GetBlockLayouts), so a default carousel is set here like a default scroll
+      snap. Every field shows whatever the layout: the toggle of fields/layout.yml
+      belongs to the forms of the blocks, which override these defaults.
+
       Not translated: how a block looks is not language content, so the file stays
       whole instead of being split per locale the way data/footer.yml is.
 
@@ -59,12 +65,26 @@
           {{- end -}}
         {{- end -}}
       {{- end }}
+      {{- /* The layouts and the carousel of this block type, as its form offers them;
+             options given as a map, so the layout hides none of its siblings */ -}}
+      {{- $own := partialCached "admin/func/GetBlockLayouts.html" $name $name -}}
+      {{- $fields := slice -}}
+      {{- range $ui -}}
+        {{- if and (eq (printf "%v" .) "layout") $own.layouts -}}
+          {{- $fields = $fields | append (dict "layout" (dict "options" $own.layouts)) -}}
+        {{- else -}}
+          {{- $fields = $fields | append . -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if $own.carousel -}}
+        {{- $fields = $fields | append "carousel" -}}
+      {{- end }}
       {{ partial "admin/widgets/object.js" (dict
         "label" $label
         "name" $name
         "i18n" false
         "collapsed" $collapsed
-        "fields" (slice (dict "ui" (dict "fields" $ui "collapsed" $collapsed)))
+        "fields" (slice (dict "ui" (dict "fields" $fields "collapsed" $collapsed)))
       ) }},
     {{- end }}
   {{- if $cloudcannon }}

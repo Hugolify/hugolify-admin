@@ -1,0 +1,47 @@
+{{/* GetBlockLayouts
+     The layouts a block type offers, and whether its form has the carousel
+     settings, read from the block's own fields (admin/blocks/fields/), so that
+     admin/datas/blocks.yml offers the choices of the form of the block.
+
+     - . (string) block name, as admin/func/GetBlockNames.html gives it, e.g.
+       "testimonials" or "selected-posts"
+
+     Returns: dict
+       layouts  (slice) empty when the block has no layout field
+       carousel (bool)
+*/}}
+
+{{- $file := printf "admin/blocks/fields/%s.html" . -}}
+{{- $context := . -}}
+{{- if strings.HasPrefix . "selected-" -}}
+  {{- $file = "admin/blocks/fields/selected.html" -}}
+  {{- $context = strings.TrimPrefix "selected-" . -}}
+{{- end -}}
+
+{{- $layouts := slice -}}
+{{- $carousel := false -}}
+{{- if templates.Exists (printf "partials/%s" $file) -}}
+  {{- range partial $file $context -}}
+    {{- if reflect.IsMap . -}}
+      {{- with .ui -}}
+        {{- $ui := . -}}
+        {{- if reflect.IsMap $ui -}}
+          {{- $ui = $ui.fields -}}
+        {{- end -}}
+        {{- range $ui -}}
+          {{- if reflect.IsMap . -}}
+            {{- with .layout -}}
+              {{- if reflect.IsSlice . -}}
+                {{- $layouts = . -}}
+              {{- end -}}
+            {{- end -}}
+          {{- else if eq (printf "%v" .) "carousel" -}}
+            {{- $carousel = true -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (dict "layouts" $layouts "carousel" $carousel) -}}
