@@ -3,10 +3,11 @@
   {{- $name = dict "name" "column_simple" "nameOverride" "column" }}
 {{- end }}
 
-{{- $args := dict 
+{{- /* No default: the block templates of the theme fall back to 1 column, and a
+  CMS default would be written into every new block */ -}}
+{{- $args := dict
   "label" (i18n "admin.fields.column.label")
   "name" "column"
-  "default" 1
   "min" 1
   "max" 2
   "step" 1

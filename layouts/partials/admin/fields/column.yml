@@ -1,8 +1,9 @@
-{{- $args := dict 
+{{- /* No default: the block templates of the theme fall back to 3 columns, and
+  a CMS default would be written into every new block and into data/blocks.yml */ -}}
+{{- $args := dict
   "label" (i18n "admin.fields.column.label")
   "hint" (i18n "admin.fields.column.hint")
   "name" "column"
-  "default" 3
   "min" 1
   "max" 6
   "step" 1
