@@ -2,3 +2,4 @@
 {{ partialCached "admin/cms/netlifycms/widgets/uuid.js" . }}
 {{- end }}
 {{ partialCached "admin/cms/decapcms/widgets/nested_path.js" . }}
+{{ partialCached "admin/cms/decapcms/widgets/select_toggle.js" . }}

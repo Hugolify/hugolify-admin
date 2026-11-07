@@ -276,6 +276,16 @@ params:
           - medium
           - large
           - full
+      layout:
+        # Sibling fields a block shows with some layouts only, the others listed
+        # being hidden (Decap and Sveltia CMS): choosing a layout reveals the
+        # fields that override the defaults of data/blocks.yml. A site's map is
+        # merged key by key into this one, false shows every field.
+        toggle:
+          carousel:
+            - carousel
+          grid:
+            - scrollsnap
       theme:
         options:
           - light
