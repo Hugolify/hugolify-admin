@@ -5,10 +5,11 @@
 {{- $subfields := slice "surtitle" "title" "text" "cta" "image" $video $itemUi -}}
 {{- $items := dict "items" (dict "name" "pushes" "fields" $subfields) -}}
 {{- $layouts := partial "admin/func/GetLayouts.html" (slice "grid" "carousel") -}}
-{{- $uiFields := site.Params.admin.fields.ui.fields | append (dict "layout" $layouts) "column_simple" "scrollsnap" -}}
+{{- $uiFields := site.Params.admin.fields.ui.fields | append (dict "layout" $layouts) "scrollsnap" -}}
 {{- if in $layouts "carousel" -}}
   {{- $uiFields = $uiFields | append "carousel" -}}
 {{- end -}}
+{{- $uiFields = $uiFields | append "column_simple" -}}
 {{- $ui := dict "ui" $uiFields -}}
 
 {{- $fields := slice 
