@@ -1,0 +1,10 @@
+{{/* Stock Keeping Unit of the product, the seller's own reference, shown on
+     the page and published as sku in the structured data. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.sku.label")
+  "hint" (i18n "admin.fields.sku.hint")
+  "name" "sku"
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

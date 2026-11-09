@@ -381,6 +381,9 @@ admin:
         other: Bloky
     body:
       label: Tělo
+    brand:
+      hint: "Značka produktu, zveřejněná ve strukturovaných datech."
+      label: "Značka"
     breakpoints:
       hint: Velikost obrazovky
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'Souřadnice JSON. např. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Značky
+    mpn:
+      hint: "Katalogové číslo výrobce (Manufacturer Part Number), zveřejněné ve strukturovaných datech."
+      label: "MPN"
     newsletter:
       form:
         label: Formulář
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: Pouze pokud již máte uložená místa (toto deaktivuje značku níže)
       label: Zobrazit všechna registrovaná místa?
+    sku:
+      hint: "Interní kód produktu (Stock Keeping Unit), zobrazený na stránce a zveřejněný ve strukturovaných datech."
+      label: "SKU"
     slogan:
       hint: "Slogan subjektu, zveřejněný ve strukturovaných datech."
       label: "Slogan"

@@ -381,6 +381,9 @@ admin:
         other: Bloki
     body:
       label: Treść
+    brand:
+      hint: "Marka produktu, publikowana w danych strukturalnych."
+      label: "Marka"
     breakpoints:
       hint: Rozmiar ekranu
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'Współrzędne JSON. np. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Znaczniki
+    mpn:
+      hint: "Numer katalogowy producenta (Manufacturer Part Number), publikowany w danych strukturalnych."
+      label: "MPN"
     newsletter:
       form:
         label: Formularz
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: Tylko jeśli masz już zapisane miejsca (spowoduje to wyłączenie znacznika poniżej)
       label: Pokaż wszystkie zarejestrowane miejsca?
+    sku:
+      hint: "Wewnętrzny kod produktu (Stock Keeping Unit), wyświetlany na stronie i publikowany w danych strukturalnych."
+      label: "SKU"
     slogan:
       hint: "Hasło podmiotu, publikowane w danych strukturalnych."
       label: "Slogan"

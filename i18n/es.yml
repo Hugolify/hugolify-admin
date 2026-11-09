@@ -381,6 +381,9 @@ admin:
         other: Bloques
     body:
       label: Cuerpo del texto
+    brand:
+      hint: "Marca del producto, publicada en los datos estructurados."
+      label: "Marca"
     breakpoints:
       hint: Tamaño de pantalla
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'Coordenadas JSON. p. ej. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Marcadores
+    mpn:
+      hint: "Referencia del fabricante del producto (Manufacturer Part Number), publicada en los datos estructurados."
+      label: "MPN"
     newsletter:
       form:
         label: Formulario
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: Solo si ya tiene lugares guardados (esto deshabilitará el marcador a continuación)
       label: ¿Mostrar todos los lugares registrados?
+    sku:
+      hint: "Referencia interna del producto (Stock Keeping Unit), mostrada en la página y publicada en los datos estructurados."
+      label: "SKU"
     slogan:
       hint: "El eslogan de la entidad, publicado en los datos estructurados."
       label: "Eslogan"

@@ -381,6 +381,9 @@ admin:
         other: 块
     body:
       label: 正文
+    brand:
+      hint: "产品的品牌，发布在结构化数据中。"
+      label: "品牌"
     breakpoints:
       hint: 屏幕尺寸
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'JSON 坐标。例如： {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: 标记
+    mpn:
+      hint: "制造商零件编号（Manufacturer Part Number），发布在结构化数据中。"
+      label: "MPN"
     newsletter:
       form:
         label: 表单
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: 仅当您已保存地点时(这将禁用下面的标记)
       label: 显示所有已注册的地点?
+    sku:
+      hint: "产品的内部编码（Stock Keeping Unit），显示在页面上并发布在结构化数据中。"
+      label: "SKU"
     slogan:
       hint: "机构的口号，发布在结构化数据中。"
       label: "口号"

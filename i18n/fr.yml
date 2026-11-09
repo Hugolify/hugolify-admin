@@ -383,6 +383,9 @@ admin:
         other: Blocs
     body:
       label: Corps du texte
+    brand:
+      hint: "Marque du produit, publiée dans les données structurées."
+      label: "Marque"
     breakpoints:
       hint: Dimension de l’écran
       label:
@@ -758,6 +761,9 @@ admin:
     markers:
       hint: 'Coordonnées JSON. p. ex. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Marqueurs
+    mpn:
+      hint: "Référence fabricant du produit (Manufacturer Part Number), publiée dans les données structurées."
+      label: "MPN"
     newsletter:
       form:
         label: Formulaire
@@ -969,6 +975,9 @@ admin:
     show_places:
       hint: "Uniquement si des lieux sont déjà enregistrés (cela désactive le marqueur ci-dessous)"
       label: Affiche tous les lieux ?
+    sku:
+      hint: "Référence interne du produit (Stock Keeping Unit), affichée sur la page et publiée dans les données structurées."
+      label: "SKU"
     slogan:
       hint: "La signature de la structure, publiée dans les données structurées."
       label: "Slogan"

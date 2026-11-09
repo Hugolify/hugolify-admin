@@ -1,0 +1,12 @@
+{{/* Brand of the product, published as its brand (a Brand of that name) in
+     the structured data. Left empty, the product has no brand: the site is
+     not taken for it, a shop selling other makers' products not being their
+     brand. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.brand.label")
+  "hint" (i18n "admin.fields.brand.hint")
+  "name" "brand"
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

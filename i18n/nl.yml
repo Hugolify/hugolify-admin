@@ -381,6 +381,9 @@ admin:
         other: Blokken
     body:
       label: Inhoud
+    brand:
+      hint: "Merk van het product, gepubliceerd in de gestructureerde gegevens."
+      label: "Merk"
     breakpoints:
       hint: Schermgrootte
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'JSON-coördinaten. bv. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Markeringen
+    mpn:
+      hint: "Artikelnummer van de fabrikant (Manufacturer Part Number), gepubliceerd in de gestructureerde gegevens."
+      label: "MPN"
     newsletter:
       form:
         label: Formulier
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: Alleen als u al locaties hebt opgeslagen (dit schakelt de onderstaande markering uit)
       label: Alle geregistreerde locaties tonen?
+    sku:
+      hint: "Interne productreferentie (Stock Keeping Unit), getoond op de pagina en gepubliceerd in de gestructureerde gegevens."
+      label: "SKU"
     slogan:
       hint: "De slogan van de organisatie, gepubliceerd in de gestructureerde gegevens."
       label: "Slogan"

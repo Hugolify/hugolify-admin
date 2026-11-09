@@ -381,6 +381,9 @@ admin:
         other: 블록
     body:
       label: 본문
+    brand:
+      hint: "제품의 브랜드로, 구조화된 데이터에 게시됩니다."
+      label: "브랜드"
     breakpoints:
       hint: 화면 크기
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'JSON 좌표. 예: {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: 마커
+    mpn:
+      hint: "제조업체 부품 번호(Manufacturer Part Number)로, 구조화된 데이터에 게시됩니다."
+      label: "MPN"
     newsletter:
       form:
         label: 양식
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: 이미 저장된 장소가 있는 경우에만 (아래 마커가 비활성화됩니다)
       label: 등록된 모든 장소 표시?
+    sku:
+      hint: "제품의 내부 관리 코드(Stock Keeping Unit)로, 페이지에 표시되고 구조화된 데이터에 게시됩니다."
+      label: "SKU"
     slogan:
       hint: "조직의 슬로건으로, 구조화된 데이터에 게시됩니다."
       label: "슬로건"

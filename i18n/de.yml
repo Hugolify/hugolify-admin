@@ -381,6 +381,9 @@ admin:
         other: Blöcke
     body:
       label: Textkörper
+    brand:
+      hint: "Marke des Produkts, in den strukturierten Daten veröffentlicht."
+      label: "Marke"
     breakpoints:
       hint: Bildschirmgröße
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'JSON-Koordinaten. z. B. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Markierungen
+    mpn:
+      hint: "Herstellernummer des Produkts (Manufacturer Part Number), in den strukturierten Daten veröffentlicht."
+      label: "MPN"
     newsletter:
       form:
         label: Formular
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: Nur wenn Sie bereits gespeicherte Orte haben (dies deaktiviert den Marker unten)
       label: Alle registrierten Orte anzeigen?
+    sku:
+      hint: "Interne Artikelnummer des Produkts (Stock Keeping Unit), auf der Seite angezeigt und in den strukturierten Daten veröffentlicht."
+      label: "SKU"
     slogan:
       hint: "Der Slogan des Unternehmens, in den strukturierten Daten veröffentlicht."
       label: "Slogan"

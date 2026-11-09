@@ -381,6 +381,9 @@ admin:
         other: Blok
     body:
       label: Isi
+    brand:
+      hint: "Merek produk, dipublikasikan dalam data terstruktur."
+      label: "Merek"
     breakpoints:
       hint: Ukuran layar
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'Koordinat JSON. mis. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Penanda
+    mpn:
+      hint: "Nomor komponen produsen (Manufacturer Part Number), dipublikasikan dalam data terstruktur."
+      label: "MPN"
     newsletter:
       form:
         label: Formulir
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: Hanya jika Anda memiliki tempat yang sudah disimpan (ini akan menonaktifkan penanda di bawah)
       label: Tampilkan semua tempat terdaftar?
+    sku:
+      hint: "Kode internal produk (Stock Keeping Unit), ditampilkan di halaman dan dipublikasikan dalam data terstruktur."
+      label: "SKU"
     slogan:
       hint: "Slogan badan usaha, dipublikasikan dalam data terstruktur."
       label: "Slogan"

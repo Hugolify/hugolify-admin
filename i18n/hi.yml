@@ -381,6 +381,9 @@ admin:
         other: ब्लॉक
     body:
       label: मुख्य भाग
+    brand:
+      hint: "उत्पाद का ब्रांड, संरचित डेटा में प्रकाशित।"
+      label: "ब्रांड"
     breakpoints:
       hint: स्क्रीन का आकार
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'JSON निर्देशांक। उदा. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: मार्कर
+    mpn:
+      hint: "निर्माता का पार्ट नंबर (Manufacturer Part Number), संरचित डेटा में प्रकाशित।"
+      label: "MPN"
     newsletter:
       form:
         label: फॉर्म
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: केवल तभी जब आपके पास पहले से ही स्थान सहेजे गए हों (यह नीचे दिए गए मार्कर को अक्षम कर देगा)
       label: सभी पंजीकृत स्थान दिखाएं?
+    sku:
+      hint: "उत्पाद का आंतरिक कोड (Stock Keeping Unit), पेज पर दिखाया गया और संरचित डेटा में प्रकाशित।"
+      label: "SKU"
     slogan:
       hint: "संस्था का स्लोगन, संरचित डेटा में प्रकाशित।"
       label: "स्लोगन"

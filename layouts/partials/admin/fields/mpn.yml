@@ -1,0 +1,10 @@
+{{/* Manufacturer Part Number of the product, the maker's own reference,
+     published as mpn in the structured data. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.mpn.label")
+  "hint" (i18n "admin.fields.mpn.hint")
+  "name" "mpn"
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

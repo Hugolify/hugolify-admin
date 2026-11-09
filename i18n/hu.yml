@@ -381,6 +381,9 @@ admin:
         other: Blokkok
     body:
       label: Törzs
+    brand:
+      hint: "A termék márkája, a strukturált adatokban közzétéve."
+      label: "Márka"
     breakpoints:
       hint: Képernyőméret
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'JSON-koordináták. pl. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: Jelölők
+    mpn:
+      hint: "A gyártó cikkszáma (Manufacturer Part Number), a strukturált adatokban közzétéve."
+      label: "MPN"
     newsletter:
       form:
         label: Űrlap
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: Csak akkor, ha már vannak mentett helyei (ez letiltja az alábbi jelölőt)
       label: Összes regisztrált hely megjelenítése?
+    sku:
+      hint: "A termék belső cikkszáma (Stock Keeping Unit), az oldalon megjelenítve és a strukturált adatokban közzétéve."
+      label: "SKU"
     slogan:
       hint: "A szervezet szlogenje, a strukturált adatokban közzétéve."
       label: "Szlogen"

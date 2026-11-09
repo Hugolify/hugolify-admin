@@ -381,6 +381,9 @@ admin:
         other: Bloklar
     body:
       label: Gövde
+    brand:
+      hint: "Ürünün markası, yapılandırılmış verilerde yayımlanır."
+      label: "Marka"
     breakpoints:
       hint: Ekran boyutu
       label:
@@ -766,6 +769,9 @@ admin:
     markers:
       hint: 'JSON koordinatları. örn. {"coordinates":[44.8425666,-0.5737107]},{"coordinates":[45.8425666,1.5937107]},{"coordinates":[46.8425666,-0.5737107]}'
       label: İşaretçiler
+    mpn:
+      hint: "Üreticinin parça numarası (Manufacturer Part Number), yapılandırılmış verilerde yayımlanır."
+      label: "MPN"
     newsletter:
       form:
         label: Form
@@ -977,6 +983,9 @@ admin:
     show_places:
       hint: Sadece zaten kayıtlı yerleriniz varsa (bu aşağıdaki işaretçiyi devre dışı bırakır)
       label: Tüm kayıtlı yerleri göster?
+    sku:
+      hint: "Ürünün dahili stok kodu (Stock Keeping Unit), sayfada gösterilir ve yapılandırılmış verilerde yayımlanır."
+      label: "SKU"
     slogan:
       hint: "Kuruluşun sloganı, yapılandırılmış verilerde yayımlanır."
       label: "Slogan"

@@ -381,6 +381,9 @@ admin:
         other: Lohkot
     body:
       label: Runko
+    brand:
+      hint: "Tuotteen tuotemerkki, julkaistaan rakenteisessa datassa."
+      label: "Tuotemerkki"
     breakpoints:
       hint: Näytön koko
       label:
@@ -762,6 +765,9 @@ admin:
       label: Merkit
     name:
       label: Nimi
+    mpn:
+      hint: "Valmistajan tuotenumero (Manufacturer Part Number), julkaistaan rakenteisessa datassa."
+      label: "MPN"
     newsletter:
       form:
         label: Lomake
@@ -975,6 +981,9 @@ admin:
         Vain jos sinulla on jo tallennettuja paikkoja (tämä poistaa alla olevan
         merkin käytöstä)
       label: Näytä kaikki rekisteröidyt paikat?
+    sku:
+      hint: "Tuotteen sisäinen tunnus (Stock Keeping Unit), näytetään sivulla ja julkaistaan rakenteisessa datassa."
+      label: "SKU"
     slogan:
       hint: "Organisaation iskulause, julkaistaan rakenteisessa datassa."
       label: "Iskulause"
