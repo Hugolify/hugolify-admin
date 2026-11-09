@@ -5,7 +5,7 @@
      from the theme, func/GetSchemaEnumerations.html. The same in every
      language. */}}
 {{- $options := slice "NewCondition" "RefurbishedCondition" "UsedCondition" "DamagedCondition" -}}
-{{- if templates.Exists "partials/func/GetSchemaEnumerations.html" -}}
+{{- if templates.Exists "_partials/func/GetSchemaEnumerations.html" -}}
   {{- $options = (partial "func/GetSchemaEnumerations.html").condition -}}
 {{- end -}}
 

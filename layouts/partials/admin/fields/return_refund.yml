@@ -2,7 +2,7 @@
      FullRefund… — published as refundType. Options come from the theme,
      func/GetSchemaEnumerations.html. */}}
 {{- $options := slice "FullRefund" "ExchangeRefund" "StoreCreditRefund" -}}
-{{- if templates.Exists "partials/func/GetSchemaEnumerations.html" -}}
+{{- if templates.Exists "_partials/func/GetSchemaEnumerations.html" -}}
   {{- $options = (partial "func/GetSchemaEnumerations.html").refund_type -}}
 {{- end -}}
 

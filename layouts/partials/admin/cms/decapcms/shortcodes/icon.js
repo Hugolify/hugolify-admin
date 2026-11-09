@@ -4,7 +4,7 @@
 {{- $cdn := "https://cdn.jsdelivr.net/npm" -}}
 {{- $icon := "(obj.icon || '')" -}}
 {{- $preview := printf "<code>${%s}</code>" $icon -}}
-{{- if templates.Exists "partials/icon.html" -}}
+{{- if templates.Exists "_partials/icon.html" -}}
   {{- $src := printf "${%[1]s.startsWith('brand:') ? '%[2]s/simple-icons/icons/' + %[1]s.slice(6) : '%[2]s/lucide-static/icons/' + %[1]s}.svg" $icon $cdn -}}
   {{- $preview = printf `<img src="%s" alt="${%s}" width="24" height="24">` $src $icon -}}
 {{- end -}}

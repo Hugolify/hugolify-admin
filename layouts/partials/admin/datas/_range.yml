@@ -8,7 +8,7 @@
     {{- end }}
   {{- end }}
   {{- $datafile := print "admin/datas/" $file ".yml" }}
-  {{- if templates.Exists ( printf "partials/%s" $datafile ) }}
+  {{- if templates.Exists ( printf "_partials/%s" $datafile ) }}
     {{ partial $datafile $values }},
   {{- end }}
 {{- end }}

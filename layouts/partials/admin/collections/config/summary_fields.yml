@@ -2,6 +2,6 @@
   share the `view` object with the other view options */}}
 {{- $cms := site.Params.admin.cms | default "decapcms" -}}
 {{- $file := print "admin/cms/" $cms "/collection/config/summary_fields.yml" -}}
-{{- if templates.Exists ( printf "partials/%s" $file ) -}}
+{{- if templates.Exists ( printf "_partials/%s" $file ) -}}
   {{ partial $file . }}
 {{- end -}}

@@ -1,7 +1,7 @@
 {{- with . -}}
   {{ range . }}
     {{ $file := print "admin/blocks/types/" . ".yml" }}
-    {{ if templates.Exists ( printf "partials/%s" $file ) }}
+    {{ if templates.Exists ( printf "_partials/%s" $file ) }}
       {{ partial $file . }},
     {{ else }}
       {{ if isset site.Params.admin.blocks . }}

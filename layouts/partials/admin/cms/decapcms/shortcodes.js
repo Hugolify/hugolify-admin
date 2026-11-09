@@ -2,7 +2,7 @@
 {{- if ne $shortcodes false -}}
   {{- range $shortcodes -}}
     {{- $partial := print "admin/cms/decapcms/shortcodes/" . ".js" -}}
-    {{- if templates.Exists ( printf "partials/%s" $partial ) -}}
+    {{- if templates.Exists ( printf "_partials/%s" $partial ) -}}
       {{ partial $partial . }}
     {{- end -}}
   {{- end -}}

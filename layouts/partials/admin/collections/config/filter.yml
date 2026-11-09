@@ -1,9 +1,9 @@
 {{- $cms := site.Params.admin.cms | default "decapcms" -}}
 {{- $file := print "admin/cms/" $cms "/collection/config/filter.yml" -}}
-{{- if templates.Exists ( printf "partials/%s" $file ) -}}
+{{- if templates.Exists ( printf "_partials/%s" $file ) -}}
   {{- $args := . -}}
   {{- $index_file := print "admin/cms/" $cms "/collection/config/index_file.yml" -}}
-  {{- if and (not $args) (not (templates.Exists (printf "partials/%s" $index_file))) -}}
+  {{- if and (not $args) (not (templates.Exists (printf "_partials/%s" $index_file))) -}}
     {{- $args = dict "field" "isIndex" "value" false -}}
   {{- end -}}
   {{ partial $file $args }}

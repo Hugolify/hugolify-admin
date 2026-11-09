@@ -4,7 +4,7 @@ collections_config: {
 
       {{/* Get arguments */}}
       {{ $file := print "admin/collections/types/" $collection ".yml" }}
-      {{ if templates.Exists ( printf "partials/%s" $file ) }}
+      {{ if templates.Exists ( printf "_partials/%s" $file ) }}
         {{ $file = partial $file $collection }}
       {{ else }}
         {{ $file = partial "admin/collections/types/_placeholder.yml" $collection }}

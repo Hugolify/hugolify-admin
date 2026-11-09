@@ -11,7 +11,7 @@
 
   {{/* Get field file */}}
   {{ $file := print "admin/fields/" $f.field ".yml" }}
-  {{ if templates.Exists (printf "partials/%s" $file) }}
+  {{ if templates.Exists (printf "_partials/%s" $file) }}
     {{/* A field without values gets its own name, like in _range.yml */}}
     {{ $file = partial $file (cond (not $f.values) $f.field $f.values) }}
   {{ end }}
@@ -39,7 +39,7 @@
               {{/* A field written as a map carries its own arguments, like in _range.yml */}}
               {{- $sub := partial "admin/func/GetFieldNameValues.html" . }}
               {{- $file := print "admin/fields/" $sub.field ".yml" }}
-              {{- if templates.Exists ( printf "partials/%s" $file ) }}
+              {{- if templates.Exists ( printf "_partials/%s" $file ) }}
                 {{- $r := partial $file (cond (not $sub.values) $sub.field $sub.values) }}
                 {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $r) }}
                 {{- range $k, $v := $datas }}

@@ -9,7 +9,7 @@
      widgets/select.js). The same in every language. */}}
 {{- $options := slice "InStock" "OutOfStock" "PreOrder" -}}
 {{- $starts := slice "PreOrder" -}}
-{{- if templates.Exists "partials/func/GetSchemaEnumerations.html" -}}
+{{- if templates.Exists "_partials/func/GetSchemaEnumerations.html" -}}
   {{- $enums := partial "func/GetSchemaEnumerations.html" -}}
   {{- $options = $enums.availability -}}
   {{- $starts = $enums.starts -}}

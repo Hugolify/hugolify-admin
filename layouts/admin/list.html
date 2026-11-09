@@ -13,7 +13,7 @@
     {{- end }}
     {{- with site.Params.admin.cms }}
       {{- $file := print "admin/cms/" . "/styles.html" -}}
-      {{- if templates.Exists ( printf "partials/%s" $file ) }}
+      {{- if templates.Exists ( printf "_partials/%s" $file ) }}
         {{ partialCached $file . }}
       {{ end -}}
     {{- end -}}
@@ -22,7 +22,7 @@
     {{- partial "admin/identity/scripts.html" -}}
     {{- with site.Params.admin.cms }}
       {{- $file := print "admin/cms/" . "/scripts.html" -}}
-      {{- if templates.Exists ( printf "partials/%s" $file ) }}
+      {{- if templates.Exists ( printf "_partials/%s" $file ) }}
         {{ partial $file }}
       {{ end -}}
     {{- end -}}

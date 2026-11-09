@@ -33,7 +33,7 @@
       {{/* Get block fields file */}}
       {{ $fields_file := print "admin/blocks/fields/" $block_key ".html" }}
       {{ $fields := (index site.Params.admin.blocks .).fields }}
-      {{ if and (not $fields) (templates.Exists ( printf "partials/%s" $fields_file )) }}
+      {{ if and (not $fields) (templates.Exists ( printf "_partials/%s" $fields_file )) }}
         {{ $fields = partial $fields_file $block_value }}
       {{ end }}
 
@@ -55,7 +55,7 @@
             {{ $values := $f.values }}
 
             {{- $file := print "admin/fields/" $field ".yml" }}
-            {{- if templates.Exists ( printf "partials/%s" $file ) }}
+            {{- if templates.Exists ( printf "_partials/%s" $file ) }}
               {{/* A field without values gets its own name, like in _range.yml */}}
               {{- $r := partial $file (cond (not $values) $field $values) }}
               {{ $datas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $r) }}

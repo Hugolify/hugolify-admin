@@ -3,7 +3,7 @@
   {{- $jobs_categories = dict "relation" (dict "collection" "jobs_categories" "multiple" true) -}}
 {{- else -}}
   {{- $partial := "admin/fields/jobs_categories.yml" -}}
-  {{- if templates.Exists (printf "partials/%s" $partial) }}
+  {{- if templates.Exists (printf "_partials/%s" $partial) }}
     {{- $jobs_categories = "jobs_categories" -}}
   {{- end -}}
 {{- end -}}

@@ -126,7 +126,7 @@
   {{ with $modes }}
   modes: {{ . }},
   {{ end }}
-  {{- if and (ne $editorComponents true) (templates.Exists (print "partials/admin/cms/" $cms "/shortcodes.js")) }}
+  {{- if and (ne $editorComponents true) (templates.Exists (print "_partials/admin/cms/" $cms "/shortcodes.js")) }}
   editor_components: {{ if not $editorComponents }}[]{{ else }}{{ $editorComponents }}{{ end }},
   {{- end }}
   required: {{ $required }},

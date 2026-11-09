@@ -2,7 +2,7 @@
 {{- $fields := partial "admin/func/GetFieldsCollection.html" .collection -}}
 {{- $file := print "admin/cms/" $cms "/collection/config/fields.yml" -}}
 
-{{ if templates.Exists ( printf "partials/%s" $file ) }}
+{{ if templates.Exists ( printf "_partials/%s" $file ) }}
   {{ partial $file $fields -}}
 {{ else }}
 fields: [

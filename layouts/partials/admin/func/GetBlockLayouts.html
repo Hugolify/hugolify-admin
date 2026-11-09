@@ -20,7 +20,7 @@
 
 {{- $layouts := slice -}}
 {{- $carousel := false -}}
-{{- if templates.Exists (printf "partials/%s" $file) -}}
+{{- if templates.Exists (printf "_partials/%s" $file) -}}
   {{- range partial $file $context -}}
     {{- if reflect.IsMap . -}}
       {{- with .ui -}}

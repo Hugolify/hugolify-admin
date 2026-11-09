@@ -7,7 +7,7 @@
     {{- $f := partial "admin/func/GetFieldNameValues.html" . }}
     {{- with $f.field }}
       {{- $file := print "admin/fields/" . ".yml" }}
-      {{- if templates.Exists ( printf "partials/%s" $file ) }}
+      {{- if templates.Exists ( printf "_partials/%s" $file ) }}
         {{- if or (ne . "id") (and (eq site.Params.admin.config.id true) (eq . "id")) }}
           {{- $context := cond (not $f.values) $f.field $f.values }}
           {{- $r := partial $file $context }}

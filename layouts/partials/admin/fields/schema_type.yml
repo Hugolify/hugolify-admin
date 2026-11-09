@@ -13,7 +13,7 @@
      cannot drift apart.
 */}}
 {{- $options := slice "Organization" -}}
-{{- if templates.Exists "partials/func/GetSchemaTypes.html" -}}
+{{- if templates.Exists "_partials/func/GetSchemaTypes.html" -}}
   {{- $options = (partial "func/GetSchemaTypes.html").all -}}
 {{- end -}}
 

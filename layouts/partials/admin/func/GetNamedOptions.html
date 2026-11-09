@@ -21,12 +21,12 @@
 */}}
 
 {{- $codes := slice -}}
-{{- if templates.Exists (printf "partials/%s" .codes) -}}
+{{- if templates.Exists (printf "_partials/%s" .codes) -}}
   {{- $codes = partial .codes -}}
 {{- end -}}
 {{- $codes = partial "admin/func/GetOptions.html" (dict "field" .field "options" $codes) -}}
 
-{{- $naming := templates.Exists (printf "partials/%s" .name) -}}
+{{- $naming := templates.Exists (printf "_partials/%s" .name) -}}
 {{- $named := slice -}}
 {{- $labels := dict -}}
 {{- range $codes -}}

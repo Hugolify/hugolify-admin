@@ -8,7 +8,7 @@
 {{- range $collection, $value := $collections -}}
   {{- if .enable -}}
     {{ $file := print "admin/collections/fields/" $collection ".fields.default.html" }}
-    {{ if templates.Exists (printf "partials/%s" $file) }}
+    {{ if templates.Exists (printf "_partials/%s" $file) }}
       {{ $collectionFields := partialCached $file . }}
       {{ range $collectionFields }}
         {{ $fields = $fields | append . }}
@@ -31,7 +31,7 @@
 {{ $blocks := site.Params.admin.blocks.enable }}
 {{ range $blocks }}
   {{ $file := print "admin/blocks/types/" . ".yml" }}
-  {{ if templates.Exists (printf "partials/%s" $file) }}
+  {{ if templates.Exists (printf "_partials/%s" $file) }}
     {{ $blockFile := partialCached $file . }}
     
     {{/* Remove last comma and get all selected */}}
@@ -58,7 +58,7 @@
   {{ $f := partial "admin/func/GetFieldNameValues.html" . }}
 
   {{ $fileField := print "admin/fields/" $f.field ".yml" }}
-  {{ if templates.Exists (printf "partials/%s" $fileField) }}
+  {{ if templates.Exists (printf "_partials/%s" $fileField) }}
     {{/* A field without values gets its own name, like in _range.yml */}}
     {{ $file := partial $fileField (cond (not $f.values) $f.field $f.values) }}
 
@@ -79,7 +79,7 @@
       {{/* Process all subfields from this field */}}
       {{ range $datas.fields }}
         {{ $subField := print "admin/fields/" . ".yml" }}
-        {{ if templates.Exists (printf "partials/%s" $subField) }}
+        {{ if templates.Exists (printf "_partials/%s" $subField) }}
           {{ $subFile := partial $subField }}
           {{ $subDatas := partial "func/ConvertJSObjectToJson.html" (htmlUnescape $subFile) }}
           {{ range $subDatas }}

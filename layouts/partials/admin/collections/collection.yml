@@ -16,7 +16,7 @@
 {{- $collection := . -}}
 {{- $file := print "admin/collections/types/" $collection ".yml" -}}
 {{- $out := "" -}}
-{{- if templates.Exists ( printf "partials/%s" $file ) -}}
+{{- if templates.Exists ( printf "_partials/%s" $file ) -}}
   {{- $out = partialCached $file $collection -}}
 {{- else -}}
   {{- $out = partial "admin/collections/types/_placeholder.yml" $collection -}}
