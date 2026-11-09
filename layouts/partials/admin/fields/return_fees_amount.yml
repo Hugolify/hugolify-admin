@@ -1,0 +1,12 @@
+{{/* What a return costs the customer, stored as `fees_amount`, published
+     as returnShippingFeesAmount in the currency of the site. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.return_fees_amount.label")
+  "hint" (i18n "admin.fields.return_fees_amount.hint")
+  "name" "fees_amount"
+  "i18n" "duplicate"
+  "min" 0
+  "value_type" "float"
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

@@ -363,6 +363,22 @@ admin:
       label: 著者
     autoplay:
       label: 自動再生
+    availability:
+      hint: "ページに表示され、構造化データに掲載されます。空欄の場合は在庫あり。"
+      label: "在庫状況"
+      options:
+        InStock: "在庫あり"
+        LimitedAvailability: "在庫わずか"
+        MadeToOrder: "受注生産"
+        PreOrder: "予約受付中"
+        PreSale: "先行販売"
+        BackOrder: "入荷待ち"
+        OutOfStock: "在庫切れ"
+        SoldOut: "完売"
+        Discontinued: "販売終了"
+    availability_starts:
+      hint: "予約、先行販売、入荷待ちの場合のみ：商品が入手可能になる日。"
+      label: "販売開始日"
     awards:
       hint: "組織の受賞歴やランキング（例：Chambers Global 2026）。構造化データに掲載されます。"
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: デスクトップに表示される列の数
       label: 列
+    condition:
+      hint: "構造化データに掲載されます。"
+      label: "商品の状態"
+      options:
+        NewCondition: "新品"
+        RefurbishedCondition: "整備済み"
+        UsedCondition: "中古"
+        DamagedCondition: "傷あり"
     contact:
       label:
         one: 連絡先
@@ -473,6 +497,9 @@ admin:
         label: 緯度
       lng:
         label: 経度
+    countries:
+      hint: "適用される国。"
+      label: "国"
     credit:
       label: クレジット
     cta:
@@ -495,6 +522,8 @@ admin:
       label: 日付
       sale: 販売日
       to: 終了日
+    days_range:
+      pattern: "日数（2）または範囲（2-4）"
     description:
       hint:
         タブ、検索結果、SMS/メッセージ/ソーシャルネットワークの
@@ -642,6 +671,10 @@ admin:
         large: 大
         medium: 中
         small: 小
+    gtin:
+      hint: "商品のバーコードの下にある番号（EAN-13、UPC、EAN-8、ITF-14）。構造化データに掲載され、Google はこれで店舗をまたいで商品を識別します。"
+      label: "GTIN（JAN / EAN / UPC）"
+      pattern: "スペースなしの 8、12、13 または 14 桁の数字"
     head_office:
       hint: "住所と連絡先が組織のものとなる拠点。下で入力する場合は空欄のままにします。"
       label: "本社"
@@ -826,6 +859,9 @@ admin:
       hint: '例: 300000（300,000€の場合）'
       label: 価格
       sold: 販売価格
+    price_valid_until:
+      hint: "価格の最終日（セールの終了日など）。価格の下に表示され、その日まで構造化データに掲載されます。"
+      label: "価格の有効期限"
     quote:
       label: 引用
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: 賃貸済み?
     required:
       label: 必須
+    return_category:
+      label: "ポリシーの種類"
+      options:
+        MerchantReturnFiniteReturnWindow: "一定の日数以内の返品"
+        MerchantReturnUnlimitedWindow: "期限なしの返品"
+        MerchantReturnNotPermitted: "返品不可"
+    return_days:
+      label: "返品期限（日数）"
+    return_fees:
+      label: "返品手数料"
+      options:
+        FreeReturn: "無料"
+        ReturnFeesCustomerResponsibility: "お客様負担"
+        ReturnShippingFees: "定額の返送料"
+    return_fees_amount:
+      hint: "サイトの通貨で。"
+      label: "返送料の金額"
+    return_methods:
+      label: "返品方法"
+      options:
+        ReturnByMail: "郵送"
+        ReturnInStore: "店頭"
+        ReturnAtKiosk: "端末または受取場所"
+    return_policy:
+      hint: "オンライン販売サイト向け：全商品に共通で一度だけ設定し、構造化データに掲載されます。種類と国、説明ページ、またはその両方を入力してください。"
+      label: "返品ポリシー"
+    return_refund:
+      label: "返金"
+      options:
+        FullRefund: "全額返金"
+        ExchangeRefund: "交換"
+        StoreCreditRefund: "ストアクレジット"
+    return_url:
+      hint: "サイト内のパス（/terms/）または完全な URL。"
+      label: "返品ポリシーのページ"
     same_as:
       hint: "他のサイトで組織を紹介しているページ（Chambers や Legal 500 のプロフィール、Wikipedia、Wikidata など）。検索エンジンが組織を識別する助けになります。ソーシャルプロフィールはソーシャルメニューから取得されます。"
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "シェア画像"
         hint: "SNSやメッセージアプリのプレビュー画像。1200 × 630 px にトリミングされます。空欄の場合はメイン画像を使用します。"
+    shipping:
+      hint: "オンライン販売サイト向け：全商品に共通で一度だけ設定し、構造化データに掲載されます。"
+      label: "配送"
+    shipping_free_above:
+      hint: "この注文金額から送料が無料になります。"
+      label: "送料無料になる金額"
+    shipping_handling:
+      hint: "注文が出荷されるまで：数値（1）または範囲（0-2）。"
+      label: "発送準備日数"
+    shipping_price:
+      hint: "送料無料の場合は 0。"
+      label: "料金"
+    shipping_rates:
+      hint: "配送先ごとに 1 つ。国を指定しない料金はすべての地域に適用されます。"
+      label:
+        one: "配送料金"
+        other: "配送料金"
+    shipping_transit:
+      hint: "数値（2）または範囲（2-4）。"
+      label: "配送日数"
     show_more:
       hint: より多くのアイテムを表示するボタンを表示
       label: もっと見る?

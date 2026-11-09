@@ -7,7 +7,18 @@
   {{- $products_tags = dict "relation" (dict "collection" "products_tags" "multiple" true) -}}
 {{- end -}}
 
-{{- return slice 
+{{- $offer := dict "offer" (dict "fields" (slice
+  "price"
+  "discount"
+  "price_valid_until"
+  "hide_price"
+  "availability"
+  "availability_starts"
+  "condition"
+  "text"
+)) -}}
+
+{{- return slice
   "id" 
   "is_not_index" 
   "draft" 
@@ -15,9 +26,10 @@
   "title_page" 
   "description"
   "brand"
+  "gtin"
   "mpn"
   "sku"
-  "offer"
+  $offer
   $products_categories 
   $products_tags 
   "featured_image" 

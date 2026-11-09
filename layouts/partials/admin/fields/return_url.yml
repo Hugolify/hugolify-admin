@@ -1,0 +1,12 @@
+{{/* Page describing the return policy — the terms of sale, say — stored as
+     `url` and published as merchantReturnLink: a path of the site (/cgv/)
+     or a full URL. Google takes it alone as well, for a policy too involved
+     to sum up. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.return_url.label")
+  "hint" (i18n "admin.fields.return_url.hint")
+  "name" "url"
+  "i18n" "duplicate"
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

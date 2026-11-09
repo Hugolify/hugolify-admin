@@ -1,0 +1,10 @@
+{{/* Days a customer has to return an item, stored as `days`, published as
+     merchantReturnDays: required by Google for a finite return window. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.return_days.label")
+  "name" "days"
+  "i18n" "duplicate"
+  "min" 1
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

@@ -363,6 +363,22 @@ admin:
       label: Autor
     autoplay:
       label: Autoplay
+    availability:
+      hint: "Auf der Seite angezeigt und in den strukturierten Daten veröffentlicht. Leer: auf Lager."
+      label: "Verfügbarkeit"
+      options:
+        InStock: "Auf Lager"
+        LimitedAvailability: "Begrenzter Bestand"
+        MadeToOrder: "Auf Bestellung gefertigt"
+        PreOrder: "Vorbestellung"
+        PreSale: "Vorverkauf"
+        BackOrder: "Nachbestellt"
+        OutOfStock: "Nicht auf Lager"
+        SoldOut: "Ausverkauft"
+        Discontinued: "Nicht mehr erhältlich"
+    availability_starts:
+      hint: "Vorbestellung, Vorverkauf oder Nachbestellung: der Tag, ab dem das Produkt verfügbar ist."
+      label: "Verfügbar ab"
     awards:
       hint: "Seine Auszeichnungen und Rankings (z. B. Chambers Global 2026), in den strukturierten Daten veröffentlicht."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Anzahl der auf dem Desktop angezeigten Spalten
       label: Spalte
+    condition:
+      hint: "In den strukturierten Daten veröffentlicht."
+      label: "Zustand"
+      options:
+        NewCondition: "Neu"
+        RefurbishedCondition: "Generalüberholt"
+        UsedCondition: "Gebraucht"
+        DamagedCondition: "Beschädigt"
     contact:
       label:
         one: Kontakt
@@ -473,6 +497,9 @@ admin:
         label: Breitengrad
       lng:
         label: Längengrad
+    countries:
+      hint: "Die Länder, für die es gilt."
+      label: "Länder"
     credit:
       label: Bildnachweis
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Datum
       sale: Verkaufsdatum
       to: Bis
+    days_range:
+      pattern: "Eine Anzahl von Tagen (2) oder ein Bereich (2-4)"
     description:
       hint:
         Wird in Tabs, Suchergebnissen und in SMS/Nachrichten/Sozialen Netzwerken
@@ -642,6 +671,10 @@ admin:
         large: Groß
         medium: Mittel
         small: Klein
+    gtin:
+      hint: "Die Nummer unter dem Strichcode des Produkts (EAN-13, UPC, EAN-8, ITF-14), in den strukturierten Daten veröffentlicht: Google erkennt das Produkt daran shopübergreifend."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 oder 14 Ziffern, ohne Leerzeichen"
     head_office:
       hint: "Der Ort, dessen Adresse und Kontakt die des Unternehmens sind. Leer lassen, um sie unten einzutragen."
       label: "Hauptsitz"
@@ -826,6 +859,9 @@ admin:
       hint: 'z. B. 300000 (für 300.000 €)'
       label: Preis
       sold: Verkaufspreis
+    price_valid_until:
+      hint: "Der letzte Tag des Preises, etwa das Ende einer Aktion: unter dem Preis angezeigt und bis dahin in den strukturierten Daten veröffentlicht."
+      label: "Preis gültig bis"
     quote:
       label: Zitat
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: Vermietet?
     required:
       label: Erforderlich
+    return_category:
+      label: "Art der Richtlinie"
+      options:
+        MerchantReturnFiniteReturnWindow: "Rückgabe innerhalb einer festen Anzahl von Tagen"
+        MerchantReturnUnlimitedWindow: "Rückgabe ohne Frist"
+        MerchantReturnNotPermitted: "Keine Rückgabe"
+    return_days:
+      label: "Rückgabefrist in Tagen"
+    return_fees:
+      label: "Rückgabekosten"
+      options:
+        FreeReturn: "Kostenlos"
+        ReturnFeesCustomerResponsibility: "Vom Kunden zu tragen"
+        ReturnShippingFees: "Pauschale Rücksendekosten"
+    return_fees_amount:
+      hint: "In der Währung der Website."
+      label: "Höhe der Rücksendekosten"
+    return_methods:
+      label: "Rückgabewege"
+      options:
+        ReturnByMail: "Per Post"
+        ReturnInStore: "Im Geschäft"
+        ReturnAtKiosk: "An einem Automaten oder Abholpunkt"
+    return_policy:
+      hint: "Für eine Website mit Onlineverkauf: einmal für alle Produkte angegeben, in den strukturierten Daten veröffentlicht. Art und Länder angeben, die beschreibende Seite oder beides."
+      label: "Rückgaberichtlinie"
+    return_refund:
+      label: "Erstattung"
+      options:
+        FullRefund: "Volle Erstattung"
+        ExchangeRefund: "Umtausch"
+        StoreCreditRefund: "Gutschrift"
+    return_url:
+      hint: "Ein Pfad der Website (/agb/) oder eine vollständige URL."
+      label: "Seite der Rückgaberichtlinie"
     same_as:
       hint: "Seiten, die das Unternehmen auf anderen Websites beschreiben: ein Profil bei Chambers oder Legal 500, Wikipedia, Wikidata… Sie helfen Suchmaschinen, es zu erkennen. Die Social-Media-Profile kommen aus dem Social-Media-Menü."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "Vorschaubild"
         hint: "Bild der Vorschau in sozialen Netzwerken und Messengern, zugeschnitten auf 1200 × 630 px. Leer lassen, um das Hauptbild zu verwenden."
+    shipping:
+      hint: "Für eine Website mit Onlineverkauf: einmal für alle Produkte angegeben, in den strukturierten Daten veröffentlicht."
+      label: "Versand"
+    shipping_free_above:
+      hint: "Bestellwert, ab dem der Versand kostenlos ist."
+      label: "Kostenlos ab"
+    shipping_handling:
+      hint: "Bis eine Bestellung versandt wird: eine Zahl (1) oder ein Bereich (0-2)."
+      label: "Bearbeitungszeit in Tagen"
+    shipping_price:
+      hint: "0 für kostenlosen Versand."
+      label: "Preis"
+    shipping_rates:
+      hint: "Einer pro Ziel. Ein Tarif ohne Länder gilt überall."
+      label:
+        one: "Versandtarif"
+        other: "Versandtarife"
+    shipping_transit:
+      hint: "Eine Zahl (2) oder ein Bereich (2-4)."
+      label: "Lieferzeit in Tagen"
     show_more:
       hint: Zeigt einen Button zum Anzeigen weiterer Elemente
       label: Mehr anzeigen?

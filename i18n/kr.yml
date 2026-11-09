@@ -363,6 +363,22 @@ admin:
       label: 저자
     autoplay:
       label: 자동 재생
+    availability:
+      hint: "페이지에 표시되고 구조화된 데이터에 게시됩니다. 비워 두면 재고 있음."
+      label: "재고 상태"
+      options:
+        InStock: "재고 있음"
+        LimitedAvailability: "재고 한정"
+        MadeToOrder: "주문 제작"
+        PreOrder: "예약 주문"
+        PreSale: "사전 판매"
+        BackOrder: "입고 대기"
+        OutOfStock: "재고 없음"
+        SoldOut: "품절"
+        Discontinued: "단종"
+    availability_starts:
+      hint: "예약 주문, 사전 판매 또는 입고 대기인 경우: 제품을 구매할 수 있게 되는 날."
+      label: "구매 가능일"
     awards:
       hint: "조직의 수상 내역과 순위(예: Chambers Global 2026)로, 구조화된 데이터에 게시됩니다."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: 데스크탑에 표시되는 열 수
       label: 열
+    condition:
+      hint: "구조화된 데이터에 게시됩니다."
+      label: "상품 상태"
+      options:
+        NewCondition: "새 상품"
+        RefurbishedCondition: "리퍼비시"
+        UsedCondition: "중고"
+        DamagedCondition: "손상"
     contact:
       label:
         one: 연락처
@@ -473,6 +497,9 @@ admin:
         label: 위도
       lng:
         label: 경도
+    countries:
+      hint: "적용되는 국가."
+      label: "국가"
     credit:
       label: 크레딧
     cta:
@@ -495,6 +522,8 @@ admin:
       label: 날짜
       sale: 판매일
       to: 종료일
+    days_range:
+      pattern: "일수(2) 또는 범위(2-4)"
     description:
       hint:
         탭, 검색 결과 및 SMS/메시지/소셜 네트워크
@@ -642,6 +671,10 @@ admin:
         large: 큰
         medium: 중간
         small: 작은
+    gtin:
+      hint: "제품 바코드 아래의 번호(EAN-13, UPC, EAN-8, ITF-14)로, 구조화된 데이터에 게시됩니다. Google은 이 번호로 여러 쇼핑몰에서 제품을 식별합니다."
+      label: "GTIN (EAN / UPC)"
+      pattern: "공백 없이 8, 12, 13 또는 14자리 숫자"
     head_office:
       hint: "주소와 연락처가 조직의 것인 장소. 아래에 직접 입력하려면 비워 두세요."
       label: "본사"
@@ -826,6 +859,9 @@ admin:
       hint: '예: 300000 (300,000€의 경우)'
       label: 가격
       sold: 판매 가격
+    price_valid_until:
+      hint: "가격의 마지막 날(예: 할인 종료일). 가격 아래에 표시되고 그날까지 구조화된 데이터에 게시됩니다."
+      label: "가격 유효 기간"
     quote:
       label: 인용
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: 임대됨?
     required:
       label: 필수
+    return_category:
+      label: "정책 유형"
+      options:
+        MerchantReturnFiniteReturnWindow: "정해진 기간 내 반품"
+        MerchantReturnUnlimitedWindow: "기간 제한 없는 반품"
+        MerchantReturnNotPermitted: "반품 불가"
+    return_days:
+      label: "반품 기간(일)"
+    return_fees:
+      label: "반품 비용"
+      options:
+        FreeReturn: "무료"
+        ReturnFeesCustomerResponsibility: "고객 부담"
+        ReturnShippingFees: "고정 반품 배송비"
+    return_fees_amount:
+      hint: "사이트 통화 기준."
+      label: "반품 배송비 금액"
+    return_methods:
+      label: "반품 방법"
+      options:
+        ReturnByMail: "우편"
+        ReturnInStore: "매장"
+        ReturnAtKiosk: "키오스크 또는 픽업 장소"
+    return_policy:
+      hint: "온라인 판매 사이트용: 모든 제품에 대해 한 번만 입력하며 구조화된 데이터에 게시됩니다. 유형과 국가, 정책을 설명하는 페이지 또는 둘 다 입력하세요."
+      label: "반품 정책"
+    return_refund:
+      label: "환불"
+      options:
+        FullRefund: "전액 환불"
+        ExchangeRefund: "교환"
+        StoreCreditRefund: "적립금"
+    return_url:
+      hint: "사이트 경로(/terms/) 또는 전체 URL."
+      label: "반품 정책 페이지"
     same_as:
       hint: "다른 사이트에서 조직을 소개하는 페이지(Chambers 또는 Legal 500 프로필, 위키백과, 위키데이터 등). 검색엔진이 조직을 식별하는 데 도움이 됩니다. 소셜 프로필은 소셜 메뉴에서 가져옵니다."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "공유 이미지"
         hint: "소셜 네트워크와 메신저 미리보기 이미지로, 1200 × 630 px로 잘립니다. 비워 두면 주요 이미지를 사용합니다."
+    shipping:
+      hint: "온라인 판매 사이트용: 모든 제품에 대해 한 번만 입력하며 구조화된 데이터에 게시됩니다."
+      label: "배송"
+    shipping_free_above:
+      hint: "이 주문 금액부터 배송이 무료입니다."
+      label: "무료 배송 기준 금액"
+    shipping_handling:
+      hint: "주문이 출고되기 전까지: 숫자(1) 또는 범위(0-2)."
+      label: "출고 준비 기간(일)"
+    shipping_price:
+      hint: "무료 배송은 0."
+      label: "가격"
+    shipping_rates:
+      hint: "목적지마다 하나씩. 국가가 없는 요금은 모든 지역에 적용됩니다."
+      label:
+        one: "배송비"
+        other: "배송비"
+    shipping_transit:
+      hint: "숫자(2) 또는 범위(2-4)."
+      label: "배송 기간(일)"
     show_more:
       hint: 더 많은 항목을 보기 위한 버튼 표시
       label: 더 보기?

@@ -363,6 +363,22 @@ admin:
       label: Author
     autoplay:
       label: Autoplay
+    availability:
+      hint: "Shown on the page and published in the structured data. Empty: in stock."
+      label: "Availability"
+      options:
+        InStock: "In stock"
+        LimitedAvailability: "Limited stock"
+        MadeToOrder: "Made to order"
+        PreOrder: "Pre-order"
+        PreSale: "Pre-sale"
+        BackOrder: "Back order"
+        OutOfStock: "Out of stock"
+        SoldOut: "Sold out"
+        Discontinued: "Discontinued"
+    availability_starts:
+      hint: "Pre-order, pre-sale or back order: the day the product becomes available."
+      label: "Available from"
     awards:
       hint: "Its distinctions and rankings (e.g. Chambers Global 2026), published in the structured data."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Number of columns displayed on desktop
       label: Column
+    condition:
+      hint: "Published in the structured data."
+      label: "Condition"
+      options:
+        NewCondition: "New"
+        RefurbishedCondition: "Refurbished"
+        UsedCondition: "Used"
+        DamagedCondition: "Damaged"
     contact:
       label:
         one: Contact
@@ -473,6 +497,9 @@ admin:
         label: Latitude
       lng:
         label: Longitude
+    countries:
+      hint: "The countries it applies to."
+      label: "Countries"
     credit:
       label: Credit
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Date
       sale: Sale date
       to: To
+    days_range:
+      pattern: "A number of days (2) or a range (2-4)"
     description:
       hint:
         Displayed in tabs, search results, and in SMS/Messages/Social networks
@@ -636,6 +665,10 @@ admin:
         large: Large
         medium: Medium
         small: Small
+    gtin:
+      hint: "The number under the product’s barcode (EAN-13, UPC, EAN-8, ITF-14), published in the structured data: Google matches the product on it across shops."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 or 14 digits, without spaces"
     head_office:
       hint: "The place whose address and contact are the company’s. Leave empty to fill them in below."
       label: "Head office"
@@ -820,6 +853,9 @@ admin:
       hint: 'e.g. 300000 (for 300 000 €)'
       label: Price
       sold: Sale price
+    price_valid_until:
+      hint: "The last day of the price, the end of a sale for instance: shown under the price and published in the structured data until then."
+      label: "Price valid until"
     quote:
       label: Quote
     ratio:
@@ -901,6 +937,41 @@ admin:
       label: Rent?
     required:
       label: Required
+    return_category:
+      label: "Kind of policy"
+      options:
+        MerchantReturnFiniteReturnWindow: "Returns within a set number of days"
+        MerchantReturnUnlimitedWindow: "Returns with no time limit"
+        MerchantReturnNotPermitted: "No returns"
+    return_days:
+      label: "Return window, in days"
+    return_fees:
+      label: "Return fees"
+      options:
+        FreeReturn: "Free"
+        ReturnFeesCustomerResponsibility: "Paid by the customer"
+        ReturnShippingFees: "Fixed return shipping fee"
+    return_fees_amount:
+      hint: "In the currency of the site."
+      label: "Return shipping fee"
+    return_methods:
+      label: "Return methods"
+      options:
+        ReturnByMail: "By mail"
+        ReturnInStore: "In store"
+        ReturnAtKiosk: "At a kiosk or pick-up point"
+    return_policy:
+      hint: "For a site selling online: given once for all products, published in the structured data. Fill in its kind and countries, the page describing it, or both."
+      label: "Return policy"
+    return_refund:
+      label: "Refund"
+      options:
+        FullRefund: "Full refund"
+        ExchangeRefund: "Exchange"
+        StoreCreditRefund: "Store credit"
+    return_url:
+      hint: "A path of the site (/terms/) or a full URL."
+      label: "Return policy page"
     same_as:
       hint: "Pages that describe the organization on other sites: a Chambers or Legal 500 profile, Wikipedia, Wikidata… They help search engines recognize it. The social profiles come from the social menu."
       label:
@@ -971,6 +1042,26 @@ admin:
       image:
         label: "Sharing image"
         hint: "Image of the previews on social networks and messaging apps, cropped to 1200 × 630 px. Leave empty to use the featured image."
+    shipping:
+      hint: "For a site selling online: given once for all products, published in the structured data."
+      label: "Shipping"
+    shipping_free_above:
+      hint: "Order amount from which shipping is free."
+      label: "Free from"
+    shipping_handling:
+      hint: "Before an order ships: a number (1) or a range (0-2)."
+      label: "Handling time, in days"
+    shipping_price:
+      hint: "0 for free shipping."
+      label: "Price"
+    shipping_rates:
+      hint: "One per destination. A rate without countries applies everywhere."
+      label:
+        one: "Shipping rate"
+        other: "Shipping rates"
+    shipping_transit:
+      hint: "A number (2) or a range (2-4)."
+      label: "Transit time, in days"
     show_more:
       hint: Shows a button to see more items
       label: Show more?

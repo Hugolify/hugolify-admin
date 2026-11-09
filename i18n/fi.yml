@@ -363,6 +363,22 @@ admin:
       label: Tekijä
     autoplay:
       label: Automaattinen käynnistys
+    availability:
+      hint: "Näytetään sivulla ja julkaistaan rakenteisessa datassa. Tyhjä: varastossa."
+      label: "Saatavuus"
+      options:
+        InStock: "Varastossa"
+        LimitedAvailability: "Rajoitettu saatavuus"
+        MadeToOrder: "Valmistetaan tilauksesta"
+        PreOrder: "Ennakkotilaus"
+        PreSale: "Ennakkomyynti"
+        BackOrder: "Jälkitoimitus"
+        OutOfStock: "Loppu varastosta"
+        SoldOut: "Loppuunmyyty"
+        Discontinued: "Poistunut valikoimasta"
+    availability_starts:
+      hint: "Ennakkotilaus, ennakkomyynti tai jälkitoimitus: päivä, jona tuote tulee saataville."
+      label: "Saatavilla alkaen"
     awards:
       hint: "Organisaation palkinnot ja rankingit (esim. Chambers Global 2026), julkaistaan rakenteisessa datassa."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Desktopilla näytettävien sarakkeiden määrä
       label: Sarake
+    condition:
+      hint: "Julkaistaan rakenteisessa datassa."
+      label: "Kunto"
+      options:
+        NewCondition: "Uusi"
+        RefurbishedCondition: "Kunnostettu"
+        UsedCondition: "Käytetty"
+        DamagedCondition: "Vaurioitunut"
     contact:
       label:
         one: Yhteystieto
@@ -473,6 +497,9 @@ admin:
         label: Leveysaste
       lng:
         label: Pituusaste
+    countries:
+      hint: "Maat, joita se koskee."
+      label: "Maat"
     credit:
       label: Credit
     cta:
@@ -493,6 +520,8 @@ admin:
       label: Päivämäärä
       sale: Myynnin pvm
       to: Päättyen
+    days_range:
+      pattern: "Päivien määrä (2) tai väli (2-4)"
     description:
       hint:
         Näytetään välilehdissä, hakutuloksissa ja tekstiviestien/viestien/sosiaalisten
@@ -642,6 +671,10 @@ admin:
         large: Suuri
         medium: Keskikokoinen
         small: Pieni
+    gtin:
+      hint: "Tuotteen viivakoodin alla oleva numero (EAN-13, UPC, EAN-8, ITF-14), julkaistaan rakenteisessa datassa: Google tunnistaa tuotteen sen avulla eri kaupoissa."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 tai 14 numeroa ilman välilyöntejä"
     head_office:
       hint: "Paikka, jonka osoite ja yhteystiedot ovat organisaation. Jätä tyhjäksi ja täytä ne alla."
       label: "Pääkonttori"
@@ -822,6 +855,9 @@ admin:
       hint: 'esim. 300000 (300 000 €)'
       label: Hinta
       sold: Myyntihinta
+    price_valid_until:
+      hint: "Hinnan viimeinen päivä, esimerkiksi kampanjan loppu: näytetään hinnan alla ja julkaistaan rakenteisessa datassa siihen asti."
+      label: "Hinta voimassa saakka"
     quote:
       label: Lainaus
     ratio:
@@ -903,6 +939,41 @@ admin:
       label: Vuokra?
     required:
       label: Vaadittu
+    return_category:
+      label: "Ehtojen tyyppi"
+      options:
+        MerchantReturnFiniteReturnWindow: "Rajattu palautusaika"
+        MerchantReturnUnlimitedWindow: "Rajaton palautusaika"
+        MerchantReturnNotPermitted: "Ei palautuksia"
+    return_days:
+      label: "Palautusaika päivinä"
+    return_fees:
+      label: "Palautuskulut"
+      options:
+        FreeReturn: "Maksuton"
+        ReturnFeesCustomerResponsibility: "Asiakas maksaa"
+        ReturnShippingFees: "Kiinteä palautusmaksu"
+    return_fees_amount:
+      hint: "Sivuston valuutassa."
+      label: "Palautusmaksun määrä"
+    return_methods:
+      label: "Palautustavat"
+      options:
+        ReturnByMail: "Postitse"
+        ReturnInStore: "Myymälässä"
+        ReturnAtKiosk: "Automaatissa tai noutopisteessä"
+    return_policy:
+      hint: "Verkossa myyvälle sivustolle: annetaan kerran kaikille tuotteille ja julkaistaan rakenteisessa datassa. Täytä tyyppi ja maat, kuvaava sivu tai molemmat."
+      label: "Palautusehdot"
+    return_refund:
+      label: "Hyvitys"
+      options:
+        FullRefund: "Täysi hyvitys"
+        ExchangeRefund: "Vaihto"
+        StoreCreditRefund: "Myymälähyvitys"
+    return_url:
+      hint: "Sivuston polku (/ehdot/) tai koko URL-osoite."
+      label: "Palautusehtojen sivu"
     same_as:
       hint: "Sivut, jotka kuvaavat organisaatiota muilla sivustoilla: Chambers- tai Legal 500 -profiili, Wikipedia, Wikidata… Ne auttavat hakukoneita tunnistamaan sen. Some-profiilit tulevat somevalikosta."
       label:
@@ -973,6 +1044,26 @@ admin:
       image:
         label: "Jaettava kuva"
         hint: "Kuva esikatseluissa sosiaalisessa mediassa ja viestisovelluksissa, rajattuna kokoon 1200 × 630 px. Jätä tyhjäksi, niin käytetään pääkuvaa."
+    shipping:
+      hint: "Verkossa myyvälle sivustolle: annetaan kerran kaikille tuotteille ja julkaistaan rakenteisessa datassa."
+      label: "Toimitus"
+    shipping_free_above:
+      hint: "Tilaussumma, josta alkaen toimitus on maksuton."
+      label: "Maksuton alkaen"
+    shipping_handling:
+      hint: "Ennen kuin tilaus lähtee: luku (1) tai väli (0-2)."
+      label: "Käsittelyaika päivinä"
+    shipping_price:
+      hint: "0 maksuttomalle toimitukselle."
+      label: "Hinta"
+    shipping_rates:
+      hint: "Yksi kohdetta kohden. Hinta ilman maita koskee kaikkia."
+      label:
+        one: "Toimitushinta"
+        other: "Toimitushinnat"
+    shipping_transit:
+      hint: "Luku (2) tai väli (2-4)."
+      label: "Kuljetusaika päivinä"
     show_more:
       hint: Näyttää painikkeen nähdäksesi lisää kohteita
       label: Näytä lisää?

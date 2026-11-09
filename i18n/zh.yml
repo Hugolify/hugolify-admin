@@ -363,6 +363,22 @@ admin:
       label: 作者
     autoplay:
       label: 自动播放
+    availability:
+      hint: "显示在页面上并发布在结构化数据中。留空：有货。"
+      label: "库存状态"
+      options:
+        InStock: "有货"
+        LimitedAvailability: "库存有限"
+        MadeToOrder: "按订单生产"
+        PreOrder: "预订"
+        PreSale: "预售"
+        BackOrder: "补货中"
+        OutOfStock: "缺货"
+        SoldOut: "售罄"
+        Discontinued: "已停产"
+    availability_starts:
+      hint: "仅限预订、预售或补货：产品可供应的日期。"
+      label: "可供应日期"
     awards:
       hint: "机构获得的奖项和排名（例如 Chambers Global 2026），发布在结构化数据中。"
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: 桌面端显示的列数
       label: 列
+    condition:
+      hint: "发布在结构化数据中。"
+      label: "商品状况"
+      options:
+        NewCondition: "全新"
+        RefurbishedCondition: "翻新"
+        UsedCondition: "二手"
+        DamagedCondition: "有损坏"
     contact:
       label:
         one: 联系人
@@ -473,6 +497,9 @@ admin:
         label: 纬度
       lng:
         label: 经度
+    countries:
+      hint: "适用的国家/地区。"
+      label: "国家/地区"
     credit:
       label: 署名
     cta:
@@ -495,6 +522,8 @@ admin:
       label: 日期
       sale: 销售日期
       to: 到
+    days_range:
+      pattern: "天数（2）或范围（2-4）"
     description:
       hint:
         显示在标签页、搜索结果和短信/消息/社交网络
@@ -642,6 +671,10 @@ admin:
         large: 大
         medium: 中
         small: 小
+    gtin:
+      hint: "产品条形码下方的编号（EAN-13、UPC、EAN-8、ITF-14），发布在结构化数据中：Google 据此在不同商店间识别该产品。"
+      label: "GTIN（EAN / UPC）"
+      pattern: "8、12、13 或 14 位数字，不含空格"
     head_office:
       hint: "以其地址和联系方式作为机构信息的地点。留空则在下方填写。"
       label: "总部"
@@ -826,6 +859,9 @@ admin:
       hint: '例如: 300000(表示300 000 €)'
       label: 价格
       sold: 销售价格
+    price_valid_until:
+      hint: "价格的最后一天，例如促销结束日：显示在价格下方，并在此之前发布在结构化数据中。"
+      label: "价格有效期至"
     quote:
       label: 引用
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: 租赁?
     required:
       label: 必填
+    return_category:
+      label: "政策类型"
+      options:
+        MerchantReturnFiniteReturnWindow: "在规定天数内退货"
+        MerchantReturnUnlimitedWindow: "不限期退货"
+        MerchantReturnNotPermitted: "不接受退货"
+    return_days:
+      label: "退货期限（天）"
+    return_fees:
+      label: "退货费用"
+      options:
+        FreeReturn: "免费"
+        ReturnFeesCustomerResponsibility: "由顾客承担"
+        ReturnShippingFees: "固定退货运费"
+    return_fees_amount:
+      hint: "以网站货币计。"
+      label: "退货运费金额"
+    return_methods:
+      label: "退货方式"
+      options:
+        ReturnByMail: "邮寄"
+        ReturnInStore: "到店"
+        ReturnAtKiosk: "自助终端或取货点"
+    return_policy:
+      hint: "适用于在线销售的网站：为所有产品统一填写一次，发布在结构化数据中。填写其类型和国家/地区、描述该政策的页面，或两者都填。"
+      label: "退货政策"
+    return_refund:
+      label: "退款"
+      options:
+        FullRefund: "全额退款"
+        ExchangeRefund: "换货"
+        StoreCreditRefund: "店铺积分"
+    return_url:
+      hint: "网站路径（/terms/）或完整 URL。"
+      label: "退货政策页面"
     same_as:
       hint: "在其他网站上介绍机构的页面：Chambers 或 Legal 500 资料页、维基百科、维基数据等，可帮助搜索引擎识别机构。社交账号取自社交菜单。"
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "分享图片"
         hint: "社交网络和即时通讯应用预览中的图片，裁剪为 1200 × 630 px。留空则使用主图。"
+    shipping:
+      hint: "适用于在线销售的网站：为所有产品统一填写一次，发布在结构化数据中。"
+      label: "配送"
+    shipping_free_above:
+      hint: "达到此订单金额起免运费。"
+      label: "满额包邮"
+    shipping_handling:
+      hint: "订单发出前：一个数字（1）或一个范围（0-2）。"
+      label: "处理时间（天）"
+    shipping_price:
+      hint: "免运费请填 0。"
+      label: "价格"
+    shipping_rates:
+      hint: "每个目的地一项。未指定国家/地区的运费适用于所有地区。"
+      label:
+        one: "运费"
+        other: "运费"
+    shipping_transit:
+      hint: "一个数字（2）或一个范围（2-4）。"
+      label: "运输时间（天）"
     show_more:
       hint: 显示一个按钮以查看更多项目
       label: 显示更多?

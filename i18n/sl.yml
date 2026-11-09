@@ -363,6 +363,22 @@ admin:
       label: Avtor
     autoplay:
       label: Samodejno predvajanje
+    availability:
+      hint: "Prikazana na strani in objavljena v strukturiranih podatkih. Prazno: na zalogi."
+      label: "Razpoložljivost"
+      options:
+        InStock: "Na zalogi"
+        LimitedAvailability: "Omejena zaloga"
+        MadeToOrder: "Izdelano po naročilu"
+        PreOrder: "Prednaročilo"
+        PreSale: "Predprodaja"
+        BackOrder: "V ponovni dobavi"
+        OutOfStock: "Ni na zalogi"
+        SoldOut: "Razprodano"
+        Discontinued: "Ni več v prodaji"
+    availability_starts:
+      hint: "Prednaročilo, predprodaja ali ponovna dobava: dan, ko bo izdelek na voljo."
+      label: "Na voljo od"
     awards:
       hint: "Njena priznanja in uvrstitve (npr. Chambers Global 2026), objavljeni v strukturiranih podatkih."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Število stolpcev prikazanih na desktopu
       label: Stolpec
+    condition:
+      hint: "Objavljeno v strukturiranih podatkih."
+      label: "Stanje"
+      options:
+        NewCondition: "Novo"
+        RefurbishedCondition: "Obnovljeno"
+        UsedCondition: "Rabljeno"
+        DamagedCondition: "Poškodovano"
     contact:
       label:
         one: Stik
@@ -473,6 +497,9 @@ admin:
         label: Zemljepisna širina
       lng:
         label: Zemljepisna dolžina
+    countries:
+      hint: "Države, za katere velja."
+      label: "Države"
     credit:
       label: Zasluge
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Datum
       sale: Datum prodaje
       to: Do
+    days_range:
+      pattern: "Število dni (2) ali razpon (2-4)"
     description:
       hint:
         Prikazano v zavihkih, rezultatih iskanja in v predogledu SMS/Sporočil/Družbenih
@@ -642,6 +671,10 @@ admin:
         large: Veliko
         medium: Srednje
         small: Majhno
+    gtin:
+      hint: "Številka pod črtno kodo izdelka (EAN-13, UPC, EAN-8, ITF-14), objavljena v strukturiranih podatkih: Google po njej prepozna izdelek v različnih trgovinah."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 ali 14 števk, brez presledkov"
     head_office:
       hint: "Kraj, katerega naslov in kontakt sta naslov in kontakt organizacije. Pustite prazno, da ju vnesete spodaj."
       label: "Sedež"
@@ -826,6 +859,9 @@ admin:
       hint: 'npr. 300000 (za 300 000 €)'
       label: Cena
       sold: Prodajna cena
+    price_valid_until:
+      hint: "Zadnji dan cene, na primer konec akcije: prikazan pod ceno in do takrat objavljen v strukturiranih podatkih."
+      label: "Cena velja do"
     quote:
       label: Citat
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: Najem?
     required:
       label: Obvezno
+    return_category:
+      label: "Vrsta pravil"
+      options:
+        MerchantReturnFiniteReturnWindow: "Vračila v določenem številu dni"
+        MerchantReturnUnlimitedWindow: "Vračila brez časovne omejitve"
+        MerchantReturnNotPermitted: "Vračila niso mogoča"
+    return_days:
+      label: "Rok za vračilo v dneh"
+    return_fees:
+      label: "Stroški vračila"
+      options:
+        FreeReturn: "Brezplačno"
+        ReturnFeesCustomerResponsibility: "Na stroške kupca"
+        ReturnShippingFees: "Pavšalni stroški pošiljanja vračila"
+    return_fees_amount:
+      hint: "V valuti spletnega mesta."
+      label: "Znesek stroškov vračila"
+    return_methods:
+      label: "Načini vračila"
+      options:
+        ReturnByMail: "Po pošti"
+        ReturnInStore: "V trgovini"
+        ReturnAtKiosk: "Na avtomatu ali prevzemnem mestu"
+    return_policy:
+      hint: "Za spletno mesto s spletno prodajo: navedena enkrat za vse izdelke, objavljena v strukturiranih podatkih. Izpolnite vrsto in države, stran z opisom ali oboje."
+      label: "Pravila vračil"
+    return_refund:
+      label: "Povračilo"
+      options:
+        FullRefund: "Celotno povračilo"
+        ExchangeRefund: "Zamenjava"
+        StoreCreditRefund: "Dobropis"
+    return_url:
+      hint: "Pot spletnega mesta (/pogoji/) ali celoten URL."
+      label: "Stran s pravili vračil"
     same_as:
       hint: "Strani, ki organizacijo opisujejo na drugih spletnih mestih: profil pri Chambers ali Legal 500, Wikipedija, Wikipodatki… Iskalnikom pomagajo, da jo prepoznajo. Družbeni profili so vzeti iz menija družbenih omrežij."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "Slika za deljenje"
         hint: "Slika predogledov na družbenih omrežjih in v aplikacijah za sporočanje, obrezana na 1200 × 630 px. Pustite prazno, da se uporabi glavna slika."
+    shipping:
+      hint: "Za spletno mesto s spletno prodajo: navedena enkrat za vse izdelke, objavljena v strukturiranih podatkih."
+      label: "Dostava"
+    shipping_free_above:
+      hint: "Znesek naročila, od katerega je dostava brezplačna."
+      label: "Brezplačno od"
+    shipping_handling:
+      hint: "Preden naročilo odide: število (1) ali razpon (0-2)."
+      label: "Čas priprave v dneh"
+    shipping_price:
+      hint: "0 za brezplačno dostavo."
+      label: "Cena"
+    shipping_rates:
+      hint: "Ena na destinacijo. Tarifa brez držav velja povsod."
+      label:
+        one: "Tarifa dostave"
+        other: "Tarife dostave"
+    shipping_transit:
+      hint: "Število (2) ali razpon (2-4)."
+      label: "Čas prevoza v dneh"
     show_more:
       hint: Prikaže gumb za ogled več elementov
       label: Prikaži več?

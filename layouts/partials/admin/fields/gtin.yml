@@ -1,0 +1,17 @@
+{{/* GTIN of the product, the number under its barcode — EAN-8, UPC,
+     EAN-13, ITF-14 — published as gtin in the structured data: the
+     identifier Google matches a product on, across the shops selling it.
+     The same in every language. */}}
+{{ $regex := "^([0-9]{8}|[0-9]{12,14})$" }}
+{{ $message := i18n "admin.fields.gtin.pattern" }}
+{{ $pattern := dict "regex" $regex "message" $message }}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.gtin.label")
+  "hint" (i18n "admin.fields.gtin.hint")
+  "name" "gtin"
+  "i18n" "duplicate"
+  "pattern" $pattern
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

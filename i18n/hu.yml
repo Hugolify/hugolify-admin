@@ -363,6 +363,22 @@ admin:
       label: Szerző
     autoplay:
       label: Automatikus lejátszás
+    availability:
+      hint: "Az oldalon megjelenítve és a strukturált adatokban közzétéve. Üres: raktáron."
+      label: "Elérhetőség"
+      options:
+        InStock: "Raktáron"
+        LimitedAvailability: "Korlátozott készlet"
+        MadeToOrder: "Rendelésre készül"
+        PreOrder: "Előrendelés"
+        PreSale: "Elővétel"
+        BackOrder: "Utánrendelés alatt"
+        OutOfStock: "Nincs raktáron"
+        SoldOut: "Elfogyott"
+        Discontinued: "Kifutott"
+    availability_starts:
+      hint: "Előrendelés, elővétel vagy utánrendelés: a nap, amikortól a termék elérhető."
+      label: "Elérhető ettől"
     awards:
       hint: "A szervezet díjai és rangsorolásai (pl. Chambers Global 2026), a strukturált adatokban közzétéve."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Asztali nézetben megjelenített oszlopok száma
       label: Oszlop
+    condition:
+      hint: "A strukturált adatokban közzétéve."
+      label: "Állapot"
+      options:
+        NewCondition: "Új"
+        RefurbishedCondition: "Felújított"
+        UsedCondition: "Használt"
+        DamagedCondition: "Sérült"
     contact:
       label:
         one: Kapcsolat
@@ -473,6 +497,9 @@ admin:
         label: Szélesség
       lng:
         label: Hosszúság
+    countries:
+      hint: "Az érintett országok."
+      label: "Országok"
     credit:
       label: Hitel
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Dátum
       sale: Eladás dátuma
       to: Ig
+    days_range:
+      pattern: "Napok száma (2) vagy tartomány (2-4)"
     description:
       hint:
         Megjelenik a lapokon, a keresési eredményekben és az SMS/Üzenetek/Közösségi hálózatok előnézetében
@@ -642,6 +671,10 @@ admin:
         large: Nagy
         medium: Közepes
         small: Kicsi
+    gtin:
+      hint: "A termék vonalkódja alatti szám (EAN-13, UPC, EAN-8, ITF-14), a strukturált adatokban közzétéve: a Google ez alapján ismeri fel a terméket a különböző üzletekben."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 vagy 14 számjegy, szóköz nélkül"
     head_office:
       hint: "Az a hely, amelynek címe és elérhetősége a szervezeté. Hagyja üresen, ha alább adja meg őket."
       label: "Székhely"
@@ -826,6 +859,9 @@ admin:
       hint: 'pl. 300000 (300 000 Ft-ért)'
       label: Ár
       sold: Eladási ár
+    price_valid_until:
+      hint: "Az ár utolsó napja, például egy akció vége: az ár alatt megjelenítve és addig a strukturált adatokban közzétéve."
+      label: "Az ár érvényes eddig"
     quote:
       label: Idézet
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: Bérlés?
     required:
       label: Kötelező
+    return_category:
+      label: "Szabályzat típusa"
+      options:
+        MerchantReturnFiniteReturnWindow: "Visszaküldés meghatározott számú napon belül"
+        MerchantReturnUnlimitedWindow: "Visszaküldés időkorlát nélkül"
+        MerchantReturnNotPermitted: "Nincs visszaküldés"
+    return_days:
+      label: "Visszaküldési határidő napokban"
+    return_fees:
+      label: "Visszaküldési költségek"
+      options:
+        FreeReturn: "Ingyenes"
+        ReturnFeesCustomerResponsibility: "A vásárlót terheli"
+        ReturnShippingFees: "Fix visszaküldési szállítási díj"
+    return_fees_amount:
+      hint: "Az oldal pénznemében."
+      label: "A visszaküldési díj összege"
+    return_methods:
+      label: "Visszaküldési módok"
+      options:
+        ReturnByMail: "Postán"
+        ReturnInStore: "Az üzletben"
+        ReturnAtKiosk: "Automatánál vagy átvételi ponton"
+    return_policy:
+      hint: "Online értékesítő oldalhoz: egyszer, az összes termékre megadva, a strukturált adatokban közzétéve. Adja meg a típusát és az országokat, a leíró oldalt, vagy mindkettőt."
+      label: "Visszaküldési szabályzat"
+    return_refund:
+      label: "Visszatérítés"
+      options:
+        FullRefund: "Teljes visszatérítés"
+        ExchangeRefund: "Csere"
+        StoreCreditRefund: "Vásárlási jóváírás"
+    return_url:
+      hint: "Az oldal egy útvonala (/aszf/) vagy teljes URL."
+      label: "A visszaküldési szabályzat oldala"
     same_as:
       hint: "Oldalak, amelyek más webhelyeken írják le a szervezetet: Chambers- vagy Legal 500-profil, Wikipédia, Wikidata… Segítenek a keresőmotoroknak felismerni. A közösségi profilok a közösségi menüből származnak."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "Megosztott kép"
         hint: "A közösségi hálózatokon és üzenetküldőkben megjelenő előnézet képe, 1200 × 630 px-re vágva. Hagyja üresen a fő kép használatához."
+    shipping:
+      hint: "Online értékesítő oldalhoz: egyszer, az összes termékre megadva, a strukturált adatokban közzétéve."
+      label: "Szállítás"
+    shipping_free_above:
+      hint: "A rendelési összeg, amelytől a szállítás ingyenes."
+      label: "Ingyenes ettől"
+    shipping_handling:
+      hint: "Mielőtt a rendelés elindul: egy szám (1) vagy egy tartomány (0-2)."
+      label: "Feldolgozási idő napokban"
+    shipping_price:
+      hint: "0 az ingyenes szállításhoz."
+      label: "Ár"
+    shipping_rates:
+      hint: "Célállomásonként egy. Ország nélküli díj mindenhol érvényes."
+      label:
+        one: "Szállítási díj"
+        other: "Szállítási díjak"
+    shipping_transit:
+      hint: "Egy szám (2) vagy egy tartomány (2-4)."
+      label: "Szállítási idő napokban"
     show_more:
       hint: Megjelenít egy gombot további elemek megtekintéséhez
       label: Több mutatása?

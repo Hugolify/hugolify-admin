@@ -365,6 +365,22 @@ admin:
       label: Auteur
     autoplay:
       label: Autoplay
+    availability:
+      hint: "Affichée sur la page et publiée dans les données structurées. Vide : en stock."
+      label: "Disponibilité"
+      options:
+        InStock: "En stock"
+        LimitedAvailability: "Stock limité"
+        MadeToOrder: "Fabriqué à la commande"
+        PreOrder: "Précommande"
+        PreSale: "Prévente"
+        BackOrder: "En réapprovisionnement"
+        OutOfStock: "Rupture de stock"
+        SoldOut: "Épuisé"
+        Discontinued: "Plus commercialisé"
+    availability_starts:
+      hint: "Précommande, prévente ou réapprovisionnement : le jour où le produit sera disponible."
+      label: "Disponible à partir du"
     awards:
       hint: "Ses distinctions et classements (p. ex. Chambers Global 2026), publiés dans les données structurées."
       label:
@@ -457,6 +473,14 @@ admin:
     column:
       hint: Nombre de colonnes affichées sur ordinateur
       label: Colonne
+    condition:
+      hint: "Publié dans les données structurées."
+      label: "État"
+      options:
+        NewCondition: "Neuf"
+        RefurbishedCondition: "Reconditionné"
+        UsedCondition: "Occasion"
+        DamagedCondition: "Endommagé"
     contact:
       label:
         one: Contact
@@ -475,6 +499,9 @@ admin:
         label: Latitude
       lng:
         label: Longitude
+    countries:
+      hint: "Les pays concernés."
+      label: "Pays"
     credit:
       label: Crédit
     cta:
@@ -497,6 +524,8 @@ admin:
       label: Date
       sale: Date de vente
       to: Jusqu’au
+    days_range:
+      pattern: "Un nombre de jours (2) ou une fourchette (2-4)"
     description:
       hint: Affiché dans les onglets, les résultats de recherche et l’aperçu des SMS/messages/réseaux sociaux
       label: Description
@@ -636,6 +665,10 @@ admin:
         large: Large
         medium: Medium
         small: Small
+    gtin:
+      hint: "Le numéro sous le code-barres du produit (EAN-13, UPC, EAN-8, ITF-14), publié dans les données structurées : Google s’en sert pour reconnaître le produit d’une boutique à l’autre."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 ou 14 chiffres, sans espace"
     head_office:
       hint: "Le lieu dont l’adresse et le contact sont ceux de la structure. Laissez vide pour les saisir ci-dessous."
       label: "Siège"
@@ -818,6 +851,9 @@ admin:
       hint: 'p. ex. 300000 (pour 300 000 €)'
       label: Prix
       sold: Prix vendu
+    price_valid_until:
+      hint: "Le dernier jour du prix, la fin d’une promotion par exemple : affiché sous le prix et publié dans les données structurées jusqu’à cette date."
+      label: "Prix valable jusqu’au"
     quote:
       label: Citation
     ratio:
@@ -899,6 +935,41 @@ admin:
       label: Loué ?
     required:
       label: Requis
+    return_category:
+      label: "Type de politique"
+      options:
+        MerchantReturnFiniteReturnWindow: "Retours sous un nombre de jours défini"
+        MerchantReturnUnlimitedWindow: "Retours sans limite de durée"
+        MerchantReturnNotPermitted: "Retours non acceptés"
+    return_days:
+      label: "Délai de retour, en jours"
+    return_fees:
+      label: "Frais de retour"
+      options:
+        FreeReturn: "Gratuits"
+        ReturnFeesCustomerResponsibility: "À la charge du client"
+        ReturnShippingFees: "Frais de retour forfaitaires"
+    return_fees_amount:
+      hint: "Dans la devise du site."
+      label: "Montant des frais de retour"
+    return_methods:
+      label: "Modes de retour"
+      options:
+        ReturnByMail: "Par courrier"
+        ReturnInStore: "En magasin"
+        ReturnAtKiosk: "En borne ou point relais"
+    return_policy:
+      hint: "Pour un site qui vend en ligne : indiquée une fois pour tous les produits, publiée dans les données structurées. Renseigner son type et ses pays, la page qui la décrit, ou les deux."
+      label: "Politique de retour"
+    return_refund:
+      label: "Remboursement"
+      options:
+        FullRefund: "Remboursement intégral"
+        ExchangeRefund: "Échange"
+        StoreCreditRefund: "Avoir"
+    return_url:
+      hint: "Un chemin du site (/cgv/) ou une URL complète."
+      label: "Page de la politique de retour"
     same_as:
       hint: "Pages qui décrivent la structure sur d’autres sites : fiche Chambers ou Legal 500, Wikipédia, Wikidata… Elles aident les moteurs de recherche à la reconnaître. Les réseaux sociaux viennent du menu des réseaux sociaux."
       label:
@@ -969,6 +1040,26 @@ admin:
       image:
         label: "Image de partage"
         hint: "Image des aperçus sur les réseaux sociaux et les messageries, recadrée au format 1200 × 630 px. Laisser vide pour reprendre l’image principale."
+    shipping:
+      hint: "Pour un site qui vend en ligne : indiquée une fois pour tous les produits, publiée dans les données structurées."
+      label: "Livraison"
+    shipping_free_above:
+      hint: "Montant de commande à partir duquel la livraison est offerte."
+      label: "Offerte à partir de"
+    shipping_handling:
+      hint: "Avant l’expédition d’une commande : un nombre (1) ou une fourchette (0-2)."
+      label: "Délai de préparation, en jours"
+    shipping_price:
+      hint: "0 pour une livraison offerte."
+      label: "Prix"
+    shipping_rates:
+      hint: "Un par destination. Un tarif sans pays s’applique partout."
+      label:
+        one: "Tarif de livraison"
+        other: "Tarifs de livraison"
+    shipping_transit:
+      hint: "Un nombre (2) ou une fourchette (2-4)."
+      label: "Délai de transport, en jours"
     show_more:
       hint: Affiche un bouton pour voir plus d’éléments
       label: Plus d’items ?

@@ -363,6 +363,22 @@ admin:
       label: Forfatter
     autoplay:
       label: Autoplay
+    availability:
+      hint: "Vises på siden og publiseres i de strukturerte dataene. Tomt: på lager."
+      label: "Tilgjengelighet"
+      options:
+        InStock: "På lager"
+        LimitedAvailability: "Begrenset lager"
+        MadeToOrder: "Lages på bestilling"
+        PreOrder: "Forhåndsbestilling"
+        PreSale: "Forhåndssalg"
+        BackOrder: "Restordre"
+        OutOfStock: "Ikke på lager"
+        SoldOut: "Utsolgt"
+        Discontinued: "Utgått"
+    availability_starts:
+      hint: "Forhåndsbestilling, forhåndssalg eller restordre: dagen produktet blir tilgjengelig."
+      label: "Tilgjengelig fra"
     awards:
       hint: "Organisasjonens utmerkelser og rangeringer (f.eks. Chambers Global 2026), publisert i de strukturerte dataene."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Antall kolonner vist på desktop
       label: Kolonne
+    condition:
+      hint: "Publiseres i de strukturerte dataene."
+      label: "Tilstand"
+      options:
+        NewCondition: "Ny"
+        RefurbishedCondition: "Overhalt"
+        UsedCondition: "Brukt"
+        DamagedCondition: "Skadet"
     contact:
       label:
         one: Kontakt
@@ -473,6 +497,9 @@ admin:
         label: Breddegrad
       lng:
         label: Lengdegrad
+    countries:
+      hint: "Landene det gjelder."
+      label: "Land"
     credit:
       label: Kreditt
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Dato
       sale: Salgsdato
       to: Til
+    days_range:
+      pattern: "Et antall dager (2) eller et intervall (2-4)"
     description:
       hint:
         Vises i faner, søkeresultater og i forhåndsvisning av SMS/Meldinger/Sosiale nettverk
@@ -642,6 +671,10 @@ admin:
         large: Stor
         medium: Medium
         small: Liten
+    gtin:
+      hint: "Nummeret under produktets strekkode (EAN-13, UPC, EAN-8, ITF-14), publisert i de strukturerte dataene: Google kjenner igjen produktet med det på tvers av butikker."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 eller 14 sifre, uten mellomrom"
     head_office:
       hint: "Stedet der adressen og kontaktinformasjonen er organisasjonens. La stå tomt for å fylle dem ut nedenfor."
       label: "Hovedkontor"
@@ -826,6 +859,9 @@ admin:
       hint: 'f.eks. 300000 (for 300 000 kr)'
       label: Pris
       sold: Salgspris
+    price_valid_until:
+      hint: "Prisens siste dag, for eksempel slutten på et tilbud: vises under prisen og publiseres i de strukturerte dataene frem til da."
+      label: "Prisen gjelder til"
     quote:
       label: Sitat
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: Lei?
     required:
       label: Påkrevd
+    return_category:
+      label: "Type policy"
+      options:
+        MerchantReturnFiniteReturnWindow: "Retur innen et bestemt antall dager"
+        MerchantReturnUnlimitedWindow: "Retur uten tidsfrist"
+        MerchantReturnNotPermitted: "Ingen retur"
+    return_days:
+      label: "Returfrist i dager"
+    return_fees:
+      label: "Returkostnader"
+      options:
+        FreeReturn: "Gratis"
+        ReturnFeesCustomerResponsibility: "Betales av kunden"
+        ReturnShippingFees: "Fast returfraktgebyr"
+    return_fees_amount:
+      hint: "I nettstedets valuta."
+      label: "Beløp for returfrakt"
+    return_methods:
+      label: "Returmåter"
+      options:
+        ReturnByMail: "Per post"
+        ReturnInStore: "I butikk"
+        ReturnAtKiosk: "I automat eller på hentested"
+    return_policy:
+      hint: "For et nettsted som selger på nett: oppgis én gang for alle produkter og publiseres i de strukturerte dataene. Fyll inn type og land, siden som beskriver den, eller begge."
+      label: "Returpolicy"
+    return_refund:
+      label: "Refusjon"
+      options:
+        FullRefund: "Full refusjon"
+        ExchangeRefund: "Bytte"
+        StoreCreditRefund: "Tilgodelapp"
+    return_url:
+      hint: "En sti på nettstedet (/vilkar/) eller en fullstendig URL."
+      label: "Side for returpolicyen"
     same_as:
       hint: "Sider som beskriver organisasjonen på andre nettsteder: en profil hos Chambers eller Legal 500, Wikipedia, Wikidata… De hjelper søkemotorer å kjenne den igjen. De sosiale profilene hentes fra den sosiale menyen."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "Delingsbilde"
         hint: "Bilde i forhåndsvisninger på sosiale nettverk og i meldingsapper, beskåret til 1200 × 630 px. La stå tomt for å bruke hovedbildet."
+    shipping:
+      hint: "For et nettsted som selger på nett: oppgis én gang for alle produkter og publiseres i de strukturerte dataene."
+      label: "Frakt"
+    shipping_free_above:
+      hint: "Ordrebeløp fra hvilket frakten er gratis."
+      label: "Gratis fra"
+    shipping_handling:
+      hint: "Før en bestilling sendes: et tall (1) eller et intervall (0-2)."
+      label: "Behandlingstid i dager"
+    shipping_price:
+      hint: "0 for gratis frakt."
+      label: "Pris"
+    shipping_rates:
+      hint: "Én per destinasjon. En pris uten land gjelder overalt."
+      label:
+        one: "Fraktpris"
+        other: "Fraktpriser"
+    shipping_transit:
+      hint: "Et tall (2) eller et intervall (2-4)."
+      label: "Transporttid i dager"
     show_more:
       hint: Viser en knapp for å se flere elementer
       label: Vis mer?

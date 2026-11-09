@@ -363,6 +363,22 @@ admin:
       label: Autor
     autoplay:
       label: Autoodtwarzanie
+    availability:
+      hint: "Wyświetlana na stronie i publikowana w danych strukturalnych. Puste: dostępny."
+      label: "Dostępność"
+      options:
+        InStock: "Dostępny"
+        LimitedAvailability: "Ograniczona dostępność"
+        MadeToOrder: "Na zamówienie"
+        PreOrder: "Zamówienie przedpremierowe"
+        PreSale: "Przedsprzedaż"
+        BackOrder: "Oczekuje na dostawę"
+        OutOfStock: "Brak w magazynie"
+        SoldOut: "Wyprzedany"
+        Discontinued: "Wycofany"
+    availability_starts:
+      hint: "Zamówienie przedpremierowe, przedsprzedaż lub oczekiwanie na dostawę: dzień, od którego produkt będzie dostępny."
+      label: "Dostępny od"
     awards:
       hint: "Jego wyróżnienia i rankingi (np. Chambers Global 2026), publikowane w danych strukturalnych."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Liczba kolumn wyświetlanych na desktopie
       label: Kolumna
+    condition:
+      hint: "Publikowany w danych strukturalnych."
+      label: "Stan"
+      options:
+        NewCondition: "Nowy"
+        RefurbishedCondition: "Odnowiony"
+        UsedCondition: "Używany"
+        DamagedCondition: "Uszkodzony"
     contact:
       label:
         one: Kontakt
@@ -473,6 +497,9 @@ admin:
         label: Szerokość geograficzna
       lng:
         label: Długość geograficzna
+    countries:
+      hint: "Kraje, których dotyczy."
+      label: "Kraje"
     credit:
       label: Źródło
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Data
       sale: Data sprzedaży
       to: Do
+    days_range:
+      pattern: "Liczba dni (2) lub zakres (2-4)"
     description:
       hint:
         Wyświetlane w zakładkach, wynikach wyszukiwania i w podglądzie SMS/Wiadomości/Sieci
@@ -642,6 +671,10 @@ admin:
         large: Duży
         medium: Średni
         small: Mały
+    gtin:
+      hint: "Numer pod kodem kreskowym produktu (EAN-13, UPC, EAN-8, ITF-14), publikowany w danych strukturalnych: Google rozpoznaje po nim produkt w różnych sklepach."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 lub 14 cyfr, bez spacji"
     head_office:
       hint: "Miejsce, którego adres i dane kontaktowe są danymi podmiotu. Pozostaw puste, aby uzupełnić je poniżej."
       label: "Siedziba"
@@ -826,6 +859,9 @@ admin:
       hint: 'np. 300000 (dla 300 000 €)'
       label: Cena
       sold: Cena sprzedaży
+    price_valid_until:
+      hint: "Ostatni dzień ceny, np. koniec promocji: wyświetlany pod ceną i publikowany w danych strukturalnych do tego dnia."
+      label: "Cena ważna do"
     quote:
       label: Cytat
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: Wynajem?
     required:
       label: Wymagane
+    return_category:
+      label: "Rodzaj zasad"
+      options:
+        MerchantReturnFiniteReturnWindow: "Zwroty w określonej liczbie dni"
+        MerchantReturnUnlimitedWindow: "Zwroty bez limitu czasu"
+        MerchantReturnNotPermitted: "Brak zwrotów"
+    return_days:
+      label: "Termin zwrotu w dniach"
+    return_fees:
+      label: "Koszty zwrotu"
+      options:
+        FreeReturn: "Bezpłatne"
+        ReturnFeesCustomerResponsibility: "Po stronie klienta"
+        ReturnShippingFees: "Stała opłata za odesłanie"
+    return_fees_amount:
+      hint: "W walucie strony."
+      label: "Kwota opłaty za odesłanie"
+    return_methods:
+      label: "Sposoby zwrotu"
+      options:
+        ReturnByMail: "Pocztą"
+        ReturnInStore: "W sklepie"
+        ReturnAtKiosk: "W automacie lub punkcie odbioru"
+    return_policy:
+      hint: "Dla strony prowadzącej sprzedaż online: podane raz dla wszystkich produktów, publikowane w danych strukturalnych. Podaj rodzaj i kraje, stronę z opisem lub oba."
+      label: "Zasady zwrotów"
+    return_refund:
+      label: "Zwrot pieniędzy"
+      options:
+        FullRefund: "Pełny zwrot"
+        ExchangeRefund: "Wymiana"
+        StoreCreditRefund: "Bon sklepowy"
+    return_url:
+      hint: "Ścieżka strony (/regulamin/) lub pełny adres URL."
+      label: "Strona zasad zwrotów"
     same_as:
       hint: "Strony opisujące podmiot w innych serwisach: profil w Chambers lub Legal 500, Wikipedia, Wikidata… Pomagają wyszukiwarkom go rozpoznać. Profile społecznościowe pochodzą z menu społecznościowego."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "Obraz do udostępniania"
         hint: "Obraz podglądów w sieciach społecznościowych i komunikatorach, przycięty do 1200 × 630 px. Pozostaw puste, aby użyć obrazu głównego."
+    shipping:
+      hint: "Dla strony prowadzącej sprzedaż online: podana raz dla wszystkich produktów, publikowana w danych strukturalnych."
+      label: "Wysyłka"
+    shipping_free_above:
+      hint: "Kwota zamówienia, od której wysyłka jest darmowa."
+      label: "Darmowa od"
+    shipping_handling:
+      hint: "Zanim zamówienie zostanie wysłane: liczba (1) lub zakres (0-2)."
+      label: "Czas przygotowania w dniach"
+    shipping_price:
+      hint: "0 dla darmowej wysyłki."
+      label: "Cena"
+    shipping_rates:
+      hint: "Jedna na kierunek. Stawka bez krajów obowiązuje wszędzie."
+      label:
+        one: "Stawka wysyłki"
+        other: "Stawki wysyłki"
+    shipping_transit:
+      hint: "Liczba (2) lub zakres (2-4)."
+      label: "Czas dostawy w dniach"
     show_more:
       hint: Pokazuje przycisk, aby zobaczyć więcej elementów
       label: Pokaż więcej?

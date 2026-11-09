@@ -1,0 +1,22 @@
+{{/* Condition of the item offered, stored as its schema.org name —
+     NewCondition, UsedCondition… — and published as itemCondition. New by
+     default on a new entry, picked in plain sight; an entry without one
+     publishes none, the theme does not assume the item is new. Options come
+     from the theme, func/GetSchemaEnumerations.html. The same in every
+     language. */}}
+{{- $options := slice "NewCondition" "RefurbishedCondition" "UsedCondition" "DamagedCondition" -}}
+{{- if templates.Exists "partials/func/GetSchemaEnumerations.html" -}}
+  {{- $options = (partial "func/GetSchemaEnumerations.html").condition -}}
+{{- end -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.condition.label")
+  "hint" (i18n "admin.fields.condition.hint")
+  "name" "condition"
+  "i18n" "duplicate"
+  "default" "NewCondition"
+  "options" $options
+  "label_options" "admin.fields.condition.options"
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

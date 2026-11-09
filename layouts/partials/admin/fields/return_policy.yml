@@ -1,0 +1,24 @@
+{{/* Return policy of a shop, in data/schema.yml: said once for every product
+     the site offers, published by the theme on the organization as
+     hasMerchantReturnPolicy — see func/GetSchemaReturnPolicy.html, which
+     reads it. Its category shows the fields that apply to it (Decap and
+     Sveltia CMS, see the toggle option of widgets/select.js). */}}
+{{- $fields := slice
+  "return_category"
+  "countries"
+  "return_days"
+  "return_fees"
+  "return_fees_amount"
+  "return_methods"
+  "return_refund"
+  "return_url" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.return_policy.label")
+  "hint" (i18n "admin.fields.return_policy.hint")
+  "name" "return_policy"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

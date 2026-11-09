@@ -3,6 +3,11 @@
   {{- $fields = $fields | append "contact_page" -}}
 {{- end -}}
 {{- $fields = $fields | append "schema_email" -}}
+{{- /* What a shop sells under, said once for all its products: only with the
+       products section. */ -}}
+{{- if site.Params.admin.collections.products.enable -}}
+  {{- $fields = $fields | append "return_policy" "shipping" -}}
+{{- end -}}
 {
   label: '{{ i18n "admin.files.schema" }}',
   name: 'schema',

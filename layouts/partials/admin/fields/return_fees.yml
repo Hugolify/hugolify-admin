@@ -1,0 +1,19 @@
+{{/* Who pays for a return, stored as `fees`, its schema.org name —
+     FreeReturn… — published as returnFees. Return shipping fees show the
+     amount they come to, without which they are not published. Options come
+     from the theme, func/GetSchemaEnumerations.html. */}}
+{{- $options := slice "FreeReturn" "ReturnFeesCustomerResponsibility" "ReturnShippingFees" -}}
+{{- if templates.Exists "partials/func/GetSchemaEnumerations.html" -}}
+  {{- $options = (partial "func/GetSchemaEnumerations.html").return_fees -}}
+{{- end -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.return_fees.label")
+  "name" "fees"
+  "i18n" "duplicate"
+  "options" $options
+  "label_options" "admin.fields.return_fees.options"
+  "toggle" (dict "ReturnShippingFees" (slice "fees_amount"))
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

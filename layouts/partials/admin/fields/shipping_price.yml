@@ -1,0 +1,13 @@
+{{/* Price of a shipping rate, stored as `price`, published as its
+     shippingRate in the currency of the site: 0 for free shipping, a rate
+     with no price is not published. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.shipping_price.label")
+  "hint" (i18n "admin.fields.shipping_price.hint")
+  "name" "price"
+  "i18n" "duplicate"
+  "min" 0
+  "value_type" "float"
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

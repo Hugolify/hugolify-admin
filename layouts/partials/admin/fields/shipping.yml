@@ -1,0 +1,16 @@
+{{/* Shipping of a shop, in data/schema.yml: said once for every product the
+     site offers, published by the theme on the organization as
+     hasShippingService — see func/GetSchemaShippingService.html, which
+     reads it. The time an order takes to leave, and a rate per destination
+     and price. */}}
+{{- $fields := slice "shipping_handling" "shipping_rates" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.shipping.label")
+  "hint" (i18n "admin.fields.shipping.hint")
+  "name" "shipping"
+  "fields" $fields
+  -}}
+
+{{ partial "admin/widgets/object.js" $args }}

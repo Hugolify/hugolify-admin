@@ -363,6 +363,22 @@ admin:
       label: Penulis
     autoplay:
       label: Putar Otomatis
+    availability:
+      hint: "Ditampilkan di halaman dan dipublikasikan dalam data terstruktur. Kosong: tersedia."
+      label: "Ketersediaan"
+      options:
+        InStock: "Tersedia"
+        LimitedAvailability: "Stok terbatas"
+        MadeToOrder: "Dibuat sesuai pesanan"
+        PreOrder: "Pra-pesan"
+        PreSale: "Pra-jual"
+        BackOrder: "Menunggu stok"
+        OutOfStock: "Stok habis"
+        SoldOut: "Terjual habis"
+        Discontinued: "Tidak diproduksi lagi"
+    availability_starts:
+      hint: "Pra-pesan, pra-jual, atau menunggu stok: hari produk tersedia."
+      label: "Tersedia mulai"
     awards:
       hint: "Penghargaan dan peringkatnya (mis. Chambers Global 2026), dipublikasikan dalam data terstruktur."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Jumlah kolom yang ditampilkan di desktop
       label: Kolom
+    condition:
+      hint: "Dipublikasikan dalam data terstruktur."
+      label: "Kondisi"
+      options:
+        NewCondition: "Baru"
+        RefurbishedCondition: "Rekondisi"
+        UsedCondition: "Bekas"
+        DamagedCondition: "Rusak"
     contact:
       label:
         one: Kontak
@@ -473,6 +497,9 @@ admin:
         label: Lintang
       lng:
         label: Bujur
+    countries:
+      hint: "Negara tempat ini berlaku."
+      label: "Negara"
     credit:
       label: Kredit
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Tanggal
       sale: Tanggal Penjualan
       to: Sampai
+    days_range:
+      pattern: "Jumlah hari (2) atau rentang (2-4)"
     description:
       hint:
         Ditampilkan di tab, hasil pencarian, dan di pratinjau SMS/Pesan/Jejaring Sosial
@@ -642,6 +671,10 @@ admin:
         large: Besar
         medium: Sedang
         small: Kecil
+    gtin:
+      hint: "Nomor di bawah barcode produk (EAN-13, UPC, EAN-8, ITF-14), dipublikasikan dalam data terstruktur: Google mengenali produk dengannya di berbagai toko."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13, atau 14 digit, tanpa spasi"
     head_office:
       hint: "Tempat yang alamat dan kontaknya adalah milik badan usaha. Kosongkan untuk mengisinya di bawah."
       label: "Kantor pusat"
@@ -826,6 +859,9 @@ admin:
       hint: 'mis. 300000 (untuk 300.000 Rp)'
       label: Harga
       sold: Harga Jual
+    price_valid_until:
+      hint: "Hari terakhir harga, misalnya akhir promosi: ditampilkan di bawah harga dan dipublikasikan dalam data terstruktur hingga saat itu."
+      label: "Harga berlaku hingga"
     quote:
       label: Kutipan
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: Sewa?
     required:
       label: Wajib
+    return_category:
+      label: "Jenis kebijakan"
+      options:
+        MerchantReturnFiniteReturnWindow: "Pengembalian dalam jumlah hari tertentu"
+        MerchantReturnUnlimitedWindow: "Pengembalian tanpa batas waktu"
+        MerchantReturnNotPermitted: "Tidak menerima pengembalian"
+    return_days:
+      label: "Batas waktu pengembalian, dalam hari"
+    return_fees:
+      label: "Biaya pengembalian"
+      options:
+        FreeReturn: "Gratis"
+        ReturnFeesCustomerResponsibility: "Ditanggung pelanggan"
+        ReturnShippingFees: "Ongkos kirim pengembalian tetap"
+    return_fees_amount:
+      hint: "Dalam mata uang situs."
+      label: "Jumlah ongkos kirim pengembalian"
+    return_methods:
+      label: "Cara pengembalian"
+      options:
+        ReturnByMail: "Melalui pos"
+        ReturnInStore: "Di toko"
+        ReturnAtKiosk: "Di kios atau titik pengambilan"
+    return_policy:
+      hint: "Untuk situs yang berjualan online: diisi sekali untuk semua produk, dipublikasikan dalam data terstruktur. Isi jenis dan negaranya, halaman yang menjelaskannya, atau keduanya."
+      label: "Kebijakan pengembalian"
+    return_refund:
+      label: "Pengembalian dana"
+      options:
+        FullRefund: "Pengembalian dana penuh"
+        ExchangeRefund: "Penukaran"
+        StoreCreditRefund: "Kredit toko"
+    return_url:
+      hint: "Jalur situs (/ketentuan/) atau URL lengkap."
+      label: "Halaman kebijakan pengembalian"
     same_as:
       hint: "Halaman yang menjelaskan badan usaha di situs lain: profil Chambers atau Legal 500, Wikipedia, Wikidata… Membantu mesin pencari mengenalinya. Profil media sosial diambil dari menu media sosial."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "Gambar berbagi"
         hint: "Gambar pratinjau di jejaring sosial dan aplikasi pesan, dipotong menjadi 1200 × 630 px. Biarkan kosong untuk memakai gambar utama."
+    shipping:
+      hint: "Untuk situs yang berjualan online: diisi sekali untuk semua produk, dipublikasikan dalam data terstruktur."
+      label: "Pengiriman"
+    shipping_free_above:
+      hint: "Jumlah pesanan yang membuat pengiriman gratis."
+      label: "Gratis mulai dari"
+    shipping_handling:
+      hint: "Sebelum pesanan dikirim: angka (1) atau rentang (0-2)."
+      label: "Waktu penanganan, dalam hari"
+    shipping_price:
+      hint: "0 untuk pengiriman gratis."
+      label: "Harga"
+    shipping_rates:
+      hint: "Satu per tujuan. Tarif tanpa negara berlaku di mana saja."
+      label:
+        one: "Tarif pengiriman"
+        other: "Tarif pengiriman"
+    shipping_transit:
+      hint: "Angka (2) atau rentang (2-4)."
+      label: "Waktu pengiriman, dalam hari"
     show_more:
       hint: Menampilkan tombol untuk melihat lebih banyak item
       label: Tampilkan lebih banyak?

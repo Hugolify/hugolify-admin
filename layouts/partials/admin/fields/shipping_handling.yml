@@ -1,0 +1,16 @@
+{{/* Days before an order leaves, stored as `handling` and published as the
+     handlingTime of the shipping: a number of days (1) or a range (0-2), as
+     func/GetSchemaDays.html reads it in the theme. */}}
+{{ $regex := "^[0-9]+(-[0-9]+)?$" }}
+{{ $message := i18n "admin.fields.days_range.pattern" }}
+{{ $pattern := dict "regex" $regex "message" $message }}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.shipping_handling.label")
+  "hint" (i18n "admin.fields.shipping_handling.hint")
+  "name" "handling"
+  "i18n" "duplicate"
+  "pattern" $pattern
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

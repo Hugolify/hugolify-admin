@@ -363,6 +363,22 @@ admin:
       label: Auteur
     autoplay:
       label: Automatisch afspelen
+    availability:
+      hint: "Getoond op de pagina en gepubliceerd in de gestructureerde gegevens. Leeg: op voorraad."
+      label: "Beschikbaarheid"
+      options:
+        InStock: "Op voorraad"
+        LimitedAvailability: "Beperkte voorraad"
+        MadeToOrder: "Op bestelling gemaakt"
+        PreOrder: "Voorbestelling"
+        PreSale: "Voorverkoop"
+        BackOrder: "In nabestelling"
+        OutOfStock: "Niet op voorraad"
+        SoldOut: "Uitverkocht"
+        Discontinued: "Niet meer leverbaar"
+    availability_starts:
+      hint: "Voorbestelling, voorverkoop of nabestelling: de dag waarop het product beschikbaar komt."
+      label: "Beschikbaar vanaf"
     awards:
       hint: "Haar onderscheidingen en rankings (bijv. Chambers Global 2026), gepubliceerd in de gestructureerde gegevens."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Aantal kolommen weergegeven op desktop
       label: Kolom
+    condition:
+      hint: "Gepubliceerd in de gestructureerde gegevens."
+      label: "Staat"
+      options:
+        NewCondition: "Nieuw"
+        RefurbishedCondition: "Gereviseerd"
+        UsedCondition: "Gebruikt"
+        DamagedCondition: "Beschadigd"
     contact:
       label:
         one: Contact
@@ -473,6 +497,9 @@ admin:
         label: Breedtegraad
       lng:
         label: Lengtegraad
+    countries:
+      hint: "De landen waarvoor het geldt."
+      label: "Landen"
     credit:
       label: Credit
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Datum
       sale: Verkoopdatum
       to: Tot
+    days_range:
+      pattern: "Een aantal dagen (2) of een bereik (2-4)"
     description:
       hint:
         Weergegeven in tabbladen, zoekresultaten en in SMS/Berichten/Sociale netwerken
@@ -642,6 +671,10 @@ admin:
         large: Groot
         medium: Gemiddeld
         small: Klein
+    gtin:
+      hint: "Het nummer onder de streepjescode van het product (EAN-13, UPC, EAN-8, ITF-14), gepubliceerd in de gestructureerde gegevens: Google herkent het product er winkeloverstijgend aan."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 of 14 cijfers, zonder spaties"
     head_office:
       hint: "De plaats waarvan het adres en de contactgegevens die van de organisatie zijn. Laat leeg om ze hieronder in te vullen."
       label: "Hoofdkantoor"
@@ -826,6 +859,9 @@ admin:
       hint: 'bijv. 300000 (voor 300 000 €)'
       label: Prijs
       sold: Verkoopprijs
+    price_valid_until:
+      hint: "De laatste dag van de prijs, bijvoorbeeld het einde van een actie: getoond onder de prijs en tot dan gepubliceerd in de gestructureerde gegevens."
+      label: "Prijs geldig tot"
     quote:
       label: Citaat
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: Huren?
     required:
       label: Verplicht
+    return_category:
+      label: "Soort beleid"
+      options:
+        MerchantReturnFiniteReturnWindow: "Retour binnen een vast aantal dagen"
+        MerchantReturnUnlimitedWindow: "Retour zonder termijn"
+        MerchantReturnNotPermitted: "Geen retour"
+    return_days:
+      label: "Retourtermijn in dagen"
+    return_fees:
+      label: "Retourkosten"
+      options:
+        FreeReturn: "Gratis"
+        ReturnFeesCustomerResponsibility: "Voor rekening van de klant"
+        ReturnShippingFees: "Vaste retourverzendkosten"
+    return_fees_amount:
+      hint: "In de valuta van de site."
+      label: "Bedrag van de retourverzendkosten"
+    return_methods:
+      label: "Retourmethoden"
+      options:
+        ReturnByMail: "Per post"
+        ReturnInStore: "In de winkel"
+        ReturnAtKiosk: "Bij een automaat of afhaalpunt"
+    return_policy:
+      hint: "Voor een site die online verkoopt: één keer voor alle producten opgegeven, gepubliceerd in de gestructureerde gegevens. Vul het type en de landen in, de pagina die het beschrijft, of beide."
+      label: "Retourbeleid"
+    return_refund:
+      label: "Terugbetaling"
+      options:
+        FullRefund: "Volledige terugbetaling"
+        ExchangeRefund: "Omruilen"
+        StoreCreditRefund: "Tegoedbon"
+    return_url:
+      hint: "Een pad van de site (/voorwaarden/) of een volledige URL."
+      label: "Pagina van het retourbeleid"
     same_as:
       hint: "Pagina’s die de organisatie op andere sites beschrijven: een profiel bij Chambers of Legal 500, Wikipedia, Wikidata… Ze helpen zoekmachines haar te herkennen. De sociale profielen komen uit het sociale menu."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "Deelafbeelding"
         hint: "Afbeelding van de voorbeelden op sociale netwerken en in berichtenapps, bijgesneden tot 1200 × 630 px. Leeg laten om de hoofdafbeelding te gebruiken."
+    shipping:
+      hint: "Voor een site die online verkoopt: één keer voor alle producten opgegeven, gepubliceerd in de gestructureerde gegevens."
+      label: "Verzending"
+    shipping_free_above:
+      hint: "Bestelbedrag vanaf waar de verzending gratis is."
+      label: "Gratis vanaf"
+    shipping_handling:
+      hint: "Voordat een bestelling vertrekt: een getal (1) of een bereik (0-2)."
+      label: "Verwerkingstijd in dagen"
+    shipping_price:
+      hint: "0 voor gratis verzending."
+      label: "Prijs"
+    shipping_rates:
+      hint: "Eén per bestemming. Een tarief zonder landen geldt overal."
+      label:
+        one: "Verzendtarief"
+        other: "Verzendtarieven"
+    shipping_transit:
+      hint: "Een getal (2) of een bereik (2-4)."
+      label: "Levertijd in dagen"
     show_more:
       hint: Toont een knop om meer items te zien
       label: Meer tonen?

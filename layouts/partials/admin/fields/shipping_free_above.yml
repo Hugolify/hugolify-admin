@@ -1,0 +1,13 @@
+{{/* Order amount a shipping rate becomes free from, stored as `free_above`:
+     the theme splits the rate in two, its price below the amount, free from
+     it on, the way Google writes free shipping. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.shipping_free_above.label")
+  "hint" (i18n "admin.fields.shipping_free_above.hint")
+  "name" "free_above"
+  "i18n" "duplicate"
+  "min" 0
+  "value_type" "float"
+  -}}
+
+{{ partial "admin/widgets/number.js" $args }}

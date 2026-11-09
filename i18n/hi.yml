@@ -363,6 +363,22 @@ admin:
       label: लेखक
     autoplay:
       label: ऑटोप्ले
+    availability:
+      hint: "पेज पर दिखाई जाती है और संरचित डेटा में प्रकाशित होती है। खाली: स्टॉक में।"
+      label: "उपलब्धता"
+      options:
+        InStock: "स्टॉक में"
+        LimitedAvailability: "सीमित स्टॉक"
+        MadeToOrder: "ऑर्डर पर बनाया जाता है"
+        PreOrder: "प्री-ऑर्डर"
+        PreSale: "प्री-सेल"
+        BackOrder: "बैक ऑर्डर"
+        OutOfStock: "स्टॉक में नहीं"
+        SoldOut: "बिक गया"
+        Discontinued: "बंद हो चुका"
+    availability_starts:
+      hint: "प्री-ऑर्डर, प्री-सेल या बैक ऑर्डर: वह दिन जब उत्पाद उपलब्ध होगा।"
+      label: "इस तारीख से उपलब्ध"
     awards:
       hint: "संस्था के पुरस्कार और रैंकिंग (जैसे Chambers Global 2026), संरचित डेटा में प्रकाशित।"
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: डेस्कटॉप पर प्रदर्शित कॉलम की संख्या
       label: कॉलम
+    condition:
+      hint: "संरचित डेटा में प्रकाशित।"
+      label: "स्थिति"
+      options:
+        NewCondition: "नया"
+        RefurbishedCondition: "रीफर्बिश्ड"
+        UsedCondition: "इस्तेमाल किया हुआ"
+        DamagedCondition: "क्षतिग्रस्त"
     contact:
       label:
         one: संपर्क
@@ -473,6 +497,9 @@ admin:
         label: अक्षांश
       lng:
         label: देशांतर
+    countries:
+      hint: "वे देश जिन पर यह लागू होता है।"
+      label: "देश"
     credit:
       label: क्रेडिट
     cta:
@@ -495,6 +522,8 @@ admin:
       label: दिनांक
       sale: बिक्री की तारीख
       to: तक
+    days_range:
+      pattern: "दिनों की संख्या (2) या एक सीमा (2-4)"
     description:
       hint:
         टैब, खोज परिणामों और एसएमएस/संदेश/सोशल नेटवर्क पूर्वावलोकन में प्रदर्शित
@@ -642,6 +671,10 @@ admin:
         large: बड़ा
         medium: मध्यम
         small: छोटा
+    gtin:
+      hint: "उत्पाद के बारकोड के नीचे की संख्या (EAN-13, UPC, EAN-8, ITF-14), संरचित डेटा में प्रकाशित: Google इसी से अलग-अलग दुकानों में उत्पाद को पहचानता है।"
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 या 14 अंक, बिना स्पेस के"
     head_office:
       hint: "वह स्थान जिसका पता और संपर्क संस्था के हैं। नीचे भरने के लिए खाली छोड़ें।"
       label: "मुख्यालय"
@@ -826,6 +859,9 @@ admin:
       hint: 'उदा. 300000 (300 000 ₹ के लिए)'
       label: कीमत
       sold: बिक्री मूल्य
+    price_valid_until:
+      hint: "कीमत का आखिरी दिन, जैसे किसी ऑफर का अंत: कीमत के नीचे दिखाया जाता है और तब तक संरचित डेटा में प्रकाशित होता है।"
+      label: "कीमत इस तारीख तक मान्य"
     quote:
       label: उद्धरण
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: किराया?
     required:
       label: आवश्यक
+    return_category:
+      label: "नीति का प्रकार"
+      options:
+        MerchantReturnFiniteReturnWindow: "तय दिनों के भीतर रिटर्न"
+        MerchantReturnUnlimitedWindow: "बिना समय सीमा के रिटर्न"
+        MerchantReturnNotPermitted: "रिटर्न स्वीकार नहीं"
+    return_days:
+      label: "रिटर्न अवधि, दिनों में"
+    return_fees:
+      label: "रिटर्न शुल्क"
+      options:
+        FreeReturn: "निःशुल्क"
+        ReturnFeesCustomerResponsibility: "ग्राहक द्वारा देय"
+        ReturnShippingFees: "तय रिटर्न शिपिंग शुल्क"
+    return_fees_amount:
+      hint: "साइट की मुद्रा में।"
+      label: "रिटर्न शिपिंग शुल्क की राशि"
+    return_methods:
+      label: "रिटर्न के तरीके"
+      options:
+        ReturnByMail: "डाक से"
+        ReturnInStore: "दुकान में"
+        ReturnAtKiosk: "कियोस्क या पिकअप पॉइंट पर"
+    return_policy:
+      hint: "ऑनलाइन बेचने वाली साइट के लिए: सभी उत्पादों के लिए एक बार दी जाती है और संरचित डेटा में प्रकाशित होती है। इसका प्रकार और देश, इसका वर्णन करने वाला पेज, या दोनों भरें।"
+      label: "रिटर्न नीति"
+    return_refund:
+      label: "रिफंड"
+      options:
+        FullRefund: "पूरा रिफंड"
+        ExchangeRefund: "एक्सचेंज"
+        StoreCreditRefund: "स्टोर क्रेडिट"
+    return_url:
+      hint: "साइट का पाथ (/terms/) या पूरा URL।"
+      label: "रिटर्न नीति का पेज"
     same_as:
       hint: "दूसरी साइटों पर संस्था का वर्णन करने वाले पेज: Chambers या Legal 500 प्रोफ़ाइल, विकिपीडिया, विकिडेटा… ये सर्च इंजनों को संस्था पहचानने में मदद करते हैं। सोशल प्रोफ़ाइल सोशल मेनू से ली जाती हैं।"
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "साझाकरण छवि"
         hint: "सोशल नेटवर्क और मैसेजिंग ऐप में पूर्वावलोकन की छवि, 1200 × 630 px में क्रॉप की जाती है। मुख्य छवि उपयोग करने के लिए खाली छोड़ें।"
+    shipping:
+      hint: "ऑनलाइन बेचने वाली साइट के लिए: सभी उत्पादों के लिए एक बार दी जाती है और संरचित डेटा में प्रकाशित होती है।"
+      label: "शिपिंग"
+    shipping_free_above:
+      hint: "ऑर्डर की वह राशि जिससे शिपिंग मुफ़्त है।"
+      label: "इस राशि से मुफ़्त"
+    shipping_handling:
+      hint: "ऑर्डर भेजे जाने से पहले: एक संख्या (1) या एक सीमा (0-2)।"
+      label: "हैंडलिंग समय, दिनों में"
+    shipping_price:
+      hint: "मुफ़्त शिपिंग के लिए 0।"
+      label: "कीमत"
+    shipping_rates:
+      hint: "हर गंतव्य के लिए एक। बिना देशों वाली दर हर जगह लागू होती है।"
+      label:
+        one: "शिपिंग दर"
+        other: "शिपिंग दरें"
+    shipping_transit:
+      hint: "एक संख्या (2) या एक सीमा (2-4)।"
+      label: "ट्रांज़िट समय, दिनों में"
     show_more:
       hint: अधिक आइटम देखने के लिए एक बटन दिखाता है
       label: और दिखाओ?

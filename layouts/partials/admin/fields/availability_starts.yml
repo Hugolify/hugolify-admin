@@ -1,0 +1,12 @@
+{{/* Day a pre-ordered, pre-sold or back-ordered product becomes available,
+     shown next to its availability and published as availabilityStarts. A
+     day, not a time. The same in every language. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.availability_starts.label")
+  "hint" (i18n "admin.fields.availability_starts.hint")
+  "name" "availability_starts"
+  "i18n" "duplicate"
+  "time" false
+  -}}
+
+{{ partial "admin/widgets/datetime.js" $args }}

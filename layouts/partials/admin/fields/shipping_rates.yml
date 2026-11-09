@@ -1,0 +1,17 @@
+{{/* Shipping rates, stored as `rates`, each the shippingConditions of a
+     destination: the countries it covers (none, anywhere), its price (0 when
+     free), the order amount it becomes free from, its transit days. */}}
+{{- $fields := slice "countries" "shipping_price" "shipping_free_above" "shipping_transit" -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.shipping_rates.label" 2)
+  "label_singular" (i18n "admin.fields.shipping_rates.label" 1)
+  "hint" (i18n "admin.fields.shipping_rates.hint")
+  "name" "rates"
+  "i18n" "duplicate"
+  "fields" $fields
+  "summary" "{{fields.countries}} – {{fields.price}}"
+  -}}
+
+{{ partial "admin/widgets/list.js" $args }}

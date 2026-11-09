@@ -1,0 +1,12 @@
+{{/* Last day of the price — a sale's end — shown under it and published as
+     priceValidUntil, until that day has passed. A day, not a time. The same
+     in every language. */}}
+{{- $args := dict
+  "label" (i18n "admin.fields.price_valid_until.label")
+  "hint" (i18n "admin.fields.price_valid_until.hint")
+  "name" "price_valid_until"
+  "i18n" "duplicate"
+  "time" false
+  -}}
+
+{{ partial "admin/widgets/datetime.js" $args }}

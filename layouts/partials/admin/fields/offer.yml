@@ -1,11 +1,21 @@
+{{/* Offer of a product, or of an item of a comparison block. Its fields are
+     the price ones by default; a product lists its own — availability,
+     condition, last day of the price — passing them along
+     (`dict "offer" (dict "fields" (slice …))`, see
+     collections/fields/products.fields.default.html), so a comparison table
+     does not ask what only a product says. params.admin.fields.offer.fields
+     overrides both. */}}
 {{- $fields := slice
   "price"
   "discount"
   "hide_price"
   "text" -}}
-{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+{{- if reflect.IsMap . -}}
+  {{- with .fields -}}{{- $fields = . -}}{{- end -}}
+{{- end -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" "offer" "fields" $fields) -}}
 
-{{- $args := dict 
+{{- $args := dict
   "label" (i18n "admin.fields.offer.label" 1)
   "name" "offer"
   "collapsed" false

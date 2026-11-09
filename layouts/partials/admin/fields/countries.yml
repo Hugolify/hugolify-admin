@@ -1,0 +1,37 @@
+{{/* Countries a policy applies in — the return policy, a shipping rate, in
+     data/schema.yml — stored as their ISO 3166-1 alpha-2 codes (FR, BE…),
+     what schema.org reads, and picked under their names. The theme lists and
+     names them, as for the country of an address (country_code.yml); without
+     it, the codes are typed in one by one. The same in every language. */}}
+{{- $select := partial "admin/func/GetNamedOptions.html" (dict
+  "field" .
+  "codes" "func/GetCountryCodes.html"
+  "name" "func/GetCountryName.html"
+) -}}
+
+{{- $label := i18n "admin.fields.countries.label" -}}
+{{- $hint := i18n "admin.fields.countries.hint" -}}
+
+{{- if $select.options -}}
+  {{- $args := dict
+    "label" $label
+    "hint" $hint
+    "name" "countries"
+    "options" $select.options
+    "label_options" $select.labels
+    "multiple" true
+    "i18n" "duplicate"
+    -}}
+
+  {{ partial "admin/widgets/select.js" $args }}
+{{- else -}}
+  {{- $args := dict
+    "label" $label
+    "hint" $hint
+    "name" "countries"
+    "field" "country_code"
+    "i18n" "duplicate"
+    -}}
+
+  {{ partial "admin/widgets/list.js" $args }}
+{{- end -}}

@@ -363,6 +363,22 @@ admin:
       label: Autor
     autoplay:
       label: Automatické přehrávání
+    availability:
+      hint: "Zobrazená na stránce a zveřejněná ve strukturovaných datech. Prázdné: skladem."
+      label: "Dostupnost"
+      options:
+        InStock: "Skladem"
+        LimitedAvailability: "Omezené množství"
+        MadeToOrder: "Na zakázku"
+        PreOrder: "Předobjednávka"
+        PreSale: "Předprodej"
+        BackOrder: "Čeká na naskladnění"
+        OutOfStock: "Není skladem"
+        SoldOut: "Vyprodáno"
+        Discontinued: "Ukončený prodej"
+    availability_starts:
+      hint: "Předobjednávka, předprodej nebo čekání na naskladnění: den, kdy bude produkt dostupný."
+      label: "Dostupné od"
     awards:
       hint: "Jeho ocenění a umístění v žebříčcích (např. Chambers Global 2026), zveřejněná ve strukturovaných datech."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Počet sloupců zobrazených na desktopu
       label: Sloupec
+    condition:
+      hint: "Zveřejněný ve strukturovaných datech."
+      label: "Stav"
+      options:
+        NewCondition: "Nový"
+        RefurbishedCondition: "Repasovaný"
+        UsedCondition: "Použitý"
+        DamagedCondition: "Poškozený"
     contact:
       label:
         one: Kontakt
@@ -473,6 +497,9 @@ admin:
         label: Zeměpisná šířka
       lng:
         label: Zeměpisná délka
+    countries:
+      hint: "Země, pro které platí."
+      label: "Země"
     credit:
       label: Kredit
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Datum
       sale: Datum prodeje
       to: Do
+    days_range:
+      pattern: "Počet dní (2) nebo rozsah (2-4)"
     description:
       hint:
         Zobrazeno na kartách, ve výsledcích vyhledávání a v náhledu SMS/Zpráv/Sociálních sítí
@@ -642,6 +671,10 @@ admin:
         large: Velký
         medium: Střední
         small: Malý
+    gtin:
+      hint: "Číslo pod čárovým kódem produktu (EAN-13, UPC, EAN-8, ITF-14), zveřejněné ve strukturovaných datech: Google podle něj rozpozná produkt napříč obchody."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 nebo 14 číslic, bez mezer"
     head_office:
       hint: "Místo, jehož adresa a kontakt jsou adresou a kontaktem subjektu. Nechte prázdné a vyplňte je níže."
       label: "Sídlo"
@@ -826,6 +859,9 @@ admin:
       hint: 'např. 300000 (pro 300 000 Kč)'
       label: Cena
       sold: Prodejní cena
+    price_valid_until:
+      hint: "Poslední den ceny, například konec akce: zobrazený pod cenou a do té doby zveřejněný ve strukturovaných datech."
+      label: "Cena platí do"
     quote:
       label: Citát
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: Pronájem?
     required:
       label: Povinné
+    return_category:
+      label: "Typ pravidel"
+      options:
+        MerchantReturnFiniteReturnWindow: "Vrácení ve stanoveném počtu dní"
+        MerchantReturnUnlimitedWindow: "Vrácení bez časového omezení"
+        MerchantReturnNotPermitted: "Vrácení není možné"
+    return_days:
+      label: "Lhůta pro vrácení ve dnech"
+    return_fees:
+      label: "Náklady na vrácení"
+      options:
+        FreeReturn: "Zdarma"
+        ReturnFeesCustomerResponsibility: "Hradí zákazník"
+        ReturnShippingFees: "Paušální poštovné za vrácení"
+    return_fees_amount:
+      hint: "V měně webu."
+      label: "Výše poštovného za vrácení"
+    return_methods:
+      label: "Způsoby vrácení"
+      options:
+        ReturnByMail: "Poštou"
+        ReturnInStore: "V prodejně"
+        ReturnAtKiosk: "V automatu nebo výdejním místě"
+    return_policy:
+      hint: "Pro web s online prodejem: uvedená jednou pro všechny produkty, zveřejněná ve strukturovaných datech. Vyplňte typ a země, stránku s popisem, nebo obojí."
+      label: "Pravidla vracení"
+    return_refund:
+      label: "Vrácení peněz"
+      options:
+        FullRefund: "Plné vrácení peněz"
+        ExchangeRefund: "Výměna"
+        StoreCreditRefund: "Dobropis"
+    return_url:
+      hint: "Cesta webu (/obchodni-podminky/) nebo celá URL adresa."
+      label: "Stránka pravidel vracení"
     same_as:
       hint: "Stránky, které subjekt popisují na jiných webech: profil v Chambers nebo Legal 500, Wikipedie, Wikidata… Pomáhají vyhledávačům ho rozpoznat. Profily na sociálních sítích se přebírají z menu sociálních sítí."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "Sdílený obrázek"
         hint: "Obrázek náhledů na sociálních sítích a v aplikacích pro zasílání zpráv, oříznutý na 1200 × 630 px. Ponechte prázdné pro použití hlavního obrázku."
+    shipping:
+      hint: "Pro web s online prodejem: uvedená jednou pro všechny produkty, zveřejněná ve strukturovaných datech."
+      label: "Doprava"
+    shipping_free_above:
+      hint: "Hodnota objednávky, od které je doprava zdarma."
+      label: "Zdarma od"
+    shipping_handling:
+      hint: "Než objednávka odejde: číslo (1) nebo rozsah (0-2)."
+      label: "Doba přípravy ve dnech"
+    shipping_price:
+      hint: "0 pro dopravu zdarma."
+      label: "Cena"
+    shipping_rates:
+      hint: "Jedna na destinaci. Sazba bez zemí platí všude."
+      label:
+        one: "Sazba dopravy"
+        other: "Sazby dopravy"
+    shipping_transit:
+      hint: "Číslo (2) nebo rozsah (2-4)."
+      label: "Doba přepravy ve dnech"
     show_more:
       hint: Zobrazí tlačítko pro zobrazení více položek
       label: Zobrazit více?

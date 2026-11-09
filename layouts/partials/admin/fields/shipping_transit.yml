@@ -1,0 +1,16 @@
+{{/* Days a parcel travels, stored as `transit` and published as the
+     transitTime of a rate: a number of days (2) or a range (2-4), as
+     func/GetSchemaDays.html reads it in the theme. */}}
+{{ $regex := "^[0-9]+(-[0-9]+)?$" }}
+{{ $message := i18n "admin.fields.days_range.pattern" }}
+{{ $pattern := dict "regex" $regex "message" $message }}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.shipping_transit.label")
+  "hint" (i18n "admin.fields.shipping_transit.hint")
+  "name" "transit"
+  "i18n" "duplicate"
+  "pattern" $pattern
+  -}}
+
+{{ partial "admin/widgets/string.js" $args }}

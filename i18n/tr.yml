@@ -363,6 +363,22 @@ admin:
       label: Yazar
     autoplay:
       label: Otomatik Oynat
+    availability:
+      hint: "Sayfada gösterilir ve yapılandırılmış verilerde yayımlanır. Boş: stokta."
+      label: "Stok durumu"
+      options:
+        InStock: "Stokta"
+        LimitedAvailability: "Sınırlı stok"
+        MadeToOrder: "Siparişe özel üretim"
+        PreOrder: "Ön sipariş"
+        PreSale: "Ön satış"
+        BackOrder: "Tedarik bekleniyor"
+        OutOfStock: "Stokta yok"
+        SoldOut: "Tükendi"
+        Discontinued: "Üretimi durduruldu"
+    availability_starts:
+      hint: "Ön sipariş, ön satış veya tedarik bekleniyor: ürünün mevcut olacağı gün."
+      label: "Şu tarihten itibaren mevcut"
     awards:
       hint: "Kuruluşun ödülleri ve sıralamaları (ör. Chambers Global 2026), yapılandırılmış verilerde yayımlanır."
       label:
@@ -455,6 +471,14 @@ admin:
     column:
       hint: Masaüstünde görüntülenen sütun sayısı
       label: Sütun
+    condition:
+      hint: "Yapılandırılmış verilerde yayımlanır."
+      label: "Durum"
+      options:
+        NewCondition: "Yeni"
+        RefurbishedCondition: "Yenilenmiş"
+        UsedCondition: "İkinci el"
+        DamagedCondition: "Hasarlı"
     contact:
       label:
         one: İletişim
@@ -473,6 +497,9 @@ admin:
         label: Enlem
       lng:
         label: Boylam
+    countries:
+      hint: "Geçerli olduğu ülkeler."
+      label: "Ülkeler"
     credit:
       label: Kredi
     cta:
@@ -495,6 +522,8 @@ admin:
       label: Tarih
       sale: Satış tarihi
       to: Bitiş
+    days_range:
+      pattern: "Gün sayısı (2) veya aralık (2-4)"
     description:
       hint:
         Sekmelerde, arama sonuçlarında ve SMS/Mesajlar/Sosyal ağ önizlemelerinde görüntülenir
@@ -642,6 +671,10 @@ admin:
         large: Büyük
         medium: Orta
         small: Küçük
+    gtin:
+      hint: "Ürünün barkodunun altındaki numara (EAN-13, UPC, EAN-8, ITF-14), yapılandırılmış verilerde yayımlanır: Google ürünü mağazalar arasında bununla tanır."
+      label: "GTIN (EAN / UPC)"
+      pattern: "8, 12, 13 veya 14 rakam, boşluksuz"
     head_office:
       hint: "Adresi ve iletişim bilgileri kuruluşa ait olan yer. Aşağıda doldurmak için boş bırakın."
       label: "Merkez ofis"
@@ -826,6 +859,9 @@ admin:
       hint: 'örn. 300000 (300 000 TL için)'
       label: Fiyat
       sold: Satış fiyatı
+    price_valid_until:
+      hint: "Fiyatın son günü, örneğin bir kampanyanın sonu: fiyatın altında gösterilir ve o güne kadar yapılandırılmış verilerde yayımlanır."
+      label: "Fiyat şu tarihe kadar geçerli"
     quote:
       label: Alıntı
     ratio:
@@ -907,6 +943,41 @@ admin:
       label: Kira?
     required:
       label: Gerekli
+    return_category:
+      label: "Politika türü"
+      options:
+        MerchantReturnFiniteReturnWindow: "Belirli gün içinde iade"
+        MerchantReturnUnlimitedWindow: "Süre sınırı olmadan iade"
+        MerchantReturnNotPermitted: "İade kabul edilmez"
+    return_days:
+      label: "Gün cinsinden iade süresi"
+    return_fees:
+      label: "İade ücretleri"
+      options:
+        FreeReturn: "Ücretsiz"
+        ReturnFeesCustomerResponsibility: "Müşteriye ait"
+        ReturnShippingFees: "Sabit iade kargo ücreti"
+    return_fees_amount:
+      hint: "Sitenin para biriminde."
+      label: "İade kargo ücreti tutarı"
+    return_methods:
+      label: "İade yöntemleri"
+      options:
+        ReturnByMail: "Posta ile"
+        ReturnInStore: "Mağazada"
+        ReturnAtKiosk: "Otomatta veya teslim noktasında"
+    return_policy:
+      hint: "Çevrimiçi satış yapan bir site için: tüm ürünler için bir kez belirtilir, yapılandırılmış verilerde yayımlanır. Türünü ve ülkeleri, onu açıklayan sayfayı ya da ikisini birden girin."
+      label: "İade politikası"
+    return_refund:
+      label: "Geri ödeme"
+      options:
+        FullRefund: "Tam geri ödeme"
+        ExchangeRefund: "Değişim"
+        StoreCreditRefund: "Mağaza kredisi"
+    return_url:
+      hint: "Sitenin bir yolu (/kosullar/) veya tam bir URL."
+      label: "İade politikası sayfası"
     same_as:
       hint: "Kuruluşu başka sitelerde tanıtan sayfalar: Chambers veya Legal 500 profili, Vikipedi, Vikiveri… Arama motorlarının onu tanımasına yardımcı olur. Sosyal profiller sosyal menüden alınır."
       label:
@@ -977,6 +1048,26 @@ admin:
       image:
         label: "Paylaşım görseli"
         hint: "Sosyal ağlarda ve mesajlaşma uygulamalarında önizleme görseli, 1200 × 630 px olarak kırpılır. Ana resmi kullanmak için boş bırakın."
+    shipping:
+      hint: "Çevrimiçi satış yapan bir site için: tüm ürünler için bir kez belirtilir, yapılandırılmış verilerde yayımlanır."
+      label: "Kargo"
+    shipping_free_above:
+      hint: "Kargonun ücretsiz olduğu sipariş tutarı."
+      label: "Şu tutardan itibaren ücretsiz"
+    shipping_handling:
+      hint: "Sipariş gönderilmeden önce: bir sayı (1) veya bir aralık (0-2)."
+      label: "Gün cinsinden hazırlık süresi"
+    shipping_price:
+      hint: "Ücretsiz kargo için 0."
+      label: "Fiyat"
+    shipping_rates:
+      hint: "Her varış yeri için bir tane. Ülkesiz bir ücret her yerde geçerlidir."
+      label:
+        one: "Kargo ücreti"
+        other: "Kargo ücretleri"
+    shipping_transit:
+      hint: "Bir sayı (2) veya bir aralık (2-4)."
+      label: "Gün cinsinden taşıma süresi"
     show_more:
       hint: Daha fazla öğe görmek için bir düğme gösterir
       label: Daha fazla göster?

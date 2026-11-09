@@ -1,0 +1,18 @@
+{{/* How an item can be returned, stored as `methods`, their schema.org names
+     — ReturnByMail… — published as returnMethod. Several at once. Options
+     come from the theme, func/GetSchemaEnumerations.html. */}}
+{{- $options := slice "ReturnByMail" "ReturnInStore" "ReturnAtKiosk" -}}
+{{- if templates.Exists "partials/func/GetSchemaEnumerations.html" -}}
+  {{- $options = (partial "func/GetSchemaEnumerations.html").return_method -}}
+{{- end -}}
+
+{{- $args := dict
+  "label" (i18n "admin.fields.return_methods.label")
+  "name" "methods"
+  "i18n" "duplicate"
+  "multiple" true
+  "options" $options
+  "label_options" "admin.fields.return_methods.options"
+  -}}
+
+{{ partial "admin/widgets/select.js" $args }}

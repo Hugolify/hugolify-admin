@@ -10,12 +10,16 @@
   - name (string) required
   - nameOverride (string)
   - required (boolean)
+  - time (boolean) false for a day without a time of day: a date picker
+    only, stored as YYYY-MM-DD unless format says otherwise
 */}}
 
 {{- $cms := site.Params.admin.cms }}
 
 {{- $default := .default | default "" }}
-{{- $format := .format | default "YYYY-MM-DD[T]HH:mm:ss" }}
+{{/* false is a value here, which `default` would drop */}}
+{{- $time := cond (isset . "time") .time true }}
+{{- $format := .format | default (cond $time "YYYY-MM-DD[T]HH:mm:ss" "YYYY-MM-DD") }}
 {{- $hidden := .hidden | default false }}
 {{- $hint := .hint | default false }}
 {{- $i18n := .i18n | default true }}
@@ -38,7 +42,7 @@
     {{ end }}
   instance_value: {{ $default }},
   {{ end }}
-  type: 'datetime',
+  type: '{{ cond $time "datetime" "date" }}',
   options: {
     required: {{ $required }}
   }
@@ -55,8 +59,8 @@
   name: '{{ $name }}',
   type: 'date',
   options: {
-    format: "yyyy-MM-dd'T'HH:mm:ssX",
-    time: true
+    format: "{{ cond $time "yyyy-MM-dd'T'HH:mm:ssX" "yyyy-MM-dd" }}",
+    time: {{ $time }}
   },
   required: {{ $required }}
 }
@@ -88,6 +92,9 @@
   name: '{{ $name }}',
   widget: 'datetime',
   format: '{{ $format }}',
+  {{ if not $time }}
+  time_format: false,
+  {{ end }}
   {{ if ne $default "" }}
     {{ if eq $default "now" }}
       {{ $default = `"{{now}}"` }}
