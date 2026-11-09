@@ -864,6 +864,9 @@ admin:
       label: "Cena ważna do"
     quote:
       label: Cytat
+    rating:
+      hint: Ocena od 1 do 5, dozwolone wartości dziesiętne (np. 4.5)
+      label: Ocena
     ratio:
       hint: Proporcje medium (1 = kwadrat)
       label: Proporcje

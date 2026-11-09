@@ -864,6 +864,9 @@ admin:
       label: "Cena velja do"
     quote:
       label: Citat
+    rating:
+      hint: Ocena od 1 do 5, decimalke so dovoljene (npr. 4.5)
+      label: Ocena
     ratio:
       hint: Razmerje stranic medija (1 = kvadrat)
       label: Razmerje

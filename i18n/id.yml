@@ -864,6 +864,9 @@ admin:
       label: "Harga berlaku hingga"
     quote:
       label: Kutipan
+    rating:
+      hint: Penilaian dari 1 sampai 5, boleh desimal (mis. 4.5)
+      label: Penilaian
     ratio:
       hint: Rasio aspek media (1 = persegi)
       label: Rasio

@@ -864,6 +864,9 @@ admin:
       label: "가격 유효 기간"
     quote:
       label: 인용
+    rating:
+      hint: "1~5점 평점, 소수점 입력 가능 (예: 4.5)"
+      label: 평점
     ratio:
       hint: 미디어의 종횡비 (1 = 정사각형)
       label: 비율

@@ -864,6 +864,9 @@ admin:
       label: "Prezzo valido fino al"
     quote:
       label: Citazione
+    rating:
+      hint: Valutazione da 1 a 5, decimali ammessi (es. 4.5)
+      label: Valutazione
     ratio:
       hint: Proporzioni del media (1 = quadrato)
       label: Proporzioni

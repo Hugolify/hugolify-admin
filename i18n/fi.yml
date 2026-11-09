@@ -860,6 +860,9 @@ admin:
       label: "Hinta voimassa saakka"
     quote:
       label: Lainaus
+    rating:
+      hint: Arvio 1–5, desimaalit sallittu (esim. 4.5)
+      label: Arvio
     ratio:
       hint: Median kuvasuhde (1 = neliö)
       label: Kuvasuhde

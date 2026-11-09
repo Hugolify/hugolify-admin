@@ -856,6 +856,9 @@ admin:
       label: "Prix valable jusqu’au"
     quote:
       label: Citation
+    rating:
+      hint: Note de 1 à 5, décimales possibles (ex. 4.5)
+      label: Note
     ratio:
       hint: Ratio d’affichage du média (1 = carré)
       label: Ratio

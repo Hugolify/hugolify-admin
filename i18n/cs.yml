@@ -864,6 +864,9 @@ admin:
       label: "Cena platí do"
     quote:
       label: Citát
+    rating:
+      hint: Hodnocení od 1 do 5, lze zadat desetinné číslo (např. 4.5)
+      label: Hodnocení
     ratio:
       hint: Poměr stran média (1 = čtverec)
       label: Poměr stran

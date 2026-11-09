@@ -864,6 +864,9 @@ admin:
       label: "Fiyat şu tarihe kadar geçerli"
     quote:
       label: Alıntı
+    rating:
+      hint: 1 ile 5 arası puan, ondalık girilebilir (ör. 4.5)
+      label: Puan
     ratio:
       hint: Medyanın en boy oranı (1 = kare)
       label: Oran

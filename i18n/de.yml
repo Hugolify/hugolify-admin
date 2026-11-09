@@ -864,6 +864,9 @@ admin:
       label: "Preis gültig bis"
     quote:
       label: Zitat
+    rating:
+      hint: Bewertung von 1 bis 5, Dezimalwerte möglich (z. B. 4.5)
+      label: Bewertung
     ratio:
       hint: Seitenverhältnis des Mediums (1 = quadratisch)
       label: Seitenverhältnis

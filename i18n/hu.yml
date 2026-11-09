@@ -864,6 +864,9 @@ admin:
       label: "Az ár érvényes eddig"
     quote:
       label: Idézet
+    rating:
+      hint: Értékelés 1-től 5-ig, tizedes érték is megadható (pl. 4.5)
+      label: Értékelés
     ratio:
       hint: A média képaránya (1 = négyzet)
       label: Képarány

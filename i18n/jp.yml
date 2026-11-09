@@ -864,6 +864,9 @@ admin:
       label: "価格の有効期限"
     quote:
       label: 引用
+    rating:
+      hint: 1〜5 の評価、小数も可（例：4.5）
+      label: 評価
     ratio:
       hint: メディアの縦横比（1 = 正方形）
       label: 比率

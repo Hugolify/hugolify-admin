@@ -864,6 +864,9 @@ admin:
       label: "Prisen gjelder til"
     quote:
       label: Sitat
+    rating:
+      hint: Vurdering fra 1 til 5, desimaler tillatt (f.eks. 4.5)
+      label: Vurdering
     ratio:
       hint: Sideforhold for mediet (1 = kvadrat)
       label: Forhold

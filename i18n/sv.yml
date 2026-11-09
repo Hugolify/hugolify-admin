@@ -864,6 +864,9 @@ admin:
       label: "Priset gäller till"
     quote:
       label: Citat
+    rating:
+      hint: Betyg från 1 till 5, decimaler tillåtna (t.ex. 4.5)
+      label: Betyg
     ratio:
       hint: Mediets bildförhållande (1 = kvadrat)
       label: Bildförhållande

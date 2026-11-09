@@ -864,6 +864,9 @@ admin:
       label: "Prijs geldig tot"
     quote:
       label: Citaat
+    rating:
+      hint: Beoordeling van 1 tot 5, decimalen toegestaan (bijv. 4.5)
+      label: Beoordeling
     ratio:
       hint: Beeldverhouding van de media (1 = vierkant)
       label: Verhouding

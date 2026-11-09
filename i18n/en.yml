@@ -858,6 +858,9 @@ admin:
       label: "Price valid until"
     quote:
       label: Quote
+    rating:
+      hint: Rating from 1 to 5, decimals allowed (e.g. 4.5)
+      label: Rating
     ratio:
       hint: Media aspect ratio (1 = square)
       label: Ratio

@@ -864,6 +864,9 @@ admin:
       label: "价格有效期至"
     quote:
       label: 引用
+    rating:
+      hint: 1 到 5 的评分，可用小数（例如 4.5）
+      label: 评分
     ratio:
       hint: 媒体的宽高比（1 = 正方形）
       label: 比例
