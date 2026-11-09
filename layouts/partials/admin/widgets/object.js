@@ -112,6 +112,14 @@
 {{/* Decap, Netlify, Static, Sveltia CMS */}}
 {{ else }}
 
+{{- /* Decap CMS rejects a string i18n on an object: true leaves each subfield
+  to its own setting, so duplicate and translate become true, none false.
+  Netlify and Static CMS, from the same code, get the boolean too. Sveltia CMS
+  keeps the string */ -}}
+{{- if and (ne $cms "sveltiacms") (not (or (eq $i18n true) (eq $i18n false))) }}
+  {{- $i18n = ne $i18n "none" }}
+{{- end }}
+
 {
   label: '{{ $label }}',
   {{ with $label_singular }}
