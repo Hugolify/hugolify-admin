@@ -5,8 +5,9 @@
 
      The title and the school are translated, a school may be named in the
      language of the page; the year and the type are the same in every
-     language. In the default fields of the persons collection; rendering it
-     on the person page is up to the site. */}}
+     language. In the default fields of the persons collection; listed in the
+     sidebar of the person page by persons/education.html in
+     hugolify-theme-persons. */}}
 {{- $fields := slice
   "education_title"
   "education_school"
