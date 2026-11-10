@@ -1,12 +1,22 @@
+{{/* The images of a page, the list every collection stores under `images`.
+     Each one is set full or half width by default (commons/images.html in
+     hugolify-theme); a collection laying them out otherwise, the realestates
+     grid, drops the half option (`dict "images" (dict "half" false)`, see
+     collections/fields/realestates.fields.default.html).
+     params.admin.fields.images.fields overrides the list. */}}
 {{ $image_filter := cond site.Params.admin.media.specific_filter "image_filter" false }}
-{{- $fields := slice 
-  "image_src" 
+{{- $half := "is_half" -}}
+{{- if reflect.IsMap . -}}
+  {{- if eq .half false -}}{{- $half = false -}}{{- end -}}
+{{- end -}}
+{{- $fields := slice
+  "image_src"
   $image_filter
-  "image_alt" 
-  "credit" 
+  "image_alt"
+  "credit"
   "legend"
-  "is_half" -}}
-{{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
+  $half -}}
+{{- $fields = partial "admin/func/GetFields.html" (dict "field" "images" "fields" $fields) -}}
 
 {{- $args := dict 
   "label" (i18n "admin.fields.images.label" 2)

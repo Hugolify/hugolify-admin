@@ -1,9 +1,14 @@
+{{/* Legacy: stores the list under `gallery`, the name realestates gave its
+     images before it moved to `images` like every other collection (see
+     images.yml). hugolify-theme-realestates still reads `gallery` where the
+     content keeps it, so a site overriding its fields with this one goes on
+     working. */}}
 {{ $image_filter := cond site.Params.admin.media.specific_filter "image_filter" false }}
-{{- $fields := slice 
-  "image_src" 
+{{- $fields := slice
+  "image_src"
   $image_filter
-  "image_alt" 
-  "credit" 
+  "image_alt"
+  "credit"
   "legend" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "field" . "fields" $fields) -}}
 

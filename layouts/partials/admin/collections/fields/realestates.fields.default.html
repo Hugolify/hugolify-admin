@@ -10,6 +10,9 @@
 {{- if site.Params.admin.collections.realestates_sellers.enable -}}
   {{- $realestates_sellers = dict "relation" (dict "collection" "realestates_sellers" "multiple" false) -}}
 {{- end -}}
+{{- /* The listing shows its images as a grid, where a half width means
+       nothing. */ -}}
+{{- $images := dict "images" (dict "half" false) -}}
 
 {{- return slice 
   "id" 
@@ -28,8 +31,8 @@
   "diagnostic" 
   "keyfeatures" 
   "address" 
-  "featured_image" 
-  "gallery"
+  "featured_image"
+  $images
   "body"
   "fee"
   "legal"

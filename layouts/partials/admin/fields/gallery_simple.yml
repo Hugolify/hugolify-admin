@@ -1,3 +1,5 @@
+{{/* Legacy, like gallery.yml: plain URLs stored under `gallery`, which
+     hugolify-theme-realestates still reads where the content keeps it. */}}
 {{- $name := dict "name" "gallery" }}
 {{- if or (eq site.Params.admin.cms "tinacms") (eq site.Params.admin.cms "cloudcannon") }}
   {{- $name = dict "name" "gallery_simple" "nameOverride" "gallery" }}
