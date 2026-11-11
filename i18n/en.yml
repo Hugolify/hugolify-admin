@@ -577,7 +577,7 @@ admin:
       hint: 'International format, e.g. +33 1 23 45 67 89'
     featured_image:
       hint: Displayed in search results, and in SMS/Messages/Social networks preview
-      label: Image principale
+      label: Featured image
     fee:
       label:
         one: Fee
