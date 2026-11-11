@@ -1,16 +1,22 @@
 {{/*
-  Partial to get the options of a select whose values are codes the theme
-  lists and names — languages, countries — so the select and the pages
-  cannot drift apart: the codes sorted by their name in the language of the
-  admin, and the table of those names the select labels them with (see
-  widgets/select.js, label_options).
+  Partial to get the options of a select whose values are ISO codes —
+  languages, countries — listed by this module (func/GetLanguageCodes.html,
+  func/GetCountryCodes.html): the codes sorted by their name in the language
+  of the admin, and the table of those names the select labels them with
+  (see widgets/select.js, label_options). A site may narrow the codes of a
+  field, see GetOptions.html.
 
-  Without the theme, there are no codes, unless the site lists some for the
-  field (see GetOptions.html); a code with no name is its own name.
+  The names come from the theme, from the CLDR (func/GetLanguageName.html,
+  func/GetCountryName.html of hugolify-theme). Without it, a code is its own
+  name: the select keeps its options, which Sveltia CMS requires, and a
+  hugolify-admin-names warning says so — silenced with ignoreLogs on a site
+  without the theme. The same goes while hugo server rebuilds after a
+  module is added, where templates.Exists may answer false (reported with
+  Hugo 0.158).
 
   - field (string or map) raw context of the field, see GetOptions.html
-  - codes (string) the theme partial listing the codes,
-                   e.g. "func/GetCountryCodes.html"
+  - codes (string) the partial of this module listing the codes,
+                   e.g. "admin/func/GetCountryCodes.html"
   - name (string) the theme partial naming a code,
                   e.g. "func/GetCountryName.html"
 
@@ -20,13 +26,13 @@
                  option up: dashes turned into underscores
 */}}
 
-{{- $codes := slice -}}
-{{- if templates.Exists (printf "_partials/%s" .codes) -}}
-  {{- $codes = partial .codes -}}
-{{- end -}}
+{{- $codes := partial .codes -}}
 {{- $codes = partial "admin/func/GetOptions.html" (dict "field" .field "options" $codes) -}}
 
 {{- $naming := templates.Exists (printf "_partials/%s" .name) -}}
+{{- if not $naming -}}
+  {{- warnidf "hugolify-admin-names" "The CMS shows codes instead of names: %q, from hugolify-theme, was not found" .name -}}
+{{- end -}}
 {{- $named := slice -}}
 {{- $labels := dict -}}
 {{- range $codes -}}

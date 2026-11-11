@@ -1,6 +1,7 @@
-{{/* Languages a person or the organization works in, stored as codes (de,
-     eu, zh) and published as knowsLanguage, which schema.org wants as codes.
-     The theme lists and names them, see func/GetNamedOptions.html.
+{{/* Languages a person or the organization works in, stored as ISO 639-1
+     codes (de, eu, zh) and published as knowsLanguage, which schema.org
+     wants as codes. Listed by func/GetLanguageCodes.html and named by the
+     theme, see func/GetNamedOptions.html.
      Duplicated rather than translated: a person speaks the same languages
      in every language of the site.
 
@@ -9,7 +10,7 @@
 */}}
 {{- $select := partial "admin/func/GetNamedOptions.html" (dict
   "field" .
-  "codes" "func/GetLanguageCodes.html"
+  "codes" "admin/func/GetLanguageCodes.html"
   "name" "func/GetLanguageName.html"
 ) -}}
 
