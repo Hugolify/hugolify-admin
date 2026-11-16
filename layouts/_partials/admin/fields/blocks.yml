@@ -1,17 +1,24 @@
 
 {{- $collection := . | default "pages" -}}
-{{- $collapsed := site.Params.admin.fields.blocks.collapsed | default false -}}
+{{- /* Sveltia CMS opens the list on folded blocks, Decap CMS on unfolded ones,
+  see widgets/blocks.js */ -}}
+{{- $collapsed := site.Params.admin.fields.blocks.collapsed | default (eq site.Params.admin.cms "sveltiacms") -}}
 {{- $blocks := site.Params.admin.blocks.enable -}}
 {{- with (index site.Params.admin.collections $collection).blocks -}}
   {{- $blocks = . -}}
 {{- end -}}
 
-{{- $args := dict 
+{{- /* The summary names a folded block by its title rather than by the first
+  value it holds, often a setting such as ui.theme: the heading title, the
+  title of a block without heading (editorial, paragraph), then the text of a
+  quote or an alert */ -}}
+{{- $args := dict
   "label" (i18n "admin.fields.blocks.label" 2)
   "label_singular" (i18n "admin.fields.blocks.label" 1)
   "name" "blocks"
   "collapsed" $collapsed
   "blocks" $blocks
+  "summary" "{{heading.title | default('{{title}}') | default('{{quote}}') | default('{{text}}')}}"
   -}}
 
 {{ partial "admin/widgets/blocks.js" $args }}

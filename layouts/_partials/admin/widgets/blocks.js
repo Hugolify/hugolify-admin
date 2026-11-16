@@ -11,6 +11,7 @@
   - min (number)
   - name (string) required
   - required (boolean)
+  - summary (string) Sveltia CMS only, shown on a folded block, may nest a tag in default()
 */}}
 
 {{- $cms := site.Params.admin.cms }}
@@ -25,6 +26,7 @@
 {{- $min := .min | default false }}
 {{- $name := .name | default "noname" }}
 {{- $required := .required | default false }}
+{{- $summary := .summary | default false }}
 
 {{/* CloudCannon */}}
 {{ if eq $cms "cloudcannon" }}
@@ -112,10 +114,18 @@ blocks: {
   {{ with $max }}
   max: {{ . }},
   {{ end }}
+  {{- /* Sveltia CMS reads minimize_collapsed as the initial state of the list
+    itself, which then always opened folded, and collapsed as that of each
+    block. Decap CMS hides the blocks of a folded list with it */}}
+  {{ if ne $cms "sveltiacms" }}
   minimize_collapsed: true,
+  {{ end }}
   required: {{ $required }},
   collapsed: {{ $collapsed }},
   i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }},
+  {{ if and $summary (eq $cms "sveltiacms") }}
+  summary: {{ $summary | jsonify }},
+  {{ end }}
   types: [
     {{ partial "admin/blocks/_range.yml" $blocks }}
   ]
