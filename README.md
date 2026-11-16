@@ -192,6 +192,10 @@ to it reaches the blocks already written.
 
 <https://www.hugolify.io/docs/cms/admin/>
 
+## Sponsors
+
+Hugolify is free and open source. If it saves you time or runs your sites, you can support its development on [GitHub Sponsors](https://github.com/sponsors/sebousan).
+
 ## Licensing
 
 Hugolify is free for personal or commercial services (MIT license)
