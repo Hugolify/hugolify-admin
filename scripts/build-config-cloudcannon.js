@@ -9,8 +9,9 @@
  *    - Creates .md files in the /archetypes folder with default fields
  * 3. Copies the generated configuration file to cloudcannon.config.yml
  * 
- * Usage: node scripts/build-config-cloudcannon.js
- * 
+ * Usage: run from the project root, the script ships with this module (see README):
+ *   node <hugolify-admin module dir>/scripts/build-config-cloudcannon.js
+ *
  * @requires child_process
  * @requires fs
  * @requires path
@@ -52,7 +53,8 @@ async function buildAndCopy() {
     await runCommand('yarn build');
     console.log('✅ Build completed successfully');
 
-    const projectRoot = path.join(__dirname, '..');
+    // The project is the working directory: this file lives in the Hugo module cache
+    const projectRoot = process.cwd();
 
     // Step 2: Generate Archetypes
     console.log('\n🏗️ Generating archetypes...');

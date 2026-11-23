@@ -36,19 +36,26 @@ imports:
 
 ## Build Pages CMS and Cloudcannon config files
 
-Copy scripts directory to your project root directory.
+The scripts ship with this module, in the Hugo module cache: a Hugo module cannot add npm scripts, so add these to the project's `package.json`, they ask Hugo where the module is and run the script from there:
 
-Then run the corresponding command:
+```json
+"build:config:cloudcannon": "node \"$(hugo config mounts | grep -o '\"dir\": *\"[^\"]*hugolify-admin[^\"]*\"' | head -1 | cut -d'\"' -f4)/scripts/build-config-cloudcannon.js\"",
+"build:config:pagescms": "node \"$(hugo config mounts | grep -o '\"dir\": *\"[^\"]*hugolify-admin[^\"]*\"' | head -1 | cut -d'\"' -f4)/scripts/build-config-pagescms.js\""
+```
+
+Then run the corresponding command, from the project root:
 
 ```bash
-node scripts/build-config-cloudcannon.js
+yarn build:config:cloudcannon
 ```
 
 or
 
 ```bash
-node scripts/build-config-pagescms.js
+yarn build:config:pagescms
 ```
+
+Each one builds the site, then copies `public/admin/config.yml` to `cloudcannon.config.yml` (and writes the archetypes) or to `.pages.yml`.
 
 ## Params
 

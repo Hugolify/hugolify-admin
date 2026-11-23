@@ -7,8 +7,9 @@
  * 1. Executes the Hugo build command (yarn build)
  * 2. Copies the generated configuration file to .pages.yml
  * 
- * Usage: node scripts/build-config-pagescms.js
- * 
+ * Usage: run from the project root, the script ships with this module (see README):
+ *   node <hugolify-admin module dir>/scripts/build-config-pagescms.js
+ *
  * @requires child_process
  * @requires fs
  * @requires path
@@ -52,7 +53,8 @@ async function buildAndCopy() {
 
     // Step 2: Copy the file
     console.log('\n📋 Copying config.yml file...');
-    const projectRoot = path.join(__dirname, '..');
+    // The project is the working directory: this file lives in the Hugo module cache
+    const projectRoot = process.cwd();
     const sourcePath = path.join(projectRoot, 'public', 'admin', 'config.yml');
     const destPath = path.join(projectRoot, '.pages.yml');
 
