@@ -791,6 +791,9 @@ admin:
         other: Linki
     llms:
       hint: 'Wypełnij tylko w języku domyślnym. Dokumentacja: https://llmstxt.org/'
+    llms_sections:
+      hint: "Strony tych sekcji są dodawane po tekście, jako Markdown."
+      label: "Sekcje"
     location:
       label: Lokalizacja
     loop:

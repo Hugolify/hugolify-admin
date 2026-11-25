@@ -791,6 +791,9 @@ admin:
         other: Links
     llms:
       hint: 'Alleen in de standaardtaal invullen. Documentatie: https://llmstxt.org/'
+    llms_sections:
+      hint: "De pagina's van deze secties worden na de tekst toegevoegd, als Markdown."
+      label: "Secties"
     location:
       label: Locatie
     loop:

@@ -791,6 +791,9 @@ admin:
         other: リンク
     llms:
       hint: 'デフォルト言語でのみ入力してください。ドキュメント: https://llmstxt.org/'
+    llms_sections:
+      hint: "これらのセクションのページを Markdown としてテキストの後に追加します。"
+      label: "セクション"
     location:
       label: 場所
     loop:

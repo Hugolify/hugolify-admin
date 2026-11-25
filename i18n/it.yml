@@ -791,6 +791,9 @@ admin:
         other: Link
     llms:
       hint: 'Compilare solo nella lingua predefinita. Documentazione: https://llmstxt.org/'
+    llms_sections:
+      hint: "Le pagine di queste sezioni vengono aggiunte dopo il testo, in Markdown."
+      label: "Sezioni"
     location:
       label: Posizione
     loop:

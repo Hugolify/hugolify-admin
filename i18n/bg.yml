@@ -791,6 +791,9 @@ admin:
         other: Връзки
     llms:
       hint: 'Попълнете само на езика по подразбиране. Документация: https://llmstxt.org/'
+    llms_sections:
+      hint: "Страниците на тези секции се добавят след текста, като Markdown."
+      label: "Секции"
     location:
       label: Местоположение
     loop:

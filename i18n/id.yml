@@ -791,6 +791,9 @@ admin:
         other: Tautan
     llms:
       hint: 'Isi hanya dalam bahasa default. Dokumentasi: https://llmstxt.org/'
+    llms_sections:
+      hint: "Halaman dari bagian-bagian ini ditambahkan setelah teks, dalam format Markdown."
+      label: "Bagian"
     location:
       label: Lokasi
     loop:

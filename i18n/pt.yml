@@ -791,6 +791,9 @@ admin:
         other: Links
     llms:
       hint: 'Preencher apenas no idioma padrão. Documentação: https://llmstxt.org/'
+    llms_sections:
+      hint: "As páginas destas seções são adicionadas após o texto, em Markdown."
+      label: "Seções"
     location:
       label: Localização
     loop:

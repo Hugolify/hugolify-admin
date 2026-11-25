@@ -791,6 +791,9 @@ admin:
         other: Länkar
     llms:
       hint: 'Fyll i endast på standardspråket. Dokumentation: https://llmstxt.org/'
+    llms_sections:
+      hint: "Sidorna i dessa avsnitt läggs till efter texten, som Markdown."
+      label: "Avsnitt"
     location:
       label: Plats
     loop:

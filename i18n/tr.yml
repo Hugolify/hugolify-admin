@@ -791,6 +791,9 @@ admin:
         other: Bağlantılar
     llms:
       hint: 'Yalnızca varsayılan dilde doldurun. Belgeler: https://llmstxt.org/'
+    llms_sections:
+      hint: "Bu bölümlerin sayfaları metnin ardından Markdown olarak eklenir."
+      label: "Bölümler"
     location:
       label: Konum
     loop:

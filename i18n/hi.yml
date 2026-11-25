@@ -791,6 +791,9 @@ admin:
         other: लिंक
     llms:
       hint: 'केवल डिफ़ॉल्ट भाषा में भरें। दस्तावेज़: https://llmstxt.org/'
+    llms_sections:
+      hint: "इन अनुभागों के पृष्ठ टेक्स्ट के बाद Markdown के रूप में जोड़े जाते हैं।"
+      label: "अनुभाग"
     location:
       label: स्थान
     loop:

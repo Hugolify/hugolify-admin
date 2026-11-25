@@ -791,6 +791,9 @@ admin:
         other: Odkazy
     llms:
       hint: 'Vyplňte pouze ve výchozím jazyce. Dokumentace: https://llmstxt.org/'
+    llms_sections:
+      hint: "Stránky těchto sekcí se přidají za text jako Markdown."
+      label: "Sekce"
     location:
       label: Poloha
     loop:

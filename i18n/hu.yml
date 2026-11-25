@@ -791,6 +791,9 @@ admin:
         other: Linkek
     llms:
       hint: 'Csak az alapértelmezett nyelven töltse ki. Dokumentáció: https://llmstxt.org/'
+    llms_sections:
+      hint: "E szakaszok oldalai Markdown formában a szöveg után kerülnek."
+      label: "Szakaszok"
     location:
       label: Helyszín
     loop:

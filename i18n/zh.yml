@@ -791,6 +791,9 @@ admin:
         other: 链接
     llms:
       hint: '仅在默认语言中填写。文档：https://llmstxt.org/'
+    llms_sections:
+      hint: "这些部分的页面以 Markdown 格式附加在文本之后。"
+      label: "部分"
     location:
       label: 位置
     loop:

@@ -791,6 +791,9 @@ admin:
         other: Povezave
     llms:
       hint: 'Izpolnite samo v privzetem jeziku. Dokumentacija: https://llmstxt.org/'
+    llms_sections:
+      hint: "Strani teh razdelkov so dodane za besedilom, kot Markdown."
+      label: "Razdelki"
     location:
       label: Lokacija
     loop:

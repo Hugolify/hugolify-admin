@@ -783,6 +783,9 @@ admin:
         other: Liens
     llms:
       hint: 'À remplir dans la langue par défaut uniquement. Documentation : https://llmstxt.org/'
+    llms_sections:
+      hint: "Les pages de ces sections sont ajoutées après le texte, en Markdown."
+      label: "Sections"
     location:
       label: Lieu
     loop:

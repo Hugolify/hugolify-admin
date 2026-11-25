@@ -787,6 +787,9 @@ admin:
         other: Linkit
     llms:
       hint: 'Täytä vain oletuskielellä. Dokumentaatio: https://llmstxt.org/'
+    llms_sections:
+      hint: "Näiden osien sivut lisätään tekstin perään Markdown-muodossa."
+      label: "Osat"
     location:
       label: Sijainti
     loop:

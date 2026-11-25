@@ -791,6 +791,9 @@ admin:
         other: Links
     llms:
       hint: 'Nur in der Standardsprache ausfüllen. Dokumentation: https://llmstxt.org/'
+    llms_sections:
+      hint: "Die Seiten dieser Sektionen werden nach dem Text als Markdown angefügt."
+      label: "Sektionen"
     location:
       label: Standort
     loop:

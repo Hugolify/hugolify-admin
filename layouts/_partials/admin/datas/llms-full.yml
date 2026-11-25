@@ -1,7 +1,8 @@
 {{/*  Body of /llms-full.txt, the full text of the site for language models.
       Same as data/llms.yml: written at the root by the theme, nothing when
-      empty, and not translated.  */}}
-{{- $fields := slice "llms" -}}
+      empty, and not translated. `sections` appends the pages of the sections
+      it names, see fields/llms_sections.yml.  */}}
+{{- $fields := slice "llms" "llms_sections" -}}
 {{- $fields = partial "admin/func/GetFields.html" (dict "file" "llms-full" "fields" $fields) -}}
 {
   label: '{{ i18n "admin.files.llms_full" }}',
