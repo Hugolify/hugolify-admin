@@ -1,12 +1,30 @@
 {{- /* The site stylesheet is not loaded in the editor (and hugolify-theme-icons only builds the
-       glyphs pages use), so with hugolify-theme-icons the preview pulls the SVG from a CDN:
-       Lucide, plus Simple Icons for "brand:". Without it, the preview shows the icon name. */ -}}
-{{- $cdn := "https://cdn.jsdelivr.net/npm" -}}
-{{- $icon := "(obj.icon || '')" -}}
-{{- $preview := printf "<code>${%s}</code>" $icon -}}
+       glyphs pages use), so with hugolify-theme-icons the preview pulls the SVG from a CDN, by set:
+       "brand:" from Simple Icons, "tabler:" from Tabler, "lucide:" from Lucide, and a name without
+       a prefix from the site's default set (params.icons.set). "solid:" is a rendering, not a file:
+       it is dropped. Without hugolify-theme-icons, or for a set with no CDN here, the preview shows
+       the icon name. */ -}}
+{{- $preview := "<code>${obj.icon || ''}</code>" -}}
 {{- if templates.Exists "_partials/icon.html" -}}
-  {{- $src := printf "${%[1]s.startsWith('brand:') ? '%[2]s/simple-icons/icons/' + %[1]s.slice(6) : '%[2]s/lucide-static/icons/' + %[1]s}.svg" $icon $cdn -}}
-  {{- $preview = printf `<img src="%s" alt="${%s}" width="24" height="24">` $src $icon -}}
+  {{- /* the engine's own rule since v1.7.0; earlier versions only had Lucide */ -}}
+  {{- $default := "lucide" -}}
+  {{- if templates.Exists "_partials/func/icons/GetDefaultSet.html" -}}
+    {{- $default = partialCached "func/icons/GetDefaultSet.html" "icons" -}}
+  {{- end -}}
+  {{- $js := `${((icon) => {
+      const cdn = 'https://cdn.jsdelivr.net/npm';
+      const urls = {
+        brand: (n) => cdn + '/simple-icons/icons/' + n + '.svg',
+        lucide: (n) => cdn + '/lucide-static/icons/' + n + '.svg',
+        // the aliases hugolify-theme-icons-tabler ships for the themes' own names
+        tabler: (n) => cdn + '/@tabler/icons@3/icons/outline/' + ({ play: 'player-play', pause: 'player-pause', 'contact-round': 'user-square-rounded' }[n] || n) + '.svg',
+      };
+      const name = icon.trim().replace(/^solid:/, '');
+      const i = name.indexOf(':');
+      const url = name && urls[i < 0 ? '__DEFAULT__' : name.slice(0, i)];
+      return url ? '<img src="' + url(name.slice(i + 1)) + '" alt="' + icon + '" width="24" height="24">' : '<code>' + icon + '</code>';
+    })(obj.icon || '')}` -}}
+  {{- $preview = replace $js "__DEFAULT__" $default -}}
 {{- end -}}
 {{ partial "admin/cms/decapcms/shortcodes/_register.js" (dict
   "shortcode" "icon"
