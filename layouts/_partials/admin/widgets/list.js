@@ -95,7 +95,8 @@
       {{ else }}
       { key: 'title' },
       { key: 'name' },
-      { key: 'text' }
+      { key: 'text' },
+      { key: 'icon' }
       {{ end }}
     ],
   }
@@ -151,8 +152,12 @@
   {{ partial "admin/func/GetTinaName.html" (dict "name" $name "nameOverride" .nameOverride) }},
   type: 'object',
   list: true,
-  {{- if or $min $max }}
+  {{- $has_title := in $fields "title" }}
+  {{- if or $min $max $has_title }}
   ui: {
+    {{- if $has_title }}
+    itemProps: (item) => ({ label: item?.title || item?.icon || {{ $label_singular | default "Item" | jsonify }} }),
+    {{- end }}
     {{- with $min }}
     min: {{ . }},
     {{- end }}

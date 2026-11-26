@@ -18,12 +18,25 @@
   items rather than folding the list itself, and names an item by its title
   rather than by its first text, often a surtitle or a prefix: the title, the
   question of a FAQ, the author of a testimonial, then its quote, the label of a
-  chart value, then the text */ -}}
+  chart value, then the text, then the icon */ -}}
 {{- if eq site.Params.admin.cms "sveltiacms" }}
   {{- $args = merge $args (dict
     "minimize_collapsed" false
-    "summary" "{{title | default('{{summary}}') | default('{{author.title}}') | default('{{quote}}') | default('{{label}}') | default('{{text}}')}}"
+    "summary" "{{title | default('{{summary}}') | default('{{author.title}}') | default('{{quote}}') | default('{{label}}') | default('{{text}}') | default('{{icon}}')}}"
   ) }}
+{{- end }}
+
+{{- /* The other CMS name an item by its first field, often the icon, or not at
+  all. Decap, Netlify and Static CMS take one field and a literal fallback, no
+  chain as for Sveltia CMS. Pages CMS takes no fallback. Tina CMS and
+  CloudCannon look for the title on their own, see widgets/list.js */ -}}
+{{- if in .fields "title" }}
+  {{- $label := i18n "admin.fields.items.label" 1 }}
+  {{- if in (slice "decapcms" "netlifycms" "staticcms") site.Params.admin.cms }}
+    {{- $args = merge $args (dict "summary" (printf "{{fields.title | default('%s')}}" $label)) }}
+  {{- else if eq site.Params.admin.cms "pagescms" }}
+    {{- $args = merge $args (dict "summary" "{{fields.title}}") }}
+  {{- end }}
 {{- end }}
 
 {{- $args = merge $args $name }}
