@@ -1,0 +1,17 @@
+{{/* Root `i18n` of Sveltia CMS: the Decap structure (see decapcms/i18n.yml)
+  and the locales a new entry starts with.
+
+  Nothing is written for a site with one language. */}}
+{{- $i18n := partial "admin/func/GetLocales.html" . -}}
+{{- with $i18n.locales }}
+i18n:
+  structure: multiple_files
+  locales: [{{ delimit . ", " }}]
+  default_locale: {{ $i18n.default }}
+  {{- /* `default`, `all` or a list. Once set, the editor menu enables the
+    others, and enabling one copies the default locale's content into it,
+    blocks included, with its texts left empty */}}
+  {{- with site.Params.admin.i18n.initial_locales }}
+  initial_locales: {{ cond (reflect.IsSlice .) (jsonify .) . }}
+  {{- end }}
+{{- end }}

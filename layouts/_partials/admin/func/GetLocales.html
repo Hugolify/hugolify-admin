@@ -1,0 +1,41 @@
+{{/* GetLocales
+     The content locales of a multilingual site, read from
+     params.admin.i18n.locales, and the one entries start in.
+
+     Sites write the list as a string, "[fr,en]", which the Decap and Sveltia
+     configs print as is to get a YAML list. A real list is read too. The
+     default locale is params.admin.i18n.default_locale when it belongs to the
+     list, its first locale otherwise: a CMS refuses a default it does not
+     list.
+
+     Returns: dict
+       locales (slice)  locale codes, in the order of the param; empty when
+                        the site has one language (`locales: false`)
+       default (string) the default locale, empty with no locales
+*/}}
+{{- $locales := slice -}}
+{{- with site.Params.admin.i18n.locales -}}
+  {{- if reflect.IsSlice . -}}
+    {{- range . -}}
+      {{- $locales = $locales | append (string .) -}}
+    {{- end -}}
+  {{- else if eq (printf "%T" .) "string" -}}
+    {{- range split (strings.Trim . "[] ") "," -}}
+      {{- with strings.Trim . " '\"" -}}
+        {{- $locales = $locales | append . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $default := "" -}}
+{{- with $locales -}}
+  {{- $default = index . 0 -}}
+  {{- with site.Params.admin.i18n.default_locale -}}
+    {{- if in $locales . -}}
+      {{- $default = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return dict "locales" $locales "default" $default -}}

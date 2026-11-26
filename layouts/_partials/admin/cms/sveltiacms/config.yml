@@ -33,95 +33,17 @@ backend:
 app_title: {{ site.Params.admin.title | default "Hugolify CMS" }}
 display_url: {{ site.BaseURL }}
 
-{{- if site.Params.admin.i18n.locales }}
-i18n:
-  structure: multiple_files
-  locales: {{ site.Params.admin.i18n.locales }}
-  default_locale: {{ site.Params.admin.i18n.default_locale }}
-  {{- /* Locales a new entry starts with: `default`, `all` or a list. Once set,
-    the editor menu enables the others, and enabling one copies the default
-    locale's content into it, blocks included, with its texts left empty */}}
-  {{- with site.Params.admin.i18n.initial_locales }}
-  initial_locales: {{ cond (reflect.IsSlice .) (jsonify .) . }}
-  {{- end }}
-{{- end }}
+{{ partial "admin/cms/sveltiacms/i18n.yml" . }}
 
 local_backend: {{ site.Params.admin.local_backend | default true }}
 locale: {{ site.Params.admin.locale | default site.Language.Lang | default "en" }}
 logo:
   src: ./assets/logo-picto.svg
   show_in_header: true
-{{- with site.Params.admin.media.media_folder }}
-media_folder: {{ . }}
-{{- end }}
-{{- with site.Params.admin.media.public_folder }}
-public_folder: {{ . }}
-{{- end }}
 {{- /* A mode, or an object with `type`, `stages`, `direct_publish`… */}}
 publish_mode: {{ site.Params.admin.publish_mode | default "simple" | jsonify }}
 
-{{- /* Upload options shared by the default storage and the cloud services but
-  Cloudinary, written with or without a cloud service. The Asset Library takes
-  any file a field accepts, so its limit is the largest of the field limits */}}
-{{- $media := site.Params.admin.media }}
-{{- $all := dict }}
-{{- $max_file_size := 0 }}
-{{- range $key, $value := $media }}
-  {{- if and (strings.HasSuffix $key "max_file_size") (gt $value $max_file_size) }}
-    {{- $max_file_size = $value }}
-  {{- end }}
-{{- end }}
-{{- with $max_file_size }}
-  {{- $all = merge $all (dict "max_file_size" .) }}
-{{- end }}
-{{- with $media.slugify_filename }}
-  {{- $all = merge $all (dict "slugify_filename" true) }}
-{{- end }}
-{{- with $media.transformations }}
-  {{- $all = merge $all (dict "transformations" .) }}
-{{- end }}
-
-{{- if or $all (isset $media "providers") $media.cloud }}
-media_libraries:
-  {{- with $all }}
-  all: {{ . | jsonify }}
-  {{- end }}
-  {{- if isset $media "providers" }}
-  stock_assets:
-    {{- $providers := $media.providers }}
-    {{- if eq $providers false }}
-    providers: []
-    {{- else }}
-    providers:
-      {{- range $providers }}
-      - {{ . }}
-      {{- end }}
-    {{- end }}
-  {{- end }}
-  {{- with $media.cloud }}
-  {{- $cloud := cond (reflect.IsSlice .) . (slice .) }}
-  {{- range $cloud }}
-  {{ .name }}:
-    config:
-      {{- with .cloud_name }}
-      cloud_name: "{{ . }}"
-      {{ end }}
-      {{- with .api_key }}
-      api_key: {{ . }}
-      {{- end }}
-      {{- with .public_key }}
-      publicKey: {{ . }}
-      {{- end }}
-      {{- with .tabs }}
-      tabs: {{ . }}
-      {{- end }}
-    {{- if and (eq .name "uploadcare") (ne .filename false) }}
-    settings:
-      autoFilename: true
-    {{- end }}
-  {{- end }}
-  {{- end }}
-{{- end }}
+{{ partial "admin/cms/sveltiacms/media.yml" . }}
 
 output:
   omit_empty_optional_fields: true
