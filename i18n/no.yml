@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Tiltaleform
     icon:
+      all: 'Alle'
+      choose: 'Velg'
+      close: 'Lukk'
+      empty: 'Ingen ikoner samsvarer med søket'
       hint: 'Ikonnavn (f.eks. phone). Se https://lucide.dev/ eller https://icons.getbootstrap.com/'
+      hint_picker: 'Installerte ikoner:'
       label: Ikon
+      remove: 'Fjern ikonet'
+      search: 'Søk etter navn eller nøkkelord (på engelsk)'
+      title: 'Velg et ikon'
+      unknown: 'Ingen installerte ikoner har dette navnet'
     id:
       label: ID
     image:

@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Pronome de tratamento
     icon:
+      all: 'Todos'
+      choose: 'Escolher'
+      close: 'Fechar'
+      empty: 'Nenhum ícone corresponde a esta pesquisa'
       hint: 'Nome do ícone (ex. phone). Ver https://lucide.dev/ ou https://icons.getbootstrap.com/'
+      hint_picker: 'Ícones instalados:'
       label: Ícone
+      remove: 'Remover o ícone'
+      search: 'Pesquisar por nome ou palavra-chave (em inglês)'
+      title: 'Escolher um ícone'
+      unknown: 'Nenhum ícone instalado tem este nome'
     id:
       label: ID
     image:

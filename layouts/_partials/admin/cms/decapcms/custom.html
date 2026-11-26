@@ -2,6 +2,9 @@
 <!-- uuid widget -->
 <script src="https://unpkg.com/netlify-cms-widget-uuid-v4@^1.0.12/dist/index.js"></script>
 {{- end }}
+{{- /* The custom widgets' own styles and scripts (widgets/<name>/scripts.html), before the
+       shortcodes and the widgets, which read them */ -}}
+{{ partial "admin/widgets/icon/scripts.html" . }}
 <!-- Register -->
 <script>
 {{ partial "admin/cms/decapcms/shortcodes.js" | safeJS  }}

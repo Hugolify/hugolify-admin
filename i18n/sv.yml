@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Tilltalsnamn
     icon:
+      all: 'Alla'
+      choose: 'Välj'
+      close: 'Stäng'
+      empty: 'Ingen ikon matchar sökningen'
       hint: 'Ikonnamn (t.ex. phone). Se https://lucide.dev/ eller https://icons.getbootstrap.com/'
+      hint_picker: 'Installerade ikoner:'
       label: Ikon
+      remove: 'Ta bort ikonen'
+      search: 'Sök på namn eller nyckelord (på engelska)'
+      title: 'Välj en ikon'
+      unknown: 'Ingen installerad ikon har det här namnet'
     id:
       label: ID
     image:

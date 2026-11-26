@@ -685,8 +685,17 @@ admin:
     honorific:
       label: 称呼
     icon:
+      all: '全部'
+      choose: '选择'
+      close: '关闭'
+      empty: '没有与此搜索匹配的图标'
       hint: '图标名称（例: phone）。参见 https://lucide.dev/ 或 https://icons.getbootstrap.com/'
+      hint_picker: '已安装的图标：'
       label: 图标
+      remove: '移除图标'
+      search: '按名称或关键词（英文）搜索'
+      title: '选择图标'
+      unknown: '没有已安装的图标使用此名称'
     id:
       label: ID
     image:

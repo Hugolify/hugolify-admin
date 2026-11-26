@@ -1,3 +1,6 @@
+{{- /* The custom widgets' own styles and scripts (widgets/<name>/scripts.html), before the
+       shortcodes and the widgets, which read them */ -}}
+{{ partial "admin/widgets/icon/scripts.html" . }}
 <script>
 {{ partial "admin/cms/sveltiacms/shortcodes.js" | safeJS  }}
 {{ partial "admin/cms/sveltiacms/widgets.js" | safeJS }}

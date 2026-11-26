@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Oslovení
     icon:
+      all: 'Vše'
+      choose: 'Vybrat'
+      close: 'Zavřít'
+      empty: 'Tomuto hledání neodpovídá žádná ikona'
       hint: 'Název ikony (např. phone). Viz https://lucide.dev/ nebo https://icons.getbootstrap.com/'
+      hint_picker: 'Nainstalované ikony:'
       label: Ikona
+      remove: 'Odebrat ikonu'
+      search: 'Hledat podle názvu nebo klíčového slova (anglicky)'
+      title: 'Vyberte ikonu'
+      unknown: 'Žádná nainstalovaná ikona nemá tento název'
     id:
       label: ID
     image:

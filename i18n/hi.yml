@@ -685,8 +685,17 @@ admin:
     honorific:
       label: सम्मानजनक
     icon:
+      all: 'सभी'
+      choose: 'चुनें'
+      close: 'बंद करें'
+      empty: 'इस खोज से कोई आइकन मेल नहीं खाता'
       hint: 'आइकन का नाम (उदा. phone). देखें https://lucide.dev/ या https://icons.getbootstrap.com/'
+      hint_picker: 'स्थापित आइकन:'
       label: आइकन
+      remove: 'आइकन हटाएँ'
+      search: 'नाम या कीवर्ड (अंग्रेज़ी में) से खोजें'
+      title: 'आइकन चुनें'
+      unknown: 'इस नाम का कोई स्थापित आइकन नहीं है'
     id:
       label: आईडी
     image:

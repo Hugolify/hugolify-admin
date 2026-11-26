@@ -1,0 +1,44 @@
+{{- /*
+  The icons the site can show, as a JSON file the admin's icon field loads
+  (assets/admin/widgets/icon/picker.js), or false when there is none.
+
+  The list comes from hugolify-theme-icons (func/icons/GetCatalog.html, since
+  v1.9.0): every icon of the sets the site mounts, named as the site resolves
+  them, with tags to search by. Without that engine the field stays a string.
+  Brand logos are left out unless a field offers them (`brands`).
+
+  Built after every page has rendered (scripts.html), so the fields have all
+  said whether they want brands.
+
+  Each folder's SVGs are also joined into one file,
+  /admin/widgets/icon/<folder>.<hash>.svg, so the dialog draws the site's own
+  icons, at the site's stroke width, with one request per set. The JSON lists the names in the same order, and the
+  field cuts the file after each </svg> (an icon file holds one <svg>), and
+  reads the tags there when the set keeps them in its SVGs (`comments`).
+
+  Published at /admin/widgets/icon/catalog.<hash>.json once a template reads
+  its RelPermalink: the fingerprints let the browser keep them until the icons
+  change.
+
+  @example
+    {{ with partialCached "admin/widgets/icon/catalog.html" "icons" }}{{ .RelPermalink }}{{ end }}
+*/ -}}
+{{- $catalog := false -}}
+{{- if templates.Exists "_partials/func/icons/GetCatalog.html" -}}
+  {{- $data := partialCached "func/icons/GetCatalog.html" "icons" -}}
+  {{- /* keep in sync with head/icons.html in hugolify-theme-icons, whose module sets 1 */ -}}
+  {{- $stroke := 2 -}}
+  {{- with site.Params.icons -}}
+    {{- with .strokeWidth -}}{{- $stroke = . -}}{{- end -}}
+  {{- end -}}
+  {{- /* brands only when a field offers them (widgets/icon.js): Simple Icons weighs 5 MB */ -}}
+  {{- $brands := hugo.Store.Get "hugolify-admin-icons-brands" -}}
+  {{- $sets := slice -}}
+  {{- range where $data.sets "dir" "ne" (cond $brands "" "brands") -}}
+    {{- $svg := resources.Concat (printf "admin/widgets/icon/%s.svg" .dir) .files | fingerprint -}}
+    {{- $sets = $sets | append (dict "dir" .dir "prefix" .prefix "svg" $svg.RelPermalink "names" .names "tags" .tags "comments" .comments) -}}
+  {{- end -}}
+  {{- $json := dict "default" $data.default "strokeWidth" $stroke "sets" $sets -}}
+  {{- $catalog = resources.FromString "admin/widgets/icon/catalog.json" ($json | jsonify) | fingerprint -}}
+{{- end -}}
+{{- return $catalog -}}

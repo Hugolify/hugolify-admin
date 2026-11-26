@@ -1,0 +1,49 @@
+{{- /*
+  The icon field's client side, for Decap and Sveltia CMS: the styles and the
+  script of assets/admin/widgets/icon/ (picker.css, picker.js). Included by
+  cms/<cms>/custom.html, before the shortcodes and the widgets, which read
+  window.hugolifyIcons.
+
+  Both are plain files, published with a fingerprint
+  (/admin/widgets/icon/picker.<hash>.js): the browser keeps them until a
+  release changes them, and never pairs an older script with newer widgets. What the
+  script needs from Hugo comes as JSON in its data-config attribute.
+
+  The script tag is written after every page has rendered (templates.Defer):
+  its catalog URL needs the catalog (catalog.html), which reads every icon the
+  site mounts. Read while pages render, those thousands of assets disturbed
+  hugo server's resource cache, and the theme's css/main.css came back as its
+  own PostCSS output ("main.css:9819: unexpected '<'"). By then the fields have
+  also all said whether they offer brands (widgets/icon.js).
+*/ -}}
+{{- with resources.Get "admin/widgets/icon/picker.css" | fingerprint }}
+<link href="{{ .RelPermalink }}" rel="stylesheet" />
+{{- end }}
+{{ with (templates.Defer (dict "key" "hugolify-admin-icons")) }}
+  {{- $url := "" -}}
+  {{- with partialCached "admin/widgets/icon/catalog.html" "icons" -}}
+    {{- $url = .RelPermalink -}}
+  {{- end -}}
+  {{- $default := "lucide" -}}
+  {{- if templates.Exists "_partials/func/icons/GetDefaultSet.html" -}}
+    {{- $default = partialCached "func/icons/GetDefaultSet.html" "icons" -}}
+  {{- end -}}
+  {{- $titles := dict -}}
+  {{- range $dir, $set := partialCached "admin/widgets/icon/sets.html" "icons" -}}
+    {{- $titles = merge $titles (dict $dir $set.title) -}}
+  {{- end -}}
+  {{- $text := dict
+    "all" (i18n "admin.fields.icon.all")
+    "choose" (i18n "admin.fields.icon.choose")
+    "close" (i18n "admin.fields.icon.close")
+    "empty" (i18n "admin.fields.icon.empty")
+    "remove" (i18n "admin.fields.icon.remove")
+    "search" (i18n "admin.fields.icon.search")
+    "title" (i18n "admin.fields.icon.title")
+    "unknown" (i18n "admin.fields.icon.unknown")
+  -}}
+  {{- $config := dict "catalog" $url "default" $default "titles" $titles "text" $text -}}
+  {{- with resources.Get "admin/widgets/icon/picker.js" | fingerprint }}
+<script src="{{ .RelPermalink }}" data-config="{{ $config | jsonify | string }}"></script>
+  {{- end }}
+{{ end }}

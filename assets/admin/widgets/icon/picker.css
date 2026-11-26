@@ -1,0 +1,260 @@
+/*
+ * The icon field (cms/<cms>/widgets/icon.js) and its dialog (picker.js), for
+ * Decap and Sveltia CMS. Colors come from Sveltia's theme variables when there
+ * are some (light and dark), Decap's colors otherwise.
+ */
+.hugolify-icons,
+.hugolify-icon-field {
+  --hugolify-icons-fg: var(--sui-primary-foreground-color, #313d3e);
+  --hugolify-icons-muted: var(--sui-secondary-foreground-color, #798291);
+  --hugolify-icons-bg: var(--sui-primary-background-color, #fff);
+  --hugolify-icons-hover: var(--sui-hover-background-color, #f3f4f6);
+  --hugolify-icons-border: var(--sui-primary-border-color, #dfdfe3);
+  --hugolify-icons-accent: var(--sui-primary-accent-color, #3a69c7);
+  --hugolify-icons-on-accent: var(--sui-primary-accent-color-inverted, #fff);
+  --hugolify-icons-warning: var(--sui-error-foreground-color, #d9534f);
+}
+.hugolify-icons {
+  box-sizing: border-box;
+  width: min(960px, calc(100vw - 32px));
+  height: min(720px, calc(100vh - 32px));
+  max-width: none;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--hugolify-icons-border);
+  border-radius: 8px;
+  background: var(--hugolify-icons-bg);
+  color: var(--hugolify-icons-fg);
+  font: inherit;
+  /* the dialog sits in <body>, outside the CMS's own root, which sets the font */
+  font-family: var(--sui-font-family-default, inherit);
+  font-size: 14px;
+  box-shadow: 0 16px 48px rgb(0 0 0 / 0.3);
+}
+.hugolify-icons::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}
+.hugolify-icons *,
+.hugolify-icon-field * {
+  box-sizing: border-box;
+}
+.hugolify-icons__panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.hugolify-icons__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 12px 8px 20px;
+}
+.hugolify-icons__title {
+  flex: 1;
+  margin: 0;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 600;
+}
+.hugolify-icons__close {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  color: inherit;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.hugolify-icons__close:hover {
+  background: var(--hugolify-icons-hover);
+}
+.hugolify-icons__search {
+  margin: 0 20px;
+  padding: 8px 12px;
+  border: 1px solid var(--hugolify-icons-border);
+  border-radius: 4px;
+  background: var(--hugolify-icons-bg);
+  color: inherit;
+  font: inherit;
+}
+.hugolify-icons__search:focus {
+  outline: 2px solid var(--hugolify-icons-accent);
+  outline-offset: -1px;
+}
+.hugolify-icons__sets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 20px 0;
+}
+.hugolify-icons__sets:empty {
+  display: none;
+}
+.hugolify-icons__set {
+  padding: 4px 10px;
+  border: 1px solid var(--hugolify-icons-border);
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.hugolify-icons__set:hover {
+  background: var(--hugolify-icons-hover);
+}
+.hugolify-icons__set[aria-pressed='true'] {
+  border-color: var(--hugolify-icons-accent);
+  background: var(--hugolify-icons-accent);
+  color: var(--hugolify-icons-on-accent);
+}
+.hugolify-icons__count {
+  margin-left: 6px;
+  opacity: 0.7;
+}
+.hugolify-icons__body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 8px 20px 20px;
+}
+.hugolify-icons__heading {
+  margin: 16px 0 8px;
+  color: var(--hugolify-icons-muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hugolify-icons__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 4px;
+}
+.hugolify-icons__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 14px 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.hugolify-icons__icon:hover,
+.hugolify-icons__icon:focus-visible {
+  background: var(--hugolify-icons-hover);
+}
+.hugolify-icons__icon:focus-visible {
+  outline: 2px solid var(--hugolify-icons-accent);
+  outline-offset: -2px;
+}
+.hugolify-icons__icon[aria-current='true'] {
+  border-color: var(--hugolify-icons-accent);
+}
+.hugolify-icons__glyph,
+.hugolify-icon-field__glyph {
+  display: block;
+  flex: none;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+.hugolify-icons__glyph {
+  width: 28px;
+  height: 28px;
+}
+.hugolify-icons__name {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--hugolify-icons-muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hugolify-icons__empty {
+  margin: 48px 0;
+  color: var(--hugolify-icons-muted);
+  text-align: center;
+}
+/* the thumbnail and the buttons take a text input's height: 38px in Sveltia */
+.hugolify-icon-field {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+}
+.hugolify-icon-field__preview {
+  display: grid;
+  place-items: center;
+  flex: none;
+  min-width: 38px;
+  min-height: 38px;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 1px solid var(--hugolify-icons-border);
+  border-radius: 4px;
+  background: none;
+  color: var(--hugolify-icons-fg);
+  font: inherit;
+  cursor: pointer;
+}
+.hugolify-icon-field__preview[data-state='unknown'] {
+  border-style: dashed;
+  border-color: var(--hugolify-icons-warning);
+  color: var(--hugolify-icons-warning);
+}
+.hugolify-icon-field__glyph {
+  width: 22px;
+  height: 22px;
+}
+.hugolify-icon-field__preview[data-state='unknown']
+  .hugolify-icon-field__glyph {
+  display: none;
+}
+.hugolify-icon-field__preview[data-state='unknown']::after {
+  content: '?';
+  font-weight: 600;
+}
+.hugolify-icon-field__input {
+  flex: 1;
+  min-width: 0;
+}
+.hugolify-icon-field__choose,
+.hugolify-icon-field__remove {
+  flex: none;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--hugolify-icons-border);
+  border-radius: 4px;
+  background: none;
+  color: var(--hugolify-icons-fg);
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.hugolify-icon-field__remove {
+  min-width: 38px;
+  padding: 0;
+  color: var(--hugolify-icons-muted);
+  font-size: 20px;
+  line-height: 1;
+}
+.hugolify-icon-field__preview:hover,
+.hugolify-icon-field__choose:hover,
+.hugolify-icon-field__remove:hover {
+  background: var(--hugolify-icons-hover);
+}
+.hugolify-icon-field__remove:hover {
+  color: var(--hugolify-icons-warning);
+}

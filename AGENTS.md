@@ -38,9 +38,11 @@ hugolify-admin/
 │       │   └── fields/              # Block-specific field groups
 │       ├── fields/                  # Reusable field definitions (200+ files)
 │       ├── widgets/                 # Widget implementations (one .js per widget)
+│       │   └── icon/                # The icon widget's helpers: catalog, known sets, script tags
 │       ├── datas/                   # Data structure configs (nav, footer, SEO…)
 │       ├── func/                    # Hugo template utility functions
 │       └── archetypes/              # Archetype generation
+├── assets/admin/widgets/icon/       # The icon widget's client JS and CSS, published with a fingerprint
 ├── i18n/                            # 20 language files (en.yml, fr.yml…)
 ├── static/admin/                    # CSS, logos, email templates
 └── hugo.yaml                        # Module mounts + all default params
@@ -136,6 +138,15 @@ Other important params: `branch`, `git`, `repo`, `media.*`, `auth.*`, `blocks.en
 2. Add a branch for each CMS in the `if/else if` chain
 3. Document accepted params in a comment at the top (see `string.js` for reference)
 
+### New custom widget
+A widget the CMS doesn't ship, written in JS for Decap and Sveltia CMS (`select_toggle`, `icon`). Its files all carry its name, so nothing new appears at the top of `_partials/admin/`:
+1. The config: `widgets/{name}.js`, or a branch of an existing widget (`select.js` writes `select_toggle` when a field has `toggle`). Other CMS get a built-in widget instead, so the front matter keeps one shape
+2. One component per CMS: `cms/{cms}/widgets/{name}.js`, listed in `cms/{cms}/widgets.js`
+3. Only when the widget needs more (`icon` does, `select_toggle` doesn't):
+   - build-side helpers in `widgets/{name}/` (`icon`: `catalog.html`, `sets.html`)
+   - client code the CMS share, and styles, as plain JS and CSS in `assets/admin/widgets/{name}/`, published with a fingerprint under `/admin/widgets/{name}/`
+   - their tags in `widgets/{name}/scripts.html`, included by `cms/{cms}/custom.html` before the widgets, which read them
+
 ### New block type
 1. Create `layouts/_partials/admin/blocks/types/{block-name}.yml`
 2. Optionally add block-specific fields in `blocks/fields/`
@@ -157,7 +168,7 @@ Other important params: `branch`, `git`, `repo`, `media.*`, `auth.*`, `blocks.en
 - This module is imported by Hugo sites — it is **not run standalone**
 - Test changes by using the module in a full Hugo site (`hugo server`)
 - Templates use `.yml` extension but are Go templates processed by Hugo
-- Widget partials use `.js` extension — they produce text, not actual JS files
+- Widget partials use the `.js` extension: they produce text, not actual JS files. The real JS and CSS files are under `assets/admin/`
 - `transform.Remarshal "yaml"` is used to clean/normalize YAML output
 - The `func/` partials handle cross-cutting concerns like `GetFields`, `GetOptions`, `GetTinaName`, `GetCloudcannonInputsAndStructures`
 - A collection option has one name for every CMS (`create`, `sortable_fields`, `summary_fields`…). `collections/config/{option}.yml` hands it to `cms/{cms}/collection/config/{option}.yml`, which writes it the way that CMS reads it, or not at all when it has no equivalent. `func/GetViewFields.html` normalises the list options, and Pages CMS gathers them under `view` in its own `view.yml`

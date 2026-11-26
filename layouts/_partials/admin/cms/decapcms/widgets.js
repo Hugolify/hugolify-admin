@@ -3,3 +3,4 @@
 {{- end }}
 {{ partialCached "admin/cms/decapcms/widgets/nested_path.js" . }}
 {{ partialCached "admin/cms/decapcms/widgets/select_toggle.js" . }}
+{{ partialCached "admin/cms/decapcms/widgets/icon.js" . }}

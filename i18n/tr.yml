@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Hitap
     icon:
+      all: 'Tümü'
+      choose: 'Seç'
+      close: 'Kapat'
+      empty: 'Bu aramayla eşleşen simge yok'
       hint: 'İkon adı (örn. phone). Bkz. https://lucide.dev/ veya https://icons.getbootstrap.com/'
+      hint_picker: 'Yüklü simgeler:'
       label: İkon
+      remove: 'Simgeyi kaldır'
+      search: 'Ada veya anahtar kelimeye göre ara (İngilizce)'
+      title: 'Simge seçin'
+      unknown: 'Bu ada sahip yüklü simge yok'
     id:
       label: Kimlik
     image:

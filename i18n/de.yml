@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Anrede
     icon:
+      all: 'Alle'
+      choose: 'Auswählen'
+      close: 'Schließen'
+      empty: 'Kein Icon passt zu dieser Suche'
       hint: 'Icon-Name (z. B. phone). Siehe https://lucide.dev/ oder https://icons.getbootstrap.com/'
+      hint_picker: 'Installierte Icons:'
       label: Icon
+      remove: 'Icon entfernen'
+      search: 'Nach Name oder Stichwort suchen (auf Englisch)'
+      title: 'Icon auswählen'
+      unknown: 'Kein installiertes Icon trägt diesen Namen'
     id:
       label: ID
     image:

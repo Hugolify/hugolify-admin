@@ -679,8 +679,17 @@ admin:
     honorific:
       label: Honorific
     icon:
+      all: 'All'
+      choose: 'Choose'
+      close: 'Close'
+      empty: 'No icon matches this search'
       hint: 'Icon name (e.g. phone). See https://lucide.dev/ or https://icons.getbootstrap.com/'
+      hint_picker: 'Installed icons:'
       label: Icon
+      remove: 'Remove the icon'
+      search: 'Search by name or keyword (in English)'
+      title: 'Choose an icon'
+      unknown: 'No installed icon has this name'
     id:
       label: ID
     image:

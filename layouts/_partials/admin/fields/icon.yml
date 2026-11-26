@@ -1,8 +1,10 @@
-{{- $args := dict 
+{{- $args := dict
   "label" (i18n "admin.fields.icon.label")
   "hint" (i18n "admin.fields.icon.hint")
   "name" "icon"
   "i18n" "duplicate"
+  "brands" true
   -}}
 
-{{ partial "admin/widgets/string.js" $args }}
+{{/* A searchable list of the site's icons in Decap and Sveltia CMS, a string elsewhere */}}
+{{ partial "admin/widgets/icon.js" $args }}

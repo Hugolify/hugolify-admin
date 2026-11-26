@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Puhuttelu
     icon:
+      all: 'Kaikki'
+      choose: 'Valitse'
+      close: 'Sulje'
+      empty: 'Mikään kuvake ei vastaa hakua'
       hint: 'Kuvakkeen nimi (esim. phone). Katso https://lucide.dev/ tai https://icons.getbootstrap.com/'
+      hint_picker: 'Asennetut kuvakkeet:'
       label: Kuvake
+      remove: 'Poista kuvake'
+      search: 'Hae nimellä tai avainsanalla (englanniksi)'
+      title: 'Valitse kuvake'
+      unknown: 'Yhdelläkään asennetulla kuvakkeella ei ole tätä nimeä'
     id:
       label: ID
     image:

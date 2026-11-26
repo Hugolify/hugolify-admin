@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Tratamiento
     icon:
+      all: 'Todos'
+      choose: 'Elegir'
+      close: 'Cerrar'
+      empty: 'Ningún icono coincide con esta búsqueda'
       hint: 'Nombre del icono (p. ej. phone). Consulta https://lucide.dev/ o https://icons.getbootstrap.com/'
+      hint_picker: 'Iconos instalados:'
       label: Icono
+      remove: 'Quitar el icono'
+      search: 'Buscar por nombre o palabra clave (en inglés)'
+      title: 'Elegir un icono'
+      unknown: 'Ningún icono instalado tiene este nombre'
     id:
       label: ID
     image:

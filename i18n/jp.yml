@@ -685,8 +685,17 @@ admin:
     honorific:
       label: 敬称
     icon:
+      all: 'すべて'
+      choose: '選択'
+      close: '閉じる'
+      empty: '検索に一致するアイコンはありません'
       hint: 'アイコン名（例: phone）。https://lucide.dev/ または https://icons.getbootstrap.com/ を参照'
+      hint_picker: 'インストール済みのアイコン：'
       label: アイコン
+      remove: 'アイコンを削除'
+      search: '名前またはキーワード（英語）で検索'
+      title: 'アイコンを選択'
+      unknown: 'この名前のアイコンはインストールされていません'
     id:
       label: ID
     image:

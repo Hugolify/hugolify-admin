@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Titolo
     icon:
+      all: 'Tutte'
+      choose: 'Scegli'
+      close: 'Chiudi'
+      empty: 'Nessuna icona corrisponde a questa ricerca'
       hint: 'Nome dell’icona (es. phone). Vedi https://lucide.dev/ o https://icons.getbootstrap.com/'
+      hint_picker: 'Icone installate:'
       label: Icona
+      remove: 'Rimuovi l’icona'
+      search: 'Cerca per nome o parola chiave (in inglese)'
+      title: 'Scegli un''icona'
+      unknown: 'Nessuna icona installata ha questo nome'
     id:
       label: ID
     image:

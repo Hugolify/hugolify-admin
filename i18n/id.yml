@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Sebutan
     icon:
+      all: 'Semua'
+      choose: 'Pilih'
+      close: 'Tutup'
+      empty: 'Tidak ada ikon yang cocok dengan pencarian ini'
       hint: 'Nama ikon (mis. phone). Lihat https://lucide.dev/ atau https://icons.getbootstrap.com/'
+      hint_picker: 'Ikon yang terpasang:'
       label: Ikon
+      remove: 'Hapus ikon'
+      search: 'Cari berdasarkan nama atau kata kunci (dalam bahasa Inggris)'
+      title: 'Pilih ikon'
+      unknown: 'Tidak ada ikon terpasang dengan nama ini'
     id:
       label: ID
     image:

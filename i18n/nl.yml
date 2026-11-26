@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Aanhef
     icon:
+      all: 'Alle'
+      choose: 'Kiezen'
+      close: 'Sluiten'
+      empty: 'Geen icoon komt overeen met deze zoekopdracht'
       hint: 'Pictogramnaam (bijv. phone). Zie https://lucide.dev/ of https://icons.getbootstrap.com/'
+      hint_picker: 'Geïnstalleerde iconen:'
       label: Pictogram
+      remove: 'Icoon verwijderen'
+      search: 'Zoeken op naam of trefwoord (in het Engels)'
+      title: 'Kies een icoon'
+      unknown: 'Geen geïnstalleerd icoon heeft deze naam'
     id:
       label: ID
     image:

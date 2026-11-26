@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Обръщение
     icon:
+      all: 'Всички'
+      choose: 'Избор'
+      close: 'Затвори'
+      empty: 'Няма икона, отговаряща на търсенето'
       hint: 'Име на икона (напр. phone). Вижте https://lucide.dev/ или https://icons.getbootstrap.com/'
+      hint_picker: 'Инсталирани икони:'
       label: Икона
+      remove: 'Премахни иконата'
+      search: 'Търсене по име или ключова дума (на английски)'
+      title: 'Изберете икона'
+      unknown: 'Няма инсталирана икона с това име'
     id:
       label: ID
     image:

@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Zwrot grzecznościowy
     icon:
+      all: 'Wszystkie'
+      choose: 'Wybierz'
+      close: 'Zamknij'
+      empty: 'Żadna ikona nie pasuje do wyszukiwania'
       hint: 'Nazwa ikony (np. phone). Zobacz https://lucide.dev/ lub https://icons.getbootstrap.com/'
+      hint_picker: 'Zainstalowane ikony:'
       label: Ikona
+      remove: 'Usuń ikonę'
+      search: 'Szukaj według nazwy lub słowa kluczowego (po angielsku)'
+      title: 'Wybierz ikonę'
+      unknown: 'Żadna zainstalowana ikona nie ma tej nazwy'
     id:
       label: ID
     image:

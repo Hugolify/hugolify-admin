@@ -1,0 +1,14 @@
+{{- /*
+  The icon sets the admin knows by name: their title and online catalog, for
+  the icon field's hint (widgets/icon.js) and its dialog (scripts.html). A set
+  missing here still works, shown under its folder name, without a link.
+
+  @example
+    {{ $sets := partialCached "admin/widgets/icon/sets.html" "icons" }}
+*/ -}}
+{{- return dict
+  "lucide" (dict "title" "Lucide" "url" "https://lucide.dev/icons/")
+  "tabler" (dict "title" "Tabler" "url" "https://tabler.io/icons")
+  "bootstrap" (dict "title" "Bootstrap Icons" "url" "https://icons.getbootstrap.com/")
+  "brands" (dict "title" "Simple Icons" "url" "https://simpleicons.org/")
+-}}

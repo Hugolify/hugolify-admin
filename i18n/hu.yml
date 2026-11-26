@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Megszólítás
     icon:
+      all: 'Mind'
+      choose: 'Kiválasztás'
+      close: 'Bezárás'
+      empty: 'Egy ikon sem felel meg a keresésnek'
       hint: 'Ikon neve (pl. phone). Lásd https://lucide.dev/ vagy https://icons.getbootstrap.com/'
+      hint_picker: 'Telepített ikonok:'
       label: Ikon
+      remove: 'Ikon eltávolítása'
+      search: 'Keresés név vagy kulcsszó alapján (angolul)'
+      title: 'Ikon kiválasztása'
+      unknown: 'Egyik telepített ikonnak sincs ilyen neve'
     id:
       label: Azonosító
     image:

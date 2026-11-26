@@ -685,8 +685,17 @@ admin:
     honorific:
       label: Nagovor
     icon:
+      all: 'Vse'
+      choose: 'Izberi'
+      close: 'Zapri'
+      empty: 'Iskanju ne ustreza nobena ikona'
       hint: 'Ime ikone (npr. phone). Glejte https://lucide.dev/ ali https://icons.getbootstrap.com/'
+      hint_picker: 'Nameščene ikone:'
       label: Ikona
+      remove: 'Odstrani ikono'
+      search: 'Iskanje po imenu ali ključni besedi (v angleščini)'
+      title: 'Izberite ikono'
+      unknown: 'Nobena nameščena ikona nima tega imena'
     id:
       label: ID
     image:

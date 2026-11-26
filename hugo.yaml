@@ -6,6 +6,9 @@ module:
       target: i18n
     - source: layouts
       target: layouts
+    # Client files Hugo fingerprints (admin/widgets/icon/scripts.html)
+    - source: assets
+      target: assets
     - source: static
       target: static
 
