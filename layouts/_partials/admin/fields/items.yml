@@ -14,6 +14,18 @@
   "thumbnail" .thumbnail
   -}}
 
+{{- /* As the blocks, see fields/blocks.yml: Sveltia CMS opens the list on folded
+  items rather than folding the list itself, and names an item by its title
+  rather than by its first text, often a surtitle or a prefix: the title, the
+  question of a FAQ, the author of a testimonial, then its quote, the label of a
+  chart value, then the text */ -}}
+{{- if eq site.Params.admin.cms "sveltiacms" }}
+  {{- $args = merge $args (dict
+    "minimize_collapsed" false
+    "summary" "{{title | default('{{summary}}') | default('{{author.title}}') | default('{{quote}}') | default('{{label}}') | default('{{text}}')}}"
+  ) }}
+{{- end }}
+
 {{- $args = merge $args $name }}
 
 {{ partial "admin/widgets/list.js" $args }}

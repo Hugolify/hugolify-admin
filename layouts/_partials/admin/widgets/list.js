@@ -13,10 +13,12 @@
   - label_singular (string)
   - max (number)
   - min (number)
+  - minimize_collapsed (boolean) Decap, Netlify, Static and Sveltia CMS, true by default:
+    Sveltia CMS then opens the whole list folded, rather than each of its items
   - name (string) required
   - nameOverride (string)
   - required (boolean)
-  - summary (string)
+  - summary (string) may nest a tag in default() for Sveltia CMS
   - thumbnail (string) Sveltia CMS only, Image subfield shown beside a folded item, e.g. 'src'
 */}}
 
@@ -37,6 +39,8 @@
 {{- $nameOverride := .nameOverride | default false }}
 {{- $max := .max | default false }}
 {{- $min := .min | default false }}
+{{- /* default would turn a false into true */}}
+{{- $minimize_collapsed := cond (isset . "minimize_collapsed") .minimize_collapsed true }}
 {{- $required := .required | default false }}
 {{- $summary := .summary | default false }}
 {{- $thumbnail := .thumbnail | default false }}
@@ -188,12 +192,15 @@
   {{ with $max }}
   max: {{ . }},
   {{ end }}
+  {{ if $minimize_collapsed }}
   minimize_collapsed: true,
+  {{ end }}
   required: {{ $required }},
   collapsed: {{ $collapsed }},
   i18n: {{ if or (eq $i18n true) (eq $i18n false) }}{{ $i18n }}{{ else }}'{{ $i18n }}'{{ end }},
+  {{- /* Quoted as JSON, the quotes of a default('…') being kept */}}
   {{ with $summary }}
-  summary: '{{ . }}',
+  summary: {{ . | jsonify }},
   {{ end }}
   {{ if and $thumbnail (eq $cms "sveltiacms") }}
   thumbnail: '{{ $thumbnail }}',
