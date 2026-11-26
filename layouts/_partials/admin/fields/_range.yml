@@ -26,8 +26,8 @@
                 "{{ $k }}": {{ $newV | jsonify }},
               {{- end }}
             {{- end }}
-          {{/* Others */}}
-          {{- else }}
+          {{/* Others. A field that writes nothing is left out: a lone comma would break the list */}}
+          {{- else if strings.TrimSpace $r }}
             {{ $r }},
           {{- end }}
         {{- end }}

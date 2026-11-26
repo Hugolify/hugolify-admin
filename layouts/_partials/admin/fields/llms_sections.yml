@@ -3,7 +3,11 @@
      top-level sections that hold pages, under their titles, except those the
      sitemap leaves out (sitemap.disable, noIndex), such as this module's own
      admin section; a section left out of the site since stays in the file and
-     is skipped by the theme. Not translated, like the rest of the file. */}}
+     is skipped by the theme. Not translated, like the rest of the file.
+
+     Written only when there is a section to offer: a select without options
+     is refused by Decap and Sveltia CMS, which then reject the whole config
+     (a site whose sections hold no pages yet, such as hugolify-template). */}}
 {{- $options := slice -}}
 {{- $labels := dict -}}
 {{- range site.Sections -}}
@@ -14,14 +18,16 @@
 {{- end -}}
 {{- $options = partial "admin/func/GetOptions.html" (dict "field" . "options" $options) -}}
 
+{{- with $options }}
 {{- $args := dict
   "label" (i18n "admin.fields.llms_sections.label")
   "hint" (i18n "admin.fields.llms_sections.hint")
   "name" "sections"
-  "options" $options
+  "options" .
   "label_options" $labels
   "multiple" true
   "i18n" false
   -}}
 
 {{ partial "admin/widgets/select.js" $args }}
+{{- end }}
