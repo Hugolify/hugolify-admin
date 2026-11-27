@@ -5,8 +5,7 @@ backend:
   repo: {{ . }}
   {{ end }}
 
-  {{- /* skip_ci replaces the deprecated automatic_deployments, still honored as a fallback */}}
-  {{- $skip_ci := not site.Params.admin.automatic_deployments }}
+  {{- $skip_ci := true }}
   {{- if isset site.Params.admin "skip_ci" }}
     {{- $skip_ci = site.Params.admin.skip_ci }}
   {{- end }}

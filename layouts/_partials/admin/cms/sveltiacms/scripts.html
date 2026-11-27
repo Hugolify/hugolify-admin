@@ -1,5 +1,7 @@
 <!-- Sveltia CMS -->
-{{- $version := site.Params.admin.version | default false -}}
-<script src="https://unpkg.com/@sveltia/cms{{- if $version }}@{{ $version }}{{- end }}/dist/sveltia-cms.js"></script>
+{{- /* Follows the 5.x releases: a major release may remove options and stop the
+  CMS from loading, as 5.0 did. `admin.version` pins another range or release */ -}}
+{{- $version := site.Params.admin.version | default "^5" -}}
+<script src="https://unpkg.com/@sveltia/cms@{{ $version }}/dist/sveltia-cms.js"></script>
 <!-- Custom widget/shortcodes/previews… -->
 {{ partial "admin/cms/sveltiacms/custom.html" }}
