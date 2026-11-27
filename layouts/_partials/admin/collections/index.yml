@@ -1,5 +1,5 @@
-{{/* Flow style list, in the order of `admin/func/GetCollections.html`. No
-     divider: Pages CMS and Tina have none. */}}
+{{/* Flow style list, in the order of `admin/func/GetCollections.html`, read by
+     the Tina config. No divider: Tina has none. */}}
 collections: [
   {{- range partial "admin/func/GetCollections.html" . }}
     {{- range .collections }}

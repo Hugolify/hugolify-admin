@@ -5,34 +5,6 @@ settings:
 
 {{ partial "admin/cms/pagescms/i18n.yml" . }}
 
-{{- $sliceCompatibity := slice 
-  (dict "{{slug}}/_index" `{fields.title}/_index`)
-  (dict "{{slug}}" `{fields.title}`)
-  (dict "{{year}}" `{year}`) 
-  (dict "{{month}}" `{month}`) 
-  (dict "{{day}}" `{day}`) 
-  (dict "folder:" `type: 'collection', path:`) 
-  (dict "file:" `type: 'file', path:`) 
-  (dict "collections:" `content:`) 
-  }}
-
-{{- $collections := partialCached "admin/collections/index.yml" . }}
-{{- range $sliceCompatibity }}
-  {{- range $key, $value := . }}
-    {{- $collections = replace $collections $key $value }}
-  {{- end }}
-{{- end }}
-
-{{- /* A collection marked `i18n: true` keeps one file per locale, `_index.fr.md`
-  next to `_index.en.md`, the default locale included: the `multiple_files`
-  structure of the Decap and Sveltia configs. On a site with one language the
-  key goes, as Pages CMS takes an object there and nothing else. The data files
-  went through collections/types/_files.yml already, so no `i18n: true` is left
-  but those of the collections. */}}
-{{- $i18n := "" }}
-{{- if (partial "admin/func/GetLocales.html" .).locales }}
-  {{- $i18n = `i18n: { scheme: 'files', path: { type: 'filename', position: 'suffix', separator: '.', default: 'explicit' } },` }}
-{{- end }}
-{{- $collections = replace $collections "i18n: true," $i18n }}
-
-{{ partial "admin/func/RemarshalYaml.html" $collections }}
+{{- /* Each collection converted from the keys of Decap CMS by
+  collection/convert.yml */}}
+{{ partial "admin/func/RemarshalCollections.html" (dict "key" "content") }}

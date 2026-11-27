@@ -5,12 +5,20 @@
   `admin/func/GetCollections.html`, but emitted as block YAML, with
   `transform.Remarshal` applied to **each collection separately**.
 
-  Dividers
-  --------
-  With Sveltia CMS, a `divider: true` item separates two groups of collections.
-  Decap, Netlify and Static CMS would reject an item without a name, so they get
-  the order alone. A divider goes through the same remarshal as a collection,
-  so it comes out with the same indentation.
+  Options
+  -------
+  The config of each CMS asks for what differs, so nothing here names a CMS:
+
+  - `key`: the key of the list, `collections` by default (`content` for
+    Pages CMS)
+  - `dividers`: a `divider: true` item between two groups of collections
+    (Sveltia CMS). Decap, Netlify and Static CMS would reject an item without
+    a name, so they get the order alone. A divider goes through the same
+    remarshal as a collection, so it comes out with the same indentation.
+
+  A CMS whose keys are not those of Decap CMS converts each collection in
+  `admin/cms/{cms}/collection/convert.yml`, called before the remarshal while
+  the collection is still flow text.
 
   Why not remarshal the whole list at once
   ----------------------------------------
@@ -31,11 +39,17 @@
   Usage
   -----
     {{ partial "admin/func/RemarshalCollections.html" . }}
+    {{ partial "admin/func/RemarshalCollections.html" (dict "dividers" true) }}
+    {{ partial "admin/func/RemarshalCollections.html" (dict "key" "content") }}
 
-  Input  : page context (unused, kept for symmetry with `index.yml`)
-  Output : string — `collections:` followed by one block YAML item per collection
+  Input  : page context, or a dict of options
+  Output : string — the key followed by one block YAML item per collection
 */}}
-{{- $dividers := eq site.Params.admin.cms "sveltiacms" -}}
+{{- $options := cond (reflect.IsMap .) . dict -}}
+{{- $key := $options.key | default "collections" -}}
+{{- $dividers := $options.dividers | default false -}}
+{{- $convert := print "admin/cms/" (site.Params.admin.cms | default "decapcms") "/collection/convert.yml" -}}
+{{- $converts := templates.Exists (printf "_partials/%s" $convert) -}}
 
 {{/* Raw (flow style) items, group after group */}}
 {{- $items := slice -}}
@@ -44,7 +58,15 @@
     {{- $items = $items | append "{ divider: true }" -}}
   {{- end -}}
   {{- range $group.collections -}}
-    {{- $items = $items | append (partial "admin/collections/collection.yml" .) -}}
+    {{- $item := partial "admin/collections/collection.yml" . -}}
+    {{- if $converts -}}
+      {{- $item = partial $convert $item -}}
+    {{- end -}}
+    {{/* A collection that writes nothing, such as a files collection with no
+         file, is left out: it would come back as an empty list */}}
+    {{- if strings.TrimSpace $item -}}
+      {{- $items = $items | append $item -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
@@ -53,12 +75,12 @@
   {{/* Keep the `collections: [...]` wrapper: it is what makes Hugo detect the
        input as YAML (a bare `{...}` is read as JSON), and it makes the
        remarshal'd output a ready-to-use block sequence item. */}}
-  {{- $raw := printf "collections: [%s]" . -}}
+  {{- $raw := printf "%s: [%s]" $key . -}}
   {{- $yaml := partial "admin/func/RemarshalYaml.html" $raw | strings.TrimSpace -}}
   {{- with $yaml -}}
-    {{- $collections = $collections | append (. | strings.TrimPrefix "collections:" | strings.TrimPrefix "\n") -}}
+    {{- $collections = $collections | append (. | strings.TrimPrefix (print $key ":") | strings.TrimPrefix "\n") -}}
   {{- end -}}
 {{- end -}}
 {{/* Returned, never printed: this is an `.html` template, so writing the YAML
      through an output action here would HTML-escape quotes and ampersands. */}}
-{{- return printf "collections:\n%s\n" (delimit $collections "\n") -}}
+{{- return printf "%s:\n%s\n" $key (delimit $collections "\n") -}}

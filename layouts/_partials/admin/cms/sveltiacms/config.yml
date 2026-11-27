@@ -53,4 +53,4 @@ slug:
   clean_accents: false
   sanitize_replacement: "-"
 
-{{ partial "admin/func/RemarshalCollections.html" . }}
+{{ partial "admin/func/RemarshalCollections.html" (dict "dividers" true) }}

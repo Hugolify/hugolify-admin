@@ -1,0 +1,30 @@
+{{/*
+  The fields of a Pages CMS entry, rebuilt with their block types as Pages CMS
+  takes them. Called by collection/convert.yml, and by itself through `fields`
+  and `blocks`, so a block field is found at any depth.
+
+  A block type is a variant of its block field, not a field: Pages CMS gives it
+  `name`, `label`, `description` and `fields` only. The shared definition writes
+  each block type with widgets/object.js, as Decap CMS takes it, so its `type`
+  and `required` go; those of its fields stay.
+
+  Input  : dict
+    fields   (slice)   the fields, or the block types of a block field
+    variants (boolean) true for block types
+  Output : slice — the same list, rebuilt
+*/}}
+{{- $drop := cond .variants (slice "type" "required") slice -}}
+{{- $fields := slice -}}
+{{- range .fields -}}
+  {{- $field := dict -}}
+  {{- range $key, $value := . -}}
+    {{- if not (in $drop $key) -}}
+      {{- if in (slice "fields" "blocks") $key -}}
+        {{- $value = partial "admin/cms/pagescms/collection/fields.html" (dict "fields" $value "variants" (eq $key "blocks")) -}}
+      {{- end -}}
+      {{- $field = merge $field (dict $key $value) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $fields = $fields | append $field -}}
+{{- end -}}
+{{- return $fields -}}
