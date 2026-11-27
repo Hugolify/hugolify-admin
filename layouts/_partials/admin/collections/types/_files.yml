@@ -3,30 +3,13 @@
   ================
   Prints the raw (flow style) YAML of a collection of data files, such as
   `config` and `menus`: one file per name of its `files` list, written by
-  `admin/datas/{name}.yml`.
+  `admin/datas/{name}.yml`. Pages CMS makes it a group, see
+  `admin/cms/pagescms/collection/entry.html`.
 
   Input  : string — collection name
 */}}
 {{- $collection := . -}}
 {{- $files := partial "admin/collections/config/files.yml" (dict "collection" $collection) -}}
-{{- if eq site.Params.admin.cms "pagescms" }}
-  {{/* Waiting for: https://github.com/pages-cms/pages-cms/issues/222 */}}
-  {{/* Clean output format for PagesCMS: remove first/last lines and trailing comma */}}
-  {{- $files = replaceRE "(?s)^[^\n]*\n(.*)\n[^\n]*$" "$1" $files -}}
-  {{- $files = replaceRE ",\\s*$" "" $files -}}
-  {{/* A data file marked `i18n: true` keeps every locale in one file, `fr:` next
-    to `en:`, the `single_file` structure of the other CMS: Pages CMS localizes
-    the whole entry. On a site with one language, or for a file kept in one
-    language (`i18n: false`), the key goes, as Pages CMS takes an object there
-    and nothing else */}}
-  {{- $i18n := "" -}}
-  {{- if (partial "admin/func/GetLocales.html" .).locales -}}
-    {{- $i18n = `i18n: { scheme: 'fields' }, localized: true,` -}}
-  {{- end -}}
-  {{- $files = replace $files "i18n: true," $i18n -}}
-  {{- $files = replace $files "i18n: false," "" -}}
-  {{ $files }}
-{{- else -}}
 {{- $description := i18n (printf "admin.collections.%s._description" $collection) | default false }}
 {
   name: '{{ $collection }}',
@@ -41,4 +24,3 @@
   {{ partial "admin/collections/config/icon.yml" $collection }}
   {{ $files }}
 }
-{{- end -}}

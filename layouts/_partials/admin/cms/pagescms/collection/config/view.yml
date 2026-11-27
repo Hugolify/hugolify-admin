@@ -5,8 +5,10 @@
     becomes `title`, the field it links to the entry by default
   - `sortable_fields` → `sort`, and `default` for the field sorting the list by
     default. The commit metadata is left out, as it is no field of the entry
-  - `nested` → the tree layout. An entry of a nested collection is a branch
-    bundle, so the `_index.md` of a folder is its node
+  - the tree layout for a collection whose entries are branch bundles, a folder
+    holding an `_index.md` (`path` ending in `/_index`, the default), and for
+    a `nested` one, whose entries all are. The `_index.md` of a folder is its
+    node and its folder is hidden, so the list shows the page, not a folder
 
   A `label` is dropped: Pages CMS heads a column with the label of its field. */}}
 {{ $view := newScratch }}
@@ -32,7 +34,14 @@
   {{ $view.Set "sort" . }}
 {{ end }}
 
-{{ if gt (partial "admin/func/GetNestedDepth.html" .) 1 }}
+{{/* The same path as collection/config/path.yml */}}
+{{ $path := `{{slug}}/_index` }}
+{{ with index site.Params.admin.collections . }}
+  {{ with .path }}
+    {{ $path = . }}
+  {{ end }}
+{{ end }}
+{{ if or (strings.HasSuffix $path "/_index") (gt (partial "admin/func/GetNestedDepth.html" .) 1) }}
   {{ $view.Set "layout" "tree" }}
   {{ $view.Set "node" (dict "filename" "_index.md" "hideDirs" "nodes") }}
 {{ end }}

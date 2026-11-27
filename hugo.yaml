@@ -45,6 +45,7 @@ params:
     i18n:
       default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
+      omit_default_locale_from_file_path: false # Sveltia and Pages CMS: true when the default language has no code, _index.md next to _index.fr.md
     # locale: en # Language of the CMS interface. On the other hand, the Hugolify Admin fields are in the main locale of the project
     media:
       # Image
@@ -101,6 +102,7 @@ params:
         enable: true
         icon:
           bootstrap_icons: gear
+          hugeicons: Settings01
           iconoir: settings
           lucide: settings
           material_icons: settings
@@ -114,6 +116,7 @@ params:
             value: true
         icon:
           bootstrap_icons: list-ul
+          hugeicons: Hierarchy
           iconoir: list
           lucide: table-of-contents
           material_icons: schema
@@ -125,6 +128,7 @@ params:
         enable: true
         icon:
           bootstrap_icons: list
+          hugeicons: Menu01
           iconoir: menu
           lucide: menu
           material_icons: menu
@@ -134,6 +138,7 @@ params:
         enable: true
         icon:
           bootstrap_icons: file-earmark
+          hugeicons: File01
           iconoir: page
           lucide: file
           material_icons: description

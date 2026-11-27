@@ -1,5 +1,7 @@
-{{/* Root `i18n` of Sveltia CMS: the Decap structure (see decapcms/i18n.yml)
-  and the locales a new entry starts with.
+{{/* Root `i18n` of Sveltia CMS: the Decap structure (see decapcms/i18n.yml),
+  the locales a new entry starts with, and whether the files of the default
+  locale carry its code. Hugo reads both `_index.fr.md` and, for the default
+  language, `_index.md`; Decap CMS always writes the code.
 
   Nothing is written for a site with one language. */}}
 {{- $i18n := partial "admin/func/GetLocales.html" . -}}
@@ -13,5 +15,8 @@ i18n:
     blocks included, with its texts left empty */}}
   {{- with site.Params.admin.i18n.initial_locales }}
   initial_locales: {{ cond (reflect.IsSlice .) (jsonify .) . }}
+  {{- end }}
+  {{- if site.Params.admin.i18n.omit_default_locale_from_file_path }}
+  omit_default_locale_from_file_path: true
   {{- end }}
 {{- end }}

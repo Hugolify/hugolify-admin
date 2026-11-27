@@ -1,0 +1,59 @@
+{{/*
+  One content entry of Pages CMS, rebuilt from its shared definition, written
+  in the keys of Decap CMS. Called by collection/convert.yml, and by itself for
+  the files of a group.
+
+  - A collection of data files (`files`, such as config and menus) becomes a
+    group, its files the items
+  - A collection marked `i18n: true` keeps one file per locale, `_index.fr.md`
+    next to `_index.en.md`: the `multiple_files` structure of the Decap and
+    Sveltia configs. The default locale has its code too, unless
+    `admin.i18n.omit_default_locale_from_file_path` leaves it out (`_index.md`)
+  - A data file marked `i18n: true` keeps every locale in one file, `fr:` next
+    to `en:`, the `single_file` structure of the other CMS: Pages CMS
+    localizes the whole entry
+  - Pages CMS takes an object as `i18n` and nothing else: the key goes for a
+    file kept in one language (`i18n: false`) and on a site with one language
+  - `label_singular` is a Decap key, which Pages CMS rejects
+  - The fields go through collection/fields.html, for their block types
+
+  Input  : dict
+    entry        (map)     the shared definition of the entry
+    multilingual (boolean) the site has locales
+  Output : map — the entry in the keys of Pages CMS
+*/}}
+{{- $entry := .entry -}}
+{{- $multilingual := .multilingual -}}
+{{- $out := dict -}}
+
+{{- if $entry.files -}}
+  {{- $items := slice -}}
+  {{- range $entry.files -}}
+    {{- $items = $items | append (partial "admin/cms/pagescms/collection/entry.html" (dict "entry" . "multilingual" $multilingual)) -}}
+  {{- end -}}
+  {{- $out = dict "name" $entry.name "label" $entry.label "type" "group" "items" $items -}}
+  {{- with $entry.description -}}
+    {{- $out = merge $out (dict "description" .) -}}
+  {{- end -}}
+
+{{- else -}}
+  {{- range $key, $value := $entry -}}
+    {{- if not (in (slice "i18n" "label_singular") $key) -}}
+      {{- if eq $key "fields" -}}
+        {{- $value = partial "admin/cms/pagescms/collection/fields.html" (dict "fields" $value) -}}
+      {{- end -}}
+      {{- $out = merge $out (dict $key $value) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if and $multilingual (eq $entry.i18n true) -}}
+    {{- if eq $entry.type "collection" -}}
+      {{- $default := cond (site.Params.admin.i18n.omit_default_locale_from_file_path | default false) "omit" "explicit" -}}
+      {{- $path := dict "type" "filename" "position" "suffix" "separator" "." "default" $default -}}
+      {{- $out = merge $out (dict "i18n" (dict "scheme" "files" "path" $path)) -}}
+    {{- else -}}
+      {{- $out = merge $out (dict "i18n" (dict "scheme" "fields") "localized" true) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $out -}}

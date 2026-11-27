@@ -1,0 +1,12 @@
+{{/* Pages CMS (v3) draws the icon of a collection from Hugeicons
+  (https://hugeicons.com), named in PascalCase such as `News01`: the
+  `hugeicons` name of its `icon` param, next to those of the other libraries.
+  A name Pages CMS does not know falls back to its default icon, and a group
+  (config, menus) takes none, see collection/entry.html */}}
+{{- with index site.Params.admin.collections . -}}
+  {{- with .icon -}}
+    {{- with .hugeicons }}
+icon: '{{ . }}',
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

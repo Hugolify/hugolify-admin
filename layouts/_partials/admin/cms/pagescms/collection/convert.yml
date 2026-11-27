@@ -1,16 +1,19 @@
 {{/*
   Converts the shared definition of a collection, written in the keys of Decap
   CMS, to those of Pages CMS. Called by admin/func/RemarshalCollections.html on
-  each collection before its remarshal, as the replacements need the raw flow
-  text (`folder: 'content'`).
+  each collection before its remarshal.
 
-  Input  : string — raw (flow style) YAML of one collection; a files collection
-           (config, menus) gives one entry per file, see collections/types/_files.yml
-  Output : string — its entries in the keys of Pages CMS, as JSON (flow YAML)
+  The names that only differ are replaced in the raw flow text
+  (`folder: 'content'`); the rest needs the structure, so the collection is
+  parsed and rebuilt by collection/entry.html, and written back as JSON, which
+  is flow YAML too.
+
+  Input  : string — raw (flow style) YAML of one collection
+  Output : string — the collection in the keys of Pages CMS, as JSON
 */}}
 {{- $item := . -}}
 
-{{- $keys := slice
+{{- $names := slice
   (dict "{{slug}}/_index" `{fields.title}/_index`)
   (dict "{{slug}}" `{fields.title}`)
   (dict "{{year}}" `{year}`)
@@ -19,41 +22,17 @@
   (dict "folder:" `type: 'collection', path:`)
   (dict "file:" `type: 'file', path:`)
 -}}
-{{- range $keys -}}
+{{- range $names -}}
   {{- range $key, $value := . -}}
     {{- $item = replace $item $key $value -}}
   {{- end -}}
 {{- end -}}
 
-{{- /* `label_singular` is a Decap key, which Pages CMS rejects (v3): the
-  collection types write it alone on its line */ -}}
-{{- $item = replaceRE `(?m)^[ \t]*label_singular:.*\n` "" $item -}}
-
-{{- /* A collection marked `i18n: true` keeps one file per locale, `_index.fr.md`
-  next to `_index.en.md`, the default locale included: the `multiple_files`
-  structure of the Decap and Sveltia configs. On a site with one language the
-  key goes, as Pages CMS takes an object there and nothing else. The data files
-  went through collections/types/_files.yml already, so no `i18n: true` is left
-  but those of the collections. */ -}}
-{{- $i18n := "" -}}
-{{- if (partial "admin/func/GetLocales.html" .).locales -}}
-  {{- $i18n = `i18n: { scheme: 'files', path: { type: 'filename', position: 'suffix', separator: '.', default: 'explicit' } },` -}}
-{{- end -}}
-{{- $item = replace $item "i18n: true," $i18n -}}
-
-{{- /* The block types, which need the structure: the collection is parsed, its
-  fields rebuilt by collection/fields.html, and written back as JSON, which is
-  flow YAML too */ -}}
+{{- $multilingual := gt (len (partial "admin/func/GetLocales.html" .).locales) 0 -}}
 {{- $raw := printf "content: [%s]" (partial "admin/func/CurlyApostrophes.html" $item) -}}
 {{- $entries := slice -}}
 {{- range (transform.Unmarshal $raw).content -}}
-  {{- $entry := dict -}}
-  {{- range $key, $value := . -}}
-    {{- if eq $key "fields" -}}
-      {{- $value = partial "admin/cms/pagescms/collection/fields.html" (dict "fields" $value) -}}
-    {{- end -}}
-    {{- $entry = merge $entry (dict $key $value) -}}
-  {{- end -}}
+  {{- $entry := partial "admin/cms/pagescms/collection/entry.html" (dict "entry" . "multilingual" $multilingual) -}}
   {{- $entries = $entries | append (jsonify $entry) -}}
 {{- end -}}
 

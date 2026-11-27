@@ -1,7 +1,6 @@
 {{/* Root `i18n` of Pages CMS (v3): the languages of the content. Collections
   and files opt in on their own `i18n`, written from the `i18n: true` of their
-  shared definition: see config.yml for the collections and
-  collections/types/_files.yml for the data files.
+  shared definition: see collection/entry.html.
 
   Each locale carries the `label` of its Hugo language, so the language menu
   of the editor reads like the switcher of the site. Pages CMS names a locale

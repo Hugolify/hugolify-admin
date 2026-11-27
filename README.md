@@ -77,6 +77,7 @@ params:
       default_locale: en # master lang for an i18n website
       locales: false # "[en,fr]" for an i18n website
       initial_locales: # Sveltia CMS: "default", "all" or "[en,fr]", locales a new entry starts with
+      omit_default_locale_from_file_path: false # Sveltia and Pages CMS: true when the default language has no code, _index.md next to _index.fr.md
 
     # Media config
     media:
