@@ -23,6 +23,13 @@
   The replacement runs twice: matches cannot overlap, so a single pass leaves
   every other apostrophe of `rock'n'roll`.
 
+  Date formats
+  ------------
+  An uppercase letter between two quotes inside a word is the literal of a
+  date format (`yyyy-MM-dd'T'HH:mm:ssX`, date-fns for Pages CMS), not two
+  apostrophes: it is set aside first. Curled, the quotes no longer escape the
+  `T`, which date-fns then reads as the timestamp in milliseconds.
+
   Usage
   -----
   Call it wherever generated text is parsed or printed as code:
@@ -33,5 +40,8 @@
   Output : string — the same content with apostrophes inside words curled
 */}}
 {{- $apostrophe := `([\pL\pN])'([\pL\pN])` -}}
-{{- $text := replaceRE $apostrophe "${1}’${2}" . -}}
-{{- return replaceRE $apostrophe "${1}’${2}" $text -}}
+{{- $literal := `([\pL\pN])'(\p{Lu})'([\pL\pN])` -}}
+{{- $text := replaceRE $literal "${1}${2}${3}" . -}}
+{{- $text = replaceRE $apostrophe "${1}’${2}" $text -}}
+{{- $text = replaceRE $apostrophe "${1}’${2}" $text -}}
+{{- return replace $text "" "'" -}}
